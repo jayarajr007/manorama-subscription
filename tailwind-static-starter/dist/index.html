@@ -4,8 +4,7 @@
 
 
     <head> 
-          <meta http-equiv="content-type"
-        content="text/html;charset=utf-8" />
+      
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description"
@@ -214,7 +213,7 @@
                 <nav class="bg-white hidden md:block relative">
                     <div class="mx-auto px-0">
                       <div class="flex py-4 justify-between w-full">
-                        <ul class="hidden md:flex space-x-6 text-gray-700 font-semibold justify-between w-full text-left">
+                        <ul class="hidden md:flex space-x-6 text-gray-700 font-semibold justify-between w-full text-left z-0">
                           <li>
                             <a href="#" class="hover:text-blue-500 text-sm">MANORAMA DAILY & E PAPER</a>
                           </li>
@@ -538,69 +537,70 @@
             <!-- Sidebar Tabs -->
             <div class="w-20 bg-[#F1F8FF] border-r flex flex-col items-center py-0 space-y-4 overflow-y-auto h-[calc(100vh-121px)] overflow-auto">
     
-                <button onclick="showTab('newspaper', this)" id="tab-newspaper"
-                    class="flex flex-col items-center tab-btn active-tab w-full px-2" aria-label="News Paper and E Paper">
-                    <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-1">
-                        <img src="assets/img/menu/newspaper.webp" alt="News Paper" class="rounded-full w-10 h-10" />
-                    </div>
-                    <span class="text-[10px] text-center">News Paper & E Paper</span>
-                </button>
+               <button onclick="showTab('newspaper', this)" id="tab-newspaper"
+        class="flex flex-col items-center tab-btn active-tab w-full px-2" aria-label="News Paper and E Paper">
+  <span class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-1">
+    <img src="assets/img/menu/newspaper.webp" alt="News Paper" class="rounded-full w-10 h-10" />
+  </span>
+  <span class="text-[10px] text-center">News Paper & E Paper</span>
+</button>
             
-                <button onclick="showTab('premium', this)" id="tab-premium"
-                    class="flex flex-col items-center tab-btn w-full px-2" aria-label="Premium Subscription">
-                    <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-1">
-                        <img src="assets/img/menu/premium.webp" alt="Premium Subscription" class="rounded-full w-10 h-10" />
-                    </div>
-                    <span class="text-[10px] text-center">Premium Subscription</span>
-                </button>
-            
-                <button onclick="showTab('magazines', this)" id="tab-magazines"
-                    class="flex flex-col items-center tab-btn w-full px-2" aria-label="Magazines Subscription">
-                    <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-1">
-                        <img src="assets/img/menu/magazin.webp" alt="Magazines" class="rounded-full w-10 h-10" />
-                    </div>
-                    <span class="text-[10px] text-center">Magazines Subscription</span>
-                </button>
-            
-                <button onclick="showTab('books', this)" id="tab-books"
-                    class="flex flex-col items-center tab-btn w-full px-2" aria-label="Books">
-                    <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-1">
-                        <img src="assets/img/menu/book.webp" alt="Books" class="rounded-full w-10 h-10" />
-                    </div>
-                    <span class="text-[10px] text-center">Books</span>
-                </button>
-            
-                <button onclick="showTab('yearbook', this)" id="tab-yearbook"
-                    class="flex flex-col items-center tab-btn w-full px-2" aria-label="Year Book">
-                    <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-1">
-                        <img src="assets/img/menu/yearbook.webp" alt="Year Book" class="rounded-full w-10 h-10" />
-                    </div>
-                    <span class="text-[10px] text-center">Year Book</span>
-                </button>
-            
-                <button onclick="showTab('astro', this)" id="tab-astro"
-                    class="flex flex-col items-center tab-btn w-full px-2" aria-label="Astro">
-                    <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-1">
-                        <img src="assets/img/menu/astro.webp" alt="Astro" class="rounded-full w-10 h-10" />
-                    </div>
-                    <span class="text-[10px] text-center">Astro</span>
-                </button>
-            
-                <button onclick="showTab('apps', this)" id="tab-apps"
-                    class="flex flex-col items-center tab-btn w-full px-2" aria-label="Apps">
-                    <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-1">
-                        <img src="assets/img/menu/max.webp" alt="Apps" class="rounded-full w-10 h-10" />
-                    </div>
-                    <span class="text-[10px] text-center">Apps</span>
-                </button>
-            
-                <button onclick="showTab('offers', this)" id="tab-offers"
-                    class="flex flex-col items-center tab-btn w-full px-2" aria-label="Offers">
-                    <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-1">
-                        <img src="assets/img/menu/offe.webp" alt="Offers" class="rounded-full w-10 h-10" />
-                    </div>
-                    <span class="text-[10px] text-center">Offers</span>
-                </button>
+              <button onclick="showTab('premium', this)" id="tab-premium"
+    class="flex flex-col items-center tab-btn w-full px-2" aria-label="Premium Subscription">
+    <span class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-1">
+        <img src="assets/img/menu/premium.webp" alt="Premium Subscription" class="rounded-full w-10 h-10" />
+    </span>
+    <span class="text-[10px] text-center">Premium Subscription</span>
+</button>
+
+<button onclick="showTab('magazines', this)" id="tab-magazines"
+    class="flex flex-col items-center tab-btn w-full px-2" aria-label="Magazines Subscription">
+    <span class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-1">
+        <img src="assets/img/menu/magazin.webp" alt="Magazines" class="rounded-full w-10 h-10" />
+    </span>
+    <span class="text-[10px] text-center">Magazines Subscription</span>
+</button>
+
+<button onclick="showTab('books', this)" id="tab-books"
+    class="flex flex-col items-center tab-btn w-full px-2" aria-label="Books">
+    <span class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-1">
+        <img src="assets/img/menu/book.webp" alt="Books" class="rounded-full w-10 h-10" />
+    </span>
+    <span class="text-[10px] text-center">Books</span>
+</button>
+
+<button onclick="showTab('yearbook', this)" id="tab-yearbook"
+    class="flex flex-col items-center tab-btn w-full px-2" aria-label="Year Book">
+    <span class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-1">
+        <img src="assets/img/menu/yearbook.webp" alt="Year Book" class="rounded-full w-10 h-10" />
+    </span>
+    <span class="text-[10px] text-center">Year Book</span>
+</button>
+
+<button onclick="showTab('astro', this)" id="tab-astro"
+    class="flex flex-col items-center tab-btn w-full px-2" aria-label="Astro">
+    <span class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-1">
+        <img src="assets/img/menu/astro.webp" alt="Astro" class="rounded-full w-10 h-10" />
+    </span>
+    <span class="text-[10px] text-center">Astro</span>
+</button>
+
+<button onclick="showTab('apps', this)" id="tab-apps"
+    class="flex flex-col items-center tab-btn w-full px-2" aria-label="Apps">
+    <span class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-1">
+        <img src="assets/img/menu/max.webp" alt="Apps" class="rounded-full w-10 h-10" />
+    </span>
+    <span class="text-[10px] text-center">Apps</span>
+</button>
+
+<button onclick="showTab('offers', this)" id="tab-offers"
+    class="flex flex-col items-center tab-btn w-full px-2" aria-label="Offers">
+    <span class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-1">
+        <img src="assets/img/menu/offe.webp" alt="Offers" class="rounded-full w-10 h-10" />
+    </span>
+    <span class="text-[10px] text-center">Offers</span>
+</button>
+
             
             </div>
             
