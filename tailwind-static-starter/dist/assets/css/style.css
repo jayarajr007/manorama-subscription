@@ -1,10 +1,9 @@
-
 @font-face {
   font-family: 'Poppins';
   src: url('./font/poppins/PoppinsBlackItalic.woff2') format('woff2'),
-      url('./font/poppins/PoppinsBlackItalic.woff') format('woff'),
-      url('./font/poppins/Poppins-BlackItalic.ttf');
-      
+    url('./font/poppins/PoppinsBlackItalic.woff') format('woff'),
+    url('./font/poppins/Poppins-BlackItalic.ttf');
+
   font-weight: 900;
   font-style: italic;
   font-display: swap;
@@ -13,7 +12,7 @@
 @font-face {
   font-family: 'Poppins';
   src: url('./font/poppins/PoppinsBlack.woff2') format('woff2'),
-      url('./font/poppins/PoppinsBlack.woff') format('woff');
+    url('./font/poppins/PoppinsBlack.woff') format('woff');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -22,7 +21,7 @@
 @font-face {
   font-family: 'Poppins';
   src: url('./font/poppins/PoppinsBold.woff2') format('woff2'),
-      url('./font/poppins/PoppinsBold.woff') format('woff');
+    url('./font/poppins/PoppinsBold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -31,7 +30,7 @@
 @font-face {
   font-family: 'Poppins';
   src: url('./font/poppins/PoppinsBoldItalic.woff2') format('woff2'),
-      url('./font/poppins/PoppinsBoldItalic.woff') format('woff');
+    url('./font/poppins/PoppinsBoldItalic.woff') format('woff');
   font-weight: bold;
   font-style: italic;
   font-display: swap;
@@ -40,7 +39,7 @@
 @font-face {
   font-family: 'Poppins';
   src: url('./font/poppins/PoppinsExtraBold.woff2') format('woff2'),
-      url('./font/poppins/PoppinsExtraBold.woff') format('woff');
+    url('./font/poppins/PoppinsExtraBold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -49,7 +48,7 @@
 @font-face {
   font-family: 'Poppins';
   src: url('./font/poppins/PoppinsExtraBoldItalic.woff2') format('woff2'),
-      url('./font/poppins/PoppinsExtraBoldItalic.woff') format('woff');
+    url('./font/poppins/PoppinsExtraBoldItalic.woff') format('woff');
   font-weight: bold;
   font-style: italic;
   font-display: swap;
@@ -58,7 +57,7 @@
 @font-face {
   font-family: 'Poppins';
   src: url('./font/poppins/PoppinsItalic.woff2') format('woff2'),
-      url('./font/poppins/PoppinsItalic.woff') format('woff');
+    url('./font/poppins/PoppinsItalic.woff') format('woff');
   font-weight: normal;
   font-style: italic;
   font-display: swap;
@@ -67,7 +66,7 @@
 @font-face {
   font-family: 'Poppins';
   src: url('./font/poppins/PoppinsExtraLightItalic.woff2') format('woff2'),
-      url('./font/poppins/PoppinsExtraLightItalic.woff') format('woff');
+    url('./font/poppins/PoppinsExtraLightItalic.woff') format('woff');
   font-weight: 200;
   font-style: italic;
   font-display: swap;
@@ -76,7 +75,7 @@
 @font-face {
   font-family: 'Poppins';
   src: url('./font/poppins/PoppinsExtraLight.woff2') format('woff2'),
-      url('./font/poppins/PoppinsExtraLight.woff') format('woff');
+    url('./font/poppins/PoppinsExtraLight.woff') format('woff');
   font-weight: 200;
   font-style: normal;
   font-display: swap;
@@ -85,7 +84,7 @@
 @font-face {
   font-family: 'Poppins';
   src: url('./font/poppins/PoppinsMedium.woff2') format('woff2'),
-      url('./font/poppins/PoppinsMedium.woff') format('woff');
+    url('./font/poppins/PoppinsMedium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -94,7 +93,7 @@
 @font-face {
   font-family: 'Poppins';
   src: url('./font/poppins/PoppinsMediumItalic.woff2') format('woff2'),
-      url('./font/poppins/PoppinsMediumItalic.woff') format('woff');
+    url('./font/poppins/PoppinsMediumItalic.woff') format('woff');
   font-weight: 500;
   font-style: italic;
   font-display: swap;
@@ -103,7 +102,7 @@
 @font-face {
   font-family: 'Poppins';
   src: url('./font/poppins/PoppinsLightItalic.woff2') format('woff2'),
-      url('./font/poppins/PoppinsLightItalic.woff') format('woff');
+    url('./font/poppins/PoppinsLightItalic.woff') format('woff');
   font-weight: 300;
   font-style: italic;
   font-display: swap;
@@ -112,7 +111,7 @@
 @font-face {
   font-family: 'Poppins';
   src: url('./font/poppins/PoppinsLight.woff2') format('woff2'),
-      url('./font/poppins/PoppinsLight.woff') format('woff');
+    url('./font/poppins/PoppinsLight.woff') format('woff');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -121,7 +120,7 @@
 @font-face {
   font-family: 'Poppins';
   src: url('./font/poppins/PoppinsSemiBold.woff2') format('woff2'),
-      url('./font/poppins/PoppinsSemiBold.woff') format('woff');
+    url('./font/poppins/PoppinsSemiBold.woff') format('woff');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -130,7 +129,7 @@
 @font-face {
   font-family: 'Poppins';
   src: url('./font/poppins/PoppinsThin.woff2') format('woff2'),
-      url('./font/poppins/PoppinsThin.woff') format('woff');
+    url('./font/poppins/PoppinsThin.woff') format('woff');
   font-weight: 100;
   font-style: normal;
   font-display: swap;
@@ -139,7 +138,7 @@
 @font-face {
   font-family: 'Poppins';
   src: url('./font/poppins/PoppinsRegular.woff2') format('woff2'),
-      url('./font/poppins/PoppinsRegular.woff') format('woff');
+    url('./font/poppins/PoppinsRegular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -148,7 +147,7 @@
 @font-face {
   font-family: 'Poppins';
   src: url('./font/poppins/PoppinsThinItalic.woff2') format('woff2'),
-      url('./font/poppins/PoppinsThinItalic.woff') format('woff');
+    url('./font/poppins/PoppinsThinItalic.woff') format('woff');
   font-weight: 100;
   font-style: italic;
   font-display: swap;
@@ -157,34 +156,34 @@
 @font-face {
   font-family: 'Poppins';
   src: url('./font/poppins/PoppinsSemiBoldItalic.woff2') format('woff2'),
-      url('./font/poppins/PoppinsSemiBoldItalic.woff') format('woff');
+    url('./font/poppins/PoppinsSemiBoldItalic.woff') format('woff');
   font-weight: 600;
   font-style: italic;
   font-display: swap;
 }
 
 
-.dark-bg
-{
+.dark-bg {
   background: #072654;
 }
-.primary-bg{
+
+.primary-bg {
   background: #333994;
 }
-  
+
 body {
   font-family: 'Poppins', sans-serif;
 }
-.logo
-{
+
+.logo {
   max-width: 275px;
 }
+
 /* html, body {
   overflow-x: hidden;
 } */
 
-.offer-circle-badge
-{
+.offer-circle-badge {
   width: 78px;
 
   display: flex;
@@ -194,37 +193,36 @@ body {
   background-color: #ED002B;
 }
 
-.global-search
-{
+.global-search {
   border-radius: 3px !important;
   border: 1px solid var(--Border-Color, #E0E0E0);
   background: #FFF;
   padding: 11px 12px !important;
 }
-.slick-track
-{
+
+.slick-track {
   display: flex !important;
-  margin-left: -7px !important; 
+  margin-left: -7px !important;
 }
-.slick-track div div.bg-white
-{
+
+.slick-track div div.bg-white {
   height: 100% !important;
 }
+
 /* .slick-initialized .slick-slide {  
   display: flex !important;
 } */
-.slick-slide
-{
+.slick-slide {
   height: auto !important;
 }
 
-.round-filter.active > img {
-  border: 2px solid #007bff; /* blue border */
+.round-filter.active>img {
+  border: 2px solid #007bff;
+  /* blue border */
 }
 
-.round-filter.active > img::after {
-  content: '✔'; / Unicode checkmark */
-  position: absolute;
+.round-filter.active>img::after {
+  content: '✔';/ Unicode checkmark */ position: absolute;
   top: 0;
   right: 0;
   background-color: #007bff;
@@ -238,15 +236,15 @@ body {
   border-radius: 9999px;
   transform: translate(25%, -25%);
   z-index: 10;
-  }
+}
+
 /* 
 .section-height
 {
   min-height: 390px;
 } */
 
-.section-height
-{
+.section-height {
   min-height: 323px;
 }
 
@@ -259,8 +257,7 @@ body {
   scrollbar-width: none;
 } */
 
-#categoryMenu
-{
+#categoryMenu {
   position: fixed;
   background: #fff;
   height: 100%;
@@ -270,24 +267,152 @@ body {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+/*Sprite Image*/ 
+
+
+.nav-options a {
+  width: 32px;
+  height: 32px;
+
+  background-repeat: no-repeat;
+  background-size: auto;
+  background: url(../img/icons/sprite.svg);
+}
+
+.i-cart {
+
+  background-position: left -14px top -21px !important;
+}
+
+
+.i-notification {
+
+
+  background-position: left -47px top -21px !important;
+
+}
+
+.i-user {
+
+  background-position: left -78px top -21px !important;
+}
+
+.i-search-m {
+
+
+  background-position: left -106px top -20px !important;
+}
+
+
+
+.i-search-placeholder {
+  background: url(../img/icons/sprite.svg) no-repeat -113px -22px;
+}
+
+.i-viewall {
+  background: url(../img/icons/sprite.svg) no-repeat -24px -72px;
+
+}
+
+.i-gift {
+  background: url(../img/icons/sprite.svg) no-repeat -23px -109px;
+}
+
+
+.socialmedia a {
+  width: 34px;
+  height: 34px;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background: url(../img/icons/sprite.svg);
+}
+
+.socialmedia a.facebook {
+  background-position: left -21px top -141px ;
+}
+
+.socialmedia a.instagram {
+  background-position: left -62px top -141px;
+}
+
+.socialmedia a.youtube {
+  background-position: left -108px top -141px;
+}
+
+.socialmedia a.twitter {
+  background-position: left -148px top -141px;
+}
+
+.droparrow
+{
+  background:url(../img/icons/sprite.svg) no-repeat -30px -191px;
+}
+.i-m-account
+{
+    background:url(../img/icons/sprite.svg) no-repeat -146px -13px;
+}
+
+.footernav a > .fn-icon
+{ 
+  width: 21px;
+  height: 20px;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background: url(../img/icons/sprite.svg);
+}
+
+.footernav a > .i-home
+{
+    background-position: left -32px top -227px;
+}
+
+.footernav a > .i-category
+{
+    background-position: left -63px top -227px;
+}
+
+.footernav a > .i-account
+{
+    background-position: left -90px top -227px;
+}
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width: 1279px) {
-  .section-height
-  {
-        min-height: 200px;
+  .section-height {
+    min-height: 200px;
   }
 }
 
 
 @media screen and (max-width: 760px) {
-  .banner-height
-  {
+  .banner-height {
     min-height: 160px;
     background: url(./font/poppins/Poppins-Black.woff);
   }
-  }
+}
 
-.scroll-menu-txt-wrap
-{
+.scroll-menu-txt-wrap {
   width: auto;
   display: block;
   text-wrap: wrap;
@@ -306,16 +431,14 @@ body {
 
 @media screen and (max-width: 640px) {
 
-  .strict-full-width
+  .strict-full-width {
+    width: 100% !important;
+  }
 
-{
-  width: 100% !important;
-}
-.slick-track
-{
-  display: flex !important;
-  margin-left: -4px !important; 
-}
+  .slick-track {
+    display: flex !important;
+    margin-left: -4px !important;
+  }
 
 }
 
@@ -323,7 +446,10 @@ body {
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
 .no-scrollbar {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
