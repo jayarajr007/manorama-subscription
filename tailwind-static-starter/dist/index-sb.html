@@ -78,7 +78,7 @@
     <noscript><link rel="stylesheet" href="assets/css/style.css"></noscript>
 
     <link rel="preload" as="image" href="assets/images/banner.webp"
-      type="image/webp" fetchpriority="high">
+      type="image/webp">
 
     <link rel="preload" as="image" href="assets/images/banner-mobile.webp"
       type="image/webp" fetchpriority="high">
@@ -1484,15 +1484,14 @@
       </div> -->
 
 
-<div class="banner-slider ">
+<div class="banner-slider">
 
-  <div >
+  <div>
 
-    <div class="hidden md:block">  
     <img 
   src="assets/images/banner.webp" 
-
-
+  srcset="assets/images/banner-mobile.webp 768w, assets/images/banner.webp 1280w, assets/images/banner.webp 1800w"
+  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 80vw, 1800px"
   width="1800" 
   height="300" 
   alt="Banner 3" 
@@ -1501,27 +1500,13 @@
 >
     
 </div>
-<div class="block md:hidden">  
-    <img 
-  src="assets/images/banner-mobile.webp" 
 
+ <div>
 
-  width="1800" 
-  height="300" 
-  alt="Banner 3" 
-  loading="eager" 
-  fetchpriority="high"
->
-    
-</div>
-</div>
- <div >
-
-    <div class="hidden md:block">  
     <img 
   src="assets/images/banner.webp" 
-
-
+  srcset="assets/images/banner-mobile.webp 768w, assets/images/banner.webp 1280w, assets/images/banner.webp 1800w"
+  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 80vw, 1800px"
   width="1800" 
   height="300" 
   alt="Banner 3" 
@@ -1530,22 +1515,6 @@
 >
     
 </div>
-<div class="block md:hidden">  
-    <img 
-  src="assets/images/banner-mobile.webp" 
-
-
-  width="1800" 
-  height="300" 
-  alt="Banner 3" 
-  loading="eager" 
-  fetchpriority="high"
->
-    
-</div>
-</div>
-
-
 
 </div>
 
