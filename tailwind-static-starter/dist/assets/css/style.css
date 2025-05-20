@@ -245,8 +245,11 @@ body {
 } */
 
 .section-height {
-  min-height: 323px;
+  /* min-height: 323px; */
+  
+    min-height: 536px;
 }
+
 
 /* Hide scrollbar */
 /* .scrollbar-hide::-webkit-scrollbar {
