@@ -1379,15 +1379,15 @@
     <!-- Hero Section -->
     <div
       class="z-0 banner-height max-w-full lg:max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="relative w-full">
-        <!-- Carousel Wrapper -->
+      <!-- <div class="relative w-full">
+  
         <div class="overflow-hidden relative rounded-lg">
           <div class="flex transition-transform duration-700 ease-in-out "
             id="carousel">
 
-            <!-- Slide 1 -->
+
             <div class="w-full flex-shrink-0 min-h-[130px]">
-              <!-- <img
+               <img
                 src="assets/images/banner.webp"
                 alt="Desktop Banner"
                 width="1200"
@@ -1404,22 +1404,18 @@
                 class="w-full h-full object-contain block md:hidden"
                 decoding="async"
                 loading="eager"
-                fetchpriority="high" /> -->
+                fetchpriority="high" />
 
 
-<picture>
-  <source media="(min-width:650px)" srcset="assets/images/banner.webp">
-  <source media="(min-width:465px)" srcset="assets/images/bannernew.jpg">
-  <img src="assets/images/banner-mobile.webp" alt="banner" width="1800" height="300">
-</picture>
+
 
 
 
             </div>
 
-            <!-- Slide 2 -->
+
             <div class="w-full flex-shrink-0 min-h-[130px]">
-              <!-- <img
+              <img
                 src="assets/images/banner.webp"
                 alt="Desktop Banner"
                 width="1200"
@@ -1436,15 +1432,10 @@
                 class="w-full h-full object-contain block md:hidden"
                 decoding="async"
                 loading="eager"
-                fetchpriority="high" /> -->
+                fetchpriority="high" />
                 
 
 
-<picture>
-  <source media="(min-width:650px)" srcset="assets/images/banner.webp">
-  <source media="(min-width:465px)" srcset="assets/images/banner-mobile.webp">
-  <img src="assets/images/banner-mobile.webp" alt="banner" width="1800" height="300">
-</picture>
 
 
             </div>
@@ -1452,7 +1443,7 @@
           </div>
         </div>
 
-        <!-- Navigation Buttons -->
+    
         <button
           class="absolute top-1/2 -translate-y-1/2 left-2 bg-white p-2 rounded-full shadow-md hover:bg-gray-300 transition"
           id="prev">
@@ -1464,14 +1455,22 @@
           ❯
         </button>
 
-        <!-- Carousel Indicators -->
+
         <div class="absolute bottom-2 left-1/2 -translate-x-1/2 flex space-x-2">
           <span class="w-3 h-3 bg-gray-300 rounded-full cursor-pointer"
             data-index="0"></span>
           <span class="w-3 h-3 bg-gray-300 rounded-full cursor-pointer"
             data-index="1"></span>
         </div>
-      </div>
+      </div> -->
+
+
+<div class="banner-slider">
+  <div><img src="assets/images/banner.webp" alt="Banner 1" loading="eager" width="100%" height="auto" /></div>
+  <div><img src="assets/images/banner.webp" alt="Banner 2" loading="lazy" width="100%" height="auto" /></div>
+  <div><img src="assets/images/banner.webp" alt="Banner 3" loading="lazy" width="100%" height="auto" /></div>
+</div>
+
     </div>
 
     <!-- End Hero Section -->
@@ -2441,9 +2440,18 @@
 
       <script>
 
-
-
-
+        
+$(window).on('load', function () {
+      $('.banner-slider').slick({
+    autoplay: true,
+    autoplaySpeed: 5000,
+    arrows: true,
+    dots: true,
+    lazyLoad: 'ondemand',  // Loads only when needed
+    speed: 300,
+    pauseOnHover: false
+  });
+});
 
       </script>
 
