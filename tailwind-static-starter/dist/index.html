@@ -26,13 +26,12 @@
             height: 100%;
             }
             /* Hide all slides except the first before Slick initializes */
-            .slick-slider>div:not(:first-child) {
+            .slick-slider:not(.slick-initialized)>div:not(:first-child) {
             display: none;
             }
             /* Once Slick initializes, show all slides */
-            .slick-initialized .slick-list {
-            display: block !important;
-            }
+        
+
 
 
             

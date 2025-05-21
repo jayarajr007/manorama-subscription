@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="Manorama Subscription Website. Subscribe Books and Magazines. Manorama Year Book Malayalam and English. Magic Pot. The Week. Watch Time India. Sampadyam. Bhashaposhini. Karshakasree. Smart Life. The Man. Balarama Digest. Tell Me Why. Kalikkudukka. Balarama. Vanitha. National Geographic Kids. Manorama Weekly. Vanitha Pachakam. Thozhilveedhi. Balarama Amar Chithra Kadha.">
-  <title>Manorama Subscription | dBooks | E-editions</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+      content="Manorama Subscription Website. Subscribe Books and Magazines. Manorama Year Book Malayalam and English. Magic Pot. The Week. Watch Time India. Sampadyam. Bhashaposhini. Karshakasree. Smart Life. The Man. Balarama Digest. Tell Me Why. Kalikkudukka. Balarama. Vanitha. National Geographic Kids. Manorama Weekly. Vanitha Pachakam. Thozhilveedhi. Balarama Amar Chithra Kadha.">
+    <title>Manorama Subscription | dBooks | E-editions</title>
 
-  <!-- Preload critical fonts (used above the fold) -->
-  <link rel="preload" href="assets/font/poppins/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="assets/font/poppins/Poppins-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="assets/font/poppins/Poppins-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <!-- Preload critical fonts (used above the fold) -->
+    <link rel="preload" href="assets/font/poppins/Poppins-Regular.woff2"
+      as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="assets/font/poppins/Poppins-Medium.woff2"
+      as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="assets/font/poppins/Poppins-SemiBold.woff2"
+      as="font" type="font/woff2" crossorigin="anonymous">
 
-  <!-- Inline essential font-face definitions -->
-  <style>
+    <!-- Inline essential font-face definitions -->
+    <style>
     @font-face {
       font-family: 'Poppins';
       src: url('assets/font/poppins/Poppins-Regular.woff2') format('woff2');
@@ -41,19 +44,27 @@
     body {
       font-family: 'Poppins', sans-serif;
     }
+     .slick-slider:not(.slick-initialized)>div:first-child {
+            display: block;
+            }
+         .slick-slider:not(.slick-initialized)>div:not(:first-child) {
+            display: none;
+            }
+            
   </style>
-  <link href="assets/css/output.css" rel="stylesheet">
-  <!-- Defer main CSS until after preload -->
-  <link rel="stylesheet" href="assets/css/style.css" type="text/css">
- 
+    <link href="assets/css/output.css" rel="stylesheet">
+    <!-- Defer main CSS until after preload -->
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
 
-  <!-- Preload critical images -->
-  <link rel="preload" as="image" href="assets/images/banner.webp" type="image/webp">
-  <link rel="preload" as="image" href="assets/images/banner-mobile.webp" type="image/webp" fetchpriority="high">
+    <!-- Preload critical images -->
+    <link rel="preload" as="image" href="assets/images/banner.webp"
+      type="image/webp">
+    <link rel="preload" as="image" href="assets/images/banner-mobile.webp"
+      type="image/webp" fetchpriority="high">
 
-  <!-- Main stylesheet -->
+    <!-- Main stylesheet -->
 
-</head>
+  </head>
 
   <body class>
 
@@ -201,86 +212,93 @@
                         d="M15 19l-7-7 7-7" />
                     </svg>
                   </button>
-                  <div class="global-search items-center border border-gray-300 rounded-md px-3 py-2 w-full" id="search-container">
-              <div class="flex ">
-                 <span class="mobile-search">
+                  <div
+                    class="global-search items-center border border-gray-300 rounded-md px-3 py-2 w-full"
+                    id="search-container">
+                    <div class="flex ">
+                      <span class="mobile-search">
 
                       </span>
-                <input type="text" placeholder="Search For Title, Author Or Keyword.." class="bg-transparent outline-none text-sm w-full" id="searchInput">
-            
-              </div>
-              <div id="suggestionDropdown" class="hidden absolute top-12 w-full bg-white shadow-xl rounded-lg p-4 z-50 left-0">
-                <!-- Recent Searches -->
-                <div class="mb-4">
-                  <p class="text-sm text-black font-semibold mb-1">Recent
-                    Searches</p>
-                  <!-- Each item -->
-                  <div class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
-                    <span class="suggestion-icon">
-                      
-                   
-                      
-                      </span>
+                      <input type="text"
+                        placeholder="Search For Title, Author Or Keyword.."
+                        class="bg-transparent outline-none text-sm w-full"
+                        id="searchInput">
 
+                    </div>
+                    <div id="suggestionDropdown"
+                      class="hidden absolute top-12 w-full bg-white shadow-xl rounded-lg p-4 z-50 left-0">
+                      <!-- Recent Searches -->
+                      <div class="mb-4">
+                        <p class="text-sm text-black font-semibold mb-1">Recent
+                          Searches</p>
+                        <!-- Each item -->
+                        <div
+                          class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
+                          <span class="suggestion-icon">
 
-                    <span>Pravasaikalkkum Vanithakkalkum 50 Samrambhangal</span>
-                  </div>
-                  <div class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
-                    <span class="suggestion-icon">
-                      
-                   
-                      
-                      </span>
+                          </span>
 
-                    <span>Vanitha</span>
-                  </div>
-                  <div class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
-                     <span class="suggestion-icon">
-                      
-                   
-                      
-                      </span>
+                          <span>Pravasaikalkkum Vanithakkalkum 50
+                            Samrambhangal</span>
+                        </div>
+                        <div
+                          class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
+                          <span class="suggestion-icon">
 
-                    <span>Vanitha Hindi</span>
-                  </div>
-                  <div class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
-                    <span class="suggestion-icon">
-                      
-                   
-                      
-                      </span>
+                          </span>
 
-                    <span>Vanitha Pachakam</span>
-                  </div>
-                  <div class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
-                  <span class="suggestion-icon">
-                      
-                   
-                      
-                      </span>
+                          <span>Vanitha</span>
+                        </div>
+                        <div
+                          class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
+                          <span class="suggestion-icon">
 
-                    <span>Week &amp; Vanitha Combo</span>
+                          </span>
+
+                          <span>Vanitha Hindi</span>
+                        </div>
+                        <div
+                          class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
+                          <span class="suggestion-icon">
+
+                          </span>
+
+                          <span>Vanitha Pachakam</span>
+                        </div>
+                        <div
+                          class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
+                          <span class="suggestion-icon">
+
+                          </span>
+
+                          <span>Week &amp; Vanitha Combo</span>
+                        </div>
+                      </div>
+                      <!-- Popular Searches -->
+                      <div class="mb-4">
+                        <p class="text-sm text-black font-semibold mb-3">Popular
+                          Searches</p>
+                        <div class="flex flex-wrap gap-2 text-sm">
+                          <span
+                            class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Manorama
+                            Premium</span>
+                          <span
+                            class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Astro</span>
+                          <span
+                            class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Manorama
+                            MAX</span>
+                          <span
+                            class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Epaper</span>
+                          <span
+                            class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Books</span>
+                          <span
+                            class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Year
+                            Book</span>
+                        </div>
+                      </div>
+                      <!-- Keep Shopping For -->
+                    </div>
                   </div>
-                </div>
-                <!-- Popular Searches -->
-                <div class="mb-4">
-                  <p class="text-sm text-black font-semibold mb-3">Popular
-                    Searches</p>
-                  <div class="flex flex-wrap gap-2 text-sm">
-                    <span class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Manorama
-                      Premium</span>
-                    <span class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Astro</span>
-                    <span class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Manorama
-                      MAX</span>
-                    <span class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Epaper</span>
-                    <span class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Books</span>
-                    <span class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Year
-                      Book</span>
-                  </div>
-                </div>
-                <!-- Keep Shopping For -->
-              </div>
-            </div>
                 </div>
                 <div id
                   class="  top-12 w-full bg-white rounded-lg p-4 z-50 left-0">
@@ -1632,7 +1650,26 @@
 
         <div>
 
-          <div class="banner-wrapper"> 
+          <div class="banner-wrapper">
+            <picture>
+              <!-- Small screens default -->
+              <source srcset="assets/images/banner-mobile.webp"
+                media="(max-width:464px)" sizes="472">
+              <!-- Medium screens -->
+              <source srcset="assets/images/banner1.jpg"
+                media="(min-width:465px)" sizes="1550">
+              <!-- Fallback -->
+              <img
+                src="assets/images/banner-mobile.webp" width="1550" height="250"
+                alt>
+            </picture>
+
+          </div>
+
+        </div>
+
+        <div>
+
           <picture>
             <!-- Small screens default -->
             <source srcset="assets/images/banner-mobile.webp"
@@ -1643,31 +1680,7 @@
             <!-- Fallback -->
             <img
               src="assets/images/banner-mobile.webp" width="1550" height="250"
-              alt=""
-              >
-          </picture>
-
-          </div>
-
-    
-
-        </div>
-
-        <div>
-
-
- <picture>
-            <!-- Small screens default -->
-            <source srcset="assets/images/banner-mobile.webp"
-              media="(max-width:464px)" sizes="472">
-            <!-- Medium screens -->
-            <source srcset="assets/images/banner1.jpg"
-              media="(min-width:465px)" sizes="1550">
-            <!-- Fallback -->
-            <img
-              src="assets/images/banner-mobile.webp" width="1550" height="250"
-              alt=""
-              >
+              alt>
           </picture>
 
         </div>
