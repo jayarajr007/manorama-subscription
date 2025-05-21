@@ -59,6 +59,48 @@
             }
          </style>
 
+  <!-- Preload critical fonts (used above the fold) -->
+    <link rel="preload" href="assets/font/poppins/Poppins-Regular.woff2"
+      as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="assets/font/poppins/Poppins-Medium.woff2"
+      as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="assets/font/poppins/Poppins-SemiBold.woff2"
+      as="font" type="font/woff2" crossorigin="anonymous">
+
+
+
+      
+    <!-- Inline essential font-face definitions -->
+    <style>
+    @font-face {
+      font-family: 'Poppins';
+      src: url('assets/font/poppins/Poppins-Regular.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Poppins';
+      src: url('assets/font/poppins/Poppins-Medium.woff2') format('woff2');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Poppins';
+      src: url('assets/font/poppins/Poppins-SemiBold.woff2') format('woff2');
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+
     <link rel="preload" href="assets/css/style.css" as="style"
       onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="assets/css/style.css"></noscript>
@@ -103,7 +145,7 @@
                 <!-- Profile Icon -->
                 <div
                   class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center i-m-account">
-             
+
                 </div>
                 <!-- Text Info -->
                 <div>
@@ -232,7 +274,7 @@
                     class="text-left hover:text-blue-500 flex items-center text-sm">
                     PREMIUM SUBSCRIPTION
                     <span class="ml-2 droparrow w-5 h-3">
-                      
+
                     </span>
                   </button>
                   <ul
@@ -255,7 +297,7 @@
                     class="text-left hover:text-blue-500 flex items-center text-sm">
                     MAGAZINES
                     <span class="ml-2 droparrow w-5 h-3">
-                      
+
                     </span>
                   </button>
                   <div
@@ -398,8 +440,8 @@
                   <button
                     class="text-left hover:text-blue-500 flex items-center text-sm">
                     Books
-                  <span class="ml-2 droparrow w-5 h-3">
-                      
+                    <span class="ml-2 droparrow w-5 h-3">
+
                     </span>
                   </button>
                   <div
@@ -715,7 +757,7 @@
           <div class="fn-icon i-home">
 
           </div>
-        
+
           <span class="uppercase font-semibold text-black mt-1">Home</span>
         </a>
         <a href="#"
@@ -728,10 +770,10 @@
           class="flex flex-col items-center text-gray-600 hover:text-blue-600"
           onclick="showCategory()">
 
-            <div class="fn-icon i-category">
+          <div class="fn-icon i-category">
 
           </div>
-         
+
           <span
             class="uppercase font-semibold text-black mt-1">Categories</span>
         </a>
@@ -1411,47 +1453,28 @@
                 loading="eager"
                 fetchpriority="high" /> -->
 
-
-<picture>
-  <source media="(min-width:650px)" srcset="assets/images/banner.webp">
-  <source media="(min-width:465px)" srcset="assets/images/bannernew.jpg">
-  <img src="assets/images/banner-mobile.webp" fetchpriority="high" alt="banner" width="1800" height="300">
-</picture> 
-
-
+              <picture>
+                <source media="(min-width:650px)"
+                  srcset="assets/images/banner.webp">
+                <source media="(min-width:465px)"
+                  srcset="assets/images/bannernew.jpg">
+                <img src="assets/images/banner-mobile.webp" fetchpriority="high"
+                  alt="banner" width="1800" height="300">
+              </picture>
 
             </div>
 
             <!-- Slide 2 -->
             <div class="w-full flex-shrink-0 min-h-[130px]">
-              <!-- <img
-                src="assets/images/banner.webp"
-                alt="Desktop Banner"
-                width="1200"
-                height="600"
-                class="w-full h-full object-contain hidden md:block"
-                decoding="async"
-                loading="eager"
-                fetchpriority="high" />
-              <img
-                src="assets/images/banner-mobile.webp"
-                alt="Mobile Banner"
-                width="700"
-                height="345"
-                class="w-full h-full object-contain block md:hidden"
-                decoding="async"
-                loading="eager"
-                fetchpriority="high" />
-                 -->
 
-
-<!-- <picture>
-  <source media="(min-width:650px)" srcset="assets/images/banner.webp">
-  <source media="(min-width:465px)" srcset="assets/images/banner-mobile.webp">
-  <img src="assets/images/banner-mobile.webp" alt="banner" width="1800" height="300">
-</picture> -->
-
-
+              <picture>
+                <source media="(min-width:650px)"
+                  srcset="assets/images/banner.webp">
+                <source media="(min-width:465px)"
+                  srcset="assets/images/bannernew.jpg">
+                <img src="assets/images/banner-mobile.webp" fetchpriority="high"
+                  alt="banner" width="1800" height="300">
+              </picture>
             </div>
 
           </div>
@@ -2399,20 +2422,14 @@
 
             </a>
             <a href="#" class="instagram">
-              
-              
-              
-              </a>
+
+            </a>
             <a href="#" class="youtube">
-              
-            
-              
-              </a>
+
+            </a>
             <a href="#" class="twitter">
-              
-            
-              
-              </a>
+
+            </a>
           </div>
         </div>
       </div>
@@ -2443,8 +2460,7 @@
     <script
       src="assets/js/common.js"></script>
 
-
-      <script>
+    <script>
 
 
 
