@@ -411,8 +411,16 @@ background: url(../img/icons/sprite.svg) no-repeat -113px -20px;
     background-position: left -191px top -22px !important;
 }
 
+.image-wrapper
+{
+  padding-top: 131.57894736842104%
 
-
+}
+.image-wrapper img
+{
+  position: absolute;
+  top: 0px;
+}
 
 
 
