@@ -1,277 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Manorama Subscription Website. Subscribe Books and Magazines. Manorama Year Book Malayalam and English. Magic Pot. The Week. Watch Time India. Sampadyam. Bhashaposhini. Karshakasree. Smart Life. The Man. Balarama Digest. Tell Me Why. Kalikkudukka. Balarama. Vanitha. National Geographic Kids. Manorama Weekly. Vanitha Pachakam. Thozhilveedhi. Balarama Amar Chithra Kadha.">
+  <title>Manorama Subscription | dBooks | E-editions</title>
 
-  <head>
+  <!-- Preload critical fonts (used above the fold) -->
+  <link rel="preload" href="assets/font/poppins/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="assets/font/poppins/Poppins-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="assets/font/poppins/Poppins-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-      content="Manorama Subscription Website. Subscribe Books and Magazines. Manorama Year Book Malayalam and English. Magic Pot. The Week. Watch Time India. Sampadyam. Bhashaposhini. Karshakasree. Smart Life. The Man. Balarama Digest. Tell Me Why. Kalikkudukka. Balarama. Vanitha. National Geographic Kids. Manorama Weekly. Vanitha Pachakam. Thozhilveedhi. Balarama Amar Chithra Kadha.">
-    <title>Manorama Subscription | dBooks | E-editions</title>
+  <!-- Inline essential font-face definitions -->
+  <style>
+    @font-face {
+      font-family: 'Poppins';
+      src: url('assets/font/poppins/Poppins-Regular.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
 
-    <link rel="preload" href="assets/font/poppins/Poppins-SemiBold.woff"
-      as="font" type="font/woff"
-      crossorigin="anonymous">
-    <link rel="preload" href="assets/font/poppins/Poppins-Regular.woff"
-      as="font" type="font/woff"
-      crossorigin="anonymous">
-    <link rel="preload" href="assets/font/poppins/Poppins-Medium.woff" as="font"
-      type="font/woff"
-      crossorigin="anonymous">
-    <link rel="preload" href="assets/font/poppins/Poppins-Black.woff" as="font"
-      type="font/woff"
-      crossorigin="anonymous">
+    @font-face {
+      font-family: 'Poppins';
+      src: url('assets/font/poppins/Poppins-Medium.woff2') format('woff2');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
 
+    @font-face {
+      font-family: 'Poppins';
+      src: url('assets/font/poppins/Poppins-SemiBold.woff2') format('woff2');
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
 
-<link rel="preload" href="assets/font/poppins/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
 
-<link rel="preload" href="assets/font/poppins/Poppins-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- Defer main CSS until after preload -->
+  <link rel="preload" href="assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="assets/css/style.css"></noscript>
 
-<link rel="preload" href="assets/font/poppins/Poppins-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- Preload critical images -->
+  <link rel="preload" as="image" href="assets/images/banner.webp" type="image/webp">
+  <link rel="preload" as="image" href="assets/images/banner-mobile.webp" type="image/webp" fetchpriority="high">
 
-    <!-- Preload important resources -->
-    <style>
-@font-face {
-  font-family: 'Poppins';
-  src: url('../font/poppins/Poppins-BlackItalic.woff2') format('woff2'),
-    url('../font/poppins/Poppins-BlackItalic.woff') format('woff'),
-    url('../font/poppins/Poppins-BlackItalic.ttf');
-
-  font-weight: 900;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Poppins';
-  src: url('../font/poppins/Poppins-Black.woff2') format('woff2'),
-    url('../font/poppins/Poppins-Black.woff') format('woff');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Poppins';
-  src: url('../font/poppins/Poppins-Bold.woff2') format('woff2'),
-    url('../font/poppins/Poppins-Bold.woff') format('woff');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Poppins';
-  src: url('../font/poppins/Poppins-BoldItalic.woff2') format('woff2'),
-    url('../font/poppins/Poppins-BoldItalic.woff') format('woff');
-  font-weight: bold;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Poppins';
-  src: url('../font/poppins/Poppins-ExtraBold.woff2') format('woff2'),
-    url('../font/poppins/Poppins-ExtraBold.woff') format('woff');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Poppins';
-  src: url('../font/poppins/Poppins-ExtraBoldItalic.woff2') format('woff2'),
-    url('../font/poppins/Poppins-ExtraBoldItalic.woff') format('woff');
-  font-weight: bold;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Poppins';
-  src: url('../font/poppins/Poppins-Italic.woff2') format('woff2'),
-    url('../font/poppins/Poppins-Italic.woff') format('woff');
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Poppins';
-  src: url('../font/poppins/Poppins-ExtraLightItalic.woff2') format('woff2'),
-    url('../font/poppins/Poppins-ExtraLightItalic.woff') format('woff');
-  font-weight: 200;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Poppins';
-  src: url('../font/poppins/Poppins-ExtraLight.woff2') format('woff2'),
-    url('../font/poppins/Poppins-ExtraLight.woff') format('woff');
-  font-weight: 200;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Poppins';
-  src: url('../font/poppins/Poppins-Medium.woff2') format('woff2'),
-    url('../font/poppins/Poppins-Medium.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Poppins';
-  src: url('../font/poppins/Poppins-MediumItalic.woff2') format('woff2'),
-    url('../font/poppins/Poppins-MediumItalic.woff') format('woff');
-  font-weight: 500;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Poppins';
-  src: url('../font/poppins/Poppins-LightItalic.woff2') format('woff2'),
-    url('../font/poppins/Poppins-LightItalic.woff') format('woff');
-  font-weight: 300;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Poppins';
-  src: url('../font/poppins/Poppins-Light.woff2') format('woff2'),
-    url('../font/poppins/Poppins-Light.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Poppins';
-  src: url('../font/poppins/Poppins-SemiBold.woff2') format('woff2'),
-    url('../font/poppins/Poppins-SemiBold.woff') format('woff');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Poppins';
-  src: url('../font/poppins/Poppins-Thin.woff2') format('woff2'),
-    url('../font/poppins/Poppins-Thin.woff') format('woff');
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Poppins';
-  src: url('../font/poppins/Poppins-Regular.woff2') format('woff2'),
-    url('../font/poppins/Poppins-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Poppins';
-  src: url('../font/poppins/Poppins-ThinItalic.woff2') format('woff2'),
-    url('../font/poppins/Poppins-ThinItalic.woff') format('woff');
-  font-weight: 100;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Poppins';
-  src: url('../font/poppins/Poppins-SemiBoldItalic.woff2') format('woff2'),
-    url('../font/poppins/Poppins-SemiBoldItalic.woff') format('woff');
-  font-weight: 600;
-  font-style: italic;
-  font-display: swap;
-}
-
-
-      body {
-  font-family: 'Poppins', sans-serif;
-}
-
-            .image-box
-            {
-            position:relative;
-            height: 0;
-            padding-bottom: 131.43939393939394%
-            }
-            .image-box img
-            {
-            position:absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            }
-            /* Hide all slides except the first before Slick initializes */
-            .slick-slider>div:not(:first-child) {
-            display: none;
-            }
-            /* Once Slick initializes, show all slides */
-            .slick-initialized .slick-list {
-            display: block !important;
-            }
-
- .banner-slider>div:not(:first-child) {
-            display: none;
-            }
-     
-
-. {
-  /* min-height: 323px; */
-  
-    min-height: 351px;
-}
-
-
-            /* Container holding the menu (usually the nav or li) */
-            .menu-container {
-            position: relative;
-            }
-            /* Dropdown itself */
-            .dropdown {
-            position: absolute;
-            top: 100%; /* place it below the parent */
-            left: 0;
-            z-index: 1000;
-            background: white;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            }
-            .active-tab {
-            background-color: #1d4ed8;
-            border-left: 3px solid #1d4ed8;
-            color: #fff;
-            padding: 8px;
-            }
-         </style>
-
-
-
-    <link rel="preload" href="assets/css/style.css" as="style"
-      onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="assets/css/style.css"></noscript>
-
-    <link rel="preload" as="image" href="assets/images/banner.webp"
-      type="image/webp">
-
-    <link rel="preload" as="image" href="assets/images/banner-mobile.webp"
-      type="image/webp" fetchpriority="high">
-
-  
-
-    <link href="assets/css/output.css" rel="stylesheet" />
-  </head>
+  <!-- Main stylesheet -->
+  <link href="assets/css/output.css" rel="stylesheet">
+</head>
 
   <body class>
 
