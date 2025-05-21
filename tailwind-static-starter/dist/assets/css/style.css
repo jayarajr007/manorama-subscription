@@ -263,6 +263,27 @@ position: absolute;
     background-clip: padding-box;
 
 }
+.banner-wrapper
+{
+    padding-top: 16.580645161290324%;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-wrapper picture
+{
+position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    background-clip: padding-box;
+
+}
 
 
 
