@@ -1,0 +1,374 @@
+
+.dark-bg {
+  background: #072654;
+}
+
+.primary-bg {
+  background: #333994;
+}
+
+
+.logo {
+  max-width: 275px;
+}
+
+/* html, body {
+  overflow-x: hidden;
+} */
+
+
+.offer-circle-badge {
+  width: 78px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #ED002B;
+}
+
+.global-search {
+  border-radius: 3px !important;
+  border: 1px solid var(--Border-Color, #E0E0E0);
+  background: #FFF;
+  padding: 11px 12px !important;
+}
+
+.slick-track {
+  display: flex !important;
+  margin-left: -7px !important;
+}
+
+.slick-track div div.bg-white {
+  height: 100% !important;
+}
+
+/* .slick-initialized .slick-slide {  
+  display: flex !important;
+} */
+.slick-slide {
+  height: auto !important;
+}
+
+.round-filter.active>img {
+  border: 2px solid #007bff;
+  /* blue border */
+}
+
+.round-filter.active>img::after {
+  content: '✔';/ Unicode checkmark */ position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #007bff;
+  color: white;
+  font-size: 0.75rem;
+  width: 1rem;
+  height: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  transform: translate(25%, -25%);
+  z-index: 10;
+}
+
+
+.section-height
+{
+  min-height: 402px;
+} 
+
+
+
+/* Hide scrollbar */
+/* .scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+} */
+
+#categoryMenu {
+  position: fixed;
+  background: #fff;
+  height: 100%;
+  z-index: 48;
+  top: 0;
+  padding-top: 66px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Sprite Image*/ 
+
+
+.nav-options a {
+  width: 32px;
+  height: 32px;
+
+  background-repeat: no-repeat;
+  background-size: auto;
+  background: url(../img/icons/sprite.svg);
+}
+
+.i-cart {
+
+  background-position: left -14px top -21px !important;
+}
+
+
+.i-notification {
+
+
+  background-position: left -47px top -21px !important;
+
+}
+
+.i-user {
+
+  background-position: left -78px top -21px !important;
+}
+
+.i-search-m {
+
+
+  background-position: left -106px top -20px !important;
+}
+
+
+
+.i-search-placeholder {
+  background: url(../img/icons/sprite.svg) no-repeat -113px -22px !important;
+}
+
+.i-viewall {
+  background: url(../img/icons/sprite.svg) no-repeat -24px -72px;
+
+}
+
+.i-gift {
+  background: url(../img/icons/sprite.svg) no-repeat -23px -109px;
+}
+
+
+.socialmedia a {
+  width: 34px;
+  height: 34px;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background: url(../img/icons/sprite.svg);
+}
+
+.socialmedia a.facebook {
+  background-position: left -21px top -141px ;
+}
+
+.socialmedia a.instagram {
+  background-position: left -62px top -141px;
+}
+
+.socialmedia a.youtube {
+  background-position: left -108px top -141px;
+}
+
+.socialmedia a.twitter {
+  background-position: left -148px top -141px;
+}
+
+.droparrow
+{
+  background:url(../img/icons/sprite.svg) no-repeat -30px -191px;
+}
+.i-m-account
+{
+    background:url(../img/icons/sprite.svg) no-repeat -146px -13px;
+}
+
+.footernav a > .fn-icon
+{ 
+  width: 21px;
+  height: 20px;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background: url(../img/icons/sprite.svg);
+}
+
+.footernav a > .i-home
+{
+    background-position: left -32px top -227px;
+}
+
+.footernav a > .i-category
+{
+    background-position: left -63px top -227px;
+}
+
+.footernav a > .i-account
+{
+    background-position: left -90px top -227px;
+}
+
+.suggestion-icon
+{
+    background: url(../img/icons/sprite.svg) no-repeat -113px -22px;
+
+  width: 21px;
+  height: 20px;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: left -190px top -20px !important;
+}
+
+.mobile-search
+{
+background: url(../img/icons/sprite.svg) no-repeat -113px -20px;
+    width: 21px;
+    height: 20px;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: left -191px top -22px !important;
+}
+
+.image-wrapper
+{
+  padding-top: 131.57894736842104%
+
+}
+.image-wrapper img
+{
+position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    background-clip: padding-box;
+
+}
+.banner-wrapper
+{
+    padding-top: 48.688046647230316%;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-wrapper picture
+{
+position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    background-clip: padding-box;
+
+}
+
+.slider-my-digital-purchases{
+	min-height: 405px;
+}
+
+.banner-slider{
+	 min-height: 247px;
+	 overflow: hidden;
+}
+
+@media screen and (min-width:465px) {
+
+
+.banner-wrapper
+{
+    padding-top: 16.580645161290324%;
+
+}
+
+
+}
+
+
+
+
+
+
+@media screen and (max-width: 1279px) {
+  .section-height {
+    min-height: 200px;
+  }
+}
+
+
+@media screen and (max-width: 760px) {
+  .banner-height {
+    min-height: 160px;
+    background: url(../font/poppins/Poppins-Black.woff);
+  }
+
+.global-search
+{
+      padding: 10px 12px !important;
+}
+
+}
+
+.scroll-menu-txt-wrap {
+  width: auto;
+  display: block;
+  text-wrap: wrap;
+}
+
+
+/* Hide all slides except the first before Slick initializes */
+/* .slick-slider>div:not(:first-child) {
+    display: none;
+} */
+
+/* Once Slick initializes, show all slides */
+/* .slick-initialized .slick-slider>div {
+    display: block !important;
+} */
+
+@media screen and (max-width: 640px) {
+
+  .strict-full-width {
+    width: 100% !important;
+  }
+
+  .slick-track {
+    display: flex !important;
+    margin-left: -4px !important;
+  }
+
+}
+
+/* In your global CSS file */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
