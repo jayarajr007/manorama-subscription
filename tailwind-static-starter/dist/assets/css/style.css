@@ -429,6 +429,14 @@ position: absolute;
     background-clip: padding-box;
 
 }
+
+
+            .active-tab {
+            background-color: #1d4ed8;
+            border-left: 3px solid #1d4ed8;
+            color: #fff;
+            padding: 8px;
+            }
 /* .banner-wrapper
 {
     padding-top: 48.688046647230316%;
