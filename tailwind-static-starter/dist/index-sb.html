@@ -67,16 +67,18 @@
             }
          </style>
 
-
-  <link rel="preload" href="assets/font/poppins/Poppins-SemiBold.woff" as="font" type="font/woff"
-    crossorigin="anonymous">
-  <link rel="preload" href="assets/font/poppins/Poppins-Regular.woff" as="font" type="font/woff"
-    crossorigin="anonymous">
-  <link rel="preload" href="assets/font/poppins/Poppins-Medium.woff" as="font" type="font/woff"
-    crossorigin="anonymous">
-  <link rel="preload" href="assets/font/poppins/Poppins-Black.woff" as="font" type="font/woff"
-    crossorigin="anonymous">
-
+    <link rel="preload" href="assets/font/poppins/Poppins-SemiBold.woff"
+      as="font" type="font/woff"
+      crossorigin="anonymous">
+    <link rel="preload" href="assets/font/poppins/Poppins-Regular.woff"
+      as="font" type="font/woff"
+      crossorigin="anonymous">
+    <link rel="preload" href="assets/font/poppins/Poppins-Medium.woff" as="font"
+      type="font/woff"
+      crossorigin="anonymous">
+    <link rel="preload" href="assets/font/poppins/Poppins-Black.woff" as="font"
+      type="font/woff"
+      crossorigin="anonymous">
 
     <link rel="preload" href="assets/css/style.css" as="style"
       onload="this.onload=null;this.rel='stylesheet'">
@@ -122,7 +124,7 @@
                 <!-- Profile Icon -->
                 <div
                   class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center i-m-account">
-             
+
                 </div>
                 <!-- Text Info -->
                 <div>
@@ -138,14 +140,15 @@
               class="global-search items-center border border-gray-300 rounded-md px-3 py-2 hidden md:block relative"
               id="search-container">
               <div class="flex">
+                <a
+                  class="text-gray-500 cursor-pointer i-search-placeholder w-5 h-5 mr-2">
+
+                </a>
                 <input type="text"
                   placeholder="Search For Title, Author Or Keyword.."
                   class="lg:w-96 md:w-64 bg-transparent outline-none text-sm"
                   id="searchInput" />
-                <a
-                  class="text-gray-500 cursor-pointer i-search-placeholder w-5 h-5">
 
-                </a>
               </div>
               <div id="suggestionDropdown"
                 class="hidden absolute top-12 w-full bg-white shadow-xl rounded-lg p-4 z-50 left-0">
@@ -156,32 +159,42 @@
                   <!-- Each item -->
                   <div
                     class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
-                    <span><img src="assets/img/icons/Search.svg" width="15"
-                        alt="Search icon" /></span>
+                    <span class="suggestion-icon">
+
+                    </span>
+
                     <span>Pravasaikalkkum Vanithakkalkum 50 Samrambhangal</span>
                   </div>
                   <div
                     class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
-                    <span><img src="assets/img/icons/Search.svg" width="15"
-                        alt="Search icon" /></span>
+                    <span class="suggestion-icon">
+
+                    </span>
+
                     <span>Vanitha</span>
                   </div>
                   <div
                     class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
-                    <span><img src="assets/img/icons/Search.svg" width="15"
-                        alt="Search icon" /></span>
+                    <span class="suggestion-icon">
+
+                    </span>
+
                     <span>Vanitha Hindi</span>
                   </div>
                   <div
                     class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
-                    <span><img src="assets/img/icons/Search.svg" width="15"
-                        alt="Search icon" /></span>
+                    <span class="suggestion-icon">
+
+                    </span>
+
                     <span>Vanitha Pachakam</span>
                   </div>
                   <div
                     class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
-                    <span><img src="assets/img/icons/Search.svg" width="15"
-                        alt="Search icon" /></span>
+                    <span class="suggestion-icon">
+
+                    </span>
+
                     <span>Week & Vanitha Combo</span>
                   </div>
                 </div>
@@ -214,9 +227,180 @@
             <!-- Global Search End-->
             <div class="flex nav-options">
 
-              <a class="w-8 h-8 i-search-m mr-3 md:hidden" href="#">
+              <a class="w-8 h-8 i-search-m mr-3 md:hidden" href="#"
+                id="openSearch">
 
               </a>
+
+              <!-- Search Overlay -->
+              <div id="searchOverlay"
+                class="fixed inset-0 z-50 bg-white p-4 overflow-y-auto hidden transition-opacity duration-300">
+                <!-- Back Button + Search Input -->
+                <div class="flex items-center gap-2 mb-4">
+                  <button id="closeSearch">
+                    <svg class="w-6 h-6 text-gray-700" fill="none"
+                      stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M15 19l-7-7 7-7" />
+                    </svg>
+                  </button>
+                  <div class="global-search items-center border border-gray-300 rounded-md px-3 py-2 w-full" id="search-container">
+              <div class="flex ">
+                 <span class="mobile-search">
+
+                      </span>
+                <input type="text" placeholder="Search For Title, Author Or Keyword.." class="bg-transparent outline-none text-sm w-full" id="searchInput">
+            
+              </div>
+              <div id="suggestionDropdown" class="hidden absolute top-12 w-full bg-white shadow-xl rounded-lg p-4 z-50 left-0">
+                <!-- Recent Searches -->
+                <div class="mb-4">
+                  <p class="text-sm text-black font-semibold mb-1">Recent
+                    Searches</p>
+                  <!-- Each item -->
+                  <div class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
+                    <span class="suggestion-icon">
+                      
+                   
+                      
+                      </span>
+
+
+                    <span>Pravasaikalkkum Vanithakkalkum 50 Samrambhangal</span>
+                  </div>
+                  <div class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
+                    <span class="suggestion-icon">
+                      
+                   
+                      
+                      </span>
+
+                    <span>Vanitha</span>
+                  </div>
+                  <div class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
+                     <span class="suggestion-icon">
+                      
+                   
+                      
+                      </span>
+
+                    <span>Vanitha Hindi</span>
+                  </div>
+                  <div class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
+                    <span class="suggestion-icon">
+                      
+                   
+                      
+                      </span>
+
+                    <span>Vanitha Pachakam</span>
+                  </div>
+                  <div class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
+                  <span class="suggestion-icon">
+                      
+                   
+                      
+                      </span>
+
+                    <span>Week &amp; Vanitha Combo</span>
+                  </div>
+                </div>
+                <!-- Popular Searches -->
+                <div class="mb-4">
+                  <p class="text-sm text-black font-semibold mb-3">Popular
+                    Searches</p>
+                  <div class="flex flex-wrap gap-2 text-sm">
+                    <span class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Manorama
+                      Premium</span>
+                    <span class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Astro</span>
+                    <span class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Manorama
+                      MAX</span>
+                    <span class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Epaper</span>
+                    <span class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Books</span>
+                    <span class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Year
+                      Book</span>
+                  </div>
+                </div>
+                <!-- Keep Shopping For -->
+              </div>
+            </div>
+                </div>
+                <div id
+                  class="  top-12 w-full bg-white rounded-lg p-4 z-50 left-0">
+                  <!-- Recent Searches -->
+                  <div class="mb-4">
+                    <p class="text-sm text-black font-semibold mb-1">Recent
+                      Searches</p>
+                    <!-- Each item -->
+                    <div
+                      class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
+                      <span class="suggestion-icon">
+
+                      </span>
+
+                      <span>Pravasaikalkkum Vanithakkalkum 50
+                        Samrambhangal</span>
+                    </div>
+                    <div
+                      class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
+                      <span class="suggestion-icon">
+
+                      </span>
+
+                      <span>Vanitha</span>
+                    </div>
+                    <div
+                      class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
+                      <span class="suggestion-icon">
+
+                      </span>
+
+                      <span>Vanitha Hindi</span>
+                    </div>
+                    <div
+                      class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
+                      <span class="suggestion-icon">
+
+                      </span>
+
+                      <span>Vanitha Pachakam</span>
+                    </div>
+                    <div
+                      class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
+                      <span class="suggestion-icon">
+
+                      </span>
+
+                      <span>Week & Vanitha Combo</span>
+                    </div>
+                  </div>
+                  <!-- Popular Searches -->
+                  <div class="mb-4">
+                    <p class="text-sm text-black font-semibold mb-3">Popular
+                      Searches</p>
+                    <div class="flex flex-wrap gap-2 text-sm">
+                      <span
+                        class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Manorama
+                        Premium</span>
+                      <span
+                        class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Astro</span>
+                      <span
+                        class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Manorama
+                        MAX</span>
+                      <span
+                        class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Epaper</span>
+                      <span
+                        class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Books</span>
+                      <span
+                        class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Year
+                        Book</span>
+                    </div>
+                  </div>
+                  <!-- Keep Shopping For -->
+                </div>
+
+              </div>
 
               <!-- Cart Icon -->
               <a class="mr-4  i-cart" href="#">
@@ -251,7 +435,7 @@
                     class="text-left hover:text-blue-500 flex items-center text-sm">
                     PREMIUM SUBSCRIPTION
                     <span class="ml-2 droparrow w-5 h-3">
-                      
+
                     </span>
                   </button>
                   <ul
@@ -274,7 +458,7 @@
                     class="text-left hover:text-blue-500 flex items-center text-sm">
                     MAGAZINES
                     <span class="ml-2 droparrow w-5 h-3">
-                      
+
                     </span>
                   </button>
                   <div
@@ -417,8 +601,8 @@
                   <button
                     class="text-left hover:text-blue-500 flex items-center text-sm">
                     Books
-                  <span class="ml-2 droparrow w-5 h-3">
-                      
+                    <span class="ml-2 droparrow w-5 h-3">
+
                     </span>
                   </button>
                   <div
@@ -734,7 +918,7 @@
           <div class="fn-icon i-home">
 
           </div>
-        
+
           <span class="uppercase font-semibold text-black mt-1">Home</span>
         </a>
         <a href="#"
@@ -747,10 +931,10 @@
           class="flex flex-col items-center text-gray-600 hover:text-blue-600"
           onclick="showCategory()">
 
-            <div class="fn-icon i-category">
+          <div class="fn-icon i-category">
 
           </div>
-         
+
           <span
             class="uppercase font-semibold text-black mt-1">Categories</span>
         </a>
@@ -1488,34 +1672,31 @@
         </div>
       </div> -->
 
+      <div class="banner-slider overflow-hidden">
 
-<div class="banner-slider overflow-hidden">
+        <div>
 
-  <div>
+          <picture>
+            <!-- Small screens default -->
+            <source srcset="assets/images/banner-mobile.webp"
+              media="(max-width:464px)">
+            <!-- Medium screens -->
+            <source srcset="assets/images/banner.webp"
+              media="(min-width:465px)">
+            <!-- Fallback -->
+            <img
+              src="assets/images/banner-mobile.webp"
+              alt="Flowers"
+              style="width:auto;"
+              fetchpriority="high"
+              loading="eager">
+          </picture>
 
+        </div>
 
+        <div>
 
-<picture>
-  <!-- Small screens default -->
-  <source srcset="assets/images/banner-mobile.webp" media="(max-width:464px)">
-  <!-- Medium screens -->
-  <source srcset="assets/images/banner.webp" media="(min-width:465px)">
-  <!-- Fallback -->
-  <img
-    src="assets/images/banner-mobile.webp"
-    alt="Flowers"
-    style="width:auto;"
-    fetchpriority="high"
-    loading="eager"
-  >
-</picture>
-
-
-</div>
-
- <div>
-
-    <!-- <img 
+          <!-- <img 
   src="assets/images/banner.webp" 
   srcset="assets/images/banner-mobile.webp 768w, assets/images/banner.webp 1280w, assets/images/banner.webp 1800w"
   sizes="(max-width: 768px) 100vw, (max-width: 1280px) 80vw, 1800px"
@@ -1526,24 +1707,25 @@
   fetchpriority="high"
 > -->
 
-<picture>
-  <!-- Small screens default -->
-  <source srcset="assets/images/banner-mobile.webp" media="(max-width:464px)">
-  <!-- Medium screens -->
-  <source srcset="assets/images/banner.webp" media="(min-width:465px)">
-  <!-- Fallback -->
-  <img
-    src="assets/images/banner-mobile.webp"
-    alt="Flowers"
-    style="width:auto;"
-    fetchpriority="high"
-    loading="eager"
-  >
-</picture>
-    
-</div>
+          <picture>
+            <!-- Small screens default -->
+            <source srcset="assets/images/banner-mobile.webp"
+              media="(max-width:464px)">
+            <!-- Medium screens -->
+            <source srcset="assets/images/banner.webp"
+              media="(min-width:465px)">
+            <!-- Fallback -->
+            <img
+              src="assets/images/banner-mobile.webp"
+              alt="Flowers"
+              style="width:auto;"
+              fetchpriority="high"
+              loading="eager">
+          </picture>
 
-</div>
+        </div>
+
+      </div>
 
     </div>
 
@@ -2467,20 +2649,14 @@
 
             </a>
             <a href="#" class="instagram">
-              
-              
-              
-              </a>
+
+            </a>
             <a href="#" class="youtube">
-              
-            
-              
-              </a>
+
+            </a>
             <a href="#" class="twitter">
-              
-            
-              
-              </a>
+
+            </a>
           </div>
         </div>
       </div>
@@ -2511,8 +2687,7 @@
     <script
       src="assets/js/common.js"></script>
 
-
-      <script>
+    <script>
 
         
 $(window).on('load', function () {
@@ -2525,6 +2700,11 @@ $(window).on('load', function () {
     speed: 300,
     pauseOnHover: false
   });
+
+
+
+
+  
 });
 
       </script>

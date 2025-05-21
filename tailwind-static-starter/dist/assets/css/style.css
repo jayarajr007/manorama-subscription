@@ -316,7 +316,7 @@ body {
 
 
 .i-search-placeholder {
-  background: url(../img/icons/sprite.svg) no-repeat -113px -22px;
+  background: url(../img/icons/sprite.svg) no-repeat -113px -22px !important;
 }
 
 .i-viewall {
@@ -388,6 +388,28 @@ body {
     background-position: left -90px top -227px;
 }
 
+.suggestion-icon
+{
+    background: url(../img/icons/sprite.svg) no-repeat -113px -22px;
+
+  width: 21px;
+  height: 20px;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: left -190px top -20px !important;
+}
+
+.mobile-search
+{
+background: url(../img/icons/sprite.svg) no-repeat -113px -20px;
+    width: 21px;
+    height: 20px;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: left -191px top -22px !important;
+}
 
 
 
@@ -409,6 +431,12 @@ body {
     min-height: 160px;
     background: url(../font/poppins/Poppins-Black.woff);
   }
+
+.global-search
+{
+      padding: 10px 12px !important;
+}
+
 }
 
 .scroll-menu-txt-wrap {
