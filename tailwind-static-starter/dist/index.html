@@ -11,6 +11,33 @@
 
     <!-- Preload important resources -->
     <style>
+       @font-face {
+      font-family: 'Poppins';
+      src: url('assets/font/poppins/Poppins-Regular.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Poppins';
+      src: url('assets/font/poppins/Poppins-Medium.woff2') format('woff2');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Poppins';
+      src: url('assets/font/poppins/Poppins-SemiBold.woff2') format('woff2');
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
             .image-box
             {
             position:relative;
@@ -70,36 +97,6 @@
 
 
       
-    <!-- Inline essential font-face definitions -->
-    <style>
-    @font-face {
-      font-family: 'Poppins';
-      src: url('assets/font/poppins/Poppins-Regular.woff2') format('woff2');
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family: 'Poppins';
-      src: url('assets/font/poppins/Poppins-Medium.woff2') format('woff2');
-      font-weight: 500;
-      font-style: normal;
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family: 'Poppins';
-      src: url('assets/font/poppins/Poppins-SemiBold.woff2') format('woff2');
-      font-weight: 600;
-      font-style: normal;
-      font-display: swap;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-    }
-
 
     <link rel="preload" href="assets/css/style.css" as="style"
       onload="this.onload=null;this.rel='stylesheet'">
