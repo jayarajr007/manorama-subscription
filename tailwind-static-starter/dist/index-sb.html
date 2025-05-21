@@ -1489,29 +1489,23 @@
   <div>
 
 
-<!-- <picture>
-  <source media="(min-width:650px)" srcset="assets/images/banner.webp">
-  <source media="(min-width:465px)" srcset="assets/images/banner-mobile.webp">
-  <img src="assets/images/banner.webp" alt="Flowers" style="width:auto;">
-</picture>     -->
+
+<picture>
+  <!-- Small screens default -->
+  <source srcset="assets/images/banner-mobile.webp" media="(max-width:464px)">
+  <!-- Medium screens -->
+  <source srcset="assets/images/banner.webp" media="(min-width:465px)">
+  <!-- Fallback -->
+  <img src="assets/images/banner-mobile.webp" alt="Flowers" style="width:auto;">
+</picture>
 
 
-    <img 
-  src="assets/images/banner.webp" 
-  srcset="assets/images/banner-mobile.webp 768w, assets/images/banner.webp 1280w, assets/images/banner.webp 1800w"
-  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 80vw, 1800px"
-  width="1800" 
-  height="300" 
-  alt="Banner 3" 
-  loading="eager" 
-  fetchpriority="high"
->
 
 </div>
 
  <div>
 
-    <img 
+    <!-- <img 
   src="assets/images/banner.webp" 
   srcset="assets/images/banner-mobile.webp 768w, assets/images/banner.webp 1280w, assets/images/banner.webp 1800w"
   sizes="(max-width: 768px) 100vw, (max-width: 1280px) 80vw, 1800px"
@@ -1520,9 +1514,16 @@
   alt="Banner 3" 
   loading="eager" 
   fetchpriority="high"
->
- 
+> -->
 
+<picture>
+  <!-- Small screens default -->
+  <source srcset="assets/images/banner-mobile.webp" media="(max-width:464px)">
+  <!-- Medium screens -->
+  <source srcset="assets/images/banner.webp" media="(min-width:465px)">
+  <!-- Fallback -->
+  <img src="assets/images/banner-mobile.webp" alt="Flowers" style="width:auto;">
+</picture>
     
 </div>
 
