@@ -284,6 +284,16 @@ position: absolute;
     background-clip: padding-box;
 
 }
+
+.slider-my-digital-purchases{
+	min-height: 405px;
+}
+
+.banner-slider{
+	 min-height: 247px;
+	 overflow: hidden;
+}
+
 @media screen and (min-width:465px) {
 
 
