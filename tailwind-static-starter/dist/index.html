@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
       content="Manorama Subscription Website. Subscribe Books and Magazines. Manorama Year Book Malayalam and English. Magic Pot. The Week. Watch Time India. Sampadyam. Bhashaposhini. Karshakasree. Smart Life. The Man. Balarama Digest. Tell Me Why. Kalikkudukka. Balarama. Vanitha. National Geographic Kids. Manorama Weekly. Vanitha Pachakam. Thozhilveedhi. Balarama Amar Chithra Kadha.">
-    <title>Manorama Subscription | dBooks | E-editions</title>
+    <title>Manorama Subscription | E Books | E-editions</title>
 
     <!-- Preload important resources -->
     <style>
@@ -22,69 +22,39 @@
     body {
       font-family: 'Poppins', sans-serif;
     }
-            .image-box
-            {
-            position:relative;
-            height: 0;
-            padding-bottom: 131.43939393939394%
-            }
-            .image-box img
-            {
-            position:absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            }
+          
             /* Hide all slides except the first before Slick initializes */
             .slick-slider:not(.slick-initialized)>div:not(:first-child) {
             display: none;
             }
+
+.slick-slider:not(.slick-initialized) div.bg-white {
+  max-width: 260px;
+}
             /* Once Slick initializes, show all slides */
             .slick-initialized .slick-list {
             display: block !important;
             }
 
-
-
-
             
-            /* Container holding the menu (usually the nav or li) */
-            .menu-container {
-            position: relative;
-            }
-            /* Dropdown itself */
-            .dropdown {
-            position: absolute;
-            top: 100%; /* place it below the parent */
-            left: 0;
-            z-index: 1000;
-            background: white;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            }
-            .active-tab {
-            background-color: #1d4ed8;
-            border-left: 3px solid #1d4ed8;
-            color: #fff;
-            padding: 8px;
-            }
+.image-wrapper img
+{
+max-width: 260px;
+max-height: 350px;
+
+}
+
+
+          
          </style>
 
-  <!-- Preload critical fonts (used above the fold) -->
-    <link rel="preload" href="assets/font/poppins/Poppins-Regular.woff2"
-      as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="assets/font/poppins/Poppins-Medium.woff2"
-      as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="assets/font/poppins/Poppins-SemiBold.woff2"
-      as="font" type="font/woff2" crossorigin="anonymous">
 
 
-
-      
-
-    <link rel="preload" href="assets/css/style.css" as="style"
+    <link rel="preload" href="assets/css/common.css" as="style"
       onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="assets/css/style.css"></noscript>
+
+
+    <noscript><link rel="stylesheet" href="assets/css/common.css"></noscript>
 
     <link rel="preload" as="image" href="assets/images/banner.webp"
       type="image/webp">
@@ -92,11 +62,7 @@
     <link rel="preload" as="image" href="assets/images/banner-mobile.webp"
       type="image/webp" fetchpriority="high">
 
-    <link rel="preload" as="image" href="assets/images/books/a2.webp"
-      type="image/webp">
 
-    <link rel="preload" as="image" href="assets/images/subscription/1.webp"
-      type="image/webp">
 
     <link href="assets/css/output.css" rel="stylesheet" />
   </head>
@@ -141,15 +107,12 @@
             <div
               class="global-search items-center border border-gray-300 rounded-md px-3 py-2 hidden md:block relative"
               id="search-container">
-              <div class="flex">
-                <input type="text"
-                  placeholder="Search For Title, Author Or Keyword.."
-                  class="lg:w-96 md:w-64 bg-transparent outline-none text-sm"
-                  id="searchInput" />
-                <a
-                  class="text-gray-500 cursor-pointer i-search-placeholder w-5 h-5">
+            <div class="flex">
+                <a class="text-gray-500 cursor-pointer i-search-placeholder w-5 h-5 mr-2">
 
                 </a>
+                <input type="text" placeholder="Search For Title, Author Or Keyword.." class="lg:w-96 md:w-64 bg-transparent outline-none text-sm" id="searchInput">
+
               </div>
               <div id="suggestionDropdown"
                 class="hidden absolute top-12 w-full bg-white shadow-xl rounded-lg p-4 z-50 left-0">
@@ -218,10 +181,187 @@
             <!-- Global Search End-->
             <div class="flex nav-options">
 
-              <a class="w-8 h-8 i-search-m mr-3 md:hidden" href="#">
+              <a class="w-8 h-8 i-search-m mr-3 md:hidden" href="#" id="openSearch">
 
               </a>
 
+
+                 <!-- Search Overlay -->
+              <div id="searchOverlay"
+                class="fixed inset-0 z-50 bg-white p-0 overflow-y-auto hidden transition-opacity duration-300">
+                <!-- Back Button + Search Input -->
+                <div class="flex items-center gap-2 p-3 border-b border-gray-300">
+                  <button id="closeSearch">
+                    <svg class="w-6 h-6 text-gray-700" fill="none"
+                      stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M15 19l-7-7 7-7" />
+                    </svg>
+                  </button>
+                  <div
+                    class="global-search items-center border border-gray-300 rounded-md px-3 py-2 w-full"
+                    id="search-container">
+                    <div class="flex ">
+                      <span class="mobile-search">
+
+                      </span>
+                      <input type="text"
+                        placeholder="Search For Title, Author Or Keyword.."
+                        class="bg-transparent outline-none text-sm w-full"
+                        id="searchInput">
+
+                    </div>
+                    <div id="suggestionDropdown"
+                      class="hidden absolute top-12 w-full bg-white shadow-xl rounded-lg p-4 z-50 left-0">
+                      <!-- Recent Searches -->
+                      <div class="mb-4">
+                        <p class="text-sm text-black font-semibold mb-1">Recent
+                          Searches</p>
+                        <!-- Each item -->
+                        <div
+                          class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
+                          <span class="suggestion-icon">
+
+                          </span>
+
+                          <span>Pravasaikalkkum Vanithakkalkum 50
+                            Samrambhangal</span>
+                        </div>
+                        <div
+                          class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
+                          <span class="suggestion-icon">
+
+                          </span>
+
+                          <span>Vanitha</span>
+                        </div>
+                        <div
+                          class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
+                          <span class="suggestion-icon">
+
+                          </span>
+
+                          <span>Vanitha Hindi</span>
+                        </div>
+                        <div
+                          class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
+                          <span class="suggestion-icon">
+
+                          </span>
+
+                          <span>Vanitha Pachakam</span>
+                        </div>
+                        <div
+                          class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
+                          <span class="suggestion-icon">
+
+                          </span>
+
+                          <span>Week &amp; Vanitha Combo</span>
+                        </div>
+                      </div>
+                      <!-- Popular Searches -->
+                      <div class="mb-4">
+                        <p class="text-sm text-black font-semibold mb-3">Popular
+                          Searches</p>
+                        <div class="flex flex-wrap gap-2 text-sm">
+                          <span
+                            class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Manorama
+                            Premium</span>
+                          <span
+                            class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Astro</span>
+                          <span
+                            class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Manorama
+                            MAX</span>
+                          <span
+                            class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Epaper</span>
+                          <span
+                            class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Books</span>
+                          <span
+                            class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Year
+                            Book</span>
+                        </div>
+                      </div>
+                      <!-- Keep Shopping For -->
+                    </div>
+                  </div>
+                </div>
+                <div id
+                  class="  top-12 w-full bg-white rounded-lg p-4 z-50 left-0">
+                  <!-- Recent Searches -->
+                  <div class="pb-4 border-b border-gray-300">
+                    <p class="text-sm text-black font-semibold mb-1">Recent
+                      Searches</p>
+                    <!-- Each item -->
+                    <div
+                      class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-0 py-2 rounded">
+                      <span class="suggestion-icon">
+
+                      </span>
+
+                      <span>Pravasaikalkkum Vanithakkalkum 50
+                        Samrambhangal</span>
+                    </div>
+                    <div
+                      class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-0 py-2 rounded">
+                      <span class="suggestion-icon">
+
+                      </span>
+
+                      <span>Vanitha</span>
+                    </div>
+                    <div
+                      class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-0 py-2 rounded">
+                      <span class="suggestion-icon">
+
+                      </span>
+
+                      <span>Vanitha Hindi</span>
+                    </div>
+                    <div
+                      class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-0 py-2 rounded">
+                      <span class="suggestion-icon">
+
+                      </span>
+
+                      <span>Vanitha Pachakam</span>
+                    </div>
+                    <div
+                      class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-0 py-2 rounded">
+                      <span class="suggestion-icon">
+
+                      </span>
+
+                      <span>Week & Vanitha Combo</span>
+                    </div>
+                  </div>
+                  <!-- Popular Searches -->
+                  <div class="mb-4 pt-4">
+                    <p class="text-sm text-black font-semibold mb-3">Popular
+                      Searches</p>
+                    <div class="flex flex-wrap gap-2 text-sm">
+                      <span
+                        class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Manorama
+                        Premium</span>
+                      <span
+                        class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Astro</span>
+                      <span
+                        class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Manorama
+                        MAX</span>
+                      <span
+                        class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Epaper</span>
+                      <span
+                        class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Books</span>
+                      <span
+                        class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Year
+                        Book</span>
+                    </div>
+                  </div>
+                  <!-- Keep Shopping For -->
+                </div>
+
+              </div>
               <!-- Cart Icon -->
               <a class="mr-4  i-cart" href="#">
 
@@ -1500,12 +1640,12 @@
         </a>
       </div>
 
-      <div class="slider-my-digital-purchases slick-slider section-height">
+      <div class="slider-my-digital-purchases slick-slider">
 
         <!-- Item 1 -->
         <div class="md:px-2 px-1 pb-2">
           <div class="bg-white p-2 border rounded-lg hover:shadow-md">
-            <div class="relative overflow-hidden">
+            <div class="relative overflow-hidden image-wrapper">
               <img src="assets/images/books/a2.webp" width="266" height="350"
                 decoding="async"
                 alt="Book cover of A2"
@@ -1520,7 +1660,7 @@
         <!-- Item 2 -->
         <div class="md:px-2 px-1 pb-2">
           <div class="bg-white p-2 border rounded-lg">
-            <div class="relative overflow-hidden">
+            <div class="relative overflow-hidden image-wrapper">
               <img src="assets/images/books/a4.webp" width="266" height="350"
                 decoding="async"
                 alt="Book cover of A4"
@@ -1535,7 +1675,7 @@
         <!-- Item 3 -->
         <div class="md:px-2 px-1 pb-2">
           <div class="bg-white p-2 border rounded-lg">
-            <div class="relative overflow-hidden">
+            <div class="relative overflow-hidden image-wrapper">
               <img src="assets/images/books/a1.webp" width="266" height="350"
                 decoding="async"
                 alt="Book cover of A1"
@@ -1550,7 +1690,7 @@
         <!-- Item 4 -->
         <div class="md:px-2 px-1 pb-2">
           <div class="bg-white p-2 border rounded-lg">
-            <div class="relative overflow-hidden">
+            <div class="relative overflow-hidden image-wrapper">
               <img src="assets/images/books/a5.webp" width="266" height="350"
                 decoding="async"
                 alt="Book cover of A5"
@@ -1565,7 +1705,7 @@
         <!-- Item 5 -->
         <div class="md:px-2 px-1 pb-2">
           <div class="bg-white p-2 border rounded-lg">
-            <div class="relative overflow-hidden">
+            <div class="relative overflow-hidden image-wrapper">
               <img src="assets/images/books/a3.webp" width="266" height="350"
                 decoding="async"
                 alt="Book cover of A3"
@@ -1583,7 +1723,7 @@
     <!-- End  My Digital Purchases-->
     <!--  Manorama Premium Subscription-->
     <section
-      class="max-w-full lg:max-w-[1550px] mx-auto px-4 my-6 border-b-2 border-b-gray-100 pb-5 sm:px-6 lg:px-8 section-height overflow-hidden">
+      class="max-w-full lg:max-w-[1550px] mx-auto px-4 my-6 border-b-2 border-b-gray-100 pb-5 sm:px-6 lg:px-8 overflow-hidden">
       <div class="flex justify-between items-center mb-4">
         <h2 class="text-[16px] md:text-[18px] font-semibold">Manorama Premium
           Subscription</h2>
@@ -1599,7 +1739,7 @@
         <!-- Repeat this block for each card -->
         <div class="md:px-2 px-1 pb-2">
           <div class="bg-white p-2 rounded-lg border">
-            <div class="relative overflow-hidden">
+            <div class="relative overflow-hidden image-wrapper">
               <img src="assets/images/subscription/1.webp" alt="Magazine 1"
                 class="rounded-md transition-all duration-300 hover:scale-110"
                 width="266" height="350" decoding="async" />
@@ -1616,7 +1756,7 @@
         <!-- Duplicate and update for all cards -->
         <div class="md:px-2 px-1 pb-2">
           <div class="bg-white p-2 rounded-lg border">
-            <div class="relative overflow-hidden">
+            <div class="relative overflow-hidden image-wrapper">
               <img src="assets/images/subscription/2.webp" alt="Magazine 2"
                 class="rounded-md transition-all duration-300 hover:scale-110"
                 width="266" height="350" decoding="async" />
@@ -1632,7 +1772,7 @@
 
         <div class="md:px-2 px-1 pb-2">
           <div class="bg-white p-2 rounded-lg border">
-            <div class="relative overflow-hidden">
+            <div class="relative overflow-hidden image-wrapper">
               <img src="assets/images/subscription/3.webp" alt="Magazine 3"
                 class="rounded-md transition-all duration-300 hover:scale-110"
                 width="266" height="350" decoding="async" />
@@ -1657,7 +1797,7 @@
 
         <div class="md:px-2 px-1 pb-2">
           <div class="bg-white p-2 rounded-lg border">
-            <div class="relative overflow-hidden">
+            <div class="relative overflow-hidden image-wrapper">
               <img src="assets/images/subscription/4.webp" alt="Magazine 4"
                 class="rounded-md transition-all duration-300 hover:scale-110"
                 width="266" height="350" decoding="async" />
@@ -1686,7 +1826,7 @@
 
         <div class="md:px-2 px-1 pb-2">
           <div class="bg-white p-2 rounded-lg border">
-            <div class="relative overflow-hidden">
+            <div class="relative overflow-hidden image-wrapper">
               <img src="assets/images/subscription/1.webp" alt="Magazine 5"
                 class="rounded-md transition-all duration-300 hover:scale-110"
                 width="266" height="350" decoding="async" />
@@ -1805,7 +1945,7 @@
     <!-- End  News paper and e paper 2 col layout-->
     <!--  Books -->
     <section
-      class="max-w-full lg:max-w-[1550px] mx-auto px-4 my-6 border-b-2 border-b-gray-100 pb-5 sm:px-6 lg:px-8 section-height overflow-hidden">
+      class="max-w-full lg:max-w-[1550px] mx-auto px-4 my-6 border-b-2 border-b-gray-100 pb-5 sm:px-6 lg:px-8  overflow-hidden">
       <div class="flex justify-between items-center mb-4">
         <h2 class="text-[16px] md:text-[18px] font-semibold">Books</h2>
         <a href="listing.html"
@@ -1821,7 +1961,7 @@
         <!-- Slide 1 -->
         <div class="md:px-2 px-1 pb-2">
           <div class="bg-white p-2 rounded-lg border">
-            <div class="relative overflow-hidden">
+            <div class="relative overflow-hidden image-wrapper">
               <img src="assets/images/books/a1.webp" alt="Avatharam"
                 class="rounded-md transition-all duration-300 hover:scale-110"
                 width="266" height="350" decoding="async" />
@@ -1852,7 +1992,7 @@
         <!-- Slide 2 -->
         <div class="md:px-2 px-1 pb-2">
           <div class="bg-white p-2 rounded-lg border">
-            <div class="relative overflow-hidden">
+            <div class="relative overflow-hidden image-wrapper">
               <img src="assets/images/books/a2.webp"
                 alt="Chembilammini Kolakkes"
                 class="rounded-md transition-all duration-300 hover:scale-110"
@@ -1871,7 +2011,7 @@
         <!-- Slide 3 -->
         <div class="md:px-2 px-1 pb-2">
           <div class="bg-white p-2 rounded-lg border">
-            <div class="relative overflow-hidden">
+            <div class="relative overflow-hidden image-wrapper">
               <img src="assets/images/books/a3.webp"
                 alt="Chembilammini Kolakkes"
                 class="rounded-md transition-all duration-300 hover:scale-110"
@@ -1890,7 +2030,7 @@
         <!-- Slide 4 -->
         <div class="md:px-2 px-1 pb-2">
           <div class="bg-white p-2 rounded-lg border">
-            <div class="relative overflow-hidden">
+            <div class="relative overflow-hidden image-wrapper">
               <img src="assets/images/books/a4.webp"
                 alt="Chembilammini Kolakkes"
                 class="rounded-md transition-all duration-300 hover:scale-110"
@@ -1915,7 +2055,7 @@
         <!-- Slide 5 -->
         <div class="md:px-2 px-1 pb-2">
           <div class="bg-white p-2 rounded-lg border">
-            <div class="relative overflow-hidden">
+            <div class="relative overflow-hidden image-wrapper">
               <img src="assets/images/books/a5.webp"
                 alt="Chembilammini Kolakkes"
                 class="rounded-md transition-all duration-300 hover:scale-110"
@@ -1954,11 +2094,11 @@
         </a>
       </div>
 
-      <div class="slider slick-slider section-height">
+      <div class="slider slick-slider ">
         <!-- Start Card -->
         <div class="md:px-2 px-1 pb-2">
           <div class="bg-white p-2 rounded-lg border">
-            <div class="relative overflow-hidden">
+            <div class="relative overflow-hidden image-wrapper">
               <img src="assets/images/magazin/4.webp"
                 alt="Karshakasree Magazine"
                 class="rounded-md transition-all duration-300 hover:scale-110"
@@ -1980,7 +2120,7 @@
         </div>
         <div class="md:px-2 px-1 pb-2">
           <div class="bg-white p-2 rounded-lg border">
-            <div class="relative overflow-hidden">
+            <div class="relative overflow-hidden image-wrapper">
               <img src="assets/images/magazin/1.webp"
                 alt="Karshakasree Magazine"
                 class="rounded-md transition-all duration-300 hover:scale-110"
@@ -1997,7 +2137,7 @@
         </div>
         <div class="md:px-2 px-1 pb-2">
           <div class="bg-white p-2 rounded-lg border">
-            <div class="relative overflow-hidden">
+            <div class="relative overflow-hidden image-wrapper">
               <img src="assets/images/magazin/1.webp"
                 alt="Karshakasree Magazine"
                 class="rounded-md transition-all duration-300 hover:scale-110"
@@ -2014,7 +2154,7 @@
         </div>
         <div class="md:px-2 px-1 pb-2">
           <div class="bg-white p-2 rounded-lg border">
-            <div class="relative overflow-hidden">
+            <div class="relative overflow-hidden image-wrapper">
               <img src="assets/images/magazin/2.webp"
                 alt="Karshakasree Magazine"
                 class="rounded-md transition-all duration-300 hover:scale-110"
@@ -2033,7 +2173,7 @@
         <!-- Example card with offer -->
         <div class="md:px-2 px-1 pb-2">
           <div class="bg-white p-2 rounded-lg border">
-            <div class="relative overflow-hidden">
+            <div class="relative overflow-hidden image-wrapper">
               <img src="assets/images/magazin/4.webp"
                 alt="Karshakasree Magazine"
                 class="rounded-md transition-all duration-300 hover:scale-110"
@@ -2105,11 +2245,11 @@
         </a>
       </div>
 
-      <div class="slider slick-slider section-height">
+      <div class="slider slick-slider ">
         <!-- Astro Card 1 -->
         <div class="md:px-2 px-1 pb-2">
           <div class="bg-white p-2 rounded-lg border">
-            <div class="relative overflow-hidden">
+            <div class="relative overflow-hidden image-wrapper">
               <img src="assets/images/astro/1.webp" alt="In-depth horoscope"
                 class="rounded-md transition-all duration-300 hover:scale-110"
                 width="266" height="350" decoding="async" />
@@ -2123,7 +2263,7 @@
         <!-- Astro Card 2 -->
         <div class="md:px-2 px-1 pb-2">
           <div class="bg-white p-2 rounded-lg border">
-            <div class="relative overflow-hidden">
+            <div class="relative overflow-hidden image-wrapper">
               <img src="assets/images/astro/2.webp" alt="Gem Recommendation"
                 class="rounded-md transition-all duration-300 hover:scale-110"
                 width="266" height="350" decoding="async" />
@@ -2137,7 +2277,7 @@
         <!-- Astro Card 3 -->
         <div class="md:px-2 px-1 pb-2">
           <div class="bg-white p-2 rounded-lg border">
-            <div class="relative overflow-hidden">
+            <div class="relative overflow-hidden image-wrapper">
               <img src="assets/images/astro/3.webp" alt="Yoga Report"
                 class="rounded-md transition-all duration-300 hover:scale-110"
                 width="266" height="350" decoding="async" />
@@ -2151,7 +2291,7 @@
         <!-- Astro Card 4 -->
         <div class="md:px-2 px-1 pb-2">
           <div class="bg-white p-2 rounded-lg border">
-            <div class="relative overflow-hidden">
+            <div class="relative overflow-hidden image-wrapper">
               <img src="assets/images/astro/3.webp" alt="Numerology Report"
                 class="rounded-md transition-all duration-300 hover:scale-110"
                 width="266" height="350" decoding="async" />
@@ -2165,7 +2305,7 @@
         <!-- Astro Card 5 -->
         <div class="md:px-2 px-1 pb-2">
           <div class="bg-white p-2 rounded-lg border">
-            <div class="relative overflow-hidden">
+            <div class="relative overflow-hidden image-wrapper">
               <img src="assets/images/astro/4.webp"
                 alt="Career & Business Horoscope"
                 class="rounded-md transition-all duration-300 hover:scale-110"
@@ -2204,11 +2344,11 @@
         </a>
       </div>
 
-      <div class="slider slick-slider section-height">
+      <div class="slider slick-slider ">
         <!-- Book 1 -->
         <div class="md:px-2 px-1 pb-2">
           <div class="bg-white p-2 rounded-lg border">
-            <div class="relative overflow-hidden">
+            <div class="relative overflow-hidden image-wrapper">
               <img src="assets/images/yearbook/1.webp"
                 alt="Manorama Year Book Malayalam 2025"
                 class="rounded-md transition-all duration-300 hover:scale-110"
@@ -2223,7 +2363,7 @@
         <!-- Book 2 -->
         <div class="md:px-2 px-1 pb-2">
           <div class="bg-white p-2 rounded-lg border">
-            <div class="relative overflow-hidden">
+            <div class="relative overflow-hidden image-wrapper">
               <img src="assets/images/yearbook/2.webp"
                 alt="Manorama Year Book Bengali"
                 class="rounded-md transition-all duration-300 hover:scale-110"
@@ -2238,7 +2378,7 @@
         <!-- Book 3 -->
         <div class="md:px-2 px-1 pb-2">
           <div class="bg-white p-2 rounded-lg border">
-            <div class="relative overflow-hidden">
+            <div class="relative overflow-hidden image-wrapper">
               <img src="assets/images/yearbook/3.webp"
                 alt="Manorama Year Book 2025 English"
                 class="rounded-md transition-all duration-300 hover:scale-110"
@@ -2253,7 +2393,7 @@
         <!-- Book 4 -->
         <div class="md:px-2 px-1 pb-2">
           <div class="bg-white p-2 rounded-lg border">
-            <div class="relative overflow-hidden">
+            <div class="relative overflow-hidden image-wrapper">
               <img src="assets/images/yearbook/4.webp"
                 alt="Manorama Year Book 2025 Hindi"
                 class="rounded-md transition-all duration-300 hover:scale-110"
@@ -2268,7 +2408,7 @@
         <!-- Book 5 -->
         <div class="md:px-2 px-1 pb-2">
           <div class="bg-white p-2 rounded-lg border">
-            <div class="relative overflow-hidden">
+            <div class="relative overflow-hidden image-wrapper">
               <img src="assets/images/yearbook/1.webp"
                 alt="Manorama Year Book Tamil"
                 class="rounded-md transition-all duration-300 hover:scale-110"
@@ -2440,7 +2580,7 @@
       src="assets/libs/slick-slider/slick.min.js"></script>
     <script
       src="assets/js/common.js"></script>
-          <script
+           <script
       src="assets/js/home.js"></script>
 
     <script>
