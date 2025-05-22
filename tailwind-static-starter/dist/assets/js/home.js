@@ -23,6 +23,21 @@ $(window).on('load', function () {
             }
         ]
     });
+
+
+  $('.main-banner').slick({
+        slidesToShow: 1, // Show 5 items on large screens
+        slidesToScroll: 1,
+        dots: true,
+        arrows: true, infinite: false,
+        centerMode: false,  // Disable to prevent extra space
+        variableWidth: false, // Ensure uniform width
+
+    });
+
+
+
+
 });
 
 
