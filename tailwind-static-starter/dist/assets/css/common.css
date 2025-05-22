@@ -573,3 +573,24 @@ position: absolute;
     bottom: 4px !important;
  
 }
+.main-banner .slick-next 
+{
+background-color: #00000057 !important;
+    width: 27px !important;
+    height: 30px !important;
+    right: 0px;
+    /* padding: 31px 0px; */
+    border-radius: 5px;
+}
+
+
+.main-banner .slick-prev
+{
+  background-color: #00000057 !important;
+    width: 27px !important;
+    height: 30px !important;
+    left: 0px;
+    /* padding: 31px 0px; */
+    border-radius: 5px;
+    z-index: 8;
+}
