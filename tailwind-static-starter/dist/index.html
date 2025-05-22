@@ -11,17 +11,7 @@
 
     <!-- Preload important resources -->
     <style>
-       @font-face {
-      font-family: 'Poppins';
-      src: url('assets/font/poppins/Poppins-Regular.woff2') format('woff2');
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-    }
+     
           
             /* Hide all slides except the first before Slick initializes */
             .slick-slider:not(.slick-initialized)>div:not(:first-child) {
@@ -44,17 +34,22 @@ max-height: 350px;
 
 }
 
-
-          
          </style>
 
+    <link rel="preload" href="assets/font/poppins/Poppins-Bold.woff2" as="font"
+      type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/font/poppins/Poppins-SemiBold.woff2"
+      as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/font/poppins/Poppins-Medium.woff2"
+      as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/font/poppins/Poppins-Regular.woff2"
+      as="font" type="font/woff2" crossorigin>
 
+    <link href="assets/css/output.css" rel="stylesheet" />
+    <link href="assets/css/common.css" rel="stylesheet" />
+    <link href="assets/css/home.css" rel="stylesheet" />
 
-    <link rel="preload" href="assets/css/common.css" as="style"
-      onload="this.onload=null;this.rel='stylesheet'">
-
-
-    <noscript><link rel="stylesheet" href="assets/css/common.css"></noscript>
+    
 
     <link rel="preload" as="image" href="assets/images/banner.webp"
       type="image/webp">
@@ -62,12 +57,9 @@ max-height: 350px;
     <link rel="preload" as="image" href="assets/images/banner-mobile.webp"
       type="image/webp" fetchpriority="high">
 
-
-
-    <link href="assets/css/output.css" rel="stylesheet" />
   </head>
 
-  <body class>
+  <body class="poppins-regular">
 
     <!-- Navbar -->
     <!-- Header -->
@@ -107,11 +99,15 @@ max-height: 350px;
             <div
               class="global-search items-center border border-gray-300 rounded-md px-3 py-2 hidden md:block relative"
               id="search-container">
-            <div class="flex">
-                <a class="text-gray-500 cursor-pointer i-search-placeholder w-5 h-5 mr-2">
+              <div class="flex">
+                <a
+                  class="text-gray-500 cursor-pointer i-search-placeholder w-5 h-5 mr-2">
 
                 </a>
-                <input type="text" placeholder="Search For Title, Author Or Keyword.." class="lg:w-96 md:w-64 bg-transparent outline-none text-sm" id="searchInput">
+                <input type="text"
+                  placeholder="Search For Title, Author Or Keyword.."
+                  class="lg:w-96 md:w-64 bg-transparent outline-none text-sm"
+                  id="searchInput">
 
               </div>
               <div id="suggestionDropdown"
@@ -181,16 +177,17 @@ max-height: 350px;
             <!-- Global Search End-->
             <div class="flex nav-options">
 
-              <a class="w-8 h-8 i-search-m mr-3 md:hidden" href="#" id="openSearch">
+              <a class="w-8 h-8 i-search-m mr-3 md:hidden" href="#"
+                id="openSearch">
 
               </a>
 
-
-                 <!-- Search Overlay -->
+              <!-- Search Overlay -->
               <div id="searchOverlay"
                 class="fixed inset-0 z-50 bg-white p-0 overflow-y-auto hidden transition-opacity duration-300">
                 <!-- Back Button + Search Input -->
-                <div class="flex items-center gap-2 p-3 border-b border-gray-300">
+                <div
+                  class="flex items-center gap-2 p-3 border-b border-gray-300">
                   <button id="closeSearch">
                     <svg class="w-6 h-6 text-gray-700" fill="none"
                       stroke="currentColor" viewBox="0 0 24 24">
@@ -1375,7 +1372,7 @@ max-height: 350px;
         <!-- Item 1 -->
         <div
           class="flex items-center justify-between p-3 bg-white shadow-md rounded-lg">
-          <span class="font-medium text-xs font-semibold">Manorama Daily & E
+          <span class="text-xs font-semibold">Manorama Daily & E
             Paper</span>
           <img src="assets/img/menu/newspaper.webp" alt="Manorama Daily"
             class="mx-1" width="40" height="40" />
@@ -1384,7 +1381,7 @@ max-height: 350px;
         <!-- Item 2 -->
         <div
           class="flex items-center justify-between p-3 bg-white shadow-md rounded-lg">
-          <span class="font-medium text-xs font-semibold">Premium
+          <span class="text-xs font-semibold">Premium
             Subscription</span>
           <img src="assets/img/menu/premium.webp" alt="Premium Subscription"
             class="mx-1" width="40" height="40" />
@@ -1393,7 +1390,7 @@ max-height: 350px;
         <!-- Item 3 -->
         <a href="listing.html"
           class="flex items-center justify-between p-3 bg-white shadow-md rounded-lg">
-          <span class="font-medium text-xs font-semibold">Magazines</span>
+          <span class="text-xs font-semibold">Magazines</span>
           <img src="assets/img/menu/magazin.webp" alt="Magazines" class="mx-1"
             width="40" height="40" />
         </a>
@@ -1401,7 +1398,7 @@ max-height: 350px;
         <!-- Item 4 -->
         <div
           class="flex items-center justify-between p-3 bg-white shadow-md rounded-lg">
-          <span class="font-medium text-xs font-semibold">Books</span>
+          <span class="text-xs font-semibold">Books</span>
           <img src="assets/img/menu/book.webp" alt="Books" class="mx-1"
             width="40" height="40" />
         </div>
@@ -1409,7 +1406,7 @@ max-height: 350px;
         <!-- Item 5 -->
         <div
           class="flex items-center justify-between p-3 bg-white shadow-md rounded-lg">
-          <span class="font-medium text-xs font-semibold">Year Book</span>
+          <span class="text-xs font-semibold">Year Book</span>
           <img src="assets/img/menu/yearbook.webp" alt="Year Book" class="mx-1"
             width="40" height="40" />
         </div>
@@ -1417,7 +1414,7 @@ max-height: 350px;
         <!-- Item 6 -->
         <div
           class="flex items-center justify-between p-3 bg-white shadow-md rounded-lg">
-          <span class="font-medium text-xs font-semibold">Astro</span>
+          <span class="text-xs font-semibold">Astro</span>
           <img src="assets/img/menu/astro.webp" alt="Astro" class="mx-1"
             width="40" height="40" />
         </div>
@@ -1425,7 +1422,7 @@ max-height: 350px;
         <!-- Item 7 -->
         <div
           class="flex items-center justify-between p-3 bg-white shadow-md rounded-lg">
-          <span class="font-medium text-xs font-semibold">Manorama Max</span>
+          <span class="text-xs font-semibold">Manorama Max</span>
           <img src="assets/img/menu/max.webp" alt="Manorama Max" class="mx-1"
             width="40" height="40" />
         </div>
@@ -1433,7 +1430,7 @@ max-height: 350px;
         <!-- Item 8 -->
         <div
           class="flex items-center justify-between p-3 bg-white shadow-md rounded-lg">
-          <span class="font-medium text-xs font-semibold">Offers</span>
+          <span class="text-xs font-semibold">Offers</span>
           <img src="assets/img/menu/offe.webp" alt="Offers" class="mx-1"
             width="40" height="40" />
         </div>
@@ -1550,11 +1547,11 @@ max-height: 350px;
       <div class="relative w-full">
         <!-- Carousel Wrapper -->
         <div class="overflow-hidden relative rounded-lg">
-          <div class="flex transition-transform duration-700 ease-in-out main-banner">
+          <div
+            class="flex transition-transform duration-700 ease-in-out main-banner">
 
             <!-- Slide 1 -->
             <div class="w-full flex-shrink-0 min-h-[130px] ">
-             
 
               <picture>
                 <source media="(min-width:650px)"
@@ -1582,7 +1579,6 @@ max-height: 350px;
 
           </div>
         </div>
-
 
       </div>
     </div>
@@ -2544,7 +2540,7 @@ max-height: 350px;
       src="assets/libs/slick-slider/slick.min.js"></script>
     <script
       src="assets/js/common.js"></script>
-           <script
+    <script
       src="assets/js/home.js"></script>
 
     <script>
