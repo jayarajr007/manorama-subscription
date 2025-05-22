@@ -117,7 +117,7 @@ body {
 /*Sprite Image*/ 
 
 
-.nav-options a {
+.nav-options a div{
   width: 32px;
   height: 32px;
 

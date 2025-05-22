@@ -49,8 +49,6 @@ max-height: 350px;
     <link href="assets/css/common.css" rel="stylesheet" />
     <link href="assets/css/home.css" rel="stylesheet" />
 
-    
-
     <link rel="preload" as="image" href="assets/images/banner.webp"
       type="image/webp">
 
@@ -101,8 +99,8 @@ max-height: 350px;
               id="search-container">
               <div class="flex">
                 <a
-                  class="text-gray-500 cursor-pointer i-search-placeholder w-5 h-5 mr-2">
-
+                  class="cursor-pointer" aria-label="search" href="#">
+                  <div class="i-search-placeholder w-5 h-5 mr-2"></div>
                 </a>
                 <input type="text"
                   placeholder="Search For Title, Author Or Keyword.."
@@ -177,9 +175,9 @@ max-height: 350px;
             <!-- Global Search End-->
             <div class="flex nav-options">
 
-              <a class="w-8 h-8 i-search-m mr-3 md:hidden" href="#"
-                id="openSearch">
-
+              <a class="" href="#"
+                id="openSearch" aria-label="mobile-search">
+<div class="w-8 h-8 i-search-m mr-3 md:hidden"></div>
               </a>
 
               <!-- Search Overlay -->
@@ -360,17 +358,17 @@ max-height: 350px;
 
               </div>
               <!-- Cart Icon -->
-              <a class="mr-4  i-cart" href="#">
-
+              <a href="#" aria-label="cart">
+                <div class="mr-4  i-cart"></div>
               </a>
 
               <!-- Notification Icon -->
-              <a class="md:mr-4 mr-4 w-8 h-8 i-notification" href="#">
-
+              <a class href="#" aria-label="Notification">
+                <div class="md:mr-4 mr-4 w-8 h-8 i-notification"></div>
               </a>
 
-              <a class="md:mr-0 mr-0 w-8 h-8 i-user hidden md:block" href="#">
-
+              <a  href="#" aria-label="user">
+<div class="md:mr-0 mr-0 w-8 h-8 i-user hidden md:block"></div>
               </a>
               <!-- User Icon -->
             </div>
