@@ -34,14 +34,14 @@
 }
          </style>
 
-    <link
-      rel="stylesheet"
-      href="assets/css/output.css"
-      media="print"
-      onload="this.media='all'; this.onload=null;">
-    <noscript><link rel="stylesheet" href="assets/css/output.css"></noscript>
 
-    <link href="assets/css/common-crit.css" rel="stylesheet" />
+
+
+    <link rel="preload" href="assets/css/output.css" as="style"
+      onload="this.onload=null;this.rel='stylesheet'">
+
+    <link href="assets/css/common.css" rel="stylesheet" />
+
 
     <link rel="preload" as="image" href="assets/images/banner.webp"
       type="image/webp">
