@@ -34,9 +34,25 @@
 
 
 
-  <link href="assets/css/output.css" rel="stylesheet" />
+  <!-- Preload the CSS -->
+  <!-- <link rel="preload" href="assets/css/output.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
-  <link href="assets/css/common-crit.css" rel="stylesheet" />
+  <noscript>
+    <link rel="stylesheet" href="assets/css/output.css">
+  </noscript> -->
+  <link href="assets/css/output.css" rel="stylesheet" />
+  <!-- Preload the CSS -->
+  <link rel="preload" href="assets/css/common-crit.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+  <!-- Fallback for older browsers -->
+  <noscript>
+    <link rel="stylesheet" href="assets/css/common-crit.css">
+  </noscript>
+
+
+
+  <!-- 
+  <link href="assets/css/common-crit.css" rel="stylesheet" /> -->
 
 
   <link rel="preload" as="image" href="assets/images/banner.webp" type="image/webp">
