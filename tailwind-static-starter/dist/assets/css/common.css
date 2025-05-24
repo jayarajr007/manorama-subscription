@@ -54,30 +54,28 @@
 
 
 
-.footernav a > .fn-icon
-{ 
-  width: 21px;
+
+.fn-icon {
+  width: 20px;
   height: 20px;
-  display: block;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-size: auto;
   background: url(../img/icons/sprite.svg);
 }
 
-.footernav a > .i-home
-{
+.i-home { 
+
     background-position: left -32px top -227px;
 }
-
-.footernav a > .i-category
-{
-    background-position: left -63px top -227px;
-}
-
-.footernav a > .i-account
-{
+.i-category { 
+   background-position: left -63px top -227px;
+ }
+.i-account {
     background-position: left -90px top -227px;
-}
+ }
+
+
+
 
 .suggestion-icon
 {
