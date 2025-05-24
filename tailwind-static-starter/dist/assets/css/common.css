@@ -54,6 +54,31 @@
 
 
 
+.footernav a > .fn-icon
+{ 
+  width: 21px;
+  height: 20px;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background: url(../img/icons/sprite.svg);
+}
+
+.footernav a > .i-home
+{
+    background-position: left -32px top -227px;
+}
+
+.footernav a > .i-category
+{
+    background-position: left -63px top -227px;
+}
+
+.footernav a > .i-account
+{
+    background-position: left -90px top -227px;
+}
+
 
 .fn-icon {
   width: 20px;
@@ -73,6 +98,13 @@
 .i-account {
     background-position: left -90px top -227px;
  }
+
+
+ .i-offer {
+    background-position: left -117px top -227px;
+ }
+
+
 
 
 
