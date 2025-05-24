@@ -25,18 +25,14 @@
     }
 
 
+
     /* Hide all slides except the first before Slick initializes */
-    .main-banner-slider :not(.slick-initialized)>div:not(:first-child) {
+    .main-banner:not(.slick-initialized)>div:not(:first-child) {
       display: none;
     }
 
-    .main-banner-slider :not(.slick-initialized) div.bg-white {
+    .main-banner:not(.slick-initialized) div.bg-white {
       max-width: 260px;
-    }
-
-    /* Once Slick initializes, show all slides */
-    .slick-initialized .slick-list {
-      display: block !important;
     }
 
 
@@ -861,7 +857,7 @@
   </div>
 
   <!-- Main Banner Slider -->
-  <div class="main-banner-slider overflow-hidden rounded-xl mb-8">
+  <div class="main-banner overflow-hidden rounded-xl mb-8">
     <div>
 
       <picture>
