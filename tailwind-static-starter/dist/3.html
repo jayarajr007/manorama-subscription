@@ -848,13 +848,28 @@
   <!-- Main Banner Slider -->
   <div class="main-banner-slider overflow-hidden rounded-xl mb-8">
     <div>
-      <img src="assets/images/banner.webp" loading="lazy" alt="Banner 1" class="w-full h-auto rounded-xl">
+
+      <picture>
+        <source media="(min-width:650px)" srcset="assets/images/banner.webp">
+        <source media="(min-width:465px)" srcset="assets/images/bannernew.jpg">
+        <img src="assets/images/banner-mobile.webp" fetchpriority="high" alt="banner" width="1800" height="300">
+      </picture>
     </div>
     <div>
-      <img src="assets/images/banner.webp" loading="lazy" alt="Banner 2" class="w-full h-auto rounded-xl">
+
+      <picture>
+        <source media="(min-width:650px)" srcset="assets/images/banner.webp">
+        <source media="(min-width:465px)" srcset="assets/images/bannernew.jpg">
+        <img src="assets/images/banner-mobile.webp" fetchpriority="high" alt="banner" width="1800" height="300">
+      </picture>
     </div>
     <div>
-      <img src="assets/images/banner.webp" loading="lazy" alt="Banner 3" class="w-full h-auto rounded-xl">
+
+      <picture>
+        <source media="(min-width:650px)" srcset="assets/images/banner.webp">
+        <source media="(min-width:465px)" srcset="assets/images/bannernew.jpg">
+        <img src="assets/images/banner-mobile.webp" fetchpriority="high" alt="banner" width="1800" height="300">
+      </picture>
     </div>
   </div>
 
