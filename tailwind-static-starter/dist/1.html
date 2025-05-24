@@ -55,9 +55,14 @@
   <link href="assets/css/common-crit.css" rel="stylesheet" /> -->
 
 
-  <link rel="preload" as="image" href="assets/images/banner.webp" type="image/webp">
 
-  <link rel="preload" as="image" href="assets/images/banner-mobile.webp" type="image/webp" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/images/banner-mobile.webp" type="image/webp" media="(max-width: 464px)">
+
+  <link rel="preload" as="image" href="assets/images/bannernew.jpg" type="image/jpeg"
+    media="(min-width: 465px) and (max-width: 649px)">
+  <link rel="preload" as="image" href="assets/images/banner.webp" type="image/webp" media="(min-width: 650px)">
+
+
 
 </head>
 
@@ -1317,7 +1322,7 @@
         <div class="flex transition-transform duration-700 ease-in-out main-banner">
 
           <!-- Slide 1 -->
-          <div class="w-full flex-shrink-0 min-h-[130px] ">
+          <div class="w-full flex-shrink-0 min-h-[300px] " style="aspect-ratio: 6 / 1;">
 
             <picture>
               <source media="(min-width:650px)" srcset="assets/images/banner.webp">
@@ -1327,8 +1332,9 @@
 
           </div>
 
+
           <!-- Slide 2 -->
-          <div class="w-full flex-shrink-0 min-h-[130px]">
+          <div class="w-full flex-shrink-0 min-h-[300px]" style="aspect-ratio: 6 / 1;">
 
             <picture>
               <source media="(min-width:650px)" srcset="assets/images/banner.webp">
@@ -2204,7 +2210,7 @@
     onload="this.media='all'" />
 
   <script src="assets/libs/Jquery/jquery-3.7.1.min.js"></script>
-  <script src="assets/libs/slick-slider/slick.min.js"></script>
+  <script src="assets/libs/slick-slider/slick.min.js" defer></script>
   <script src="assets/js/common.js"></script>
   <script src="assets/js/home.js"></script>
 
