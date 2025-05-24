@@ -36,6 +36,19 @@
     }
 
 
+    /* Hide all slides except the first before Slick initializes */
+    .book-magazine-slider:not(.slick-initialized)>div:not(:first-child) {
+      display: none;
+    }
+
+    .book-magazine-slider:not(.slick-initialized) div.bg-white {
+      max-width: 260px;
+    }
+
+
+
+
+
     .image-wrapper img {
       max-width: 260px;
       max-height: 350px;
