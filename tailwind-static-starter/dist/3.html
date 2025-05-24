@@ -1069,61 +1069,88 @@
   <!--  End Manorama Premium Subscription-->
   <!--  News paper and e paper 2 col layout-->
   <section
-    class="overflow-hidden max-w-full lg:max-w-[1550px] mx-auto px-4 my-6 border-b-2 border-b-gray-100 pb-5 sm:px-6 lg:px-8">
+    class="overflow-hidden max-w-full lg:max-w-[1550px] mx-auto px-4 my-6 border-b-2 border-b-gray-100 pb-5 sm:px-6 lg:px-8 overflow-hidden">
+
 
     <div class="flex justify-between items-center mb-4">
-      <h2 class="text-[16px] md:text-[18px] font-semibold">News Paper & Epaper</h2>
-      <a href="listing.html" class="text-blue-600 font-semibold flex items-center text-sm md:text-base lg:text-lg">
-        <span class="hidden sm:inline">View All</span>
-        <svg class="ml-2 w-4 h-4 text-blue-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-        </svg>
+      <h2 class="text-[16px] md:text-[18px] 
+         font-semibold">News Paper & Epaper</h2>
+      <a href="listing.html" class="text-blue-600 font-semibold flex items-center sm:text-sm md:text-base lg:text-lg">
+        <span class="hidden sm:inline text-sm">View All</span>
+        <span class="ml-2 i-viewall w-5 h-5">
+
+        </span>
       </a>
     </div>
+    <div class="grid grid-cols-2 md:grid-cols-2 gap-2 sm-gap-4">
+      <!-- Malayala Manorama Daily -->
+      <div class="border rounded-lg p-2 sm:p-4 flex items-center justify-between relative">
+        <div class="flex items-center space-x-4 flex-col  sm:flex-row">
+          <div class="relative overflow-hidden ">
+            <img src="assets/images/epaper&news/a1.webp" alt="Malayala Manorama Daily"
+              class="w-34 h-38 rounded-md transition-all duration-300 hover:scale-110 strict-full-width " width="150"
+              height="100" />
+            <div class="absolute bottom-0 left-0  right-0">
+              <!-- <div class="right-2 text-white text-xs px-2 py-1 rounded-full offer-circle-badge mb-2 font-semibold">30% OFF</div> -->
+              <div class="w-full dark-bg text-white text-xs py-1 text-left rounded-md flex justify-start items-center px-1 gift-message
+                     ">
+                <div class="p-1 w-6 h-6 i-gift mr-1 ml-1">
 
-    <div class="grid grid-cols-2 md:grid-cols-2 gap-4">
-      <!-- Card 1 -->
-      <div class="border rounded-lg p-4 flex gap-4 bg-white">
-        <div class="flex-shrink-0 relative">
-          <img src="assets/images/epaper&news/a1.webp" alt="Malayala Manorama Daily" loading="lazy" width="150"
-            height="100"
-            class="rounded-md w-[150px] h-[100px] object-cover transition-transform duration-300 hover:scale-105" />
-          <div
-            class="absolute bottom-0 left-0 w-full bg-black/70 text-white text-xs py-1 px-2 rounded-b-md flex items-center">
-            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2C6.5 2 2 6.5 2 12s10 10 10 10 10-4.5 10-10S17.5 2 12 2z"></path>
-            </svg>
-            Gift Included
+                </div>
+                <div>
+                  Gift Included
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div>
-          <h3 class="text-sm font-semibold">Malayala Manorama Daily</h3>
-          <p class="text-sm">From <span class="font-semibold text-black">₹35</span> Per Issue</p>
+          <div class="!ml-0 sm:!ml-4 strict-full-width">
+            <h3 class="text-[13px] md:text-sm font-semibold mt-2">Malayala
+              Manorama Daily
+            </h3>
+            <p class="text-sm md:text-sm pb-2">From <span class="font-semibold text-black">₹35</span>
+              Per
+              Issue
+            </p>
+            <!-- Rating -->
+          </div>
         </div>
       </div>
+      <div class="border rounded-lg p-2 sm:p-4 flex items-center justify-between relative">
+        <div class="flex items-center space-x-4 flex-col  sm:flex-row">
+          <div class="relative overflow-hidden">
+            <img src="assets/images/epaper&news/5.webp" alt="Malayala Manorama Daily"
+              class="w-34 h-38 rounded-md transition-all duration-300 hover:scale-110 strict-full-width" width="150"
+              height="100" />
+            <div class="absolute bottom-0 left-0  right-0 ">
+              <!-- <div class="right-2 text-white text-xs px-2 py-1 rounded-full offer-circle-badge mb-2 font-semibold">30% OFF</div> -->
+              <div class="w-full dark-bg text-white text-xs py-1 text-left rounded-md flex justify-start items-center px-1 gift-message
+                     ">
+                <div class="p-1 w-6 h-6 i-gift mr-1 ml-1">
 
-      <!-- Card 2 -->
-      <div class="border rounded-lg p-4 flex gap-4 bg-white">
-        <div class="flex-shrink-0 relative">
-          <img src="assets/images/epaper&news/5.webp" alt="Malayala Manorama E Paper" loading="lazy" width="150"
-            height="100"
-            class="rounded-md w-[150px] h-[100px] object-cover transition-transform duration-300 hover:scale-105" />
-          <div
-            class="absolute bottom-0 left-0 w-full bg-black/70 text-white text-xs py-1 px-2 rounded-b-md flex items-center">
-            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2C6.5 2 2 6.5 2 12s10 10 10 10 10-4.5 10-10S17.5 2 12 2z"></path>
-            </svg>
-            Gift Included
+                </div>
+                <div>
+                  Gift Included
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div>
-          <h3 class="text-sm font-semibold">Malayala Manorama E Paper</h3>
-          <p class="text-sm">From <span class="font-semibold text-black">₹12</span> Per Issue</p>
+          <div class="!ml-0 sm:!ml-4 strict-full-width">
+            <h3 class="text-[13px] md:text-sm font-semibold mt-2">Malayala
+              Manorama E Paper
+            </h3>
+            <p class="text-sm md:text-sm pb-2">From <span class="font-semibold text-black">₹12</span>
+              Per
+              Issue
+            </p>
+            <!-- Rating -->
+          </div>
         </div>
       </div>
     </div>
-  </section>
 
+
+
+  </section>
 
 
   <!--  Footer  -->
