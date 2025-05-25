@@ -1,10 +1,6 @@
 
 
 
-document.addEventListener('DOMContentLoaded', function() {
-  document.getElementById('categoryMenu').style.display = 'block';
-});
-
 
 
 
