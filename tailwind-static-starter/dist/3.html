@@ -64,7 +64,14 @@
   <noscript>
     <link rel="stylesheet" href="assets/css/output.css">
   </noscript> -->
-  <link href="assets/css/output.css" rel="stylesheet" />
+
+  <link rel="preload" href="assets/css/output.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="assets/css/output.css">
+  </noscript>
+
+
+
 
 
   <link href="assets/css/common-crit.css" rel="stylesheet" />
@@ -870,8 +877,7 @@
   </div>
 
   <!-- Main Banner Slider -->
-  <div class="main-banner overflow-hidden rounded-xl mb-8 max-w-full lg:max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-8"
-    style="height: 100vh;">
+  <div class="main-banner overflow-hidden rounded-xl mb-8 max-w-full lg:max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-8">
     <div>
 
       <picture>
