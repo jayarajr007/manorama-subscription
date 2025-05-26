@@ -79,6 +79,13 @@
   height: auto !important;
 }
 
+.scroll-menu-txt-wrap {
+    width: auto;
+    display: block;
+    text-wrap: wrap;
+}
+
+
 
 
 /*Sprite Image*/ 
@@ -188,13 +195,6 @@ position: absolute;
     margin-left: -4px !important;
   }
 
-}
-
-
-.scroll-menu-txt-wrap {
-    width: auto;
-    display: block;
-    text-wrap: wrap;
 }
 
 
