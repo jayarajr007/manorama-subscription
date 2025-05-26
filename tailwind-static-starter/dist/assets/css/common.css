@@ -1,153 +1,106 @@
-
 .dark-bg {
-  background: #072654;
+	background: #072654
 }
-
 
 .offer-circle-badge {
-  width: 78px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background-color: #ED002B;
+	width: 78px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	background-color: #ed002b
 }
-
 
 #categoryMenu {
-  position: fixed;
-  background: #fff;
-  height: 100%;
-  z-index: 48;
-  top: 0;
-  padding-top: 66px;
+	position: fixed;
+	background: #fff;
+	height: 100%;
+	z-index: 48;
+	top: 0;
+	padding-top: 66px
 }
 
-
-
-
 .socialmedia a {
-  width: 34px;
-  height: 34px;
-  display: block;
-  background-repeat: no-repeat;
-  background-size: auto;
-  background: url(../img/icons/sprite.svg);
+	width: 34px;
+	height: 34px;
+	display: block;
+	background-repeat: no-repeat;
+	background-size: auto;
+	background: url(../img/icons/sprite.svg)
 }
 
 .socialmedia a.facebook {
-  background-position: left -21px top -141px ;
+	background-position: left -21px top -141px
 }
 
 .socialmedia a.instagram {
-  background-position: left -62px top -141px;
+	background-position: left -62px top -141px
 }
 
 .socialmedia a.youtube {
-  background-position: left -108px top -141px;
+	background-position: left -108px top -141px
 }
 
 .socialmedia a.twitter {
-  background-position: left -148px top -141px;
+	background-position: left -148px top -141px
 }
-
-
-
-.footernav a > .fn-icon
-{ 
-  width: 21px;
-  height: 20px;
-  display: block;
-  background-repeat: no-repeat;
-  background-size: auto;
-  background: url(../img/icons/sprite.svg);
-}
-
-.footernav a > .i-home
-{
-    background-position: left -32px top -227px;
-}
-
-.footernav a > .i-category
-{
-    background-position: left -63px top -227px;
-}
-
-.footernav a > .i-account
-{
-    background-position: left -90px top -227px;
-}
-
 
 .fn-icon {
-  width: 20px;
-  height: 20px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background: url(../img/icons/sprite.svg);
+	width: 20px;
+	height: 20px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background: url(../img/icons/sprite.svg)
 }
 
-.i-home { 
-
-    background-position: left -32px top -227px;
+.i-home {
+	background-position: left -32px top -227px
 }
-.i-category { 
-   background-position: left -63px top -227px;
- }
+
+.i-category {
+	background-position: left -63px top -227px
+}
+
 .i-account {
-    background-position: left -90px top -227px;
- }
-
-
- .i-offer {
-    background-position: left -117px top -227px;
- } 
-
-
-
-
-
-
-.suggestion-icon
-{
-    background: url(../img/icons/sprite.svg) no-repeat -113px -22px;
-
-  width: 21px;
-  height: 20px;
-  display: block;
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-position: left -190px top -20px !important;
+	background-position: left -90px top -227px
 }
 
-.mobile-search
-{
-background: url(../img/icons/sprite.svg) no-repeat -113px -20px;
-    width: 21px;
-    height: 20px;
-    display: block;
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: left -191px top -22px !important;
+.i-offer {
+	background-position: left -117px top -227px
 }
 
-/* In your global CSS file */
+.suggestion-icon {
+	background: url(../img/icons/sprite.svg) no-repeat -113px -22px;
+	width: 21px;
+	height: 20px;
+	display: block;
+	background-repeat: no-repeat;
+	background-size: auto;
+	background-position: left -190px top -20px !important
+}
+
+.mobile-search {
+	background: url(../img/icons/sprite.svg) no-repeat -113px -20px;
+	width: 21px;
+	height: 20px;
+	display: block;
+	background-repeat: no-repeat;
+	background-size: auto;
+	background-position: left -191px top -22px !important
+}
+
 .no-scrollbar::-webkit-scrollbar {
-  display: none;
+	display: none
 }
 
 .no-scrollbar {
-  -ms-overflow-style: none;
-  /* IE and Edge */
-  scrollbar-width: none;
-  /* Firefox */
+	-ms-overflow-style: none;
+	scrollbar-width: none
 }
 
-  .active-tab {
-            background-color: #1d4ed8;
-            border-left: 3px solid #1d4ed8;
-            color: #fff;
-            padding: 8px;
-            }
-
+.active-tab {
+	background-color: #1d4ed8;
+	border-left: 3px solid #1d4ed8;
+	color: #fff;
+	padding: 8px
+}
