@@ -99,6 +99,51 @@
             top: 6px;
         }
         
+
+         /* Hide all slides except the first before Slick initializes */
+    .slick-slider:not(.slick-initialized)>div:not(:first-child) {
+      display: none;
+    }
+
+    .slick-slider:not(.slick-initialized) div.bg-white {
+      max-width: 260px;
+    }
+
+    /* Once Slick initializes, show all slides */
+    .slick-initialized .slick-list {
+      display: block !important;
+    }
+
+
+
+    /* Hide all slides except the first before Slick initializes */
+    .main-banner:not(.slick-initialized)>div:not(:first-child) {
+      display: none;
+    }
+
+    .main-banner:not(.slick-initialized) div.bg-white {
+      max-width: 260px;
+    }
+
+
+    /* Hide all slides except the first before Slick initializes */
+    .book-magazine-slider:not(.slick-initialized)>div:not(:first-child) {
+      display: none;
+    }
+
+    .book-magazine-slider:not(.slick-initialized) div.bg-white {
+      max-width: 260px;
+    }
+
+
+
+
+
+    .image-wrapper img {
+      max-width: 260px;
+      max-height: 350px;
+
+    }
         /* Reduced motion support */
         @media (prefers-reduced-motion: reduce) {
             * {
@@ -119,35 +164,30 @@
     
     <!-- Main Banner Slider -->
     <div class="main-banner-slider">
-        <div class="slide bg-gradient-to-br from-purple-600 to-blue-600 text-white min-h-screen flex items-center justify-center">
-            <div class="text-center px-4 max-w-4xl mx-auto">
-                <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">Lightning Fast Web Performance</h1>
-                <p class="text-lg md:text-xl mb-8 opacity-90 max-w-2xl mx-auto">Optimized for 100% PageSpeed Insights score with modern web standards, accessibility, and blazing fast load times.</p>
-                <a href="#features" class="inline-block bg-red-500 hover:bg-red-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg">
-                    Discover Features
-                </a>
-            </div>
-        </div>
-        
-        <div class="slide bg-gradient-to-br from-green-600 to-teal-600 text-white min-h-screen flex items-center justify-center">
-            <div class="text-center px-4 max-w-4xl mx-auto">
-                <h2 class="text-4xl md:text-6xl font-bold mb-6">100% Performance Score</h2>
-                <p class="text-lg md:text-xl mb-8 opacity-90 max-w-2xl mx-auto">Achieve perfect PageSpeed Insights scores with optimized loading, modern CSS, and accessibility-first design.</p>
-                <a href="#performance" class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg">
-                    View Metrics
-                </a>
-            </div>
-        </div>
-        
-        <div class="slide bg-gradient-to-br from-pink-600 to-purple-600 text-white min-h-screen flex items-center justify-center">
-            <div class="text-center px-4 max-w-4xl mx-auto">
-                <h2 class="text-4xl md:text-6xl font-bold mb-6">Mobile First Design</h2>
-                <p class="text-lg md:text-xl mb-8 opacity-90 max-w-2xl mx-auto">Responsive, accessible, and fast on every device with modern web technologies and best practices.</p>
-                <a href="#technical" class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg">
-                    Learn More
-                </a>
-            </div>
-        </div>
+    <div>
+
+      <picture>
+        <source media="(min-width:650px)" srcset="assets/images/banner.webp">
+        <source media="(min-width:465px)" srcset="assets/images/bannernew.jpg">
+        <img src="assets/images/banner-mobile.webp" fetchpriority="high" alt="banner" width="1800" height="300">
+      </picture>
+    </div>
+    <div>
+
+      <picture>
+        <source media="(min-width:650px)" srcset="assets/images/banner.webp">
+        <source media="(min-width:465px)" srcset="assets/images/bannernew.jpg">
+        <img src="assets/images/banner-mobile.webp" fetchpriority="high" alt="banner" width="1800" height="300">
+      </picture>
+    </div>
+    <div>
+
+      <picture>
+        <source media="(min-width:650px)" srcset="assets/images/banner.webp">
+        <source media="(min-width:465px)" srcset="assets/images/bannernew.jpg">
+        <img src="assets/images/banner-mobile.webp" fetchpriority="high" alt="banner" width="1800" height="300">
+      </picture>
+    </div>
     </div>
 
     <main id="main-content" class="max-w-7xl mx-auto px-4 py-12">
