@@ -191,6 +191,13 @@ position: absolute;
 }
 
 
+.scroll-menu-txt-wrap {
+    width: auto;
+    display: block;
+    text-wrap: wrap;
+}
+
+
 
 
 
