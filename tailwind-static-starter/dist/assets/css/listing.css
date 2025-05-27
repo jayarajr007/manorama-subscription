@@ -19,3 +19,19 @@
   /* blue border */
 }
 
+
+
+    /* Hide all slides except the first before Slick initializes */
+    .category-slider:not(.slick-initialized)>div:not(:first-child) {
+      display: none;
+    }
+
+    .category-slider:not(.slick-initialized) div.bg-white {
+      max-width: 260px;
+    }
+
+    /* Once Slick initializes, show all slides */
+    .slick-initialized .slick-list {
+      display: block !important;
+    }
+
