@@ -1616,8 +1616,7 @@
 
         <!-- Hero Section -->
 
-        <section
-            class="max-w-full lg:max-w-[1550px] mx-auto px-4 my-4 border-b-2  border-b-gray-100 pb-5  px-4 sm:px-6 lg:px-8  overflow-hidden ">
+        <section class="max-w-full lg:max-w-[1550px] mx-auto px-4 my-4 border-b-2  border-b-gray-100 pb-5  px-4 sm:px-6 lg:px-8  overflow-hidden ">
             <!-- Breadcrumb & Back -->
             <div
                 class="hidden md:flex items-center justify-between text-sm text-gray-500 mb-2  ">
@@ -1625,1099 +1624,194 @@
                     <a href="#" class="text-blue-500">Home</a>
                     <span class="mx-1">/</span>
                     <span>Magazines</span>
+                    <span class="mx-1">/</span>
+                    <span>The Week</span>
                 </div>
-                <a class="text-xs cursor-pointer hover:underline"
-                    href="index.html">BACK</a>
             </div>
 
-            <!-- Title -->
-            <h1 class="text-[16px] md:text-[18px] 
-            font-semibold  mb-4">Magazines</h1>
 
             <!-- Layout -->
-            <div class="flex " style="display: flex;">
-
-                <!-- Sidebar Filter -->
-                <!-- Filter Section -->
-                <!-- Filter Section -->
-
-                <div class="space-y-4 w-[250px] hidden md:block ">
-                    <!-- Breadcrumb -->
-
-                    <!-- Sort By Dropdown -->
-                    <div
-                        class="w-full border border-gray-300 rounded-lg p-3 mb-2">
-                        <label
-                            class="flex items-center text-sm font-medium text-gray-700">
-                            Sort By :
-                            <select
-                                class="ml-2 border-0 text-sm font-medium focus:ring-0 focus:outline-none">
-                                <option>Select </option>
-                                <option>Newest</option>
-                                <option>Price: Low to High</option>
-                                <option>Price: High to Low</option>
-                            </select>
-                        </label>
+            <div class="flex flex-col md:flex-row gap-6 mt-4">
+                
+                <!-- Left Column (Magazine Cover) -->
+                <div class="w-1/3 md:w-1/4">
+                    <div class="border rounded-lg p-3">
+                        <img src="assets/images/magazin/1.webp" alt="The Week Magazine Cover" class="rounded-md w-full">
+                        <p class="text-xs text-gray-500 mt-3">68 People Ordered This In The Last 15 Days</p>
+                        <a href="#" class="mt-2 block text-blue-500 text-sm font-medium">Read Sample</a>
                     </div>
+                    <p class="text-xl font-semibold mt-2">₹110</p>
 
-                    <div class="border border-gray-200 p-4 rounded-md">
-                        <!-- Filters Header -->
-                        <div
-                            class="flex items-center justify-between border-b pb-3 mb-3">
-                            <div>
-                                <h3 class="font-bold text-gray-800">FILTERS</h3>
-                                <p class="text-xs text-gray-500">1000+
-                                    Magazine</p>
-                            </div>
-                            <button
-                                class="text-blue-600 text-xs font-medium hover:underline">Clear
-                                All</button>
-                        </div>
-
-                        <!-- Accordion Sections -->
-                        <div class="space-y-4">
-
-                            <!-- Categories Accordion -->
-                            <div
-                                class="accordion-section border-b border-gray-200 pb-4">
-                                <button
-                                    class="accordion-toggle flex justify-between items-center w-full text-left">
-                                    <h4
-                                        class="font-semibold text-gray-800">Categories</h4>
-                                    <svg
-                                        class="w-4 h-4 transition-transform duration-200"
-                                        fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                            d="M19 9l-7 7-7-7"></path>
-                                    </svg>
-                                </button>
-                                <div
-                                    class="accordion-content mt-3 space-y-2 text-sm">
-                                    <div class="flex items-center">
-                                        <input type="checkbox" id="news"
-                                            class="mr-2 h-4 w-4 text-blue-600 rounded border-gray-300" />
-                                        <label for="news">News And
-                                            Information</label>
-                                    </div>
-                                    <div class="flex items-center">
-                                        <input type="checkbox" id="children"
-                                            checked
-                                            class="mr-2 h-4 w-4 text-blue-600 rounded border-gray-300" />
-                                        <label for="children">Children</label>
-                                    </div>
-                                    <div class="flex items-center">
-                                        <input type="checkbox"
-                                            id="entertainment"
-                                            class="mr-2 h-4 w-4 text-blue-600 rounded border-gray-300" />
-                                        <label
-                                            for="entertainment">Entertainment</label>
-                                    </div>
-                                    <div class="flex items-center">
-                                        <input type="checkbox" id="career"
-                                            class="mr-2 h-4 w-4 text-blue-600 rounded border-gray-300" />
-                                        <label for="career">Career</label>
-                                    </div>
-                                    <div class="flex items-center">
-                                        <input type="checkbox" id="general"
-                                            class="mr-2 h-4 w-4 text-blue-600 rounded border-gray-300" />
-                                        <label for="general">General</label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Language Accordion -->
-                            <div
-                                class="accordion-section border-b border-gray-200 pb-4">
-                                <button
-                                    class="accordion-toggle flex justify-between items-center w-full text-left">
-                                    <h4
-                                        class="font-semibold text-gray-800">Language</h4>
-                                    <svg
-                                        class="w-4 h-4 transition-transform duration-200"
-                                        fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                            d="M19 9l-7 7-7-7"></path>
-                                    </svg>
-                                </button>
-                                <div
-                                    class="accordion-content mt-3 space-y-2 text-sm">
-                                    <div class="flex items-center">
-                                        <input type="checkbox" id="english"
-                                            class="mr-2 h-4 w-4 text-blue-600 rounded border-gray-300" />
-                                        <label for="english">English</label>
-                                    </div>
-                                    <div class="flex items-center">
-                                        <input type="checkbox" id="malayalam"
-                                            class="mr-2 h-4 w-4 text-blue-600 rounded border-gray-300" />
-                                        <label for="malayalam">Malayalam</label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Edition Accordion -->
-                            <div class="accordion-section">
-                                <button
-                                    class="accordion-toggle flex justify-between items-center w-full text-left">
-                                    <h4
-                                        class="font-semibold text-gray-800">Edition</h4>
-                                    <svg
-                                        class="w-4 h-4 transition-transform duration-200"
-                                        fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                            d="M19 9l-7 7-7-7"></path>
-                                    </svg>
-                                </button>
-                                <div
-                                    class="accordion-content mt-3 space-y-2 text-sm">
-                                    <div class="flex items-center">
-                                        <input type="checkbox" id="english"
-                                            class="mr-2 h-4 w-4 text-blue-600 rounded border-gray-300" />
-                                        <label for="english">Print</label>
-                                    </div>
-                                    <div class="flex items-center">
-                                        <input type="checkbox" id="malayalam"
-                                            class="mr-2 h-4 w-4 text-blue-600 rounded border-gray-300" />
-                                        <label for="malayalam">Digital</label>
-                                    </div>
-                                    <div class="flex items-center">
-                                        <input type="checkbox" id="malayalam"
-                                            class="mr-2 h-4 w-4 text-blue-600 rounded border-gray-300" />
-                                        <label for="malayalam">Print +
-                                            Digital</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                    <button class="bg-darkblue w-full mt-3 font-medium py-2 px-6 rounded flex text-white justify-center gap-2 text-center" style="background-color: #333994;">ADD TO CART</button>
                 </div>
 
-                <!-- Alpine JS for accordion functionality -->
-
-                <!-- Main Content -->
-                <div class="flex-1 px-0 md:px-4"
-                    style="    width: calc(100% - 287px);">
-
-                    <!-- Horizontal Scroll for Category Icons -->
-
-                    <div class="category-slider mb-6 border-b pb-2">
-                        <div class="text-center round-filter ">
-                            <div class="imgbx relative mx-auto mb-1 size-12  md:size-16">
-                                <img src="assets/images/magazin/filter/news.webp"
-                                class="rounded-full" alt="News">
+                <!-- Right Column (Subscription Info) -->
+                <div class="w-2/3 md:w-2/3">
+                    <div class="border-b pt-6">
+                        <h2 class="text-xl font-semibold mb-1">The Week</h2>
+                        <p class="text-sm text-gray-500 mb-4">01 Jan 2025</p>
+                    </div>
+                    
+                    <!-- Format Selection -->
+                    <div class="border-b py-6">
+                            <h3 class="font-semibold text-gray-500 mb-6">Available Format</h3>
+                            <div class="flex gap-2">
+                                <button class="px-6 py-2 border border-blue-500 text-blue-600 rounded-md font-medium bg-blue-50">Print</button>
+                                <button class="px-6 py-2 border text-gray-600 rounded-md">Digital</button>
+                                <button class="px-6 py-2 border text-gray-600 rounded-md">Print + Digital</button>
                             </div>
+                    </div>
+
+                    <!-- Subscription Tabs -->
+                    <div class="flex gap-4 py-6">
+                            <button class="text-blue-500 font-semibold border-blue-600">Subscription</button>
+                            <button class="text-gray-600">Renewal</button>
+                            <button class="text-gray-600">Single Issue</button>
+                    </div>
+
+                    <!-- Subscription Plans -->
+                    <div class="grid md:grid-cols-3 gap-4">
+                            <!-- Plan 1 -->
+                            <div class="border-2 rounded-md bg-blue-50 border-blue-500">
+                                <div class="p-3 text-sm font-semibold rounded-md bg-blue-100 text-blue-500">1 Month</div>
+                                    <div class="p-3 h-20 bg-white rounded-md">
+                                        <div class="flex items-center gap-3 ">
+                                        <p class="text-sm line-through text-gray-400">₹350</p>
+                                        <p class="text-lg font-semibold">₹110 <span class="text-sm text-red-500 ml-2">70% OFF</span></p>
+                                        
+                                    </div>
+                                <p class="text-xs text-gray-500 mt-1">Guaranteed Gifts</p>
+                                </div>
+                            </div>
+                            <!-- Plan 2 -->
+                            <div class="border-2 rounded-md bg-blue-50 border-gray-400">
+                                <div class="p-3 text-sm font-semibold rounded-md bg-blue-100 text-blue-500">1 Year</div>
+                                    <div class="p-3 h-20 bg-white rounded-md">
+                                        <div class="flex items-center gap-3 ">
+                                        <p class="text-sm line-through text-gray-400">₹350</p>
+                                        <p class="text-lg font-semibold">₹308<span class="text-sm text-red-500 ml-2">12% OFF</span></p>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Plan 3 -->
+                            <div class="border-2 rounded-md bg-blue-50 border-gray-400">
+                                <div class="p-3 text-sm font-semibold rounded-md bg-blue-100 text-blue-500">6 Months (International)</div>
+                                    <div class="p-3 h-20 bg-white rounded-md">
+                                        <div class="flex items-center gap-3 ">
+                                        <p class="text-lg font-semibold">₹308</p>
+                                    </div>
+                                    <p class="text-xs text-gray-500 mt-1">Guaranteed Gifts</p>
+                                </div>
+                            </div>
+                            <!-- Plan 4 -->
+                            <div class="border-2 rounded-md bg-blue-50 border-gray-400">
+                                <div class="p-3 text-sm font-semibold rounded-md bg-blue-100 text-blue-500">1 Year (International)</div>
+                                    <div class="p-3 h-20 bg-white rounded-md">
+                                        <div class="flex items-center gap-3 ">
+                                        <p class="text-lg font-semibold">₹308</p>
+                                    </div>
+                                    <p class="text-xs text-gray-500 mt-1">Guaranteed Gifts</p>
+                                </div>
+                            </div>
+                    </div>
+                    <p class="mt-4 mb-4 text-sm">4 Issues 1 Months </p>
+                    <!-- Quantity Selector -->
+                    <div class="border-b pb-6">
+                            <p class="w-32 text-center font-medium mb-2">Qty</p>
+                            <div class="w-32 flex justify-between rounded-md border overflow-hidden">
+                            <button class="px-3 py-1 bg-gray-100 text-lg">−</button>
+                            <input type="text" value="1" class="w-12 flex justify-center text-center py-1">
+                            <button class="px-3 py-1 bg-gray-100 text-lg">+</button>
+                            </div>
+                    </div>
+
+                    <!-- Guaranteed Gifts -->
+                    <div class="border-b py-6">
+                        <h3 class="font-semibold text-gray-500 mb-1">Select Guaranteed Gifts</h3>
+                        <p class="text-sm text-gray-600 mb-6">Select up to 2 Guaranteed Gifts from the options below.</p>
+                        <div class="grid md:grid-cols-3 gap-4">
+                            <!-- Gift 1 -->
+                            <div class="border-2 border-blue-500 rounded-md text-center">
+                                <div class="text-sm font-semibold  flex justify-between p-3 rounded-md bg-blue-100 mb-2">
+                                    <h5 class="text-left text-blue-500">Magazine</h5>
+                                    <input type="checkbox" checked class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+                                </div>
+                                <p class="text-sm font-medium text-left mb-4 p-2">Tell Me Why 1 Year</p>
+                                <img src="assets/images/magazin/image.svg" alt="Tell Me Why 1 Year" class="mx-auto h-18 object-contain mb-2">
+                            </div>
+                            <!-- Gift 2 -->
+                            <div class="border rounded-md text-center">
+                                <div class="text-sm font-semibold  flex justify-between p-3 rounded-md  bg-gray-100 mb-2">
+                                    <h5 class="text-left">Amazon Gift</h5>
+                                    <input type="checkbox" class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+                                </div>
+                                <p class="text-sm font-medium text-left mb-4  p-2">Amazon Gift</p>
+                                <img src="assets/images/magazin/amazon.svg" alt="Amazon Gift" class="mx-auto h-18 object-contain mb-2">
+                            </div>
+                            <!-- Gift 3 -->
+                            <div class="border rounded-md text-center">
+                                <div class="text-sm font-semibold  flex justify-between p-3  rounded-md bg-gray-100 mb-2">
+                                    <h5 class="text-left">Travel Bag</h5>
+                                    <input type="checkbox" class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+                                </div>
+                                <p class="text-sm font-medium text-left mb-4  p-2">Bag</p>
+                                <img src="assets/images/magazin/bag.svg" alt="Travel Bag" class="mx-auto h-18 object-contain mb-2">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- About Section -->
+                    <div class="border-b py-6">
+                        <h3 class="font-semibold text-gray-500 mb-6">About The Magazine</h3>
+                        <p class="text-sm text-gray-700">The Week – “The Weekly Newsmaker”, which you will certainly enjoy. What's more, you get free home delivery,
+                            special discounts, and an assured gift. Subscribe now and receive your free gift with your subscription!</p>
+                    </div>
+
+                    <!-- Product Details -->
+                    <div class="py-6">
+                            <h3 class="font-semibold text-gray-500 mb-6">Product Details</h3>
+                            <ul>
+                                <li class="mb-4 grid grid-cols-1 md:grid-cols-3 gap-y-2">
+                                    <span class="font-light text-gray-500">ASIN</span> 
+                                    <span class="font-medium">B00DD9N</span>
+                                </li>
+                                <li class="mb-4 grid grid-cols-1 md:grid-cols-3 gap-y-2">
+                                    <span class="font-light text-gray-500">Language</span>
+                                    <span class="font-medium">Malayalam</span>
+                                </li>
+                                <li class="mb-4 grid grid-cols-1 md:grid-cols-3 gap-y-2">
+                                    <span class="font-light text-gray-500">Reading age</span> 
+                                    <span class="font-medium">15 years and up</span>
+                                </li>
+                                <li class="mb-4 grid grid-cols-1 md:grid-cols-3 gap-y-2">
+                                    <span class="font-light text-gray-500">Pages</span>
+                                    <span class="font-medium">150 Pages</span>
+                                </li>
+                                <li class="mb-4 grid grid-cols-1 md:grid-cols-3 gap-y-2">
+                                    <span class="font-light text-gray-500">Genre</span>
+                                    <span class="font-medium">Magazin</span>
+                                </li>
+                                <li class="mb-4 grid grid-cols-1 md:grid-cols-3 gap-y-2">
+                                    <span class="font-light text-gray-500">Sub-Genre</span>
+                                    <span class="font-medium">Malayalam</span>
+                                </li>
+                                <li class="mb-4 grid grid-cols-1 md:grid-cols-3 gap-y-2">
+                                    <span class="font-light text-gray-500">Formats</span>
+                                    <span class="font-medium">Print, Digital</span>
+                                </li>
+                                <li class="mb-4 grid grid-cols-1 md:grid-cols-3 gap-y-2">
+                                    <span class="font-light text-gray-500">Origin</span>
+                                    <span class="font-medium">India</span>
+                                </li>
+                            </ul>
                             
-                            <p class="text-xs">News And<br>Information</p>
-                        </div>
-                        <div class="text-center round-filter relative">
-                            <div class="imgbx relative mx-auto mb-1 size-12  md:size-16">
-                                <img
-                                src="assets/images/magazin/filter/children.webp"
-                                class="rounded-full" alt="Children">
-                            </div>
-                            <p class="text-xs">Children</p>
-                        </div>
-                        <div class="text-center round-filter relative">
-                            <div class="imgbx relative mx-auto mb-1 size-12  md:size-16">
-                                <img src="assets/images/magazin/filter/women.webp"
-                                class="rounded-full" alt="Women">
-                            </div>
-                            <p class="text-xs">Women</p>
-                        </div> <div class="text-center round-filter relative">
-                            <div class="imgbx relative mx-auto mb-1 size-12  md:size-16">
-                                <img src="assets/images/magazin/filter/women.webp"
-                                class="rounded-full" alt="Women">
-                            </div>
-                            <p class="text-xs">News And<br>Information</p>
-                        </div>
-                        <div class="text-center round-filter relative">
-                            <div class="imgbx relative mx-auto mb-1 size-12  md:size-16">
-                                <img src="assets/images/magazin/filter/women.webp"
-                                class="rounded-full" alt="Women">
-                            </div>
-                            <p class="text-xs">Children</p>
-                        </div>
-                        <div class="text-center round-filter relative">
-                            <div class="imgbx relative mx-auto mb-1 size-12  md:size-16">
-                                <img src="assets/images/magazin/filter/women.webp"
-                                class="rounded-full" alt="Women">
-                            </div>
-                            <p class="text-xs">Women</p>
-                        </div> <div class="text-center round-filter relative">
-                            <div class="imgbx relative mx-auto mb-1 size-12  md:size-16">
-                                <img src="assets/images/magazin/filter/women.webp"
-                                class="rounded-full" alt="Women">
-                            </div>
-                            <p class="text-xs">News And<br>Information</p>
-                        </div>
-                        <div class="text-center round-filter relative">
-                            <div class="imgbx relative mx-auto mb-1 size-12  md:size-16">
-                                <img src="assets/images/magazin/filter/women.webp"
-                                class="rounded-full" alt="Women">
-                            </div>
-                            <p class="text-xs">Children</p>
-                        </div>
-                        <div class="text-center round-filter relative">
-                            <div class="imgbx relative mx-auto mb-1 size-12  md:size-16">
-                                <img src="assets/images/magazin/filter/women.webp"
-                                class="rounded-full" alt="Women">
-                            </div>
-                            <p class="text-xs">Women</p>
-                        </div>
-                        <div class="text-center round-filter relative">
-                            <div class="imgbx relative mx-auto mb-1 size-12  md:size-16">
-                                <img src="assets/images/magazin/filter/women.webp"
-                                class="rounded-full" alt="Women">
-                            </div>
-                            <p class="text-xs">Women</p>
-                        </div> <div class="text-center round-filter relative">
-                            <div class="imgbx relative mx-auto mb-1 size-12  md:size-16">
-                                <img src="assets/images/magazin/filter/women.webp"
-                                class="rounded-full" alt="Women">
-                            </div>
-                            <p class="text-xs">News And<br>Information</p>
-                        </div>
-                        <div class="text-center round-filter relative">
-                            <div class="imgbx relative mx-auto mb-1 size-12  md:size-16">
-                                <img src="assets/images/magazin/filter/women.webp"
-                                class="rounded-full" alt="Women">
-                            </div>
-                            <p class="text-xs">Children</p>
-                        </div>
-                        <div class="text-center round-filter relative">
-                            <div class="imgbx relative mx-auto mb-1 size-12  md:size-16">
-                                <img src="assets/images/magazin/filter/women.webp"
-                                class="rounded-full" alt="Women">
-                            </div>
-                            <p class="text-xs">Women</p>
-                        </div>
-                        <!-- Add more items as needed -->
                     </div>
-
-                    <!-- Placeholder for Magazine Grid -->
-                    <h2 class="text-[14px] md:text-[16px] 
-                    font-semibold mb-4">Popular Magazine</h2>
-                    <div
-                        class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 md:gap-4">
-                        <a class="border rounded-lg p-2" href="detail.html">
-                            <div class>
-                                <div
-                                    class="relative overflow-hidden  image-wrapper image-wrapper">
-                                    <img src="assets/images/magazin/2.webp"
-                                        alt="Magazine 1"
-                                        class="rounded-md transition-all duration-300 hover:scale-110"
-                                        width="266"
-                                        height="350" decoding="async">
-
-                                    <span
-                                        class="absolute top-2 left-2 bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-gray-300">Dark</span>
-                                    <!-- Favorite Button -->
-
-                                    <!-- <div class="absolute bottom-2 left-0  right-0 flex flex-col items-end">
-                                <div class="right-2 text-white text-xs px-2 py-1 rounded-full offer-circle-badge mb-2 font-semibold">30% OFF</div>
-                                <div class=" w-full dark-bg text-white text-xs py-2 text-center rounded-md">🎁 Guaranteed Gifts With Every Purchase</div>
-                            </div> -->
-                                </div>
-                                <h3
-                                    class="text-[13px] md:text-sm font-semibold mt-2">Karshakasree</h3>
-                                <p class="text-[13px] md:text-sm pb-2">From
-                                    <span
-                                        class="font-semibold"> ₹50 </span>Per
-                                    Issue</p>
-
-                                <p class="text-xs text-gray-500">Available in
-                                    Print,
-                                    Digital</p>
-
-                            </div>
-                        </a>
-                        <div class="border rounded-lg p-2">
-                            <div class>
-                                <div
-                                    class="relative overflow-hidden  image-wrapper">
-                                    <img src="assets/images/magazin/2.webp"
-                                        alt="Magazine 1"
-                                        class="rounded-md transition-all duration-300 hover:scale-110"
-                                        width="266"
-                                        height="350" decoding="async">
-
-                                    <span
-                                        class="absolute top-2 left-2 bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-gray-300">Dark</span>
-                                    <!-- Favorite Button -->
-
-                                    <!-- <div class="absolute bottom-2 left-0  right-0 flex flex-col items-end">
-                                <div class="right-2 text-white text-xs px-2 py-1 rounded-full offer-circle-badge mb-2 font-semibold">30% OFF</div>
-                                <div class=" w-full dark-bg text-white text-xs py-2 text-center rounded-md">🎁 Guaranteed Gifts With Every Purchase</div>
-                            </div> -->
-                                </div>
-                                <h3
-                                    class="text-[13px] md:text-sm font-semibold mt-2">Karshakasree</h3>
-                                <p class="text-[13px] md:text-sm pb-2">From
-                                    <span
-                                        class="font-semibold"> ₹50 </span>Per
-                                    Issue</p>
-
-                                <p class="text-xs text-gray-500">Available in
-                                    Print,
-                                    Digital</p>
-
-                            </div>
-                        </div>
-                        <div class="border rounded-lg p-2">
-                            <div class>
-                                <div
-                                    class="relative overflow-hidden  image-wrapper">
-                                    <img src="assets/images/magazin/2.webp"
-                                        alt="Magazine 1"
-                                        class="rounded-md transition-all duration-300 hover:scale-110"
-                                        width="266"
-                                        height="350" decoding="async">
-
-                                    <span
-                                        class="absolute top-2 left-2 bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-gray-300">Dark</span>
-                                    <!-- Favorite Button -->
-
-                                    <!-- <div class="absolute bottom-2 left-0  right-0 flex flex-col items-end">
-                                <div class="right-2 text-white text-xs px-2 py-1 rounded-full offer-circle-badge mb-2 font-semibold">30% OFF</div>
-                                <div class=" w-full dark-bg text-white text-xs py-2 text-center rounded-md">🎁 Guaranteed Gifts With Every Purchase</div>
-                            </div> -->
-                                </div>
-                                <h3
-                                    class="text-[13px] md:text-sm font-semibold mt-2">Karshakasree</h3>
-                                <p class="text-[13px] md:text-sm pb-2">From
-                                    <span
-                                        class="font-semibold"> ₹50 </span>Per
-                                    Issue</p>
-
-                                <p class="text-xs text-gray-500">Available in
-                                    Print,
-                                    Digital</p>
-
-                            </div>
-                        </div>
-                        <div class="border rounded-lg p-2">
-                            <div class>
-                                <div
-                                    class="relative overflow-hidden  image-wrapper">
-                                    <img src="assets/images/magazin/2.webp"
-                                        alt="Magazine 1"
-                                        class="rounded-md transition-all duration-300 hover:scale-110"
-                                        width="266"
-                                        height="350" decoding="async">
-
-                                    <span
-                                        class="absolute top-2 left-2 bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-gray-300">Dark</span>
-                                    <!-- Favorite Button -->
-
-                                    <!-- <div class="absolute bottom-2 left-0  right-0 flex flex-col items-end">
-                                <div class="right-2 text-white text-xs px-2 py-1 rounded-full offer-circle-badge mb-2 font-semibold">30% OFF</div>
-                                <div class=" w-full dark-bg text-white text-xs py-2 text-center rounded-md">🎁 Guaranteed Gifts With Every Purchase</div>
-                            </div> -->
-                                </div>
-                                <h3
-                                    class="text-[13px] md:text-sm font-semibold mt-2">Karshakasree</h3>
-                                <p class="text-[13px] md:text-sm pb-2">From
-                                    <span
-                                        class="font-semibold"> ₹50 </span>Per
-                                    Issue</p>
-
-                                <p class="text-xs text-gray-500">Available in
-                                    Print,
-                                    Digital</p>
-
-                            </div>
-                        </div>
-                        <div class="border rounded-lg p-2">
-                            <div class>
-                                <div
-                                    class="relative overflow-hidden  image-wrapper">
-                                    <img src="assets/images/magazin/2.webp"
-                                        alt="Magazine 1"
-                                        class="rounded-md transition-all duration-300 hover:scale-110"
-                                        width="266"
-                                        height="350" decoding="async">
-
-                                    <span
-                                        class="absolute top-2 left-2 bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-gray-300">Dark</span>
-                                    <!-- Favorite Button -->
-
-                                    <!-- <div class="absolute bottom-2 left-0  right-0 flex flex-col items-end">
-                                <div class="right-2 text-white text-xs px-2 py-1 rounded-full offer-circle-badge mb-2 font-semibold">30% OFF</div>
-                                <div class=" w-full dark-bg text-white text-xs py-2 text-center rounded-md">🎁 Guaranteed Gifts With Every Purchase</div>
-                            </div> -->
-                                </div>
-                                <h3
-                                    class="text-[13px] md:text-sm font-semibold mt-2">Karshakasree</h3>
-                                <p class="text-[13px] md:text-sm pb-2">From
-                                    <span
-                                        class="font-semibold"> ₹50 </span>Per
-                                    Issue</p>
-
-                                <p class="text-xs text-gray-500">Available in
-                                    Print,
-                                    Digital</p>
-
-                            </div>
-                        </div>
-                        <!-- Add more cards here -->
-                    </div>
-
-                    <!-- Placeholder for Magazine Grid -->
-                    <h2 class="text-[14px] md:text-[16px] 
-                    font-semibold mt-4 mb-4">Other Magazine</h2>
-                    <div
-                        class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-                        <div class="border rounded-lg p-2">
-                            <div class>
-                                <div
-                                    class="relative overflow-hidden  image-wrapper">
-                                    <img src="assets/images/magazin/2.webp"
-                                        alt="Magazine 1"
-                                        class="rounded-md transition-all duration-300 hover:scale-110"
-                                        width="266"
-                                        height="350" decoding="async">
-
-                                    <span
-                                        class="absolute top-2 left-2 bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-gray-300">Dark</span>
-                                    <!-- Favorite Button -->
-
-                                    <!-- <div class="absolute bottom-2 left-0  right-0 flex flex-col items-end">
-                                <div class="right-2 text-white text-xs px-2 py-1 rounded-full offer-circle-badge mb-2 font-semibold">30% OFF</div>
-                                <div class=" w-full dark-bg text-white text-xs py-2 text-center rounded-md">🎁 Guaranteed Gifts With Every Purchase</div>
-                            </div> -->
-                                </div>
-                                <h3
-                                    class="text-[13px] md:text-sm font-semibold mt-2">Karshakasree</h3>
-                                <p class="text-[13px] md:text-sm pb-2">From
-                                    <span
-                                        class="font-semibold"> ₹50 </span>Per
-                                    Issue</p>
-
-                                <p class="text-xs text-gray-500">Available in
-                                    Print,
-                                    Digital</p>
-
-                            </div>
-                        </div>
-                        <div class="border rounded-lg p-2">
-                            <div class>
-                                <div
-                                    class="relative overflow-hidden  image-wrapper">
-                                    <img src="assets/images/magazin/2.webp"
-                                        alt="Magazine 1"
-                                        class="rounded-md transition-all duration-300 hover:scale-110"
-                                        width="266"
-                                        height="350" decoding="async">
-
-                                    <span
-                                        class="absolute top-2 left-2 bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-gray-300">Dark</span>
-                                    <!-- Favorite Button -->
-
-                                    <!-- <div class="absolute bottom-2 left-0  right-0 flex flex-col items-end">
-                                <div class="right-2 text-white text-xs px-2 py-1 rounded-full offer-circle-badge mb-2 font-semibold">30% OFF</div>
-                                <div class=" w-full dark-bg text-white text-xs py-2 text-center rounded-md">🎁 Guaranteed Gifts With Every Purchase</div>
-                            </div> -->
-                                </div>
-                                <h3
-                                    class="text-[13px] md:text-sm font-semibold mt-2">Karshakasree</h3>
-                                <p class="text-[13px] md:text-sm pb-2">From
-                                    <span
-                                        class="font-semibold"> ₹50 </span>Per
-                                    Issue</p>
-
-                                <p class="text-xs text-gray-500">Available in
-                                    Print,
-                                    Digital</p>
-
-                            </div>
-                        </div>
-                        <div class="border rounded-lg p-2">
-                            <div class>
-                                <div
-                                    class="relative overflow-hidden  image-wrapper">
-                                    <img src="assets/images/magazin/2.webp"
-                                        alt="Magazine 1"
-                                        class="rounded-md transition-all duration-300 hover:scale-110"
-                                        width="266"
-                                        height="350" decoding="async">
-
-                                    <span
-                                        class="absolute top-2 left-2 bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-gray-300">Dark</span>
-                                    <!-- Favorite Button -->
-
-                                    <!-- <div class="absolute bottom-2 left-0  right-0 flex flex-col items-end">
-                                <div class="right-2 text-white text-xs px-2 py-1 rounded-full offer-circle-badge mb-2 font-semibold">30% OFF</div>
-                                <div class=" w-full dark-bg text-white text-xs py-2 text-center rounded-md">🎁 Guaranteed Gifts With Every Purchase</div>
-                            </div> -->
-                                </div>
-                                <h3
-                                    class="text-[13px] md:text-sm font-semibold mt-2">Karshakasree</h3>
-                                <p class="text-[13px] md:text-sm pb-2">From
-                                    <span
-                                        class="font-semibold"> ₹50 </span>Per
-                                    Issue</p>
-
-                                <p class="text-xs text-gray-500">Available in
-                                    Print,
-                                    Digital</p>
-
-                            </div>
-                        </div>
-                        <div class="border rounded-lg p-2">
-                            <div class>
-                                <div
-                                    class="relative overflow-hidden  image-wrapper">
-                                    <img src="assets/images/magazin/2.webp"
-                                        alt="Magazine 1"
-                                        class="rounded-md transition-all duration-300 hover:scale-110"
-                                        width="266"
-                                        height="350" decoding="async">
-
-                                    <span
-                                        class="absolute top-2 left-2 bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-gray-300">Dark</span>
-                                    <!-- Favorite Button -->
-
-                                    <!-- <div class="absolute bottom-2 left-0  right-0 flex flex-col items-end">
-                                <div class="right-2 text-white text-xs px-2 py-1 rounded-full offer-circle-badge mb-2 font-semibold">30% OFF</div>
-                                <div class=" w-full dark-bg text-white text-xs py-2 text-center rounded-md">🎁 Guaranteed Gifts With Every Purchase</div>
-                            </div> -->
-                                </div>
-                                <h3
-                                    class="text-[13px] md:text-sm font-semibold mt-2">Karshakasree</h3>
-                                <p class="text-[13px] md:text-sm pb-2">From
-                                    <span
-                                        class="font-semibold"> ₹50 </span>Per
-                                    Issue</p>
-
-                                <p class="text-xs text-gray-500">Available in
-                                    Print,
-                                    Digital</p>
-
-                            </div>
-                        </div>
-                        <div class="border rounded-lg p-2">
-                            <div class>
-                                <div
-                                    class="relative overflow-hidden  image-wrapper">
-                                    <img src="assets/images/magazin/2.webp"
-                                        alt="Magazine 1"
-                                        class="rounded-md transition-all duration-300 hover:scale-110"
-                                        width="266"
-                                        height="350" decoding="async">
-
-                                    <span
-                                        class="absolute top-2 left-2 bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-gray-300">Dark</span>
-                                    <!-- Favorite Button -->
-
-                                    <!-- <div class="absolute bottom-2 left-0  right-0 flex flex-col items-end">
-                                <div class="right-2 text-white text-xs px-2 py-1 rounded-full offer-circle-badge mb-2 font-semibold">30% OFF</div>
-                                <div class=" w-full dark-bg text-white text-xs py-2 text-center rounded-md">🎁 Guaranteed Gifts With Every Purchase</div>
-                            </div> -->
-                                </div>
-                                <h3
-                                    class="text-[13px] md:text-sm font-semibold mt-2">Karshakasree</h3>
-                                <p class="text-[13px] md:text-sm pb-2">From
-                                    <span
-                                        class="font-semibold"> ₹50 </span>Per
-                                    Issue</p>
-
-                                <p class="text-xs text-gray-500">Available in
-                                    Print,
-                                    Digital</p>
-
-                            </div>
-                        </div> <div class="border rounded-lg p-2">
-                            <div class>
-                                <div
-                                    class="relative overflow-hidden  image-wrapper">
-                                    <img src="assets/images/magazin/2.webp"
-                                        alt="Magazine 1"
-                                        class="rounded-md transition-all duration-300 hover:scale-110"
-                                        width="266"
-                                        height="350" decoding="async">
-
-                                    <span
-                                        class="absolute top-2 left-2 bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-gray-300">Dark</span>
-                                    <!-- Favorite Button -->
-
-                                    <!-- <div class="absolute bottom-2 left-0  right-0 flex flex-col items-end">
-                                <div class="right-2 text-white text-xs px-2 py-1 rounded-full offer-circle-badge mb-2 font-semibold">30% OFF</div>
-                                <div class=" w-full dark-bg text-white text-xs py-2 text-center rounded-md">🎁 Guaranteed Gifts With Every Purchase</div>
-                            </div> -->
-                                </div>
-                                <h3
-                                    class="text-[13px] md:text-sm font-semibold mt-2">Karshakasree</h3>
-                                <p class="text-[13px] md:text-sm pb-2">From
-                                    <span
-                                        class="font-semibold"> ₹50 </span>Per
-                                    Issue</p>
-
-                                <p class="text-xs text-gray-500">Available in
-                                    Print,
-                                    Digital</p>
-
-                            </div>
-                        </div>
-                        <div class="border rounded-lg p-2">
-                            <div class>
-                                <div
-                                    class="relative overflow-hidden  image-wrapper">
-                                    <img src="assets/images/magazin/2.webp"
-                                        alt="Magazine 1"
-                                        class="rounded-md transition-all duration-300 hover:scale-110"
-                                        width="266"
-                                        height="350" decoding="async">
-
-                                    <span
-                                        class="absolute top-2 left-2 bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-gray-300">Dark</span>
-                                    <!-- Favorite Button -->
-
-                                    <!-- <div class="absolute bottom-2 left-0  right-0 flex flex-col items-end">
-                                <div class="right-2 text-white text-xs px-2 py-1 rounded-full offer-circle-badge mb-2 font-semibold">30% OFF</div>
-                                <div class=" w-full dark-bg text-white text-xs py-2 text-center rounded-md">🎁 Guaranteed Gifts With Every Purchase</div>
-                            </div> -->
-                                </div>
-                                <h3
-                                    class="text-[13px] md:text-sm font-semibold mt-2">Karshakasree</h3>
-                                <p class="text-[13px] md:text-sm pb-2">From
-                                    <span
-                                        class="font-semibold"> ₹50 </span>Per
-                                    Issue</p>
-
-                                <p class="text-xs text-gray-500">Available in
-                                    Print,
-                                    Digital</p>
-
-                            </div>
-                        </div>
-                        <div class="border rounded-lg p-2">
-                            <div class>
-                                <div
-                                    class="relative overflow-hidden  image-wrapper">
-                                    <img src="assets/images/magazin/2.webp"
-                                        alt="Magazine 1"
-                                        class="rounded-md transition-all duration-300 hover:scale-110"
-                                        width="266"
-                                        height="350" decoding="async">
-
-                                    <span
-                                        class="absolute top-2 left-2 bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-gray-300">Dark</span>
-                                    <!-- Favorite Button -->
-
-                                    <!-- <div class="absolute bottom-2 left-0  right-0 flex flex-col items-end">
-                                <div class="right-2 text-white text-xs px-2 py-1 rounded-full offer-circle-badge mb-2 font-semibold">30% OFF</div>
-                                <div class=" w-full dark-bg text-white text-xs py-2 text-center rounded-md">🎁 Guaranteed Gifts With Every Purchase</div>
-                            </div> -->
-                                </div>
-                                <h3
-                                    class="text-[13px] md:text-sm font-semibold mt-2">Karshakasree</h3>
-                                <p class="text-[13px] md:text-sm pb-2">From
-                                    <span
-                                        class="font-semibold"> ₹50 </span>Per
-                                    Issue</p>
-
-                                <p class="text-xs text-gray-500">Available in
-                                    Print,
-                                    Digital</p>
-
-                            </div>
-                        </div>
-                        <div class="border rounded-lg p-2">
-                            <div class>
-                                <div
-                                    class="relative overflow-hidden  image-wrapper">
-                                    <img src="assets/images/magazin/2.webp"
-                                        alt="Magazine 1"
-                                        class="rounded-md transition-all duration-300 hover:scale-110"
-                                        width="266"
-                                        height="350" decoding="async">
-
-                                    <span
-                                        class="absolute top-2 left-2 bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-gray-300">Dark</span>
-                                    <!-- Favorite Button -->
-
-                                    <!-- <div class="absolute bottom-2 left-0  right-0 flex flex-col items-end">
-                                <div class="right-2 text-white text-xs px-2 py-1 rounded-full offer-circle-badge mb-2 font-semibold">30% OFF</div>
-                                <div class=" w-full dark-bg text-white text-xs py-2 text-center rounded-md">🎁 Guaranteed Gifts With Every Purchase</div>
-                            </div> -->
-                                </div>
-                                <h3
-                                    class="text-[13px] md:text-sm font-semibold mt-2">Karshakasree</h3>
-                                <p class="text-[13px] md:text-sm pb-2">From
-                                    <span
-                                        class="font-semibold"> ₹50 </span>Per
-                                    Issue</p>
-
-                                <p class="text-xs text-gray-500">Available in
-                                    Print,
-                                    Digital</p>
-
-                            </div>
-                        </div>
-                        <div class="border rounded-lg p-2">
-                            <div class>
-                                <div
-                                    class="relative overflow-hidden  image-wrapper">
-                                    <img src="assets/images/magazin/2.webp"
-                                        alt="Magazine 1"
-                                        class="rounded-md transition-all duration-300 hover:scale-110"
-                                        width="266"
-                                        height="350" decoding="async">
-
-                                    <span
-                                        class="absolute top-2 left-2 bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-gray-300">Dark</span>
-                                    <!-- Favorite Button -->
-
-                                    <!-- <div class="absolute bottom-2 left-0  right-0 flex flex-col items-end">
-                                <div class="right-2 text-white text-xs px-2 py-1 rounded-full offer-circle-badge mb-2 font-semibold">30% OFF</div>
-                                <div class=" w-full dark-bg text-white text-xs py-2 text-center rounded-md">🎁 Guaranteed Gifts With Every Purchase</div>
-                            </div> -->
-                                </div>
-                                <h3
-                                    class="text-[13px] md:text-sm font-semibold mt-2">Karshakasree</h3>
-                                <p class="text-[13px] md:text-sm pb-2">From
-                                    <span
-                                        class="font-semibold"> ₹50 </span>Per
-                                    Issue</p>
-
-                                <p class="text-xs text-gray-500">Available in
-                                    Print,
-                                    Digital</p>
-
-                            </div>
-                        </div> <div class="border rounded-lg p-2">
-                            <div class>
-                                <div
-                                    class="relative overflow-hidden  image-wrapper">
-                                    <img src="assets/images/magazin/2.webp"
-                                        alt="Magazine 1"
-                                        class="rounded-md transition-all duration-300 hover:scale-110"
-                                        width="266"
-                                        height="350" decoding="async">
-
-                                    <span
-                                        class="absolute top-2 left-2 bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-gray-300">Dark</span>
-                                    <!-- Favorite Button -->
-
-                                    <!-- <div class="absolute bottom-2 left-0  right-0 flex flex-col items-end">
-                                <div class="right-2 text-white text-xs px-2 py-1 rounded-full offer-circle-badge mb-2 font-semibold">30% OFF</div>
-                                <div class=" w-full dark-bg text-white text-xs py-2 text-center rounded-md">🎁 Guaranteed Gifts With Every Purchase</div>
-                            </div> -->
-                                </div>
-                                <h3
-                                    class="text-[13px] md:text-sm font-semibold mt-2">Karshakasree</h3>
-                                <p class="text-[13px] md:text-sm pb-2">From
-                                    <span
-                                        class="font-semibold"> ₹50 </span>Per
-                                    Issue</p>
-
-                                <p class="text-xs text-gray-500">Available in
-                                    Print,
-                                    Digital</p>
-
-                            </div>
-                        </div>
-                        <div class="border rounded-lg p-2">
-                            <div class>
-                                <div
-                                    class="relative overflow-hidden  image-wrapper">
-                                    <img src="assets/images/magazin/2.webp"
-                                        alt="Magazine 1"
-                                        class="rounded-md transition-all duration-300 hover:scale-110"
-                                        width="266"
-                                        height="350" decoding="async">
-
-                                    <span
-                                        class="absolute top-2 left-2 bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-gray-300">Dark</span>
-                                    <!-- Favorite Button -->
-
-                                    <!-- <div class="absolute bottom-2 left-0  right-0 flex flex-col items-end">
-                                <div class="right-2 text-white text-xs px-2 py-1 rounded-full offer-circle-badge mb-2 font-semibold">30% OFF</div>
-                                <div class=" w-full dark-bg text-white text-xs py-2 text-center rounded-md">🎁 Guaranteed Gifts With Every Purchase</div>
-                            </div> -->
-                                </div>
-                                <h3
-                                    class="text-[13px] md:text-sm font-semibold mt-2">Karshakasree</h3>
-                                <p class="text-[13px] md:text-sm pb-2">From
-                                    <span
-                                        class="font-semibold"> ₹50 </span>Per
-                                    Issue</p>
-
-                                <p class="text-xs text-gray-500">Available in
-                                    Print,
-                                    Digital</p>
-
-                            </div>
-                        </div>
-                        <div class="border rounded-lg p-2">
-                            <div class>
-                                <div
-                                    class="relative overflow-hidden  image-wrapper">
-                                    <img src="assets/images/magazin/2.webp"
-                                        alt="Magazine 1"
-                                        class="rounded-md transition-all duration-300 hover:scale-110"
-                                        width="266"
-                                        height="350" decoding="async">
-
-                                    <span
-                                        class="absolute top-2 left-2 bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-gray-300">Dark</span>
-                                    <!-- Favorite Button -->
-
-                                    <!-- <div class="absolute bottom-2 left-0  right-0 flex flex-col items-end">
-                                <div class="right-2 text-white text-xs px-2 py-1 rounded-full offer-circle-badge mb-2 font-semibold">30% OFF</div>
-                                <div class=" w-full dark-bg text-white text-xs py-2 text-center rounded-md">🎁 Guaranteed Gifts With Every Purchase</div>
-                            </div> -->
-                                </div>
-                                <h3
-                                    class="text-[13px] md:text-sm font-semibold mt-2">Karshakasree</h3>
-                                <p class="text-[13px] md:text-sm pb-2">From
-                                    <span
-                                        class="font-semibold"> ₹50 </span>Per
-                                    Issue</p>
-
-                                <p class="text-xs text-gray-500">Available in
-                                    Print,
-                                    Digital</p>
-
-                            </div>
-                        </div>
-                        <div class="border rounded-lg p-2">
-                            <div class>
-                                <div
-                                    class="relative overflow-hidden  image-wrapper">
-                                    <img src="assets/images/magazin/2.webp"
-                                        alt="Magazine 1"
-                                        class="rounded-md transition-all duration-300 hover:scale-110"
-                                        width="266"
-                                        height="350" decoding="async">
-
-                                    <span
-                                        class="absolute top-2 left-2 bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-gray-300">Dark</span>
-                                    <!-- Favorite Button -->
-
-                                    <!-- <div class="absolute bottom-2 left-0  right-0 flex flex-col items-end">
-                                <div class="right-2 text-white text-xs px-2 py-1 rounded-full offer-circle-badge mb-2 font-semibold">30% OFF</div>
-                                <div class=" w-full dark-bg text-white text-xs py-2 text-center rounded-md">🎁 Guaranteed Gifts With Every Purchase</div>
-                            </div> -->
-                                </div>
-                                <h3
-                                    class="text-[13px] md:text-sm font-semibold mt-2">Karshakasree</h3>
-                                <p class="text-[13px] md:text-sm pb-2">From
-                                    <span
-                                        class="font-semibold"> ₹50 </span>Per
-                                    Issue</p>
-
-                                <p class="text-xs text-gray-500">Available in
-                                    Print,
-                                    Digital</p>
-
-                            </div>
-                        </div>
-                        <div class="border rounded-lg p-2">
-                            <div class>
-                                <div
-                                    class="relative overflow-hidden  image-wrapper">
-                                    <img src="assets/images/magazin/2.webp"
-                                        alt="Magazine 1"
-                                        class="rounded-md transition-all duration-300 hover:scale-110"
-                                        width="266"
-                                        height="350" decoding="async">
-
-                                    <span
-                                        class="absolute top-2 left-2 bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-gray-300">Dark</span>
-                                    <!-- Favorite Button -->
-
-                                    <!-- <div class="absolute bottom-2 left-0  right-0 flex flex-col items-end">
-                                <div class="right-2 text-white text-xs px-2 py-1 rounded-full offer-circle-badge mb-2 font-semibold">30% OFF</div>
-                                <div class=" w-full dark-bg text-white text-xs py-2 text-center rounded-md">🎁 Guaranteed Gifts With Every Purchase</div>
-                            </div> -->
-                                </div>
-                                <h3
-                                    class="text-[13px] md:text-sm font-semibold mt-2">Karshakasree</h3>
-                                <p class="text-[13px] md:text-sm pb-2">From
-                                    <span
-                                        class="font-semibold"> ₹50 </span>Per
-                                    Issue</p>
-
-                                <p class="text-xs text-gray-500">Available in
-                                    Print,
-                                    Digital</p>
-
-                            </div>
-                        </div> <div class="border rounded-lg p-2">
-                            <div class>
-                                <div
-                                    class="relative overflow-hidden  image-wrapper">
-                                    <img src="assets/images/magazin/2.webp"
-                                        alt="Magazine 1"
-                                        class="rounded-md transition-all duration-300 hover:scale-110"
-                                        width="266"
-                                        height="350" decoding="async">
-
-                                    <span
-                                        class="absolute top-2 left-2 bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-gray-300">Dark</span>
-                                    <!-- Favorite Button -->
-
-                                    <!-- <div class="absolute bottom-2 left-0  right-0 flex flex-col items-end">
-                                <div class="right-2 text-white text-xs px-2 py-1 rounded-full offer-circle-badge mb-2 font-semibold">30% OFF</div>
-                                <div class=" w-full dark-bg text-white text-xs py-2 text-center rounded-md">🎁 Guaranteed Gifts With Every Purchase</div>
-                            </div> -->
-                                </div>
-                                <h3
-                                    class="text-[13px] md:text-sm font-semibold mt-2">Karshakasree</h3>
-                                <p class="text-[13px] md:text-sm pb-2">From
-                                    <span
-                                        class="font-semibold"> ₹50 </span>Per
-                                    Issue</p>
-
-                                <p class="text-xs text-gray-500">Available in
-                                    Print,
-                                    Digital</p>
-
-                            </div>
-                        </div>
-                        <div class="border rounded-lg p-2">
-                            <div class>
-                                <div
-                                    class="relative overflow-hidden  image-wrapper">
-                                    <img src="assets/images/magazin/2.webp"
-                                        alt="Magazine 1"
-                                        class="rounded-md transition-all duration-300 hover:scale-110"
-                                        width="266"
-                                        height="350" decoding="async">
-
-                                    <span
-                                        class="absolute top-2 left-2 bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-gray-300">Dark</span>
-                                    <!-- Favorite Button -->
-
-                                    <!-- <div class="absolute bottom-2 left-0  right-0 flex flex-col items-end">
-                                <div class="right-2 text-white text-xs px-2 py-1 rounded-full offer-circle-badge mb-2 font-semibold">30% OFF</div>
-                                <div class=" w-full dark-bg text-white text-xs py-2 text-center rounded-md">🎁 Guaranteed Gifts With Every Purchase</div>
-                            </div> -->
-                                </div>
-                                <h3
-                                    class="text-[13px] md:text-sm font-semibold mt-2">Karshakasree</h3>
-                                <p class="text-[13px] md:text-sm pb-2">From
-                                    <span
-                                        class="font-semibold"> ₹50 </span>Per
-                                    Issue</p>
-
-                                <p class="text-xs text-gray-500">Available in
-                                    Print,
-                                    Digital</p>
-
-                            </div>
-                        </div>
-                        <div class="border rounded-lg p-2">
-                            <div class>
-                                <div
-                                    class="relative overflow-hidden  image-wrapper">
-                                    <img src="assets/images/magazin/2.webp"
-                                        alt="Magazine 1"
-                                        class="rounded-md transition-all duration-300 hover:scale-110"
-                                        width="266"
-                                        height="350" decoding="async">
-
-                                    <span
-                                        class="absolute top-2 left-2 bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-gray-300">Dark</span>
-                                    <!-- Favorite Button -->
-
-                                    <!-- <div class="absolute bottom-2 left-0  right-0 flex flex-col items-end">
-                                <div class="right-2 text-white text-xs px-2 py-1 rounded-full offer-circle-badge mb-2 font-semibold">30% OFF</div>
-                                <div class=" w-full dark-bg text-white text-xs py-2 text-center rounded-md">🎁 Guaranteed Gifts With Every Purchase</div>
-                            </div> -->
-                                </div>
-                                <h3
-                                    class="text-[13px] md:text-sm font-semibold mt-2">Karshakasree</h3>
-                                <p class="text-[13px] md:text-sm pb-2">From
-                                    <span
-                                        class="font-semibold"> ₹50 </span>Per
-                                    Issue</p>
-
-                                <p class="text-xs text-gray-500">Available in
-                                    Print,
-                                    Digital</p>
-
-                            </div>
-                        </div>
-                        <div class="border rounded-lg p-2">
-                            <div class>
-                                <div
-                                    class="relative overflow-hidden  image-wrapper">
-                                    <img src="assets/images/magazin/2.webp"
-                                        alt="Magazine 1"
-                                        class="rounded-md transition-all duration-300 hover:scale-110"
-                                        width="266"
-                                        height="350" decoding="async">
-
-                                    <span
-                                        class="absolute top-2 left-2 bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-gray-300">Dark</span>
-                                    <!-- Favorite Button -->
-
-                                    <!-- <div class="absolute bottom-2 left-0  right-0 flex flex-col items-end">
-                                <div class="right-2 text-white text-xs px-2 py-1 rounded-full offer-circle-badge mb-2 font-semibold">30% OFF</div>
-                                <div class=" w-full dark-bg text-white text-xs py-2 text-center rounded-md">🎁 Guaranteed Gifts With Every Purchase</div>
-                            </div> -->
-                                </div>
-                                <h3
-                                    class="text-[13px] md:text-sm font-semibold mt-2">Karshakasree</h3>
-                                <p class="text-[13px] md:text-sm pb-2">From
-                                    <span
-                                        class="font-semibold"> ₹50 </span>Per
-                                    Issue</p>
-
-                                <p class="text-xs text-gray-500">Available in
-                                    Print,
-                                    Digital</p>
-
-                            </div>
-                        </div>
-                        <div class="border rounded-lg p-2">
-                            <div class>
-                                <div
-                                    class="relative overflow-hidden  image-wrapper">
-                                    <img src="assets/images/magazin/2.webp"
-                                        alt="Magazine 1"
-                                        class="rounded-md transition-all duration-300 hover:scale-110"
-                                        width="266"
-                                        height="350" decoding="async">
-
-                                    <span
-                                        class="absolute top-2 left-2 bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-gray-300">Dark</span>
-                                    <!-- Favorite Button -->
-
-                                    <!-- <div class="absolute bottom-2 left-0  right-0 flex flex-col items-end">
-                                <div class="right-2 text-white text-xs px-2 py-1 rounded-full offer-circle-badge mb-2 font-semibold">30% OFF</div>
-                                <div class=" w-full dark-bg text-white text-xs py-2 text-center rounded-md">🎁 Guaranteed Gifts With Every Purchase</div>
-                            </div> -->
-                                </div>
-                                <h3
-                                    class="text-[13px] md:text-sm font-semibold mt-2">Karshakasree</h3>
-                                <p class="text-[13px] md:text-sm pb-2">From
-                                    <span
-                                        class="font-semibold"> ₹50 </span>Per
-                                    Issue</p>
-
-                                <p class="text-xs text-gray-500">Available in
-                                    Print,
-                                    Digital</p>
-
-                            </div>
-                        </div>
-                        <!-- Add more cards here -->
-                    </div>
-
                 </div>
+
+
             </div>
+
 
         </section>
 

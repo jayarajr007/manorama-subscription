@@ -20,12 +20,12 @@
 
 }
 
-.round-filter.active::after
+.round-filter.active .imgbx::after
  {
     content: "";
     position: absolute;
     top: 0;
-    right: 15px;
+    right: 0px;
     width: 1.2rem;
     height: 1.2rem;
     z-index: 10;
