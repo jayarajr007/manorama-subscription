@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description"
-            content="Manorama Subscription Website. Subscribe Books and Magazines. Manorama Year Book Malayalam and English. Magic Pot. The Week. Watch Time India. Sampadyam. Bhashaposhini. Karshakasree. Smart Life. The Man. Balarama Digest. Tell Me Why. Kalikkudukka. Balarama. Vanitha. National Geographic Kids. Manorama Weekly. Vanitha Pachakam. Thozhilveedhi. Balarama Amar Chithra Kadha.">
+            content="Manorama Subscription npm run det. Subscribe Books and Magazines. Manorama Year Book Malayalam and English. Magic Pot. The Week. Watch Time India. Sampadyam. Bhashaposhini. Karshakasree. Smart Life. The Man. Balarama Digest. Tell Me Why. Kalikkudukka. Balarama. Vanitha. National Geographic Kids. Manorama Weekly. Vanitha Pachakam. Thozhilveedhi. Balarama Amar Chithra Kadha.">
         <title>Manorama Subscription | Listing</title>
         <link rel="preload" href="assets/font/poppins/Poppins-SemiBold.woff" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="assets/font/poppins/Poppins-ExtraBold.woff2" as="font" type="font/woff2" crossorigin>
@@ -1631,25 +1631,30 @@
 
 
             <!-- Layout -->
-            <div class="flex flex-col md:flex-row gap-6 mt-4">
+            <div class="flex flex-col lg:flex-row gap-6 mt-4">
                 
                 <!-- Left Column (Magazine Cover) -->
-                <div class="w-1/3 md:w-1/4">
+                <div class="w-full md:w-full lg:w-1/4">
                     <div class="border rounded-lg p-3">
                         <img src="assets/images/magazin/1.webp" alt="The Week Magazine Cover" class="rounded-md w-full">
-                        <p class="text-xs text-gray-500 mt-3">68 People Ordered This In The Last 15 Days</p>
+                        <p class="text-xs text-gray-500 mt-3 flex items-center"><span class="growth relative"></span> 68 People Ordered This In The Last 15 Days</p>
                         <a href="#" class="mt-2 block text-blue-500 text-sm font-medium">Read Sample</a>
                     </div>
                     <p class="text-xl font-semibold mt-2">₹110</p>
 
-                    <button class="bg-darkblue w-full mt-3 font-medium py-4 px-6 rounded flex text-white justify-center gap-2 text-center" style="background-color: #333994;">ADD TO CART</button>
+                    <button class="bg-darkblue w-full mt-3 font-medium py-4 px-6 rounded flex text-white justify-center gap-2 text-center" style="background-color: #333994;"><span class="addcart relative"></span> ADD TO CART</button>
                 </div>
 
                 <!-- Right Column (Subscription Info) -->
-                <div class="w-2/3 md:w-2/3">
-                    <div class="border-b ">
-                        <h2 class="text-xl font-semibold mb-1">The Week</h2>
-                        <p class="text-sm text-gray-500 mb-4">01 Jan 2025</p>
+                <div class="w-full md:w-full lg:w-2/3">
+                    <div class="border-b flex justify-between items-center">
+                        <div>
+                            <h2 class="text-xl font-semibold mb-1">The Week</h2>
+                            <p class="text-sm text-gray-500 mb-4">01 Jan 2025</p>
+                        </div>
+                        <button>
+                            <span class="shareicon relative"></span>
+                        </button>
                     </div>
                     
 
@@ -1667,62 +1672,161 @@
                             </div>
                     </div>
 
-                    <!-- Subscription Tabs -->
-                    <div class="flex gap-4 py-6">
-                            <button class="text-blue-500 font-semibold border-blue-600">Subscription</button>
-                            <button class="text-gray-600">Renewal</button>
-                            <button class="text-gray-600">Single Issue</button>
-                    </div>
 
-                    <!-- Subscription Plans -->
-                    <div class="w-5/6 block">
-                        <div class="grid md:grid-cols-3 gap-4">
-                            <!-- Plan 1 -->
-                            <div class="border-2 rounded-md bg-blue-50 border-blue-500">
-                                <div class="p-3 text-sm font-semibold rounded-md bg-blue-100 text-blue-500">1 Month</div>
-                                    <div class="p-3 h-20 bg-white rounded-md">
-                                        <div class="flex items-center gap-3 ">
-                                        <p class="text-sm line-through text-gray-400">₹350</p>
-                                        <p class="text-lg font-semibold">₹110 <span class="text-lg  font-semibold text-red-500 ml-2">70% OFF</span></p>
+                    <div x-data="{ tab: 'tab1' }" class="py-6">
+                        <!-- Tab Headers -->
+                        <div class="flex space-x-6 ">
+                            <button @click="tab = 'tab1'" 
+                                    :class="tab === 'tab1' ? 'border-blue-500 text-blue-600' : 'text-gray-500'"
+                                    class="py-2 font-semibold">
+                            Subscription
+                            </button>
+                            <button @click="tab = 'tab2'" 
+                                    :class="tab === 'tab2' ? 'border-blue-500 text-blue-600' : 'text-gray-500'"
+                                    class="py-2 font-semibold">
+                            Renewal
+                            </button>
+                            <button @click="tab = 'tab3'" 
+                                    :class="tab === 'tab3' ? 'border-blue-500 text-blue-600' : 'text-gray-500'"
+                                    class="py-2 font-semibold">
+                            Single Issue
+                            </button>
+                        </div>
+
+                        <!-- Tab Content -->
+                        <div class="mt-6">
+                            <div x-show="tab === 'tab1'">
+                            <div class="w-full md:w-5/6 block">
+                                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                                                    <!-- Plan 1 -->
+                                                    <div class="border-2 rounded-md bg-blue-50 border-blue-500">
+                                                        <div class="p-3 text-sm font-semibold rounded-md bg-blue-100 text-blue-500">1 Month</div>
+                                                            <div class="p-3 h-20 bg-white rounded-md">
+                                                                <div class="flex items-center gap-3 ">
+                                                                <p class="text-sm line-through text-gray-400">₹350</p>
+                                                                <p class="text-lg font-semibold">₹110 <span class="text-lg  font-semibold text-red-500 ml-2">70% OFF</span></p>
+                                                                
+                                                            </div>
+                                                        <p class="text-xs text-gray-500 mt-1">Guaranteed Gifts</p>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Plan 2 -->
+                                                    <div class="border-2 rounded-md bg-blue-50 border-gray-300 ">
+                                                        <div class="p-3 text-sm font-semibold rounded-md bg-blue-100 text-gray-700">1 Year</div>
+                                                            <div class="p-3 h-20 bg-white rounded-md">
+                                                                <div class="flex items-center gap-3 ">
+                                                                <p class="text-sm line-through text-gray-400">₹350</p>
+                                                                <p class="text-lg font-semibold">₹308<span class="text-lg  font-semibold text-red-500 ml-2">12% OFF</span></p>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Plan 3 -->
+                                                    <div class="border-2 rounded-md bg-blue-50 border-gray-300">
+                                                        <div class="p-3 text-sm font-semibold rounded-md bg-blue-100 text-gray-700">6 Months (International)</div>
+                                                            <div class="p-3 h-20 bg-white rounded-md">
+                                                                <div class="flex items-center gap-3 ">
+                                                                <p class="text-lg font-semibold">₹308</p>
+                                                            </div>
+                                                            <p class="text-xs text-gray-500 mt-1">Guaranteed Gifts</p>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Plan 4 -->
+                                                    <div class="border-2 rounded-md bg-blue-50 border-gray-300">
+                                                        <div class="p-3 text-sm font-semibold rounded-md bg-blue-100 text-gray-700">1 Year (International)</div>
+                                                            <div class="p-3 h-20 bg-white rounded-md">
+                                                                <div class="flex items-center gap-3 ">
+                                                                <p class="text-lg font-semibold">₹308</p>
+                                                            </div>
+                                                            <p class="text-xs text-gray-500 mt-1">Guaranteed Gifts</p>
+                                                        </div>
+                                                    </div>
+                                    </div>
+                                </div>
+                                <p class="mt-6 mb-4 text-sm">4 issues 1 months </p>
+                            </div>
+                            <div x-show="tab === 'tab2'">
+                            <div class="w-full md:w-5/6 block">
+                                    <div class="grid md:grid-cols-3 gap-4">
+                                                    <!-- Plan 1 -->
+                                                    <div class="border-2 rounded-md bg-blue-50 border-blue-500">
+                                                        <div class="p-3 text-sm font-semibold rounded-md bg-blue-100 text-blue-500">1 Month</div>
+                                                            <div class="p-3 h-20 bg-white rounded-md">
+                                                                <div class="flex items-center gap-3 ">
+                                                                <p class="text-sm line-through text-gray-400">₹350</p>
+                                                                <p class="text-lg font-semibold">₹110 <span class="text-lg  font-semibold text-red-500 ml-2">70% OFF</span></p>
+                                                                
+                                                            </div>
+                                                        <p class="text-xs text-gray-500 mt-1">Guaranteed Gifts</p>
+                                                        </div>
+                                                    </div>
+                                    </div>
+                                    <p class="mt-6 mb-4 text-sm">4 issues 1 months </p>
+                                </div>
+                            </div>
+                            <div x-show="tab === 'tab3'">
+                                <div class="grid grid-cols-5 gap-4">
+                                    <div class="">
+                                        <div class="relative">
+                                            <img src="assets/images/magazin/4.webp" alt="Cover" class="w-full h-32 object-cover rounded" />
+                                        </div>
+                                        <div class="flex items-center gap-2 mt-2">
+                                            <input type="checkbox" checked class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+                                            <h3 class="text-sm mt-2 mb-1">Current Issue</h3>     
+                                        </div>
+             
+                                    </div>
+                                    <div class="">
+                                        <div class="relative">
+                                            <img src="assets/images/magazin/5.webp" alt="Cover" class="w-full h-32 object-cover rounded" />
+                                        </div>
+                                        <div class="flex items-center gap-2 mt-2">
+                                            <input type="checkbox"  class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+                                            <h3 class="text-sm mt-2 mb-1">16 Sep </h3>     
+                                        </div>
                                         
+             
                                     </div>
-                                <p class="text-xs text-gray-500 mt-1">Guaranteed Gifts</p>
-                                </div>
-                            </div>
-                            <!-- Plan 2 -->
-                            <div class="border-2 rounded-md bg-blue-50 border-gray-300 ">
-                                <div class="p-3 text-sm font-semibold rounded-md bg-blue-100 text-gray-700">1 Year</div>
-                                    <div class="p-3 h-20 bg-white rounded-md">
-                                        <div class="flex items-center gap-3 ">
-                                        <p class="text-sm line-through text-gray-400">₹350</p>
-                                        <p class="text-lg font-semibold">₹308<span class="text-lg  font-semibold text-red-500 ml-2">12% OFF</span></p>
-                                        
+                                    <div class="">
+                                        <div class="relative">
+                                            <img src="assets/images/magazin/2.webp" alt="Cover" class="w-full h-32 object-cover rounded" />
+                                        </div>
+                                        <div class="flex items-center gap-2 mt-2">
+                                            <input type="checkbox"  class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+                                            <h3 class="text-sm mt-2 mb-1">16 Sep </h3>     
+                                        </div>
+             
+                                    </div>
+                                    <div class="">
+                                        <div class="relative">
+                                            <img src="assets/images/magazin/1.webp" alt="Cover" class="w-full h-32 object-cover rounded" />
+                                        </div>
+                                        <div class="flex items-center gap-2 mt-2">
+                                            <input type="checkbox"  class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+                                            <h3 class="text-sm mt-2 mb-1">16 Sep </h3>     
+                                        </div>
+             
+                                    </div>
+                                    <div class="">
+                                        <div class="relative">
+                                            <img src="assets/images/magazin/3.webp" alt="Cover" class="w-full h-32 object-cover rounded" />
+                                        </div>
+                                        <div class="flex items-center gap-2 mt-2">
+                                            <input type="checkbox"  class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+                                            <h3 class="text-sm mt-2 mb-1">16 Sep </h3>     
+                                        </div>
+             
                                     </div>
                                 </div>
-                            </div>
-                            <!-- Plan 3 -->
-                            <div class="border-2 rounded-md bg-blue-50 border-gray-300">
-                                <div class="p-3 text-sm font-semibold rounded-md bg-blue-100 text-gray-700">6 Months (International)</div>
-                                    <div class="p-3 h-20 bg-white rounded-md">
-                                        <div class="flex items-center gap-3 ">
-                                        <p class="text-lg font-semibold">₹308</p>
-                                    </div>
-                                    <p class="text-xs text-gray-500 mt-1">Guaranteed Gifts</p>
-                                </div>
-                            </div>
-                            <!-- Plan 4 -->
-                            <div class="border-2 rounded-md bg-blue-50 border-gray-300">
-                                <div class="p-3 text-sm font-semibold rounded-md bg-blue-100 text-gray-700">1 Year (International)</div>
-                                    <div class="p-3 h-20 bg-white rounded-md">
-                                        <div class="flex items-center gap-3 ">
-                                        <p class="text-lg font-semibold">₹308</p>
-                                    </div>
-                                    <p class="text-xs text-gray-500 mt-1">Guaranteed Gifts</p>
-                                </div>
+                                <p class="mt-6 mb-2 text-sm">Digital</p>
+                                <p class=" mb-4 "><span class="font-semibold text-2xl">₹110</span>/ Issues</p>
                             </div>
                         </div>
-                    </div>
-                    <p class="mt-4 mb-4 text-sm">4 Issues 1 Months </p>
+                </div>
+
+                   
+
+                    
                     <!-- Quantity Selector -->
                     <div class="border-b pb-6">
                             <p class="w-32 text-center font-medium mb-2">Qty</p>
@@ -1737,8 +1841,8 @@
                     <div class="border-b py-6">
                         <h3 class="font-semibold text-gray-500 mb-1">Select Guaranteed Gifts</h3>
                         <p class="text-sm text-gray-600 mb-6">Select up to 2 Guaranteed Gifts from the options below.</p>
-                        <div class="w-4/5 block">
-                        <div class="grid md:grid-cols-3 gap-4">
+                        <div class="w-full md:w-4/5 block">
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
                             <!-- Gift 1 -->
                             <div class="border-2 border-blue-500 rounded-md text-center">
                                 <div class="text-sm font-semibold  flex justify-between p-3 rounded-md bg-blue-100 mb-2">
@@ -1781,35 +1885,35 @@
                     <div class="py-6">
                             <h3 class="font-semibold text-gray-500 mb-6">Product Details</h3>
                             <ul>
-                                <li class="mb-4 grid grid-cols-1 md:grid-cols-3 gap-y-2">
+                                <li class="mb-4 grid grid-cols-2 md:grid-cols-3 gap-y-2">
                                     <span class="font-light text-gray-500 text-sm">ASIN</span> 
                                     <span class="font-medium text-sm">B00DD9N</span>
                                 </li>
-                                <li class="mb-4 grid grid-cols-1 md:grid-cols-3 gap-y-2">
+                                <li class="mb-4 grid grid-cols-2 md:grid-cols-3 gap-y-2">
                                     <span class="font-light text-gray-500 text-sm">Language</span>
                                     <span class="font-medium text-sm">Malayalam</span>
                                 </li>
-                                <li class="mb-4 grid grid-cols-1 md:grid-cols-3 gap-y-2">
+                                <li class="mb-4 grid grid-cols-2 md:grid-cols-3 gap-y-2">
                                     <span class="font-light text-gray-500 text-sm">Reading age</span> 
                                     <span class="font-medium text-sm">15 years and up</span>
                                 </li>
-                                <li class="mb-4 grid grid-cols-1 md:grid-cols-3 gap-y-2">
+                                <li class="mb-4 grid grid-cols-2 md:grid-cols-3 gap-y-2">
                                     <span class="font-light text-gray-500 text-sm">Pages</span>
                                     <span class="font-medium text-sm">150 Pages</span>
                                 </li>
-                                <li class="mb-4 grid grid-cols-1 md:grid-cols-3 gap-y-2">
+                                <li class="mb-4 grid grid-cols-2 md:grid-cols-3 gap-y-2">
                                     <span class="font-light text-gray-500 text-sm">Genre</span>
                                     <span class="font-medium text-sm">Magazin</span>
                                 </li>
-                                <li class="mb-4 grid grid-cols-1 md:grid-cols-3 gap-y-2">
+                                <li class="mb-4 grid grid-cols-2 md:grid-cols-3 gap-y-2">
                                     <span class="font-light text-gray-500 text-sm">Sub-Genre</span>
                                     <span class="font-medium text-sm">Malayalam</span>
                                 </li>
-                                <li class="mb-4 grid grid-cols-1 md:grid-cols-3 gap-y-2">
+                                <li class="mb-4 grid grid-cols-2 md:grid-cols-3 gap-y-2">
                                     <span class="font-light text-gray-500 text-sm">Formats</span>
                                     <span class="font-medium text-sm">Print, Digital</span>
                                 </li>
-                                <li class="mb-4 grid grid-cols-1 md:grid-cols-3 gap-y-2">
+                                <li class="mb-4 grid grid-cols-2 md:grid-cols-3 gap-y-2">
                                     <span class="font-light text-gray-500 text-sm">Origin</span>
                                     <span class="font-medium text-sm">India</span>
                                 </li>
@@ -1823,6 +1927,160 @@
 
 
         </section>
+        <section class="p-6">
+            <h2 class="text-lg font-semibold mb-4">Products Related To This Item</h2>
+            <div class="overflow-hidden">
+            <div class="product-slider  min-w-0">
+                <!-- Slide Item -->
+                <div class="bg-white border rounded-lg shadow-md p-3 ">
+                    <div class="relative">
+                        <img src="assets/images/magazin/4.webp" alt="Cover" class="w-full h-64 object-cover rounded" />
+                        <div class="flex absolute bottom-0 left-0 gap-1 text-[10px] text-white px-2 py-2.5 rounded-md mx-2 inline-block mt-2" style="background-color: #072654;">
+                            <span class="gift"></span>
+                            <span>Guaranteed Gifts With Every Purchase</span>
+                        </div>
+                    </div>
+                    <h3 class="text-md font-medium mt-2 mb-1">The Week</h3>
+                    <p class="text-sm">From <span class="font-semibold">₹60</span> Per Issue</p>
+                    <p class="text-[12px] text-gray-400 mt-1">Available in Print, Digital</p>
+                </div>
+                <!-- Slide Item -->
+                <div class="bg-white border rounded-lg shadow-md p-3 ">
+                    <div class="relative">
+                        <img src="assets/images/magazin/5.webp" alt="Cover" class="w-full h-64 object-cover rounded" />
+                        
+                    </div>
+                    <h3 class="text-md font-medium mt-2 mb-1">The Week</h3>
+                    <p class="text-sm">From <span class="font-semibold">₹60</span> Per Issue</p>
+                    <p class="text-[12px] text-gray-400 mt-1">Available in Print, Digital</p>
+                </div>
+                <!-- Slide Item -->
+                <div class="bg-white border rounded-lg shadow-md p-3 ">
+                    <div class="relative">
+                        <img src="assets/images/magazin/3.webp" alt="Cover" class="w-full h-64 object-cover rounded" />
+                       
+                    </div>
+                    <h3 class="text-md font-medium mt-2 mb-1">The Week</h3>
+                    <p class="text-sm">From <span class="font-semibold">₹60</span> Per Issue</p>
+                    <p class="text-[12px] text-gray-400 mt-1">Available in Print, Digital</p>
+                </div>
+                <!-- Slide Item -->
+                <div class="bg-white border rounded-lg shadow-md p-3 ">
+                    <div class="relative">
+                        <img src="assets/images/magazin/2.webp" alt="Cover" class="w-full h-64 object-cover rounded" />
+                        <div class="flex absolute bottom-0 left-0 gap-1 text-[10px] text-white px-2 py-2.5 rounded-md mx-2 inline-block mt-2" style="background-color: #072654;">
+                            <span class="gift"></span>
+                            <span>Guaranteed Gifts With Every Purchase</span>
+                        </div>
+                    </div>
+                    <h3 class="text-md font-medium mt-2 mb-1">The Week</h3>
+                    <p class="text-sm">From <span class="font-semibold">₹60</span> Per Issue</p>
+                    <p class="text-[12px] text-gray-400 mt-1">Available in Print, Digital</p>
+                </div>
+                <!-- Slide Item -->
+                <div class="bg-white border rounded-lg shadow-md p-3 ">
+                    <div class="relative">
+                        <img src="assets/images/magazin/1.webp" alt="Cover" class="w-full h-64 object-cover rounded" />
+                       
+                    </div>
+                    <h3 class="text-md font-medium mt-2 mb-1">The Week</h3>
+                    <p class="text-sm">From <span class="font-semibold">₹60</span> Per Issue</p>
+                    <p class="text-[12px] text-gray-400 mt-1">Available in Print, Digital</p>
+                </div>
+                <!-- Slide Item -->
+                <div class="bg-white border rounded-lg shadow-md p-3 ">
+                    <div class="relative">
+                        <img src="assets/images/magazin/4.webp" alt="Cover" class="w-full h-64 object-cover rounded" />
+                       
+                    </div>
+                    <h3 class="text-md font-medium mt-2 mb-1">The Week</h3>
+                    <p class="text-sm">From <span class="font-semibold">₹60</span> Per Issue</p>
+                    <p class="text-[12px] text-gray-400 mt-1">Available in Print, Digital</p>
+                </div>
+                
+
+                
+            </div>
+            </div>
+        </section>
+
+        <section class="p-6 mt-6">
+            <h2 class="text-lg font-semibold mb-4">Recently Viewed</h2>
+            <div class="overflow-hidden">
+            <div class="product-slider  min-w-0">
+                <!-- Slide Item -->
+                <div class="bg-white border rounded-lg shadow-md p-3 ">
+                    <div class="relative">
+                        <img src="assets/images/magazin/4.webp" alt="Cover" class="w-full h-64 object-cover rounded" />
+                        <div class="flex absolute bottom-0 left-0 gap-1 text-[10px] text-white px-2 py-2.5 rounded-md mx-2 inline-block mt-2" style="background-color: #072654;">
+                            <span class="gift"></span>
+                            <span>Guaranteed Gifts With Every Purchase</span>
+                        </div>
+                    </div>
+                    <h3 class="text-md font-medium mt-2 mb-1">The Week</h3>
+                    <p class="text-sm">From <span class="font-semibold">₹60</span> Per Issue</p>
+                    <p class="text-[12px] text-gray-400 mt-1">Available in Print, Digital</p>
+                </div>
+                <!-- Slide Item -->
+                <div class="bg-white border rounded-lg shadow-md p-3 ">
+                    <div class="relative">
+                        <img src="assets/images/magazin/5.webp" alt="Cover" class="w-full h-64 object-cover rounded" />
+                        
+                    </div>
+                    <h3 class="text-md font-medium mt-2 mb-1">The Week</h3>
+                    <p class="text-sm">From <span class="font-semibold">₹60</span> Per Issue</p>
+                    <p class="text-[12px] text-gray-400 mt-1">Available in Print, Digital</p>
+                </div>
+                <!-- Slide Item -->
+                <div class="bg-white border rounded-lg shadow-md p-3 ">
+                    <div class="relative">
+                        <img src="assets/images/magazin/3.webp" alt="Cover" class="w-full h-64 object-cover rounded" />
+                       
+                    </div>
+                    <h3 class="text-md font-medium mt-2 mb-1">The Week</h3>
+                    <p class="text-sm">From <span class="font-semibold">₹60</span> Per Issue</p>
+                    <p class="text-[12px] text-gray-400 mt-1">Available in Print, Digital</p>
+                </div>
+                <!-- Slide Item -->
+                <div class="bg-white border rounded-lg shadow-md p-3 ">
+                    <div class="relative">
+                        <img src="assets/images/magazin/2.webp" alt="Cover" class="w-full h-64 object-cover rounded" />
+                        <div class="flex absolute bottom-0 left-0 gap-1 text-[10px] text-white px-2 py-2.5 rounded-md mx-2 inline-block mt-2" style="background-color: #072654;">
+                            <span class="gift"></span>
+                            <span>Guaranteed Gifts With Every Purchase</span>
+                        </div>
+                    </div>
+                    <h3 class="text-md font-medium mt-2 mb-1">The Week</h3>
+                    <p class="text-sm">From <span class="font-semibold">₹60</span> Per Issue</p>
+                    <p class="text-[12px] text-gray-400 mt-1">Available in Print, Digital</p>
+                </div>
+                <!-- Slide Item -->
+                <div class="bg-white border rounded-lg shadow-md p-3 ">
+                    <div class="relative">
+                        <img src="assets/images/magazin/1.webp" alt="Cover" class="w-full h-64 object-cover rounded" />
+                       
+                    </div>
+                    <h3 class="text-md font-medium mt-2 mb-1">The Week</h3>
+                    <p class="text-sm">From <span class="font-semibold">₹60</span> Per Issue</p>
+                    <p class="text-[12px] text-gray-400 mt-1">Available in Print, Digital</p>
+                </div>
+                <!-- Slide Item -->
+                <div class="bg-white border rounded-lg shadow-md p-3 ">
+                    <div class="relative">
+                        <img src="assets/images/magazin/4.webp" alt="Cover" class="w-full h-64 object-cover rounded" />
+                       
+                    </div>
+                    <h3 class="text-md font-medium mt-2 mb-1">The Week</h3>
+                    <p class="text-sm">From <span class="font-semibold">₹60</span> Per Issue</p>
+                    <p class="text-[12px] text-gray-400 mt-1">Available in Print, Digital</p>
+                </div>
+                
+
+                
+            </div>
+            </div>
+        </section>
+
 
         <!--  Footer  -->
         <footer class="bg-gray-50 text-gray-800">
@@ -1906,7 +2164,7 @@
         <link href="assets/css/common.css" type="text/css" rel="stylesheet" />
 
         <link href="assets/css/listing.css" type="text/css" rel="stylesheet" />
-
+        <link href="assets/css/detail.css" type="text/css" rel="stylesheet" />
         <link rel="stylesheet" type="text/css"
             href="assets/libs/slick-slider/slick.css" media="print"
             onload="this.media='all'" />
@@ -1918,6 +2176,7 @@
         <script src="assets/libs/slick-slider/slick.min.js" defer></script>
         <script src="assets/js/common.js" defer></script>
         <script src="assets/js/home.js" defer></script>
+        <script defer src="assets/js/alpine.js"></script>
 
         <!-- Script for toggle -->
         <!-- jQuery Logic -->
@@ -2101,6 +2360,33 @@ window.onload = function () {
   });
 });
   </script>
- 
+<script>
+ $(window).on('load', function () {
+    $('.product-slider').slick({
+        slidesToShow: 5.5, // Show 5 items on large screens
+        slidesToScroll: 1,
+        dots: false,
+        arrows: true, infinite: false,
+        adaptiveHeight: false,
+        centerMode: false,  // Disable to prevent extra space
+        variableWidth: false, // Ensure uniform width
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: { slidesToShow: 5 }
+        },
+        {
+          breakpoint: 768,
+          settings: { slidesToShow: 1,slidesToShow: 2 }
+        },
+        {
+          breakpoint: 574,
+          settings: { slidesToShow: 1,slidesToShow: 2 }
+        }
+      ]
+    });
+  });
+</script>
+
 
 </html>
