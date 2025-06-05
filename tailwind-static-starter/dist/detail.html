@@ -21,7 +21,7 @@
     <!-- Header -->
     <header class="bg-white  z-40  sticky w-full top-0 shadow-sm">
         <div class="max-w-full lg:max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-3 border-b border-b-[#D9D9D9]">
+            <div class="flex justify-between gap-6 items-center py-3 border-b border-b-[#D9D9D9]">
                 <div class="header-left-section">
                     <a href="#" class="flex items-center md:block hidden">
 
@@ -67,7 +67,7 @@
                                 <div class="i-search-placeholder w-5 h-5 mr-2"></div>
                             </a>
                             <input type="text" placeholder="Search For Title, Author Or Keyword.."
-                                class="lg:w-96 md:w-64 bg-transparent outline-none text-sm" id="searchInput">
+                                class="lg:w-96 md:w-64 bg-transparent outline-none text-sm" id="searchInput"/>
 
                         </div>
                         <div id="suggestionDropdown"
@@ -156,7 +156,7 @@
 
                                         </span>
                                         <input type="text" placeholder="Search For Title, Author Or Keyword.."
-                                            class="bg-transparent outline-none text-sm w-full" id="searchInput">
+                                            class="bg-transparent outline-none text-sm w-full" id="searchInput1"/>
 
                                     </div>
                                     <div id="suggestionDropdown"
@@ -376,12 +376,12 @@
                                 <div id="categories" class="tab-content text-sm"> <label class="block mb-2"><input
                                             type="checkbox" class="mr-2">News And
                                         Information</label>
-                                    <label class="block py-2"><input type="checkbox" class="mr-2">Children</label>
-                                    <label class="block py-2"><input type="checkbox" class="mr-2">Women</label>
-                                    <label class="block py-2"><input type="checkbox" class="mr-2">Career And
+                                    <label class="block py-2"><input type="checkbox" class="mr-2"/>Children</label>
+                                    <label class="block py-2"><input type="checkbox" class="mr-2"/>Women</label>
+                                    <label class="block py-2"><input type="checkbox" class="mr-2"/>Career And
                                         General</label>
-                                    <label class="block py-2"><input type="checkbox" class="mr-2">Health</label>
-                                    <label class="block py-2"><input type="checkbox" class="mr-2">Travel</label>
+                                    <label class="block py-2"><input type="checkbox" class="mr-2"/>Health</label>
+                                    <label class="block py-2"><input type="checkbox" class="mr-2"/>Travel</label>
                                 </div>
                                 <div id="author" class="tab-content hidden">Author filter
                                     options go here...</div>
@@ -913,7 +913,25 @@
                             <li><a href="#" class="hover:text-blue-500 text-sm">ASTRO</a></li>
                             <li><a href="#" class="hover:text-blue-500 text-sm">MANORAMA
                                     MAX</a></li>
-                            <li><a href="#" class="hover:text-blue-500 text-sm">OFFERS</a></li>
+                            <!-- <li><a href="#" class="hover:text-blue-500 text-sm">OFFERS</a></li> -->
+                              <li class="relative group">
+                <button class="text-left hover:text-blue-500 flex items-center text-sm">
+                  OTHERS
+                  <span class="ml-2 droparrow w-5 h-3">
+
+                  </span>
+                </button>
+                <ul class="absolute right-2 w-48 bg-white shadow-lg hidden group-hover:block pt-5">
+                  <li>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-500 font-light">OTHERS
+                      1</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-500 font-light">OTHERS
+                      2</a>
+                  </li>
+                </ul>
+              </li>
                         </ul>
                     </div>
                 </div>
@@ -1434,10 +1452,10 @@
 
 
         <!-- Layout -->
-        <div class="flex flex-col lg:flex-row gap-6 mt-4">
+        <div class="flex flex-col md:flex-row lg:flex-row gap-6 mt-4">
 
             <!-- Left Column (Magazine Cover) -->
-            <div class="w-full md:w-full lg:[width:30%]">
+            <div class="w-full sm:w-full md:[width:30%] lg:[width:30%]">
                 <div class="border rounded-lg p-3">
                     <img src="assets/images/magazin/1.webp" alt="The Week Magazine Cover" class="rounded-md w-full">
                     <p class="text-xs text-gray-500 mt-3 flex items-center"><span class="growth relative"></span> 68
@@ -1452,7 +1470,7 @@
             </div>
 
             <!-- Right Column (Subscription Info) -->
-            <div class="w-full md:w-full lg:[width:70%]">
+            <div class="w-full sm:w-full md:[width:70%] lg:[width:70%]">
                 <div class="border-b flex justify-between items-center">
                     <div>
                         <h2 class="text-xl font-semibold mb-1">The Week</h2>
@@ -1504,7 +1522,7 @@
                     <div class="mt-6">
                         <div x-show="tab === 'tab1'">
                             <div class="w-full md:w-5/6 block">
-                                <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                                <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
                                     <!-- Plan 1 -->
                                     <div class="border-2 rounded-md bg-blue-50 border-blue-500">
                                         <div class="p-3 text-sm font-semibold rounded-md bg-blue-100 text-blue-500">1
@@ -1562,7 +1580,7 @@
                         </div>
                         <div x-show="tab === 'tab2'">
                             <div class="w-full md:w-5/6 block">
-                                <div class="grid md:grid-cols-3 gap-4">
+                                <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
                                     <!-- Plan 1 -->
                                     <div class="border-2 rounded-md bg-blue-50 border-blue-500">
                                         <div class="p-3 text-sm font-semibold rounded-md bg-blue-100 text-blue-500">1
@@ -1583,11 +1601,11 @@
                             </div>
                         </div>
                         <div x-show="tab === 'tab3'">
-                            <div class="grid grid-cols-5 gap-4">
+                            <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-3 lg:grid-cols-5 gap-4">
                                 <div class="">
                                     <div class="relative">
-                                        <img src="assets/images/magazin/4.webp" alt="Cover"
-                                            class="w-full h-32 object-cover rounded" />
+                                        <img src="assets/images/magazin/2.webp" alt="Cover"
+                                            class="w-full h-48 object-cover rounded" />
                                     </div>
                                     <div class="flex items-center gap-2 mt-2">
                                         <input type="checkbox" checked
@@ -1599,7 +1617,7 @@
                                 <div class="">
                                     <div class="relative">
                                         <img src="assets/images/magazin/5.webp" alt="Cover"
-                                            class="w-full h-32 object-cover rounded" />
+                                            class="w-full h-48 object-cover rounded" />
                                     </div>
                                     <div class="flex items-center gap-2 mt-2">
                                         <input type="checkbox"
@@ -1612,7 +1630,7 @@
                                 <div class="">
                                     <div class="relative">
                                         <img src="assets/images/magazin/2.webp" alt="Cover"
-                                            class="w-full h-32 object-cover rounded" />
+                                            class="w-full h-48 object-cover rounded" />
                                     </div>
                                     <div class="flex items-center gap-2 mt-2">
                                         <input type="checkbox"
@@ -1624,7 +1642,7 @@
                                 <div class="">
                                     <div class="relative">
                                         <img src="assets/images/magazin/1.webp" alt="Cover"
-                                            class="w-full h-32 object-cover rounded" />
+                                            class="w-full h-48 object-cover rounded" />
                                     </div>
                                     <div class="flex items-center gap-2 mt-2">
                                         <input type="checkbox"
@@ -1636,7 +1654,7 @@
                                 <div class="">
                                     <div class="relative">
                                         <img src="assets/images/magazin/3.webp" alt="Cover"
-                                            class="w-full h-32 object-cover rounded" />
+                                            class="w-full h-48 object-cover rounded" />
                                     </div>
                                     <div class="flex items-center gap-2 mt-2">
                                         <input type="checkbox"
@@ -1660,7 +1678,7 @@
                     <p class="w-32 text-center font-medium mb-2">Qty</p>
                     <div class="w-32 flex justify-between rounded-md border overflow-hidden">
                         <button class="px-3 py-1 bg-gray-100 text-lg">−</button>
-                        <input type="text" value="1" class="w-12 flex justify-center text-center py-1">
+                        <input type="text" value="1" class="w-12 flex justify-center text-center py-1"/>
                         <button class="px-3 py-1 bg-gray-100 text-lg">+</button>
                     </div>
                 </div>
@@ -1669,7 +1687,7 @@
                 <div class="border-b py-6">
                     <h3 class="font-semibold text-gray-500 mb-1">Select Guaranteed Gifts</h3>
                     <p class="text-sm text-gray-600 mb-6">Select up to 2 Guaranteed Gifts from the options below.</p>
-                    <div class="w-full md:w-4/5 block">
+                    <div class="w-full md:w-full lg:w-4/5 block">
                         <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
                             <!-- Gift 1 -->
                             <div class="border-2 border-blue-500 rounded-md text-center">
@@ -1724,35 +1742,35 @@
                 <div class="py-6">
                     <h3 class="font-semibold text-gray-500 mb-6">Product Details</h3>
                     <ul>
-                        <li class="mb-4 grid grid-cols-2 md:grid-cols-3 gap-y-2">
+                        <li class="mb-4 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-y-2">
                             <span class="font-light text-gray-500 text-sm">ASIN</span>
                             <span class="font-medium text-sm">B00DD9N</span>
                         </li>
-                        <li class="mb-4 grid grid-cols-2 md:grid-cols-3 gap-y-2">
+                        <li class="mb-4 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-y-2">
                             <span class="font-light text-gray-500 text-sm">Language</span>
                             <span class="font-medium text-sm">Malayalam</span>
                         </li>
-                        <li class="mb-4 grid grid-cols-2 md:grid-cols-3 gap-y-2">
+                        <li class="mb-4 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-y-2">
                             <span class="font-light text-gray-500 text-sm">Reading age</span>
                             <span class="font-medium text-sm">15 years and up</span>
                         </li>
-                        <li class="mb-4 grid grid-cols-2 md:grid-cols-3 gap-y-2">
+                        <li class="mb-4 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-y-2">
                             <span class="font-light text-gray-500 text-sm">Pages</span>
                             <span class="font-medium text-sm">150 Pages</span>
                         </li>
-                        <li class="mb-4 grid grid-cols-2 md:grid-cols-3 gap-y-2">
+                        <li class="mb-4 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-y-2">
                             <span class="font-light text-gray-500 text-sm">Genre</span>
                             <span class="font-medium text-sm">Magazin</span>
                         </li>
-                        <li class="mb-4 grid grid-cols-2 md:grid-cols-3 gap-y-2">
+                        <li class="mb-4 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-y-2">
                             <span class="font-light text-gray-500 text-sm">Sub-Genre</span>
                             <span class="font-medium text-sm">Malayalam</span>
                         </li>
-                        <li class="mb-4 grid grid-cols-2 md:grid-cols-3 gap-y-2">
+                        <li class="mb-4 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-y-2">
                             <span class="font-light text-gray-500 text-sm">Formats</span>
                             <span class="font-medium text-sm">Print, Digital</span>
                         </li>
-                        <li class="mb-4 grid grid-cols-2 md:grid-cols-3 gap-y-2">
+                        <li class="mb-4 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-y-2">
                             <span class="font-light text-gray-500 text-sm">Origin</span>
                             <span class="font-medium text-sm">India</span>
                         </li>
@@ -1914,8 +1932,7 @@
 
     <!--  Footer  -->
     <footer class="bg-gray-50 text-gray-800">
-        <div class="text-center py-4 bg-indigo-50 text-sm font-medium">Back
-            To Top
+        <div class="text-center py-4 bg-indigo-50 flex items-center justify-center fixed right-4 bottom-4 w-10 h-10 rounded-full text-sm font-medium"><span class="back_top"></span>
         </div>
         <div class=" max-w-full lg:max-w-[1550px] mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-4 gap-8">
             <!-- Brand & Contact -->
@@ -2005,6 +2022,18 @@
     <script defer src="assets/js/alpine.js"></script>
 
     <!-- Script for toggle -->
+     <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleBtn = document.getElementById("menu-toggle");
+  const menu = document.getElementById("mobile-menu");
+
+  if (toggleBtn && menu) {
+    toggleBtn.addEventListener("click", function () {
+      menu.classList.toggle("hidden");
+    });
+  }
+});
+</script>
     <!-- jQuery Logic -->
     <script>
         $(document).ready(function () {
@@ -2056,11 +2085,7 @@
         });
     </script>
 
-    <script>
-        document.getElementById("menu-toggle").addEventListener("click", function () {
-            document.getElementById("mobile-menu").classList.toggle("hidden");
-        });
-    </script>
+    
 
     <script>
         $(window).on('load', function () {
@@ -2154,7 +2179,7 @@
 
     </script>
     <script> document.getElementById('category-close').addEventListener('click', function () { document.getElementById('categoryMenu').classList.add('hidden'); }); </script>
-</body>
+
 
 <script>
     document.querySelectorAll('.accordion-toggle').forEach((button) => {
@@ -2186,33 +2211,5 @@
         });
     });
 </script>
-<!-- <script>
-    $(window).on('load', function () {
-        $('.product-slider').slick({
-            slidesToShow: 5.5, // Show 5 items on large screens
-            slidesToScroll: 1,
-            dots: false,
-            arrows: true, infinite: false,
-            adaptiveHeight: false,
-            centerMode: false,  // Disable to prevent extra space
-            variableWidth: false, // Ensure uniform width
-            responsive: [
-                {
-                    breakpoint: 1024,
-                    settings: { slidesToShow: 5 }
-                },
-                {
-                    breakpoint: 768,
-                    settings: { slidesToShow: 1, slidesToShow: 2 }
-                },
-                {
-                    breakpoint: 574,
-                    settings: { slidesToShow: 1, slidesToShow: 2 }
-                }
-            ]
-        });
-    });
-</script> -->
-
-
+</body>
 </html>
