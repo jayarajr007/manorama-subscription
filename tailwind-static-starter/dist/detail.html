@@ -10,7 +10,8 @@
     <link rel="preload" href="assets/font/poppins/Poppins-SemiBold.woff" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="assets/font/poppins/Poppins-ExtraBold.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="assets/font/poppins/Poppins-Medium.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="assets/css/output.css">
+    <link rel="stylesheet" href="/css/output.css" media="print" onload="this.media='all';">
+
     <link href="assets/css/common-crit.css" rel="stylesheet" />
 
 
@@ -23,13 +24,13 @@
         <div class="max-w-full lg:max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between gap-6 items-center py-3 border-b border-b-[#D9D9D9]">
                 <div class="header-left-section">
-                    <a href="#" class="flex items-center md:block hidden">
+                    <a href="#" class="flex items-center md:block hidden" aria-label="logo">
 
                         <img src="assets/img/logo.svg" alt="Company Logo" class="logo" width="275" height="40"
                             loading="lazy" />
                     </a>
                     <!-- Class Changed for listing page -->
-                    <a href="#" class="flex items-center hidden">
+                    <a href="#" class="flex items-center hidden" aria-label="Welcome">
                         <div class="flex items-center space-x-3 px-0 pt-0">
                             <!-- Profile Icon -->
                             <div
@@ -45,7 +46,7 @@
                         </div>
                     </a>
 
-                    <a href="index.html" class="flex items-center md:hidden">
+                    <a href="index.html" class="flex items-center md:hidden" aria-label="Home">
                         <div class="flex items-center space-x-3 px-0 pt-0">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -67,7 +68,7 @@
                                 <div class="i-search-placeholder w-5 h-5 mr-2"></div>
                             </a>
                             <input type="text" placeholder="Search For Title, Author Or Keyword.."
-                                class="lg:w-96 md:w-64 bg-transparent outline-none text-sm" id="searchInput"/>
+                                class="lg:w-96 md:w-64 bg-transparent outline-none text-sm" id="searchInput" aria-label="Search"/>
 
                         </div>
                         <div id="suggestionDropdown"
@@ -79,28 +80,28 @@
                                 <!-- Each item -->
                                 <div
                                     class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
-                                    <span><img src="assets/img/icons/Search.svg" width="15" alt="Search icon" /></span>
+                                    <span><img src="assets/img/icons/Search.svg" width="15" height="15" alt="Search icon" /></span>
                                     <span>Pravasaikalkkum Vanithakkalkum 50
                                         Samrambhangal</span>
                                 </div>
                                 <div
                                     class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
-                                    <span><img src="assets/img/icons/Search.svg" width="15" alt="Search icon" /></span>
+                                    <span><img src="assets/img/icons/Search.svg" width="15" height="15" alt="Search icon" /></span>
                                     <span>Vanitha</span>
                                 </div>
                                 <div
                                     class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
-                                    <span><img src="assets/img/icons/Search.svg" width="15" alt="Search icon" /></span>
+                                    <span><img src="assets/img/icons/Search.svg" width="15" height="15" alt="Search icon" /></span>
                                     <span>Vanitha Hindi</span>
                                 </div>
                                 <div
                                     class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
-                                    <span><img src="assets/img/icons/Search.svg" width="15" alt="Search icon" /></span>
+                                    <span><img src="assets/img/icons/Search.svg" width="15" height="15" alt="Search icon" /></span>
                                     <span>Vanitha Pachakam</span>
                                 </div>
                                 <div
                                     class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
-                                    <span><img src="assets/img/icons/Search.svg" width="15" alt="Search icon" /></span>
+                                    <span><img src="assets/img/icons/Search.svg" width="15" height="15" alt="Search icon" /></span>
                                     <span>Week & Vanitha Combo</span>
                                 </div>
                             </div>
@@ -142,7 +143,7 @@
                             class="fixed inset-0 z-50 bg-white p-0 overflow-y-auto hidden transition-opacity duration-300">
                             <!-- Back Button + Search Input -->
                             <div class="flex items-center gap-2 p-3 border-b border-gray-300">
-                                <button id="closeSearch">
+                                <button id="closeSearch" aria-label="close">
                                     <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor"
                                         viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -156,7 +157,7 @@
 
                                         </span>
                                         <input type="text" placeholder="Search For Title, Author Or Keyword.."
-                                            class="bg-transparent outline-none text-sm w-full" id="searchInput1"/>
+                                            class="bg-transparent outline-none text-sm w-full" id="searchInput1" aria-label="Search"/>
 
                                     </div>
                                     <div id="suggestionDropdown"
@@ -333,13 +334,13 @@
             <!-- Filter and sort section listin mobile-->
             <div class="flex md:hidden justify-between items-center px-0 py-4 shadow-sm  ">
                 <!-- Sort Button -->
-                <button class="flex items-center text-gray-700 text-sm font-medium space-x-1">
+                <button class="flex items-center text-gray-700 text-sm font-medium space-x-1" aria-label="Sort">
                     <div class="md:mr-4 mr-0 w-8 h-8 i-sort"></div>
                     <span>Sort</span>
                 </button>
 
                 <!-- Filter Button -->
-                <button class="flex items-center text-gray-700 text-sm font-medium space-x-1" id="openFilter">
+                <button class="flex items-center text-gray-700 text-sm font-medium space-x-1" id="openFilter" aria-label="Filter">
                     <div class="md:mr-4 mr-0 w-8 h-8 i-filter"></div>
 
                     <span>Filter</span>
@@ -353,7 +354,7 @@
                         <!-- Header -->
                         <div class="flex justify-between items-center border-b pb-2">
                             <h2 class="font-bold text-lg">FILTERS</h2>
-                            <button id="closeFilter" class="text-gray-500">×</button>
+                            <button id="closeFilter" class="text-gray-500" aria-label="Close">×</button>
                         </div>
 
                         <!-- Body -->
@@ -362,26 +363,26 @@
                             <div class="w-1/3 border-r">
                                 <button
                                     class="tab-btn w-full text-left px-2 py-2 hover:bg-gray-100 text-sm border-l-2 font-semibold border-blue-600 bg-white text-black"
-                                    data-tab="categories">Categories</button>
+                                    data-tab="categories" aria-label="Categories">Categories</button>
                                 <button class="tab-btn w-full text-left px-2 py-2 hover:bg-gray-100 text-sm"
-                                    data-tab="author">Author</button>
+                                    data-tab="author" aria-label="Author">Author</button>
                                 <button class="tab-btn w-full text-left px-2 py-2 hover:bg-gray-100 text-sm"
-                                    data-tab="format">Format Type</button>
+                                    data-tab="format" aria-label="Format">Format Type</button>
                                 <button class="tab-btn w-full text-left px-2 py-2 hover:bg-gray-100 text-sm"
-                                    data-tab="language">Language</button>
+                                    data-tab="language" aria-label="Language">Language</button>
                             </div>
 
                             <!-- Content Area -->
                             <div class="w-2/3 p-4">
                                 <div id="categories" class="tab-content text-sm"> <label class="block mb-2"><input
-                                            type="checkbox" class="mr-2">News And
+                                            type="checkbox" class="mr-2" aria-label="checkbox">News And
                                         Information</label>
-                                    <label class="block py-2"><input type="checkbox" class="mr-2"/>Children</label>
-                                    <label class="block py-2"><input type="checkbox" class="mr-2"/>Women</label>
-                                    <label class="block py-2"><input type="checkbox" class="mr-2"/>Career And
+                                    <label class="block py-2"><input type="checkbox" class="mr-2" aria-label="checkbox"/>Children</label>
+                                    <label class="block py-2"><input type="checkbox" class="mr-2" aria-label="checkbox"/>Women</label>
+                                    <label class="block py-2"><input type="checkbox" class="mr-2" aria-label="checkbox"/>Career And
                                         General</label>
-                                    <label class="block py-2"><input type="checkbox" class="mr-2"/>Health</label>
-                                    <label class="block py-2"><input type="checkbox" class="mr-2"/>Travel</label>
+                                    <label class="block py-2"><input type="checkbox" class="mr-2" aria-label="checkbox"/>Health</label>
+                                    <label class="block py-2"><input type="checkbox" class="mr-2" aria-label="checkbox"/>Travel</label>
                                 </div>
                                 <div id="author" class="tab-content hidden">Author filter
                                     options go here...</div>
@@ -397,8 +398,8 @@
                             <span class="text-sm text-gray-500">1000+
                                 Products</span>
                             <div>
-                                <button id="clearFilters" class="text-blue-600 mr-4">Clear</button>
-                                <button id="applyFilters" class="bg-blue-600 text-white px-4 py-2 rounded">Done</button>
+                                <button id="clearFilters" class="text-blue-600 mr-4" aria-label="Clear">Clear</button>
+                                <button id="applyFilters" class="bg-blue-600 text-white px-4 py-2 rounded" aria-label="Apply">Done</button>
                             </div>
                         </div>
                     </div>
@@ -413,13 +414,13 @@
                         <ul
                             class="hidden md:flex space-x-5 text-gray-700 font-semibold justify-between w-full text-left z-0">
                             <li>
-                                <a href="#" class="hover:text-blue-500 text-sm">MANORAMA
+                                <a href="#" class="hover:text-blue-500 text-sm" aria-label="Manorama daily">MANORAMA
                                     DAILY
                                     & E PAPER</a>
                             </li>
                             <!-- Premium Subscription Dropdown -->
                             <li class="relative group">
-                                <button class="text-left hover:text-blue-500 flex items-center text-sm">
+                                <button class="text-left hover:text-blue-500 flex items-center text-sm" aria-label="Premium Subscription">
                                     PREMIUM SUBSCRIPTION
                                     <span class="ml-2 droparrow w-5 h-3">
 
@@ -428,19 +429,19 @@
                                 <ul class="absolute left-0 w-48 bg-white shadow-lg hidden group-hover:block pt-5">
                                     <li>
                                         <a href="#"
-                                            class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-500 font-normal">Plan
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-500 font-normal" aria-label="Plan">Plan
                                             1</a>
                                     </li>
                                     <li>
                                         <a href="#"
-                                            class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-500 font-normal">Plan
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-500 font-normal" aria-label="Plan">Plan
                                             2</a>
                                     </li>
                                 </ul>
                             </li>
                             <!-- Magazines Mega Menu -->
                             <li class="group z-50">
-                                <button class="text-left hover:text-blue-500 flex items-center text-sm">
+                                <button class="text-left hover:text-blue-500 flex items-center text-sm" aria-label="Magazines">
                                     MAGAZINES
                                     <span class="ml-2 droparrow w-5 h-3">
 
@@ -454,56 +455,60 @@
                                             and Information</h4>
                                         <ul>
                                             <li><a href="#"
-                                                    class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Thozhilveedhi</a>
+                                                    class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal" aria-label="Thozhilveedhi">Thozhilveedhi</a>
                                             </li>
                                             <li><a href="#"
-                                                    class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Karshakasree</a>
+                                                    class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal" aria-label="Karshakasree">Karshakasree</a>
                                             </li>
                                             <li><a href="#"
-                                                    class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Bhashaposhini</a>
+                                                    class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal" aria-label="Bhashaposhini">Bhashaposhini</a>
                                             </li>
                                             <li><a href="#"
-                                                    class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Sampadyam</a>
+                                                    class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal" aria-label="Sampadyam">Sampadyam</a>
                                             </li>
                                             <li><a href="#"
-                                                    class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">The
+                                                    class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal" aria-label="The Week">The
                                                     Week</a></li>
                                             <li><a href="#"
-                                                    class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Livingetc</a>
+                                                    class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal" aria-label="Livingetc">Livingetc</a>
                                             </li>
                                         </ul>
                                         <h4 class="font-bold text-gray-800 text-sm mt-4 mb-2">Health</h4>
                                         <a href="#"
-                                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Arogyam</a>
+                                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal" aria-label="Arogyam">Arogyam</a>
                                     </div>
                                     <!-- Column 2: Children -->
                                     <div class="w-1/6">
                                         <h4 class="font-semibold text-gray-800 text-sm mb-2">Children</h4>
                                         <ul>
                                             <li><a href="#"
-                                                    class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Magic
+                                                    class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal" aria-label="Magic">Magic
                                                     Pot</a></li>
                                             <li><a href="#"
-                                                    class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Kalikkudukka</a>
+                                                    class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal" aria-label="Kalikkudukka">Kalikkudukka</a>
                                             </li>
                                             <li><a href="#"
-                                                    class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Balarama
+                                                    class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal" aria-label="Balarama">Balarama
                                                     Digest</a></li>
                                             <li><a href="#"
-                                                    class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">National
+                                                    class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal" aria-label="
+                                                    Geographic Kids">National
                                                     Geographic Kids</a></li>
                                             <li><a href="#"
-                                                    class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Balarama
+                                                    class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal" aria-label="Balarama">Balarama
                                                     Amar Chithra
                                                     Kadha</a></li>
                                             <li><a href="#"
-                                                    class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Akkad
+                                                    class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal"  aria-label="Akkad
+                                                    Bakkad">Akkad
                                                     Bakkad</a></li>
                                             <li><a href="#"
-                                                    class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Kadhayum
+                                                    class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal"  aria-label="
+                                                    Niravum">Kadhayum
                                                     Niravum</a></li>
                                             <li><a href="#"
-                                                    class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Read
+                                                    class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal"  aria-label="Read
+                                                    And Colour">Read
                                                     And Colour</a></li>
                                             <li><a href="listing.html" aria-label="Go to Listing"
                                                     class="text-sm text-blue-500 mt-2 block font-semibold">View
@@ -589,7 +594,7 @@
                             </li>
                             <!-- Books Dropdown -->
                             <li class="group z-50">
-                                <button class="text-left hover:text-blue-500 flex items-center text-sm">
+                                <button class="text-left hover:text-blue-500 flex items-center text-sm" aria-label="Book">
                                     Books
                                     <span class="ml-2 droparrow w-5 h-3">
 
@@ -915,7 +920,7 @@
                                     MAX</a></li>
                             <!-- <li><a href="#" class="hover:text-blue-500 text-sm">OFFERS</a></li> -->
                               <li class="relative group">
-                <button class="text-left hover:text-blue-500 flex items-center text-sm">
+                <button class="text-left hover:text-blue-500 flex items-center text-sm" aria-label="Others">
                   OTHERS
                   <span class="ml-2 droparrow w-5 h-3">
 
@@ -970,7 +975,7 @@
     <!-- Mobile Category menu-->
     <div id="categoryMenu" class="flex flex-1 hidden w-full ">
         <div class="fixed top-0 left-0 w-full bg-white flex items-center justify-between px-4 py-5 shadow-md z-50">
-            <button class="text-1xl" id="category-close">
+            <button class="text-1xl" id="category-close" aria-label="Close">
                 ✖
             </button>
             <h1 class="text-sm font-normal">CATEGORIES</h1>
@@ -983,7 +988,7 @@
             <button onclick="showTab('newspaper', this)" id="tab-newspaper"
                 class="flex flex-col items-center tab-btn active-tab w-full px-2" aria-label="News Paper and E Paper">
                 <span class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-1">
-                    <img src="assets/img/menu/newspaper.webp" alt="News Paper" class="rounded-full w-10 h-10"  loading="lazy"/>
+                    <img src="assets/img/menu/newspaper.webp" alt="News Paper" class="rounded-full w-10 h-10" width="54" height="62" loading="lazy"/>
                 </span>
                 <span class="text-[10px] text-center">News Paper & E
                     Paper</span>
@@ -992,7 +997,7 @@
             <button onclick="showTab('premium', this)" id="tab-premium"
                 class="flex flex-col items-center tab-btn w-full px-2" aria-label="Premium Subscription">
                 <span class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-1">
-                    <img src="assets/img/menu/premium.webp" alt="Premium Subscription" class="rounded-full w-10 h-10"  loading="lazy"/>
+                    <img src="assets/img/menu/premium.webp" alt="Premium Subscription" class="rounded-full w-10 h-10" width="54" height="62"  loading="lazy"/>
                 </span>
                 <span class="text-[10px] text-center">Premium
                     Subscription</span>
@@ -1001,7 +1006,7 @@
             <button onclick="showTab('magazines', this)" id="tab-magazines"
                 class="flex flex-col items-center tab-btn w-full px-2" aria-label="Magazines Subscription">
                 <span class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-1">
-                    <img src="assets/img/menu/magazin.webp" alt="Magazines" class="rounded-full w-10 h-10"  loading="lazy"/>
+                    <img src="assets/img/menu/magazin.webp" alt="Magazines" class="rounded-full w-10 h-10"  width="54" height="62" loading="lazy"/>
                 </span>
                 <span class="text-[10px] text-center">Magazines
                     Subscription</span>
@@ -1010,7 +1015,7 @@
             <button onclick="showTab('books', this)" id="tab-books"
                 class="flex flex-col items-center tab-btn w-full px-2" aria-label="Books">
                 <span class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-1">
-                    <img src="assets/img/menu/book.webp" alt="Books" class="rounded-full w-10 h-10"  loading="lazy"/>
+                    <img src="assets/img/menu/book.webp" alt="Books" class="rounded-full w-10 h-10"  width="54" height="62" loading="lazy"/>
                 </span>
                 <span class="text-[10px] text-center">Books</span>
             </button>
@@ -1018,7 +1023,7 @@
             <button onclick="showTab('yearbook', this)" id="tab-yearbook"
                 class="flex flex-col items-center tab-btn w-full px-2" aria-label="Year Book">
                 <span class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-1">
-                    <img src="assets/img/menu/yearbook.webp" alt="Year Book" class="rounded-full w-10 h-10"  loading="lazy"/>
+                    <img src="assets/img/menu/yearbook.webp" alt="Year Book" class="rounded-full w-10 h-10"  width="54" height="62" loading="lazy"/>
                 </span>
                 <span class="text-[10px] text-center">Year Book</span>
             </button>
@@ -1026,7 +1031,7 @@
             <button onclick="showTab('astro', this)" id="tab-astro"
                 class="flex flex-col items-center tab-btn w-full px-2" aria-label="Astro">
                 <span class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-1">
-                    <img src="assets/img/menu/astro.webp" alt="Astro" class="rounded-full w-10 h-10"  loading="lazy"/>
+                    <img src="assets/img/menu/astro.webp" alt="Astro" class="rounded-full w-10 h-10"  width="54" height="62" loading="lazy"/>
                 </span>
                 <span class="text-[10px] text-center">Astro</span>
             </button>
@@ -1034,7 +1039,7 @@
             <button onclick="showTab('apps', this)" id="tab-apps" class="flex flex-col items-center tab-btn w-full px-2"
                 aria-label="Apps">
                 <span class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-1">
-                    <img src="assets/img/menu/max.webp" alt="Apps" class="rounded-full w-10 h-10"  loading="lazy"/>
+                    <img src="assets/img/menu/max.webp" alt="Apps" class="rounded-full w-10 h-10"  width="54" height="62" loading="lazy"/>
                 </span>
                 <span class="text-[10px] text-center">Apps</span>
             </button>
@@ -1042,7 +1047,7 @@
             <button onclick="showTab('offers', this)" id="tab-offers"
                 class="flex flex-col items-center tab-btn w-full px-2" aria-label="Offers">
                 <span class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-1">
-                    <img src="assets/img/menu/offe.webp" alt="Offers" class="rounded-full w-10 h-10"  loading="lazy"/>
+                    <img src="assets/img/menu/offe.webp" alt="Offers" class="rounded-full w-10 h-10"  width="54" height="62" loading="lazy"/>
                 </span>
                 <span class="text-[10px] text-center">Offers</span>
             </button>
@@ -1055,13 +1060,13 @@
             <div id="newspaper" class="tab-content">
                 <div class="space-y-6">
                     <div class="text-center border-b pb-3">
-                        <img src="assets/images/epaper&news/5.webp" width="113" height="149" loading="lazy"
-                            class="mx-auto mb-2 max-w-[115px] rounded-md border border-gray-300" alt="Premium"  loading="lazy"/>
+                        <img src="assets/images/epaper&news/5.webp" width="266" height="350" 
+                            class="mx-auto mb-2 max-w-[115px] rounded-md border border-gray-300" alt="Premium" />
                         <p class="text-[13px] font-semibold">Premium
                             Subscription</p>
                     </div>
                     <div class="text-center border-b pb-3">
-                        <img src="assets/images/epaper&news/a1.webp" width="113" height="149" loading="lazy"
+                        <img src="assets/images/epaper&news/a1.webp" width="266" height="350" loading="lazy"
                             class="mx-auto mb-2 max-w-[115px] rounded-md border border-gray-300"
                             alt="Premium + Epaper" />
                         <p class="text-[13px] font-semibold">Premium +
@@ -1075,27 +1080,27 @@
             <div id="premium" class="tab-content hidden">
                 <div class="space-y-6 pb-[100px]">
                     <div class="text-center border-b pb-3">
-                        <img src="assets/images/subscription/3.webp" width="113" height="149"
+                        <img src="assets/images/subscription/3.webp" width="266" height="350"
                             class="mx-auto mb-2 max-w-[115px] rounded-md border border-gray-300" alt="Premium"  loading="lazy"/>
                         <p class="text-[13px] font-semibold">Premium
                             Subscription</p>
                     </div>
                     <div class="text-center border-b pb-3">
-                        <img src="assets/images/subscription/2.webp" width="113" height="149" loading="lazy"
+                        <img src="assets/images/subscription/2.webp" width="266" height="350" loading="lazy"
                             class="mx-auto mb-2 max-w-[115px] rounded-md border border-gray-300"
                             alt="Premium + Manorama MAX" />
                         <p class="text-[13px] font-semibold">Premium +
                             Manorama MAX</p>
                     </div>
                     <div class="text-center border-b pb-3">
-                        <img src="assets/images/subscription/1.webp" width="113" height="149" loading="lazy"
+                        <img src="assets/images/subscription/1.webp" width="266" height="350" loading="lazy"
                             class="mx-auto mb-2 max-w-[115px] rounded-md border border-gray-300"
                             alt="Premium + Epaper" />
                         <p class="text-[13px] font-semibold">Premium +
                             Epaper</p>
                     </div>
                     <div class="text-center border-b pb-3">
-                        <img src="assets/images/subscription/4.webp" width="113" height="149" loading="lazy"
+                        <img src="assets/images/subscription/4.webp" width="266" height="350" loading="lazy"
                             class="mx-auto mb-2 max-w-[115px] rounded-md border border-gray-300"
                             alt="Premium + Yearbook" />
                         <p class="text-[13px] font-semibold">Premium +
@@ -1457,7 +1462,7 @@
             <!-- Left Column (Magazine Cover) -->
             <div class="w-full sm:w-full md:[width:30%] lg:[width:30%]">
                 <div class="border rounded-lg p-3">
-                    <img src="assets/images/magazin/1.webp" alt="The Week Magazine Cover" class="rounded-md w-full">
+                    <img src="assets/images/magazin/1.webp" alt="The Week Magazine Cover" width="266" height="350" class="rounded-md w-full">
                     <p class="text-xs text-gray-500 mt-3 flex items-center"><span class="growth relative"></span> 68
                         People Ordered This In The Last 15 Days</p>
                     <a href="#" class="mt-2 block text-blue-500 text-sm font-medium">Read Sample</a>
@@ -1465,7 +1470,7 @@
                 <p class="text-xl font-semibold mt-2">₹110</p>
 
                 <button
-                    class="bg-darkblue w-full mt-3 font-medium py-4 px-6 rounded flex text-white justify-center gap-2 text-center"
+                    class="bg-darkblue w-full mt-3 font-medium py-4 px-6 rounded flex text-white justify-center gap-2 text-center" aria-label="Cart"
                     style="background-color: #333994;"><span class="addcart relative"></span> ADD TO CART</button>
             </div>
 
@@ -1476,7 +1481,7 @@
                         <h2 class="text-xl font-semibold mb-1">The Week</h2>
                         <p class="text-sm text-gray-500 mb-4">01 Jan 2025</p>
                     </div>
-                    <button>
+                    <button aria-label="Share">
                         <span class="shareicon relative"></span>
                     </button>
                 </div>
@@ -1491,9 +1496,9 @@
                     <h3 class="font-semibold text-gray-500 mb-6">Available Format</h3>
                     <div class="flex gap-2">
                         <button
-                            class="px-6 py-3 border border-blue-500 rounded-sm font-medium bg-blue-50 text-black">Print</button>
-                        <button class="px-6 py-3 border text-gray-600 rounded-sm">Digital</button>
-                        <button class="px-6 py-3 border text-gray-600 rounded-sm">Print + Digital</button>
+                            class="px-6 py-3 border border-blue-500 rounded-sm font-medium bg-blue-50 text-black" aria-label="Print">Print</button>
+                        <button class="px-6 py-3 border text-gray-600 rounded-sm" aria-label="Digital">Digital</button>
+                        <button class="px-6 py-3 border text-gray-600 rounded-sm" aria-label="Print Digital">Print + Digital</button>
                     </div>
                 </div>
 
@@ -1503,17 +1508,17 @@
                     <div class="flex space-x-6 ">
                         <button @click="tab = 'tab1'"
                             :class="tab === 'tab1' ? 'border-blue-500 text-blue-600' : 'text-gray-500'"
-                            class="py-2 font-semibold">
+                            class="py-2 font-semibold" aria-label="Subscription">
                             Subscription
                         </button>
                         <button @click="tab = 'tab2'"
                             :class="tab === 'tab2' ? 'border-blue-500 text-blue-600' : 'text-gray-500'"
-                            class="py-2 font-semibold">
+                            class="py-2 font-semibold" aria-label="Renewal">
                             Renewal
                         </button>
                         <button @click="tab = 'tab3'"
                             :class="tab === 'tab3' ? 'border-blue-500 text-blue-600' : 'text-gray-500'"
-                            class="py-2 font-semibold">
+                            class="py-2 font-semibold" aria-label="Single Issue">
                             Single Issue
                         </button>
                     </div>
@@ -1609,7 +1614,7 @@
                                     </div>
                                     <div class="flex items-center gap-2 mt-2">
                                         <input type="checkbox" checked
-                                            class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                                            class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"  aria-label="checkbox"/>
                                         <h3 class="text-sm mt-2 mb-1">Current Issue</h3>
                                     </div>
 
@@ -1621,7 +1626,7 @@
                                     </div>
                                     <div class="flex items-center gap-2 mt-2">
                                         <input type="checkbox"
-                                            class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                                            class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"  aria-label="checkbox"/>
                                         <h3 class="text-sm mt-2 mb-1">16 Sep </h3>
                                     </div>
 
@@ -1634,7 +1639,7 @@
                                     </div>
                                     <div class="flex items-center gap-2 mt-2">
                                         <input type="checkbox"
-                                            class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                                            class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"  aria-label="checkbox"/>
                                         <h3 class="text-sm mt-2 mb-1">16 Sep </h3>
                                     </div>
 
@@ -1646,7 +1651,7 @@
                                     </div>
                                     <div class="flex items-center gap-2 mt-2">
                                         <input type="checkbox"
-                                            class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                                            class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"  aria-label="checkbox"/>
                                         <h3 class="text-sm mt-2 mb-1">16 Sep </h3>
                                     </div>
 
@@ -1658,7 +1663,7 @@
                                     </div>
                                     <div class="flex items-center gap-2 mt-2">
                                         <input type="checkbox"
-                                            class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                                            class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"  aria-label="checkbox"/>
                                         <h3 class="text-sm mt-2 mb-1">16 Sep </h3>
                                     </div>
 
@@ -1677,9 +1682,9 @@
                 <div class="border-b pb-6">
                     <p class="w-32 text-center font-medium mb-2">Qty</p>
                     <div class="w-32 flex justify-between rounded-md border overflow-hidden">
-                        <button class="px-3 py-1 bg-gray-100 text-lg">−</button>
-                        <input type="text" value="1" class="w-12 flex justify-center text-center py-1"/>
-                        <button class="px-3 py-1 bg-gray-100 text-lg">+</button>
+                        <button class="px-3 py-1 bg-gray-100 text-lg" aria-label="Minus">−</button>
+                        <input type="text" value="1" class="w-12 flex justify-center text-center py-1"  aria-label="quantity"/>
+                        <button class="px-3 py-1 bg-gray-100 text-lg" aria-label="Plus">+</button>
                     </div>
                 </div>
 
@@ -1695,7 +1700,7 @@
                                     class="text-sm font-semibold  flex justify-between p-3 rounded-md bg-blue-100 mb-2">
                                     <h5 class="text-left text-blue-500">Magazine</h5>
                                     <input type="checkbox" checked
-                                        class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                                        class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Magazine" />
                                 </div>
                                 <p class="text-sm font-medium text-left mb-4 p-2">Tell Me Why 1 Year</p>
                                 <img src="assets/images/magazin/image.svg" alt="Tell Me Why 1 Year"
@@ -1707,7 +1712,7 @@
                                     class="text-sm font-semibold  flex justify-between p-3 rounded-md  bg-gray-100 mb-2">
                                     <h5 class="text-left">Amazon Gift</h5>
                                     <input type="checkbox"
-                                        class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                                        class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Amazon" />
                                 </div>
                                 <p class="text-sm font-medium text-left mb-4  p-2">Amazon Gift</p>
                                 <img src="assets/images/magazin/amazon.svg" alt="Amazon Gift"
@@ -1719,7 +1724,7 @@
                                     class="text-sm font-semibold  flex justify-between p-3  rounded-md bg-gray-100 mb-2">
                                     <h5 class="text-left">Travel Bag</h5>
                                     <input type="checkbox"
-                                        class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                                        class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Travel" />
                                 </div>
                                 <p class="text-sm font-medium text-left mb-4  p-2">Bag</p>
                                 <img src="assets/images/magazin/bag.svg" alt="Travel Bag"
@@ -2016,6 +2021,22 @@
         onload="this.media='all'" />
 
     <script src="assets/libs/Jquery/jquery-3.7.1.min.js"></script>
+    <script>
+  // Patch to override default event listeners with passive for better scroll performance
+  (function() {
+    const originalAddEventListener = EventTarget.prototype.addEventListener;
+    const passiveEvents = ['touchstart', 'touchmove', 'wheel', 'mousewheel'];
+
+    EventTarget.prototype.addEventListener = function(type, listener, options) {
+      if (passiveEvents.includes(type) && typeof options !== 'boolean') {
+        // Default to passive: true for scroll-related events
+        options = options || {};
+        options.passive = true;
+      }
+      originalAddEventListener.call(this, type, listener, options);
+    };
+  })();
+</script>
     <script src="assets/libs/slick-slider/slick.min.js" defer></script>
     <script src="assets/js/common.js" defer></script>
     <script src="assets/js/detail.js" defer></script>
