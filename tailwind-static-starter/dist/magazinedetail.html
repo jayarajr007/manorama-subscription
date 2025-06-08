@@ -1506,26 +1506,20 @@
                 <div x-data="{ tab: 'tab1' }" class="py-6">
                     <!-- Tab Headers -->
                     <div class="flex space-x-6 ">
-                        <button @click="tab = 'tab1'"
-                            :class="tab === 'tab1' ? 'border-blue-500 text-blue-600' : 'text-gray-500'"
-                            class="py-2 font-semibold" aria-label="Subscription">
+                        <button id="subscription" class="border-blue-500 text-blue-600 py-2 font-semibold" aria-label="Subscription">
                             Subscription
                         </button>
-                        <button @click="tab = 'tab2'"
-                            :class="tab === 'tab2' ? 'border-blue-500 text-blue-600' : 'text-gray-500'"
-                            class="py-2 font-semibold" aria-label="Renewal">
+                        <button id="renewal" class="border-blue-500 text-gray-500 py-2 font-semibold" aria-label="Renewal">
                             Renewal
                         </button>
-                        <button @click="tab = 'tab3'"
-                            :class="tab === 'tab3' ? 'border-blue-500 text-blue-600' : 'text-gray-500'"
-                            class="py-2 font-semibold" aria-label="Single Issue">
+                        <button id="singleissue" class="border-gray-500 text-gray-500 py-2 font-semibold" aria-label="Single Issue">
                             Single Issue
                         </button>
                     </div>
 
                     <!-- Tab Content -->
                     <div class="mt-6">
-                        <div x-show="tab === 'tab1'">
+                        <div id="subscriptioncontent">
                             <div class="w-full md:w-5/6 block">
                                 <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
                                     <!-- Plan 1 -->
@@ -1534,7 +1528,7 @@
                                             Month</div>
                                         <div class="p-3 h-20 bg-white rounded-md">
                                             <div class="flex items-center gap-3 ">
-                                                <p class="text-sm line-through text-gray-400">₹350</p>
+                                                <p class="text-lg line-through text-gray-400">₹350</p>
                                                 <p class="text-lg font-semibold">₹110 <span
                                                         class="text-lg  font-semibold text-red-500 ml-2">70% OFF</span>
                                                 </p>
@@ -1549,7 +1543,7 @@
                                             Year</div>
                                         <div class="p-3 h-20 bg-white rounded-md">
                                             <div class="flex items-center gap-3 ">
-                                                <p class="text-sm line-through text-gray-400">₹350</p>
+                                                <p class="text-lg line-through text-gray-400">₹350</p>
                                                 <p class="text-lg font-semibold">₹308<span
                                                         class="text-lg  font-semibold text-red-500 ml-2">12% OFF</span>
                                                 </p>
@@ -1583,7 +1577,7 @@
                             </div>
                             <p class="mt-6 mb-4 text-sm">4 issues 1 months </p>
                         </div>
-                        <div x-show="tab === 'tab2'">
+                        <div id="renewalcontent" class="hidden">
                             <div class="w-full md:w-5/6 block">
                                 <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
                                     <!-- Plan 1 -->
@@ -1605,12 +1599,12 @@
                                 <p class="mt-6 mb-4 text-sm">4 issues 1 months </p>
                             </div>
                         </div>
-                        <div x-show="tab === 'tab3'">
+                        <div id="singleissuecontent"  class="hidden">
                             <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-3 lg:grid-cols-5 gap-4">
                                 <div class="">
                                     <div class="relative">
                                         <img src="assets/images/magazin/2.webp" alt="Cover"
-                                            class="w-full h-48 object-cover rounded"  loading="lazy"/>
+                                            class="w-full h-full object-cover rounded"  loading="lazy"/>
                                     </div>
                                     <div class="flex items-center gap-2 mt-2">
                                         <input type="checkbox" checked
@@ -1622,7 +1616,7 @@
                                 <div class="">
                                     <div class="relative">
                                         <img src="assets/images/magazin/5.webp" alt="Cover"
-                                            class="w-full h-48 object-cover rounded"  loading="lazy"/>
+                                            class="w-full h-full object-cover rounded"  loading="lazy"/>
                                     </div>
                                     <div class="flex items-center gap-2 mt-2">
                                         <input type="checkbox"
@@ -1635,7 +1629,7 @@
                                 <div class="">
                                     <div class="relative">
                                         <img src="assets/images/magazin/2.webp" alt="Cover"
-                                            class="w-full h-48 object-cover rounded"  loading="lazy"/>
+                                            class="w-full h-full object-cover rounded"  loading="lazy"/>
                                     </div>
                                     <div class="flex items-center gap-2 mt-2">
                                         <input type="checkbox"
@@ -1647,7 +1641,7 @@
                                 <div class="">
                                     <div class="relative">
                                         <img src="assets/images/magazin/1.webp" alt="Cover"
-                                            class="w-full h-48 object-cover rounded"  loading="lazy"/>
+                                            class="w-full h-full object-cover rounded"  loading="lazy"/>
                                     </div>
                                     <div class="flex items-center gap-2 mt-2">
                                         <input type="checkbox"
@@ -1659,7 +1653,7 @@
                                 <div class="">
                                     <div class="relative">
                                         <img src="assets/images/magazin/3.webp" alt="Cover"
-                                            class="w-full h-48 object-cover rounded"  loading="lazy"/>
+                                            class="w-full h-full object-cover rounded"  loading="lazy"/>
                                     </div>
                                     <div class="flex items-center gap-2 mt-2">
                                         <input type="checkbox"

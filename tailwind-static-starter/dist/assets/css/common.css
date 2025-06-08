@@ -104,3 +104,13 @@
 	color: #fff;
 	padding: 8px
 }
+
+.back_top::after {
+    content: "";
+    width: 1.7rem;
+    height: 1.4rem;
+    z-index: 10;
+    display: inline-block;
+    background: url(../img/icons/sprite.svg) no-repeat -23px -70px;
+    transform: rotate(270deg);
+}

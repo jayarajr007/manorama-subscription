@@ -28,3 +28,36 @@ $(window).on('load', function () {
 
     
 });
+
+
+// tab function
+  const tabs = [
+    { btn: 'subscription', content: 'subscriptioncontent' },
+    { btn: 'renewal', content: 'renewalcontent' },
+    { btn: 'singleissue', content: 'singleissuecontent' }
+  ];
+
+  function activateTab(activeId) {
+    tabs.forEach(({ btn, content }) => {
+      const btnEl = document.getElementById(btn);
+      const contentEl = document.getElementById(content);
+      
+      if (btn === activeId) {
+        btnEl.classList.add('text-blue-600', 'border-blue-500');
+        btnEl.classList.remove('text-gray-500', 'border-transparent');
+        contentEl.classList.remove('hidden');
+      } else {
+        btnEl.classList.remove('text-blue-600', 'border-blue-500');
+        btnEl.classList.add('text-gray-500', 'border-transparent');
+        contentEl.classList.add('hidden');
+      }
+    });
+  }
+
+  // Initial activation
+  window.addEventListener('DOMContentLoaded', () => activateTab('subscription'));
+
+  // Button click listeners
+  tabs.forEach(({ btn }) => {
+    document.getElementById(btn).addEventListener('click', () => activateTab(btn));
+  });

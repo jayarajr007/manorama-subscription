@@ -89,6 +89,39 @@
                 ]
             });
 
+            $('.bookcategory-slider').slick({
+                infinite: false,
+                slidesToShow: 9,
+                slidesToScroll: 2,
+                arrows: true,
+                responsive: [
+                    {
+                        breakpoint: 1288,
+                        settings: {
+                            slidesToShow: 9
+                        }
+                    },
+                    {
+                        breakpoint: 1066,
+                        settings: {
+                            slidesToShow: 6
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 5
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 4
+                        }
+                    }
+                ]
+            });
+
         });
 
 
