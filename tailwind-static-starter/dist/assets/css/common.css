@@ -4,6 +4,8 @@
 	--radius4 :4;
 	--dark-blue:#333994;
 	--red-color:#EC1C24;
+	--cream-color:#B66F0B;
+	--cream-light:#FFF3E1;
  
 }
 
@@ -20,7 +22,18 @@
 .bg-darkred{
 	background-color: var(--red-color);
 }
+.bg-creamlight{
+	background-color: var(--cream-light);
+}
+.creamcol{
+	color: var(--cream-color);
+}
 
+
+.preorder{
+	border: 1px solid var(--cream-light);
+	border-radius: var(--radius4);
+}
 .login-btn
 {
 align-items: center;
