@@ -323,9 +323,33 @@
                             <div class="md:mr-4 mr-0 w-8 h-8 i-notification"></div>
                         </a>
 
-                        <a href="#" aria-label="user">
+                        <!-- <a href="#" aria-label="user">
                             <div class="md:mr-0 mr-0 w-8 h-8 i-user hidden md:block"></div>
-                        </a>
+                        </a> -->
+                        
+                        <div class="relative group ">
+                            <button class="text-left hover:text-blue-500 flex items-center text-sm" aria-label="userprofile">
+                                <div class="md:mr-0 mr-0 w-8 h-8 i-user hidden md:block profile"></div>
+                                <span class="droparrow w-5 h-3"></span>
+                            </button>
+                            <ul class="absolute right-2 w-48 bg-white shadow-lg z-50 hidden group-hover:block">
+                                <li class="px-4 py-2  bg-gray-100">
+                                    <div class="flex">
+                                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center font-semibold text-md">J</div>
+                                        <div class="ml-2">
+                                            <p class="text-[12px] font-light mb-1">Login as</p>
+                                            <h6 class="text-md font-medium">Jayaraj</h6>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="mt-2 mb-2">
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-500 font-light">My Account</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-500 font-light">Log Out</a>
+                                </li>
+                            </ul>
+                        </div>
                         <!-- User Icon -->
                     </div>
                 </div>
@@ -1470,11 +1494,11 @@
                 <div class="flex items-center justify-between gap-2 mt-2">
                     <button
                     class="bg-darkblue w-full mt-3 font-medium py-4 px-6 rounded flex text-white justify-center gap-2 text-center" aria-label="Cart"
-                    style="background-color: #333994;">ADD TO CART</button>
+                    >ADD TO CART</button>
 
                     <button
-                    class="bg-darkblue w-full mt-3 font-medium py-4 px-6 rounded flex text-white justify-center gap-2 text-center" aria-label="Cart"
-                    style="background-color: #EC1C24;">PRE ORDER</button>
+                    class="bg-darkred w-full mt-3 font-medium py-4 px-6 rounded flex text-white justify-center gap-2 text-center" aria-label="Cart"
+                    >PRE ORDER</button>
                 </div>
             </div>
 

@@ -1,6 +1,9 @@
 :root {
     --button-bg-color: #0074ED;
 	--dark-blue-bg-color: #072654;
+	--radius4 :4;
+	--dark-blue:#333994;
+	--red-color:#EC1C24;
  
 }
 
@@ -10,6 +13,12 @@
 .primary-button-bg
 {
 	background-color: var(--button-bg-color);
+}
+.bg-darkblue{
+	background-color: var(--dark-blue);
+}
+.bg-darkred{
+	background-color: var(--red-color);
 }
 
 .login-btn

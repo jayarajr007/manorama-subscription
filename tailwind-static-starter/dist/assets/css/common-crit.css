@@ -131,7 +131,12 @@ body {
   background-size: auto;
   background: url(../img/icons/sprite.svg);
 }
-
+.nav-options .profile {
+    width: 32px;
+    height: 32px;
+    background-size: auto;
+    background: url(../img/icons/sprite.svg) no-repeat -62px -183px;
+}
 .i-cart {
 
   background-position: left -14px top -21px !important;
