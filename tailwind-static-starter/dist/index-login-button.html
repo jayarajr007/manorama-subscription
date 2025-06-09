@@ -32,7 +32,7 @@
 
   <!-- Navbar -->
   <!-- Header -->
-  <header class="bg-white  z-40  sticky w-full top-0 shadow-sm subscription-navigation-web">
+  <header class="bg-white  z-40  sticky w-full top-0 shadow-sm">
     <div class="max-w-full lg:max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center py-3 border-b border-b-[#D9D9D9]">
         <div class="header-left-section">
@@ -301,8 +301,6 @@
               </div>
 
             </div>
-
-           
             <!-- Cart Icon -->
             <a href="#" aria-label="cart">
               <div class="mr-4  i-cart"></div>
@@ -313,8 +311,8 @@
               <div class="md:mr-4 mr-0 w-8 h-8 i-notification"></div>
             </a>
 
-            <a href="#" aria-label="user">
-              <div class="md:mr-0 mr-0 w-8 h-8 i-user hidden md:block"></div>
+            <a href="#" aria-label="user" class="primary-button-bg login-btn hidden md:flex">
+             Login
             </a>
             <!-- User Icon -->
           </div>
@@ -377,14 +375,13 @@
                           Week</a></li>
                       <li><a href="#"
                           class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Livingetc</a></li>
-                            <li><a href="listing.html" aria-label="Go to Listing" class="text-sm text-blue-500 mt-2 block font-semibold">View
-                          All</a></li>
                     </ul>
-                    
+                    <h4 class="font-bold text-gray-800 text-sm mt-4 mb-2">Health</h4>
+                    <a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Arogyam</a>
                   </div>
                   <!-- Column 2: Children -->
                   <div class="w-1/6">
-                    <h4 class="font-semibold text-gray-800 text-sm mb-2 mt-4">Children</h4>
+                    <h4 class="font-semibold text-gray-800 text-sm mb-2">Children</h4>
                     <ul>
                       <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Magic
                           Pot</a></li>
@@ -398,7 +395,10 @@
                           Amar Chithra Kadha</a></li>
                       <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Akkad
                           Bakkad</a></li>
-                    
+                      <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Kadhayum
+                          Niravum</a></li>
+                      <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Read
+                          And Colour</a></li>
                       <li><a href="listing.html" aria-label="Go to Listing" class="text-sm text-blue-500 mt-2 block font-semibold">View
                           All</a></li>
                     </ul>
@@ -406,7 +406,7 @@
 
                   <!-- Column 3: English Magazines -->
                   <div class="w-1/6">
-                    <h4 class="font-semibold text-gray-800 text-sm mb-2 mt-4">English
+                    <h4 class="font-semibold text-gray-800 text-sm mb-2">English
                       Magazines</h4>
                     <ul>
                       <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">The
@@ -421,13 +421,13 @@
                           Time India</a></li>
                       <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">National
                           Geographic Kids</a></li>
-                      <li><a href="listing.html" aria-label="Go to Listing" class="text-sm text-blue-500 mt-2 block font-semibold">View
-                          All</a></li>
+                      <li><a href="#"
+                          class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Livingetc</a></li>
                     </ul>
                   </div>
                   <!-- Column 4: Lifestyle -->
                   <div class="w-1/6">
-                    <h4 class="font-semibold text-gray-800 text-sm mb-2 mt-4">Lifestyle</h4>
+                    <h4 class="font-semibold text-gray-800 text-sm mb-2">Lifestyle</h4>
                     <ul>
                       <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Manorama
                           Weekly</a></li>
@@ -443,7 +443,7 @@
                   </div>
                   <!-- Column 5: Women -->
                   <div class="w-1/6">
-                    <h4 class="font-semibold text-gray-800 text-sm mb-2 mt-4">Women</h4>
+                    <h4 class="font-semibold text-gray-800 text-sm mb-2">Women</h4>
                     <ul>
                       <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Vanitha
                           Pachakam</a></li>
@@ -455,7 +455,7 @@
                   </div>
                   <!-- Column 6: Career and General -->
                   <div class="w-1/6">
-                    <h4 class="font-semibold text-gray-800 text-sm mb-2 mt-4">Career
+                    <h4 class="font-semibold text-gray-800 text-sm mb-2">Career
                       and General</h4>
                     <ul>
                       <li><a href="#"
@@ -477,7 +477,7 @@
                   class="absolute left-0 w-full bg-white shadow-lg hidden group-hover:flex flex-wrap px-8 py-6 gap-x-8 top-[38px] z-50 min-w-full max-h-[calc(100vh-200px)] overflow-y-auto">
                   <!-- Column 1 -->
                   <div class="w-1/6">
-                    <h4 class="font-semibold text-gray-800 text-sm mb-2 mt-4">News
+                    <h4 class="font-semibold text-gray-800 text-sm mb-2">News
                       and Information</h4>
                     <ul>
                       <li><a href="#"
@@ -494,14 +494,12 @@
                           Week</a></li>
                       <li><a href="#"
                           class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Livingetc</a></li>
-                            <li><a href="listing.html" aria-label="Go to Listing" class="text-sm text-blue-500 mt-2 block font-semibold">View
-                          All</a></li>
                     </ul>
 
                   </div>
                   <!-- Column 2: Children -->
                   <div class="w-1/6">
-                    <h4 class="font-semibold text-gray-800 text-sm mb-2 mt-4">Children</h4>
+                    <h4 class="font-semibold text-gray-800 text-sm mb-2">Children</h4>
                     <ul>
                       <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Magic
                           Pot</a></li>
@@ -515,16 +513,15 @@
                           Amar Chithra Kadha</a></li>
                       <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Akkad
                           Bakkad</a></li>
-                            <li><a href="listing.html" aria-label="Go to Listing" class="text-sm text-blue-500 mt-2 block font-semibold">View
-                          All</a></li>
 
-                    
+                      <li><a href="listing.html" aria-label="Go to Listing" class="text-sm text-blue-500 mt-2 mb-2 block font-semibold">View
+                          All</a></li>
                     </ul>
                   </div>
 
                   <!-- Column 3: English Magazines -->
                   <div class="w-1/6">
-                    <h4 class="font-semibold text-gray-800 text-sm mb-2 mt-4">English
+                    <h4 class="font-semibold text-gray-800 text-sm mb-2">English
                       Magazines</h4>
                     <ul>
                       <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">The
@@ -539,14 +536,12 @@
                           Time India</a></li>
                       <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">National
                           Geographic Kids</a></li>
-                            <li><a href="listing.html" aria-label="Go to Listing" class="text-sm text-blue-500 mt-2 block font-semibold">View
-                          All</a></li>
 
                     </ul>
                   </div>
                   <!-- Column 4: Lifestyle -->
                   <div class="w-1/6">
-                    <h4 class="font-semibold text-gray-800 text-sm mb-2 mt-4">Lifestyle</h4>
+                    <h4 class="font-semibold text-gray-800 text-sm mb-2">Lifestyle</h4>
                     <ul>
                       <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Manorama
                           Weekly</a></li>
@@ -558,15 +553,11 @@
                           Time India</a></li>
                       <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Veedu</a>
                       </li>
-                          <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Veedu</a>
-                      </li>
-                        <li><a href="listing.html" aria-label="Go to Listing" class="text-sm text-blue-500 mt-2 block font-semibold">View
-                          All</a></li>
                     </ul>
                   </div>
                   <!-- Column 5: Women -->
                   <div class="w-1/6">
-                    <h4 class="font-semibold text-gray-800 text-sm mb-2 mt-4">Women</h4>
+                    <h4 class="font-semibold text-gray-800 text-sm mb-2">Women</h4>
                     <ul>
                       <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Vanitha
                           Pachakam</a></li>
@@ -578,7 +569,7 @@
                   </div>
                   <!-- Column 6: Career and General -->
                   <div class="w-1/6">
-                    <h4 class="font-semibold text-gray-800 text-sm mb-2 mt-4">Career
+                    <h4 class="font-semibold text-gray-800 text-sm mb-2">Career
                       and General</h4>
                     <ul>
                       <li><a href="#"
@@ -587,7 +578,7 @@
                     </ul>
                   </div>
                   <div class="w-1/6">
-                    <h4 class="font-semibold text-gray-800 text-sm mb-2 mt-4">Lifestyle</h4>
+                    <h4 class="font-semibold text-gray-800 text-sm mb-2">Lifestyle</h4>
                     <ul>
                       <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Manorama
                           Weekly</a></li>
@@ -602,7 +593,7 @@
                     </ul>
                   </div>
                   <div class="w-1/6">
-                    <h4 class="font-semibold text-gray-800 text-sm mb-2 mt-4">Lifestyle</h4>
+                    <h4 class="font-semibold text-gray-800 text-sm mb-2">Lifestyle</h4>
                     <ul>
                       <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Manorama
                           Weekly</a></li>
@@ -617,7 +608,7 @@
                     </ul>
                   </div>
                   <div class="w-1/6">
-                    <h4 class="font-semibold text-gray-800 text-sm mb-2 mt-4">Lifestyle</h4>
+                    <h4 class="font-semibold text-gray-800 text-sm mb-2">Lifestyle</h4>
                     <ul>
                       <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Manorama
                           Weekly</a></li>
@@ -632,7 +623,7 @@
                     </ul>
                   </div>
                   <div class="w-1/6">
-                    <h4 class="font-semibold text-gray-800 text-sm mb-2 mt-4">Lifestyle</h4>
+                    <h4 class="font-semibold text-gray-800 text-sm mb-2">Lifestyle</h4>
                     <ul>
                       <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Manorama
                           Weekly</a></li>
@@ -647,7 +638,7 @@
                     </ul>
                   </div>
                   <div class="w-1/6">
-                    <h4 class="font-semibold text-gray-800 text-sm mb-2 mt-4">Lifestyle</h4>
+                    <h4 class="font-semibold text-gray-800 text-sm mb-2">Lifestyle</h4>
                     <ul>
                       <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Manorama
                           Weekly</a></li>
@@ -662,7 +653,7 @@
                     </ul>
                   </div>
                   <div class="w-1/6">
-                    <h4 class="font-semibold text-gray-800 text-sm mb-2 mt-4">Lifestyle</h4>
+                    <h4 class="font-semibold text-gray-800 text-sm mb-2">Lifestyle</h4>
                     <ul>
                       <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Manorama
                           Weekly</a></li>
@@ -677,7 +668,7 @@
                     </ul>
                   </div>
                   <div class="w-1/6">
-                    <h4 class="font-semibold text-gray-800 text-sm mb-2 mt-4 ">Lifestyle</h4>
+                    <h4 class="font-semibold text-gray-800 text-sm mb-2">Lifestyle</h4>
                     <ul>
                       <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Manorama
                           Weekly</a></li>
@@ -692,7 +683,7 @@
                     </ul>
                   </div>
                   <div class="w-1/6">
-                    <h4 class="font-semibold text-gray-800 text-sm mb-2 mt-4">Lifestyle</h4>
+                    <h4 class="font-semibold text-gray-800 text-sm mb-2">Lifestyle</h4>
                     <ul>
                       <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Manorama
                           Weekly</a></li>
@@ -707,7 +698,7 @@
                     </ul>
                   </div>
                   <div class="w-1/6">
-                    <h4 class="font-semibold text-gray-800 text-sm mb-2 mt-4">Lifestyle</h4>
+                    <h4 class="font-semibold text-gray-800 text-sm mb-2">Lifestyle</h4>
                     <ul>
                       <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Manorama
                           Weekly</a></li>
@@ -757,7 +748,7 @@
     </div>
   </header>
   <!-- Bottom Navigation - Mobile Only -->
-  <nav class="fixed bottom-0 left-0 right-0 bg-white border-t z-50 md:hidden shadow-md text-xs text-center subscription-navigation-mobile">
+  <nav class="fixed bottom-0 left-0 right-0 bg-white border-t z-50 md:hidden shadow-md text-xs text-center">
     <div class="flex justify-between px-4 py-2">
 
       <a href="#" class="flex flex-col items-center text-red-600">
@@ -1432,7 +1423,7 @@
         </span>
       </a>
     </div>
-    <div class="slider slick-slider five-coloum premium-subscription-items">
+    <div class="slider slick-slider">
       <!-- Repeat this block for each card -->
       <div class="md:px-2 px-1 pb-2">
         <div class="bg-white p-2 rounded-lg border">
@@ -1554,7 +1545,7 @@
       <h2 class="text-[16px] md:text-[18px] 
          font-semibold">News Paper & Epaper</h2>
     </div>
-    <div class="grid grid-cols-2 md:grid-cols-2 gap-2 sm-gap-4 two-coloum newspaper=epaper-items">
+    <div class="grid grid-cols-2 md:grid-cols-2 gap-2 sm-gap-4">
       <!-- Malayala Manorama Daily -->
       <div class="border rounded-lg p-2 sm:p-4 flex items-center justify-between relative">
         <div class="flex items-center space-x-4 flex-col  sm:flex-row">
@@ -1634,7 +1625,7 @@
       </a>
     </div>
 
-    <div class="slider slick-slider five-coloum books-items">
+    <div class="slider slick-slider">
       <!-- Slide 1 -->
       <div class="md:px-2 px-1 pb-2">
         <div class="bg-white p-2 rounded-lg border">
@@ -1760,7 +1751,7 @@
       </a>
     </div>
 
-    <div class="slider slick-slider five-coloum magazine-items">
+    <div class="slider slick-slider ">
       <!-- Start Card -->
       <div class="md:px-2 px-1 pb-2">
         <div class="bg-white p-2 rounded-lg border">
@@ -1847,7 +1838,7 @@
   <!--  End Magazines -->
   <!--Manorama Max Single Product Layout -->
   <section
-    class="max-w-full lg:max-w-[1550px] mx-auto my-6 border-b-2 border-b-gray-100 pb-5 px-4 sm:px-6 lg:px-8 overflow-hidden one-coloum manorama-max">
+    class="max-w-full lg:max-w-[1550px] mx-auto my-6 border-b-2 border-b-gray-100 pb-5 px-4 sm:px-6 lg:px-8 overflow-hidden">
     <div class="flex justify-between items-center mb-4">
       <h2 class="text-[16px] md:text-[18px] font-semibold">Manorama Max</h2>
     </div>
@@ -1864,7 +1855,7 @@
     <!-- Subscription Box -->
     <div class="mt-4 flex items-center gap-4 border rounded-lg p-4 shadow-sm bg-white">
       <button
-        class="px-5 py-3 text-base font-medium text-white primary-button-bg rounded-lg   ">
+        class="px-5 py-3 text-base font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
         Subscribe Now
       </button>
       <div class="text-gray-800 font-semibold text-lg">
@@ -1888,7 +1879,7 @@
       </a>
     </div>
 
-    <div class="slider slick-slider five-coloum astro-items">
+    <div class="slider slick-slider ">
       <!-- Astro Card 1 -->
       <div class="md:px-2 px-1 pb-2">
         <div class="bg-white p-2 rounded-lg border">
@@ -1985,7 +1976,7 @@
       </a>
     </div>
 
-    <div class="slider slick-slider five-coloum yearbook-items">
+    <div class="slider slick-slider ">
       <!-- Book 1 -->
       <div class="md:px-2 px-1 pb-2">
         <div class="bg-white p-2 rounded-lg border">
@@ -2066,7 +2057,7 @@
 
   <!-- End Year Book  -->
   <!--  Promotion 3 col  -->
-  <div class="max-w-full lg:max-w-[1550px] mx-auto px-4 my-6 border-b-2 border-b-gray-100 pb-5 px-4 sm:px-6 lg:px-8 three-coloum inner-ad-items">
+  <div class="max-w-full lg:max-w-[1550px] mx-auto px-4 my-6 border-b-2 border-b-gray-100 pb-5 px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       <!-- Card 1 -->
       <div class="bg-white shadow-lg rounded-lg overflow-hidden">
@@ -2109,7 +2100,7 @@
 
 
   <!--  Footer  -->
-  <footer class="bg-gray-50 text-gray-800 subscription-main-footer">
+  <footer class="bg-gray-50 text-gray-800">
   
     <div class=" max-w-full lg:max-w-[1550px] mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-4 gap-8">
       <!-- Brand & Contact -->
@@ -2184,13 +2175,13 @@
   </footer>
   <!--  End Footer  -->
 
-  <!-- <button id="backToTopBtn"
+  <button id="backToTopBtn"
     class="fixed bottom-20 right-5 z-50 bg-white shadow-md p-3 rounded-full text-gray-800 hover:bg-gray-100 transition duration-300"
     aria-label="Back to top">
     <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
     </svg>
-  </button> -->
+  </button>
 
 
   <link href="assets/css/common.css" type="text/css" rel="stylesheet" />

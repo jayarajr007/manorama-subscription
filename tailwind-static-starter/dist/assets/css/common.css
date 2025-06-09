@@ -1,6 +1,29 @@
-.dark-bg {
-	background: #072654
+:root {
+    --button-bg-color: #0074ED;
+	--dark-blue-bg-color: #072654;
+ 
 }
+
+.dark-bg {
+	background-color: var(--dark-blue-bg-color);
+}
+.primary-button-bg
+{
+	background-color: var(--button-bg-color);
+}
+
+.login-btn
+{
+align-items: center;
+    justify-content: center;
+
+    padding: 1px 7px;
+    color: #fff;
+    
+    border-radius: 4px;
+    font-size: 14px;
+}
+
 
 .offer-circle-badge {
 	width: 78px;
@@ -114,3 +137,11 @@
     background: url(../img/icons/sprite.svg) no-repeat -23px -70px;
     transform: rotate(270deg);
 }
+
+
+    #backToTopBtn {
+      display: none;
+    }
+    #backToTopBtn.show {
+      display: flex;
+    }
