@@ -65,3 +65,23 @@
     margin-right: 5px;
     background: url(../img/icons/sprite.svg) no-repeat -93px -261px;
 }
+
+
+.price-plan
+{
+  border: 1px solid #d1d5db;
+}
+.price-plan .plan-head
+{
+  background: #dbeafe;
+}
+
+.price-plan-active
+{
+  border: 2px solid #0074ED !important;
+}
+.price-plan-active .plan-head
+{
+  background: #dbeafe;
+  color: #3b82f6;
+}
