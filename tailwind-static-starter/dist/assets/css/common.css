@@ -6,6 +6,7 @@
 	--red-color:#EC1C24;
 	--cream-color:#B66F0B;
 	--cream-light:#FFF3E1;
+	--gray-bg:#F8F8F8
  
 }
 
@@ -28,7 +29,10 @@
 .creamcol{
 	color: var(--cream-color);
 }
-
+.gray-bg
+{
+	background-color: var(--gray-bg);
+}
 
 .preorder{
 	border: 1px solid var(--cream-light);

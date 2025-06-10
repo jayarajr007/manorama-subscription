@@ -48,18 +48,16 @@ function toggleFav(button) {
 
 function showCategory() {
     document.getElementById('categoryMenu').classList.remove('hidden');
-    document.getElementById('mainContent').classList.add('hidden');
+    // document.getElementById('mainContent').classList.add('hidden');
 }
 
-function showMain(page) {
-    document.getElementById('categoryMenu').classList.add('hidden');
-    document.getElementById('mainContent').classList.remove('hidden');
+// function showMain(page) {
+//     // document.getElementById('categoryMenu').classList.add('hidden');
+//     // document.getElementById('mainContent').classList.remove('hidden');
 
-    // Optional: Change main content title if needed
-    document.getElementById('mainContent').innerHTML = `<h1 class="text-2xl font-bold text-gray-700">${page.charAt(0).toUpperCase() + page.slice(1)} Content</h1>`;
-}
-
-
+//     // Optional: Change main content title if needed
+//     // document.getElementById('mainContent').innerHTML = `<h1 class="text-2xl font-bold text-gray-700">${page.charAt(0).toUpperCase() + page.slice(1)} Content</h1>`;
+// }
 
 function showTab(tabId, element) {
     // Hide all tab contents
@@ -96,29 +94,6 @@ document.getElementById('category-close').addEventListener('click', function () 
 
 
 
-//back to top
-
-    const backToTopBtn = document.getElementById("backToTopBtn");
-    let lastScrollTop = 0;
-
-    window.addEventListener("scroll", () => {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-      if (scrollTop < lastScrollTop && scrollTop > 100) {
-        // Scrolling up
-        backToTopBtn.classList.add("show");
-      } else {
-        // Scrolling down or at the top
-        backToTopBtn.classList.remove("show");
-      }
-
-      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For mobile or negative scrolling
-    });
-
-    backToTopBtn.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-//back to top end
 
 
 
