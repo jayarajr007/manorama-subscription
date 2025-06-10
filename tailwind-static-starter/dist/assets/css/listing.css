@@ -32,12 +32,15 @@
     background: url(../img/icons/sprite.svg) no-repeat -55px -71px;
 }
 
-.round-filter.active>img {
-  border: 2px solid #007bff;
-  /* blue border */
+
+.imgbx {
+    border: 2px solid transparent;
+    border-radius: 100%;
 }
-
-
+.active .imgbx {
+    border: 2px solid var(--button-bg-color);
+    border-radius: 100%;
+}
 
 /* Hide all slides except the first before Slick initializes */
 .category-slider:not(.slick-initialized)>div:not(:first-child) {
@@ -70,4 +73,27 @@
   background: url(../img/icons/sprite.svg) no-repeat -107px -179px;
 }
 
-
+.inputlight{
+  background-color: var(--lightblue);
+  width: 70%;
+  border-radius: var(--radius4);
+}
+.searchbtn{
+  background-color: var(--lightblue1);
+  border: 1px solid var(--button-bg-color);
+  border-radius: var(--radius4);
+  color: var(--button-bg-color);
+}
+.searchicon input {
+    padding-left: 35px;
+}
+.searchicon:before{
+  content: "";
+    position: absolute;
+    top: 9px;
+    left: 7px;
+    width: 1.2rem;
+    height: 1.2rem;
+    z-index: 10;
+      background: url(../img/icons/sprite.svg) no-repeat -113px -22px !important;
+}

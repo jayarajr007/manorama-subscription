@@ -467,6 +467,9 @@
                                     <button
                                         class="tab-btn-filter w-full text-left px-2 py-2 hover:bg-gray-100 text-sm border-l-2 font-semibold border-blue-600 bg-white text-black"
                                         data-tab="categories">Categories</button>
+                                        <button
+                                        class="tab-btn-filter w-full text-left px-2 py-2 hover:bg-gray-100 text-sm"
+                                        data-tab="author">Author</button>
                                     <button
                                         class="tab-btn-filter w-full text-left px-2 py-2 hover:bg-gray-100 text-sm"
                                         data-tab="Language">Language</button>
@@ -500,6 +503,43 @@
                                         <label class="block py-2"><input
                                                 type="checkbox"
                                                 class="mr-2">Travel</label>
+                                    </div>
+
+                                    <div id="author"
+                                        class="tab-content text-sm"> 
+                                        <label class="flex items-start mb-2">
+                                            <input type="checkbox" class="mr-2 mt-1">
+                                            <span>Thakazhi Sivasankara Pillai</span>
+                                        </label>
+                                        <label class="flex items-start py-2">
+                                            <input type="checkbox" class="mr-2 mt-1"/>
+                                            <span>Vaikom Muhammad Basheer</span>
+                                        </label>
+                                        <label class="flex items-start py-2">
+                                            <input type="checkbox" class="mr-2 mt-1">
+                                            <span>O. V. Vijayan</span>
+                                        </label>
+                                        <label class="flex items-start mb-2">
+                                            <input type="checkbox" class="mr-2 mt-1"/>
+                                            <span>M. T. Vasudevan Nair</span>
+                                        </label>
+                                        <label class="flex items-start py-2">
+                                            <input type="checkbox" class="mr-2 mt-1"/>
+                                            <span>Kamala Surayya</span>
+                                        </label>
+                                        <label class="flex items-start py-2">
+                                            <input type="checkbox" class="mr-2 mt-1">
+                                            <span>K. R. Meera</span>
+                                        </label>
+
+                                        <div class="authorsearch flex gap-2 mt-2">
+                                       
+                                            <div class="searchicon inputlight relative">
+                                                <input type="search" placeholder="Search by Author Name" class="w-full py-2 bg-transparent outline-none text-[14px]"/>
+                                            </div>
+                                            <button class="searchbtn p-2  text-[12px]">Search</button>
+                                        </div>
+                                        
                                     </div>
                                     <div id="Language"
                                         class="tab-content hidden text-sm">
@@ -1866,15 +1906,14 @@
                                         <input type="checkbox" id="news"
                                             class="mr-2 h-4 w-4 text-blue-600 rounded border-gray-300" />
                                         <label for="news"
-                                            class="text-gray-700">News And
-                                            Information</label>
+                                            class="text-gray-700">Thakazhi Sivasankara Pillai</label>
                                     </div>
                                     <div class="flex items-center">
                                         <input type="checkbox" id="children"
                                             checked
                                             class="mr-2 h-4 w-4 text-blue-600 rounded border-gray-300" />
                                         <label for="children"
-                                            class="text-gray-700">Children</label>
+                                            class="text-gray-700">Vaikom Muhammad Basheer</label>
                                     </div>
                                     <div class="flex items-center">
                                         <input type="checkbox"
@@ -1882,19 +1921,27 @@
                                             class="mr-2 h-4 w-4 text-blue-600 rounded border-gray-300" />
                                         <label
                                             for="entertainment"
-                                            class="text-gray-700">Entertainment</label>
+                                            class="text-gray-700">O. V. Vijayan</label>
                                     </div>
                                     <div class="flex items-center">
                                         <input type="checkbox" id="career"
                                             class="mr-2 h-4 w-4 text-blue-600 rounded border-gray-300" />
                                         <label for="career"
-                                            class="text-gray-700">Career</label>
+                                            class="text-gray-700">M. T. Vasudevan Nair</label>
                                     </div>
                                     <div class="flex items-center">
                                         <input type="checkbox" id="general"
                                             class="mr-2 h-4 w-4 text-blue-600 rounded border-gray-300" />
                                         <label for="general"
-                                            class="text-gray-700">General</label>
+                                            class="text-gray-700">Kamala Surayya</label>
+                                    </div>
+
+                                    <div class="authorsearch flex gap-2 mt-2">
+                                       
+                                        <div class="searchicon inputlight relative">
+                                            <input type="search" placeholder="Search by Author Name" class="w-full py-2 bg-transparent outline-none text-[14px]"/>
+                                        </div>
+                                        <button class="searchbtn p-2  text-[12px]">Search</button>
                                     </div>
                                 </div>
                             </div>

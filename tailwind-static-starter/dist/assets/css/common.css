@@ -1,13 +1,14 @@
 :root {
     --button-bg-color: #0074ED;
 	--dark-blue-bg-color: #072654;
-	--radius4 :4;
+	--radius4 :4px;
 	--dark-blue:#333994;
 	--red-color:#EC1C24;
 	--cream-color:#B66F0B;
 	--cream-light:#FFF3E1;
-	--gray-bg:#F8F8F8
- 
+	--gray-bg:#F8F8F8;
+	--lightblue:#F6F6F6;
+	--lightblue1:#F1F8FF;
 }
 
 .dark-bg {
