@@ -85,3 +85,38 @@
   background: #dbeafe;
   color: #3b82f6;
 }
+
+
+.gift-box
+{
+
+    border: 1px solid #d1d5db;
+}
+
+
+.gift-box .gift-head
+{
+
+   background: #f3f4f6;
+  
+}
+
+.gift-box .gift-head h5
+{
+
+   color: #292929;
+  
+}
+
+
+
+.gift-box-active
+{
+    border: 2px solid #0074ED !important;
+}
+
+.gift-box-active .gift-head
+{
+  background: #dbeafe;
+  color: #3b82f6 !important;
+}
