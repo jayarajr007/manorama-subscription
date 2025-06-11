@@ -120,3 +120,16 @@
   background: #dbeafe;
   color: #3b82f6 !important;
 }
+
+
+.large-thumb-slider .slick-dots li
+{
+  background: #ccc;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.large-thumb-slider .slick-dots li.slick-active
+{
+  background:#0074ED;
+}

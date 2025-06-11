@@ -18,6 +18,17 @@
 
         <link href="assets/css/common-crit.css" rel="stylesheet" />
 
+            <!-- Critical for only this page-->
+<style>
+/* Hide all slides except the first before Slick initializes */
+.large-thumb-slider:not(.slick-initialized)>div:not(:first-child) {
+  display: none;
+}
+.large-thumb-slider:not(.slick-initialized) div.bg-white {
+  max-width: 260px;
+}
+</style>
+
     </head>
 
     <body class>
@@ -1631,7 +1642,7 @@
             </div>
 
             <!-- Layout -->
-            <div class="flex flex-col md:flex-row lg:flex-row gap-4 md:gap-6 mt-4">
+            <div class="flex flex-col md:flex-row lg:flex-row gap-1 md:gap-6 mt-4">
 
                 <!-- Left Column (Magazine Cover) -->
 
@@ -1656,11 +1667,34 @@
                 <div class="w-full sm:w-full md:[width:30%] lg:[width:30%]">
 
                     
-                    <div class="border rounded-lg p-3 ">
-                        <img src="assets/images/books/a2.webp"
+                    <div class="border border-white md:border-gray-200 rounded-lg p-3 border-b">
+
+
+<div class="large-thumb-slider">
+
+    <div class="thumb-item">  
+  <img src="assets/images/books/a2.webp"
                             alt="The Week Magazine Cover" width="266"
                             height="350"
-                            class="rounded-md w-full max-w-[300px] mx-auto" />
+                            class="rounded-md w-full max-w-[200px] md:max-w-[300px] mx-auto" />
+                            </div>
+                               <div class="thumb-item">  
+  <img src="assets/images/books/a2.webp"
+                            alt="The Week Magazine Cover" width="266"
+                            height="350"
+                            class="rounded-md w-full max-w-[200px] md:max-w-[300px] mx-auto" />
+                            </div>
+  <div class="thumb-item">  
+  <img src="assets/images/books/a2.webp"
+                            alt="The Week Magazine Cover" width="266"
+                            height="350"
+                            class="rounded-md w-full max-w-[200px] md:max-w-[300px] mx-auto" />
+                            </div>
+
+</div>
+
+
+
                         <p
                             class="text-xs text-gray-500 mt-3 flex items-center"><span
                                 class="growth relative"></span> 68
@@ -1681,16 +1715,16 @@
 
                 <!-- Right Column (Subscription Info) -->
                 <div class="w-full sm:w-full md:[width:70%] lg:[width:70%]">
-                    <div class="border-b justify-between items-center hidden md:flex">
+                    <div class=" justify-between items-center hidden md:flex">
                         <div>
                             <h2 class="text-xl font-semibold mb-1 ">Muthassiye
                                 Njan Vaayikkan Padippichathum Mattu
                                 Kathakalum</h2>
                             <div class="flex gap-4 items-center ">
-                                <p class="text-sm text-gray-500 mb-4">Sudha
+                                <p class="text-sm text-gray-500 ">Sudha
                                     Murty</p>
                                 <p
-                                    class="text-sm text-gray-500 mb-4">Malayalam</p>
+                                    class="text-sm text-gray-500 ">Malayalam</p>
                             </div>
                         </div>
                         <div class="flex justify-end w-20">
@@ -1701,7 +1735,7 @@
                     </div>
 
                     <!-- available format -->
-                    <div class="available_format mt-4 border-b pb-5">
+                    <div class="available_format mt-4 border-t pb-5 pt-5 border-b">
                         <h3 class="font-semibold text-gray-800 mb-4">Available
                             Format</h3>
                         <!-- <p class="mb-4 text-sm">Get an Extra <span style="color: #00b259;" class="font-semibold">70% DISCOUNT</span> on the <span class="font-semibold" style="color: #00b259;">Digital Edition</span> purchase</p> -->
@@ -1736,14 +1770,14 @@
                                     
                         </div> -->
 
-                            <div class="flex flex-wrap gap-4">
+                            <div class="flex flex-wrap gap-2 md:gap-4">
                                 <!-- Plan 1 - Digital -->
 
                                 <div
-                                    class="w-[calc(50%-8px)] sm:min-w-[210px] sm:w-auto border-2 rounded-md  price-plan price-plan-active">
+                                    class="w-[calc(50%-4px)] sm:min-w-[210px] sm:w-auto border-2 rounded-md  price-plan price-plan-active">
                                     <div
                                         class="p-2 text-sm font-semibold rounded-md  text-gray-700 plan-head">Digital</div>
-                                    <div class="p-3  bg-white rounded-md">
+                                    <div class="p-2  bg-white rounded-md">
                                         <div
                                             class="flex items-center gap-3 flex-wrap">
                                             <div class="flex gap-2">
@@ -1763,10 +1797,10 @@
                                 </div>
 
                                 <div
-                                    class="w-[calc(50%-8px)] sm:min-w-[210px] sm:w-auto border-2 rounded-md  price-plan">
+                                    class="w-[calc(50%-4px)] sm:min-w-[210px] sm:w-auto border-2 rounded-md  price-plan">
                                     <div
                                         class="p-2 text-sm font-semibold rounded-md  text-gray-700 plan-head">Print</div>
-                                    <div class="p-3  bg-white rounded-md">
+                                    <div class="p-2  bg-white rounded-md">
                                         <div
                                             class="flex items-center gap-3 flex-wrap">
                                             <div class="flex gap-2">
@@ -1788,12 +1822,14 @@
                             </div>
 
                                 <!-- Quantity Selector -->
-                <div class="pt-5">
+                <div class="pt-5 flex  justify-center md:justify-start quantity">
+                    <div> 
                     <p class="w-32 text-center font-medium mb-2">Qty</p>
                     <div class="w-32 flex justify-between rounded-md border overflow-hidden">
                         <button class="px-3 py-1 bg-gray-100 text-lg" aria-label="Minus">−</button>
                         <input type="text" value="1" class="w-12 flex justify-center text-center py-1"  aria-label="quantity"/>
                         <button class="px-3 py-1 bg-gray-100 text-lg" aria-label="Plus">+</button>
+                    </div>
                     </div>
                 </div>
 
@@ -1809,11 +1845,11 @@
                         <p class="text-sm text-gray-600 mb-6">Select up to 2
                             Guaranteed Gifts from the options below.</p>
                         <div class="w-full md:w-full lg:w-5/5 block">
-                             <div class="flex flex-wrap gap-4 mt-4">
+                             <div class="flex flex-wrap gap-2 md:gap-4  mt-4">
                         <!-- Plan 1 - Digital -->
 
                         <div
-                            class="w-[calc(50%-8px)] sm:min-w-[210px] sm:w-auto border-2 rounded-md  gift-box">
+                            class="w-[calc(50%-4px)] sm:min-w-[210px] sm:w-auto border-2 rounded-md  gift-box">
 
                             <div
                                 class="text-sm font-semibold  flex justify-between p-3 rounded-md  mb-2 gift-head">
@@ -1834,7 +1870,7 @@
                         </div>
 
                         <div
-                            class="w-[calc(50%-8px)] sm:min-w-[210px] sm:w-auto border-2 rounded-md  gift-box gift-box-active">
+                            class="w-[calc(50%-4px)] sm:min-w-[210px] sm:w-auto border-2 rounded-md  gift-box gift-box-active">
 
                             <div
                                 class="text-sm font-semibold  flex justify-between p-3 rounded-md gift-head mb-2">
@@ -2311,10 +2347,7 @@
 
         <!--  Footer  -->
         <footer class="bg-gray-50 text-gray-800">
-            <div
-                class="text-center py-4 bg-indigo-50 flex items-center justify-center fixed right-4 bottom-4 w-10 h-10 rounded-full text-sm font-medium"><span
-                    class="back_top"></span>
-            </div>
+          
             <div
                 class=" max-w-full lg:max-w-[1550px] mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-4 gap-8">
                 <!-- Brand & Contact -->
