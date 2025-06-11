@@ -27,6 +27,24 @@
 .large-thumb-slider:not(.slick-initialized) div.bg-white {
   max-width: 260px;
 }
+
+.thumb-wrapper
+{
+   padding-top: 131.57894736842104% 
+}
+.thumb-wrapper img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    background-clip: padding-box;
+}
+
 </style>
 
     </head>
@@ -49,7 +67,8 @@
                                 class="logo"
                                 width="275" height="40" loading="lazy" />
                         </a>
-                        <a href="#" class="flex items-center hidden">
+                        <a href="javascript:void(0)"
+                            class="flex items-center hidden">
                             <div class="flex items-center space-x-3 px-0 pt-0">
                                 <!-- Profile Icon -->
                                 <div
@@ -87,7 +106,7 @@
                             id="search-container">
                             <div class="flex">
                                 <a class="cursor-pointer" aria-label="search"
-                                    href="#">
+                                    href="javascript:void(0)">
                                     <div
                                         class="i-search-placeholder w-5 h-5 mr-2"></div>
                                 </a>
@@ -1671,6 +1690,38 @@
                     <div
                         class="border border-white md:border-gray-200 rounded-lg p-3 border-b">
                         <div class="large-thumb-slider">
+
+                            <div class="max-w-[200px] md:max-w-[300px] w-full mx-auto">
+                                <div class="thumb-item thumb-wrapper relative overflow-hidden ">
+                                    <img src="assets/images/books/a2.webp"
+                                        alt="Book cover: Muthassiye Njan Vaayikkan Padippichathum Mattu Kathakalum by Sudha Murty"
+                                        width="266"
+                                        height="350"
+                                        class="rounded-md w-full "
+                                        loading="lazy" />
+                                </div>
+                            </div>
+                               <div class="max-w-[200px] md:max-w-[300px] mx-auto w-full">
+                                <div class="thumb-item thumb-wrapper relative overflow-hidden">
+                                    <img src="assets/images/books/a2.webp"
+                                        alt="Book cover: Muthassiye Njan Vaayikkan Padippichathum Mattu Kathakalum by Sudha Murty"
+                                        width="266"
+                                        height="350"
+                                        class="rounded-md w-full "
+                                        loading="lazy" />
+                                </div>
+                            </div>
+                               <div class="max-w-[200px] md:max-w-[300px] mx-auto w-full">
+                                <div class="thumb-item thumb-wrapper relative overflow-hidden">
+                                    <img src="assets/images/books/a2.webp"
+                                        alt="Book cover: Muthassiye Njan Vaayikkan Padippichathum Mattu Kathakalum by Sudha Murty"
+                                        width="266"
+                                        height="350"
+                                        class="rounded-md w-full "
+                                        loading="lazy" />
+                                </div>
+                            </div>
+<!-- 
                             <div class="thumb-item">
                                 <img src="assets/images/books/a2.webp"
                                     alt="Book cover: Muthassiye Njan Vaayikkan Padippichathum Mattu Kathakalum by Sudha Murty"
@@ -1686,15 +1737,7 @@
                                     height="350"
                                     class="rounded-md w-full max-w-[200px] md:max-w-[300px] mx-auto"
                                     loading="lazy" />
-                            </div>
-                            <div class="thumb-item">
-                                <img src="assets/images/books/a2.webp"
-                                    alt="Book cover: Muthassiye Njan Vaayikkan Padippichathum Mattu Kathakalum by Sudha Murty"
-                                    width="266"
-                                    height="350"
-                                    class="rounded-md w-full max-w-[200px] md:max-w-[300px] mx-auto"
-                                    loading="lazy" />
-                            </div>
+                            </div> -->
                         </div>
 
                         <p class="text-xs text-gray-500 mt-3 flex items-center">
@@ -1823,142 +1866,194 @@
                         </div>
                     </div>
 
-              <!-- Guaranteed Gifts -->
-<div class="border-b py-6">
-  <h3 class="font-semibold text-gray-800 mb-1">Select Guaranteed Gifts</h3>
-  <p class="text-sm text-gray-600 mb-6">Select up to 2 Guaranteed Gifts from the options below.</p>
-  
-  <div class="w-full block">
-    <div class="flex flex-wrap gap-2 md:gap-4 mt-4">
-      <!-- Magazine Gift -->
-      <div class="w-[calc(50%-4px)] sm:min-w-[210px] sm:w-auto border-2 rounded-md gift-box">
-        <div class="text-sm font-semibold flex justify-between p-3 rounded-md mb-2 gift-head">
-          <h5 class="text-left text-blue-500">Magazine</h5>
-          <input type="checkbox" 
-                 class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                 aria-label="Select Magazine gift: Tell Me Why 1 Year" />
-        </div>
-        <p class="text-sm font-medium text-left mb-4 p-2">Tell Me Why 1 Year</p>
-        <img src="assets/images/magazin/image.svg"
-             alt="Magazine cover: Tell Me Why"
-             width="50"
-             height="70"
-             class="mx-auto h-18 object-contain mb-2"
-             loading="lazy"/>
-      </div>
+                    <!-- Guaranteed Gifts -->
+                    <div class="border-b py-6">
+                        <h3 class="font-semibold text-gray-800 mb-1">Select
+                            Guaranteed Gifts</h3>
+                        <p class="text-sm text-gray-600 mb-6">Select up to 2
+                            Guaranteed Gifts from the options below.</p>
 
-      <!-- Amazon Gift -->
-      <div class="w-[calc(50%-4px)] sm:min-w-[210px] sm:w-auto border-2 rounded-md gift-box gift-box-active">
-        <div class="text-sm font-semibold flex justify-between p-3 rounded-md gift-head mb-2">
-          <h5 class="text-left text-blue-500">Amazon Gift</h5>
-          <input type="checkbox" 
-                 checked
-                 class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                 aria-label="Select Amazon gift card" />
-        </div>
-        <p class="text-sm font-medium text-left mb-4 p-2">Amazon Gift</p>
-        <img src="assets/images/magazin/amazon.svg"
-             alt="Amazon gift card"
-             width="50"
-             height="70"
-             class="mx-auto h-18 object-contain mb-2"
-             loading="lazy"/>
-      </div>
+                        <div class="w-full block">
+                            <div class="flex flex-wrap gap-2 md:gap-4 mt-4">
+                                <!-- Magazine Gift -->
+                                <div
+                                    class="w-[calc(50%-4px)] sm:min-w-[210px] sm:w-auto border-2 rounded-md gift-box">
+                                    <div
+                                        class="text-sm font-semibold flex justify-between p-3 rounded-md mb-2 gift-head">
+                                        <h5
+                                            class="text-left text-blue-500">Magazine</h5>
+                                        <input type="checkbox"
+                                            class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                            aria-label="Select Magazine gift: Tell Me Why 1 Year" />
+                                    </div>
+                                    <p
+                                        class="text-sm font-medium text-left mb-4 p-2">Tell
+                                        Me Why 1 Year</p>
+                                    <img src="assets/images/magazin/image.svg"
+                                        alt="Magazine cover: Tell Me Why"
+                                        width="50"
+                                        height="70"
+                                        class="mx-auto h-18 object-contain mb-2"
+                                        loading="lazy" />
+                                </div>
 
-      <!-- Travel Bag -->
-      <div class="w-[calc(50%-8px)] sm:min-w-[210px] sm:w-auto border-2 rounded-md gift-box">
-        <div class="text-sm font-semibold flex justify-between p-3 rounded-md mb-2 gift-head">
-          <h5 class="text-left text-blue-500">Travel Bag</h5>
-          <input type="checkbox"
-                 class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                 aria-label="Select Travel Bag gift" />
-        </div>
-        <p class="text-sm font-medium text-left mb-4 p-2">Travel Bag</p>
-        <img src="assets/images/magazin/bag.svg"
-             alt="Travel bag product image"
-             width="50"
-             height="70"
-             class="mx-auto h-18 object-contain mb-2"
-             loading="lazy"/>
-      </div>
-    </div>
-  </div>
-</div>
+                                <!-- Amazon Gift -->
+                                <div
+                                    class="w-[calc(50%-4px)] sm:min-w-[210px] sm:w-auto border-2 rounded-md gift-box gift-box-active">
+                                    <div
+                                        class="text-sm font-semibold flex justify-between p-3 rounded-md gift-head mb-2">
+                                        <h5
+                                            class="text-left text-blue-500">Amazon
+                                            Gift</h5>
+                                        <input type="checkbox"
+                                            checked
+                                            class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                            aria-label="Select Amazon gift card" />
+                                    </div>
+                                    <p
+                                        class="text-sm font-medium text-left mb-4 p-2">Amazon
+                                        Gift</p>
 
-<!-- About Section -->
-<div class="border-b py-6">
-  <h3 class="font-semibold text-gray-800 mb-4">About the Book</h3>
-  <p class="text-sm text-gray-700">
-    Vivamus porta velit eu elit malesuada, id maximus mauris facilisis.
-    Phasellus facilisis diam in sapien elementum, at faucibus elit condimentum.
-    Praesent accumsan accumsan massa aliquam ultricies. Donec feugiat ligula neque,
-    ut dictum nisi sollicitudin quis. Quisque condimentum diam ut massa venenatis lobortis.
-  </p>
-</div>
+                                    <img src="assets/images/magazin/amazon.svg"
+                                        alt="Amazon gift card"
+                                        width="50"
+                                        height="70"
+                                        class="mx-auto h-18 object-contain mb-2"
+                                        loading="lazy" />
 
-<!-- Product Details -->
-<div class="py-6">
-  <h3 class="font-semibold text-gray-800 mb-6">Product Details</h3>
-  <ul class="product-details-list">
-    <li class="mb-4 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-y-2">
-      <span class="font-light text-gray-500 text-sm">ASIN</span>
-      <span class="font-medium text-sm">Malayala Manorama</span>
-    </li>
-    <li class="mb-4 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-y-2">
-      <span class="font-light text-gray-500 text-sm">Language</span>
-      <span class="font-medium text-sm">Malayalam</span>
-    </li>
-    <li class="mb-4 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-y-2">
-      <span class="font-light text-gray-500 text-sm">Reading age</span>
-      <span class="font-medium text-sm">15 years and up</span>
-    </li>
-    <li class="mb-4 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-y-2">
-      <span class="font-light text-gray-500 text-sm">Pages</span>
-      <span class="font-medium text-sm">1124 Pages</span>
-    </li>
-    <li class="mb-4 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-y-2">
-      <span class="font-light text-gray-500 text-sm">Genre</span>
-      <span class="font-medium text-sm">Books</span>
-    </li>
-    <li class="mb-4 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-y-2">
-      <span class="font-light text-gray-500 text-sm">Sub-Genre</span>
-      <span class="font-medium text-sm">Malayalam</span>
-    </li>
-    <li class="mb-4 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-y-2">
-      <span class="font-light text-gray-500 text-sm">Formats</span>
-      <span class="font-medium text-sm">Print, Digital</span>
-    </li>
-    <li class="mb-4 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-y-2">
-      <span class="font-light text-gray-500 text-sm">Origin</span>
-      <span class="font-medium text-sm">India</span>
-    </li>
-  </ul>
-</div>
+                                </div>
 
-<!-- About Author -->
-<div class="py-6">
-  <h3 class="font-semibold text-gray-800 mb-4">About The Author</h3>
-  <div class="flex mb-3 items-center">
-    <div class="mr-4">
-      <img src="assets/images/author/author.webp"
-           alt="Author portrait: Oswaal Editorial Board"
-           width="170"
-           height="225"
-           class="rounded-full w-12 h-12"
-           loading="lazy">
-    </div>
-    <p class="font-semibold text-md text-gray-900">Oswaal Editorial Board</p>
-  </div>
-  <p class="text-sm text-gray-700">
-    This latest offering Oswaal Books is developed by "Oswaal Panel of Experts".
-    Oswaal Books strongly believes in Making Learning Simple. To ensure student friendly
-    yet highly exam-oriented content, we take due care in developing our Panel of Experts.
-  </p>
-</div>
+                                <!-- Travel Bag -->
+                                <div
+                                    class="w-[calc(50%-8px)] sm:min-w-[210px] sm:w-auto border-2 rounded-md gift-box">
+                                    <div
+                                        class="text-sm font-semibold flex justify-between p-3 rounded-md mb-2 gift-head">
+                                        <h5
+                                            class="text-left text-blue-500">Travel
+                                            Bag</h5>
+                                        <input type="checkbox"
+                                            class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                            aria-label="Select Travel Bag gift" />
+                                    </div>
+                                    <p
+                                        class="text-sm font-medium text-left mb-4 p-2">Travel
+                                        Bag</p>
+                                    <img src="assets/images/magazin/bag.svg"
+                                        alt="Travel bag product image"
+                                        width="50"
+                                        height="70"
+                                        class="mx-auto h-18 object-contain mb-2"
+                                        loading="lazy" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
+                    <!-- About Section -->
+                    <div class="border-b py-6">
+                        <h3 class="font-semibold text-gray-800 mb-4">About the
+                            Book</h3>
+                        <p class="text-sm text-gray-700">
+                            Vivamus porta velit eu elit malesuada, id maximus
+                            mauris facilisis.
+                            Phasellus facilisis diam in sapien elementum, at
+                            faucibus elit condimentum.
+                            Praesent accumsan accumsan massa aliquam ultricies.
+                            Donec feugiat ligula neque,
+                            ut dictum nisi sollicitudin quis. Quisque
+                            condimentum diam ut massa venenatis lobortis.
+                        </p>
+                    </div>
 
+                    <!-- Product Details -->
+                    <div class="py-6">
+                        <h3 class="font-semibold text-gray-800 mb-6">Product
+                            Details</h3>
+                        <ul class="product-details-list">
+                            <li
+                                class="mb-4 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-y-2">
+                                <span
+                                    class="font-light text-gray-500 text-sm">ASIN</span>
+                                <span class="font-medium text-sm">Malayala
+                                    Manorama</span>
+                            </li>
+                            <li
+                                class="mb-4 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-y-2">
+                                <span
+                                    class="font-light text-gray-500 text-sm">Language</span>
+                                <span
+                                    class="font-medium text-sm">Malayalam</span>
+                            </li>
+                            <li
+                                class="mb-4 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-y-2">
+                                <span
+                                    class="font-light text-gray-500 text-sm">Reading
+                                    age</span>
+                                <span class="font-medium text-sm">15 years and
+                                    up</span>
+                            </li>
+                            <li
+                                class="mb-4 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-y-2">
+                                <span
+                                    class="font-light text-gray-500 text-sm">Pages</span>
+                                <span class="font-medium text-sm">1124
+                                    Pages</span>
+                            </li>
+                            <li
+                                class="mb-4 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-y-2">
+                                <span
+                                    class="font-light text-gray-500 text-sm">Genre</span>
+                                <span class="font-medium text-sm">Books</span>
+                            </li>
+                            <li
+                                class="mb-4 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-y-2">
+                                <span
+                                    class="font-light text-gray-500 text-sm">Sub-Genre</span>
+                                <span
+                                    class="font-medium text-sm">Malayalam</span>
+                            </li>
+                            <li
+                                class="mb-4 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-y-2">
+                                <span
+                                    class="font-light text-gray-500 text-sm">Formats</span>
+                                <span class="font-medium text-sm">Print,
+                                    Digital</span>
+                            </li>
+                            <li
+                                class="mb-4 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-y-2">
+                                <span
+                                    class="font-light text-gray-500 text-sm">Origin</span>
+                                <span class="font-medium text-sm">India</span>
+                            </li>
+                        </ul>
+                    </div>
 
-
+                    <!-- About Author -->
+                    <div class="py-6">
+                        <h3 class="font-semibold text-gray-800 mb-4">About The
+                            Author</h3>
+                        <div class="flex mb-3 items-center">
+                            <div class="mr-4">
+                                <img src="assets/images/author/author.webp"
+                                    alt="Author portrait: Oswaal Editorial Board"
+                                    width="170"
+                                    height="225"
+                                    class="rounded-full w-12 h-12"
+                                    loading="lazy">
+                            </div>
+                            <p
+                                class="font-semibold text-md text-gray-900">Oswaal
+                                Editorial Board</p>
+                        </div>
+                        <p class="text-sm text-gray-700">
+                            This latest offering Oswaal Books is developed by
+                            "Oswaal Panel of Experts".
+                            Oswaal Books strongly believes in Making Learning
+                            Simple. To ensure student friendly
+                            yet highly exam-oriented content, we take due care
+                            in developing our Panel of Experts.
+                        </p>
+                    </div>
 
                 </div>
 
