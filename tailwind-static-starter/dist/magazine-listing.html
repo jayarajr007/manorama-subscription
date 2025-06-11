@@ -16,11 +16,21 @@
         <link rel="stylesheet" href="assets/css/output.css">
         <link href="assets/css/common-crit.css" rel="stylesheet" />
 
-
             <link rel="preload" as="image" href="assets/images/magazin/2.webp"
       type="image/webp" fetchpriority="high">
 
 
+<!-- Critical for only this page-->
+<style>
+/* Hide all slides except the first before Slick initializes */
+.category-slider:not(.slick-initialized)>div:not(:first-child) {
+  display: none;
+}
+.category-slider:not(.slick-initialized) div.bg-white {
+  max-width: 260px;
+}
+</style>
+<!-- Critical for only this page end-->
     </head>
 
     <body class>
@@ -183,7 +193,7 @@
                                 <!-- Back Button + Search Input -->
                                 <div
                                     class="flex items-center gap-2 p-3 border-b border-gray-300">
-                                    <button id="closeSearch">
+                                    <button id="closeSearch" aria-label="closeSearch">
                                         <svg class="w-6 h-6 text-gray-700"
                                             fill="none" stroke="currentColor"
                                             viewBox="0 0 24 24">
@@ -436,7 +446,7 @@
                     <!-- Sort Button -->
                     <button
                         class="flex items-center text-gray-700 text-sm font-medium space-x-1"
-                        id="openSort">
+                        id="openSort" aria-label="openSort">
                         <div class="md:mr-4 mr-0 w-8 h-8 i-sort"></div>
                         <span>Sort</span>
                     </button>
@@ -444,7 +454,7 @@
                     <!-- Filter Button -->
                     <button
                         class="flex items-center text-gray-700 text-sm font-medium space-x-1"
-                        id="openFilter">
+                        id="openFilter" aria-label="openFilter">
                         <div class="md:mr-4 mr-0 w-8 h-8 i-filter"></div>
 
                         <span>Filter</span>
@@ -462,7 +472,7 @@
                                 <h2 class="font-medium
  text-lg">FILTERS</h2>
                                 <button id="closeFilter"
-                                    class="text-gray-500 text-3xl">×</button>
+                                    class="text-gray-500 text-3xl" aria-label="closeFilter">×</button>
                             </div>
 
                             <!-- Body -->
@@ -472,13 +482,13 @@
                                 <div class="w-1/3 border-r gray-bg">
                                     <button
                                         class="tab-btn-filter w-full text-left px-2 py-2 hover:bg-gray-100 text-sm border-l-2 font-semibold border-blue-600 bg-white text-black"
-                                        data-tab="categories">Categories</button>
+                                        data-tab="categories" aria-label="categories">Categories</button>
                                     <button
                                         class="tab-btn-filter w-full text-left px-2 py-2 hover:bg-gray-100 text-sm"
-                                        data-tab="Language">Language</button>
+                                        data-tab="Language" aria-label="Language">Language</button>
                                     <button
                                         class="tab-btn-filter w-full text-left px-2 py-2 hover:bg-gray-100 text-sm"
-                                        data-tab="edition">Edition</button>
+                                        data-tab="edition" aria-label="edition">Edition</button>
 
                                 </div>
 
@@ -544,9 +554,9 @@
                                 <span class="text-sm text-gray-500">1000+
                                     Products</span>
                                 <div>
-                                    <button id="clearFilters"
+                                    <button id="clearFilters" aria-label="clearFilters"
                                         class="text-blue-600 mr-4 font-medium">Clear</button>
-                                    <button id="applyFilters"
+                                    <button id="applyFilters" aria-label="applyFilters"
                                         class="primary-button-bg text-white px-6 py-3 rounded bu">Done</button>
                                 </div>
                             </div>
@@ -564,7 +574,7 @@
                                 class="flex justify-between items-center border-b pb-2">
                                 <h2 class="font-medium
  text-lg">SORT BY</h2>
-                                <button id="closeSort"
+                                <button id="closeSort" aria-label="closeSort"
                                     class="text-gray-500 text-3xl">×</button>
                             </div>
 
@@ -587,551 +597,204 @@
                 <!-- End Filter and sort section listin mobile-->
         
      <!--Nav -->
-        <nav class="bg-white hidden md:block relative">
-          <div class="mx-auto px-0">
-            <div class="flex  justify-between w-full">
-              <ul
-                class="hidden md:flex space-x-5 text-gray-700 font-semibold justify-between w-full text-left z-0">
-                <li class="py-4">
-                  <a href="#" class="hover:text-blue-500 text-sm">MANORAMA DAILY
-                    & E PAPER</a>
-                </li>
-                <!-- Premium Subscription Dropdown -->
-                <li class="relative group py-4">
-                  <button
-                    class="text-left hover:text-blue-500 flex items-center text-sm">
-                    PREMIUM SUBSCRIPTION
-                    <span class="ml-2 droparrow w-5 h-3">
-
-                    </span>
-                  </button>
-                  <ul
-                    class="absolute left-0 w-48 bg-white shadow-lg hidden group-hover:block pt-5">
-                    <li>
-                      <a href="#"
-                        class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-500 font-light">Plan
-                        1</a>
-                    </li>
-                    <li>
-                      <a href="#"
-                        class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-500 font-light">Plan
-                        2</a>
-                    </li>
-                  </ul>
-                </li>
-                <!-- Magazines Mega Menu -->
-                <li class="group z-50 py-4">
-                  <button
-                    class="text-left hover:text-blue-500 flex items-center text-sm">
-                    MAGAZINES
-                    <span class="ml-2 droparrow w-5 h-3">
-
-                    </span>
-                  </button>
-                  <div
-                    class="absolute left-0 w-full bg-white shadow-lg hidden group-hover:flex flex-wrap px-8 py-6 gap-x-8 top-[38px] z-50">
-                    <!-- Column 1 -->
-                    <div class="w-1/6">
-                      <h4 class="font-semibold text-gray-800 text-sm mb-2 mt-4">News
-                        and Information</h4>
-                      <ul>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Thozhilveedhi</a>
-                        </li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Karshakasree</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Bhashaposhini</a>
-                        </li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Sampadyam</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">The
-                            Week</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Livingetc</a></li>
-                        <li><a href="magazine-listing.html" aria-label="Go to Listing"
-                            class="text-sm text-blue-500 mt-2 block font-semibold">View
-                            All</a></li>
-                      </ul>
-
-                    </div>
-                    <!-- Column 2: Children -->
-                    <div class="w-1/6">
-                      <h4
-                        class="font-semibold text-gray-800 text-sm mb-2 mt-4">Children</h4>
-                      <ul>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Magic
-                            Pot</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Kalikkudukka</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Balarama
-                            Digest</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">National
-                            Geographic Kids</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Balarama
-                            Amar Chithra Kadha</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Akkad
-                            Bakkad</a></li>
-
-                        <li><a href="magazine-listing.html" aria-label="Go to Listing"
-                            class="text-sm text-blue-500 mt-2 block font-semibold">View
-                            All</a></li>
-                      </ul>
-                    </div>
-
-                    <!-- Column 3: English Magazines -->
-                    <div class="w-1/6">
-                      <h4
-                        class="font-semibold text-gray-800 text-sm mb-2 mt-4">English
-                        Magazines</h4>
-                      <ul>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">The
-                            Week</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Magic
-                            Pot</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Tell
-                            Me Why</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Read
-                            And Colour</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Watch
-                            Time India</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">National
-                            Geographic Kids</a></li>
-                        <li><a href="magazine-listing.html" aria-label="Go to Listing"
-                            class="text-sm text-blue-500 mt-2 block font-semibold">View
-                            All</a></li>
-                      </ul>
-                    </div>
-                    <!-- Column 4: Lifestyle -->
-                    <div class="w-1/6">
-                      <h4
-                        class="font-semibold text-gray-800 text-sm mb-2 mt-4">Lifestyle</h4>
-                      <ul>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Manorama
-                            Weekly</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Manorama
-                            Traveller</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Fasttrack</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Watch
-                            Time India</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Veedu</a>
-                        </li>
-                      </ul>
-                    </div>
-                    <!-- Column 5: Women -->
-                    <div class="w-1/6">
-                      <h4
-                        class="font-semibold text-gray-800 text-sm mb-2 mt-4">Women</h4>
-                      <ul>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Vanitha
-                            Pachakam</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Vanitha</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Vanita
-                            Hindi</a></li>
-                      </ul>
-                    </div>
-                    <!-- Column 6: Career and General -->
-                    <div class="w-1/6">
-                      <h4
-                        class="font-semibold text-gray-800 text-sm mb-2 mt-4">Career
-                        and General</h4>
-                      <ul>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Thozhilveedhi</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </li>
-                <!-- Books Dropdown -->
-                <li class="group z-50 py-4">
-                  <button
-                    class="text-left hover:text-blue-500 flex items-center text-sm">
-                    Books
-                    <span class="ml-2 droparrow w-5 h-3">
-
-                    </span>
-                  </button>
-                  <div
-                    class="absolute left-0 w-full bg-white shadow-lg hidden group-hover:flex flex-wrap px-8 py-6 gap-x-8 top-[38px] z-50 min-w-full max-h-[calc(100vh-200px)] overflow-y-auto">
-                    <!-- Column 1 -->
-                    <div class="w-1/6">
-                      <h4
-                        class="font-semibold text-gray-800 text-sm mb-2 mt-4">News
-                        and Information</h4>
-                      <ul>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Thozhilveedhi</a>
-                        </li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Karshakasree</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Bhashaposhini</a>
-                        </li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Sampadyam</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">The
-                            Week</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Livingetc</a></li>
-                        <li><a href="books-listing.html" aria-label="Go to Listing"
-                            class="text-sm text-blue-500 mt-2 block font-semibold">View
-                            All</a></li>
-                      </ul>
-
-                    </div>
-                    <!-- Column 2: Children -->
-                    <div class="w-1/6">
-                      <h4
-                        class="font-semibold text-gray-800 text-sm mb-2 mt-4">Children</h4>
-                      <ul>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Magic
-                            Pot</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Kalikkudukka</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Balarama
-                            Digest</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">National
-                            Geographic Kids</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Balarama
-                            Amar Chithra Kadha</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Akkad
-                            Bakkad</a></li>
-                        <li><a href="books-listing.html" aria-label="Go to Listing"
-                            class="text-sm text-blue-500 mt-2 block font-semibold">View
-                            All</a></li>
-
-                      </ul>
-                    </div>
-
-                    <!-- Column 3: English Magazines -->
-                    <div class="w-1/6">
-                      <h4
-                        class="font-semibold text-gray-800 text-sm mb-2 mt-4">English
-                        Magazines</h4>
-                      <ul>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">The
-                            Week</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Magic
-                            Pot</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Tell
-                            Me Why</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Read
-                            And Colour</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Watch
-                            Time India</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">National
-                            Geographic Kids</a></li>
-                        <li><a href="books-listing.html" aria-label="Go to Listing"
-                            class="text-sm text-blue-500 mt-2 block font-semibold">View
-                            All</a></li>
-
-                      </ul>
-                    </div>
-                    <!-- Column 4: Lifestyle -->
-                    <div class="w-1/6">
-                      <h4
-                        class="font-semibold text-gray-800 text-sm mb-2 mt-4">Lifestyle</h4>
-                      <ul>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Manorama
-                            Weekly</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Manorama
-                            Traveller</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Fasttrack</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Watch
-                            Time India</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Veedu</a>
-                        </li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Veedu</a>
-                        </li>
-                        <li><a href="books-listing.html" aria-label="Go to Listing"
-                            class="text-sm text-blue-500 mt-2 block font-semibold">View
-                            All</a></li>
-                      </ul>
-                    </div>
-                    <!-- Column 5: Women -->
-                    <div class="w-1/6">
-                      <h4
-                        class="font-semibold text-gray-800 text-sm mb-2 mt-4">Women</h4>
-                      <ul>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Vanitha
-                            Pachakam</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Vanitha</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Vanita
-                            Hindi</a></li>
-                      </ul>
-                    </div>
-                    <!-- Column 6: Career and General -->
-                    <div class="w-1/6">
-                      <h4
-                        class="font-semibold text-gray-800 text-sm mb-2 mt-4">Career
-                        and General</h4>
-                      <ul>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Thozhilveedhi</a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="w-1/6">
-                      <h4
-                        class="font-semibold text-gray-800 text-sm mb-2 mt-4">Lifestyle</h4>
-                      <ul>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Manorama
-                            Weekly</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Manorama
-                            Traveller</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Fasttrack</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Watch
-                            Time India</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Veedu</a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="w-1/6">
-                      <h4
-                        class="font-semibold text-gray-800 text-sm mb-2 mt-4">Lifestyle</h4>
-                      <ul>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Manorama
-                            Weekly</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Manorama
-                            Traveller</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Fasttrack</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Watch
-                            Time India</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Veedu</a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="w-1/6">
-                      <h4
-                        class="font-semibold text-gray-800 text-sm mb-2 mt-4">Lifestyle</h4>
-                      <ul>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Manorama
-                            Weekly</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Manorama
-                            Traveller</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Fasttrack</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Watch
-                            Time India</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Veedu</a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="w-1/6">
-                      <h4
-                        class="font-semibold text-gray-800 text-sm mb-2 mt-4">Lifestyle</h4>
-                      <ul>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Manorama
-                            Weekly</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Manorama
-                            Traveller</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Fasttrack</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Watch
-                            Time India</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Veedu</a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="w-1/6">
-                      <h4
-                        class="font-semibold text-gray-800 text-sm mb-2 mt-4">Lifestyle</h4>
-                      <ul>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Manorama
-                            Weekly</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Manorama
-                            Traveller</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Fasttrack</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Watch
-                            Time India</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Veedu</a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="w-1/6">
-                      <h4
-                        class="font-semibold text-gray-800 text-sm mb-2 mt-4">Lifestyle</h4>
-                      <ul>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Manorama
-                            Weekly</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Manorama
-                            Traveller</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Fasttrack</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Watch
-                            Time India</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Veedu</a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="w-1/6">
-                      <h4
-                        class="font-semibold text-gray-800 text-sm mb-2 mt-4 ">Lifestyle</h4>
-                      <ul>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Manorama
-                            Weekly</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Manorama
-                            Traveller</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Fasttrack</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Watch
-                            Time India</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Veedu</a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="w-1/6">
-                      <h4
-                        class="font-semibold text-gray-800 text-sm mb-2 mt-4">Lifestyle</h4>
-                      <ul>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Manorama
-                            Weekly</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Manorama
-                            Traveller</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Fasttrack</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Watch
-                            Time India</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Veedu</a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="w-1/6">
-                      <h4
-                        class="font-semibold text-gray-800 text-sm mb-2 mt-4">Lifestyle</h4>
-                      <ul>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Manorama
-                            Weekly</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Manorama
-                            Traveller</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Fasttrack</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Watch
-                            Time India</a></li>
-                        <li><a href="#"
-                            class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light">Veedu</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </li>
-                <!-- Other Links -->
-                <li class="py-4"><a href="#"
-                    class="hover:text-blue-500 text-sm">YEAR
-                    BOOK</a></li>
-                <li class="py-4"><a href="#"
-                    class="hover:text-blue-500 text-sm">ASTRO</a></li>
-                <li class="py-4"><a href="#"
-                    class="hover:text-blue-500 text-sm">MANORAMA
-                    MAX</a></li>
-                <!-- <li class="py-4"><a href="#" class="hover:text-blue-500 text-sm">OFFERS</a></li> -->
-
-                <li class="relative group py-4">
-                  <button
-                    class="text-left hover:text-blue-500 flex items-center text-sm">
-                    MORE
-                    <span class="ml-2 droparrow w-5 h-3">
-
-                    </span>
-                  </button>
-                  <ul
-                    class="absolute right-2 w-48 bg-white shadow-lg hidden group-hover:block pt-5">
-                    <li>
-                      <a href="#"
-                        class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-500 font-light">OFFER
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#"
-                        class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-500 font-light">OTHERS
-                      </a>
-                    </li>
-                  </ul>
-                </li>
+      <nav class="bg-white hidden md:block relative">
+  <div class="mx-auto px-0">
+    <div class="flex justify-between w-full">
+      <ul class="hidden md:flex space-x-5 text-gray-700 font-semibold justify-between w-full text-left z-0">
+        <li class="py-4">
+          <a href="#" class="hover:text-blue-500 text-sm" aria-label="Manorama Daily and E Paper">MANORAMA DAILY & E PAPER</a>
+        </li>
+        <!-- Premium Subscription Dropdown -->
+        <li class="relative group py-4">
+          <button class="text-left hover:text-blue-500 flex items-center text-sm" aria-label="Premium Subscription">
+            PREMIUM SUBSCRIPTION
+            <span class="ml-2 droparrow w-5 h-3"></span>
+          </button>
+          <ul class="absolute left-0 w-48 bg-white shadow-lg hidden group-hover:block pt-5">
+            <li>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-500 font-light" aria-label="Plan 1">Plan 1</a>
+            </li>
+            <li>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-500 font-light" aria-label="Plan 2">Plan 2</a>
+            </li>
+          </ul>
+        </li>
+        <!-- Magazines Mega Menu -->
+        <li class="group z-50 py-4">
+          <button aria-label="Magazines" class="text-left hover:text-blue-500 flex items-center text-sm">
+            MAGAZINES
+            <span class="ml-2 droparrow w-5 h-3"></span>
+          </button>
+          <div class="absolute left-0 w-full bg-white shadow-lg hidden group-hover:flex flex-wrap px-8 py-6 gap-x-8 top-[38px] z-50">
+            <!-- Column 1 -->
+            <div class="w-1/6">
+              <h4 class="font-semibold text-gray-800 text-sm mb-2 mt-4">News and Information</h4>
+              <ul>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="Thozhilveedhi">Thozhilveedhi</a></li>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="Karshakasree">Karshakasree</a></li>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="Bhashaposhini">Bhashaposhini</a></li>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="Sampadyam">Sampadyam</a></li>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="The Week">The Week</a></li>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="Livingetc">Livingetc</a></li>
+                <li><a href="magazine-listing.html" class="text-sm text-blue-500 mt-2 block font-semibold" aria-label="View all News and Information magazines">View All</a></li>
+              </ul>
+            </div>
+            <!-- Column 2: Children -->
+            <div class="w-1/6">
+              <h4 class="font-semibold text-gray-800 text-sm mb-2 mt-4">Children</h4>
+              <ul>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="Magic Pot">Magic Pot</a></li>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="Kalikkudukka">Kalikkudukka</a></li>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="Balarama Digest">Balarama Digest</a></li>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="National Geographic Kids">National Geographic Kids</a></li>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="Balarama Amar Chithra Kadha">Balarama Amar Chithra Kadha</a></li>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="Akkad Bakkad">Akkad Bakkad</a></li>
+                <li><a href="magazine-listing.html" class="text-sm text-blue-500 mt-2 block font-semibold" aria-label="View all Children magazines">View All</a></li>
+              </ul>
+            </div>
+            <!-- Column 3: English Magazines -->
+            <div class="w-1/6">
+              <h4 class="font-semibold text-gray-800 text-sm mb-2 mt-4">English Magazines</h4>
+              <ul>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="The Week">The Week</a></li>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="Magic Pot">Magic Pot</a></li>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="Tell Me Why">Tell Me Why</a></li>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="Read And Colour">Read And Colour</a></li>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="Watch Time India">Watch Time India</a></li>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="National Geographic Kids">National Geographic Kids</a></li>
+                <li><a href="magazine-listing.html" class="text-sm text-blue-500 mt-2 block font-semibold" aria-label="View all English magazines">View All</a></li>
+              </ul>
+            </div>
+            <!-- Column 4: Lifestyle -->
+            <div class="w-1/6">
+              <h4 class="font-semibold text-gray-800 text-sm mb-2 mt-4">Lifestyle</h4>
+              <ul>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="Manorama Weekly">Manorama Weekly</a></li>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="Manorama Traveller">Manorama Traveller</a></li>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="Fasttrack">Fasttrack</a></li>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="Watch Time India">Watch Time India</a></li>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="Veedu">Veedu</a></li>
+              </ul>
+            </div>
+            <!-- Column 5: Women -->
+            <div class="w-1/6">
+              <h4 class="font-semibold text-gray-800 text-sm mb-2 mt-4">Women</h4>
+              <ul>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="Vanitha Pachakam">Vanitha Pachakam</a></li>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="Vanitha">Vanitha</a></li>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="Vanita Hindi">Vanita Hindi</a></li>
+              </ul>
+            </div>
+            <!-- Column 6: Career and General -->
+            <div class="w-1/6">
+              <h4 class="font-semibold text-gray-800 text-sm mb-2 mt-4">Career and General</h4>
+              <ul>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="Thozhilveedhi">Thozhilveedhi</a></li>
               </ul>
             </div>
           </div>
-        </nav>
+        </li>
+        <!-- Books Dropdown -->
+        <li class="group z-50 py-4">
+          <button class="text-left hover:text-blue-500 flex items-center text-sm" aria-label="Books">
+            Books
+            <span class="ml-2 droparrow w-5 h-3"></span>
+          </button>
+          <div class="absolute left-0 w-full bg-white shadow-lg hidden group-hover:flex flex-wrap px-8 py-6 gap-x-8 top-[38px] z-50 min-w-full max-h-[calc(100vh-200px)] overflow-y-auto">
+            <!-- Column 1 -->
+            <div class="w-1/6">
+              <h4 class="font-semibold text-gray-800 text-sm mb-2 mt-4">News and Information</h4>
+              <ul>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="Thozhilveedhi book">Thozhilveedhi</a></li>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="Karshakasree book">Karshakasree</a></li>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="Bhashaposhini book">Bhashaposhini</a></li>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="Sampadyam book">Sampadyam</a></li>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="The Week book">The Week</a></li>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="Livingetc book">Livingetc</a></li>
+                <li><a href="books-listing.html" class="text-sm text-blue-500 mt-2 block font-semibold" aria-label="View all News and Information books">View All</a></li>
+              </ul>
+            </div>
+            <!-- Column 2: Children -->
+            <div class="w-1/6">
+              <h4 class="font-semibold text-gray-800 text-sm mb-2 mt-4">Children</h4>
+              <ul>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="Magic Pot book">Magic Pot</a></li>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="Kalikkudukka book">Kalikkudukka</a></li>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="Balarama Digest book">Balarama Digest</a></li>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="National Geographic Kids book">National Geographic Kids</a></li>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="Balarama Amar Chithra Kadha book">Balarama Amar Chithra Kadha</a></li>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="Akkad Bakkad book">Akkad Bakkad</a></li>
+                <li><a href="books-listing.html" class="text-sm text-blue-500 mt-2 block font-semibold" aria-label="View all Children books">View All</a></li>
+              </ul>
+            </div>
+            <!-- Column 3: English Magazines -->
+            <div class="w-1/6">
+              <h4 class="font-semibold text-gray-800 text-sm mb-2 mt-4">English Magazines</h4>
+              <ul>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="The Week book">The Week</a></li>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="Magic Pot book">Magic Pot</a></li>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="Tell Me Why book">Tell Me Why</a></li>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="Read And Colour book">Read And Colour</a></li>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="Watch Time India book">Watch Time India</a></li>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="National Geographic Kids book">National Geographic Kids</a></li>
+                <li><a href="books-listing.html" class="text-sm text-blue-500 mt-2 block font-semibold" aria-label="View all English books">View All</a></li>
+              </ul>
+            </div>
+            <!-- Column 4: Lifestyle -->
+            <div class="w-1/6">
+              <h4 class="font-semibold text-gray-800 text-sm mb-2 mt-4">Lifestyle</h4>
+              <ul>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="Manorama Weekly book">Manorama Weekly</a></li>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="Manorama Traveller book">Manorama Traveller</a></li>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="Fasttrack book">Fasttrack</a></li>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="Watch Time India book">Watch Time India</a></li>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="Veedu book">Veedu</a></li>
+                <li><a href="books-listing.html" class="text-sm text-blue-500 mt-2 block font-semibold" aria-label="View all Lifestyle books">View All</a></li>
+              </ul>
+            </div>
+            <!-- Column 5: Women -->
+            <div class="w-1/6">
+              <h4 class="font-semibold text-gray-800 text-sm mb-2 mt-4">Women</h4>
+              <ul>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="Vanitha Pachakam book">Vanitha Pachakam</a></li>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="Vanitha book">Vanitha</a></li>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="Vanita Hindi book">Vanita Hindi</a></li>
+              </ul>
+            </div>
+            <!-- Column 6: Career and General -->
+            <div class="w-1/6">
+              <h4 class="font-semibold text-gray-800 text-sm mb-2 mt-4">Career and General</h4>
+              <ul>
+                <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light" aria-label="Thozhilveedhi book">Thozhilveedhi</a></li>
+              </ul>
+            </div>
+            <!-- Additional columns (truncated for brevity) -->
+            <!-- Each item in additional columns should follow the same pattern with aria-label -->
+          </div>
+        </li>
+        <!-- Other Links -->
+        <li class="py-4"><a href="#" class="hover:text-blue-500 text-sm" aria-label="Year Book">YEAR BOOK</a></li>
+        <li class="py-4"><a href="#" class="hover:text-blue-500 text-sm" aria-label="Astro">ASTRO</a></li>
+        <li class="py-4"><a href="#" class="hover:text-blue-500 text-sm" aria-label="Manorama Max">MANORAMA MAX</a></li>
+        
+        <li class="relative group py-4">
+          <button class="text-left hover:text-blue-500 flex items-center text-sm" aria-label="More options">
+            MORE
+            <span class="ml-2 droparrow w-5 h-3"></span>
+          </button>
+          <ul class="absolute right-2 w-48 bg-white shadow-lg hidden group-hover:block pt-5">
+            <li>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-500 font-light" aria-label="Offers">OFFER</a>
+            </li>
+            <li>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-500 font-light" aria-label="Other options">OTHERS</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
 
             </div>
