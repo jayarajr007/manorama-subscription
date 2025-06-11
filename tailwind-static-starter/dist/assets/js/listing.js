@@ -107,38 +107,34 @@ $(window).on('load', function () {
         ]
     });
 
-    // $('.bookcategory-slider').slick({
-    //     infinite: false,
-    //     slidesToShow: 9,
-    //     slidesToScroll: 2,
-    //     arrows: true,
-    //     responsive: [
-    //         {
-    //             breakpoint: 1288,
-    //             settings: {
-    //                 slidesToShow: 9
-    //             }
-    //         },
-    //         {
-    //             breakpoint: 1066,
-    //             settings: {
-    //                 slidesToShow: 6
-    //             }
-    //         },
-    //         {
-    //             breakpoint: 768,
-    //             settings: {
-    //                 slidesToShow: 5
-    //             }
-    //         },
-    //         {
-    //             breakpoint: 480,
-    //             settings: {
-    //                 slidesToShow: 4
-    //             }
-    //         }
-    //     ]
-    // });
+   
+
+
+    document.querySelectorAll('.accordion-toggle').forEach((button) => {
+        button.addEventListener('click', () => {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('svg');
+
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        });
+    });
+
+    // Optional: Make all contents visible by default
+    document.querySelectorAll('.accordion-content').forEach((el) => el.classList.remove('hidden'));
+
+
+
+
+
+
+    document.querySelectorAll('.round-filter').forEach(item => {
+        item.addEventListener('click', () => {
+            item.classList.toggle('active');
+        });
+    });
+
+
 
 });
 

@@ -89,3 +89,8 @@
     z-index: 10;
       background: url(../img/icons/sprite.svg) no-repeat -113px -22px !important;
 }
+
+
+   .rotate-180 {
+        transform: rotate(180deg);
+    }

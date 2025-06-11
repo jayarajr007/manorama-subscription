@@ -2633,35 +2633,6 @@
 
     </body>
 
-    <script>
-    document.querySelectorAll('.accordion-toggle').forEach((button) => {
-        button.addEventListener('click', () => {
-            const content = button.nextElementSibling;
-            const icon = button.querySelector('svg');
-
-            content.classList.toggle('hidden');
-            icon.classList.toggle('rotate-180');
-        });
-    });
-
-    // Optional: Make all contents visible by default
-    document.querySelectorAll('.accordion-content').forEach((el) => el.classList.remove('hidden'));
-</script>
-
-    <style>
-    .rotate-180 {
-        transform: rotate(180deg);
-    }
-</style>
-
-    <script>
-
-
-    document.querySelectorAll('.round-filter').forEach(item => {
-        item.addEventListener('click', () => {
-            item.classList.toggle('active');
-        });
-    });
-</script>
+  
 
 </html>
