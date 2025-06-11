@@ -42,14 +42,6 @@
     border-radius: 100%;
 }
 
-/* Hide all slides except the first before Slick initializes */
-.category-slider:not(.slick-initialized)>div:not(:first-child) {
-  display: none;
-}
-
-.category-slider:not(.slick-initialized) div.bg-white {
-  max-width: 260px;
-}
 
 
 /* Hide all slides except the first before Slick initializes */
