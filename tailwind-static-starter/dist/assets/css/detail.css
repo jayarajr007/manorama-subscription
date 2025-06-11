@@ -9,6 +9,30 @@
     z-index: 10;
     background: url(../img/icons/sprite.svg) no-repeat -64px -261px;
 }
+.info::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: -20px;
+    width: 1.1rem;
+    height: 1.1rem;
+    z-index: 10;
+    background: url(../img/icons/sprite.svg) no-repeat -124px -262px;
+}
+.mobileaddcart {
+    padding: 0 20px 0 48px;
+}
+.addcart1::after {
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: 15px;
+    width: 1.8rem;
+    height: 1.8rem;
+    z-index: 10;
+    background: url(../img/icons/sprite.svg) no-repeat -25px -21px;
+    filter: brightness(0) invert(1);
+}
 .addcart::after {
     content: "";
     position: absolute;

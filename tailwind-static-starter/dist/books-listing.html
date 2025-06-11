@@ -48,7 +48,7 @@
                         </a>
 
                         <!-- Hello Lets shop hiding and back button display-->
-                        <a href="#" class="flex items-center hidden">
+                        <a href="#" class="flex items-center hidden" aria-label="profile">
                             <div class="flex items-center space-x-3 px-0 pt-0">
                                 <!-- Profile Icon -->
                                 <div
@@ -66,7 +66,7 @@
                         </a>
 
                         <a href="index.html"
-                            class="flex items-center md:hidden">
+                            class="flex items-center md:hidden" aria-label="profile">
                             <div class="flex items-center space-x-3 px-0 pt-0">
                                 <svg width="24" height="24" viewBox="0 0 24 24"
                                     fill="none"
@@ -189,7 +189,7 @@
                                 <!-- Back Button + Search Input -->
                                 <div
                                     class="flex items-center gap-2 p-3 border-b border-gray-300">
-                                    <button id="closeSearch">
+                                    <button id="closeSearch" aria-label="closesearch">
                                         <svg class="w-6 h-6 text-gray-700"
                                             fill="none" stroke="currentColor"
                                             viewBox="0 0 24 24">
@@ -442,7 +442,7 @@
                     <!-- Sort Button -->
                     <button
                         class="flex items-center text-gray-700 text-sm font-medium space-x-1"
-                        id="openSort">
+                        id="openSort" aria-label="sort">
                         <div class="md:mr-4 mr-0 w-8 h-8 i-sort"></div>
                         <span>Sort</span>
                     </button>
@@ -450,7 +450,7 @@
                     <!-- Filter Button -->
                     <button
                         class="flex items-center text-gray-700 text-sm font-medium space-x-1"
-                        id="openFilter">
+                        id="openFilter" aria-label="Filter">
                         <div class="md:mr-4 mr-0 w-8 h-8 i-filter"></div>
 
                         <span>Filter</span>
@@ -468,7 +468,7 @@
                                 <h2 class="font-medium
  text-lg">FILTERS</h2>
                                 <button id="closeFilter"
-                                    class="text-gray-500 text-3xl">×</button>
+                                    class="text-gray-500 text-3xl" aria-label="close">×</button>
                             </div>
 
                             <!-- Body -->
@@ -478,49 +478,56 @@
                                 <div class="w-1/3 border-r gray-bg">
                                     <button
                                         class="tab-btn-filter w-full text-left px-2 py-2 hover:bg-gray-100 text-sm border-l-2 font-semibold border-blue-600 bg-white text-black"
-                                        data-tab="categories">Categories</button>
+                                        data-tab="categories" aria-label="categories">Categories</button>
                                         <button
                                         class="tab-btn-filter w-full text-left px-2 py-2 hover:bg-gray-100 text-sm"
-                                        data-tab="author">Author</button>
+                                        data-tab="author" aria-label="author">Author</button>
                                     <button
                                         class="tab-btn-filter w-full text-left px-2 py-2 hover:bg-gray-100 text-sm"
-                                        data-tab="Language">Language</button>
+                                        data-tab="Language" aria-label="Language">Language</button>
                                     <button
                                         class="tab-btn-filter w-full text-left px-2 py-2 hover:bg-gray-100 text-sm"
-                                        data-tab="edition">Edition</button>
+                                        data-tab="edition" aria-label="Edition">Edition</button>
 
                                 </div>
 
                                 <!-- Content Area -->
                                 <div class="w-2/3 p-4">
                                     <div id="categories"
-                                        class="tab-content text-sm"> <label
-                                            class="block mb-2"><input
+                                        class="tab-content text-sm"> 
+                                        <label
+                                            class="flex items-start mb-2">
+                                            <input
                                                 type="checkbox"
-                                                class="mr-2 mt-1">News And
+                                                class="mr-2 mt-1"/>News And
                                             Information</label>
-                                        <label class="flex items-start py-2"><input
+                                        <label class="flex items-start py-2">
+                                            <input
                                                 type="checkbox"
-                                                class="mr-2 mt-1">Children</label>
-                                        <label class="flex items-start py-2"><input
+                                                class="mr-2 mt-1"/>Children</label>
+                                        <label class="flex items-start py-2">
+                                            <input
                                                 type="checkbox"
-                                                class="mr-2 mt-1">Women</label>
-                                        <label class="flex items-start py-2"><input
+                                                class="mr-2 mt-1"/>Women</label>
+                                        <label class="flex items-start py-2">
+                                            <input
                                                 type="checkbox"
-                                                class="mr-2 mt-1">Career And
+                                                class="mr-2 mt-1"/>Career And
                                             General</label>
-                                        <label class="flex items-start py-2"><input
+                                        <label class="flex items-start py-2">
+                                            <input
                                                 type="checkbox"
-                                                class="mr-2 mt-1">Health</label>
-                                        <label class="flex items-start py-2"><input
+                                                class="mr-2 mt-1"/>Health</label>
+                                        <label class="flex items-start py-2">
+                                            <input
                                                 type="checkbox"
-                                                class="mr-2 mt-1">Travel</label>
+                                                class="mr-2 mt-1"/>Travel</label>
                                     </div>
 
                                     <div id="author"
                                         class="tab-content text-sm"> 
                                         <label class="flex items-start py-2">
-                                            <input type="checkbox" class="mr-2 mt-1">
+                                            <input type="checkbox" class="mr-2 mt-1"/>
                                             <span>Thakazhi Sivasankara Pillai</span>
                                         </label>
                                         <label class="flex items-start py-2">
@@ -528,7 +535,7 @@
                                             <span>Vaikom Muhammad Basheer</span>
                                         </label>
                                         <label class="flex items-start py-2">
-                                            <input type="checkbox" class="mr-2 mt-1">
+                                            <input type="checkbox" class="mr-2 mt-1"/>
                                             <span>O. V. Vijayan</span>
                                         </label>
                                         <label class="flex items-start mb-2">
@@ -549,7 +556,7 @@
                                             <div class="searchicon inputlight relative">
                                                 <input type="search" placeholder="Search by Author Name" class="w-full py-2 bg-transparent outline-none text-[14px]"/>
                                             </div>
-                                            <button class="searchbtn p-2  text-[12px]">Search</button>
+                                            <button class="searchbtn p-2  text-[12px]" aria-label="search">Search</button>
                                         </div>
                                         
                                     </div>
@@ -558,13 +565,13 @@
 
                                         <label class="flex items-start py-2"><input
                                                 type="checkbox"
-                                                class="mr-2 mt-1">English</label>
+                                                class="mr-2 mt-1"/>English</label>
                                         <label class="flex items-start py-2"><input
                                                 type="checkbox"
-                                                class="mr-2 mt-1">Malayalam</label>
+                                                class="mr-2 mt-1"/>Malayalam</label>
                                         <label class="flex items-start py-2"><input
                                                 type="checkbox"
-                                                class="mr-2 mt-1">hindi</label>
+                                                class="mr-2 mt-1"/>Hindi</label>
 
                                     </div>
 
@@ -572,13 +579,13 @@
                                         class="tab-content hidden text-sm">
                                         <label class="flex items-start py-2"><input
                                                 type="checkbox"
-                                                class="mr-2 mt-1">Print</label>
+                                                class="mr-2 mt-1"/>Print</label>
                                         <label class="flex items-start py-2"><input
                                                 type="checkbox"
-                                                class="mr-2 mt-1">Digital</label>
+                                                class="mr-2 mt-1"/>Digital</label>
                                         <label class="flex items-start py-2"><input
                                                 type="checkbox"
-                                                class="mr-2 mt-1">Print +
+                                                class="mr-2 mt-1"/>Print +
                                             Dgital</label></div>
 
                                 </div>
@@ -591,9 +598,9 @@
                                     Products</span>
                                 <div>
                                     <button id="clearFilters"
-                                        class="text-blue-600 mr-4 font-medium">Clear</button>
+                                        class="text-blue-600 mr-4 font-medium" aria-label="clear">Clear</button>
                                     <button id="applyFilters"
-                                        class="primary-button-bg text-white px-6 py-3 rounded bu">Done</button>
+                                        class="primary-button-bg text-white px-6 py-3 rounded bu" aria-label="done">Done</button>
                                 </div>
                             </div>
                         </div>
@@ -611,7 +618,7 @@
                                 <h2 class="font-medium
  text-lg">SORT BY</h2>
                                 <button id="closeSort"
-                                    class="text-gray-500 text-3xl">×</button>
+                                    class="text-gray-500 text-3xl" aria-label="close">×</button>
                             </div>
 
                             <!-- Body -->
@@ -873,7 +880,7 @@
         <div id="categoryMenu" class="flex flex-1 hidden w-full ">
             <div
                 class="fixed top-0 left-0 w-full bg-white flex items-center justify-between px-4 py-5 shadow-md z-50">
-                <button class="text-1xl" id="category-close">
+                <button class="text-1xl" id="category-close" aria-label="category close">
                     ✖
                 </button>
                 <h1 class="text-sm font-light">CATEGORIES</h1>
@@ -1048,40 +1055,40 @@
                         <div class="text-center">
                             <img src="assets/images/magazin/1.webp"
                                 class="mx-auto rounded-sm" alt="The Week"
-                                idth="77" height="101" loading="lazy" />
+                                width="77" height="101" loading="lazy" />
                             <p class="text-[12px] mt-1 font-medium">The Week</p>
                         </div>
                         <div class="text-center">
                             <img src="assets/images/magazin/2.webp"
                                 class="mx-auto rounded-sm" alt="Magic Pot"
-                                idth="77" height="101" loading="lazy" />
+                                width="77" height="101" loading="lazy" />
                             <p class="text-[12px] mt-1 font-medium">Magic
                                 Pot</p>
                         </div>
                         <div class="text-center">
                             <img src="assets/images/magazin/3.webp"
                                 class="mx-auto rounded-sm" alt="Tell Me Why"
-                                idth="77" height="101" loading="lazy" />
+                                width="77" height="101" loading="lazy" />
                             <p class="text-[12px] mt-1 font-medium">Tell Me
                                 Why</p>
                         </div>
                         <div class="text-center">
                             <img src="assets/images/magazin/1.webp"
                                 class="mx-auto rounded-sm" alt="The Week"
-                                idth="77" height="101" loading="lazy" />
+                                width="77" height="101" loading="lazy" />
                             <p class="text-[12px] mt-1 font-medium">The Week</p>
                         </div>
                         <div class="text-center">
                             <img src="assets/images/magazin/2.webp"
                                 class="mx-auto rounded-sm" alt="Magic Pot"
-                                idth="77" height="101" loading="lazy" />
+                                width="77" height="101" loading="lazy" />
                             <p class="text-[12px] mt-1 font-medium">Magic
                                 Pot</p>
                         </div>
                         <div class="text-center">
                             <img src="assets/images/magazin/3.webp"
                                 class="mx-auto rounded-sm" alt="Tell Me Why"
-                                idth="77" height="101" loading="lazy" />
+                                width="77" height="101" loading="lazy" />
                             <p class="text-[12px] mt-1 font-medium">Tell Me
                                 Why</p>
                         </div>
@@ -1096,20 +1103,20 @@
                         <div class="text-center">
                             <img src="assets/images/magazin/1.webp"
                                 class="mx-auto rounded-sm" alt="The Week"
-                                idth="77" height="101" loading="lazy" />
+                                width="77" height="101" loading="lazy" />
                             <p class="text-[12px] mt-1 font-medium">The Week</p>
                         </div>
                         <div class="text-center">
                             <img src="assets/images/magazin/2.webp"
                                 class="mx-auto rounded-sm" alt="Magic Pot"
-                                idth="77" height="101" loading="lazy" />
+                                width="77" height="101" loading="lazy" />
                             <p class="text-[12px] mt-1 font-medium">Magic
                                 Pot</p>
                         </div>
                         <div class="text-center">
                             <img src="assets/images/magazin/3.webp"
                                 class="mx-auto rounded-sm" alt="Tell Me Why"
-                                idth="77" height="101" loading="lazy" />
+                                width="77" height="101" loading="lazy" />
                             <p class="text-[12px] mt-1 font-medium">Tell Me
                                 Why</p>
                         </div>
@@ -1122,14 +1129,14 @@
                         <div class="text-center">
                             <img src="assets/images/magazin/2.webp"
                                 class="mx-auto rounded-sm" alt="Magic Pot"
-                                idth="77" height="101" loading="lazy" />
+                                width="77" height="101" loading="lazy" />
                             <p class="text-[12px] mt-1 font-medium">Magic
                                 Pot</p>
                         </div>
                         <div class="text-center">
                             <img src="assets/images/magazin/3.webp"
                                 class="mx-auto rounded-sm" alt="Tell Me Why"
-                                idth="77" height="101" loading="lazy" />
+                                width="77" height="101" loading="lazy" />
                             <p class="text-[12px] mt-1 font-medium">Tell Me
                                 Why</p>
                         </div>
@@ -1143,40 +1150,40 @@
                         <div class="text-center">
                             <img src="assets/images/magazin/1.webp"
                                 class="mx-auto rounded-sm" alt="The Week"
-                                idth="77" height="101" loading="lazy" />
+                                width="77" height="101" loading="lazy" />
                             <p class="text-[12px] mt-1 font-medium">The Week</p>
                         </div>
                         <div class="text-center">
                             <img src="assets/images/magazin/2.webp"
                                 class="mx-auto rounded-sm" alt="Magic Pot"
-                                idth="77" height="101" loading="lazy" />
+                                width="77" height="101" loading="lazy" />
                             <p class="text-[12px] mt-1 font-medium">Magic
                                 Pot</p>
                         </div>
                         <div class="text-center">
                             <img src="assets/images/magazin/3.webp"
                                 class="mx-auto rounded-sm" alt="Tell Me Why"
-                                idth="77" height="101" loading="lazy" />
+                                width="77" height="101" loading="lazy" />
                             <p class="text-[12px] mt-1 font-medium">Tell Me
                                 Why</p>
                         </div>
                         <div class="text-center">
                             <img src="assets/images/magazin/1.webp"
                                 class="mx-auto rounded-sm" alt="The Week"
-                                idth="77" height="101" loading="lazy" />
+                                width="77" height="101" loading="lazy" />
                             <p class="text-[12px] mt-1 font-medium">The Week</p>
                         </div>
                         <div class="text-center">
                             <img src="assets/images/magazin/2.webp"
                                 class="mx-auto rounded-sm" alt="Magic Pot"
-                                idth="77" height="101" loading="lazy" />
+                                width="77" height="101" loading="lazy" />
                             <p class="text-[12px] mt-1 font-medium">Magic
                                 Pot</p>
                         </div>
                         <div class="text-center">
                             <img src="assets/images/magazin/3.webp"
                                 class="mx-auto rounded-sm" alt="Tell Me Why"
-                                idth="77" height="101" loading="lazy" />
+                                width="77" height="101" loading="lazy" />
                             <p class="text-[12px] mt-1 font-medium">Tell Me
                                 Why</p>
                         </div>
@@ -1194,40 +1201,40 @@
                         <div class="text-center">
                             <img src="assets/images/magazin/1.webp"
                                 class="mx-auto rounded-sm" alt="The Week"
-                                idth="77" height="101" loading="lazy" />
+                                width="77" height="101" loading="lazy" />
                             <p class="text-[12px] mt-1 font-medium">The Week</p>
                         </div>
                         <div class="text-center">
                             <img src="assets/images/magazin/2.webp"
                                 class="mx-auto rounded-sm" alt="Magic Pot"
-                                idth="77" height="101" loading="lazy" />
+                                width="77" height="101" loading="lazy" />
                             <p class="text-[12px] mt-1 font-medium">Magic
                                 Pot</p>
                         </div>
                         <div class="text-center">
                             <img src="assets/images/magazin/3.webp"
                                 class="mx-auto rounded-sm" alt="Tell Me Why"
-                                idth="77" height="101" loading="lazy" />
+                                width="77" height="101" loading="lazy" />
                             <p class="text-[12px] mt-1 font-medium">Tell Me
                                 Why</p>
                         </div>
                         <div class="text-center">
                             <img src="assets/images/magazin/1.webp"
                                 class="mx-auto rounded-sm" alt="The Week"
-                                idth="77" height="101" loading="lazy" />
+                                width="77" height="101" loading="lazy" />
                             <p class="text-[12px] mt-1 font-medium">The Week</p>
                         </div>
                         <div class="text-center">
                             <img src="assets/images/magazin/2.webp"
                                 class="mx-auto rounded-sm" alt="Magic Pot"
-                                idth="77" height="101" loading="lazy" />
+                                width="77" height="101" loading="lazy" />
                             <p class="text-[12px] mt-1 font-medium">Magic
                                 Pot</p>
                         </div>
                         <div class="text-center">
                             <img src="assets/images/magazin/3.webp"
                                 class="mx-auto rounded-sm" alt="Tell Me Why"
-                                idth="77" height="101" loading="lazy" />
+                                width="77" height="101" loading="lazy" />
                             <p class="text-[12px] mt-1 font-medium">Tell Me
                                 Why</p>
                         </div>
@@ -1243,40 +1250,40 @@
                         <div class="text-center">
                             <img src="assets/images/magazin/1.webp"
                                 class="mx-auto rounded-sm" alt="The Week"
-                                idth="77" height="101" loading="lazy" />
+                                width="77" height="101" loading="lazy" />
                             <p class="text-[12px] mt-1 font-medium">The Week</p>
                         </div>
                         <div class="text-center">
                             <img src="assets/images/magazin/2.webp"
                                 class="mx-auto rounded-sm" alt="Magic Pot"
-                                idth="77" height="101" loading="lazy" />
+                                width="77" height="101" loading="lazy" />
                             <p class="text-[12px] mt-1 font-medium">Magic
                                 Pot</p>
                         </div>
                         <div class="text-center">
                             <img src="assets/images/magazin/3.webp"
                                 class="mx-auto rounded-sm" alt="Tell Me Why"
-                                idth="77" height="101" loading="lazy" />
+                                width="77" height="101" loading="lazy" />
                             <p class="text-[12px] mt-1 font-medium">Tell Me
                                 Why</p>
                         </div>
                         <div class="text-center">
                             <img src="assets/images/magazin/1.webp"
                                 class="mx-auto rounded-sm" alt="The Week"
-                                idth="77" height="101" loading="lazy" />
+                                width="77" height="101" loading="lazy" />
                             <p class="text-[12px] mt-1 font-medium">The Week</p>
                         </div>
                         <div class="text-center">
                             <img src="assets/images/magazin/2.webp"
                                 class="mx-auto rounded-sm" alt="Magic Pot"
-                                idth="77" height="101" loading="lazy" />
+                                width="77" height="101" loading="lazy" />
                             <p class="text-[12px] mt-1 font-medium">Magic
                                 Pot</p>
                         </div>
                         <div class="text-center">
                             <img src="assets/images/magazin/3.webp"
                                 class="mx-auto rounded-sm" alt="Tell Me Why"
-                                idth="77" height="101" loading="lazy" />
+                                width="77" height="101" loading="lazy" />
                             <p class="text-[12px] mt-1 font-medium">Tell Me
                                 Why</p>
                         </div>
@@ -1291,40 +1298,40 @@
                         <div class="text-center">
                             <img src="assets/images/magazin/1.webp"
                                 class="mx-auto rounded-sm" alt="The Week"
-                                idth="77" height="101" loading="lazy" />
+                                width="77" height="101" loading="lazy" />
                             <p class="text-[12px] mt-1 font-medium">The Week</p>
                         </div>
                         <div class="text-center">
                             <img src="assets/images/magazin/2.webp"
                                 class="mx-auto rounded-sm" alt="Magic Pot"
-                                idth="77" height="101" loading="lazy" />
+                                width="77" height="101" loading="lazy" />
                             <p class="text-[12px] mt-1 font-medium">Magic
                                 Pot</p>
                         </div>
                         <div class="text-center">
                             <img src="assets/images/magazin/3.webp"
                                 class="mx-auto rounded-sm" alt="Tell Me Why"
-                                idth="77" height="101" loading="lazy" />
+                                width="77" height="101" loading="lazy" />
                             <p class="text-[12px] mt-1 font-medium">Tell Me
                                 Why</p>
                         </div>
                         <div class="text-center">
                             <img src="assets/images/magazin/1.webp"
                                 class="mx-auto rounded-sm" alt="The Week"
-                                idth="77" height="101" loading="lazy" />
+                                width="77" height="101" loading="lazy" />
                             <p class="text-[12px] mt-1 font-medium">The Week</p>
                         </div>
                         <div class="text-center">
                             <img src="assets/images/magazin/2.webp"
                                 class="mx-auto rounded-sm" alt="Magic Pot"
-                                idth="77" height="101" loading="lazy" />
+                                width="77" height="101" loading="lazy" />
                             <p class="text-[12px] mt-1 font-medium">Magic
                                 Pot</p>
                         </div>
                         <div class="text-center">
                             <img src="assets/images/magazin/3.webp"
                                 class="mx-auto rounded-sm" alt="Tell Me Why"
-                                idth="77" height="101" loading="lazy" />
+                                width="77" height="101" loading="lazy" />
                             <p class="text-[12px] mt-1 font-medium">Tell Me
                                 Why</p>
                         </div>
@@ -1341,20 +1348,20 @@
                         <div class="text-center">
                             <img src="assets/images/yearbook/1.webp"
                                 class="mx-auto rounded-sm" alt="The Week"
-                                idth="77" height="101" loading="lazy" />
+                                width="77" height="101" loading="lazy" />
                             <p class="text-[12px] mt-1 font-medium">The Week</p>
                         </div>
                         <div class="text-center">
                             <img src="assets/images/yearbook/2.webp"
                                 class="mx-auto rounded-sm" alt="Magic Pot"
-                                idth="77" height="101" loading="lazy" />
+                                width="77" height="101" loading="lazy" />
                             <p class="text-[12px] mt-1 font-medium">Magic
                                 Pot</p>
                         </div>
                         <div class="text-center">
                             <img src="assets/images/yearbook/3.webp"
                                 class="mx-auto rounded-sm" alt="Tell Me Why"
-                                idth="77" height="101" loading="lazy" />
+                                width="77" height="101" loading="lazy" />
                             <p class="text-[12px] mt-1 font-medium">Tell Me
                                 Why</p>
                         </div>
@@ -1368,7 +1375,7 @@
                             <img src="assets/images/magazin/1.webp"
                                 class="mx-auto rounded-sm"
                                 alt="All India Current Affairs Test Series 2025"
-                                idth="77" height="101" loading="lazy" />
+                                width="77" height="101" loading="lazy" />
                             <p
                                 class="text-[12px] mt-1 font-medium text-gray-800 line-clamp-2">
                                 All India Current Affairs Test Series 2025
@@ -1377,7 +1384,7 @@
                         <div class="text-center">
                             <img src="assets/images/magazin/2.webp"
                                 class="mx-auto rounded-sm"
-                                alt="Magic Pot Test Series" idth="77"
+                                alt="Magic Pot Test Series" width="77"
                                 height="101" loading="lazy" />
                             <p
                                 class="text-[12px] mt-1 font-medium text-gray-800">Magic
@@ -1387,7 +1394,7 @@
                         <div class="text-center">
                             <img src="assets/images/magazin/3.webp"
                                 class="mx-auto rounded-sm"
-                                alt="Tell Me Why Test" idth="77" height="101"
+                                alt="Tell Me Why Test" width="77" height="101"
                                 loading="lazy" />
                             <p
                                 class="text-[12px] mt-1 font-medium text-gray-800">Tell
@@ -1402,7 +1409,7 @@
                         <div class="text-center border-b pb-3">
                             <img src="assets/images/astro/1.webp"
                                 class="mx-auto mb-2 max-w-[115px] rounded-md border border-gray-300"
-                                alt="In-depth Horoscope" idth="77" height="101"
+                                alt="In-depth Horoscope" width="77" height="101"
                                 loading="lazy" />
                             <p class="text-[13px] font-semibold">In-depth
                                 Horoscope</p>
@@ -1410,7 +1417,7 @@
                         <div class="text-center border-b pb-3">
                             <img src="assets/images/astro/2.webp"
                                 class="mx-auto mb-2 max-w-[115px] rounded-md border border-gray-300"
-                                alt="Gem Recommendation" idth="77" height="101"
+                                alt="Gem Recommendation" width="77" height="101"
                                 loading="lazy" />
                             <p class="text-[13px] font-semibold">Gem
                                 Recommendation</p>
@@ -1419,7 +1426,7 @@
                             <img src="assets/images/astro/3.webp"
                                 class="mx-auto mb-2 max-w-[115px] rounded-md border border-gray-300"
                                 loading="lazy"
-                                alt="Yoga Report" idth="77" height="101" />
+                                alt="Yoga Report" width="77" height="101" />
                             <p class="text-[13px] font-semibold">Yoga Report</p>
                         </div>
                     </div>
@@ -1437,7 +1444,7 @@
             <div
                 class="hidden md:flex items-center justify-between text-sm text-gray-500 mb-2  ">
                 <div class="text-[12px] ">
-                    <a href="#" class="text-blue-500">Home</a>
+                    <a href="#" class="text-blue-500" aria-label="home">Home</a>
                     <span class="mx-1">/</span>
                     <span>Magazines</span>
                 </div>
@@ -1486,7 +1493,7 @@
                                     Books</p>
                             </div>
                             <button
-                                class="text-blue-600 text-xs font-semibold hover:underline">Clear
+                                class="text-blue-600 text-xs font-semibold hover:underline" aria-label="clear all">Clear
                                 All</button>
                         </div>
 
@@ -1497,7 +1504,7 @@
                             <div
                                 class="accordion-section border-b border-gray-200 pb-4">
                                 <button
-                                    class="accordion-toggle flex justify-between items-center w-full text-left">
+                                    class="accordion-toggle flex justify-between items-center w-full text-left" aria-label="categories">
                                     <h4
                                         class="font-semibold text-gray-800">Categories</h4>
                                     <svg
@@ -1552,7 +1559,7 @@
                             <div
                                 class="accordion-section border-b border-gray-200 pb-4">
                                 <button
-                                    class="accordion-toggle flex justify-between items-center w-full text-left">
+                                    class="accordion-toggle flex justify-between items-center w-full text-left" aria-label="author">
                                     <h4
                                         class="font-semibold text-gray-800">Author</h4>
                                     <svg
@@ -1606,7 +1613,7 @@
                                         <div class="searchicon inputlight relative">
                                             <input type="search" placeholder="Search by Author Name" class="w-full py-2 bg-transparent outline-none text-[14px]"/>
                                         </div>
-                                        <button class="searchbtn p-2  text-[12px]">Search</button>
+                                        <button class="searchbtn p-2  text-[12px]" aria-label="search">Search</button>
                                     </div>
                                 </div>
                             </div>
@@ -1614,7 +1621,7 @@
                             <div
                                 class="accordion-section border-b border-gray-200 pb-4">
                                 <button
-                                    class="accordion-toggle flex justify-between items-center w-full text-left">
+                                    class="accordion-toggle flex justify-between items-center w-full text-left"  aria-label="language">
                                     <h4
                                         class="font-semibold text-gray-800">Language</h4>
                                     <svg
@@ -1647,7 +1654,7 @@
                             <!-- Edition Accordion -->
                             <div class="accordion-section">
                                 <button
-                                    class="accordion-toggle flex justify-between items-center w-full text-left">
+                                    class="accordion-toggle flex justify-between items-center w-full text-left"  aria-label="edition">
                                     <h4
                                         class="font-semibold text-gray-800">Edition</h4>
                                     <svg

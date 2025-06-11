@@ -216,7 +216,7 @@ height: 30px !important;
                                 <!-- Back Button + Search Input -->
                                 <div
                                     class="flex items-center gap-2 p-3 border-b border-gray-300">
-                                    <button id="closeSearch">
+                                    <button id="closeSearch"  aria-label="close search">
                                         <svg class="w-6 h-6 text-gray-700"
                                             fill="none"
                                             stroke="currentColor"
@@ -478,7 +478,7 @@ height: 30px !important;
                                 <!-- Premium Subscription Dropdown -->
                                 <li class="relative group py-4">
                                     <button
-                                        class="text-left hover:text-blue-500 flex items-center text-sm">
+                                        class="text-left hover:text-blue-500 flex items-center text-sm"  aria-label="premium subscription">
                                         PREMIUM SUBSCRIPTION
                                         <span class="ml-2 droparrow w-5 h-3">
 
@@ -501,7 +501,7 @@ height: 30px !important;
                                 <!-- Magazines Mega Menu -->
                                 <li class="group z-50 py-4">
                                     <button
-                                        class="text-left hover:text-blue-500 flex items-center text-sm">
+                                        class="text-left hover:text-blue-500 flex items-center text-sm"  aria-label="magazines">
                                         MAGAZINES
                                         <span class="ml-2 droparrow w-5 h-3">
 
@@ -653,7 +653,7 @@ height: 30px !important;
                                 <!-- Books Dropdown -->
                                 <li class="group z-50 py-4">
                                     <button
-                                        class="text-left hover:text-blue-500 flex items-center text-sm">
+                                        class="text-left hover:text-blue-500 flex items-center text-sm" aria-label="books">
                                         Books
                                         <span class="ml-2 droparrow w-5 h-3">
 
@@ -1000,7 +1000,7 @@ height: 30px !important;
 
                                 <li class="relative group py-4">
                                     <button
-                                        class="text-left hover:text-blue-500 flex items-center text-sm">
+                                        class="text-left hover:text-blue-500 flex items-center text-sm" aria-label="more">
                                         MORE
                                         <span class="ml-2 droparrow w-5 h-3">
 
@@ -1033,13 +1033,14 @@ height: 30px !important;
 
             <!-- Price Section -->
             <div class="flex flex-col">
-                <div class="text-xl font-semibold text-gray-900">₹105</div>
+                <div class="text-xl font-semibold text-gray-900">₹105 <span class="info relative"></span></div>
                 <div class="text-sm text-gray-500">MRP : ₹350</div>
             </div>
 
             <!-- Add to Cart Button -->
             <button
-                class="text-white text-sm font-semibold py-3 px-6 rounded-md shadow-md primary-button-bg ">
+                class="text-white text-sm font-semibold py-3 mobileaddcart rounded-md shadow-md primary-button-bg relative" aria-label="add to cart">
+               <span class="addcart1 "></span>
                 Add To Cart
             </button>
         </div>
@@ -1164,6 +1165,7 @@ height: 30px !important;
                         <button
                             class="primary-button-bg w-full font-medium py-4 px-6 rounded text-white justify-center gap-2 text-center hidden md:flex"
                             aria-label="Add Muthassiye Njan Vaayikkan Padippichathum Mattu Kathakalum to cart">
+                             <span class="addcart relative"></span>
                             ADD TO CART
                         </button>
                     </div>
@@ -1444,7 +1446,7 @@ height: 30px !important;
                                     width="170"
                                     height="225"
                                     class="rounded-full w-12 h-12"
-                                    loading="lazy">
+                                    loading="lazy"/>
                             </div>
                             <p
                                 class="font-semibold text-md text-gray-900">Oswaal
