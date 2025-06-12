@@ -10,14 +10,14 @@
     background: url(../img/icons/sprite.svg) no-repeat -64px -261px;
 }
 .info::after {
-    content: "";
+content: "";
     position: absolute;
     top: 4px;
     right: -20px;
     width: 1.1rem;
     height: 1.1rem;
     z-index: 10;
-    background: url(../img/icons/sprite.svg) no-repeat -124px -262px;
+    background: url(../img/icons/sprite.svg) no-repeat -125px -264px;
 }
 .mobileaddcart {
     padding: 0 20px 0 48px;
@@ -30,7 +30,7 @@
     width: 1.8rem;
     height: 1.8rem;
     z-index: 10;
-    background: url(../img/icons/sprite.svg) no-repeat -25px -21px;
+    background: url(../img/icons/sprite.svg) no-repeat -17px -21px;
     filter: brightness(0) invert(1);
 }
 .addcart::after {
@@ -41,7 +41,7 @@
     width: 1.8rem;
     height: 1.8rem;
     z-index: 10;
-    background: url(../img/icons/sprite.svg) no-repeat -25px -21px;
+    background: url(../img/icons/sprite.svg) no-repeat -22px -21px;
     filter: brightness(0) invert(1);
 }
 .growth::after {
