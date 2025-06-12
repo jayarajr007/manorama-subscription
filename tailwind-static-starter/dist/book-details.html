@@ -167,185 +167,204 @@
                     <!-- Global Search End-->
                     <div class="flex nav-options ">
 
-                        <a class href="#" id="openSearch" aria-label="mobile-search">
+                        <a class href="#" id="m-openSearch" aria-label="mobile-search">
                             <div class="w-8 h-8 i-search-m mr-3 md:hidden"></div>
                         </a>
 
                         <!-- Search Overlay -->
-                        <div id="searchOverlay"
-                            class="fixed inset-0 z-50 bg-white p-0 overflow-y-auto hidden transition-opacity duration-300">
-                            <!-- Back Button + Search Input -->
-                            <div class="flex items-center gap-2 p-3 border-b border-gray-300">
-                                <button id="closeSearch" aria-label="close search">
-                                    <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M15 19l-7-7 7-7" />
-                                    </svg>
-                                </button>
-                                <div class="global-search items-center border border-gray-300 rounded-md px-3 py-2 w-full"
-                                    id="search-container">
-                                    <div class="flex ">
-                                        <span class="mobile-search">
+                         <div id="m-searchOverlay"
+                                class="fixed inset-0 z-50 bg-white p-0 overflow-y-auto hidden transition-opacity duration-300">
+                                <!-- Back Button + Search Input -->
+                                <div
+                                    class="flex items-center gap-2 p-3 border-b border-gray-300">
+                                    <button id="m-closeSearch" aria-label="closeSearch">
+                                        <svg class="w-6 h-6 text-gray-700"
+                                            fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M15 19l-7-7 7-7" />
+                                        </svg>
+                                    </button>
+                                    <div
+                                        class="global-search items-center border border-gray-300 rounded-md px-3 py-2 w-full"
+                                        id="m-search-container">
+                                        <div class="flex ">
+                                            <span class="mobile-search">
 
-                                        </span>
-                                        <input type="text" placeholder="Search For Title, Author Or Keyword.."
-                                            class="bg-transparent outline-none text-sm w-full" id="searchInput" />
+                                            </span>
+                                            <input type="text"
+                                                placeholder="Search For Title, Author Or Keyword.."
+                                                class="bg-transparent outline-none text-sm w-full"
+                                                id="m-searchInput" />
 
-                                    </div>
-                                    <div id="suggestionDropdown"
-                                        class="hidden absolute top-12 w-full bg-white shadow-xl rounded-lg p-4 z-50 left-0">
-                                        <!-- Recent Searches -->
-                                        <div class="mb-4">
-                                            <p class="text-sm text-black font-semibold mb-1">Recent
-                                                Searches</p>
-                                            <!-- Each item -->
-                                            <div
-                                                class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
-                                                <span class="suggestion-icon">
-
-                                                </span>
-
-                                                <span>Pravasaikalkkum
-                                                    Vanithakkalkum 50
-                                                    Samrambhangal</span>
-                                            </div>
-                                            <div
-                                                class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
-                                                <span class="suggestion-icon">
-
-                                                </span>
-
-                                                <span>Vanitha</span>
-                                            </div>
-                                            <div
-                                                class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
-                                                <span class="suggestion-icon">
-
-                                                </span>
-
-                                                <span>Vanitha Hindi</span>
-                                            </div>
-                                            <div
-                                                class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
-                                                <span class="suggestion-icon">
-
-                                                </span>
-
-                                                <span>Vanitha
-                                                    Pachakam</span>
-                                            </div>
-                                            <div
-                                                class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
-                                                <span class="suggestion-icon">
-
-                                                </span>
-
-                                                <span>Week &amp; Vanitha
-                                                    Combo</span>
-                                            </div>
                                         </div>
-                                        <!-- Popular Searches -->
-                                        <div class="mb-4">
-                                            <p class="text-sm text-black font-semibold mb-3">Popular
-                                                Searches</p>
-                                            <div class="flex flex-wrap gap-2 text-sm">
-                                                <span
-                                                    class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Manorama
-                                                    Premium</span>
-                                                <span
-                                                    class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Astro</span>
-                                                <span
-                                                    class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Manorama
-                                                    MAX</span>
-                                                <span
-                                                    class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Epaper</span>
-                                                <span
-                                                    class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Books</span>
-                                                <span
-                                                    class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Year
-                                                    Book</span>
+                                        <div id="m-suggestionDropdown"
+                                            class="hidden absolute top-12 w-full bg-white shadow-xl rounded-lg p-4 z-50 left-0">
+                                            <!-- Recent Searches -->
+                                            <div class="mb-4">
+                                                <p
+                                                    class="text-sm text-black font-semibold mb-1">Recent
+                                                    Searches</p>
+                                                <!-- Each item -->
+                                                <div
+                                                    class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
+                                                    <span
+                                                        class="suggestion-icon">
+
+                                                    </span>
+
+                                                    <span>Pravasaikalkkum
+                                                        Vanithakkalkum 50
+                                                        Samrambhangal</span>
+                                                </div>
+                                                <div
+                                                    class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
+                                                    <span
+                                                        class="suggestion-icon">
+
+                                                    </span>
+
+                                                    <span>Vanitha</span>
+                                                </div>
+                                                <div
+                                                    class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
+                                                    <span
+                                                        class="suggestion-icon">
+
+                                                    </span>
+
+                                                    <span>Vanitha Hindi</span>
+                                                </div>
+                                                <div
+                                                    class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
+                                                    <span
+                                                        class="suggestion-icon">
+
+                                                    </span>
+
+                                                    <span>Vanitha
+                                                        Pachakam</span>
+                                                </div>
+                                                <div
+                                                    class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
+                                                    <span
+                                                        class="suggestion-icon">
+
+                                                    </span>
+
+                                                    <span>Week &amp; Vanitha
+                                                        Combo</span>
+                                                </div>
                                             </div>
+                                            <!-- Popular Searches -->
+                                            <div class="mb-4">
+                                                <p
+                                                    class="text-sm text-black font-semibold mb-3">Popular
+                                                    Searches</p>
+                                                <div
+                                                    class="flex flex-wrap gap-2 text-sm">
+                                                    <span
+                                                        class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Manorama
+                                                        Premium</span>
+                                                    <span
+                                                        class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Astro</span>
+                                                    <span
+                                                        class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Manorama
+                                                        MAX</span>
+                                                    <span
+                                                        class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Epaper</span>
+                                                    <span
+                                                        class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Books</span>
+                                                    <span
+                                                        class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Year
+                                                        Book</span>
+                                                </div>
+                                            </div>
+                                            <!-- Keep Shopping For -->
                                         </div>
-                                        <!-- Keep Shopping For -->
                                     </div>
                                 </div>
+                                <div id
+                                    class="  top-12 w-full bg-white rounded-lg p-4 z-50 left-0">
+                                    <!-- Recent Searches -->
+                                    <div class="pb-4 border-b border-gray-300">
+                                        <p
+                                            class="text-sm text-black font-semibold mb-1">Recent
+                                            Searches</p>
+                                        <!-- Each item -->
+                                        <div
+                                            class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-0 py-2 rounded">
+                                            <span class="suggestion-icon">
+
+                                            </span>
+
+                                            <span>Pravasaikalkkum Vanithakkalkum
+                                                50
+                                                Samrambhangal</span>
+                                        </div>
+                                        <div
+                                            class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-0 py-2 rounded">
+                                            <span class="suggestion-icon">
+
+                                            </span>
+
+                                            <span>Vanitha</span>
+                                        </div>
+                                        <div
+                                            class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-0 py-2 rounded">
+                                            <span class="suggestion-icon">
+
+                                            </span>
+
+                                            <span>Vanitha Hindi</span>
+                                        </div>
+                                        <div
+                                            class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-0 py-2 rounded">
+                                            <span class="suggestion-icon">
+
+                                            </span>
+
+                                            <span>Vanitha Pachakam</span>
+                                        </div>
+                                        <div
+                                            class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-0 py-2 rounded">
+                                            <span class="suggestion-icon">
+
+                                            </span>
+
+                                            <span>Week & Vanitha Combo</span>
+                                        </div>
+                                    </div>
+                                    <!-- Popular Searches -->
+                                    <div class="mb-4 pt-4">
+                                        <p
+                                            class="text-sm text-black font-semibold mb-3">Popular
+                                            Searches</p>
+                                        <div
+                                            class="flex flex-wrap gap-2 text-sm">
+                                            <span
+                                                class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Manorama
+                                                Premium</span>
+                                            <span
+                                                class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Astro</span>
+                                            <span
+                                                class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Manorama
+                                                MAX</span>
+                                            <span
+                                                class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Epaper</span>
+                                            <span
+                                                class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Books</span>
+                                            <span
+                                                class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Year
+                                                Book</span>
+                                        </div>
+                                    </div>
+                                    <!-- Keep Shopping For -->
+                                </div>
+
                             </div>
-                            <div id class="  top-12 w-full bg-white rounded-lg p-4 z-50 left-0">
-                                <!-- Recent Searches -->
-                                <div class="pb-4 border-b border-gray-300">
-                                    <p class="text-sm text-black font-semibold mb-1">Recent
-                                        Searches</p>
-                                    <!-- Each item -->
-                                    <div
-                                        class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-0 py-2 rounded">
-                                        <span class="suggestion-icon">
-
-                                        </span>
-
-                                        <span>Pravasaikalkkum Vanithakkalkum
-                                            50
-                                            Samrambhangal</span>
-                                    </div>
-                                    <div
-                                        class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-0 py-2 rounded">
-                                        <span class="suggestion-icon">
-
-                                        </span>
-
-                                        <span>Vanitha</span>
-                                    </div>
-                                    <div
-                                        class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-0 py-2 rounded">
-                                        <span class="suggestion-icon">
-
-                                        </span>
-
-                                        <span>Vanitha Hindi</span>
-                                    </div>
-                                    <div
-                                        class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-0 py-2 rounded">
-                                        <span class="suggestion-icon">
-
-                                        </span>
-
-                                        <span>Vanitha Pachakam</span>
-                                    </div>
-                                    <div
-                                        class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-0 py-2 rounded">
-                                        <span class="suggestion-icon">
-
-                                        </span>
-
-                                        <span>Week & Vanitha Combo</span>
-                                    </div>
-                                </div>
-                                <!-- Popular Searches -->
-                                <div class="mb-4 pt-4">
-                                    <p class="text-sm text-black font-semibold mb-3">Popular
-                                        Searches</p>
-                                    <div class="flex flex-wrap gap-2 text-sm">
-                                        <span
-                                            class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Manorama
-                                            Premium</span>
-                                        <span
-                                            class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Astro</span>
-                                        <span
-                                            class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Manorama
-                                            MAX</span>
-                                        <span
-                                            class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Epaper</span>
-                                        <span
-                                            class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Books</span>
-                                        <span
-                                            class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Year
-                                            Book</span>
-                                    </div>
-                                </div>
-                                <!-- Keep Shopping For -->
-                            </div>
-
-                        </div>
 
                         <!-- Cart Icon -->
                         <a href="#" aria-label="cart">

@@ -1,63 +1,47 @@
+$(document).ready(function () {
+    // Common function for handling search dropdown behavior
+    function setupSearch(inputId, dropdownId, containerId) {
+        const input = document.getElementById(inputId);
+        const dropdown = document.getElementById(dropdownId);
+        const container = document.getElementById(containerId);
 
+        if (!input || !dropdown || !container) return; // safety check
 
-$( document ).ready(function() {
+        input.addEventListener('focus', () => {
+            dropdown.classList.remove('hidden');
+        });
 
-    const input = document.getElementById('searchInput');
-const dropdown = document.getElementById('suggestionDropdown');
-
-input.addEventListener('focus', () => {
-    dropdown.classList.remove('hidden');
-});
-
-document.addEventListener('click', (e) => {
-    const container = document.getElementById('search-container');
-    if (!container.contains(e.target)) {
-        dropdown.classList.add('hidden');
+        document.addEventListener('click', (e) => {
+            if (!container.contains(e.target)) {
+                dropdown.classList.add('hidden');
+            }
+        });
     }
-});
 
+    // Initialize search dropdowns for desktop and mobile
+    setupSearch('searchInput', 'suggestionDropdown', 'search-container');
+    setupSearch('m-searchInput', 'm-suggestionDropdown', 'm-search-container');
+
+    // Overlay open/close for desktop
     $('#openSearch').click(function () {
-      $('#searchOverlay').removeClass('hidden').addClass('block');
+        $('#searchOverlay').removeClass('hidden').addClass('block');
     });
 
     $('#closeSearch').click(function () {
-      $('#searchOverlay').addClass('hidden').removeClass('block');
+        $('#searchOverlay').addClass('hidden').removeClass('block');
     });
 
-
-
-      const input1 = document.getElementById('m-searchInput');
-const dropdown1 = document.getElementById('m-suggestionDropdown');
-
-input1.addEventListener('focus', () => {
-    dropdown1.classList.remove('hidden');
-});
-
-document.addEventListener('click', (e) => {
-    const container = document.getElementById('m-search-container');
-    if (!container.contains(e.target)) {
-        dropdown.classList.add('hidden');
-    }
-});
-
+    // Overlay open/close for mobile
     $('#m-openSearch').click(function () {
-      $('#m-searchOverlay').removeClass('hidden').addClass('block');
+        $('#m-searchOverlay').removeClass('hidden').addClass('block');
     });
 
     $('#m-closeSearch').click(function () {
-      $('#m-searchOverlay').addClass('hidden').removeClass('block');
+        $('#m-searchOverlay').addClass('hidden').removeClass('block');
     });
-
-
-
-
 });
 
-
-
-
-
-
+// Favorite toggle function remains same
 function toggleFav(button) {
     const outline = button.querySelector('.outline-heart');
     const filled = button.querySelector('.filled-heart');
@@ -65,16 +49,3 @@ function toggleFav(button) {
     outline.classList.toggle('hidden');
     filled.classList.toggle('hidden');
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
