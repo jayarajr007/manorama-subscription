@@ -26,6 +26,31 @@ document.addEventListener('click', (e) => {
 
 
 
+      const input1 = document.getElementById('m-searchInput');
+const dropdown1 = document.getElementById('m-suggestionDropdown');
+
+input1.addEventListener('focus', () => {
+    dropdown1.classList.remove('hidden');
+});
+
+document.addEventListener('click', (e) => {
+    const container = document.getElementById('m-search-container');
+    if (!container.contains(e.target)) {
+        dropdown.classList.add('hidden');
+    }
+});
+
+    $('#m-openSearch').click(function () {
+      $('#m-searchOverlay').removeClass('hidden').addClass('block');
+    });
+
+    $('#m-closeSearch').click(function () {
+      $('#m-searchOverlay').addClass('hidden').removeClass('block');
+    });
+
+
+
+
 });
 
 
