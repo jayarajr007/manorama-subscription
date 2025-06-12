@@ -90,7 +90,7 @@ window.onload = function () {
 
 
 
-// document.getElementById('category-close').addEventListener('click', function () { document.getElementById('categoryMenu').classList.add('hidden'); });
+document.getElementById('category-close').addEventListener('click', function () { document.getElementById('categoryMenu').classList.add('hidden'); });
 
 
 
