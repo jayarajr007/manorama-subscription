@@ -158,3 +158,15 @@
   background:#0074ED;
 }
 
+
+.sub-tab-btn
+{
+   padding-left: 0px;
+}
+.sub-active-tab
+{
+  padding-left: 0px;
+  padding-right: 15px;
+  color: #0074ED;
+  font-weight: 600;
+}
