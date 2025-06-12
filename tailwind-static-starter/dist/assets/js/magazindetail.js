@@ -27,7 +27,15 @@ $(window).on('load', function () {
     });
 
 
+  $('.sub-tab-btn').click(function () {
+        var tabID = $(this).data('tab');
 
+        $('.sub-tab-btn').removeClass('border-blue-500 text-blue-600 sub-active-tab');
+        $(this).addClass('border-blue-500 text-blue-600 sub-active-tab');
+
+        $('.sub-tab-content').addClass('hidden');
+        $('#' + tabID).removeClass('hidden');
+      });
 
    
 
