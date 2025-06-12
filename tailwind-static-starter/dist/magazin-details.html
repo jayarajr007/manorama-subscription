@@ -26,7 +26,13 @@
         .large-thumb-slider:not(.slick-initialized) div.bg-white {
             max-width: 260px;
         }
+.slider-singleissue:not(.slick-initialized)>div:not(:first-child) {
+            display: none;
+        }
 
+        .slider-singleissue:not(.slick-initialized) div.bg-white {
+            max-width: 260px;
+        }
         .thumb-wrapper {
             padding-top: 131.57894736842104%
         }
@@ -1116,11 +1122,12 @@
 
                 <div class="w-full sm:w-full md:w-[30%] lg:w-[30%]">
                     <div
-                        class="border border-white md:border-gray-200 rounded-lg p-3 border-b">
+                        class="border border-white md:border-gray-200 rounded-lg p-3 border-b relative">
+                        
                         <div class="large-thumb-slider">
-
+                            
                             <div
-                                class="max-w-[200px] md:max-w-[300px] w-full mx-auto">
+                                class="max-w-[300px] md:max-w-[300px] w-full mx-auto">
                                 <div
                                     class="thumb-item thumb-wrapper relative overflow-hidden ">
                                     <img
@@ -1128,6 +1135,7 @@
                                         alt="Book cover: Muthassiye Njan Vaayikkan Padippichathum Mattu Kathakalum by Sudha Murty"
                                         width="266" height="350"
                                         class="rounded-md w-full " />
+                                        <div class="discunt absolute right-4 bottom-4 z-50 redlight rounded-full w-12 h-12 flex items-center justify-center text-white font-medium text-sm">30% <br/>OFF</div>
                                 </div>
                             </div>
                             <div
@@ -1139,6 +1147,7 @@
                                         alt="Book cover: Muthassiye Njan Vaayikkan Padippichathum Mattu Kathakalum by Sudha Murty"
                                         width="266" height="350"
                                         class="rounded-md w-full " />
+                                        <div class="discunt absolute right-4 bottom-4 z-50 redlight rounded-full w-12 h-12 flex items-center justify-center text-white font-medium text-sm">30% <br/>OFF</div>
                                 </div>
                             </div>
                             <div
@@ -1150,6 +1159,7 @@
                                         alt="Book cover: Muthassiye Njan Vaayikkan Padippichathum Mattu Kathakalum by Sudha Murty"
                                         width="266" height="350"
                                         class="rounded-md w-full " />
+                                        <div class="discunt absolute right-4 bottom-4 z-50 redlight rounded-full w-12 h-12 flex items-center justify-center text-white font-medium text-sm">30% <br/>OFF</div>
                                 </div>
                             </div>
                             <!-- 
@@ -1431,8 +1441,192 @@
                         </div>
 
                         <div id="single" class="sub-tab-content hidden">
+                            <div class="slider-singleissue slick-slider">
 
-                            <!-- <div class="single-issue-slider"> 
+                                <!-- Item 1 -->
+                                <div class>
+                                    <div class="relative">
+                                        <img
+                                            src="assets/images/magazin/2.webp"
+                                            alt="Cover"
+                                            class="w-full h-full object-cover rounded"
+                                            loading="lazy" />
+                                    </div>
+                                    <div
+                                        class="flex items-center gap-2 mt-2">
+                                        <input type="checkbox" checked
+                                            class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                            aria-label="checkbox" />
+                                        <h3
+                                            class="text-sm mt-2 mb-1">Current
+                                            Issue</h3>
+                                    </div>
+                                </div>
+
+                                <!-- Item 2 -->
+                                <div class>
+                                        <div class="relative">
+                                            <img
+                                                src="assets/images/magazin/5.webp"
+                                                alt="Cover"
+                                                class="w-full h-full object-cover rounded"
+                                                loading="lazy" />
+                                        </div>
+                                        <div
+                                            class="flex items-center gap-2 mt-2">
+                                            <input type="checkbox"
+                                                class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                                aria-label="checkbox" />
+                                            <h3 class="text-sm mt-2 mb-1">16
+                                                Sep </h3>
+                                        </div>
+
+                                </div>
+
+                                <!-- Item 3 -->
+                                <div class>
+                                    <div class="relative">
+                                        <img
+                                            src="assets/images/magazin/2.webp"
+                                            alt="Cover"
+                                            class="w-full h-full object-cover rounded"
+                                            loading="lazy" />
+                                    </div>
+                                    <div
+                                        class="flex items-center gap-2 mt-2">
+                                        <input type="checkbox"
+                                            class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                            aria-label="checkbox" />
+                                        <h3 class="text-sm mt-2 mb-1">16
+                                            Sep </h3>
+                                    </div>
+
+                                </div>
+
+                                <!-- Item 4 -->
+                                <div class>
+                                    <div class="relative">
+                                        <img
+                                            src="assets/images/magazin/1.webp"
+                                            alt="Cover"
+                                            class="w-full h-full object-cover rounded"
+                                            loading="lazy" />
+                                    </div>
+                                    <div
+                                        class="flex items-center gap-2 mt-2">
+                                        <input type="checkbox"
+                                            class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                            aria-label="checkbox" />
+                                        <h3 class="text-sm mt-2 mb-1">16
+                                            Sep </h3>
+                                    </div>
+
+                                </div>
+
+                                <!-- Item 5 -->
+                                <div class>
+                                    <div class="relative">
+                                        <img
+                                            src="assets/images/magazin/3.webp"
+                                            alt="Cover"
+                                            class="w-full h-full object-cover rounded"
+                                            loading="lazy" />
+                                    </div>
+                                    <div
+                                        class="flex items-center gap-2 mt-2">
+                                        <input type="checkbox"
+                                            class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                            aria-label="checkbox" />
+                                        <h3 class="text-sm mt-2 mb-1">16
+                                            Sep </h3>
+                                    </div>
+
+                                </div>
+                                <!-- Item 6 -->
+                                <div class>
+                                        <div class="relative">
+                                            <img
+                                                src="assets/images/magazin/5.webp"
+                                                alt="Cover"
+                                                class="w-full h-full object-cover rounded"
+                                                loading="lazy" />
+                                        </div>
+                                        <div
+                                            class="flex items-center gap-2 mt-2">
+                                            <input type="checkbox"
+                                                class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                                aria-label="checkbox" />
+                                            <h3 class="text-sm mt-2 mb-1">16
+                                                Sep </h3>
+                                        </div>
+
+                                </div>
+
+                                <!-- Item 7 -->
+                                <div class>
+                                    <div class="relative">
+                                        <img
+                                            src="assets/images/magazin/2.webp"
+                                            alt="Cover"
+                                            class="w-full h-full object-cover rounded"
+                                            loading="lazy" />
+                                    </div>
+                                    <div
+                                        class="flex items-center gap-2 mt-2">
+                                        <input type="checkbox"
+                                            class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                            aria-label="checkbox" />
+                                        <h3 class="text-sm mt-2 mb-1">16
+                                            Sep </h3>
+                                    </div>
+
+                                </div>
+
+                                <!-- Item 8 -->
+                                <div class>
+                                    <div class="relative">
+                                        <img
+                                            src="assets/images/magazin/1.webp"
+                                            alt="Cover"
+                                            class="w-full h-full object-cover rounded"
+                                            loading="lazy" />
+                                    </div>
+                                    <div
+                                        class="flex items-center gap-2 mt-2">
+                                        <input type="checkbox"
+                                            class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                            aria-label="checkbox" />
+                                        <h3 class="text-sm mt-2 mb-1">16
+                                            Sep </h3>
+                                    </div>
+
+                                </div>
+
+                                <!-- Item 9 -->
+                                <div class>
+                                    <div class="relative">
+                                        <img
+                                            src="assets/images/magazin/3.webp"
+                                            alt="Cover"
+                                            class="w-full h-full object-cover rounded"
+                                            loading="lazy" />
+                                    </div>
+                                    <div
+                                        class="flex items-center gap-2 mt-2">
+                                        <input type="checkbox"
+                                            class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                            aria-label="checkbox" />
+                                        <h3 class="text-sm mt-2 mb-1">16
+                                            Sep </h3>
+                                    </div>
+
+                                </div>
+
+
+
+
+                            </div>
+                        <!-- <div class="single-issue-slider"> 
                             <div class="single-issue-item">
                                 <div class="relative">
                                     <img
@@ -1537,7 +1731,7 @@
                            
                              </div> -->
 
-                            <div
+                            <!-- <div
                                 class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-3 lg:grid-cols-5 gap-4">
                                 <div class>
                                     <div class="relative">
@@ -1630,7 +1824,7 @@
                                     </div>
 
                                 </div>
-                            </div>
+                            </div> -->
                             <p class="mt-6 mb-2 text-sm">Digital</p>
                             <p class=" mb-4 "><span
                                     class="font-semibold text-2xl">₹110</span>/
@@ -2151,14 +2345,35 @@
 
         <script src="assets/js/magazindetail.js" defer></script>
 
-        <script>
+   <script>
+        $(window).on('load', function () {
+            $('.slider-singleissue').slick({
+                slidesToShow: 5, // Show 5 items on large screens
+                slidesToScroll: 1,
+                dots: false,
+                arrows: true, infinite: false,
+                centerMode: false,  // Disable to prevent extra space
+                variableWidth: false, // Ensure uniform width
 
 
+                responsive: [
+                    {
+                        breakpoint: 1024, // Medium screens
+                        settings: { slidesToShow: 4 }
+                    },
+                    {
+                        breakpoint: 768, // Small screens
+                        settings: { slidesToShow: 3 }
+                    },
+                    {
+                        breakpoint: 480, // Extra small screens
+                        settings: { slidesToShow: 3 }
+                    }
+                ]
+            });
 
-
-
-    
-  </script>
+        });
+   </script>
 
     </body>
 

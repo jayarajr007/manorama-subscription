@@ -9,6 +9,7 @@
 	--gray-bg:#F8F8F8;
 	--lightblue:#F6F6F6;
 	--lightblue1:#F1F8FF;
+	--red-light:#ed002b;
 }
 
 .dark-bg {
@@ -33,6 +34,9 @@
 .gray-bg
 {
 	background-color: var(--gray-bg);
+}
+.redlight{
+	background-color: var(--red-light);
 }
 
 .preorder{

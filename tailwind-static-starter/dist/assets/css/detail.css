@@ -33,6 +33,11 @@ content: "";
     background: url(../img/icons/sprite.svg) no-repeat -17px -21px;
     filter: brightness(0) invert(1);
 }
+/* .discunt {
+    right: 17%;
+    z-index: 9;
+    bottom: 23%;
+} */
 .addcart::after {
     content: "";
     position: absolute;
