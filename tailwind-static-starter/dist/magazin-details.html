@@ -1127,14 +1127,14 @@
                         <div class="large-thumb-slider">
                             
                             <div
-                                class="max-w-[300px] md:max-w-[300px] w-full mx-auto">
+                                class="max-w-[200px] md:max-w-[300px] w-full mx-auto">
                                 <div
                                     class="thumb-item thumb-wrapper relative overflow-hidden ">
                                     <img
                                         src="assets/images/magazin/manorama.webp"
                                         alt="Book cover: Muthassiye Njan Vaayikkan Padippichathum Mattu Kathakalum by Sudha Murty"
-                                        width="266" height="350"
-                                        class="rounded-md w-full " />
+                                        width="266" height="350" 
+                                        class="rounded-md w-full" />
                                         <div class="discunt absolute right-4 bottom-4 z-50 redlight rounded-full w-12 h-12 flex items-center justify-center text-white font-medium text-sm">30% <br/>OFF</div>
                                 </div>
                             </div>
@@ -1444,7 +1444,7 @@
                             <div class="slider-singleissue slick-slider">
 
                                 <!-- Item 1 -->
-                                <div class>
+                                <div class="md:px-2 px-1 pb-2">
                                     <div class="relative">
                                         <img
                                             src="assets/images/magazin/2.webp"
@@ -1453,18 +1453,16 @@
                                             loading="lazy" />
                                     </div>
                                     <div
-                                        class="flex items-center gap-2 mt-2">
-                                        <input type="checkbox" checked
-                                            class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                            aria-label="checkbox" />
-                                        <h3
-                                            class="text-sm mt-2 mb-1">Current
-                                            Issue</h3>
-                                    </div>
+                                            class="flex items-center gap-2 mt-2">
+                                            <input type="checkbox" checked
+                                                class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                                aria-label="checkbox" />
+                                            <h3 class="text-sm mt-2 mb-1">Current Issue </h3>
+                                        </div>
                                 </div>
 
                                 <!-- Item 2 -->
-                                <div class>
+                                <div class="md:px-2 px-1 pb-2">
                                         <div class="relative">
                                             <img
                                                 src="assets/images/magazin/5.webp"
@@ -1484,7 +1482,7 @@
                                 </div>
 
                                 <!-- Item 3 -->
-                                <div class>
+                                <div class="md:px-2 px-1 pb-2">
                                     <div class="relative">
                                         <img
                                             src="assets/images/magazin/2.webp"
@@ -1504,7 +1502,7 @@
                                 </div>
 
                                 <!-- Item 4 -->
-                                <div class>
+                                <div class="md:px-2 px-1 pb-2">
                                     <div class="relative">
                                         <img
                                             src="assets/images/magazin/1.webp"
@@ -1524,7 +1522,7 @@
                                 </div>
 
                                 <!-- Item 5 -->
-                                <div class>
+                                <div class="md:px-2 px-1 pb-2">
                                     <div class="relative">
                                         <img
                                             src="assets/images/magazin/3.webp"
@@ -1543,7 +1541,7 @@
 
                                 </div>
                                 <!-- Item 6 -->
-                                <div class>
+                                <div class="md:px-2 px-1 pb-2">
                                         <div class="relative">
                                             <img
                                                 src="assets/images/magazin/5.webp"
@@ -1563,7 +1561,7 @@
                                 </div>
 
                                 <!-- Item 7 -->
-                                <div class>
+                                <div class="md:px-2 px-1 pb-2">
                                     <div class="relative">
                                         <img
                                             src="assets/images/magazin/2.webp"
@@ -1583,7 +1581,7 @@
                                 </div>
 
                                 <!-- Item 8 -->
-                                <div class>
+                                <div class="md:px-2 px-1 pb-2">
                                     <div class="relative">
                                         <img
                                             src="assets/images/magazin/1.webp"
@@ -2340,40 +2338,14 @@
     </script> -->
 
         <script src="assets/libs/slick-slider/slick.min.js" defer></script>
+      
         <script src="assets/js/common.js" defer></script>
              <script src="assets/js/detail.js" defer></script>
+             
 
         <script src="assets/js/magazindetail.js" defer></script>
 
-   <script>
-        $(window).on('load', function () {
-            $('.slider-singleissue').slick({
-                slidesToShow: 5, // Show 5 items on large screens
-                slidesToScroll: 1,
-                dots: false,
-                arrows: true, infinite: false,
-                centerMode: false,  // Disable to prevent extra space
-                variableWidth: false, // Ensure uniform width
 
-
-                responsive: [
-                    {
-                        breakpoint: 1024, // Medium screens
-                        settings: { slidesToShow: 4 }
-                    },
-                    {
-                        breakpoint: 768, // Small screens
-                        settings: { slidesToShow: 3 }
-                    },
-                    {
-                        breakpoint: 480, // Extra small screens
-                        settings: { slidesToShow: 3 }
-                    }
-                ]
-            });
-
-        });
-   </script>
 
     </body>
 
