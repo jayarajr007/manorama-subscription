@@ -10,6 +10,7 @@
 	--lightblue:#F6F6F6;
 	--lightblue1:#F1F8FF;
 	--red-light:#ed002b;
+	--dark-bg-blue:#333994;
 }
 
 .dark-bg {
@@ -28,6 +29,9 @@
 .bg-creamlight{
 	background-color: var(--cream-light);
 }
+.bg-creamdark{
+	background-color: var(--cream-color);
+}
 .creamcol{
 	color: var(--cream-color);
 }
@@ -38,7 +42,9 @@
 .redlight{
 	background-color: var(--red-light);
 }
-
+.darkblue_bg{
+	background-color: var(--dark-bg-blue);
+}
 .preorder{
 	border: 1px solid var(--cream-light);
 	border-radius: var(--radius4);

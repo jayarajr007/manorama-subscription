@@ -175,3 +175,17 @@ content: "";
   color: #0074ED;
   font-weight: 600;
 }
+
+.greentick::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 1.2rem;
+    height: 1.2rem;
+    z-index: 10;
+    background: url(../img/icons/sprite.svg) no-repeat -55px -71px;
+}
+.recommeded {
+    top: -11px;
+}
