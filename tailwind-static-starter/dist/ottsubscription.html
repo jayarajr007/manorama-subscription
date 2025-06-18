@@ -16,45 +16,9 @@
 <link rel="preload" href="assets/css/output.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <link rel="stylesheet" href="assets/css/output.css">
         <link href="assets/css/common-crit.css" rel="stylesheet" />
+        <link href="assets/css/detail-crit.css" rel="stylesheet" />
 
-
-    <!-- Critical for only this page-->
-    <style>
-        /* Hide all slides except the first before Slick initializes */
-        .large-thumb-slider:not(.slick-initialized)>div:not(:first-child) {
-            display: none;
-        }
-
-        .large-thumb-slider:not(.slick-initialized) div.bg-white {
-            max-width: 260px;
-        }
-
-        .thumb-wrapper {
-            padding-top: 131.57894736842104%
-        }
-.shareicon::after {
-            top: -14px!important;
-        }
-        .thumb-wrapper img {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            object-position: center;
-            -webkit-border-radius: 6px;
-            border-radius: 6px;
-            background-clip: padding-box;
-        }
-
-        .large-thumb-slider .slick-dots {
-            height: 30px !important;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-    </style>
-
+   
 </head>
 
 <body class>
@@ -972,22 +936,24 @@
         </div>
     </header>
     <!-- Bottom Navigation - Mobile Only -->
-    <div
-        class="fixed bottom-0 left-0 w-full bg-white shadow-md border-t border-gray-200 z-50 p-4 flex md:hidden  justify-between">
+     <div
+            class="fixed bottom-0 left-0 w-full bg-white shadow-md border-t border-gray-200 z-50 p-4 flex md:hidden  justify-between">
 
-        <!-- Price Section -->
-        <div class="flex flex-col">
-            <div class="text-xl font-semibold text-gray-900">₹899 <span class="info relative"></span></div>
+            <!-- Price Section -->
+            <div class="flex flex-col">
+                <div class="text-xl font-semibold text-gray-900">₹899 <span
+                        class="info relative"></span></div>
+                <div class="text-sm text-gray-500">MRP : ₹1200</div>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <button
+                class="text-white text-sm font-semibold py-3 mobileaddcart rounded-md shadow-md primary-button-bg relative"
+                aria-label="add to cart">
+                <span class="addcart1 "></span>
+                Add To Cart
+            </button>
         </div>
-
-        <!-- Add to Cart Button -->
-        <button
-            class="text-white text-sm font-semibold py-3 mobileaddcart rounded-md shadow-md primary-button-bg relative"
-            aria-label="add to cart">
-            <span class="addcart1 "></span>
-            Add To Cart
-        </button>
-    </div>
 
     <!-- End Bottom Navigation - Mobile Only -->
     <!-- Mobile Category menu-->
@@ -1029,21 +995,21 @@
 
                         <div class="max-w-[200px] md:max-w-[300px] w-full mx-auto">
                             <div class="thumb-item thumb-wrapper relative overflow-hidden ">
-                                <img src="assets/images/subscription/5.webp"
+                                <img src="assets/images/max/thumb w.webp"
                                     alt="subscription"
                                     width="266" height="350" class="rounded-md w-full object-contain" />
                             </div>
                         </div>
                         <div class="max-w-[200px] md:max-w-[300px] mx-auto w-full">
                             <div class="thumb-item thumb-wrapper relative overflow-hidden">
-                                <img src="assets/images/subscription/5.webp"
+                                <img src="assets/images/max/thumb w.webp"
                                     alt="subscription"
                                     width="266" height="350" class="rounded-md w-full object-contain" />
                             </div>
                         </div>
                         <div class="max-w-[200px] md:max-w-[300px] mx-auto w-full">
                             <div class="thumb-item thumb-wrapper relative overflow-hidden">
-                                <img src="assets/images/subscription/5.webp"
+                                <img src="assets/images/max/thumb w.webp"
                                     alt="subscription"
                                     width="266" height="350" class="rounded-md w-full object-contain" />
                             </div>
@@ -1082,7 +1048,7 @@
                 </div>
                 <!-- Subscriptions section -->
                 <div class="available_format mt-4 pb-5  border-b">
-                    <h3 class="font-semibold text-gray-800 mb-6">Subscriptions</h3>
+                    <h3 class="font-semibold text-gray-800 mb-4">Subscriptions</h3>
 
                     <div class="w-full md:w-6/6 block">
                         <div class="flex flex-wrap gap-2 md:gap-4">
@@ -1129,24 +1095,24 @@
                 </div>
 
                 <!-- Benefits -->
-                <div class="border-b py-6">
+                <div class="border-b py-6 benifit-section">
                     <h3 class="font-semibold text-gray-800 mb-4">Benefits</h3>
                     
                     <div class="w-full block">
                         <ul class="px-4">
-                            <li class="mb-2 text-md flex gap-2">
+                            <li class="mb-2 text-md flex gap-2 text-sm">
                                 <span class="greentick relative"></span>
                                 <span>Ad-Free access</span>
                             </li>
-                            <li class="mb-2 text-md flex gap-2">
+                            <li class="mb-2 text-md flex gap-2 text-sm">
                                 <span class="greentick relative"></span>
                                 <span>400+ Movies</span>
                             </li>
-                            <li class="mb-2 text-md flex gap-2">
+                            <li class="mb-2 text-md flex gap-2 text-sm">
                                 <span class="greentick relative"></span>
                                 <span>Early Access to Mazhavil Manorama TV shows</span>
                             </li>
-                            <li class="mb-2 text-md flex gap-2">
+                            <li class="mb-2 text-md flex gap-2 text-sm">
                                 <span class="greentick relative"></span>
                                 <span>MAX Exclusives</span>
                             </li>
@@ -1155,14 +1121,14 @@
                 </div>
 
                 <!-- About Section -->
-                <div class="border-b py-6">
+                <div class="border-b py-6 about-section">
                     <h3 class="font-semibold text-gray-800 mb-4">About the
                         OTT</h3>
                     <p class="text-sm text-gray-700">manoramaMAX – The first Malayalam only OTT which offers the latest movies, TV serials and shows, web-series and News from the house of MM TV. On subscribing to our premium option on manoramaMAX, you get to watch movie premieres every month before they are aired on TV. You can even watch the current shows on Mazhavil Manorama prior to TV on the same day for almost all shows. manoramaMAX also brings to you MAX Originals. In case you do not choose premium, you can still catch the news and all the shows of Mazhavil at their respective times.Watch Malayalam TV Serials Online. Watch Full Malayalam Movies Online. Latest Malayalam Full Films. Malayalam Full Movie. New Malayalam Cinema. Manorama News Live | Speed_News | Ground Zero | Indepth | Video of the Day | Life Story | Live TV | Social World | Latest News | Conclave | Nattuvartha | Kuttapathram | Spotlight | Sports | Nere Chhove | National | International | Special Programmes | Counter Point | Thiruva Ethirva | Parayathe Vayya | Help Desk | Crime Story | Veedu | Choondu Viral | Nattupacha | Gulf This Week | Nallapadam | Events</p>
                 </div>
 
                 <!-- Product Details -->
-                <div class=" py-6">
+                <div class=" py-6 product-details">
                     <h3 class="font-semibold text-gray-800 mb-6">Product
                         Details</h3>
                     <ul class="product-details-list">

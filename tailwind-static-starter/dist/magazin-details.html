@@ -17,48 +17,9 @@
             onload="this.onload=null;this.rel='stylesheet'">
         <link rel="stylesheet" href="assets/css/output.css">
         <link href="assets/css/common-crit.css" rel="stylesheet" />
+         <link href="assets/css/detail-crit.css" rel="stylesheet" />
 
-        <!-- Critical for only this page-->
-        <style>
-        /* Hide all slides except the first before Slick initializes */
-        .large-thumb-slider:not(.slick-initialized)>div:not(:first-child) {
-            display: none;
-        }
-
-        .large-thumb-slider:not(.slick-initialized) div.bg-white {
-            max-width: 260px;
-        }
-.slider-singleissue:not(.slick-initialized)>div:not(:first-child) {
-            display: none;
-        }
-
-        .slider-singleissue:not(.slick-initialized) div.bg-white {
-            max-width: 260px;
-        }
-        .thumb-wrapper {
-            padding-top: 131.57894736842104%
-        }
-
-        .thumb-wrapper img {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-            -webkit-border-radius: 6px;
-            border-radius: 6px;
-            background-clip: padding-box;
-        }
-
-        .large-thumb-slider .slick-dots {
-            height: 30px !important;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-    </style>
+   
 
     </head>
 
@@ -1129,7 +1090,7 @@
                         <div class="large-thumb-slider">
 
                             <div
-                                class="max-w-[200px] md:max-w-[300px] w-full mx-auto">
+                                class="max-w-[200px] md:max-w-[290px] w-full mx-auto">
                                 <div
                                     class="thumb-item thumb-wrapper relative overflow-hidden ">
                                     <img
@@ -1241,7 +1202,7 @@
 
                         <div class="flex gap-2 pb-6">
                             <button
-                                class="px-6 py-3 border border-blue-500 rounded-sm font-medium bg-blue-50 text-black text-sm"
+                                class="px-6 py-3 border text-gray-600 rounded-sm text-sm active-format"
                                 aria-label="Print">Print</button>
                             <button
                                 class="px-6 py-3 border text-gray-600 rounded-sm text-sm"
@@ -1838,7 +1799,7 @@
                     </div>
 
                     <!-- Guaranteed Gifts -->
-                    <div class="border-b py-6">
+                    <div class="border-b py-6 guaranteed-gift">
                         <h3 class="font-semibold text-gray-800 mb-1">Select
                             Guaranteed Gifts</h3>
                         <p class="text-sm text-gray-600 mb-6">Select up to 2
@@ -1919,7 +1880,7 @@
                     </div>
 
                     <!-- About Section -->
-                    <div class="border-b py-6">
+                    <div class="border-b py-6 about-section">
                         <h3 class="font-semibold text-gray-800 mb-4">About the
                             Magazine</h3>
                         <p class="text-sm text-gray-700">
@@ -1935,7 +1896,7 @@
                     </div>
 
                     <!-- Product Details -->
-                    <div class="border-b py-6">
+                    <div class="border-b py-6 product-details">
                         <h3 class="font-semibold text-gray-800 mb-6">Product
                             Details</h3>
                         <ul class="product-details-list">
@@ -2326,32 +2287,6 @@
 
         <script src="assets/libs/Jquery/jquery-3.7.1.min.js"></script>
 
-        <!-- <script>
-
-        (function ($) {
-            if (!$.event) return;
-
-            var originalAdd = $.event.add;
-            $.event.add = function (elem, types, handler, data, selector) {
-                var passiveEvents = ['touchstart', 'touchmove', 'wheel', 'mousewheel', 'scroll'];
-                var options = false;
-
-                // If event type includes passive-supported event
-                if (passiveEvents.some(function (event) { return types.indexOf(event) >= 0; })) {
-                    options = { passive: true };
-                }
-
-                // Patch native addEventListener if available
-                if (elem.addEventListener) {
-                    elem.addEventListener(types, handler, options);
-                } else {
-                    // Fallback to original jQuery behavior if addEventListener not available
-                    originalAdd.call(this, elem, types, handler, data, selector);
-                }
-            };
-        })(jQuery);
-
-    </script> -->
 
         <script src="assets/libs/slick-slider/slick.min.js" defer></script>
 

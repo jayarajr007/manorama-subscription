@@ -16,44 +16,9 @@
 <link rel="preload" href="assets/css/output.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <link rel="stylesheet" href="assets/css/output.css">
         <link href="assets/css/common-crit.css" rel="stylesheet" />
+        <link href="assets/css/detail-crit.css" rel="stylesheet" />
 
 
-    <!-- Critical for only this page-->
-    <style>
-        /* Hide all slides except the first before Slick initializes */
-        .large-thumb-slider:not(.slick-initialized)>div:not(:first-child) {
-            display: none;
-        }
-
-        .large-thumb-slider:not(.slick-initialized) div.bg-white {
-            max-width: 260px;
-        }
-
-        .thumb-wrapper {
-            padding-top: 131.57894736842104%
-        }
-.shareicon::after {
-            top: -14px!important;
-        }
-        .thumb-wrapper img {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            object-position: center;
-            -webkit-border-radius: 6px;
-            border-radius: 6px;
-            background-clip: padding-box;
-        }
-
-        .large-thumb-slider .slick-dots {
-            height: 30px !important;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-    </style>
 
 </head>
 
@@ -1000,13 +965,21 @@
 
     <section class="max-w-full lg:max-w-[1550px] mx-auto px-4 my-4 pb-5  px-4 sm:px-6 lg:px-8  overflow-hidden ">
         <!-- Breadcrumb & Back -->
-        <div class="hidden md:flex items-center justify-between text-sm text-gray-500 mb-2  ">
-            <div class="text-[12px] ">
-                <a href="#" class="text-blue-500" aria-label="home">Home</a>
-                <span class="mx-1">/</span>
-                <span>Malayala Manorama E Paper</span>
+     
+
+
+        
+
+   <div
+                class="hidden md:flex items-center justify-between text-sm text-gray-500 mb-2 breadcrumb-list">
+                <div class="text-[12px] ">
+                    <a href="index.html" class="text-blue-500" aria-label="home">Home</a>
+                    <span class="mx-1">/</span>
+                    <span><a href="#" class="text-blue-500" aria-label="books">Malayala Manorama E Paper</a></span>
+                  
+                </div>
             </div>
-        </div>
+
 
         <!-- Layout -->
         <div class="flex flex-col md:flex-row lg:flex-row gap-1 md:gap-6 mt-4">
@@ -1030,21 +1003,21 @@
 
                         <div class="max-w-[200px] md:max-w-[300px] w-full mx-auto">
                             <div class="thumb-item thumb-wrapper relative overflow-hidden ">
-                                <img src="assets/images/epaper&news/a2.webp"
+                                <img src="assets/images/epaper&news/epaper.webp"
                                     alt="Epaper"
                                     width="266" height="350" class="rounded-md w-full object-contain" />
                             </div>
                         </div>
                         <div class="max-w-[200px] md:max-w-[300px] mx-auto w-full">
                             <div class="thumb-item thumb-wrapper relative overflow-hidden">
-                                <img src="assets/images/epaper&news/a2.webp"
+                                <img src="assets/images/epaper&news/epaper.webp"
                                     alt="Epaper"
                                     width="266" height="350" class="rounded-md w-full object-contain" />
                             </div>
                         </div>
                         <div class="max-w-[200px] md:max-w-[300px] mx-auto w-full">
                             <div class="thumb-item thumb-wrapper relative overflow-hidden">
-                                <img src="assets/images/epaper&news/a2.webp"
+                                <img src="assets/images/epaper&news/epaper.webp"
                                     alt="Epaper"
                                     width="266" height="350" class="rounded-md w-full object-contain" />
                             </div>
@@ -1103,89 +1076,89 @@
                     </div>
                 </div>
                  <!-- Subscriptions section -->
-                <div class="available_format mt-4 border-t pb-5 pt-5 border-b">
+                <div class="edition-section mt-4 border-t pb-5 pt-5 border-b">
                     <h3 class="font-semibold text-gray-800 mb-4">Select Edition</h3>
 
                     <div class="w-full md:w-6/6 block">
                         <div class="flex flex-wrap gap-2 md:gap-4">
                             <!-- edition -->
-                            <div class="grid grid-cols-2 gap-4 p-4">
-                                <div class="flex items-center">
+                            <div class="grid grid-cols-2 gap-4 ">
+                                <div class="flex items-center text-sm">
                                     <input type="checkbox" id="delhi" checked class="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
                                     <label for="delhi" class="ml-2 text-gray-800">Delhi</label>
                                 </div>
 
-                                <div class="flex items-center">
+                                <div class="flex items-center text-sm">
                                     <input type="checkbox" id="kannur" checked class="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
                                     <label for="kannur" class="ml-2 text-gray-800">Kannur</label>
                                 </div>
 
-                                <div class="flex items-center">
+                                <div class="flex items-center text-sm">
                                     <input type="checkbox" id="kollam" class="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
                                     <label for="kollam" class="ml-2 text-gray-800">Kollam</label>
                                 </div>
 
-                                <div class="flex items-center">
+                                <div class="flex items-center text-sm">
                                     <input type="checkbox" id="thrissur" class="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
                                     <label for="thrissur" class="ml-2 text-gray-800">Thrissur</label>
                                 </div>
 
-                                <div class="flex items-center">
+                                <div class="flex items-center text-sm">
                                     <input type="checkbox" id="pathanamthitta" class="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
                                     <label for="pathanamthitta" class="ml-2 text-gray-800">Pathanamthitta</label>
                                 </div>
 
-                                <div class="flex items-center">
+                                <div class="flex items-center text-sm">
                                     <input type="checkbox" id="bangalore" class="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
                                     <label for="bangalore" class="ml-2 text-gray-800">Bangalore</label>
                                 </div>
 
-                                <div class="flex items-center">
+                                <div class="flex items-center text-sm">
                                     <input type="checkbox" id="kozhikode" class="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
                                     <label for="kozhikode" class="ml-2 text-gray-800">Kozhikode</label>
                                 </div>
 
-                                <div class="flex items-center">
+                                <div class="flex items-center text-sm">
                                     <input type="checkbox" id="kochi" class="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
                                     <label for="kochi" class="ml-2 text-gray-800">Kochi</label>
                                 </div>
 
-                                <div class="flex items-center">
+                                <div class="flex items-center text-sm">
                                     <input type="checkbox" id="alappuzha" class="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
                                     <label for="alappuzha" class="ml-2 text-gray-800">Alappuzha</label>
                                 </div>
 
-                                <div class="flex items-center">
+                                <div class="flex items-center text-sm">
                                     <input type="checkbox" id="chennai" class="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
                                     <label for="chennai" class="ml-2 text-gray-800">Chennai</label>
                                 </div>
 
-                                <div class="flex items-center">
+                                <div class="flex items-center text-sm">
                                     <input type="checkbox" id="wayanad" class="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
                                     <label for="wayanad" class="ml-2 text-gray-800">Wayanad</label>
                                 </div>
 
-                                <div class="flex items-center">
+                                <div class="flex items-center text-sm">
                                     <input type="checkbox" id="idukki" class="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
                                     <label for="idukki" class="ml-2 text-gray-800">Idukki</label>
                                 </div>
 
-                                <div class="flex items-center">
+                                <div class="flex items-center text-sm">
                                     <input type="checkbox" id="plakkad" class="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
                                     <label for="plakkad" class="ml-2 text-gray-800">Palakkad</label>
                                 </div>
 
-                                <div class="flex items-center">
+                                <div class="flex items-center text-sm">
                                     <input type="checkbox" id="malappuram" class="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
                                     <label for="malappuram" class="ml-2 text-gray-800">Malappuram</label>
                                 </div>
 
-                                <div class="flex items-center">
+                                <div class="flex items-center text-sm">
                                     <input type="checkbox" id="kasrgod" class="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
                                     <label for="kasrgod" class="ml-2 text-gray-800">Kasargode</label>
                                 </div>
 
-                                <div class="flex items-center">
+                                <div class="flex items-center text-sm">
                                     <input type="checkbox" id="thiruvananthapuram" class="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
                                     <label for="thiruvananthapuram" class="ml-2 text-gray-800">Thiruvananathapuram</label>
                                 </div>
@@ -1199,7 +1172,7 @@
 
                 <!-- Subscriptions section -->
                 <div class="available_format mt-4 pb-5  border-b">
-                    <h3 class="font-semibold text-gray-800 mb-6">Subscriptions</h3>
+                    <h3 class="font-semibold text-gray-800 mb-4">Subscriptions</h3>
 
                     <div class="w-full md:w-6/6 block">
                         <div class="flex flex-wrap gap-2 md:gap-4">
@@ -1279,28 +1252,28 @@
                 </div>
 
                 <!-- Benefits -->
-                <div class="border-b py-6">
+                <div class="border-b py-6 benifit-section">
                     <h3 class="font-semibold text-gray-800 mb-4">Benefits</h3>
                     
                     <div class="w-full block">
                         <ul class="px-4">
-                            <li class="mb-2 text-md flex gap-2">
+                            <li class="mb-2 text-md flex gap-2 text-sm">
                                 <span class="greentick relative"></span>
                                 <span>Access Anytime, Anywhere </span>
                                 </li>
-                            <li class="mb-2 text-md flex gap-2">
+                            <li class="mb-2 text-md flex gap-2 text-sm">
                                 <span class="greentick relative"></span>
                                 <span>Instant Delivery</span>
                                 </li>
-                            <li class="mb-2 text-md flex gap-2">
+                            <li class="mb-2 text-md flex gap-2 text-sm">
                                 <span class="greentick relative"></span>
                                 <span>Search & Archive</span>
                                 </li>
-                            <li class="mb-2 text-md flex gap-2">
+                            <li class="mb-2 text-md flex gap-2 text-sm">
                                 <span class="greentick relative"></span>
                                 <span>Eco-Friendly & Clutter-Free</span>
                                 </li>
-                            <li class="mb-2 text-md flex gap-2">
+                            <li class="mb-2 text-md flex gap-2 text-sm">
                                 <span class="greentick relative"></span>
                                 <span>Exclusive Digital Content</span>
                                 </li>
@@ -1309,7 +1282,7 @@
                 </div>
 
                 <!-- About Section -->
-                <div class="border-b py-6">
+                <div class="border-b py-6 about-section">
                     <h3 class="font-semibold text-gray-800 mb-4">About the
                         Book</h3>
                     <p class="text-sm text-gray-700">Vivamus porta velit eu elit malesuada, id maximus mauris facilisis. Phasellus facilisis diam in sapien elementum, at faucibus elit condimentum. Praesent accumsan accumsan massa aliquam ultricies. Donec feugiat ligula neque, ut dictum nisi sollicitudin quis. Quisque condimentum diam ut massa venenatis lobortis. Donec rutrum massa non ligula pharetra egestas. Aliquam sed justo a diam maximus facilisis. Aliquam erat volutpat. Nunc vestibulum mi non libero tincidunt scelerisque. Mauris tincidunt diam vel mi laoreet consequat. Nullam leo massa, viverra nec pulvinar quis, lobortis vitae libero. Fusce non rutrum turpis, a tempus sem. Nulla a ultricies augue. Pellentesque mollis, ex sed ultricies mollis, ipsum tellus dignissim elit, iaculis accumsan sem augue sit amet est.
@@ -1318,7 +1291,7 @@
                 </div>
 
                 <!-- Product Details -->
-                <div class=" py-6">
+                <div class=" py-6 product-details">
                     <h3 class="font-semibold text-gray-800 mb-6">Product
                         Details</h3>
                     <ul class="product-details-list">

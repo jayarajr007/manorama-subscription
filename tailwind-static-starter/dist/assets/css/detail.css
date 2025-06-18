@@ -115,6 +115,14 @@ content: "";
   color: #3b82f6;
 }
 
+button.active-format
+{
+ 
+    background: #eff6ff ;
+    border: 1px solid #3b82f6;
+       font-weight: 600;
+    color: #292929;
+}
 
 .gift-box
 {
@@ -184,7 +192,7 @@ content: "";
     width: 1.2rem;
     height: 1.2rem;
     z-index: 10;
-    background: url(../img/icons/sprite.svg) no-repeat -55px -71px;
+    background:url(../img/icons/sprite.svg) no-repeat -79px -72px;
 }
 .recommeded {
     top: -11px;

@@ -182,3 +182,6 @@ align-items: center;
     #backToTopBtn.show {
       display: flex;
     }
+.breadcrumb-list a{
+	color: #292929;
+}
