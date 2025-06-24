@@ -149,7 +149,7 @@
 
               <!-- Search Overlay -->
               <div id="m-searchOverlay"
-                class="fixed inset-0 z-50 bg-white p-0 overflow-y-auto hidden transition-opacity duration-300">
+                class="fixed inset-0 z-100 bg-white p-0 overflow-y-auto hidden transition-opacity duration-300">
                 <!-- Back Button + Search Input -->
                 <div
                   class="flex items-center gap-2 p-3 border-b border-gray-300">
@@ -385,8 +385,8 @@
           <a href="#" class="hover:text-blue-500 text-sm" aria-label="Manorama Daily and E Paper">MANORAMA DAILY & E PAPER</a>
         </li>
         <!-- Premium Subscription Dropdown -->
-        <li class="relative group py-4">
-          <button class="text-left hover:text-blue-500 flex items-center text-sm" aria-label="Premium Subscription">
+        <li class="relative group py-4 dropdown-group">
+          <button class="text-left hover:text-blue-500 flex items-center text-sm dropdown-button" aria-label="Premium Subscription">
             PREMIUM SUBSCRIPTION
             <span class="ml-2 droparrow w-5 h-3"></span>
           </button>
@@ -400,8 +400,8 @@
           </ul>
         </li>
         <!-- Magazines Mega Menu -->
-        <li class="group z-50 py-4">
-          <button aria-label="Magazines" class="text-left hover:text-blue-500 flex items-center text-sm">
+        <li class="group z-50 py-4 dropdown-group">
+          <button aria-label="Magazines" class="dropdown-button text-left hover:text-blue-500 flex items-center text-sm">
             MAGAZINES
             <span class="ml-2 droparrow w-5 h-3"></span>
           </button>
@@ -475,8 +475,8 @@
           </div>
         </li>
         <!-- Books Dropdown -->
-        <li class="group z-50 py-4">
-          <button class="text-left hover:text-blue-500 flex items-center text-sm" aria-label="Books">
+        <li class="group z-50 py-4 dropdown-group">
+          <button class="text-left hover:text-blue-500 flex items-center text-sm dropdown-button" aria-label="Books">
             BOOKS
             <span class="ml-2 droparrow w-5 h-3"></span>
           </button>
@@ -667,20 +667,23 @@
         <li class="py-4"><a href="astro-listing.html" class="hover:text-blue-500 text-sm" aria-label="Astro">ASTRO</a></li>
         <li class="py-4"><a href="ottsubscription.html" class="hover:text-blue-500 text-sm" aria-label="Manorama Max">MANORAMA MAX</a></li>
         
-        <li class="relative group py-4">
-          <button class="text-left hover:text-blue-500 flex items-center text-sm" aria-label="More options">
-            MORE
-            <span class="ml-2 droparrow w-5 h-3"></span>
-          </button>
-          <ul class="absolute right-2 w-48 bg-white shadow-lg hidden group-hover:block pt-5">
-            <li>
-              <a href="#" class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-500 font-light" aria-label="Offers">OFFER</a>
-            </li>
-            <li>
-              <a href="#" class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-500 font-light" aria-label="Other options">OTHERS</a>
-            </li>
-          </ul>
-        </li>
+        <li class="relative group py-4 dropdown-group">
+  <div class="inline-block">
+    <button class="dropdown-button text-left flex items-center text-sm text-gray-800 group-hover:text-blue-500 hover:text-blue-500" aria-label="More options">
+      MORE
+      <span class="ml-2 droparrow w-5 h-3"></span>
+    </button>
+    <ul class="absolute right-0 w-48 bg-white shadow-lg hidden group-hover:block pt-5 z-50">
+      <li>
+        <a href="#" class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-500 font-light" aria-label="Offers">OFFER</a>
+      </li>
+      <li>
+        <a href="#" class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-500 font-light" aria-label="Other options">OTHERS</a>
+      </li>
+    </ul>
+  </div>
+</li>
+
       </ul>
     </div>
   </div>
@@ -707,7 +710,7 @@
 
         <a href="#"
           class="flex flex-col items-center text-gray-600 hover:text-blue-600"
-          onclick="showCategory()">
+          onclick="showCategory()" id="mobcate">
           <i class="fn-icon i-category"></i>
           <span
             class="uppercase font-semibold text-black mt-1">Categories</span>
