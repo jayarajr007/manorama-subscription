@@ -20,31 +20,4 @@ document.addEventListener("DOMContentLoaded", () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
     });
 });
-// New script
-    // hide scroll on search is displayed
-    const searchOverlay = document.getElementById('m-searchOverlay');
-    const openSearchBtn = document.getElementById('m-openSearch'); 
-    const closeSearchBtn = document.getElementById('m-closeSearch');   
-    openSearchBtn?.addEventListener('click', () => {
-        searchOverlay.classList.remove('hidden');
-        document.body.classList.add('overflow-hidden'); 
-    });
-    closeSearchBtn?.addEventListener('click', () => {
-        searchOverlay.classList.add('hidden');
-        document.body.classList.remove('overflow-hidden'); 
-    });
-
-
-// hide scroll on category is displayed
-    const categoryMenu = document.getElementById('categoryMenu');
-    const openCategoryBtn = document.getElementById('mobcate');
-    const closeCategoryBtn = document.getElementById('category-close');
-    openCategoryBtn?.addEventListener('click', () => {
-      categoryMenu.classList.remove('hidden');
-      document.body.classList.add('overflow-hidden');
-    });
-    closeCategoryBtn?.addEventListener('click', () => {
-      categoryMenu.classList.add('hidden');
-      document.body.classList.remove('overflow-hidden');
-    });
 
