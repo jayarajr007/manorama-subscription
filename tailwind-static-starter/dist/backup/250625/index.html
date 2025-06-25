@@ -40,21 +40,23 @@
 
         <div
           class="flex justify-between items-center py-3 border-b border-b-[#D9D9D9]">
-          <!-- Left Section: Logo & Mobile Profile -->
+
+
+
           <div class="header-left-section">
-            <!-- Desktop Logo -->
             <a href="index.html" class="flex items-center md:block hidden"
               areal-label="logo">
+
               <img src="assets/img/logo.svg" alt="Company Logo" class="logo"
                 width="275" height="40" loading="lazy" />
             </a>
-
-            <!-- Mobile Profile Info -->
             <a href="#" class="flex items-center md:hidden" areal-label="Hello">
-              <div class="flex items-center space-x-3">
+              <div class="flex items-center space-x-3 px-0 pt-0">
                 <!-- Profile Icon -->
                 <div
-                  class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center i-m-account"></div>
+                  class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center i-m-account">
+
+                </div>
                 <!-- Text Info -->
                 <div>
                   <p class="text-sm font-medium text-gray-900">Hello</p>
@@ -64,27 +66,30 @@
             </a>
           </div>
 
-          <!-- Right Section: Search, Icons, User Dropdown -->
-          <div class="flex items-center">
-            <!-- Desktop Search -->
-            <div id="search-container"
-              class="global-search mx-4 items-center border border-gray-300 rounded-md px-3 py-2 hidden md:block relative">
+
+
+          <div class="flex items-center ">
+            <!-- Global Search-->
+            <div
+              class="global-search mx-4  items-center border border-gray-300 rounded-md px-3 py-2 hidden md:block relative"
+              id="search-container">
               <div class="flex">
-                <a href="#" aria-label="search" class="cursor-pointer">
+                <a class="cursor-pointer" aria-label="search" href="#">
                   <div class="i-search-placeholder w-5 h-5 mr-2"></div>
                 </a>
-                <input type="text" id="searchInput"
+                <input type="text"
                   placeholder="Search For Title, Author Or Keyword.."
-                  class="lg:w-96 md:w-64 bg-transparent outline-none text-sm" />
-              </div>
+                  class="lg:w-96 md:w-64 bg-transparent outline-none text-sm"
+                  id="searchInput" />
 
-              <!-- Search Suggestions Dropdown -->
+              </div>
               <div id="suggestionDropdown"
                 class="hidden absolute top-12 w-full bg-white shadow-xl rounded-lg p-4 z-50 left-0">
                 <!-- Recent Searches -->
                 <div class="mb-4">
                   <p class="text-sm text-black font-semibold mb-1">Recent
                     Searches</p>
+                  <!-- Each item -->
                   <div
                     class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
                     <span><img src="assets/img/icons/Search.svg" width="15"
@@ -116,43 +121,44 @@
                     <span>Week & Vanitha Combo</span>
                   </div>
                 </div>
-
                 <!-- Popular Searches -->
                 <div class="mb-4">
                   <p class="text-sm text-black font-semibold mb-3">Popular
                     Searches</p>
                   <div class="flex flex-wrap gap-2 text-sm">
                     <a href="#" areal-label="popular-search"
-                      class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 font-medium hover:bg-blue-50">Manorama
+                      class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Manorama
                       Premium</a>
                     <a href="#" areal-label="popular-search"
-                      class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 font-medium hover:bg-blue-50">Astro</a>
+                      class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Astro</a>
                     <a href="#" areal-label="popular-search"
-                      class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 font-medium hover:bg-blue-50">Manorama
+                      class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Manorama
                       MAX</a>
                     <a href="#" areal-label="popular-search"
-                      class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 font-medium hover:bg-blue-50">Epaper</a>
+                      class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Epaper</a>
                     <a href="#" areal-label="popular-search"
-                      class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 font-medium hover:bg-blue-50">Books</a>
+                      class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Books</a>
                     <a href="#" areal-label="popular-search"
-                      class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 font-medium hover:bg-blue-50">Year
+                      class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Year
                       Book</a>
                   </div>
                 </div>
+                <!-- Keep Shopping For -->
               </div>
             </div>
-            <!-- End Desktop Search -->
 
-            <!-- Icons & Mobile Search -->
-            <div class="flex nav-options">
-              <!-- Mobile Search Icon -->
-              <a href="#" id="m-openSearch" aria-label="mobile-search">
+            <!-- Global Search End-->
+
+            <div class="flex nav-options ">
+
+              <a class href="#" id="m-openSearch" aria-label="mobile-search">
                 <div class="w-8 h-8 i-search-m mr-3 md:hidden"></div>
               </a>
 
-              <!-- Mobile Search Overlay -->
+              <!-- Search Overlay -->
               <div id="m-searchOverlay"
                 class="fixed inset-0 z-100 bg-white p-0 overflow-y-auto hidden transition-opacity duration-300">
+                <!-- Back Button + Search Input -->
                 <div
                   class="flex items-center gap-2 p-3 border-b border-gray-300">
                   <button id="m-closeSearch" aria-label="close">
@@ -165,99 +171,195 @@
                   <div
                     class="global-search items-center border border-gray-300 rounded-md px-3 py-2 w-full"
                     id="m-search-container">
-                    <div class="flex">
-                      <span class="mobile-search"></span>
-                      <input type="text" id="searchInput1"
+                    <div class="flex ">
+                      <span class="mobile-search">
+
+                      </span>
+                      <input type="text"
                         placeholder="Search For Title, Author Or Keyword.."
-                        class="bg-transparent outline-none text-sm w-full" />
+                        class="bg-transparent outline-none text-sm w-full"
+                        id="searchInput1" />
+
                     </div>
+                    <!-- <div id="m-suggestionDropdown"
+                      class="hidden absolute top-12 w-full bg-white shadow-xl rounded-lg p-4 z-50 left-0">
+                     
+                      <div class="mb-4">
+                        <p class="text-sm text-black font-semibold mb-1">Recent
+                          Searches</p>
+                       
+                        <div
+                          class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
+                          <span class="suggestion-icon">
+
+                          </span>
+
+                          <span>Pravasaikalkkum Vanithakkalkum 50
+                            Samrambhangal</span>
+                        </div>
+                        <div
+                          class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
+                          <span class="suggestion-icon">
+
+                          </span>
+
+                          <span>Vanitha</span>
+                        </div>
+                        <div
+                          class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
+                          <span class="suggestion-icon">
+
+                          </span>
+
+                          <span>Vanitha Hindi</span>
+                        </div>
+                        <div
+                          class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
+                          <span class="suggestion-icon">
+
+                          </span>
+
+                          <span>Vanitha Pachakam</span>
+                        </div>
+                        <div
+                          class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
+                          <span class="suggestion-icon">
+
+                          </span>
+
+                          <span>Week &amp; Vanitha Combo</span>
+                        </div>
+                      </div>
+                 
+                      <div class="mb-4">
+                        <p class="text-sm text-black font-semibold mb-3">Popular
+                          Searches Mob</p>
+                        <div class="flex flex-wrap gap-2 text-sm">
+                          <a href="#" areal-label="popular-search"
+                            class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Manorama
+                            Premium</a>
+                          <a href="#" areal-label="popular-search"
+                            class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Astro</a>
+                          <a href="#" areal-label="popular-search"
+                            class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Manorama
+                            MAX</a>
+                          <a href="#" areal-label="popular-search"
+                            class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Epaper</a>
+                          <a href="#" areal-label="popular-search"
+                            class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Books</a>
+                          <a href="#" areal-label="popular-search"
+                            class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Year
+                            Book</a>
+                        </div>
+                      </div>
+                
+                    </div> -->
                   </div>
                 </div>
-
-                <!-- Mobile Search Suggestions -->
-                <div class="top-12 w-full bg-white rounded-lg p-4 z-50 left-0">
+                <div
+                  class="top-12 w-full bg-white rounded-lg p-4 z-50 left-0">
                   <!-- Recent Searches -->
                   <div class="pb-4 border-b border-gray-300">
                     <p class="text-sm text-black font-semibold mb-1">Recent
                       Searches</p>
+                    <!-- Each item -->
                     <div
-                      class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 py-2 rounded">
-                      <span class="suggestion-icon"></span>
+                      class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-0 py-2 rounded">
+                      <span class="suggestion-icon">
+
+                      </span>
+
                       <span>Pravasaikalkkum Vanithakkalkum 50
                         Samrambhangal</span>
                     </div>
                     <div
-                      class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 py-2 rounded">
-                      <span class="suggestion-icon"></span>
+                      class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-0 py-2 rounded">
+                      <span class="suggestion-icon">
+
+                      </span>
+
                       <span>Vanitha</span>
                     </div>
                     <div
-                      class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 py-2 rounded">
-                      <span class="suggestion-icon"></span>
+                      class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-0 py-2 rounded">
+                      <span class="suggestion-icon">
+
+                      </span>
+
                       <span>Vanitha Hindi</span>
                     </div>
                     <div
-                      class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 py-2 rounded">
-                      <span class="suggestion-icon"></span>
+                      class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-0 py-2 rounded">
+                      <span class="suggestion-icon">
+
+                      </span>
+
                       <span>Vanitha Pachakam</span>
                     </div>
                     <div
-                      class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 py-2 rounded">
-                      <span class="suggestion-icon"></span>
+                      class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-0 py-2 rounded">
+                      <span class="suggestion-icon">
+
+                      </span>
+
                       <span>Week & Vanitha Combo</span>
                     </div>
                   </div>
-
                   <!-- Popular Searches -->
                   <div class="mb-4 pt-4">
                     <p class="text-sm text-black font-semibold mb-3">Popular
                       Searches Web</p>
                     <div class="flex flex-wrap gap-2 text-sm">
                       <a href="#" areal-label="popular-search"
-                        class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 font-medium hover:bg-blue-50">Manorama
+                        class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Manorama
                         Premium</a>
                       <a href="#" areal-label="popular-search"
-                        class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 font-medium hover:bg-blue-50">Astro</a>
+                        class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Astro</a>
                       <a href="#" areal-label="popular-search"
-                        class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 font-medium hover:bg-blue-50">Manorama
+                        class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Manorama
                         MAX</a>
                       <a href="#" areal-label="popular-search"
-                        class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 font-medium hover:bg-blue-50">Epaper</a>
+                        class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Epaper</a>
                       <a href="#" areal-label="popular-search"
-                        class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 font-medium hover:bg-blue-50">Books</a>
+                        class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Books</a>
                       <a href="#" areal-label="popular-search"
-                        class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 font-medium hover:bg-blue-50">Year
+                        class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 text-sm font-medium hover:bg-blue-50">Year
                         Book</a>
                     </div>
                   </div>
+                  <!-- Keep Shopping For -->
                 </div>
+
               </div>
 
               <!-- Cart Icon -->
               <a href="#" aria-label="cart">
-                <div class="mr-4 i-cart"></div>
+                <div class="mr-4  i-cart"></div>
               </a>
 
               <!-- Notification Icon -->
-              <a href="#" aria-label="Notification">
+              <a class href="#" aria-label="Notification">
                 <div class="md:mr-4 mr-0 w-8 h-8 i-notification"></div>
               </a>
 
-              <!-- Logged-in User Dropdown -->
+              <!-- for guest user -->
+              <!-- <a class="rounded-md bg-darkblue flex items-center p-2 text-white text-sm hidden md:block" href="#" aria-label="Login">Login</a> -->
+              <!-- for guest user -->
+
+              <!-- for loggedin user -->
               <div class="relative group hidden md:block">
                 <button
                   class="text-left hover:text-blue-500 flex items-center text-sm"
                   aria-label="userprofile">
-                  <div class="md:mr-0 mr-0 w-8 h-8 i-user profile"></div>
+                  <div class="md:mr-0 mr-0 w-8 h-8 i-user  profile"></div>
                   <span class="droparrow w-5 h-3"></span>
                 </button>
                 <ul
                   class="absolute right-2 w-48 bg-white shadow-lg z-50 hidden group-hover:block">
-                  <li class="px-4 py-2 bg-gray-100">
+                  <li class="px-4 py-2  bg-gray-100">
                     <div class="flex">
                       <div
-                        class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center font-semibold text-md">J
-                      </div>
+                        class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center font-semibold text-md">J</div>
                       <div class="ml-2">
                         <p class="text-[12px] font-light mb-1">Login as</p>
                         <h6 class="text-md font-medium">Jayaraj</h6>
@@ -276,11 +378,12 @@
                   </li>
                 </ul>
               </div>
+              <!-- for loggedin user -->
+
+              <!-- User Icon -->
             </div>
-            <!-- End Icons -->
           </div>
         </div>
-
         <!--Nav -->
         <nav class="bg-white hidden md:block relative">
           <div class="mx-auto px-0">

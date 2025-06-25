@@ -31,7 +31,11 @@
     z-index: 10;
     background: url(../img/icons/sprite.svg) no-repeat -55px -71px;
 }
-
+.round-filter:hover .imgbx
+{
+  border: 2px solid var(--button-bg-color);
+ transition: transform 1s ease;
+}
 
 .imgbx {
     border: 2px solid transparent;
@@ -94,3 +98,4 @@
    .rotate-180 {
         transform: rotate(180deg);
     }
+

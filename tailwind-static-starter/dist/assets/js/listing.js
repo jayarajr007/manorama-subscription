@@ -93,6 +93,12 @@ $(window).on('load', function () {
                 }
             },
             {
+                breakpoint: 850,
+                settings: {
+                    slidesToShow: 4
+                }
+            },
+            {
                 breakpoint: 768,
                 settings: {
                     slidesToShow: 5

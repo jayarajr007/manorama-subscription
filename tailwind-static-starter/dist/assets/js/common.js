@@ -49,3 +49,20 @@ function toggleFav(button) {
     outline.classList.toggle('hidden');
     filled.classList.toggle('hidden');
 }
+
+
+// menu item highlight 
+document.querySelectorAll('.dropdown-group').forEach(group => {
+    const button = group.querySelector('.dropdown-button');
+    const menu = group.querySelector('.dropdown-menu');
+
+    group.addEventListener('mouseenter', () => {
+      button.classList.add('text-blue-500');
+      menu.classList.remove('hidden');
+    });
+
+    group.addEventListener('mouseleave', () => {
+      button.classList.remove('text-blue-500');
+      menu.classList.add('hidden');
+    });
+});    
