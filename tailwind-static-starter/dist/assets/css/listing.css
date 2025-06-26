@@ -99,3 +99,25 @@
         transform: rotate(180deg);
     }
 
+.slick-prev:before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 9px;
+    width: 1.8rem;
+    height: 1.8rem;
+    z-index: 10;
+    background: url(../img/icons/sprite.svg) no-repeat -149px -176px !important;
+    opacity: 1;
+}
+.slick-next:before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    right: 9px;
+    width: 1.8rem;
+    height: 1.8rem;
+    z-index: 10;
+    background: url(../img/icons/sprite.svg) no-repeat -173px -178px !important;
+    opacity: 1;
+}
