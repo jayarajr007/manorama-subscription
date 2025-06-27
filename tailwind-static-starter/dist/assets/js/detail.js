@@ -48,33 +48,29 @@ $(window).on('load', function () {
 });
 
 
-// tab function
-  // const tabs = [
-  //   { btn: 'subscription', content: 'subscriptioncontent' },
-  //   { btn: 'renewal', content: 'renewalcontent' },
-  //   { btn: 'singleissue', content: 'singleissuecontent' }
-  // ];
+   //share dropdown
+  function toggleShareDropdown() {
+    const dropdown = document.querySelector('.share-dropdown');
+    dropdown.classList.toggle('hidden');
+  }
 
-  // function activateTab(activeId) {
-  //   tabs.forEach(({ btn, content }) => {
-  //     const btnEl = document.getElementById(btn);
-  //     const contentEl = document.getElementById(content);
-      
-  //     if (btn === activeId) {
-  //       btnEl.classList.add('text-blue-600', 'border-blue-500');
-  //       btnEl.classList.remove('text-gray-500', 'border-transparent');
-  //       contentEl.classList.remove('hidden');
-  //     } else {
-  //       btnEl.classList.remove('text-blue-600', 'border-blue-500');
-  //       btnEl.classList.add('text-gray-500', 'border-transparent');
-  //       contentEl.classList.add('hidden');
-  //     }
-  //   });
-  // }
+  function copyLink() {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      alert("Link copied to clipboard!");
+    });
+  }
+
+  // Optional: Click outside to close
+  document.addEventListener('click', function (e) {
+    const dropdown = document.querySelector('.share-dropdown');
+    const button = e.target.closest('button[aria-label="Share this book"]');
+    if (!dropdown.contains(e.target) && !button) {
+      dropdown.classList.add('hidden');
+    }
+  });
 
 
-  // window.addEventListener('DOMContentLoaded', () => activateTab('subscription'));
 
-  // tabs.forEach(({ btn }) => {
-  //   document.getElementById(btn).addEventListener('click', () => activateTab(btn));
-  // });
+
+        
+  

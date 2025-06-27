@@ -1,43 +1,137 @@
     /* Hide all slides except the first before Slick initializes */
-        .large-thumb-slider:not(.slick-initialized)>div:not(:first-child) {
-            display: none;
-        }
+    .large-thumb-slider:not(.slick-initialized)>div:not(:first-child) {
+        display: none;
+    }
 
-        .large-thumb-slider:not(.slick-initialized) div.bg-white {
-            max-width: 260px;
-        }
-.slider-singleissue:not(.slick-initialized)>div:not(:first-child) {
-            display: none;
-        }
+    .large-thumb-slider:not(.slick-initialized) div.bg-white {
+        max-width: 260px;
+    }
 
-        .slider-singleissue:not(.slick-initialized) div.bg-white {
-            max-width: 260px;
-        }
-        .thumb-wrapper {
-            padding-top: 131.57894736842104%
-        }
+    .slider-singleissue:not(.slick-initialized)>div:not(:first-child) {
+        display: none;
+    }
 
-        .thumb-wrapper img {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-            -webkit-border-radius: 6px;
-            border-radius: 6px;
-            background-clip: padding-box;
-        }
-.slick-track {
+    .slider-singleissue:not(.slick-initialized) div.bg-white {
+        max-width: 260px;
+    }
 
-    margin-left: auto !important;
-}
-     .slick-dotted.slick-slider
-     {
-margin-bottom: 0px !important;
-     }
-.slick-dots
-{
-    bottom: 6px !important;
-}
+    .thumb-wrapper {
+        padding-top: 131.57894736842104%
+    }
+
+    .thumb-wrapper img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        -webkit-border-radius: 6px;
+        border-radius: 6px;
+        background-clip: padding-box;
+    }
+
+    .slick-track {
+
+        margin-left: auto !important;
+    }
+
+    .slick-dotted.slick-slider {
+        margin-bottom: 0px !important;
+    }
+
+    .slick-dots {
+        bottom: 6px !important;
+    }
+
+    .peerplan {
+        height: 100%;
+    }
+
+
+    .peer:checked~.peerplan {
+
+        border: 2px solid #0074ED !important;
+    }
+
+    .peer:checked~.peerplan .peerplan-head {
+        color: #3c82f6;
+    }
+
+
+
+    .peerplan-head {
+        background: #dbeafe;
+        word-break: break-word;
+        /* allows wrapping at word boundaries */
+        white-space: normal;
+        /* allows text to wrap */
+
+        /* ensures consistent height even if single line */
+        display: flex;
+        align-items: center;
+    }
+ 
+
+    .peer:checked~.gift-box {
+        border: 2px solid #0074ED !important;
+    }
+
+    .peer:checked~.gift-box .gift-head {
+   
+        color: #3c82f6;
+    }
+
+    .peer:checked~.gift-box span::after {
+
+        content: "✓";
+        color: #0275ff;
+        font-size: 16px;
+
+        display: flex;
+        width: 24px;
+        height: 24px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        position: relative;
+        left: -3px;
+        top: -2px;
+
+
+    }
+
+    .gift-box {
+        height: 100%;
+
+    }
+  .peer:checked~.single-issue-item span::after 
+  {
+           content: "✓";
+        color: #0275ff;
+        font-size: 16px;
+
+        display: flex;
+        width: 24px;
+        height: 24px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        position: relative;
+        left: -3px;
+        top: -2px;
+  }
+
+    .peer:checked~.single-issue-item .issue-date
+  {
+   
+        color: #0275ff;
+  }
+   .peer:checked~.format {
+   
+      color: #0275ff;
+    border: 2px solid #0074ED !important;
+    border-radius: 4px;
+    font-weight: 600;
+  }

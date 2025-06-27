@@ -1066,8 +1066,7 @@
 
             <!-- Price Section -->
             <div class="flex flex-col">
-                <div class="text-xl font-semibold text-gray-900">₹832 <span
-                        class="info relative"></span></div>
+                <div class="text-xl font-semibold text-gray-900">₹832 </div>
                 <div class="text-sm text-gray-500">MRP : ₹1182</div>
             </div>
 
@@ -1203,11 +1202,61 @@
                             <h2 class="text-xl font-semibold mb-1">In-Depth
                                 Horoscope</h2>
                         </div>
-                        <div class="flex justify-end w-20">
-                            <button aria-label="Share this book">
-                                <span class="shareicon relative"
-                                    aria-hidden="true"></span>
+                        <div class="relative flex justify-end w-20">
+                            <!-- Share Button -->
+                            <button onclick="toggleShareDropdown()"
+                                aria-label="Share this book"
+                                class="p-2 rounded hover:bg-gray-100">
+                                <span class="shareicon relative"></span>
                             </button>
+
+                            <!-- Dropdown -->
+                            <div
+                                class="share-dropdown hidden absolute right-0 mt-2 w-48 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 z-50">
+                                <ul class="py-1 text-sm text-gray-700">
+                                    <li>
+                                        <a href="#"
+                                            class="relative flex items-center px-4 py-2 hover:bg-gray-100 space-x-6" aria-label="share-icon">
+                                            <span
+                                                class="share-fb-icon relative"></span>
+                                            <span class="ml-5">Facebook</span>
+                                        </a>
+                                    </li>
+                                   <li>
+                                        <a href="#"
+                                            class="relative flex items-center px-4 py-2 hover:bg-gray-100 space-x-6" aria-label="share-icon">
+                                            <span
+                                                class="share-x-icon relative"></span>
+                                            <span class="ml-5">X</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            class="relative flex items-center px-4 py-2 hover:bg-gray-100 space-x-6" aria-label="share-icon">
+                                            <span
+                                                class="share-email-icon relative"></span>
+                                            <span class="ml-5">Email</span>
+                                        </a>
+                                    </li>
+                                   <li>
+                                        <a href="#"
+                                            class="relative flex items-center px-4 py-2 hover:bg-gray-100 space-x-6" aria-label="share-icon">
+                                            <span
+                                                class="share-watsapp-icon relative"></span>
+                                            <span class="ml-5">Watsapp</span>
+                                        </a>
+                                    </li>
+                                   <li>
+                                        <a href="#" onclick="copyLink()"
+                                            class="relative flex items-center px-4 py-2 hover:bg-gray-100 space-x-6" aria-label="share-icon">
+                                            <span
+                                                class="share-copy-icon relative"></span>
+                                            <span class="ml-5">Copy Link</span>
+                                        </a>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <!-- Subscriptions section -->
@@ -1746,7 +1795,7 @@
 
         <script src="assets/libs/slick-slider/slick.min.js" defer></script>
         <script src="assets/js/common.js" defer></script>
-        <script src="assets/js/bookdetail.js" defer></script>
+        <script src="assets/js/detail.js" defer></script>
 
     </body>
 

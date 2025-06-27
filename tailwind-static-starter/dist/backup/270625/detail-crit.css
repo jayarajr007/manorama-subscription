@@ -1,0 +1,43 @@
+    /* Hide all slides except the first before Slick initializes */
+        .large-thumb-slider:not(.slick-initialized)>div:not(:first-child) {
+            display: none;
+        }
+
+        .large-thumb-slider:not(.slick-initialized) div.bg-white {
+            max-width: 260px;
+        }
+.slider-singleissue:not(.slick-initialized)>div:not(:first-child) {
+            display: none;
+        }
+
+        .slider-singleissue:not(.slick-initialized) div.bg-white {
+            max-width: 260px;
+        }
+        .thumb-wrapper {
+            padding-top: 131.57894736842104%
+        }
+
+        .thumb-wrapper img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            -webkit-border-radius: 6px;
+            border-radius: 6px;
+            background-clip: padding-box;
+        }
+.slick-track {
+
+    margin-left: auto !important;
+}
+     .slick-dotted.slick-slider
+     {
+margin-bottom: 0px !important;
+     }
+.slick-dots
+{
+    bottom: 6px !important;
+}

@@ -1066,8 +1066,7 @@
 
             <!-- Price Section -->
             <div class="flex flex-col">
-                <div class="text-xl font-semibold text-gray-900">₹899 <span
-                        class="info relative"></span></div>
+                <div class="text-xl font-semibold text-gray-900">₹899</div>
                 <div class="text-sm text-gray-500">MRP : ₹1200</div>
             </div>
 
@@ -1103,16 +1102,18 @@
 
             <!-- Left Column (Magazine Cover) -->
 
-            <div class="justify-between items-center flex md:hidden">
-                <div>
-                    <h2 class="text-lg md:text-xl font-semibold mb-1">Manorama MAX</h2>
+          <div class="justify-between items-center flex md:hidden">
+                    <div>
+                        <h2 class="text-lg md:text-xl font-semibold mb-1">Manorama Max
+                            </h2>
+                      
+                    </div>
+                    <div class="flex justify-end w-20">
+                        <button aria-label="Share this book">
+                            <span class="shareicon relative"></span>
+                        </button>
+                    </div>
                 </div>
-                <div class="flex justify-end w-20">
-                    <button aria-label="Share this book">
-                        <span class="shareicon relative"></span>
-                    </button>
-                </div>
-            </div>
 
             <div class="w-full sm:w-full md:w-[30%] lg:w-[30%]">
                 <div class="border border-white md:border-gray-200 rounded-lg p-3 border-b">
@@ -1165,56 +1166,138 @@
                     <div>
                         <h2 class="text-xl font-semibold ">Manorama MAX</h2>
                     </div>
-                    <div class="flex justify-end w-20">
-                        <button aria-label="Share this book">
-                            <span class="shareicon relative" aria-hidden="true"></span>
-                        </button>
-                    </div>
+                      <div class="relative flex justify-end w-20">
+                            <!-- Share Button -->
+                            <button onclick="toggleShareDropdown()"
+                                aria-label="Share this book"
+                                class="p-2 rounded hover:bg-gray-100">
+                                <span class="shareicon relative"></span>
+                            </button>
+
+                            <!-- Dropdown -->
+                            <div
+                                class="share-dropdown hidden absolute right-0 mt-2 w-48 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 z-50">
+                                <ul class="py-1 text-sm text-gray-700">
+                                    <li>
+                                        <a href="#"
+                                            class="relative flex items-center px-4 py-2 hover:bg-gray-100 space-x-6"
+                                            aria-label="share-icon">
+                                            <span
+                                                class="share-fb-icon relative"></span>
+                                            <span class="ml-5">Facebook</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            class="relative flex items-center px-4 py-2 hover:bg-gray-100 space-x-6"
+                                            aria-label="share-icon">
+                                            <span
+                                                class="share-x-icon relative"></span>
+                                            <span class="ml-5">X</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            class="relative flex items-center px-4 py-2 hover:bg-gray-100 space-x-6"
+                                            aria-label="share-icon">
+                                            <span
+                                                class="share-email-icon relative"></span>
+                                            <span class="ml-5">Email</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            class="relative flex items-center px-4 py-2 hover:bg-gray-100 space-x-6"
+                                            aria-label="share-icon">
+                                            <span
+                                                class="share-watsapp-icon relative"></span>
+                                            <span class="ml-5">Watsapp</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" onclick="copyLink()"
+                                            class="relative flex items-center px-4 py-2 hover:bg-gray-100 space-x-6"
+                                            aria-label="share-icon">
+                                            <span
+                                                class="share-copy-icon relative"></span>
+                                            <span class="ml-5">Copy Link</span>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
                 </div>
                 <!-- Subscriptions section -->
                 <div class="available_format mt-4 pb-5  border-b">
                     <h3 class="font-semibold text-gray-800 mb-4">Subscriptions</h3>
 
                     <div class="w-full md:w-6/6 block">
-                        <div class="flex flex-wrap gap-2 md:gap-4">
-                            <!-- 1 Year -->
-                            <div
-                                class="w-[calc(50%-4px)] sm:min-w-[210px] sm:w-auto border-2 rounded-md price-plan price-plan-active">
-                                <div class="p-2 text-sm font-semibold rounded-md text-gray-700 plan-head relative">1 Year
-                                    <!-- <span class="absolute right-2  text-[12px] px-2 font-light bg-creamdark text-white rounded-md recommeded">Recommended</span> -->
-                                </div>
-                                <div class="p-2 bg-white rounded-md">
-                                    <div class="flex items-center gap-3 flex-wrap">
-                                        <div class="flex gap-2">
-                                            <p class="text-sm md:text-base line-through text-gray-400">₹2400</p>
-                                            <p class="text-sm md:text-base font-semibold">₹1800</p>
-                                        </div>
-                                        <p class="text-sm md:text-base font-semibold">
-                                            <span class="text-sm md:text-base font-semibold text-red-500">20%
-                                                OFF</span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="flex flex-wrap gap-2 md:gap-4 mt-4">
 
-                            <!-- 2 Year -->
-                            <div class="w-[calc(50%-4px)] sm:min-w-[210px] sm:w-auto border-2 rounded-md price-plan">
-                                <div class="p-2 text-sm font-semibold rounded-md text-gray-700 plan-head">2 Year</div>
-                                <div class="p-2 bg-white rounded-md">
-                                    <div class="flex items-center gap-3 flex-wrap">
-                                        <div class="flex gap-2">
-                                            <p class="text-sm md:text-base line-through text-gray-400">₹2000</p>
-                                            <p class="text-sm md:text-base font-semibold">₹900</p>
+                            <!-- Option 2 -->
+                            <label
+                                class="relative w-[calc(50%-4px)] sm:min-w-[210px] sm:w-auto cursor-pointer">
+                                <input type="radio" name="plan"
+                                    value="print" class="peer hidden" checked />
+
+                                <div
+                                    class="border-2 rounded-md transition-all 
+                 peerplan overflow-hidden">
+                                    <div
+                                        class="p-2 text-sm font-semibold text-gray-700 peerplan-head">1
+                                        Year</div>
+                                    <div class="p-2 bg-white">
+                                        <div
+                                            class="flex items-center gap-3 flex-wrap">
+                                            <div class="flex gap-2">
+                                                <p
+                                                    class="text-sm md:text-base font-semibold line-through text-gray-400">
+                                                    ₹35330</p>
+                                                <p
+                                                    class="text-sm md:text-base font-semibold">₹13305</p>
+                                            </div>
+                                            <p
+                                                class="text-sm md:text-base font-semibold text-red-500">70%
+                                                OFF</p>
                                         </div>
-                                        <p class="text-sm md:text-base font-semibold">
-                                            <span class="text-sm md:text-base font-semibold text-red-500">60%
-                                                OFF</span>
-                                        </p>
                                     </div>
                                 </div>
-                            </div>
-                           
+                            </label>
+                            <!-- Option 2 -->
+                            <label
+                                class="relative w-[calc(50%-4px)] sm:min-w-[210px] sm:w-auto cursor-pointer">
+                                <input type="radio" name="plan"
+                                    value="print" class="peer hidden" />
+
+                                <div
+                                    class="border-2 rounded-md transition-all 
+                 peerplan overflow-hidden">
+                                    <div
+                                        class="p-2 text-sm font-semibold text-gray-700 peerplan-head">2 Year
+</div>
+                                    <div class="p-2 bg-white">
+                                        <div
+                                            class="flex items-center gap-3 flex-wrap">
+                                            <div class="flex gap-2">
+                                                <p
+                                                    class="text-sm md:text-base font-semibold line-through text-gray-400">
+                                                    ₹35330</p>
+                                                <p
+                                                    class="text-sm md:text-base font-semibold">₹13305</p>
+                                            </div>
+                                            <p
+                                                class="text-sm md:text-base font-semibold text-red-500">70%
+                                                OFF</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </label>
+
+                              
+
                         </div>
+
 
                     </div>
                 </div>
@@ -1667,7 +1750,7 @@
 
     <script src="assets/libs/slick-slider/slick.min.js" defer></script>
     <script src="assets/js/common.js" defer></script>
-    <script src="assets/js/bookdetail.js" defer></script>
+    <script src="assets/js/detail.js" defer></script>
 
 </body>
 

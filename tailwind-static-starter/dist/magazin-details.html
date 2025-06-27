@@ -17,9 +17,7 @@
             onload="this.onload=null;this.rel='stylesheet'">
         <link rel="stylesheet" href="assets/css/output.css">
         <link href="assets/css/common-crit.css" rel="stylesheet" />
-         <link href="assets/css/detail-crit.css" rel="stylesheet" />
-
-   
+        <link href="assets/css/detail-crit.css" rel="stylesheet" />
 
     </head>
 
@@ -27,7 +25,7 @@
 
         <!-- Navbar -->
         <!-- Header -->
-         <header class="bg-white  z-40  sticky w-full top-0 shadow-sm">
+        <header class="bg-white  z-40  sticky w-full top-0 shadow-sm">
             <div
                 class="max-w-full lg:max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -336,7 +334,6 @@
                         <!-- End Icons -->
                     </div>
                 </div>
-
 
                 <!--Nav -->
                 <nav class="bg-white hidden md:block relative">
@@ -1068,8 +1065,7 @@
 
             <!-- Price Section -->
             <div class="flex flex-col">
-                <div class="text-xl font-semibold text-gray-900">₹105 <span
-                        class="info relative"></span></div>
+                <div class="text-xl font-semibold text-gray-900">₹105 </div>
                 <div class="text-sm text-gray-500">MRP : ₹350</div>
             </div>
 
@@ -1229,11 +1225,61 @@
 
                             </div>
                         </div>
-                        <div class="flex justify-end w-20">
-                            <button aria-label="Share this book">
-                                <span class="shareicon relative"
-                                    aria-hidden="true"></span>
+                        <div class="relative flex justify-end w-20">
+                            <!-- Share Button -->
+                            <button onclick="toggleShareDropdown()"
+                                aria-label="Share this book"
+                                class="p-2 rounded hover:bg-gray-100">
+                                <span class="shareicon relative"></span>
                             </button>
+
+                            <!-- Dropdown -->
+                            <div
+                                class="share-dropdown hidden absolute right-0 mt-2 w-48 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 z-50">
+                                <ul class="py-1 text-sm text-gray-700">
+                                    <li>
+                                        <a href="#"
+                                            class="relative flex items-center px-4 py-2 hover:bg-gray-100 space-x-6" aria-label="share-icon">
+                                            <span
+                                                class="share-fb-icon relative"></span>
+                                            <span class="ml-5">Facebook</span>
+                                        </a>
+                                    </li>
+                                   <li>
+                                        <a href="#"
+                                            class="relative flex items-center px-4 py-2 hover:bg-gray-100 space-x-6" aria-label="share-icon">
+                                            <span
+                                                class="share-x-icon relative"></span>
+                                            <span class="ml-5">X</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            class="relative flex items-center px-4 py-2 hover:bg-gray-100 space-x-6" aria-label="share-icon">
+                                            <span
+                                                class="share-email-icon relative"></span>
+                                            <span class="ml-5">Email</span>
+                                        </a>
+                                    </li>
+                                   <li>
+                                        <a href="#"
+                                            class="relative flex items-center px-4 py-2 hover:bg-gray-100 space-x-6" aria-label="share-icon">
+                                            <span
+                                                class="share-watsapp-icon relative"></span>
+                                            <span class="ml-5">Watsapp</span>
+                                        </a>
+                                    </li>
+                                   <li>
+                                        <a href="#" onclick="copyLink()"
+                                            class="relative flex items-center px-4 py-2 hover:bg-gray-100 space-x-6" aria-label="share-icon">
+                                            <span
+                                                class="share-copy-icon relative"></span>
+                                            <span class="ml-5">Copy Link</span>
+                                        </a>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
                         </div>
                     </div>
 
@@ -1243,18 +1289,45 @@
                         <h3 class="font-semibold text-gray-800 mb-4">Available
                             Format</h3>
 
-                        <div class="flex gap-2 pb-6">
-                            <button
-                                class="px-6 py-3 border text-gray-600 rounded-sm text-sm active-format"
-                                aria-label="Print">Print</button>
-                            <button
-                                class="px-6 py-3 border text-gray-600 rounded-sm text-sm"
-                                aria-label="Digital">Digital</button>
-                            <button
-                                class="px-6 py-3 border text-gray-600 rounded-sm text-sm"
-                                aria-label="Print Digital">Print +
-                                Digital</button>
-                        </div>
+             
+                            <div class="flex gap-2 pb-6">
+                                <!-- Print Option -->
+                                <label class="cursor-pointer">
+                                    <input type="radio" name="format"
+                                        value="Print" class="peer hidden"
+                                        checked>
+                                    <div
+                                        class="px-6 py-3 border-2 text-gray-600 rounded-sm text-sm 
+                transition-all peer-checked:bg-blue-50 peer-checked:border-blue-600 format ">
+                                        Print
+                                    </div>
+                                </label>
+
+                                <!-- Digital Option -->
+                                <label class="cursor-pointer">
+                                    <input type="radio" name="format"
+                                        value="Digital" class="peer hidden">
+                                    <div
+                                        class="px-6 py-3 border-2 text-gray-600 rounded-sm text-sm 
+                transition-all peer-checked:bg-blue-50 peer-checked:border-blue-600 format">
+                                        Digital
+                                    </div>
+                                </label>
+
+                                <!-- Print + Digital Option -->
+                                <label class="cursor-pointer">
+                                    <input type="radio" name="format"
+                                        value="Print+Digital"
+                                        class="peer hidden">
+                                    <div
+                                        class="px-6 py-3 border-2 text-gray-600 rounded-sm text-sm 
+                transition-all peer-checked:bg-blue-50 peer-checked:border-blue-600 format">
+                                        Print + Digital
+                                    </div>
+                                </label>
+                            </div>
+
+                    
 
                         <!-- Tabs -->
                         <div class="mb-4">
@@ -1273,110 +1346,195 @@
 
                         <!-- Tab Contents -->
                         <div id="subscription" class="sub-tab-content">
-                            <div class="flex flex-wrap gap-2 md:gap-4">
-                                <!-- Digital Plan -->
-                                <div
-                                    class="w-[calc(50%-4px)] sm:min-w-[210px] sm:w-auto border-2 rounded-md price-plan price-plan-active">
-                                    <div
-                                        class="p-2 text-sm font-semibold rounded-md text-gray-700 plan-head">1
-                                        Month</div>
-                                    <div class="p-2 bg-white rounded-md">
-                                        <div
-                                            class="flex items-center gap-3 flex-wrap">
-                                            <div class="flex gap-2">
-                                                <p
-                                                    class="text-sm md:text-base line-through text-gray-400">₹350</p>
-                                                <p
-                                                    class="text-sm md:text-base font-semibold">₹105</p>
-                                            </div>
-                                            <p
-                                                class="text-sm md:text-lg font-semibold">
-                                                <span
-                                                    class="text-sm md:text-base font-semibold text-red-500">70%
-                                                    OFF</span>
-                                            </p>
-                                        </div>
-                                        <p
-                                            class="text-xs text-gray-500 mt-1">Guaranteed
-                                            Gifts</p>
-                                    </div>
-                                </div>
+                            <div class="flex flex-wrap gap-2 md:gap-4 mt-4">
 
-                                <!-- Print Plan -->
-                                <div
-                                    class="w-[calc(50%-4px)] sm:min-w-[210px] sm:w-auto border-2 rounded-md price-plan">
-                                    <div
-                                        class="p-2 text-sm font-semibold rounded-md text-gray-700 plan-head">1
-                                        Year</div>
-                                    <div class="p-2 bg-white rounded-md">
-                                        <div
-                                            class="flex items-center gap-3 flex-wrap">
-                                            <div class="flex gap-2">
-                                                <p
-                                                    class="text-sm md:text-base line-through text-gray-400">₹350</p>
-                                                <p
-                                                    class="text-sm md:text-base font-semibold">₹105</p>
-                                            </div>
-                                            <p
-                                                class="text-sm md:text-base font-semibold">
-                                                <span
-                                                    class="text-sm md:text-base font-semibold text-red-500">70%
-                                                    OFF</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
+                                <!-- Option 1 -->
+                                <label
+                                    class="relative w-[calc(50%-4px)] sm:min-w-[210px] sm:w-auto cursor-pointer">
+                                    <input type="radio" name="plan"
+                                        value="digital" class="peer hidden"
+                                        checked />
 
-                                <!-- Print Plan -->
-                                <div
-                                    class="w-[calc(50%-4px)] sm:min-w-[210px] sm:w-auto border-2 rounded-md price-plan">
                                     <div
-                                        class="p-2 text-sm font-semibold rounded-md text-gray-700 plan-head">6
-                                        Months (International)</div>
-                                    <div class="p-2 bg-white rounded-md">
+                                        class="border-2 rounded-md transition-all 
+                 peerplan overflow-hidden">
                                         <div
-                                            class="flex items-center gap-3 flex-wrap">
-                                            <div class="flex gap-2">
+                                            class="p-2 text-sm font-semibold text-gray-700 peerplan-head">1
+                                            Month</div>
+                                        <div class="p-2 bg-white">
+                                            <div
+                                                class="flex items-center gap-3 flex-wrap">
+                                                <div class="flex gap-2">
+                                                    <p
+                                                        class="text-sm md:text-base font-semibold line-through text-gray-400">
+                                                        ₹35033</p>
+                                                    <p
+                                                        class="text-sm md:text-base font-semibold">₹10533</p>
+                                                </div>
                                                 <p
-                                                    class="text-sm md:text-base line-through text-gray-400">₹350</p>
-                                                <p
-                                                    class="text-sm md:text-base font-semibold">₹105</p>
+                                                    class="text-sm md:text-base font-semibold text-red-500">70%
+                                                    OFF</p>
                                             </div>
                                             <p
-                                                class="text-sm md:text-base font-semibold">
-                                                <span
-                                                    class="text-sm md:text-base font-semibold text-red-500">70%
-                                                    OFF</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
+                                                class="text-xs text-gray-500 mt-1">Guaranteed
+                                                Gifts</p>
 
-                                <!-- Print Plan -->
-                                <div
-                                    class="w-[calc(50%-4px)] sm:min-w-[210px] sm:w-auto border-2 rounded-md price-plan">
-                                    <div
-                                        class="p-2 text-sm font-semibold rounded-md text-gray-700 plan-head">1
-                                        Year (International)</div>
-                                    <div class="p-2 bg-white rounded-md">
-                                        <div
-                                            class="flex items-center gap-3 flex-wrap">
-                                            <div class="flex gap-2">
-                                                <p
-                                                    class="text-sm md:text-base line-through text-gray-400">₹350</p>
-                                                <p
-                                                    class="text-sm md:text-base font-semibold">₹105</p>
-                                            </div>
-                                            <p
-                                                class="text-sm md:text-base font-semibold">
-                                                <span
-                                                    class="text-sm md:text-base font-semibold text-red-500">70%
-                                                    OFF</span>
-                                            </p>
                                         </div>
                                     </div>
-                                </div>
+                                </label>
+
+                                <!-- Option 2 -->
+                                <label
+                                    class="relative w-[calc(50%-4px)] sm:min-w-[210px] sm:w-auto cursor-pointer">
+                                    <input type="radio" name="plan"
+                                        value="print" class="peer hidden" />
+
+                                    <div
+                                        class="border-2 rounded-md transition-all 
+                 peerplan overflow-hidden">
+                                        <div
+                                            class="p-2 text-sm font-semibold text-gray-700 peerplan-head">1
+                                            Year</div>
+                                        <div class="p-2 bg-white">
+                                            <div
+                                                class="flex items-center gap-3 flex-wrap">
+                                                <div class="flex gap-2">
+                                                    <p
+                                                        class="text-sm md:text-base font-semibold line-through text-gray-400">
+                                                        ₹35330</p>
+                                                    <p
+                                                        class="text-sm md:text-base font-semibold">₹13305</p>
+                                                </div>
+                                                <p
+                                                    class="text-sm md:text-base font-semibold text-red-500">70%
+                                                    OFF</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </label>
+                                <!-- Option 2 -->
+                                <label
+                                    class="relative w-[calc(50%-4px)] sm:min-w-[210px] sm:w-auto cursor-pointer">
+                                    <input type="radio" name="plan"
+                                        value="print" class="peer hidden" />
+
+                                    <div
+                                        class="border-2 rounded-md transition-all 
+                 peerplan overflow-hidden">
+                                        <div
+                                            class="p-2 text-sm font-semibold text-gray-700 peerplan-head">1
+                                            Year International</div>
+                                        <div class="p-2 bg-white">
+                                            <div
+                                                class="flex items-center gap-3 flex-wrap">
+                                                <div class="flex gap-2">
+                                                    <p
+                                                        class="text-sm md:text-base font-semibold line-through text-gray-400">
+                                                        ₹35330</p>
+                                                    <p
+                                                        class="text-sm md:text-base font-semibold">₹13305</p>
+                                                </div>
+                                                <p
+                                                    class="text-sm md:text-base font-semibold text-red-500">70%
+                                                    OFF</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </label>
+                                <!-- Option 2 -->
+                                <label
+                                    class="relative w-[calc(50%-4px)] sm:min-w-[210px] sm:w-auto cursor-pointer">
+                                    <input type="radio" name="plan"
+                                        value="print" class="peer hidden" />
+
+                                    <div
+                                        class="border-2 rounded-md transition-all 
+                 peerplan overflow-hidden">
+                                        <div
+                                            class="p-2 text-sm font-semibold text-gray-700 peerplan-head">1
+                                            Year</div>
+                                        <div class="p-2 bg-white">
+                                            <div
+                                                class="flex items-center gap-3 flex-wrap">
+                                                <div class="flex gap-2">
+                                                    <p
+                                                        class="text-sm md:text-base font-semibold line-through text-gray-400">
+                                                        ₹35330</p>
+                                                    <p
+                                                        class="text-sm md:text-base font-semibold">₹13305</p>
+                                                </div>
+                                                <p
+                                                    class="text-sm md:text-base font-semibold text-red-500">70%
+                                                    OFF</p>
+                                            </div>
+                                            <p
+                                                class="text-xs text-gray-500 mt-1">Guaranteed
+                                                Gifts</p>
+                                        </div>
+
+                                    </div>
+                                </label>
+                                <!-- Option 2 -->
+                                <label
+                                    class="relative w-[calc(50%-4px)] sm:min-w-[210px] sm:w-auto cursor-pointer">
+                                    <input type="radio" name="plan"
+                                        value="print" class="peer hidden" />
+
+                                    <div
+                                        class="border-2 rounded-md transition-all 
+                 peerplan overflow-hidden">
+                                        <div
+                                            class="p-2 text-sm font-semibold text-gray-700 peerplan-head">1
+                                            Year</div>
+                                        <div class="p-2 bg-white">
+                                            <div
+                                                class="flex items-center gap-3 flex-wrap">
+                                                <div class="flex gap-2">
+                                                    <p
+                                                        class="text-sm md:text-base font-semibold line-through text-gray-400">
+                                                        ₹35330</p>
+                                                    <p
+                                                        class="text-sm md:text-base font-semibold">₹13305</p>
+                                                </div>
+                                                <p
+                                                    class="text-sm md:text-base font-semibold text-red-500">70%
+                                                    OFF</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </label>
+                                <!-- Option 2 -->
+                                <label
+                                    class="relative w-[calc(50%-4px)] sm:min-w-[210px] sm:w-auto cursor-pointer">
+                                    <input type="radio" name="plan"
+                                        value="print" class="peer hidden" />
+
+                                    <div
+                                        class="border-2 rounded-md transition-all 
+                 peerplan overflow-hidden">
+                                        <div
+                                            class="p-2 text-sm font-semibold text-gray-700 peerplan-head">1
+                                            Year</div>
+                                        <div class="p-2 bg-white">
+                                            <div
+                                                class="flex items-center gap-3 flex-wrap">
+                                                <div class="flex gap-2">
+                                                    <p
+                                                        class="text-sm md:text-base font-semibold line-through text-gray-400">
+                                                        ₹35330</p>
+                                                    <p
+                                                        class="text-sm md:text-base font-semibold">₹13305</p>
+                                                </div>
+                                                <p
+                                                    class="text-sm md:text-base font-semibold text-red-500">70%
+                                                    OFF</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </label>
+
                             </div>
+
                             <!-- Quantity Selector -->
                             <div
                                 class="pt-5 flex justify-center md:justify-start quantity">
@@ -1401,54 +1559,67 @@
                         </div>
 
                         <div id="renewal" class="sub-tab-content hidden">
-                            <div class="flex flex-wrap gap-2 md:gap-4">
-                                <!-- Digital Plan -->
-                                <div
-                                    class="w-[calc(50%-4px)] sm:min-w-[210px] sm:w-auto border-2 rounded-md price-plan price-plan-active">
-                                    <div
-                                        class="p-2 text-sm font-semibold rounded-md text-gray-700 plan-head">Digital</div>
-                                    <div class="p-2 bg-white rounded-md">
-                                        <div
-                                            class="flex items-center gap-3 flex-wrap">
-                                            <div class="flex gap-2">
-                                                <p
-                                                    class="text-sm md:text-base line-through text-gray-400">₹350</p>
-                                                <p
-                                                    class="text-sm md:text-base font-semibold">₹105</p>
-                                            </div>
-                                            <p
-                                                class="text-sm md:text-base font-semibold">
-                                                <span
-                                                    class="text-sm md:text-base font-semibold text-red-500">70%
-                                                    OFF</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="flex flex-wrap gap-2 md:gap-4 mt-4">
 
-                                <!-- Print Plan -->
-                                <div
-                                    class="w-[calc(50%-4px)] sm:min-w-[210px] sm:w-auto border-2 rounded-md price-plan">
+                                <!-- Option 2 -->
+                                <label
+                                    class="relative w-[calc(50%-4px)] sm:min-w-[210px] sm:w-auto cursor-pointer">
+                                    <input type="radio" name="format"
+                                        value="print" class="peer hidden" />
+
                                     <div
-                                        class="p-2 text-sm font-semibold rounded-md text-gray-700 plan-head">Print</div>
-                                    <div class="p-2 bg-white rounded-md">
+                                        class="border-2 rounded-md transition-all 
+                 peerplan overflow-hidden">
                                         <div
-                                            class="flex items-center gap-3 flex-wrap">
-                                            <div class="flex gap-2">
+                                            class="p-2 text-sm font-semibold text-gray-700 peerplan-head">1
+                                            Year</div>
+                                        <div class="p-2 bg-white">
+                                            <div
+                                                class="flex items-center gap-3">
+                                                <div class="flex gap-2">
+                                                    <p
+                                                        class="text-sm md:text-base font-semibold line-through text-gray-400">
+                                                        ₹35330</p>
+                                                    <p
+                                                        class="text-sm md:text-base font-semibold">₹13305</p>
+                                                </div>
                                                 <p
-                                                    class="text-sm md:text-base line-through text-gray-400">₹350</p>
-                                                <p
-                                                    class="text-sm md:text-base font-semibold">₹105</p>
-                                            </div>
-                                            <p
-                                                class="text-sm md:text-base font-semibold">
-                                                <span
                                                     class="text-sm md:text-base font-semibold text-red-500">70%
-                                                    OFF</span>
-                                            </p>
+                                                    OFF</p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                </label>
+                                <!-- Option 2 -->
+                                <label
+                                    class="relative w-[calc(50%-4px)] sm:min-w-[210px] sm:w-auto cursor-pointer">
+                                    <input type="radio" name="format"
+                                        value="print" class="peer hidden" />
+
+                                    <div
+                                        class="border-2 rounded-md transition-all 
+                 peerplan overflow-hidden">
+                                        <div
+                                            class="p-2 text-sm font-semibold text-gray-700 peerplan-head">1
+                                            Year International</div>
+                                        <div class="p-2 bg-white">
+                                            <div
+                                                class="flex items-center gap-3">
+                                                <div class="flex gap-2">
+                                                    <p
+                                                        class="text-sm md:text-base font-semibold line-through text-gray-400">
+                                                        ₹35330</p>
+                                                    <p
+                                                        class="text-sm md:text-base font-semibold">₹13305</p>
+                                                </div>
+                                                <p
+                                                    class="text-sm md:text-base font-semibold text-red-500">70%
+                                                    OFF</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </label>
+
                             </div>
                         </div>
 
@@ -1456,182 +1627,190 @@
                             <div class="slider-singleissue slick-slider">
 
                                 <!-- Item 1 -->
-                                <div class="md:px-2 px-1 pb-2">
-                                    <div class="relative">
-                                        <img
-                                            src="assets/images/magazin/2.webp"
-                                            alt="Cover"
-                                            class="w-full h-full object-cover rounded"
-                                            loading="lazy" />
-                                    </div>
+
+                                <label
+                                    class="relative w-[calc(25%-8px)] sm:min-w-[210px] cursor-pointer px-2">
+                                    <!-- Hidden checkbox -->
+                                    <input type="checkbox" class="peer hidden"
+                                        name="select-issue" value="16-sep"
+                                        checked />
+
+                                    <!-- Card -->
                                     <div
-                                        class="flex items-center gap-2 mt-2">
-                                        <input type="checkbox" checked
-                                            class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                            aria-label="checkbox" />
-                                        <h3 class="text-sm mt-2 mb-1">Current
-                                            Issue </h3>
-                                    </div>
-                                </div>
+                                        class="border rounded-md transition-all peer-checked:border-blue-600 peer-checked:shadow-md overflow-hidden single-issue-item">
+                                        <div class="relative">
+                                            <img
+                                                src="assets/images/magazin/1.webp"
+                                                alt="Cover"
+                                                class="w-full h-auto object-cover rounded-t-md"
+                                                loading="lazy" />
 
-                                <!-- Item 2 -->
-                                <div class="md:px-2 px-1 pb-2">
-                                    <div class="relative">
-                                        <img
-                                            src="assets/images/magazin/5.webp"
-                                            alt="Cover"
-                                            class="w-full h-full object-cover rounded"
-                                            loading="lazy" />
+                                            <!-- Checkmark on top-right corner -->
+
+                                            <span
+                                                class="w-5 h-5 flex-shrink-0 border border-gray-300 rounded bg-white absolute top-2 right-2 after:content-['✓'] after:absolute after:text-blue-600 after:text-sm after:top-0.5 after:left-[5px] after:peer-checked:content-['✓'] after:peer-checked:block after:hidden">
+                                            </span>
+
+                                        </div>
+
+                                        <!-- Date label -->
+                                        <div
+                                            class="text-sm font-medium text-center py-2 issue-date">16
+                                            Sep</div>
                                     </div>
+                                </label>
+
+                                <label
+                                    class="relative w-[calc(25%-8px)] sm:min-w-[210px] cursor-pointer px-2">
+                                    <!-- Hidden checkbox -->
+                                    <input type="checkbox" class="peer hidden"
+                                        name="select-issue" value="16-sep" />
+
+                                    <!-- Card -->
                                     <div
-                                        class="flex items-center gap-2 mt-2">
-                                        <input type="checkbox"
-                                            class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                            aria-label="checkbox" />
-                                        <h3 class="text-sm mt-2 mb-1">16
-                                            Sep </h3>
-                                    </div>
+                                        class="border rounded-md transition-all peer-checked:border-blue-600 peer-checked:shadow-md overflow-hidden single-issue-item">
+                                        <div class="relative">
+                                            <img
+                                                src="assets/images/magazin/1.webp"
+                                                alt="Cover"
+                                                class="w-full h-auto object-cover rounded-t-md"
+                                                loading="lazy" />
 
-                                </div>
+                                            <!-- Checkmark on top-right corner -->
 
-                                <!-- Item 3 -->
-                                <div class="md:px-2 px-1 pb-2">
-                                    <div class="relative">
-                                        <img
-                                            src="assets/images/magazin/2.webp"
-                                            alt="Cover"
-                                            class="w-full h-full object-cover rounded"
-                                            loading="lazy" />
+                                            <span
+                                                class="w-5 h-5 flex-shrink-0 border border-gray-300 rounded bg-white absolute top-2 right-2 after:content-['✓'] after:absolute after:text-blue-600 after:text-sm after:top-0.5 after:left-[5px] after:peer-checked:content-['✓'] after:peer-checked:block after:hidden">
+                                            </span>
+
+                                        </div>
+
+                                        <!-- Date label -->
+                                        <div
+                                            class="text-sm font-medium text-center py-2 issue-date">16
+                                            Sep</div>
                                     </div>
+                                </label>
+
+                                <label
+                                    class="relative w-[calc(25%-8px)] sm:min-w-[210px] cursor-pointer px-2">
+                                    <!-- Hidden checkbox -->
+                                    <input type="checkbox" class="peer hidden"
+                                        name="select-issue" value="16-sep" />
+
+                                    <!-- Card -->
                                     <div
-                                        class="flex items-center gap-2 mt-2">
-                                        <input type="checkbox"
-                                            class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                            aria-label="checkbox" />
-                                        <h3 class="text-sm mt-2 mb-1">16
-                                            Sep </h3>
-                                    </div>
+                                        class="border rounded-md transition-all peer-checked:border-blue-600 peer-checked:shadow-md overflow-hidden single-issue-item">
+                                        <div class="relative">
+                                            <img
+                                                src="assets/images/magazin/1.webp"
+                                                alt="Cover"
+                                                class="w-full h-auto object-cover rounded-t-md"
+                                                loading="lazy" />
 
-                                </div>
+                                            <!-- Checkmark on top-right corner -->
 
-                                <!-- Item 4 -->
-                                <div class="md:px-2 px-1 pb-2">
-                                    <div class="relative">
-                                        <img
-                                            src="assets/images/magazin/1.webp"
-                                            alt="Cover"
-                                            class="w-full h-full object-cover rounded"
-                                            loading="lazy" />
+                                            <span
+                                                class="w-5 h-5 flex-shrink-0 border border-gray-300 rounded bg-white absolute top-2 right-2 after:content-['✓'] after:absolute after:text-blue-600 after:text-sm after:top-0.5 after:left-[5px] after:peer-checked:content-['✓'] after:peer-checked:block after:hidden">
+                                            </span>
+
+                                        </div>
+
+                                        <!-- Date label -->
+                                        <div
+                                            class="text-sm font-medium text-center py-2 issue-date">16
+                                            Sep</div>
                                     </div>
+                                </label>
+                                <label
+                                    class="relative w-[calc(25%-8px)] sm:min-w-[210px] cursor-pointer px-2">
+                                    <!-- Hidden checkbox -->
+                                    <input type="checkbox" class="peer hidden"
+                                        name="select-issue" value="16-sep" />
+
+                                    <!-- Card -->
                                     <div
-                                        class="flex items-center gap-2 mt-2">
-                                        <input type="checkbox"
-                                            class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                            aria-label="checkbox" />
-                                        <h3 class="text-sm mt-2 mb-1">16
-                                            Sep </h3>
-                                    </div>
+                                        class="border rounded-md transition-all peer-checked:border-blue-600 peer-checked:shadow-md overflow-hidden single-issue-item">
+                                        <div class="relative">
+                                            <img
+                                                src="assets/images/magazin/1.webp"
+                                                alt="Cover"
+                                                class="w-full h-auto object-cover rounded-t-md"
+                                                loading="lazy" />
 
-                                </div>
+                                            <!-- Checkmark on top-right corner -->
 
-                                <!-- Item 5 -->
-                                <div class="md:px-2 px-1 pb-2">
-                                    <div class="relative">
-                                        <img
-                                            src="assets/images/magazin/3.webp"
-                                            alt="Cover"
-                                            class="w-full h-full object-cover rounded"
-                                            loading="lazy" />
+                                            <span
+                                                class="w-5 h-5 flex-shrink-0 border border-gray-300 rounded bg-white absolute top-2 right-2 after:content-['✓'] after:absolute after:text-blue-600 after:text-sm after:top-0.5 after:left-[5px] after:peer-checked:content-['✓'] after:peer-checked:block after:hidden">
+                                            </span>
+
+                                        </div>
+
+                                        <!-- Date label -->
+                                        <div
+                                            class="text-sm font-medium text-center py-2 issue-date">16
+                                            Sep</div>
                                     </div>
+                                </label>
+                                <label
+                                    class="relative w-[calc(25%-8px)] sm:min-w-[210px] cursor-pointer px-2">
+                                    <!-- Hidden checkbox -->
+                                    <input type="checkbox" class="peer hidden"
+                                        name="select-issue" value="16-sep" />
+
+                                    <!-- Card -->
                                     <div
-                                        class="flex items-center gap-2 mt-2">
-                                        <input type="checkbox"
-                                            class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                            aria-label="checkbox" />
-                                        <h3 class="text-sm mt-2 mb-1">16
-                                            Sep </h3>
-                                    </div>
+                                        class="border rounded-md transition-all peer-checked:border-blue-600 peer-checked:shadow-md overflow-hidden single-issue-item">
+                                        <div class="relative">
+                                            <img
+                                                src="assets/images/magazin/1.webp"
+                                                alt="Cover"
+                                                class="w-full h-auto object-cover rounded-t-md"
+                                                loading="lazy" />
 
-                                </div>
-                                <!-- Item 6 -->
-                                <div class="md:px-2 px-1 pb-2">
-                                    <div class="relative">
-                                        <img
-                                            src="assets/images/magazin/5.webp"
-                                            alt="Cover"
-                                            class="w-full h-full object-cover rounded"
-                                            loading="lazy" />
+                                            <!-- Checkmark on top-right corner -->
+
+                                            <span
+                                                class="w-5 h-5 flex-shrink-0 border border-gray-300 rounded bg-white absolute top-2 right-2 after:content-['✓'] after:absolute after:text-blue-600 after:text-sm after:top-0.5 after:left-[5px] after:peer-checked:content-['✓'] after:peer-checked:block after:hidden">
+                                            </span>
+
+                                        </div>
+
+                                        <!-- Date label -->
+                                        <div
+                                            class="text-sm font-medium text-center py-2 issue-date">16
+                                            Sep</div>
                                     </div>
+                                </label>
+                                <label
+                                    class="relative w-[calc(25%-8px)] sm:min-w-[210px] cursor-pointer px-2">
+                                    <!-- Hidden checkbox -->
+                                    <input type="checkbox" class="peer hidden"
+                                        name="select-issue" value="16-sep" />
+
+                                    <!-- Card -->
                                     <div
-                                        class="flex items-center gap-2 mt-2">
-                                        <input type="checkbox"
-                                            class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                            aria-label="checkbox" />
-                                        <h3 class="text-sm mt-2 mb-1">16
-                                            Sep </h3>
-                                    </div>
+                                        class="border rounded-md transition-all peer-checked:border-blue-600 peer-checked:shadow-md overflow-hidden single-issue-item">
+                                        <div class="relative">
+                                            <img
+                                                src="assets/images/magazin/1.webp"
+                                                alt="Cover"
+                                                class="w-full h-auto object-cover rounded-t-md"
+                                                loading="lazy" />
 
-                                </div>
+                                            <!-- Checkmark on top-right corner -->
 
-                                <!-- Item 7 -->
-                                <div class="md:px-2 px-1 pb-2">
-                                    <div class="relative">
-                                        <img
-                                            src="assets/images/magazin/2.webp"
-                                            alt="Cover"
-                                            class="w-full h-full object-cover rounded"
-                                            loading="lazy" />
-                                    </div>
-                                    <div
-                                        class="flex items-center gap-2 mt-2">
-                                        <input type="checkbox"
-                                            class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                            aria-label="checkbox" />
-                                        <h3 class="text-sm mt-2 mb-1">16
-                                            Sep </h3>
-                                    </div>
+                                            <span
+                                                class="w-5 h-5 flex-shrink-0 border border-gray-300 rounded bg-white absolute top-2 right-2 after:content-['✓'] after:absolute after:text-blue-600 after:text-sm after:top-0.5 after:left-[5px] after:peer-checked:content-['✓'] after:peer-checked:block after:hidden">
+                                            </span>
 
-                                </div>
+                                        </div>
 
-                                <!-- Item 8 -->
-                                <div class="md:px-2 px-1 pb-2">
-                                    <div class="relative">
-                                        <img
-                                            src="assets/images/magazin/1.webp"
-                                            alt="Cover"
-                                            class="w-full h-full object-cover rounded"
-                                            loading="lazy" />
+                                        <!-- Date label -->
+                                        <div
+                                            class="text-sm font-medium text-center py-2 issue-date">16
+                                            Sep</div>
                                     </div>
-                                    <div
-                                        class="flex items-center gap-2 mt-2">
-                                        <input type="checkbox"
-                                            class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                            aria-label="checkbox" />
-                                        <h3 class="text-sm mt-2 mb-1">16
-                                            Sep </h3>
-                                    </div>
-
-                                </div>
-
-                                <!-- Item 9 -->
-                                <div class>
-                                    <div class="relative">
-                                        <img
-                                            src="assets/images/magazin/3.webp"
-                                            alt="Cover"
-                                            class="w-full h-full object-cover rounded"
-                                            loading="lazy" />
-                                    </div>
-                                    <div
-                                        class="flex items-center gap-2 mt-2">
-                                        <input type="checkbox"
-                                            class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                            aria-label="checkbox" />
-                                        <h3 class="text-sm mt-2 mb-1">16
-                                            Sep </h3>
-                                    </div>
-
-                                </div>
+                                </label>
 
                             </div>
                             <!-- <div class="single-issue-slider"> 
@@ -1850,76 +2029,106 @@
 
                         <div class="w-full block">
                             <div class="flex flex-wrap gap-2 md:gap-4 mt-4">
-                                <!-- Magazine Gift -->
-                                <div
-                                    class="w-[calc(50%-4px)] sm:min-w-[210px] sm:w-auto border-2 rounded-md gift-box">
+
+                                <!-- Gift 1 -->
+                                <label
+                                    class="relative w-[calc(50%-4px)] sm:min-w-[210px] sm:w-auto cursor-pointer">
+                                    <input type="checkbox"
+                                        class="peer hidden" />
                                     <div
-                                        class="text-sm font-semibold flex justify-between p-3 rounded-md mb-2 gift-head">
-                                        <h5
-                                            class="text-left text-blue-500">Magazine</h5>
-                                        <input type="checkbox"
-                                            class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                            aria-label="Select Magazine gift: Tell Me Why 1 Year" />
-                                    </div>
-                                    <p
-                                        class="text-sm font-medium text-left mb-4 p-2">Tell
-                                        Me Why 1 Year</p>
-                                    <img src="assets/images/magazin/image.svg"
-                                        alt="Magazine cover: Tell Me Why"
-                                        width="50"
-                                        height="70"
-                                        class="mx-auto h-18 object-contain mb-2"
-                                        loading="lazy" />
-                                </div>
+                                        class="gift-box border-2 rounded-md transition-all overflow-hidden peer-checked:border-blue-600">
 
-                                <!-- Amazon Gift -->
-                                <div
-                                    class="w-[calc(50%-4px)] sm:min-w-[210px] sm:w-auto border-2 rounded-md gift-box gift-box-active">
+                                        <!-- Header -->
+                                        <div
+                                            class="flex items-center justify-between gap-2 bg-gray-100 text-sm font-semibold p-3 rounded-md mb-2
+                  peer-checked:bg-blue-100 peer-checked:text-blue-600">
+                                            <h5
+                                                class=" gift-head text-left  truncate w-full">Magazine
+                                                with Longer
+                                                Title Example</h5>
+                                            <span
+                                                class="w-5 h-5 flex-shrink-0 border border-gray-300 rounded bg-white relative after:content-['✓'] after:absolute after:text-blue-600 after:text-sm after:top-0.5 after:left-[5px] after:peer-checked:content-['✓'] after:peer-checked:block after:hidden">
+                                            </span>
+                                        </div>
+
+                                        <p
+                                            class="text-sm font-medium text-left mb-4 p-2">Tell
+                                            Me Why 1 Year</p>
+                                        <img
+                                            src="assets/images/magazin/image.svg"
+                                            alt="Magazine cover" width="50"
+                                            height="70"
+                                            class="mx-auto h-18 object-contain mb-2"
+                                            loading="lazy" />
+                                    </div>
+                                </label>
+
+                                <!-- Gift 2 -->
+                                <label
+                                    class="relative w-[calc(50%-4px)] sm:min-w-[210px] sm:w-auto cursor-pointer">
+                                    <input type="checkbox"
+                                        class="peer hidden" checked />
                                     <div
-                                        class="text-sm font-semibold flex justify-between p-3 rounded-md gift-head mb-2">
-                                        <h5
-                                            class="text-left text-blue-500">Amazon
-                                            Gift</h5>
-                                        <input type="checkbox" checked
-                                            class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                            aria-label="Select Amazon gift card" />
+                                        class="gift-box border-2 rounded-md transition-all overflow-hidden peer-checked:border-blue-600">
+
+                                        <div
+                                            class="flex items-center justify-between gap-2 bg-gray-100 text-sm font-semibold p-3 rounded-md mb-2
+                  peer-checked:bg-blue-100 peer-checked:text-blue-600">
+                                            <h5
+                                                class="gift-head text-left  truncate w-full">Amazon
+                                                Gift</h5>
+                                            <span
+                                                class="w-5 h-5 flex-shrink-0 border border-gray-300 rounded bg-white relative after:content-['✓'] after:absolute after:text-blue-600 after:text-sm after:top-0.5 after:left-[5px] peer-checked:after:block after:hidden">
+                                            </span>
+                                        </div>
+
+                                        <p
+                                            class="text-sm font-medium text-left mb-4 p-2">Amazon
+                                            Gift</p>
+                                        <img
+                                            src="assets/images/magazin/amazon.svg"
+                                            alt="Amazon gift card"
+                                            width="50"
+                                            height="70"
+                                            class="mx-auto h-18 object-contain mb-2"
+                                            loading="lazy" />
                                     </div>
-                                    <p
-                                        class="text-sm font-medium text-left mb-4 p-2">Amazon
-                                        Gift</p>
+                                </label>
 
-                                    <img src="assets/images/magazin/amazon.svg"
-                                        alt="Amazon gift card" width="50"
-                                        height="70"
-                                        class="mx-auto h-18 object-contain mb-2"
-                                        loading="lazy" />
-
-                                </div>
-
-                                <!-- Travel Bag -->
-                                <div
-                                    class="w-[calc(50%-8px)] sm:min-w-[210px] sm:w-auto border-2 rounded-md gift-box">
+                                <!-- Gift 3 -->
+                                <label
+                                    class="relative w-[calc(50%-4px)] sm:min-w-[210px] sm:w-auto cursor-pointer">
+                                    <input type="checkbox"
+                                        class="peer hidden" />
                                     <div
-                                        class="text-sm font-semibold flex justify-between p-3 rounded-md mb-2 gift-head">
-                                        <h5
-                                            class="text-left text-blue-500">Travel
-                                            Bag</h5>
-                                        <input type="checkbox"
-                                            class="w-5 h-5 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                            aria-label="Select Travel Bag gift" />
+                                        class="gift-box border-2 rounded-md transition-all overflow-hidden peer-checked:border-blue-600">
+
+                                        <div
+                                            class="flex items-center justify-between gap-2 bg-gray-100 text-sm font-semibold p-3 rounded-md mb-2
+                  peer-checked:bg-blue-100 peer-checked:text-blue-600">
+                                            <h5
+                                                class="text-left  truncate w-full gift-head">Travel
+                                                Bag</h5>
+                                            <span
+                                                class="w-5 h-5 flex-shrink-0 border border-gray-300 rounded bg-white relative after:content-['✓'] after:absolute after:text-blue-600 after:text-sm after:top-0.5 after:left-[5px] peer-checked:after:block after:hidden">
+                                            </span>
+                                        </div>
+
+                                        <p
+                                            class="text-sm font-medium text-left mb-4 p-2">Travel
+                                            Bag</p>
+                                        <img
+                                            src="assets/images/magazin/bag.svg"
+                                            alt="Travel bag" width="50"
+                                            height="70"
+                                            class="mx-auto h-18 object-contain mb-2"
+                                            loading="lazy" />
                                     </div>
-                                    <p
-                                        class="text-sm font-medium text-left mb-4 p-2">Travel
-                                        Bag</p>
-                                    <img src="assets/images/magazin/bag.svg"
-                                        alt="Travel bag product image"
-                                        width="50"
-                                        height="70"
-                                        class="mx-auto h-18 object-contain mb-2"
-                                        loading="lazy" />
-                                </div>
+                                </label>
+
                             </div>
                         </div>
+
                     </div>
 
                     <!-- About Section -->
@@ -2243,69 +2452,89 @@
 
         <!--  Footer  -->
         <footer class="bg-gray-50 text-gray-800 subscription-main-footer">
-  <div class="max-w-full lg:max-w-[1550px] mx-auto px-6 py-10 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-8">
+            <div
+                class="max-w-full lg:max-w-[1550px] mx-auto px-6 py-10 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-8">
 
-    <!-- Brand & Contact -->
-    <div>
-      <!-- <img src="assets/img/mobile-logo.png" alt="Manorama Online" class="h-8 mb-4" /> -->
-      <h2 class="font-semibold text-md">Manorama Online</h2>
-      <p class="text-sm mt-2 break-words whitespace-normal w-full max-w-xs">
-        Manorama Online, Malayala Manorama, P.B No.26, Kottayam<br />
-        686 001, Kerala, India
-      </p>
-      <p class="mt-4 font-medium text-sm">Get Questions? Contact Us 24/7</p>
-      <p class="text-sm break-words whitespace-normal w-full max-w-xs">
-        0481 2587244<br />
-        <a href="mailto:Customersupport@Mm.Co.In" class="hover:text-blue-500">Customersupport@Mm.Co.In</a>
-      </p>
-    </div>
+                <!-- Brand & Contact -->
+                <div>
+                    <!-- <img src="assets/img/mobile-logo.png" alt="Manorama Online" class="h-8 mb-4" /> -->
+                    <h2 class="font-semibold text-md">Manorama Online</h2>
+                    <p
+                        class="text-sm mt-2 break-words whitespace-normal w-full max-w-xs">
+                        Manorama Online, Malayala Manorama, P.B No.26,
+                        Kottayam<br />
+                        686 001, Kerala, India
+                    </p>
+                    <p class="mt-4 font-medium text-sm">Get Questions? Contact
+                        Us 24/7</p>
+                    <p
+                        class="text-sm break-words whitespace-normal w-full max-w-xs">
+                        0481 2587244<br />
+                        <a href="mailto:Customersupport@Mm.Co.In"
+                            class="hover:text-blue-500">Customersupport@Mm.Co.In</a>
+                    </p>
+                </div>
 
-    <!-- Information Links -->
-    <div>
-      <h3 class="font-semibold text-md mb-4">Information</h3>
-      <ul class="space-y-2 text-sm">
-        <li><a href="#" class="hover:text-blue-500" aria-label="week">About Us</a></li>
-        <li><a href="#" class="hover:text-blue-500" aria-label="week">FAQ</a></li>
-        <li><a href="#" class="hover:text-blue-500" aria-label="week">Privacy Policy</a></li>
-        <li><a href="#" class="hover:text-blue-500" aria-label="week">Conditions Of Use</a></li>
-        <li><a href="#" class="hover:text-blue-500" aria-label="week">Shipping And Returns</a></li>
-        <li><a href="#" class="hover:text-blue-500" aria-label="week">Product Support</a></li>
-      </ul>
-    </div>
+                <!-- Information Links -->
+                <div>
+                    <h3 class="font-semibold text-md mb-4">Information</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-blue-500"
+                                aria-label="week">About Us</a></li>
+                        <li><a href="#" class="hover:text-blue-500"
+                                aria-label="week">FAQ</a></li>
+                        <li><a href="#" class="hover:text-blue-500"
+                                aria-label="week">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-blue-500"
+                                aria-label="week">Conditions Of Use</a></li>
+                        <li><a href="#" class="hover:text-blue-500"
+                                aria-label="week">Shipping And Returns</a></li>
+                        <li><a href="#" class="hover:text-blue-500"
+                                aria-label="week">Product Support</a></li>
+                    </ul>
+                </div>
 
-    <!-- Shop Links -->
-    <div>
-      <h3 class="font-semibold text-md mb-4">Shop With Us</h3>
-      <ul class="space-y-2 text-sm">
-        <li><a href="#" class="hover:text-blue-500" aria-label="week">Magazines</a></li>
-        <li><a href="#" class="hover:text-blue-500" aria-label="week">Books</a></li>
-        <li><a href="#" class="hover:text-blue-500" aria-label="week">Books</a></li>
-        <li><a href="#" class="hover:text-blue-500" aria-label="week">Yearbook</a></li>
-        <li><a href="#" class="hover:text-blue-500" aria-label="week">Astro</a></li>
-      </ul>
-    </div>
+                <!-- Shop Links -->
+                <div>
+                    <h3 class="font-semibold text-md mb-4">Shop With Us</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-blue-500"
+                                aria-label="week">Magazines</a></li>
+                        <li><a href="#" class="hover:text-blue-500"
+                                aria-label="week">Books</a></li>
+                        <li><a href="#" class="hover:text-blue-500"
+                                aria-label="week">Books</a></li>
+                        <li><a href="#" class="hover:text-blue-500"
+                                aria-label="week">Yearbook</a></li>
+                        <li><a href="#" class="hover:text-blue-500"
+                                aria-label="week">Astro</a></li>
+                    </ul>
+                </div>
 
-    <!-- Newsletter / Social -->
-    <div>
-      <h3 class="font-semibold text-md mb-2">Social Networks</h3>
-      <div class="flex space-x-3 py-2 socialmedia">
-        <a href="#" class="facebook" aria-label="facebook"></a>
-        <a href="#" class="instagram" aria-label="instagram"></a>
-        <a href="#" class="youtube" aria-label="youtube"></a>
-        <a href="#" class="twitter" aria-label="twitter"></a>
-      </div>
-    </div>
-  </div>
+                <!-- Newsletter / Social -->
+                <div>
+                    <h3 class="font-semibold text-md mb-2">Social Networks</h3>
+                    <div class="flex space-x-3 py-2 socialmedia">
+                        <a href="#" class="facebook" aria-label="facebook"></a>
+                        <a href="#" class="instagram"
+                            aria-label="instagram"></a>
+                        <a href="#" class="youtube" aria-label="youtube"></a>
+                        <a href="#" class="twitter" aria-label="twitter"></a>
+                    </div>
+                </div>
+            </div>
 
-  <hr class="border-gray-200" />
+            <hr class="border-gray-200" />
 
-  <div class="flex flex-col md:flex-row justify-between items-center max-w-full lg:max-w-[1550px] mx-auto px-6 py-6 text-sm text-gray-500">
-    <p>Copyright 2023 Manorama Online &nbsp;|&nbsp; All Rights Reserved</p>
-    <div class="flex space-x-2 mt-4 md:mt-0">
-      <!-- Optional footer links can be added here -->
-    </div>
-  </div>
-</footer>
+            <div
+                class="flex flex-col md:flex-row justify-between items-center max-w-full lg:max-w-[1550px] mx-auto px-6 py-6 text-sm text-gray-500">
+                <p>Copyright 2023 Manorama Online &nbsp;|&nbsp; All Rights
+                    Reserved</p>
+                <div class="flex space-x-2 mt-4 md:mt-0">
+                    <!-- Optional footer links can be added here -->
+                </div>
+            </div>
+        </footer>
         <!--  End Footer  -->
 
         <link href="assets/css/common.css" type="text/css" rel="stylesheet" />
@@ -2320,11 +2549,10 @@
 
         <script src="assets/libs/Jquery/jquery-3.7.1.min.js"></script>
 
-
         <script src="assets/libs/slick-slider/slick.min.js" defer></script>
 
         <script src="assets/js/common.js" defer></script>
-        <script src="assets/js/detail.js" defer></script>
+
 
         <script src="assets/js/magazindetail.js" defer></script>
 

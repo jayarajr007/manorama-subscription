@@ -7,8 +7,63 @@
     width: 1.2rem;
     height: 1.2rem;
     z-index: 10;
-    background: url(../img/icons/sprite.svg) no-repeat -64px -261px;
+    background: url(../img/icons/sprite.svg) no-repeat -64px -262px;
 }
+
+
+.share-fb-icon::after {
+  content: "";
+    position: absolute;
+    top: -8px;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    background: url(../img/icons/sprite.svg) no-repeat -35px -305px;
+
+}
+
+.share-x-icon::after {
+  content: "";
+    position: absolute;
+    top: -8px;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    background:url(../img/icons/sprite.svg) no-repeat -56px -305px;
+
+}
+
+.share-email-icon::after {
+  content: "";
+    position: absolute;
+    top: -8px;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    background: url(../img/icons/sprite.svg) no-repeat -78px -306px;
+}
+
+.share-watsapp-icon::after {
+  content: "";
+    position: absolute;
+    top: -8px;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    background:url(../img/icons/sprite.svg) no-repeat -97px -306px;
+}
+
+.share-copy-icon::after {
+  content: "";
+    position: absolute;
+    top: -8px;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    background: url(../img/icons/sprite.svg) no-repeat -120px -304px;
+
+}
+
 .info::after {
 content: "";
     position: absolute;
@@ -124,11 +179,6 @@ button.active-format
     color: #292929;
 }
 
-.gift-box
-{
-
-    border: 1px solid #d1d5db;
-}
 
 
 .gift-box .gift-head
