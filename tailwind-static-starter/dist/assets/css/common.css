@@ -11,6 +11,7 @@
 	--lightblue1:#F1F8FF;
 	--red-light:#ed002b;
 	--dark-bg-blue:#333994;
+	--primary-bule-text:#0074ED;
 }
 
 .dark-bg {
@@ -27,11 +28,44 @@
 	background-color: var(--red-color);
 }
 .bg-creamlight{
-	background-color: var(--cream-light);
+	 background-color: var(--cream-light); 
+
 }
+.primary-text
+{
+	color: var(--primary-bule-text);
+}
+
+
+
 .bg-creamdark{
-	background-color: var(--cream-color);
+	/* background-color: var(--cream-color); */
+background: linear-gradient(270deg, #ff8a00, #e52e71, #ff8a00);
+background-size: 600% 600%;
+animation: gradientFlow 5s ease infinite;
 }
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.recommended-tag:hover {
+  animation: bounce 0.5s;
+}
+
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-3px); }
+  100% { transform: translateY(0); }
+}
+
 .creamcol{
 	color: var(--cream-color);
 }
