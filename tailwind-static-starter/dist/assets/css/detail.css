@@ -247,3 +247,9 @@ button.active-format
 .recommeded {
     top: -11px;
 }
+@media(max-width:574px){
+  .tvmstyle{
+    width: 115px;
+    overflow-wrap: break-word;
+  }
+}

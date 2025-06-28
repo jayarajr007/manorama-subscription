@@ -236,7 +236,14 @@ position: absolute;
 
 
 
-
+@media(max-width:767px){
+  .copyright1{
+    margin-bottom: 40px;
+  }
+  .copyright{
+    margin-bottom: 60px;
+  }
+}
 
 
 
