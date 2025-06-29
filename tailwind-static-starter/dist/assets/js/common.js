@@ -52,20 +52,23 @@ function toggleFav(button) {
 
 
 // menu item highlight 
-document.querySelectorAll('.dropdown-group').forEach(group => {
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.dropdown-group').forEach(group => {
     const button = group.querySelector('.dropdown-button');
     const menu = group.querySelector('.dropdown-menu');
 
+    if (!button || !menu) return;
+
     group.addEventListener('mouseenter', () => {
       button.classList.add('text-blue-500');
-      menu.classList.remove('hidden');
     });
 
     group.addEventListener('mouseleave', () => {
       button.classList.remove('text-blue-500');
-      menu.classList.add('hidden');
     });
-});    
+  });
+});
+  
 
 
 
