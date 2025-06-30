@@ -283,3 +283,28 @@ button.active-format
 .large-thumb-slider .slick-next {
     right: -15px!important;
 }
+
+.ltarrow:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 25px;
+    height: 25px;
+    z-index: 10;
+    background: url(../img/icons/sprite.svg) no-repeat -149px -176px !important;
+    opacity: 1;
+        filter: brightness(0) invert(1);
+}
+.rtarrow:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 9px;
+    width: 25px;
+    height: 25px;
+    z-index: 10;
+    background: url(../img/icons/sprite.svg) no-repeat -173px -178px !important;
+    opacity: 1;
+        filter: brightness(0) invert(1);
+}

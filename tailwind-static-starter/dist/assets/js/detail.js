@@ -72,5 +72,47 @@ $(window).on('load', function () {
 
 
 
-        
+// preview slider image
+
+  const images = document.querySelectorAll(".large-thumb-slider img");
+  const popup = document.getElementById("imagePopup");
+  const popupImg = document.getElementById("popupImg");
+  const closeBtn = document.getElementById("closePopup");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
+
+  let currentIndex = 0;
+
+  images.forEach((img, index) => {
+    img.addEventListener("click", () => {
+      currentIndex = index;
+      showImage(currentIndex);
+      popup.classList.remove("hidden");
+      popup.classList.add("flex");
+    });
+  });
+
+  function showImage(index) {
+    popupImg.src = images[index].src;
+  }
+
+  closeBtn.addEventListener("click", () => {
+    popup.classList.add("hidden");
+  });
+
+  nextBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(currentIndex);
+  });
+
+  prevBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") popup.classList.add("hidden");
+  });
+
+    
   
