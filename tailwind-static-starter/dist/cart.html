@@ -17,6 +17,7 @@
             onload="this.onload=null;this.rel='stylesheet'">
         <link rel="stylesheet" href="assets/css/output.css">
         <link href="assets/css/common-crit.css" rel="stylesheet" />
+        <link href="assets/css/popup.css" rel="stylesheet" />
         <style>
 
 </style>
@@ -1060,6 +1061,23 @@
 
             </div>
         </header>
+         <!-- Bottom Navigation - Mobile Only -->
+    <div
+        class="fixed bottom-0 left-0 w-full bg-white shadow-md border-t border-gray-200 z-50 p-4 flex md:hidden  justify-between">
+
+        <!-- Price Section -->
+        <div class="flex flex-col items-center">
+            <div class="text-xl font-semibold text-gray-900 w-full">₹1800 </div>
+            <p class="text-sm text-green-600 mt-1 font-semibold">You will save ₹600 on this order</p>
+        </div>
+
+        <!-- Add to Cart Button -->
+        <button
+            class="text-white text-sm font-semibold py-3 px-3 mobileaddcart h-12 rounded-md shadow-md primary-button-bg relative"
+            aria-label="add to cart">
+            Proceed
+        </button>
+    </div>
 
         <!-- Hero Section -->
         <section
@@ -1403,7 +1421,7 @@
 
                     
 
-                    <div class="gray-bg p-6">
+                    <div class="gray-bg p-0 md:p-6">
                         <h3 class="font-semibold mb-4">Coupons</h3>
                         <div class="border" style="padding: 10px;
     background: #fff">
@@ -1436,25 +1454,43 @@
                                     class="font-semibold">₹1800.00</span>
                             </div>
                             <p
-                                class="text-sm text-green-600 mt-4 font-semibold">You
+                                class="text-sm text-green-600 mt-4 font-medium hidemobile">You
                                 will save ₹600 on this order</p>
-                            <div class=" mt-6 block">
+                            <div class=" mt-6 block hidemobile">
                                 <button
-                                    class="w-full primary-button-bg text-white font-semibold py-4 rounded">PROCEED
+                                    class="w-full primary-button-bg text-white font-semibold py-4 rounded hidemobile">PROCEED
                                     TO CHECKOUT</button>
                             </div>
 
                         </div>
 
                         <div class="text-md  space-y-2 mt-6">
-                            <a
-                                class="font-semibold border-b pb-4 mb-4 block hover:text-blue-500"
-                                href aria-label="salesshipping">Sales &
-                                Shipping</a>
+                            <div class="cursor-pointer font-semibold border-b pb-4 mb-4 block hover:text-blue-500"
+                                href aria-label="salesshipping" onclick="openPopup()">Sales &
+                                Shipping</div>
                             <a class="font-semibold block mb-4 hover:text-blue-500"
                                 href aria-label="faq">FAQ</a>
                         </div>
                     </div>
+
+                    <!-- Sales & Shipping Popup  -->
+                    <div id="popup" class="popcont fixed m-0 inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 hidden">
+                        <div class="pop_bx bg-white p-6 rounded-lg relative">
+                            <button onclick="closePopup()" class="absolute top-2 right-2 text-gray-600 hover:text-red-500 text-xl">&times;</button>
+                            <h2 class="text-lg font-semibold mb-2">Sales & Shipping</h2>
+                            <p class="mb-4 text-sm text-gray-500">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                            <h2 class="text-md font-semibold mb-2">Sales & Shipping policy</h2>
+                            <ul>
+                                <li class="relative pl-4 text-gray-500 mb-1 text-sm before:content-['•'] before:absolute before:left-0 before:top-0 before:text-gray-500">
+                                    Letraset sheets containing
+                                </li>
+                                <li class="relative pl-4 text-gray-500 mb-1 text-sm before:content-['•'] before:absolute before:left-0 before:top-0 before:text-gray-500">
+                                    PageMaker including versions
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--end Sales & Shipping Popup  -->
 
                     <div class="text-sm text-gray-600 space-y-2">
 
@@ -1570,7 +1606,7 @@
             onload="this.media='all'" />
 
         <script src="assets/libs/Jquery/jquery-3.7.1.min.js"></script>
-
+        <script src="assets/js/popup.js"></script>
         <!-- <script>
 
         (function ($) {

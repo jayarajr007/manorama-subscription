@@ -207,7 +207,11 @@ position: absolute;
 
 }
 
-
+@media screen and (max-width: 767px) {
+  .hidemobile{
+    display: none;
+  }
+}
 
 
 @media screen and (max-width: 760px) {
