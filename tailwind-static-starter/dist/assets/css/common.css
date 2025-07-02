@@ -8,7 +8,7 @@
 	--cream-light:#FFF3E1;
 	--gray-bg:#F8F8F8;
 	--lightblue:#F6F6F6;
-	--lightblue1:#F1F8FF;
+	--lightblue:#F1F8FF;
 	--red-light:#ed002b;
 	--dark-bg-blue:#333994;
 	--primary-bule-text:#0074ED;
@@ -30,6 +30,10 @@
 .bg-creamlight{
 	 background-color: var(--cream-light); 
 
+}
+.bg-lightblue
+{
+	background-color: var(--lightblue); 
 }
 .primary-text
 {
