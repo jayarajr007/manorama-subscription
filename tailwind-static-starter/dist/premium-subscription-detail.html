@@ -1142,7 +1142,13 @@
                             </div>
                         </div>
                     </div>
-
+<!-- Popup Modal -->
+<div id="imagePopup" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50 ">
+    <button id="closePopup" class="absolute top-4 right-4 text-white text-3xl ">&times;</button>
+    <button id="prevBtn" class="absolute left-4 text-white text-3xl ltarrow"></button>
+    <img id="popupImg" src="" class="max-w-[90%] max-h-[80%] rounded-md transition-all duration-300" />
+    <button id="nextBtn" class="absolute right-4 text-white text-3xl rtarrow"></button>
+</div>
                     <!-- <p class="text-xs text-gray-500 mt-3 flex items-center">
                         <span class="growth relative" aria-hidden="true"></span>
                         68 People Ordered This In The Last 15 Days

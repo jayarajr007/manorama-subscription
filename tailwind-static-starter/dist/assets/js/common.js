@@ -60,11 +60,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!button || !menu) return;
 
     group.addEventListener('mouseenter', () => {
-      button.classList.add('text-blue-500');
+     button.classList.add('text-blue-500');
     });
 
     group.addEventListener('mouseleave', () => {
       button.classList.remove('text-blue-500');
+
     });
   });
 });
@@ -98,3 +99,30 @@ document.addEventListener('DOMContentLoaded', () => {
       categoryMenu.classList.add('hidden');
       document.body.classList.remove('overflow-hidden');
     });
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+
+    dropdownMenu.addEventListener('wheel', function (e) {
+        const { scrollTop, scrollHeight, clientHeight } = this;
+
+        const isScrollingUp = e.deltaY < 0;
+        const isScrollingDown = e.deltaY > 0;
+
+        const atTop = scrollTop === 0;
+        const atBottom = scrollTop + clientHeight >= scrollHeight;
+
+        if ((isScrollingUp && atTop) || (isScrollingDown && atBottom)) {
+            e.preventDefault();
+        }
+    }, { passive: false });
+
+    dropdownMenu.addEventListener('touchmove', function (e) {
+        e.stopPropagation();
+    }, { passive: false });
+});
+
+
+
+
