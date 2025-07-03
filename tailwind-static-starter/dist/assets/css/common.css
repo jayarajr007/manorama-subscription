@@ -98,7 +98,13 @@ align-items: center;
     font-size: 14px;
 }
 
+.menu-hover-bg
+{
 
+	border-bottom: 2px solid var(--primary-bule-text) !important;
+	transition: 1s ease;
+
+}
 .offer-circle-badge {
 	width: 78px;
 	display: flex;
