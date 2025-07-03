@@ -15,6 +15,13 @@
     <link href="assets/css/common-crit.css" rel="stylesheet" />
     <link href="assets/css/detail-crit.css" rel="stylesheet" />
 
+    <style>
+
+        .bg1 {
+    background: #f5f9ff;
+}
+    </style>
+
 </head>
 
 <body class>
@@ -308,7 +315,7 @@
                             <!-- Magazines Mega Menu -->
                             <li class="group z-50 py-4 dropdown-group">
                                 <button aria-label="Magazines"
-                                    class="dropdown-button text-left hover:text-white flex items-center text-sm">
+                                    class="dropdown-button text-left flex items-center text-sm">
                                     MAGAZINES
                                     <span class="ml-2 droparrow w-5 h-3"></span>
                                 </button>
@@ -1883,14 +1890,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     group.addEventListener('mouseenter', () => {
      // button.classList.add('text-blue-500');
-     button.classList.add('text-white');
+
       button.classList.add('bg1');
     });
 
     group.addEventListener('mouseleave', () => {
       //button.classList.remove('text-blue-500');
       button.classList.remove('bg1');
-      button.classList.remove('text-white');
+ 
     });
   });
 });
