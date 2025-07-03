@@ -60,11 +60,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!button || !menu) return;
 
     group.addEventListener('mouseenter', () => {
-     button.classList.add('text-blue-500');
+     button.classList.add('text-blue-500', 'menu-hover-bg');
     });
 
     group.addEventListener('mouseleave', () => {
-      button.classList.remove('text-blue-500');
+      button.classList.remove('text-blue-500', 'menu-hover-bg');
 
     });
   });
