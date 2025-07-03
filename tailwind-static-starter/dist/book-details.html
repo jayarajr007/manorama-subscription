@@ -308,7 +308,7 @@
                             <!-- Magazines Mega Menu -->
                             <li class="group z-50 py-4 dropdown-group">
                                 <button aria-label="Magazines"
-                                    class="dropdown-button text-left hover:text-blue-500 flex items-center text-sm">
+                                    class="dropdown-button text-left hover:text-white flex items-center text-sm">
                                     MAGAZINES
                                     <span class="ml-2 droparrow w-5 h-3"></span>
                                 </button>
@@ -1873,7 +1873,30 @@
     <script>
 
 
+// menu item highlight 
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.dropdown-group').forEach(group => {
+    const button = group.querySelector('.dropdown-button');
+    const menu = group.querySelector('.dropdown-menu');
+
+    if (!button || !menu) return;
+
+    group.addEventListener('mouseenter', () => {
+     // button.classList.add('text-blue-500');
+     button.classList.add('text-white');
+      button.classList.add('bg1');
+    });
+
+    group.addEventListener('mouseleave', () => {
+      //button.classList.remove('text-blue-500');
+      button.classList.remove('bg1');
+      button.classList.remove('text-white');
+    });
+  });
+});
+  
     </script>
+
 
 </body>
 
