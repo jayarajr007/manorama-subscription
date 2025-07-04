@@ -43,3 +43,36 @@
   ) 1;
 
 }
+
+
+/* Add this to your CSS file or inside a <style> tag */
+.animated-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+    background: linear-gradient(270deg, #ff00cc, #ef4444, #f5662a, #ffcc00);
+  background-size: 800% 800%;
+  animation: borderMove 6s ease infinite;
+  border-radius: inherit;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+}
+
+@keyframes borderMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.bundle-popular
+{
+ top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+    color: #fff;
+
+}
