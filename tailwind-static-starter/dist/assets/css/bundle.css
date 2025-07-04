@@ -1,0 +1,45 @@
+
+/* bundle */
+.greentick1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 1.2rem;
+    height: 1.2rem;
+    z-index: 10;
+    background:url(../img/icons/sprite.svg) no-repeat -79px -72px;
+}
+.bundlepoint li{
+  padding-left: 28px;
+}
+.bundle_head {
+
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ececec;
+} 
+.addcart::after {
+    content: "";
+    position: absolute;
+    top: -4px;
+    right: -9px;
+    width: 1.8rem;
+    height: 1.8rem;
+    z-index: 10;
+    background: url(../img/icons/sprite.svg) no-repeat -22px -21px;
+    filter: brightness(0) invert(1);
+}
+.promote-offer
+{
+
+  border-image: linear-gradient(
+    to bottom,
+    green 25%,
+    blue 25%,
+    blue 50%,
+    yellow 50%,
+    yellow 75%,
+    red 75%
+  ) 1;
+
+}
