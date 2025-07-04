@@ -245,6 +245,7 @@ button.active-format
     z-index: 10;
     background:url(../img/icons/sprite.svg) no-repeat -79px -72px;
 }
+
 .recommeded {
     top: -11px;
 }
@@ -307,4 +308,24 @@ button.active-format
     background: url(../img/icons/sprite.svg) no-repeat -173px -178px !important;
     opacity: 1;
         filter: brightness(0) invert(1);
+}
+
+/* bundle */
+.greentick1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 1.2rem;
+    height: 1.2rem;
+    z-index: 10;
+    background:url(../img/icons/sprite.svg) no-repeat -79px -72px;
+}
+.bundlepoint li{
+  padding-left: 28px;
+}
+.bundle_head {
+    height: 200px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ececec;
 }
