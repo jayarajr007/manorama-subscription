@@ -46,7 +46,7 @@
 
 
 /* Add this to your CSS file or inside a <style> tag */
-.animated-border::before {
+/* .animated-border::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -67,6 +67,7 @@
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+  */
 .bundle-popular
 {
  top: 0%;
@@ -75,4 +76,8 @@
 
     color: #fff;
 
+} 
+.animated-border
+{
+    border: 1px solid #fe8705;
 }
