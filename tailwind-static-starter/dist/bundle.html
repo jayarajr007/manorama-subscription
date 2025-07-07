@@ -1123,18 +1123,19 @@
                             </div>
 
 
-                            <ul class="bundlepoint text-sm text-left space-y-2 mb-4">
-                                <li class="relative"><span class="greentick1"></span>Digital Access</li>
-                                <li class="relative"><span class="greentick1"></span>Read Anywhere, Anytime</li>
-                                <li class="relative"><span class="greentick1"></span>1 Year Subscription</li>
-                                <li class="relative"><span class="greentick1"></span>11 Malayalam e-magazines <span
-                                        class="greentick1"></span> </li>
-                                <li class="relative"><span class="greentick1"></span>Read Anywhere, Anytime</li>
-                                <li class="relative"><span class="greentick1"></span>1 Year Subscription</li>
-                                <li class="relative"><span class="greentick1"></span>Digital Access</li>
-                                <li class="relative"><span class="greentick1"></span>Read Anywhere, Anytime</li>
-                                <li class="relative"><span class="greentick1"></span>1 Year Subscription</li>
-                            </ul>
+                <ul class="bundlepoint text-sm text-left space-y-2 mb-4">
+                    <li class="relative"><span class="greentick1"></span>Digital Access</li>
+                    <li class="relative"><span class="greentick1"></span>Read Anywhere, Anytime</li>
+                    <li class="relative"><span class="greentick1"></span>1 Year Subscription</li>
+                    <li class="relative"><span class="greentick1"></span>11 Malayalam e-magazines</li>
+                    <li class="relative hidden mobile-only"><span class="greentick1"></span>Read Anywhere, Anytime</li>
+                    <li class="relative hidden mobile-only"><span class="greentick1"></span>1 Year Subscription</li>
+                    <li class="relative hidden mobile-only"><span class="greentick1"></span>Digital Access</li>
+                    <li class="relative hidden mobile-only"><span class="greentick1"></span>Read Anywhere, Anytime</li>
+                    <li class="relative hidden mobile-only"><span class="greentick1"></span>1 Year Subscription</li>
+                </ul>
+                <button class="read-more-toggle text-blue-500 text-center inline-block w-full font-semibold text-sm  md:hidden">Read more</button>
+
 
                         </div>
 
@@ -1178,13 +1179,15 @@
                                 <li class="relative"><span class="greentick1"></span>Digital Access</li>
                                 <li class="relative"><span class="greentick1"></span>Read Anywhere, Anytime</li>
                                 <li class="relative"><span class="greentick1"></span>1 Year Subscription</li>
-                                <li class="relative"><span class="greentick1"></span>Digital Access</li>
-                                <li class="relative"><span class="greentick1"></span>Read Anywhere, Anytime</li>
-                                <li class="relative"><span class="greentick1"></span>1 Year Subscription</li>
-                                <li class="relative"><span class="greentick1"></span>Digital Access</li>
-                                <li class="relative"><span class="greentick1"></span>Read Anywhere, Anytime</li>
-                                <li class="relative"><span class="greentick1"></span>1 Year Subscription</li>
+                                <li class="relative"><span class="greentick1"></span>11 Malayalam e-magazines</li>
+                                <li class="relative hidden mobile-only"><span class="greentick1"></span>Read Anywhere, Anytime</li>
+                                <li class="relative hidden mobile-only"><span class="greentick1"></span>1 Year Subscription</li>
+                                <li class="relative hidden mobile-only"><span class="greentick1"></span>Digital Access</li>
+                                <li class="relative hidden mobile-only"><span class="greentick1"></span>Read Anywhere, Anytime</li>
+                                <li class="relative hidden mobile-only"><span class="greentick1"></span>1 Year Subscription</li>
                             </ul>
+
+                            <button class="read-more-toggle text-blue-500 text-center inline-block w-full font-semibold text-sm  md:hidden">Read more</button>
 
                         </div>
 
@@ -1215,13 +1218,16 @@
                                 <li class="relative"><span class="greentick1"></span>Digital Access</li>
                                 <li class="relative"><span class="greentick1"></span>Read Anywhere, Anytime</li>
                                 <li class="relative"><span class="greentick1"></span>1 Year Subscription</li>
-                                <li class="relative"><span class="greentick1"></span>Digital Access</li>
-                                <li class="relative"><span class="greentick1"></span>Read Anywhere, Anytime</li>
-                                <li class="relative"><span class="greentick1"></span>1 Year Subscription</li>
-                                <li class="relative"><span class="greentick1"></span>Digital Access</li>
-                                <li class="relative"><span class="greentick1"></span>Read Anywhere, Anytime</li>
-                                <li class="relative"><span class="greentick1"></span>1 Year Subscription</li>
+                                <li class="relative"><span class="greentick1"></span>11 Malayalam e-magazines</li>
+                                <li class="relative hidden mobile-only"><span class="greentick1"></span>Read Anywhere, Anytime</li>
+                                <li class="relative hidden mobile-only"><span class="greentick1"></span>1 Year Subscription</li>
+                                <li class="relative hidden mobile-only"><span class="greentick1"></span>Digital Access</li>
+                                <li class="relative hidden mobile-only"><span class="greentick1"></span>Read Anywhere, Anytime</li>
+                                <li class="relative hidden mobile-only"><span class="greentick1"></span>1 Year Subscription</li>
                             </ul>
+
+                            <button class="read-more-toggle text-blue-500 text-center inline-block w-full font-semibold text-sm  md:hidden">Read more</button>
+
 
                         </div>
 
@@ -1347,6 +1353,25 @@
     <script src="assets/libs/slick-slider/slick.min.js" defer></script>
     <script src="assets/js/common.js" defer></script>
     <script src="assets/js/bookdetail.js" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const readMoreButtons = document.querySelectorAll('.read-more-toggle');
+
+    readMoreButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const list = button.previousElementSibling;
+            const hiddenItems = list.querySelectorAll('.mobile-only');
+
+            hiddenItems.forEach(item => {
+                item.classList.toggle('hidden');
+            });
+
+            button.textContent = button.textContent === 'Read more' ? 'Show less' : 'Read more';
+        });
+    });
+});
+</script>
+
 
 </body>
 

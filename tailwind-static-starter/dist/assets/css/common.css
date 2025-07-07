@@ -11,8 +11,11 @@
 	--red-light:#ed002b;
 	--dark-bg-blue:#333994;
 	--primary-bule-text:#0074ED;
+	--green:green;
 }
-
+.text-green{
+	color: var(--green);
+}
 .dark-bg {
 	background-color: var(--dark-blue-bg-color);
 }

@@ -81,3 +81,9 @@
 {
     border: 1px solid #fe8705;
 }
+
+@media (min-width: 768px) {
+    .mobile-only {
+        display: list-item !important;
+    }
+}
