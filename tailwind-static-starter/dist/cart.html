@@ -86,28 +86,28 @@
                                 <div
                                     class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
                                     <span><img src="assets/img/icons/Search.svg" width="15" alt="Search icon" /></span>
-                                    <span>Pravasaikalkkum Vanithakkalkum 50
+                                    <span class="truncate block w-[220px]">Pravasaikalkkum Vanithakkalkum 50
                                         Samrambhangal</span>
                                 </div>
                                 <div
                                     class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
                                     <span><img src="assets/img/icons/Search.svg" width="15" alt="Search icon" /></span>
-                                    <span>Vanitha</span>
+                                    <span class="truncate block w-[220px]">Vanitha</span>
                                 </div>
                                 <div
                                     class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
                                     <span><img src="assets/img/icons/Search.svg" width="15" alt="Search icon" /></span>
-                                    <span>Vanitha Hindi</span>
+                                    <span class="truncate block w-[220px]">Vanitha Hindi</span>
                                 </div>
                                 <div
                                     class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
                                     <span><img src="assets/img/icons/Search.svg" width="15" alt="Search icon" /></span>
-                                    <span>Vanitha Pachakam</span>
+                                    <span class="truncate block w-[220px]">Vanitha Pachakam</span>
                                 </div>
                                 <div
                                     class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
                                     <span><img src="assets/img/icons/Search.svg" width="15" alt="Search icon" /></span>
-                                    <span>Week & Vanitha Combo</span>
+                                    <span class="truncate block w-[220px]">Week & Vanitha Combo</span>
                                 </div>
                             </div>
 
@@ -175,29 +175,29 @@
                                     <div
                                         class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 py-2 rounded">
                                         <span class="suggestion-icon"></span>
-                                        <span>Pravasaikalkkum Vanithakkalkum
+                                        <span class="truncate block w-[220px]">Pravasaikalkkum Vanithakkalkum
                                             50
                                             Samrambhangal</span>
                                     </div>
                                     <div
                                         class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 py-2 rounded">
                                         <span class="suggestion-icon"></span>
-                                        <span>Vanitha</span>
+                                        <span class="truncate block w-[220px]">Vanitha</span>
                                     </div>
                                     <div
                                         class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 py-2 rounded">
                                         <span class="suggestion-icon"></span>
-                                        <span>Vanitha Hindi</span>
+                                        <span class="truncate block w-[220px]">Vanitha Hindi</span>
                                     </div>
                                     <div
                                         class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 py-2 rounded">
                                         <span class="suggestion-icon"></span>
-                                        <span>Vanitha Pachakam</span>
+                                        <span class="truncate block w-[220px]">Vanitha Pachakam</span>
                                     </div>
                                     <div
                                         class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 py-2 rounded">
                                         <span class="suggestion-icon"></span>
-                                        <span>Week & Vanitha Combo</span>
+                                        <span class="truncate block w-[220px]">Week & Vanitha Combo</span>
                                     </div>
                                 </div>
 
@@ -227,8 +227,9 @@
                         </div>
 
                         <!-- Cart Icon -->
-                        <a href="#" aria-label="cart">
+                        <a href="#" aria-label="cart" class="relative -z-10">
                             <div class="mr-4 i-cart"></div>
+                            <span class="w-5 h-5 rounded-full f bg-blue-500 text-white flex items-center justify-center text-xs absolute right-2 top-0">5</span>
                         </a>
 
                         <!-- Notification Icon -->
@@ -1103,11 +1104,11 @@
     </header>
     <!-- Bottom Navigation - Mobile Only -->
     <div
-        class="fixed bottom-0 left-0 w-full bg-white shadow-md border-t border-gray-200  p-4 flex lg:hidden  justify-between items-center">
+        class="fixed bottom-0  z-10 left-0 w-full bg-white shadow-md border-t border-gray-200  p-4 flex lg:hidden  justify-between items-center">
 
         <!-- Price Section -->
         <div class="flex flex-col items-center">
-            <a class="text-xl font-semibold text-gray-900 w-full underline" href="#cartSummary">₹1800 </a>
+            <a class="text-xl font-semibold text-gray-900 w-full" href="#cartSummary">₹1800 </a>
             <del class="text-sm text-gray-500 underline line-through">MRP : ₹3000</del>
         </div>
 
@@ -1452,7 +1453,7 @@
                                 <!-- Save For Later Button -->
                                 <button
                                     class="flex-1  sm:max-w-[140px] bg-gray-100 hover:bg-gray-100 text-xs sm:text-sm py-3 px-2 rounded text-gray-500 text-center">
-                                    Save For Later
+                                    Move to Cart
                                 </button>
 
                                 <!-- Subtotal -->
@@ -1482,7 +1483,7 @@
                         <div class="flex items-center border rounded overflow-hidden">
                             <input type="text" placeholder="Enter Code"
                                 class="flex-1 px-3 py-2 text-sm outline-none w-[calc(100%-100px)]">
-                            <button class="bg-gray-300 p-3 text-sm font-medium w-[100px]">APPLY</button>
+                            <button class="lightgray text-white p-3 text-md font-medium w-[100px]">APPLY</button>
                         </div>
                     </div>
 
