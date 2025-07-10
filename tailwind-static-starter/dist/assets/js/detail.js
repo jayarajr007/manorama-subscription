@@ -116,5 +116,43 @@ $(window).on('load', function () {
     if (e.key === "Escape") popup.classList.add("hidden");
   });
 
-    
-  
+
+
+
+
+
+  //readmore auther text
+    const para = document.getElementById('authorText');
+    const button = document.getElementById('toggleButton');
+
+    const clone = para.cloneNode(true);
+    clone.style.visibility = 'hidden';
+    clone.style.position = 'absolute';
+    clone.style.height = 'auto';
+    clone.style.maxWidth = para.offsetWidth + 'px';
+    clone.style.lineHeight = getComputedStyle(para).lineHeight;
+    clone.style.whiteSpace = 'normal';
+    clone.style.width = para.offsetWidth + 'px';
+    clone.style.font = getComputedStyle(para).font;
+    document.body.appendChild(clone);
+
+    const lineHeight = parseFloat(getComputedStyle(para).lineHeight);
+    const fullLines = Math.round(clone.offsetHeight / lineHeight);
+    document.body.removeChild(clone);
+
+    if (fullLines > 4) {
+      para.classList.add('line-clamp-4');
+      button.classList.remove('hidden');
+    }
+
+    if (fullLines <= 2) {
+      button.classList.add('hidden');
+    }
+
+    let expanded = false;
+    button.addEventListener('click', () => {
+      expanded = !expanded;
+      para.classList.toggle('line-clamp-4', !expanded);
+      button.textContent = expanded ? 'Show less' : 'Read more';
+    });
+
