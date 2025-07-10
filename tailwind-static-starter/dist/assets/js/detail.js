@@ -122,7 +122,7 @@ $(window).on('load', function () {
 
 
   //readmore auther text
-    const para = document.getElementById('authorText');
+    const para = document.getElementById('about-product');
     const button = document.getElementById('toggleButton');
 
     const clone = para.cloneNode(true);
