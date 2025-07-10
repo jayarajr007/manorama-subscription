@@ -245,3 +245,9 @@ align-items: center;
 .breadcrumb-list a{
 	color: #292929;
 }
+
+@media(max-width:767px){
+	div#m-searchOverlay {
+		z-index: 99;
+	}
+}
