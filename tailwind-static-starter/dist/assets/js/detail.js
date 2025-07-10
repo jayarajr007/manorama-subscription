@@ -33,10 +33,12 @@ $(window).on('load', function () {
         slidesToShow: 1, // Show 5 items on large screens
         slidesToScroll: 1,
         dots: true,
-        arrows: true, infinite: false,
+        arrows: true, infinite: true,
         adaptiveHeight: false,
         centerMode: false,  // Disable to prevent extra space
         variableWidth: false, // Ensure uniform width
+        autoplay: true,              // Enable auto slide
+        autoplaySpeed: 2000,  
 
 
     });
