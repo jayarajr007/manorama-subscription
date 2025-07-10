@@ -13,6 +13,7 @@
 	--primary-bule-text:#0074ED;
 	--green:green;
 	--greybg:#696969;
+	--infobg:#FFF3E1;
 }
 .text-green{
 	color: var(--green);
@@ -45,7 +46,16 @@
 {
 	color: var(--primary-bule-text);
 }
-
+.info-card
+{
+	background-color: var(--infobg);
+	border: 1px solid #B66F0B;
+	color: #B66F0B;
+}
+.btn-danger
+{
+	background-color: var(--red-color);
+}
 
 
 .bg-creamdark{
