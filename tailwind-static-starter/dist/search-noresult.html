@@ -16,18 +16,6 @@
         <link rel="stylesheet" href="assets/css/output.css">
         <link href="assets/css/common-crit.css" rel="stylesheet" />
 
-        <!-- Critical for only this page-->
-        <style>
-/* Hide all slides except the first before Slick initializes */
-.category-slider:not(.slick-initialized)>div:not(:first-child) {
-  display: none;
-}
-.category-slider:not(.slick-initialized) div.bg-white {
-  max-width: 260px;
-}
-</style>
-        <!-- Critical for only this page end-->
-
     </head>
 
     <body class>
@@ -36,7 +24,8 @@
         <header class="bg-white  z-40  sticky w-full top-0 shadow-sm">
             <div
                 class="max-w-full lg:max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-8">
-                 <div
+
+                <div
                     class="flex justify-between items-center py-3 border-b border-b-[#D9D9D9]">
                     <!-- Left Section: Logo & Mobile Profile -->
                     <div class="header-left-section">
@@ -343,169 +332,8 @@
                     </div>
                 </div>
 
-                <!-- Filter and sort section listin mobile-->
-                <div
-                    class="flex md:hidden justify-between items-center px-0 py-4 shadow-sm  ">
-                    <!-- Sort Button -->
-                    <button
-                        class="flex items-center text-gray-700 text-sm font-medium space-x-1"
-                        id="openSort" aria-label="openSort">
-                        <span class="md:mr-4 mr-0 w-8 h-8 i-sort"></span>
-                        <span>Sort</span>
-                    </button>
-
-                    <!-- Filter Button -->
-                    <button
-                        class="flex items-center text-gray-700 text-sm font-medium space-x-1"
-                        id="openFilter" aria-label="openFilter">
-                        <span class="md:mr-4 mr-0 w-8 h-8 i-filter"></span>
-
-                        <span>Filter</span>
-                    </button>
-
-                    <!-- Filter Mobile -->
-                    <div id="filterPanel"
-                        class="fixed inset-0 bg-black bg-opacity-40 z-50 hidden">
-                        <div
-                            class="absolute bottom-0 left-0 right-0 bg-white rounded-t-xl p-4 max-h-[80vh] flex flex-col inline-table w-full">
-
-                            <!-- Header -->
-                            <div
-                                class="flex justify-between items-center border-b pb-2">
-                                <h2 class="font-medium
- text-lg">FILTERS</h2>
-                                <button id="closeFilter"
-                                    class="text-gray-500 text-3xl"
-                                    aria-label="closeFilter">×</button>
-                            </div>
-
-                            <!-- Body -->
-                            <div
-                                class="flex flex-1  overflow-y-auto min-h-[calc(100vh-300px)] ">
-                                <!-- Tabs -->
-                                <div class="w-1/3 border-r gray-bg">
-                                    <button
-                                        class="tab-btn-filter w-full text-left px-2 py-2 hover:bg-gray-100 text-sm border-l-2 font-semibold border-blue-600 bg-white text-black"
-                                        data-tab="categories"
-                                        aria-label="categories">Categories</button>
-                                    <button
-                                        class="tab-btn-filter w-full text-left px-2 py-2 hover:bg-gray-100 text-sm"
-                                        data-tab="Language"
-                                        aria-label="Language">Language</button>
-                                    <button
-                                        class="tab-btn-filter w-full text-left px-2 py-2 hover:bg-gray-100 text-sm"
-                                        data-tab="edition"
-                                        aria-label="edition">Edition</button>
-
-                                </div>
-
-                                <!-- Content Area -->
-                                <div class="w-2/3 p-4">
-                                    <div id="categories"
-                                        class="tab-content text-sm"> <label
-                                            class="flex items-start py-2"><input
-                                                type="checkbox"
-                                                class="mr-2 mt-1" />Manorama
-                                            yearbook</label>
-                                        <label
-                                            class="flex items-start py-2"><input
-                                                type="checkbox"
-                                                class="mr-2  mt-1" />Year Book
-                                            Mock Test
-                                        </label>
-
-                                    </div>
-                                    <div id="Language"
-                                        class="tab-content hidden text-sm">
-
-                                        <label
-                                            class="flex items-start py-2"><input
-                                                type="checkbox"
-                                                class="mr-2  mt-1" />English</label>
-                                        <label
-                                            class="flex items-start py-2"><input
-                                                type="checkbox"
-                                                class="mr-2  mt-1" />Malayalam</label>
-                                        <label
-                                            class="flex items-start py-2"><input
-                                                type="checkbox"
-                                                class="mr-2  mt-1" />hindi</label>
-
-                                    </div>
-
-                                    <div id="edition"
-                                        class="tab-content hidden text-sm">
-                                        <label
-                                            class="flex items-start py-2"><input
-                                                type="checkbox"
-                                                class="mr-2  mt-1" />Print</label>
-                                        <label
-                                            class="flex items-start py-2"><input
-                                                type="checkbox"
-                                                class="mr-2  mt-1" />Digital</label>
-                                        <label
-                                            class="flex items-start py-2"><input
-                                                type="checkbox"
-                                                class="mr-2  mt-1" />Print +
-                                            Dgital</label></div>
-
-                                </div>
-                            </div>
-
-                            <!-- Bottom Action Buttons -->
-                            <div
-                                class="flex justify-between pt-4 border-t items-center">
-                                <span class="text-sm text-gray-500">1000+
-                                    Products</span>
-                                <div>
-                                    <button id="clearFilters"
-                                        aria-label="clearFilters"
-                                        class="text-blue-600 mr-4 font-medium">Clear</button>
-                                    <button id="applyFilters"
-                                        aria-label="applyFilters"
-                                        class="primary-button-bg text-white px-6 py-3 rounded bu">Done</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Sort Mobile -->
-                    <div id="sortPanel"
-                        class="fixed inset-0 bg-black bg-opacity-40 z-50 hidden">
-                        <div
-                            class="absolute bottom-0 left-0 right-0 bg-white rounded-t-xl p-4 max-h-[80vh] flex flex-col inline-table w-full">
-
-                            <!-- Header -->
-                            <div
-                                class="flex justify-between items-center border-b pb-2">
-                                <h2 class="font-medium
- text-lg">SORT BY</h2>
-                                <button id="closeSort" aria-label="closeSort"
-                                    class="text-gray-500 text-3xl">×</button>
-                            </div>
-
-                            <!-- Body -->
-                            <div class="flex flex-1  overflow-y-auto  ">
-                                <!-- Tabs -->
-                                <ul class="py-4 px-0">
-                                    <li class="mb-3"> <a href="#"
-                                            aria-label="week"> Title: A -
-                                            Z</a> </li>
-                                    <li class="mb-3"> <a href="#"
-                                            aria-label="week"> Title: Z -
-                                            A</a></li>
-                                </ul>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-                <!-- End Filter and sort section listin mobile-->
-
                 <!--Nav -->
-            <!--Nav -->
+              <!--Nav -->
         <nav class="bg-white hidden md:block relative">
           <div class="mx-auto px-0">
             <div class="flex justify-between w-full">
@@ -1940,543 +1768,135 @@
                 <div class="text-[12px] ">
                     <a href="#" class="text-blue-500" aria-label="home">Home</a>
                     <span class="mx-1">/</span>
-                    <span>Manorama Yearbook</span>
+                    <span>Astro</span>
                 </div>
                 <a class="text-xs cursor-pointer hover:underline"
                     href="index.html">BACK</a>
             </div>
 
             <!-- Title -->
-            <h1 class="text-[16px] md:text-[18px] 
-            font-semibold  mb-4">Manorama Yearbook</h1>
+            <h1 class="text-[14px] md:text-[16px] 
+             mb-4">Showing results for <span class="font-semibold ">
+                    "Vani"</span> in Magazines, Books, and More</h1>
 
             <!-- Layout -->
-            <div class="flex " style="display: flex;">
+           
 
-                <!-- Sidebar Filter -->
-                <!-- Filter Section -->
-                <!-- Filter Section -->
 
-                <div class="space-y-4 w-[250px] hidden md:block filter-section">
-                    <!-- Breadcrumb -->
-
-                    <!-- Sort By Dropdown -->
-                    <div
-                        class="w-full border border-gray-300 rounded-lg p-3 mb-2">
-                        <label
-                            class="flex items-center text-sm font-medium text-gray-700">
-                            Sort By :
-                            <select
-                                class="sortdrop ml-2 border-0 text-sm font-medium focus:ring-0 focus:outline-none">
-                                <option>Select </option>
-                                <option>Newest</option>
-                                <option>Price: Low to High</option>
-                                <option>Price: High to Low</option>
-                            </select>
-                        </label>
-                    </div>
-
-                    <div class="border border-gray-200 p-4 rounded-md">
-                        <!-- Filters Header -->
-                        <div
-                            class="flex justify-between border-b pb-3 mb-3 items-end">
-                            <div>
-                                <h3
-                                    class="font-semibold text-gray-800">FILTERS</h3>
-                                <!-- <p class="text-xs text-gray-500 mt-1">1000+
-                                    Books</p> -->
-                            </div>
-                            <button
-                                class="text-blue-600 text-xs font-semibold hover:underline"
-                                aria-label="clear all">Clear
-                                All</button>
-                        </div>
-
-                        <!-- Accordion Sections -->
-                        <div class="space-y-4">
-
-                            <!-- Categories Accordion -->
-                            <div
-                                class="accordion-section border-b border-gray-200 pb-4">
-                                <button
-                                    class="accordion-toggle flex justify-between items-center w-full text-left"
-                                    aria-label="categories">
-                                    <span
-                                        class="font-semibold text-gray-800">Categories</span>
-                                    <svg
-                                        class="w-4 h-4 transition-transform duration-200"
-                                        fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                            d="M19 9l-7 7-7-7"></path>
-                                    </svg>
-                                </button>
-                                <div
-                                    class="accordion-content mt-3 space-y-2 text-sm">
-                                    <div class="flex items-center">
-                                        <input type="checkbox" id="news2"
-                                            class="mr-2 h-4 w-4 text-blue-600 rounded border-gray-300" />
-                                        <label for="news2"
-                                            class="text-gray-700">Manorama
-                                            yearbook</label>
-                                    </div>
-                                    <div class="flex items-center">
-                                        <input type="checkbox" id="children1"
-                                            checked
-                                            class="mr-2 h-4 w-4 text-blue-600 rounded border-gray-300" />
-                                        <label for="children1"
-                                            class="text-gray-700">Year Book Mock
-                                            Test
-                                        </label>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <!-- Language Accordion -->
-                            <div
-                                class="accordion-section border-b border-gray-200 pb-4">
-                                <button
-                                    class="accordion-toggle flex justify-between items-center w-full text-left"
-                                    aria-label="language">
-                                    <span
-                                        class="font-semibold text-gray-800">Language</span>
-                                    <svg
-                                        class="w-4 h-4 transition-transform duration-200"
-                                        fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                            d="M19 9l-7 7-7-7"></path>
-                                    </svg>
-                                </button>
-                                <div
-                                    class="accordion-content mt-3 space-y-2 text-sm">
-                                    <div class="flex items-center">
-                                        <input type="checkbox" id="english1"
-                                            class="mr-2 h-4 w-4 text-blue-600 rounded border-gray-300" />
-                                        <label for="english1"
-                                            class="text-gray-700">English</label>
-                                    </div>
-                                    <div class="flex items-center">
-                                        <input type="checkbox" id="malayalam1"
-                                            class="mr-2 h-4 w-4 text-blue-600 rounded border-gray-300" />
-                                        <label for="malayalam1"
-                                            class="text-gray-700">Malayalam</label>
-                                    </div>
-                                    <div class="flex items-center">
-                                        <input type="checkbox" id="malayalam1"
-                                            class="mr-2 h-4 w-4 text-blue-600 rounded border-gray-300" />
-                                        <label for="malayalam1"
-                                            class="text-gray-700">Hindi</label>
-                                    </div>
-                                    <div class="flex items-center">
-                                        <input type="checkbox" id="malayalam1"
-                                            class="mr-2 h-4 w-4 text-blue-600 rounded border-gray-300" />
-                                        <label for="malayalam1"
-                                            class="text-gray-700">Bengali</label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Edition Accordion -->
-                            <div class="accordion-section">
-                                <button
-                                    class="accordion-toggle flex justify-between items-center w-full text-left"
-                                    aria-label="edition">
-                                    <span
-                                        class="font-semibold text-gray-800">Edition</span>
-                                    <svg
-                                        class="w-4 h-4 transition-transform duration-200"
-                                        fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                            d="M19 9l-7 7-7-7"></path>
-                                    </svg>
-                                </button>
-                                <div
-                                    class="accordion-content mt-3 space-y-2 text-sm">
-                                    <div class="flex items-center">
-                                        <input type="checkbox" id="english"
-                                            class="mr-2 h-4 w-4 text-blue-600 rounded border-gray-300" />
-                                        <label for="english"
-                                            class="text-gray-700">Print</label>
-                                    </div>
-                                    <div class="flex items-center">
-                                        <input type="checkbox" id="malayalam"
-                                            class="mr-2 h-4 w-4 text-blue-600 rounded border-gray-300" />
-                                        <label for="malayalam"
-                                            class="text-gray-700">Digital</label>
-                                    </div>
-                                    <div class="flex items-center">
-                                        <input type="checkbox" id="malayalam2"
-                                            class="mr-2 h-4 w-4 text-blue-600 rounded border-gray-300" />
-                                        <label for="malayalam2"
-                                            class="text-gray-700">Print +
-                                            Digital</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- Main Content -->
-                <div class="flex-1 px-0 md:px-4"
-                    style="width: calc(100% - 287px);">
-
-                    <!-- Horizontal Scroll for Category Icons -->
-
-                    <div class="category-slider mb-6 border-b pb-2">
-                        <div class="text-center round-filter ">
-                            <div
-                                class="imgbx relative mx-auto mb-1 size-12  md:size-16">
-                                <img
-                                    src="assets/images/magazin/filter/news.webp"
-                                    class="rounded-full" alt="News" width="60"
-                                    height="60" />
-                            </div>
-
-                            <p class="text-xs">Manorama
-                                yearbook</p>
-                        </div>
-                        <div class="text-center round-filter relative">
-                            <div
-                                class="imgbx relative mx-auto mb-1 size-12  md:size-16">
-                                <img
-                                    src="assets/images/magazin/filter/children.webp"
-                                    class="rounded-full" alt="Children"
-                                    width="60" height="60" />
-                            </div>
-                            <p class="text-xs">Year Book
-                                Mock Test
-                            </p>
-                        </div>
-
-                        <!-- Add more items as needed -->
-                    </div>
-
-                    <!-- Placeholder for Magazine Grid -->
-                    <h2 class="text-[14px] md:text-[16px] 
-                    font-semibold mb-4">Popular Books</h2>
-                    <div
-                        class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 md:gap-4 popular-Books">
-                        <a class="bg-white p-2 rounded-lg border"
-                            href="manorama-yearbook-detail.html">
-                            <div class="relative overflow-hidden image-wrapper">
-                                <img src="assets/images/yearbook/1.webp"
-                                    alt="Manorama Year Book Tamil"
-                                    class="rounded-md transition-all duration-300 hover:scale-110"
-                                    width="266" height="350"
-                                    decoding="async" />
-                                <div
-                                    class="absolute bottom-2 left-0 right-0 flex flex-col items-end">
-                                    <div
-                                        class="right-2 text-white text-xs px-2 py-1 rounded-full offer-circle-badge mb-2 font-semibold mr-2 offer-badge">
-                                        30%
-                                        OFF</div>
-                                </div>
-                            </div>
-                            <h3
-                                class="text-[13px] md:text-sm font-semibold mt-2 line-clamp-2 mb-1">Manorama
-                                Year Book Tamil</h3>
-                            <p class="text-sm pb-2"><span
-                                    class="font-semibold">₹490</span></p>
-                        </a>
-                        <div class="bg-white p-2 rounded-lg border">
-                            <div class="relative overflow-hidden image-wrapper">
-                                <img src="assets/images/yearbook/1.webp"
-                                    alt="Manorama Year Book Tamil"
-                                    class="rounded-md transition-all duration-300 hover:scale-110"
-                                    width="266" height="350"
-                                    decoding="async" />
-                                <div
-                                    class="absolute bottom-2 left-0 right-0 flex flex-col items-end">
-                                    <div
-                                        class="right-2 text-white text-xs px-2 py-1 rounded-full offer-circle-badge mb-2 font-semibold mr-2 offer-badge">
-                                        30%
-                                        OFF</div>
-                                </div>
-                            </div>
-                            <h3
-                                class="text-[13px] md:text-sm font-semibold mt-2 line-clamp-2 mb-1">Manorama
-                                Year
-                                Book Tamil</h3>
-                            <p class="text-sm pb-2"><span
-                                    class="font-semibold">₹490</span></p>
-                        </div>
-
-                        <div class="bg-white p-2 rounded-lg border">
-                            <div class="relative overflow-hidden image-wrapper">
-                                <img src="assets/images/yearbook/1.webp"
-                                    alt="Manorama Year Book Tamil"
-                                    class="rounded-md transition-all duration-300 hover:scale-110"
-                                    width="266" height="350"
-                                    decoding="async" />
-                                <div
-                                    class="absolute bottom-2 left-0 right-0 flex flex-col items-end">
-                                    <div
-                                        class="right-2 text-white text-xs px-2 py-1 rounded-full offer-circle-badge mb-2 font-semibold mr-2 offer-badge">
-                                        30%
-                                        OFF</div>
-                                </div>
-                            </div>
-                            <h3
-                                class="text-[13px] md:text-sm font-semibold mt-2 line-clamp-2 mb-1">Manorama
-                                Year
-                                Book Tamil</h3>
-                            <p class="text-sm pb-2"><span
-                                    class="font-semibold">₹490</span></p>
-                        </div>
-
-                        <div class="bg-white p-2 rounded-lg border">
-                            <div class="relative overflow-hidden image-wrapper">
-                                <img src="assets/images/yearbook/1.webp"
-                                    alt="Manorama Year Book Tamil"
-                                    class="rounded-md transition-all duration-300 hover:scale-110"
-                                    width="266" height="350"
-                                    decoding="async" />
-                                <div
-                                    class="absolute bottom-2 left-0 right-0 flex flex-col items-end">
-                                    <div
-                                        class="right-2 text-white text-xs px-2 py-1 rounded-full offer-circle-badge mb-2 font-semibold mr-2 offer-badge">
-                                        30%
-                                        OFF</div>
-                                </div>
-                            </div>
-                            <h3
-                                class="text-[13px] md:text-sm font-semibold mt-2 line-clamp-2 mb-1">Manorama
-                                Year
-                                Book Tamil</h3>
-                            <p class="text-sm pb-2"><span
-                                    class="font-semibold">₹490</span></p>
-                        </div>
-
-                        <div class="bg-white p-2 rounded-lg border">
-                            <div class="relative overflow-hidden image-wrapper">
-                                <img src="assets/images/yearbook/1.webp"
-                                    alt="Manorama Year Book Tamil"
-                                    class="rounded-md transition-all duration-300 hover:scale-110"
-                                    width="266" height="350"
-                                    decoding="async" />
-                                <div
-                                    class="absolute bottom-2 left-0 right-0 flex flex-col items-end">
-                                    <div
-                                        class="right-2 text-white text-xs px-2 py-1 rounded-full offer-circle-badge mb-2 font-semibold mr-2 offer-badge">
-                                        30%
-                                        OFF</div>
-                                </div>
-                            </div>
-                            <h3
-                                class="text-[13px] md:text-sm font-semibold mt-2 line-clamp-2 mb-1">Manorama
-                                Year
-                                Book Tamil</h3>
-                            <p class="text-sm pb-2"><span
-                                    class="font-semibold">₹490</span></p>
-                        </div>
-                        <div class="bg-white p-2 rounded-lg border">
-                            <div class="relative overflow-hidden image-wrapper">
-                                <img src="assets/images/yearbook/1.webp"
-                                    alt="Manorama Year Book Tamil"
-                                    class="rounded-md transition-all duration-300 hover:scale-110"
-                                    width="266" height="350"
-                                    decoding="async" />
-                                <div
-                                    class="absolute bottom-2 left-0 right-0 flex flex-col items-end">
-                                    <div
-                                        class="right-2 text-white text-xs px-2 py-1 rounded-full offer-circle-badge mb-2 font-semibold mr-2 offer-badge">
-                                        30%
-                                        OFF</div>
-                                </div>
-                            </div>
-                            <h3
-                                class="text-[13px] md:text-sm font-semibold mt-2 line-clamp-2 mb-1">Manorama
-                                Year
-                                Book Tamil</h3>
-                            <p class="text-sm pb-2"><span
-                                    class="font-semibold">₹490</span></p>
-                        </div>
-                        <!-- Add more cards here -->
-                    </div>
-
-                    <!-- Placeholder for Magazine Grid -->
-                    <h2 class="text-[14px] md:text-[16px] 
-                    font-semibold mt-4 mb-4">Year Book Mock Test
-                    </h2>
-                    <div
-                        class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 other-Books">
-
-                        <div class="bg-white p-2 rounded-lg border">
-                            <div class="relative overflow-hidden image-wrapper">
-                                <img src="assets/images/yearbook/t2.webp"
-                                    alt="Manorama Year Book Tamil"
-                                    class="rounded-md transition-all duration-300 hover:scale-110"
-                                    width="266" height="350"
-                                    decoding="async" />
-                                <div
-                                    class="absolute bottom-2 left-0 right-0 flex flex-col items-end">
-                                    <div
-                                        class="right-2 text-white text-xs px-2 py-1 rounded-full offer-circle-badge mb-2 font-semibold mr-2 offer-badge">
-                                        30%
-                                        OFF</div>
-                                </div>
-                            </div>
-                            <h3
-                                class="text-[13px] md:text-sm font-semibold mt-2 line-clamp-2 mb-1">All
-                                India Current Affairs Test Series 2025</h3>
-                            <p class="text-sm pb-2"><span
-                                    class="font-semibold">₹490</span></p>
-                        </div>
-
-                        <div class="bg-white p-2 rounded-lg border">
-                            <div class="relative overflow-hidden image-wrapper">
-                                <img src="assets/images/yearbook/t1.webp"
-                                    alt="Manorama Year Book Tamil"
-                                    class="rounded-md transition-all duration-300 hover:scale-110"
-                                    width="266" height="350"
-                                    decoding="async" />
-                                <div
-                                    class="absolute bottom-2 left-0 right-0 flex flex-col items-end">
-                                    <div
-                                        class="right-2 text-white text-xs px-2 py-1 rounded-full offer-circle-badge mb-2 font-semibold mr-2 offer-badge">
-                                        30%
-                                        OFF</div>
-                                </div>
-                            </div>
-                            <h3
-                                class="text-[13px] md:text-sm font-semibold mt-2 line-clamp-2 mb-1">All
-                                India Current Affairs Test Series 2025</h3>
-                            <p class="text-sm pb-2"><span
-                                    class="font-semibold">₹490</span></p>
-                        </div>
-                        <!-- Add more cards here -->
-                    </div>
-
-                </div>
-            </div>
+            <div class="flex flex-col items-center justify-center">
+  <div class="max-w-md text-center">
+    <img src="assets/images/noresult.jpg" 
+         alt="No results" 
+         class="w-32 h-32 mx-auto mb-6" />
+    <h2 class="text-2xl font-semibold text-gray-800 mb-2">No Results Found</h2>
+    <p class="text-gray-600 mb-4">
+      Sorry, we couldn't find any results matching your search.
+    </p>
+    <a href="/" 
+       class="inline-block px-6 py-2 primary-button-bg text-white rounded hover:bg-blue-700 transition">
+      Go Back Home
+    </a>
+  </div>
+</div>
 
         </section>
 
         <!--  Footer  -->
         <footer class="bg-gray-50 text-gray-800 subscription-main-footer">
-  <div class="max-w-full lg:max-w-[1550px] mx-auto px-6 py-10 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-8">
+            <div
+                class="max-w-full lg:max-w-[1550px] mx-auto px-6 py-10 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-8">
 
-    <!-- Brand & Contact -->
-    <div>
-      <!-- <img src="assets/img/mobile-logo.png" alt="Manorama Online" class="h-8 mb-4" /> -->
-      <h2 class="font-semibold text-md">Manorama Online</h2>
-      <p class="text-sm mt-2 break-words whitespace-normal w-full max-w-xs">
-        Manorama Online, Malayala Manorama, P.B No.26, Kottayam<br />
-        686 001, Kerala, India
-      </p>
-      <p class="mt-4 font-medium text-sm">Get Questions? Contact Us 24/7</p>
-      <p class="text-sm break-words whitespace-normal w-full max-w-xs">
-        0481 2587244<br />
-        <a href="mailto:Customersupport@Mm.Co.In" class="hover:text-blue-500">Customersupport@Mm.Co.In</a>
-      </p>
-    </div>
+                <!-- Brand & Contact -->
+                <div>
+                    <!-- <img src="assets/img/mobile-logo.png" alt="Manorama Online" class="h-8 mb-4" /> -->
+                    <h2 class="font-semibold text-md">Manorama Online</h2>
+                    <p
+                        class="text-sm mt-2 break-words whitespace-normal w-full max-w-xs">
+                        Manorama Online, Malayala Manorama, P.B No.26,
+                        Kottayam<br />
+                        686 001, Kerala, India
+                    </p>
+                    <p class="mt-4 font-medium text-sm">Get Questions? Contact
+                        Us 24/7</p>
+                    <p
+                        class="text-sm break-words whitespace-normal w-full max-w-xs">
+                        0481 2587244<br />
+                        <a href="mailto:Customersupport@Mm.Co.In"
+                            class="hover:text-blue-500">Customersupport@Mm.Co.In</a>
+                    </p>
+                </div>
 
-    <!-- Information Links -->
-    <div>
-      <h3 class="font-semibold text-md mb-4">Information</h3>
-      <ul class="space-y-2 text-sm">
-        <li><a href="#" class="hover:text-blue-500" aria-label="week">About Us</a></li>
-        <li><a href="#" class="hover:text-blue-500" aria-label="week">FAQ</a></li>
-        <li><a href="#" class="hover:text-blue-500" aria-label="week">Privacy Policy</a></li>
-        <li><a href="#" class="hover:text-blue-500" aria-label="week">Conditions Of Use</a></li>
-        <li><a href="#" class="hover:text-blue-500" aria-label="week">Shipping And Returns</a></li>
-        <li><a href="#" class="hover:text-blue-500" aria-label="week">Product Support</a></li>
-      </ul>
-    </div>
+                <!-- Information Links -->
+                <div>
+                    <h3 class="font-semibold text-md mb-4">Information</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-blue-500"
+                                aria-label="week">About Us</a></li>
+                        <li><a href="#" class="hover:text-blue-500"
+                                aria-label="week">FAQ</a></li>
+                        <li><a href="#" class="hover:text-blue-500"
+                                aria-label="week">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-blue-500"
+                                aria-label="week">Conditions Of Use</a></li>
+                        <li><a href="#" class="hover:text-blue-500"
+                                aria-label="week">Shipping And Returns</a></li>
+                        <li><a href="#" class="hover:text-blue-500"
+                                aria-label="week">Product Support</a></li>
+                    </ul>
+                </div>
 
-    <!-- Shop Links -->
-    <div>
-      <h3 class="font-semibold text-md mb-4">Shop With Us</h3>
-      <ul class="space-y-2 text-sm">
-        <li><a href="#" class="hover:text-blue-500" aria-label="week">Magazines</a></li>
-        <li><a href="#" class="hover:text-blue-500" aria-label="week">Books</a></li>
-        <li><a href="#" class="hover:text-blue-500" aria-label="week">Books</a></li>
-        <li><a href="#" class="hover:text-blue-500" aria-label="week">Yearbook</a></li>
-        <li><a href="#" class="hover:text-blue-500" aria-label="week">Astro</a></li>
-      </ul>
-    </div>
+                <!-- Shop Links -->
+                <div>
+                    <h3 class="font-semibold text-md mb-4">Shop With Us</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-blue-500"
+                                aria-label="week">Magazines</a></li>
+                        <li><a href="#" class="hover:text-blue-500"
+                                aria-label="week">Books</a></li>
+                        <li><a href="#" class="hover:text-blue-500"
+                                aria-label="week">Books</a></li>
+                        <li><a href="#" class="hover:text-blue-500"
+                                aria-label="week">Yearbook</a></li>
+                        <li><a href="#" class="hover:text-blue-500"
+                                aria-label="week">Astro</a></li>
+                    </ul>
+                </div>
 
-    <!-- Newsletter / Social -->
-    <div>
-      <h3 class="font-semibold text-md mb-2">Social Networks</h3>
-      <div class="flex space-x-3 py-2 socialmedia">
-        <a href="#" class="facebook" aria-label="facebook"></a>
-        <a href="#" class="instagram" aria-label="instagram"></a>
-        <a href="#" class="youtube" aria-label="youtube"></a>
-        <a href="#" class="twitter" aria-label="twitter"></a>
-      </div>
-    </div>
-  </div>
+                <!-- Newsletter / Social -->
+                <div>
+                    <h3 class="font-semibold text-md mb-2">Social Networks</h3>
+                    <div class="flex space-x-3 py-2 socialmedia">
+                        <a href="#" class="facebook" aria-label="facebook"></a>
+                        <a href="#" class="instagram"
+                            aria-label="instagram"></a>
+                        <a href="#" class="youtube" aria-label="youtube"></a>
+                        <a href="#" class="twitter" aria-label="twitter"></a>
+                    </div>
+                </div>
+            </div>
 
-  <hr class="border-gray-200" />
+            <hr class="border-gray-200" />
 
-  <div class="copyright flex flex-col md:flex-row justify-between items-center max-w-full lg:max-w-[1550px] mx-auto px-6 pt-4 text-sm text-gray-500">
-    <p>Copyright 2023 Manorama Online &nbsp;|&nbsp; All Rights Reserved</p>
-    <div class="flex space-x-2 mt-4 md:mt-0">
-      <!-- Optional footer links can be added here -->
-    </div>
-  </div>
-</footer>
+            <div
+                class="copyright flex flex-col md:flex-row justify-between items-center max-w-full lg:max-w-[1550px] mx-auto px-6 pt-4 text-sm text-gray-500">
+                <p>Copyright 2023 Manorama Online &nbsp;|&nbsp; All Rights
+                    Reserved</p>
+                <div class="flex space-x-2 mt-4 md:mt-0">
+                    <!-- Optional footer links can be added here -->
+                </div>
+            </div>
+        </footer>
         <!--  End Footer  -->
 
         <link href="assets/css/common.css" type="text/css" rel="stylesheet" />
 
         <link href="assets/css/listing.css" type="text/css" rel="stylesheet" />
 
-        <link rel="stylesheet" type="text/css"
-            href="assets/libs/slick-slider/slick.css" media="print"
-            onload="this.media='all'" />
-        <link rel="stylesheet" type="text/css"
-            href="assets/libs/slick-slider/slick-theme.css" media="print"
-            onload="this.media='all'" />
-
         <script src="assets/libs/Jquery/jquery-3.7.1.min.js"></script>
-        <script src="assets/libs/slick-slider/slick.min.js" defer></script>
         <script src="assets/js/common.js" defer></script>
         <script src="assets/js/listing.js" defer></script>
         <script src="assets/js/bottom-nav.js" defer></script>
 
     </body>
-
-    <!-- <script>
-    document.querySelectorAll('.accordion-toggle').forEach((button) => {
-        button.addEventListener('click', () => {
-            const content = button.nextElementSibling;
-            const icon = button.querySelector('svg');
-
-            content.classList.toggle('hidden');
-            icon.classList.toggle('rotate-180');
-        });
-    });
-
-    document.querySelectorAll('.accordion-content').forEach((el) => el.classList.remove('hidden'));
-</script> -->
-
-    <!-- <style>
-    .rotate-180 {
-        transform: rotate(180deg);
-    }
-</style> -->
-
-    <!-- <script>
-
-
-    document.querySelectorAll('.round-filter').forEach(item => {
-        item.addEventListener('click', () => {
-            item.classList.toggle('active');
-        });
-    });
-</script> -->
 
 </html>
