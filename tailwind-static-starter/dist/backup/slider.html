@@ -1,47 +1,142 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explore Our AI Courses</title>
+
+  <!-- Slick CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <style>
-    body { margin: 0; font-family: sans-serif; }
-    .slider { overflow: hidden; width: 100%; height: 250px; position: relative; }
-    .slides { display: flex; width: 300%; animation: slide 9s infinite; }
-    .slide { flex: 0 0 100%; position: relative; }
-    img { width: 100%; height: 250px; object-fit: cover; }
-    .badge {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background: #ff1744;
-      color: white;
-      padding: 5px 12px;
-      border-radius: 20px;
-      font-size: 14px;
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff;
+      margin: 0;
+      padding: 20px;
     }
-    @keyframes slide {
-      0%, 20% { transform: translateX(0%); }
-      33.33%, 53.33% { transform: translateX(-100%); }
-      66.66%, 86.66% { transform: translateX(-200%); }
-      100% { transform: translateX(0%); }
+
+    h2 {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    h2 span {
+      color: #e91e63;
+    }
+
+    .slider {
+      width: 100%;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      margin: 10px;
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      font-size: 16px;
+      padding: 10px;
+      color: #333;
+    }
+
+    .slick-prev,
+    .slick-next {
+      background: #e91e63;
+      border: none;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      z-index: 2;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+      color: #fff;
+      font-size: 18px;
+    }
+
+    @media (max-width: 600px) {
+      .card h3 {
+        font-size: 14px;
+      }
     }
   </style>
 </head>
+
 <body>
+
+  <h2>Explore Our <span>AI Courses</span></h2>
+
   <div class="slider">
-    <div class="slides">
-      <div class="slide">
-        <img src="https://vmkt.vedantu.com/homepage/mwebslide3.png">
-        <div class="badge">🔥 Selling Fast</div>
-      </div>
-      <div class="slide">
-        <img src="https://vmkt.vedantu.com/homepage/mwebslide1.png">
-        <div class="badge">🔥 New Batch</div>
-      </div>
-      <div class="slide">
-        <img src="https://vmkt.vedantu.com/homepage/mwebslide2.png">
-        <div class="badge">🔥 Limited Seats</div>
-      </div>
+    <div class="card">
+      <img src="https://media.datacamp.com/cms/photo-career-switcher-3.webp" alt="AI Basics" />
+      <h3>ChatGPT for Beginners
+      </h3>
+    </div>
+    <div class="card">
+      <img src="https://media.datacamp.com/cms/photo-career-switcher-3.webp" alt="ML Mastery" />
+      <h3>STEM and AI Trainer</h3>
+    </div>
+    <div class="card">
+      <img src="https://media.datacamp.com/cms/photo-career-switcher-3.webp" alt="Data Science" />
+      <h3>Microsoft Excel with AI </h3>
+    </div>
+    <div class="card">
+      <img src="https://media.datacamp.com/cms/photo-career-switcher-3.webp" alt="NLP" />
+      <h3>AI for Everyone
+      </h3>
+    </div>
+    <div class="card">
+      <img src="https://media.datacamp.com/cms/photo-career-switcher-3.webp" alt="Projects" />
+      <h3>Gen AI for Improving Productivity
+      </h3>
     </div>
   </div>
+
+  <!-- jQuery + Slick JS -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $('.slider').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        dots: false,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1
+            }
+          }
+        ]
+      });
+    });
+  </script>
 </body>
+
 </html>
