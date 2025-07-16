@@ -248,8 +248,17 @@ align-items: center;
 .sortdrop{
 	width:70%;
 }
+.noresult{
+	min-height: 100vh;
+}
+.subscribebtn button {
+    width: 160px;
+}
 @media(max-width:767px){
 	div#m-searchOverlay {
 		z-index: 99;
 	}
+	.subscribebtn .yearly {
+    display: block;
+}
 }
