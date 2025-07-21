@@ -64,8 +64,8 @@ $(window).on('load', function () {
         centerMode: false,  // Disable to prevent extra space
         variableWidth: false, // Ensure uniform width
 
-             autoplay: true,              // Enable auto slide
-        autoplaySpeed: 3000,         // Delay between slides in ms (3 seconds)
+             //autoplay: true,              // Enable auto slide
+       // autoplaySpeed: 3000,         // Delay between slides in ms (3 seconds)
 
     });
 

@@ -37,8 +37,8 @@ $(window).on('load', function () {
         adaptiveHeight: false,
         centerMode: false,  // Disable to prevent extra space
         variableWidth: false, // Ensure uniform width
-        autoplay: true,              // Enable auto slide
-        autoplaySpeed: 2000,  
+       // autoplay: true,              // Enable auto slide
+       // autoplaySpeed: 2000,  
 
 
     });

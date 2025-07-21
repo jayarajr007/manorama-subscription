@@ -16,8 +16,11 @@
 
   aspect-ratio: 3 / 4;
 
+}
 
-
+.category-slider .slick-track
+{
+  margin-left: -1px !important;
 }
 
 .round-filter.active .imgbx::after
@@ -99,31 +102,43 @@
         transform: rotate(180deg);
     }
 
-.slick-prev:before {
+.category-slider .slick-prev:before {
     content: "";
     position: absolute;
     top: 0px;
     left: 0px;
     width: 25px;
     height: 25px;
-    z-index: 10;
-    background: url(../img/icons/sprite.svg) no-repeat -149px -176px !important;
+    z-index: 10000;
+    background: url(../img/icons/sprite.svg) no-repeat -152px -182px !important;
     opacity: 1;
 }
-.slick-next:before {
-    content: "";
+.category-slider .slick-next:before {
+content: "";
     position: absolute;
-    top: 0px;
-    right: 9px;
+    top: -4px;
+    right: 6px;
     width: 25px;
     height: 25px;
-    z-index: 10;
+    z-index: 10000;
     background: url(../img/icons/sprite.svg) no-repeat -173px -178px !important;
     opacity: 1;
 }
-.slick-prev {
-    left: -15px!important;
+.category-slider .slick-prev {
+    left: 0px!important;
+
+    background: #fff !important;
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;  z-index: 10000;
+    box-shadow: 1px 2px 8px #ccc;
 }
-.slick-next {
-    right: -15px!important;
+.category-slider .slick-next {
+    right: 0px!important;
+
+    background: #fff !important;
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    box-shadow: 1px 2px 8px #ccc;
 }

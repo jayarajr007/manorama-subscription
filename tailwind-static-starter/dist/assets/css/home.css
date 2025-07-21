@@ -38,6 +38,12 @@
   filter: brightness(0) invert(1);
 }
 
+.main-banner .slick-slide {
+    height: auto !important;
+    /* margin: 0 10px; */
+    margin-right: 0px !important;
+}
+
 
 .main-banner .slick-prev {
   background-color: #00000057 !important;
@@ -85,5 +91,6 @@ content: "";
 .main-banner .slick-track
 {
       margin-left: 0px !important;
+      margin-right: 0px !important;
 }
 
