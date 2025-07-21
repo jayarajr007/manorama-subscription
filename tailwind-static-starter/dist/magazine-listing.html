@@ -1803,30 +1803,30 @@
                         <!-- Categories Accordion -->
                         <div class="accordion-section border-b border-gray-200 pb-4">
                             <button class="accordion-toggle flex justify-between items-center w-full text-left"
-                                aria-label="week">
+                                aria-label="categories">
                                 <span class="font-semibold text-gray-800">Categories</span>
-                                <svg class="w-4 h-4 transition-transform duration-200 rotate-180" fill="none"
-                                    stroke="currentColor" viewBox="0 0 24 24">
+                                <svg class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
                             <div class="accordion-content mt-3 space-y-2 text-sm">
                                 <div class="flex items-center">
-                                    <input type="checkbox" id="news"
+                                    <input type="checkbox" id="news2"
                                         class="mr-2 h-4 w-4 text-blue-600 rounded border-gray-300" />
-                                    <label for="news" class="text-gray-700">News And
+                                    <label for="news2" class="text-gray-700">News And
                                         Information</label>
                                 </div>
                                 <div class="flex items-center">
-                                    <input type="checkbox" id="children" checked
+                                    <input type="checkbox" id="children1" checked
                                         class="mr-2 h-4 w-4 text-blue-600 rounded border-gray-300" />
-                                    <label for="children" class="text-gray-700">Children</label>
+                                    <label for="children1" class="text-gray-700">Children</label>
                                 </div>
                                 <div class="flex items-center">
-                                    <input type="checkbox" id="entertainment"
+                                    <input type="checkbox" id="entertainment1"
                                         class="mr-2 h-4 w-4 text-blue-600 rounded border-gray-300" />
-                                    <label for="entertainment" class="text-gray-700">Entertainment</label>
+                                    <label for="entertainment1" class="text-gray-700">Entertainment</label>
                                 </div>
                                 <div class="flex items-center">
                                     <input type="checkbox" id="career"
@@ -1844,10 +1844,35 @@
                         <!-- Language Accordion -->
                         <div class="accordion-section border-b border-gray-200 pb-4">
                             <button class="accordion-toggle flex justify-between items-center w-full text-left"
-                                aria-label="week">
+                                aria-label="language">
                                 <span class="font-semibold text-gray-800">Language</span>
-                                <svg class="w-4 h-4 transition-transform duration-200  rotate-180" fill="none"
-                                    stroke="currentColor" viewBox="0 0 24 24">
+                                <svg class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="accordion-content mt-3 space-y-2 text-sm">
+                                <div class="flex items-center">
+                                    <input type="checkbox" id="english1"
+                                        class="mr-2 h-4 w-4 text-blue-600 rounded border-gray-300" />
+                                    <label for="english1" class="text-gray-700">English</label>
+                                </div>
+                                <div class="flex items-center">
+                                    <input type="checkbox" id="malayalam1"
+                                        class="mr-2 h-4 w-4 text-blue-600 rounded border-gray-300" />
+                                    <label for="malayalam1" class="text-gray-700">Malayalam</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Edition Accordion -->
+                        <div class="accordion-section">
+                            <button class="accordion-toggle flex justify-between items-center w-full text-left"
+                                aria-label="edition">
+                                <span class="font-semibold text-gray-800">Edition</span>
+                                <svg class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M19 9l-7 7-7-7"></path>
                                 </svg>
@@ -1856,42 +1881,17 @@
                                 <div class="flex items-center">
                                     <input type="checkbox" id="english"
                                         class="mr-2 h-4 w-4 text-blue-600 rounded border-gray-300" />
-                                    <label for="english" class="text-gray-700">English</label>
+                                    <label for="english" class="text-gray-700">Print</label>
                                 </div>
                                 <div class="flex items-center">
                                     <input type="checkbox" id="malayalam"
                                         class="mr-2 h-4 w-4 text-blue-600 rounded border-gray-300" />
-                                    <label for="malayalam" class="text-gray-700">Malayalam</label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Edition Accordion -->
-                        <div class="accordion-section">
-                            <button class="accordion-toggle flex justify-between items-center w-full text-left"
-                                aria-label="week">
-                                <span class="font-semibold text-gray-800">Edition</span>
-                                <svg class="w-4 h-4 transition-transform duration-200  rotate-180" fill="none"
-                                    stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7"></path>
-                                </svg>
-                            </button>
-                            <div class="accordion-content mt-3 space-y-2 text-sm">
-                                <div class="flex items-center">
-                                    <input type="checkbox" id="english6"
-                                        class="mr-2 h-4 w-4 text-blue-600 rounded border-gray-300" />
-                                    <label for="english6" class="text-gray-700">Print</label>
+                                    <label for="malayalam" class="text-gray-700">Digital</label>
                                 </div>
                                 <div class="flex items-center">
-                                    <input type="checkbox" id="malayalam4"
+                                    <input type="checkbox" id="malayalam2"
                                         class="mr-2 h-4 w-4 text-blue-600 rounded border-gray-300" />
-                                    <label for="malayalam4" class="text-gray-700">Digital</label>
-                                </div>
-                                <div class="flex items-center">
-                                    <input type="checkbox" id="malayalam5"
-                                        class="mr-2 h-4 w-4 text-blue-600 rounded border-gray-300" />
-                                    <label for="malayalam5" class="text-gray-700">Print +
+                                    <label for="malayalam2" class="text-gray-700">Print +
                                         Digital</label>
                                 </div>
                             </div>
@@ -2715,7 +2715,7 @@
                     </div>
                     <!-- Add more cards here -->
                 </div>
-<div class="flex items-center justify-center space-x-1 text-sm mt-4">
+<div class="flex items-center justify-center space-x-1 text-sm pagination">
   <!-- Previous Button -->
   <button class="px-3 py-1 rounded-md border border-gray-300 text-gray-700 hover:bg-gray-100 disabled:opacity-50" disabled>
     Previous
