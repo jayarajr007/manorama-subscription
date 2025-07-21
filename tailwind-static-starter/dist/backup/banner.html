@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slick Dynamic Slider</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <style>
+        .slider .slick-slide {
+            text-align: center;
+        }
+
+        .slider img {
+            width: 100%;
+            height: auto;
+        }
+
+
+        .mob-img {
+            display: none !important;
+        }
+
+
+
+        /* @media (min-width: 768px) {
+            .web-img {
+                display: block;
+            }
+        } */
+
+        @media (max-width: 767px) {
+            .mob-img {
+                display: block !important;
+            }
+
+            .web-img {
+                display: none !important;
+            }
+
+            .slick-prev,
+            .slick-next {
+                display: none !important;
+            }
+
+        }
+
+        .slick-dots li button:before {
+            color: #000;
+        }
+
+        .slider {
+            position: relative;
+        }
+
+        /* Arrows */
+        .slick-prev,
+        .slick-next {
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: #ffffff78;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+            cursor: pointer;
+            padding: 0 10px;
+        }
+
+        .slick-prev {
+            left: 10px;
+        }
+
+        .slick-next {
+            right: 10px;
+        }
+
+        /* Hover effect */
+        .slick-prev:hover,
+        .slick-next:hover {
+            color: #555;
+        }
+
+        /* Dots */
+        .slick-dots {
+            padding: 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            width: 100%;
+            bottom: 0px;
+            margin: 0px 0px 5px 0px;
+        }
+
+        .slick-dots li button:before {
+            font-size: 12px;
+            color: #888;
+            opacity: 1;
+        }
+
+        .slick-dots li.slick-active button:before {
+            color: #000;
+        }
+
+        .slick-dots li {
+            list-style-type: none;
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            border-radius: 50%;
+            margin: 2px;
+
+
+        }
+
+        .slick-dots li.slick-active {
+            background-color: red;
+        }
+
+        .slick-dots {
+            padding: 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        @media (min-width: 1500px) {
+            .web-img {
+                height: 170px !important;
+            }
+
+        }
+
+        @media (max-width: 1500px) {
+            .web-img {
+                height: 140px !important;
+            }
+
+        }
+
+        @media (max-width: 1200px) {
+            .web-img {
+                height: 120px !important;
+            }
+
+        }
+
+        @media (max-width: 992px) {
+            .web-img {
+                height: 107px !important;
+            }
+
+        }
+
+        @media (max-width: 768px) {
+            .web-img {
+                height: 98px !important;
+            }
+
+        }
+
+        @media (max-width: 768px) {
+            .mob-img {
+                height: 274px !important;
+            }
+
+        }
+
+        @media (max-width: 600px) {
+            .mob-img {
+                height: 243px !important;
+            }
+
+        }
+
+        @media (max-width: 400px) {
+            .mob-img {
+                height: 210px !important;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="slider"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        const sheetURL = 'https://opensheet.elk.sh/193Z6t7WSRVitY09HsRKDT3OxQw627OyOBAkV8qZrs50/Sheet1';
+
+        fetch(sheetURL)
+            .then(res => res.json())
+            .then(data => {
+                const slider = document.querySelector('.slider');
+                data.forEach(slide => {
+                    const div = document.createElement('div');
+                    div.innerHTML = `
+            <div>
+              <img class="web-img" src="${slide['Web']}" alt="Web Slide">
+              <img class="mob-img" src="${slide['Mobile']}" alt="Mobile Slide">
+            </div>
+          `;
+                    slider.appendChild(div);
+                });
+
+                $('.slider').slick({
+                    dots: true,
+                    arrows: true,
+                    autoplay: true,
+                    autoplaySpeed: 4000,
+                    prevArrow: '<button type="button" class="slick-prev">←</button>',
+                    nextArrow: '<button type="button" class="slick-next">→</button>',
+                    customPaging: function (slider, i) {
+                        return '<span class="custom-dot"></span>';
+                    }
+                });
+
+            })
+            .catch(err => {
+                console.error("Failed to fetch slide data", err);
+            });
+    </script>
+
+</body>
+
+</html>
