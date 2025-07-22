@@ -1,0 +1,2447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Manorama Subscription Website. Subscribe Books and Magazines. Manorama Year Book Malayalam and English. Magic Pot. The Week. Watch Time India. Sampadyam. Bhashaposhini. Karshakasree. Smart Life. The Man. Balarama Digest. Tell Me Why. Kalikkudukka. Balarama. Vanitha. National Geographic Kids. Manorama Weekly. Vanitha Pachakam. Thozhilveedhi. Balarama Amar Chithra Kadha.">
+  <title>Manorama Subscription | E Books | E-editions</title>
+
+  <link rel="preload" href="assets/font/poppins/Poppins-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/font/poppins/Poppins-ExtraBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/font/poppins/Poppins-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/font/poppins/Poppins-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/css/output.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="assets/css/output.css">
+  <link href="assets/css/common-crit.css" rel="stylesheet" />
+
+  <link rel="preload" as="image" href="assets/images/banner.webp" type="image/webp">
+
+  <link rel="preload" as="image" href="assets/images/banner-mobile.webp" type="image/webp" fetchpriority="high">
+
+</head>
+
+<body class="poppins-regular">
+
+  <!-- Navbar -->
+  <!-- Header -->
+  <header class="bg-white  z-40  sticky w-full top-0 shadow-sm subscription-navigation-web">
+    <div class="max-w-full lg:max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="flex justify-between items-center py-3 border-b border-b-[#D9D9D9]">
+        <!-- Left Section: Logo & Mobile Profile -->
+        <div class="header-left-section">
+          <!-- Desktop Logo -->
+          <a href="index.html" class="flex items-center md:block hidden" areal-label="logo">
+            <img src="assets/img/logo.svg" alt="Company Logo" class="logo" width="275" height="40" loading="lazy" />
+          </a>
+
+          <!-- Mobile Profile Info -->
+          <a href="#" class="flex items-center md:hidden" areal-label="Hello">
+            <div class="flex items-center space-x-3">
+              <!-- Profile Icon -->
+              <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center i-m-account"></div>
+              <!-- Text Info -->
+              <div>
+                <p class="text-sm font-medium text-gray-900">Hello</p>
+                <p class="text-xs text-gray-500">Let's Shop</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Right Section: Search, Icons, User Dropdown -->
+        <div class="flex items-center">
+          <!-- Desktop Search -->
+          <div id="search-container"
+            class="global-search mx-4 items-center border border-gray-300 rounded-md px-3 py-2 hidden md:block relative">
+            <div class="flex">
+              <a href="#" aria-label="search" class="cursor-pointer">
+                <div class="i-search-placeholder w-5 h-5 mr-2"></div>
+              </a>
+              <input type="text" id="searchInput" placeholder="Search For Title, Author Or Keyword.."
+                class="lg:w-96 md:w-64 bg-transparent outline-none text-sm" />
+            </div>
+
+            <!-- Search Suggestions Dropdown -->
+            <div id="suggestionDropdown"
+              class="hidden absolute top-12 w-full bg-white shadow-xl rounded-lg p-4 z-50 left-0">
+              <!-- Recent Searches -->
+              <div class="mb-4">
+                <p class="text-sm text-black font-semibold mb-1">Recent
+                  Searches</p>
+                <div
+                  class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
+                  <span><img src="assets/img/icons/Search.svg" width="15" alt="Search icon" /></span>
+                  <span class="truncate block w-[220px]">Pravasaikalkkum Vanithakkalkum 50 Samrambhangal</span>
+                </div>
+                <div
+                  class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
+                  <span><img src="assets/img/icons/Search.svg" width="15" alt="Search icon" /></span>
+                  <span class="truncate block w-[220px]">Vanitha</span>
+                </div>
+                <div
+                  class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
+                  <span><img src="assets/img/icons/Search.svg" width="15" alt="Search icon" /></span>
+                  <span class="truncate block w-[220px]">Vanitha Hindi</span>
+                </div>
+                <div
+                  class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
+                  <span><img src="assets/img/icons/Search.svg" width="15" alt="Search icon" /></span>
+                  <span class="truncate block w-[220px]">Vanitha Pachakam</span>
+                </div>
+                <div
+                  class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 px-2 py-2 rounded">
+                  <span><img src="assets/img/icons/Search.svg" width="15" alt="Search icon" /></span>
+                  <span class="truncate block w-[220px]">Week & Vanitha Combo</span>
+                </div>
+              </div>
+
+              <!-- Popular Searches -->
+              <div class="mb-4">
+                <p class="text-sm text-black font-semibold mb-3">Popular
+                  Searches</p>
+                <div class="flex flex-wrap gap-2 text-sm">
+                  <a href="#" areal-label="popular-search"
+                    class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 font-medium hover:bg-blue-50">Manorama
+                    Premium</a>
+                  <a href="#" areal-label="popular-search"
+                    class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 font-medium hover:bg-blue-50">Astro</a>
+                  <a href="#" areal-label="popular-search"
+                    class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 font-medium hover:bg-blue-50">Manorama
+                    MAX</a>
+                  <a href="#" areal-label="popular-search"
+                    class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 font-medium hover:bg-blue-50">Epaper</a>
+                  <a href="#" areal-label="popular-search"
+                    class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 font-medium hover:bg-blue-50">Books</a>
+                  <a href="#" areal-label="popular-search"
+                    class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 font-medium hover:bg-blue-50">Year
+                    Book</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Desktop Search -->
+
+          <!-- Icons & Mobile Search -->
+          <div class="flex nav-options">
+            <!-- Mobile Search Icon -->
+            <a href="#" id="m-openSearch" aria-label="mobile-search">
+              <div class="w-8 h-8 i-search-m mr-3 md:hidden"></div>
+            </a>
+
+            <!-- Mobile Search Overlay -->
+            <div id="m-searchOverlay"
+              class="fixed inset-0 z-100 bg-white p-0 overflow-y-auto hidden transition-opacity duration-300">
+              <div class="flex items-center gap-2 p-3 border-b border-gray-300">
+                <button id="m-closeSearch" aria-label="close">
+                  <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                  </svg>
+                </button>
+                <div class="global-search items-center border border-gray-300 rounded-md px-3 py-2 w-full"
+                  id="m-search-container">
+                  <div class="flex">
+                    <span class="mobile-search"></span>
+                    <input type="text" id="searchInput1" placeholder="Search For Title, Author Or Keyword.."
+                      class="bg-transparent outline-none text-sm w-full" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Mobile Search Suggestions -->
+              <div class="top-12 w-full bg-white rounded-lg p-4 z-50 left-0">
+                <!-- Recent Searches -->
+                <div class="pb-4 border-b border-gray-300">
+                  <p class="text-sm text-black font-semibold mb-1">Recent
+                    Searches</p>
+                  <div
+                    class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 py-2 rounded">
+                    <span class="suggestion-icon"></span>
+                    <span class="truncate block w-[220px]">Pravasaikalkkum Vanithakkalkum 50
+                      Samrambhangal</span>
+                  </div>
+                  <div
+                    class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 py-2 rounded">
+                    <span class="suggestion-icon"></span>
+                    <span class="truncate block w-[220px]">Vanitha</span>
+                  </div>
+                  <div
+                    class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 py-2 rounded">
+                    <span class="suggestion-icon"></span>
+                    <span class="truncate block w-[220px]">Vanitha Hindi</span>
+                  </div>
+                  <div
+                    class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 py-2 rounded">
+                    <span class="suggestion-icon"></span>
+                    <span class="truncate block w-[220px]">Vanitha Pachakam</span>
+                  </div>
+                  <div
+                    class="flex items-center gap-2 text-sm text-black-600 cursor-pointer hover:bg-gray-100 py-2 rounded">
+                    <span class="suggestion-icon"></span>
+                    <span class="truncate block w-[220px]">Week & Vanitha Combo</span>
+                  </div>
+                </div>
+
+                <!-- Popular Searches -->
+                <div class="mb-4 pt-4">
+                  <p class="text-sm text-black font-semibold mb-3">Popular
+                    Searches Web</p>
+                  <div class="flex flex-wrap gap-2 text-sm">
+                    <a href="#" areal-label="popular-search"
+                      class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 font-medium hover:bg-blue-50">Manorama
+                      Premium</a>
+                    <a href="#" areal-label="popular-search"
+                      class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 font-medium hover:bg-blue-50">Astro</a>
+                    <a href="#" areal-label="popular-search"
+                      class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 font-medium hover:bg-blue-50">Manorama
+                      MAX</a>
+                    <a href="#" areal-label="popular-search"
+                      class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 font-medium hover:bg-blue-50">Epaper</a>
+                    <a href="#" areal-label="popular-search"
+                      class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 font-medium hover:bg-blue-50">Books</a>
+                    <a href="#" areal-label="popular-search"
+                      class="px-3 py-1 rounded-full border border-blue-500 text-blue-500 font-medium hover:bg-blue-50">Year
+                      Book</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cart Icon -->
+            <a href="cart.html" aria-label="cart" class="relative cartico">
+              <div class="mr-4 i-cart"></div>
+              <span
+                class="w-5 h-5 rounded-full f bg-blue-500 text-white flex items-center justify-center text-xs absolute right-2 top-0">5</span>
+            </a>
+
+            <!-- Notification Icon -->
+            <a href="#" aria-label="Notification">
+              <div class="md:mr-4 mr-0 w-8 h-8 i-notification"></div>
+            </a>
+
+            <!-- Logged-in User Dropdown -->
+            <div class="relative group hidden md:block">
+              <button class="text-left hover:text-blue-500 flex items-center text-sm" aria-label="userprofile">
+                <div class="md:mr-0 mr-0 w-8 h-8 i-user profile"></div>
+                <span class="droparrow w-5 h-3"></span>
+              </button>
+              <ul class="absolute right-2 w-48 bg-white shadow-lg z-50 hidden group-hover:block">
+                <li class="px-4 py-2 bg-gray-100">
+                  <div class="flex">
+                    <div
+                      class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center font-semibold text-md">
+                      J
+                    </div>
+                    <div class="ml-2">
+                      <p class="text-[12px] font-light mb-1">Login as</p>
+                      <h6 class="text-md font-medium">Jayaraj</h6>
+                    </div>
+                  </div>
+                </li>
+                <li class="mt-2 mb-2">
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-500 font-light">My
+                    Account</a>
+                </li>
+                <li class="mb-2">
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-500 font-light">Log
+                    Out</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- End Icons -->
+        </div>
+      </div>
+
+      <!--Nav -->
+      <nav class="bg-white hidden md:block relative">
+        <div class="mx-auto px-0">
+          <div class="flex justify-between w-full">
+            <ul class="hidden md:flex space-x-5 text-gray-700 font-semibold justify-between w-full text-left z-0">
+              <li class="py-4">
+                <a href="#" class="hover:text-blue-500 text-sm border-b-2 border-transparent"
+                  aria-label="Manorama Daily and E Paper">MANORAMA
+                  DAILY & E
+                  PAPER</a>
+              </li>
+              <!-- Premium Subscription Dropdown -->
+              <li class="relative group py-4 dropdown-group">
+                <button
+                  class="text-left hover:text-blue-500 flex items-center text-sm dropdown-button border-b-2 border-transparent"
+                  aria-label="Premium Subscription">
+                  PREMIUM SUBSCRIPTION
+                  <span class="ml-2 droparrow w-5 h-3"></span>
+                </button>
+                <ul
+                  class="dropdown-menu absolute  left-0 w-48 justify-between shadow-lg hidden group-hover:block pt-2 rounded-lg  border-t bg-lightblue">
+                  <li>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-500 font-light"
+                      aria-label="Plan 1">Plan 1</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-500 font-light"
+                      aria-label="Plan 2">Plan 2</a>
+                  </li>
+                </ul>
+              </li>
+              <!-- Magazines Mega Menu -->
+              <li class="group z-50 py-4 dropdown-group">
+                <button aria-label="Magazines"
+                  class="text-left hover:text-blue-500 flex items-center text-sm dropdown-button border-b-2 border-transparent">
+                  MAGAZINES
+                  <span class="ml-2 droparrow w-5 h-3"></span>
+                </button>
+                <div
+                  class="dropdown-menu rounded-lg  border-t absolute bg-lightblue  left-0 w-full bg-white shadow-lg hidden group-hover:flex flex-wrap justify-between px-6 py-2 gap-x-8 top-[38px] z-50 min-w-full max-h-[calc(100vh-300px)] overflow-y-auto">
+                  <!-- Column 1 -->
+                  <ul
+                    class="left-0 top-full w-screen columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 [column-fill:_balance  z-50">
+                    <li class="break-inside-avoid  p-4">
+                      <h4 class="font-semibold text-gray-800 text-sm mb-2">News
+                        and Information1</h4>
+                      <ul>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Thozhilveedhi book">Thozhilveedhi</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Karshakasree book">Karshakasree</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Bhashaposhini book">Bhashaposhini</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Sampadyam book">Sampadyam</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="The Week book">The
+                            Week</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Livingetc book">Livingetc</a></li>
+                        <li><a href="books-listing.html" class="text-sm text-blue-500 mt-2 block font-semibold"
+                            aria-label="View all News and Information books">View
+                            All</a></li>
+                      </ul>
+                    </li>
+                    <!-- Column 2: Children -->
+                    <li class="break-inside-avoid  p-4">
+                      <h4 class="font-semibold text-gray-800 text-sm mb-2">Children2</h4>
+                      <ul>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Magic Pot book">Magic
+                            Pot</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Kalikkudukka book">Kalikkudukka</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Balarama Digest book">Balarama
+                            Digest</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="National Geographic Kids book">National
+                            Geographic Kids</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Balarama Amar Chithra Kadha book">Balarama
+                            Amar Chithra
+                            Kadha</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Akkad Bakkad book">Akkad
+                            Bakkad</a></li>
+                        <li><a href="books-listing.html" class="text-sm text-blue-500 mt-2 block font-semibold"
+                            aria-label="View all Children books">View
+                            All</a></li>
+                      </ul>
+                    </li>
+                    <li class="break-inside-avoid  p-4">
+                      <h4 class="font-semibold text-gray-800 text-sm mb-2">Children3</h4>
+                      <ul>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Magic Pot book">Magic
+                            Pot</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Kalikkudukka book">Kalikkudukka</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Balarama Digest book">Balarama
+                            Digest</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="National Geographic Kids book">National
+                            Geographic Kids</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Balarama Amar Chithra Kadha book">Balarama
+                            Amar Chithra
+                            Kadha</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Akkad Bakkad book">Akkad
+                            Bakkad</a></li>
+                        <li><a href="books-listing.html" class="text-sm text-blue-500 mt-2 block font-semibold"
+                            aria-label="View all Children books">View
+                            All</a></li>
+                      </ul>
+                    </li>
+                    <li class="break-inside-avoid  p-4">
+                      <h4 class="font-semibold text-gray-800 text-sm mb-2">Children4</h4>
+                      <ul>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Magic Pot book">Magic
+                            Pot</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Kalikkudukka book">Kalikkudukka</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Balarama Digest book">Balarama
+                            Digest</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="National Geographic Kids book">National
+                            Geographic Kids</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Balarama Amar Chithra Kadha book">Balarama
+                            Amar Chithra
+                            Kadha</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Akkad Bakkad book">Akkad
+                            Bakkad</a></li>
+                        <li><a href="books-listing.html" class="text-sm text-blue-500 mt-2 block font-semibold"
+                            aria-label="View all Children books">View
+                            All</a></li>
+                      </ul>
+                    </li>
+                    <li class="break-inside-avoid  p-4">
+                      <h4 class="font-semibold text-gray-800 text-sm mb-2">Children5</h4>
+                      <ul>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Magic Pot book">Magic
+                            Pot</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Kalikkudukka book">Kalikkudukka</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Balarama Digest book">Balarama
+                            Digest</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="National Geographic Kids book">National
+                            Geographic Kids</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Balarama Amar Chithra Kadha book">Balarama
+                            Amar Chithra
+                            Kadha</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Akkad Bakkad book">Akkad
+                            Bakkad</a></li>
+                        <li><a href="books-listing.html" class="text-sm text-blue-500 mt-2 block font-semibold"
+                            aria-label="View all Children books">View
+                            All</a></li>
+                      </ul>
+                    </li>
+                    <!-- Column 3: English Magazines -->
+                    <li class="break-inside-avoid  p-4">
+                      <h4 class="font-semibold text-gray-800 text-sm mb-2">English
+                        Magazines6</h4>
+                      <ul>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="The Week book">The
+                            Week</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Magic Pot book">Magic
+                            Pot</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Tell Me Why book">Tell
+                            Me Why</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Read And Colour book">Read
+                            And
+                            Colour</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Watch Time India book">Watch
+                            Time
+                            India</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="National Geographic Kids book">National
+                            Geographic Kids</a></li>
+                        <li><a href="books-listing.html" class="text-sm text-blue-500 mt-2 block font-semibold"
+                            aria-label="View all English books">View
+                            All</a></li>
+                      </ul>
+                    </li>
+                    <!-- Column 4: Lifestyle -->
+                    <li class="break-inside-avoid  p-4">
+                      <h4 class="font-semibold text-gray-800 text-sm mb-2">Lifestyle7</h4>
+                      <ul>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Manorama Weekly book">Manorama
+                            Weekly</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Manorama Traveller book">Manorama
+                            Traveller</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Fasttrack book">Fasttrack</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Watch Time India book">Watch
+                            Time
+                            India</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Veedu book">Veedu</a></li>
+                        <li><a href="books-listing.html" class="text-sm text-blue-500 mt-2 block font-semibold"
+                            aria-label="View all Lifestyle books">View
+                            All</a></li>
+                      </ul>
+                    </li>
+                    <!-- Column 5: Women -->
+                    <li class="break-inside-avoid  p-4">
+                      <h4 class="font-semibold text-gray-800 text-sm mb-2">Women
+                        8</h4>
+                      <ul>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Vanitha Pachakam book">Vanitha
+                            Pachakam</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Vanitha book">Vanitha</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Vanita Hindi book">Vanita
+                            Hindi</a></li>
+                      </ul>
+                    </li>
+                    <!-- Column 6: Career and General -->
+                    <li class="break-inside-avoid  p-4">
+                      <h4 class="font-semibold text-gray-800 text-sm mb-2">Career
+                        and Genera 9</h4>
+                      <ul>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Thozhilveedhi book">Thozhilveedhi</a></li>
+                      </ul>
+                    </li>
+                    <li class="break-inside-avoid  p-4">
+                      <h4 class="font-semibold text-gray-800 text-sm mb-2">Lifestyle
+                        10</h4>
+                      <ul>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Manorama Weekly book">Manorama
+                            Weekly</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Manorama Traveller book">Manorama
+                            Traveller</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Fasttrack book">Fasttrack</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Watch Time India book">Watch
+                            Time
+                            India</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Veedu book">Veedu</a></li>
+                        <li><a href="books-listing.html" class="text-sm text-blue-500 mt-2 block font-semibold"
+                            aria-label="View all Lifestyle books">View
+                            All</a></li>
+                      </ul>
+                    </li>
+                    <li class="break-inside-avoid  p-4">
+                      <h4 class="font-semibold text-gray-800 text-sm mb-2">Lifestyle
+                        11</h4>
+                      <ul>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Manorama Weekly book">Manorama
+                            Weekly</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Manorama Traveller book">Manorama
+                            Traveller</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Fasttrack book">Fasttrack</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Watch Time India book">Watch
+                            Time
+                            India</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Veedu book">Veedu</a></li>
+                        <li><a href="books-listing.html" class="text-sm text-blue-500 mt-2 block font-semibold"
+                            aria-label="View all Lifestyle books">View
+                            All</a></li>
+                      </ul>
+                    </li>
+                    <li class="break-inside-avoid  p-4">
+                      <h4 class="font-semibold text-gray-800 text-sm mb-2">Lifestyle12
+                      </h4>
+                      <ul>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Manorama Weekly book">Manorama
+                            Weekly</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Manorama Traveller book">Manorama
+                            Traveller</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Fasttrack book">Fasttrack</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Watch Time India book">Watch
+                            Time
+                            India</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Veedu book">Veedu</a></li>
+                        <li><a href="books-listing.html" class="text-sm text-blue-500 mt-2 block font-semibold"
+                            aria-label="View all Lifestyle books">View
+                            All</a></li>
+                      </ul>
+                    </li>
+
+                  </ul>
+
+                  <!-- Additional columns (truncated for brevity) -->
+                  <!-- Each item in additional columns should follow the same pattern with aria-label -->
+                </div>
+              </li>
+              <!-- Books Dropdown -->
+              <li class="group z-50 py-4 dropdown-group">
+                <button
+                  class="text-left hover:text-blue-500 flex items-center text-sm dropdown-button border-b-2 border-transparent"
+                  aria-label="Books">
+                  BOOKS
+                  <span class="ml-2 droparrow w-5 h-3"></span>
+                </button>
+                <div
+                  class="dropdown-menu rounded-lg absolute bg-lightblue border-t left-0 w-full bg-white shadow-lg hidden group-hover:flex flex-wrap justify-between px-6 py-2 gap-x-8 top-[38px] z-50 min-w-full max-h-[calc(100vh-300px)] overflow-y-auto">
+                  <!-- Column 1 -->
+                  <ul
+                    class="left-0 top-full w-screen columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 [column-fill:_balance  z-50">
+                    <li class="break-inside-avoid  p-4">
+                      <h4 class="font-semibold text-gray-800 text-sm mb-2">News
+                        and Information1</h4>
+                      <ul>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Thozhilveedhi book">Thozhilveedhi</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Karshakasree book">Karshakasree</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Bhashaposhini book">Bhashaposhini</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Sampadyam book">Sampadyam</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="The Week book">The
+                            Week</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Livingetc book">Livingetc</a></li>
+                        <li><a href="books-listing.html" class="text-sm text-blue-500 mt-2 block font-semibold"
+                            aria-label="View all News and Information books">View
+                            All</a></li>
+                      </ul>
+                    </li>
+                    <!-- Column 2: Children -->
+                    <li class="break-inside-avoid  p-4">
+                      <h4 class="font-semibold text-gray-800 text-sm mb-2">Children2</h4>
+                      <ul>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Magic Pot book">Magic
+                            Pot</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Kalikkudukka book">Kalikkudukka</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Balarama Digest book">Balarama
+                            Digest</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="National Geographic Kids book">National
+                            Geographic Kids</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Balarama Amar Chithra Kadha book">Balarama
+                            Amar Chithra
+                            Kadha</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Akkad Bakkad book">Akkad
+                            Bakkad</a></li>
+                        <li><a href="books-listing.html" class="text-sm text-blue-500 mt-2 block font-semibold"
+                            aria-label="View all Children books">View
+                            All</a></li>
+                      </ul>
+                    </li>
+                    <li class="break-inside-avoid  p-4">
+                      <h4 class="font-semibold text-gray-800 text-sm mb-2">Children3</h4>
+                      <ul>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Magic Pot book">Magic
+                            Pot</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Kalikkudukka book">Kalikkudukka</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Balarama Digest book">Balarama
+                            Digest</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="National Geographic Kids book">National
+                            Geographic Kids</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Balarama Amar Chithra Kadha book">Balarama
+                            Amar Chithra
+                            Kadha</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Akkad Bakkad book">Akkad
+                            Bakkad</a></li>
+                        <li><a href="books-listing.html" class="text-sm text-blue-500 mt-2 block font-semibold"
+                            aria-label="View all Children books">View
+                            All</a></li>
+                      </ul>
+                    </li>
+                    <li class="break-inside-avoid  p-4">
+                      <h4 class="font-semibold text-gray-800 text-sm mb-2">Children4</h4>
+                      <ul>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Magic Pot book">Magic
+                            Pot</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Kalikkudukka book">Kalikkudukka</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Balarama Digest book">Balarama
+                            Digest</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="National Geographic Kids book">National
+                            Geographic Kids</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Balarama Amar Chithra Kadha book">Balarama
+                            Amar Chithra
+                            Kadha</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Akkad Bakkad book">Akkad
+                            Bakkad</a></li>
+                        <li><a href="books-listing.html" class="text-sm text-blue-500 mt-2 block font-semibold"
+                            aria-label="View all Children books">View
+                            All</a></li>
+                      </ul>
+                    </li>
+                    <li class="break-inside-avoid  p-4">
+                      <h4 class="font-semibold text-gray-800 text-sm mb-2">Children5</h4>
+                      <ul>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Magic Pot book">Magic
+                            Pot</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Kalikkudukka book">Kalikkudukka</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Balarama Digest book">Balarama
+                            Digest</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="National Geographic Kids book">National
+                            Geographic Kids</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Balarama Amar Chithra Kadha book">Balarama
+                            Amar Chithra
+                            Kadha</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Akkad Bakkad book">Akkad
+                            Bakkad</a></li>
+                        <li><a href="books-listing.html" class="text-sm text-blue-500 mt-2 block font-semibold"
+                            aria-label="View all Children books">View
+                            All</a></li>
+                      </ul>
+                    </li>
+                    <!-- Column 3: English Magazines -->
+                    <li class="break-inside-avoid  p-4">
+                      <h4 class="font-semibold text-gray-800 text-sm mb-2">English
+                        Magazines6</h4>
+                      <ul>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="The Week book">The
+                            Week</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Magic Pot book">Magic
+                            Pot</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Tell Me Why book">Tell
+                            Me Why</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Read And Colour book">Read
+                            And
+                            Colour</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Watch Time India book">Watch
+                            Time
+                            India</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="National Geographic Kids book">National
+                            Geographic Kids</a></li>
+                        <li><a href="books-listing.html" class="text-sm text-blue-500 mt-2 block font-semibold"
+                            aria-label="View all English books">View
+                            All</a></li>
+                      </ul>
+                    </li>
+                    <!-- Column 4: Lifestyle -->
+                    <li class="break-inside-avoid  p-4">
+                      <h4 class="font-semibold text-gray-800 text-sm mb-2">Lifestyle7</h4>
+                      <ul>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Manorama Weekly book">Manorama
+                            Weekly</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Manorama Traveller book">Manorama
+                            Traveller</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Fasttrack book">Fasttrack</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Watch Time India book">Watch
+                            Time
+                            India</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Veedu book">Veedu</a></li>
+                        <li><a href="books-listing.html" class="text-sm text-blue-500 mt-2 block font-semibold"
+                            aria-label="View all Lifestyle books">View
+                            All</a></li>
+                      </ul>
+                    </li>
+                    <!-- Column 5: Women -->
+                    <li class="break-inside-avoid  p-4">
+                      <h4 class="font-semibold text-gray-800 text-sm mb-2">Women
+                        8</h4>
+                      <ul>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Vanitha Pachakam book">Vanitha
+                            Pachakam</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Vanitha book">Vanitha</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Vanita Hindi book">Vanita
+                            Hindi</a></li>
+                      </ul>
+                    </li>
+                    <!-- Column 6: Career and General -->
+                    <li class="break-inside-avoid  p-4">
+                      <h4 class="font-semibold text-gray-800 text-sm mb-2">Career
+                        and Genera 9</h4>
+                      <ul>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Thozhilveedhi book">Thozhilveedhi</a></li>
+                      </ul>
+                    </li>
+                    <li class="break-inside-avoid  p-4">
+                      <h4 class="font-semibold text-gray-800 text-sm mb-2">Lifestyle
+                        10</h4>
+                      <ul>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Manorama Weekly book">Manorama
+                            Weekly</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Manorama Traveller book">Manorama
+                            Traveller</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Fasttrack book">Fasttrack</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Watch Time India book">Watch
+                            Time
+                            India</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Veedu book">Veedu</a></li>
+                        <li><a href="books-listing.html" class="text-sm text-blue-500 mt-2 block font-semibold"
+                            aria-label="View all Lifestyle books">View
+                            All</a></li>
+                      </ul>
+                    </li>
+                    <li class="break-inside-avoid  p-4">
+                      <h4 class="font-semibold text-gray-800 text-sm mb-2">Lifestyle
+                        11</h4>
+                      <ul>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Manorama Weekly book">Manorama
+                            Weekly</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Manorama Traveller book">Manorama
+                            Traveller</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Fasttrack book">Fasttrack</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Watch Time India book">Watch
+                            Time
+                            India</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Veedu book">Veedu</a></li>
+                        <li><a href="books-listing.html" class="text-sm text-blue-500 mt-2 block font-semibold"
+                            aria-label="View all Lifestyle books">View
+                            All</a></li>
+                      </ul>
+                    </li>
+                    <li class="break-inside-avoid  p-4">
+                      <h4 class="font-semibold text-gray-800 text-sm mb-2">Lifestyle12
+                      </h4>
+                      <ul>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Manorama Weekly book">Manorama
+                            Weekly</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Manorama Traveller book">Manorama
+                            Traveller</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Fasttrack book">Fasttrack</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Watch Time India book">Watch
+                            Time
+                            India</a></li>
+                        <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-light"
+                            aria-label="Veedu book">Veedu</a></li>
+                        <li><a href="books-listing.html" class="text-sm text-blue-500 mt-2 block font-semibold"
+                            aria-label="View all Lifestyle books">View
+                            All</a></li>
+                      </ul>
+                    </li>
+
+                  </ul>
+
+                  <!-- Additional columns (truncated for brevity) -->
+                  <!-- Each item in additional columns should follow the same pattern with aria-label -->
+                </div>
+              </li>
+              <!-- Other Links -->
+              <li class="py-4"><a href="manorama-yearbook-listing.html"
+                  class="text-left hover:text-blue-500 flex items-center text-sm dropdown-button border-b-2 border-transparent"
+                  aria-label="Year Book">YEAR
+                  BOOK</a></li>
+              <li class="py-4"><a href="astro-listing.html"
+                  class="text-left hover:text-blue-500 flex items-center text-sm dropdown-button border-b-2 border-transparent"
+                  aria-label="Astro">ASTRO</a></li>
+              <li class="py-4"><a href="ottsubscription.html"
+                  class="text-left hover:text-blue-500 flex items-center text-sm dropdown-button border-b-2 border-transparent"
+                  aria-label="Manorama Max">MANORAMA
+                  MAX</a></li>
+
+              <li class="relative group py-4 dropdown-group">
+                <div class="inline-block">
+                  <button
+                    class="dropdown-button text-left flex items-center text-sm text-gray-800 group-hover:text-blue-500 hover:text-blue-500  border-b-2 border-transparent"
+                    aria-label="More options">
+                    MORE
+                    <span class="ml-2 droparrow w-5 h-3"></span>
+                  </button>
+                  <ul
+                    class="dropdown-menu absolute right-0 w-48  shadow-lg hidden group-hover:block pt-2 z-50 rounded-lg  border-t bg-lightblue">
+                    <li>
+                      <a href="#" class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-500 font-light"
+                        aria-label="Offers">OFFER</a>
+                    </li>
+                    <li>
+                      <a href="#" class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-500 font-light"
+                        aria-label="Other options">OTHERS</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    </div>
+  </header>
+  <!-- Bottom Navigation - Mobile Only -->
+  <nav
+    class="fixed bottom-0 left-0 right-0 bg-white border-t z-50 md:hidden shadow-md text-xs text-center subscription-navigation-mobile">
+    <div class="flex justify-between px-4 py-2">
+
+      <a href="#" class="flex flex-col items-center text-red-600">
+        <i class="fn-icon i-home"></i>
+        <span class="uppercase font-semibold text-black mt-1">Home</span>
+      </a>
+
+      <a href="#" class="flex flex-col items-center text-gray-600 hover:text-blue-600">
+        <!-- <img src="assets/img/icons/offer.gif" height="20" width="20" alt="Offers icon" /> -->
+        <i class="fn-icon i-offer"></i>
+        <span class="uppercase font-semibold text-black mt-1">Offers</span>
+      </a>
+
+      <a href="#" class="flex flex-col items-center text-gray-600 hover:text-blue-600" onclick="showCategory()"
+        id="mobcate">
+        <i class="fn-icon i-category"></i>
+        <span class="uppercase font-semibold text-black mt-1">Categories</span>
+      </a>
+
+      <a href="#" class="flex flex-col items-center text-gray-600 hover:text-blue-600">
+        <i class="fn-icon i-account"></i>
+        <span class="uppercase font-semibold text-black mt-1">Account</span>
+      </a>
+
+    </div>
+  </nav>
+  <!-- End Bottom Navigation - Mobile Only -->
+  <!-- Mobile Category menu-->
+  <div id="categoryMenu" class="flex flex-1 hidden w-full ">
+    <div class="fixed top-0 left-0 w-full bg-white flex items-center justify-between px-4 py-5 shadow-md z-50">
+      <button class="text-1xl" id="category-close" aria-label="close">
+        ✖
+      </button>
+      <h1 class="text-sm font-light">CATEGORIES</h1>
+      <div class="w-6"></div>
+    </div>
+    <!-- Sidebar Tabs -->
+    <div
+      class="w-20 bg-[#F1F8FF] border-r flex flex-col items-center py-0 space-y-4 overflow-y-auto h-[calc(100vh-121px)] overflow-auto">
+
+      <button onclick="showTab('newspaper', this)" id="tab-newspaper"
+        class="flex flex-col items-center tab-btn active-tab w-full px-2" aria-label="News Paper and E Paper">
+        <span class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-1">
+          <img src="assets/img/menu/mm.jpg" alt="News Paper" class="rounded-full w-10 h-10" />
+        </span>
+        <span class="text-[10px] text-center">News Paper & E Paper</span>
+      </button>
+
+      <button onclick="showTab('premium', this)" id="tab-premium" class="flex flex-col items-center tab-btn w-full px-2"
+        aria-label="Premium Subscription">
+        <span class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-1">
+          <img src="assets/img/menu/premium.jpg" alt="Premium Subscription" class="rounded-full w-10 h-10" />
+        </span>
+        <span class="text-[10px] text-center">Premium Subscription</span>
+      </button>
+
+      <button onclick="showTab('magazines', this)" id="tab-magazines"
+        class="flex flex-col items-center tab-btn w-full px-2" aria-label="Magazines Subscription">
+        <span class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-1">
+          <img src="assets/img/menu/magazin.jpg" alt="Magazines" class="rounded-full w-10 h-10" />
+        </span>
+        <span class="text-[10px] text-center">Magazines Subscription</span>
+      </button>
+
+      <button onclick="showTab('books', this)" id="tab-books" class="flex flex-col items-center tab-btn w-full px-2"
+        aria-label="Books">
+        <span class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-1">
+          <img src="assets/img/menu/books.jpg" alt="Books" class="rounded-full w-10 h-10" />
+        </span>
+        <span class="text-[10px] text-center">Books</span>
+      </button>
+
+      <button onclick="showTab('yearbook', this)" id="tab-yearbook"
+        class="flex flex-col items-center tab-btn w-full px-2" aria-label="Year Book">
+        <span class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-1">
+          <img src="assets/img/menu/yb.jpg" alt="Year Book" class="rounded-full w-10 h-10" />
+        </span>
+        <span class="text-[10px] text-center">Year Book</span>
+      </button>
+
+      <button onclick="showTab('astro', this)" id="tab-astro" class="flex flex-col items-center tab-btn w-full px-2"
+        aria-label="Astro">
+        <span class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-1">
+          <img src="assets/img/menu/astro.jpg" alt="Astro" class="rounded-full w-10 h-10" />
+        </span>
+        <span class="text-[10px] text-center">Astro</span>
+      </button>
+
+      <button onclick="showTab('apps', this)" id="tab-apps" class="flex flex-col items-center tab-btn w-full px-2"
+        aria-label="Apps">
+        <span class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-1">
+          <img src="assets/img/menu/max.jpg" alt="Apps" class="rounded-full w-10 h-10" />
+        </span>
+        <span class="text-[10px] text-center">Apps</span>
+      </button>
+
+      <button onclick="showTab('offers', this)" id="tab-offers" class="flex flex-col items-center tab-btn w-full px-2"
+        aria-label="Offers">
+        <span class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-1">
+          <img src="assets/img/menu/offer.jpg" alt="Offers" class="rounded-full w-10 h-10" />
+        </span>
+        <span class="text-[10px] text-center">Offers</span>
+      </button>
+
+    </div>
+
+    <!-- Content Area -->
+    <div class="flex-1 p-4 overflow-y-auto">
+      <!-- Premium Content -->
+      <div id="newspaper" class="tab-content">
+        <div class="space-y-6 pb-[100px]">
+          <a class="text-center border-b pb-3 block" href="#" area-label="detailpage">
+            <img src="assets/images/epaper&news/5.webp" width="113" height="149" loading="lazy"
+              class="mx-auto mb-2 max-w-[115px] rounded-md border border-gray-300" alt="Premium" />
+            <p class="text-[13px] font-semibold">Premium Subscription</p>
+          </a>
+          <a class="text-center border-b pb-3 block" href="#" area-label="detailpage">
+            <img src="assets/images/epaper&news/a1.webp" width="113" height="149" loading="lazy"
+              class="mx-auto mb-2 max-w-[115px] rounded-md border border-gray-300" alt="Premium + Epaper" />
+            <p class="text-[13px] font-semibold">Premium + Epaper
+              Subscription</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- Magazines Content -->
+      <div id="premium" class="tab-content hidden">
+        <div class="space-y-6 pb-[100px]">
+          <a class="text-center border-b pb-3 block" href="#" area-label="detailpage">
+            <img src="assets/images/subscription/3.webp" width="113" height="149"
+              class="mx-auto mb-2 max-w-[115px] rounded-md border border-gray-300" alt="Premium" />
+            <p class="text-[13px] font-semibold">Premium Subscription</p>
+          </a>
+          <a class="text-center border-b pb-3 block" href="#" area-label="detailpage">
+            <img src="assets/images/subscription/2.webp" width="113" height="149" loading="lazy"
+              class="mx-auto mb-2 max-w-[115px] rounded-md border border-gray-300" alt="Premium + Manorama MAX" />
+            <p class="text-[13px] font-semibold">Premium + Manorama MAX</p>
+          </a>
+          <a class="text-center border-b pb-3 block" href="#" area-label="detailpage">
+            <img src="assets/images/subscription/1.webp" width="113" height="149" loading="lazy"
+              class="mx-auto mb-2 max-w-[115px] rounded-md border border-gray-300" alt="Premium + Epaper" />
+            <p class="text-[13px] font-semibold">Premium + Epaper</p>
+          </a>
+          <a class="text-center border-b pb-3 block" href="#" area-label="detailpage">
+            <img src="assets/images/subscription/4.webp" width="113" height="149" loading="lazy"
+              class="mx-auto mb-2 max-w-[115px] rounded-md border border-gray-300" alt="Premium + Yearbook" />
+            <p class="text-[13px] font-semibold">Premium + Yearbook</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- Books Content -->
+      <div id="magazines" class="tab-content hidden pb-[100px]">
+        <h2 class="font-semibold text-sm font-medium mb-2">English-Magazine</h2>
+        <div class="grid grid-cols-3 gap-4 mb-4">
+          <a class="text-center" href="#" area-label="detailpage">
+            <img src="assets/images/magazin/1.webp" class="mx-auto rounded-sm" alt="The Week" width="77" height="101"
+              loading="lazy" />
+            <p class="text-[12px] mt-1 font-medium">The Week</p>
+          </a>
+          <a class="text-center" href="#" area-label="detailpage">
+            <img src="assets/images/magazin/2.webp" class="mx-auto rounded-sm" alt="Magic Pot" width="77" height="101"
+              loading="lazy" />
+            <p class="text-[12px] mt-1 font-medium">Magic Pot</p>
+          </a>
+          <a class="text-center" href="#" area-label="detailpage">
+            <img src="assets/images/magazin/3.webp" class="mx-auto rounded-sm" alt="Tell Me Why" width="77" height="101"
+              loading="lazy" />
+            <p class="text-[12px] mt-1 font-medium">Tell Me Why</p>
+          </a>
+          <a class="text-center" href="#" area-label="detailpage">
+            <img src="assets/images/magazin/1.webp" class="mx-auto rounded-sm" alt="The Week" width="77" height="101"
+              loading="lazy" />
+            <p class="text-[12px] mt-1 font-medium">The Week</p>
+          </a>
+          <a class="text-center" href="#" area-label="detailpage">
+            <img src="assets/iwmages/magazin/2.webp" class="mx-auto rounded-sm" alt="Magic Pot" width="77" height="101"
+              loading="lazy" />
+            <p class="text-[12px] mt-1 font-medium">Magic Pot</p>
+          </a>
+          <a class="text-center" href="#" area-label="detailpage">
+            <img src="assets/images/magazin/3.webp" class="mx-auto rounded-sm" alt="Tell Me Why" width="77" height="101"
+              loading="lazy" />
+            <p class="text-[12px] mt-1 font-medium">Tell Me Why</p>
+          </a>
+        </div>
+        <a href="#" class="block text-right mb-2 text-xs mt-1 font-medium text-blue-500">View
+          All</a>
+
+        <h2 class="text-sm font-semibold mb-4">News and Information</h2>
+        <div class="grid grid-cols-3 gap-4 mb-2">
+          <a class="text-center block" href="#" area-label="detailpage">
+            <img src="assets/images/magazin/1.webp" class="mx-auto rounded-sm" alt="The Week" width="77" height="101"
+              loading="lazy" />
+            <p class="text-[12px] mt-1 font-medium">The Week</p>
+          </a>
+          <a class="text-center block" href="#" area-label="detailpage">
+            <img src="assets/images/magazin/2.webp" class="mx-auto rounded-sm" alt="Magic Pot" width="77" height="101"
+              loading="lazy" />
+            <p class="text-[12px] mt-1 font-medium">Magic Pot</p>
+          </a>
+          <a class="text-center block" href="#" area-label="detailpage">
+            <img src="assets/images/magazin/3.webp" class="mx-auto rounded-sm" alt="Tell Me Why" width="77" height="101"
+              loading="lazy" />
+            <p class="text-[12px] mt-1 font-medium">Tell Me Why</p>
+          </a>
+          <a class="text-center block" href="#" area-label="detailpage">
+            <img src="assets/images/magazin/1.webp" class="mx-auto rounded-sm" alt="The Week" width="77" height="101"
+              loading="lazy" />
+            <p class="text-[12px] mt-1 font-medium">The Week</p>
+          </a>
+          <a class="text-center block" href="#" area-label="detailpage">
+            <img src="assets/images/magazin/2.webp" class="mx-auto rounded-sm" alt="Magic Pot" width="77" height="101"
+              loading="lazy" />
+            <p class="text-[12px] mt-1 font-medium">Magic Pot</p>
+          </a>
+          <a class="text-center block" href="#" area-label="detailpage">
+            <img src="assets/images/magazin/3.webp" class="mx-auto rounded-sm" alt="Tell Me Why" width="77" height="101"
+              loading="lazy" />
+            <p class="text-[12px] mt-1 font-medium">Tell Me Why</p>
+          </a>
+        </div>
+        <a href="#" class="block text-right mb-2 text-xs mt-1 font-medium text-blue-500">View
+          All</a>
+
+        <h2 class="text-sm font-semibold mb-4">Children</h2>
+        <div class="grid grid-cols-3 gap-4 mb-2">
+          <a class="text-center block" href="#" area-label="detailpage">
+            <img src="assets/images/magazin/1.webp" class="mx-auto rounded-sm" alt="The Week" width="77" height="101"
+              loading="lazy" />
+            <p class="text-[12px] mt-1 font-medium">The Week</p>
+          </a>
+          <a class="text-center block" href="#" area-label="detailpage">
+            <img src="assets/images/magazin/2.webp" class="mx-auto rounded-sm" alt="Magic Pot" width="77" height="101"
+              loading="lazy" />
+            <p class="text-[12px] mt-1 font-medium">Magic Pot</p>
+          </a>
+          <a class="text-center block" href="#" area-label="detailpage">
+            <img src="assets/images/magazin/3.webp" class="mx-auto rounded-sm" alt="Tell Me Why" width="77" height="101"
+              loading="lazy" />
+            <p class="text-[12px] mt-1 font-medium">Tell Me Why</p>
+          </a>
+          <a class="text-center block" href="#" area-label="detailpage">
+            <img src="assets/images/magazin/1.webp" class="mx-auto rounded-sm" alt="The Week" width="77" height="101"
+              loading="lazy" />
+            <p class="text-[12px] mt-1 font-medium">The Week</p>
+          </a>
+          <a class="text-center block" href="#" area-label="detailpage">
+            <img src="assets/images/magazin/2.webp" class="mx-auto rounded-sm" alt="Magic Pot" width="77" height="101"
+              loading="lazy" />
+            <p class="text-[12px] mt-1 font-medium">Magic Pot</p>
+          </a>
+          <a class="text-center block" href="#" area-label="detailpage">
+            <img src="assets/images/magazin/3.webp" class="mx-auto rounded-sm" alt="Tell Me Why" width="77" height="101"
+              loading="lazy" />
+            <p class="text-[12px] mt-1 font-medium">Tell Me Why</p>
+          </a>
+        </div>
+        <a href="#" class="block text-right mb-2 text-xs mt-1 font-medium text-blue-500">View
+          All</a>
+      </div>
+
+      <div id="books" class="tab-content hidden pb-[100px]">
+        <h2 class="font-semibold text-sm font-medium mb-4">General Calendar
+          Diary</h2>
+        <div class="grid grid-cols-3 gap-4 mb-4">
+          <a class="text-center block" href="#" area-label="detailpage">
+            <img src="assets/images/magazin/1.webp" class="mx-auto rounded-sm" alt="The Week" width="77" height="101"
+              loading="lazy" />
+            <p class="text-[12px] mt-1 font-medium">The Week</p>
+          </a>
+          <a class="text-center block" href="#" area-label="detailpage">
+            <img src="assets/images/magazin/2.webp" class="mx-auto rounded-sm" alt="Magic Pot" width="77" height="101"
+              loading="lazy" />
+            <p class="text-[12px] mt-1 font-medium">Magic Pot</p>
+          </a>
+          <a class="text-center block" href="#" area-label="detailpage">
+            <img src="assets/images/magazin/3.webp" class="mx-auto rounded-sm" alt="Tell Me Why" width="77" height="101"
+              loading="lazy" />
+            <p class="text-[12px] mt-1 font-medium">Tell Me Why</p>
+          </a>
+          <a class="text-center block" href="#" area-label="detailpage">
+            <img src="assets/images/magazin/1.webp" class="mx-auto rounded-sm" alt="The Week" width="77" height="101"
+              loading="lazy" />
+            <p class="text-[12px] mt-1 font-medium">The Week</p>
+          </a>
+          <a class="text-center block" href="#" area-label="detailpage">
+            <img src="assets/images/magazin/2.webp" class="mx-auto rounded-sm" alt="Magic Pot" width="77" height="101"
+              loading="lazy" />
+            <p class="text-[12px] mt-1 font-medium">Magic Pot</p>
+          </a>
+          <a class="text-center block" href="#" area-label="detailpage">
+            <img src="assets/images/magazin/3.webp" class="mx-auto rounded-sm" alt="Tell Me Why" width="77" height="101"
+              loading="lazy" />
+            <p class="text-[12px] mt-1 font-medium">Tell Me Why</p>
+          </a>
+        </div>
+        <a href="#" class="block text-right mb-2 text-xs mt-1 font-medium text-blue-500">View
+          All</a>
+
+        <h2 class="font-semibold text-sm font-medium mb-2">Education and
+          Career</h2>
+        <div class="grid grid-cols-3 gap-4 mb-2">
+          <a class="text-center block" href="#" area-label="detailpage">
+            <img src="assets/images/magazin/1.webp" class="mx-auto rounded-sm" alt="The Week" width="77" height="101"
+              loading="lazy" />
+            <p class="text-[12px] mt-1 font-medium">The Week</p>
+          </a>
+          <a class="text-center block" href="#" area-label="detailpage">
+            <img src="assets/images/magazin/2.webp" class="mx-auto rounded-sm" alt="Magic Pot" width="77" height="101"
+              loading="lazy" />
+            <p class="text-[12px] mt-1 font-medium">Magic Pot</p>
+          </a>
+          <a class="text-center block" href="#" area-label="detailpage">
+            <img src="assets/images/magazin/3.webp" class="mx-auto rounded-sm" alt="Tell Me Why" width="77" height="101"
+              loading="lazy" />
+            <p class="text-[12px] mt-1 font-medium">Tell Me Why</p>
+          </a>
+          <a class="text-center block" href="#" area-label="detailpage">
+            <img src="assets/images/magazin/1.webp" class="mx-auto rounded-sm" alt="The Week" width="77" height="101"
+              loading="lazy" />
+            <p class="text-[12px] mt-1 font-medium">The Week</p>
+          </a>
+          <a class="text-center block " href="#" area-label="detailpage">
+            <img src="assets/images/magazin/2.webp" class="mx-auto rounded-sm" alt="Magic Pot" width="77" height="101"
+              loading="lazy" />
+            <p class="text-[12px] mt-1 font-medium">Magic Pot</p>
+          </a>
+          <a class="text-center block" href="#" area-label="detailpage">
+            <img src="assets/images/magazin/3.webp" class="mx-auto rounded-sm" alt="Tell Me Why" width="77" height="101"
+              loading="lazy" />
+            <p class="text-[12px] mt-1 font-medium">Tell Me Why</p>
+          </a>
+        </div>
+        <a href="#" class="block text-right mb-2 text-xs mt-1 font-medium text-blue-500">View
+          All</a>
+
+        <h2 class="font-semibold text-sm font-medium mb-4">Agriculture</h2>
+        <div class="grid grid-cols-3 gap-4 mb-2">
+          <a class="text-center block" href="#" area-label="detailpage">
+            <img src="assets/images/magazin/1.webp" class="mx-auto rounded-sm" alt="The Week" width="77" height="101"
+              loading="lazy" />
+            <p class="text-[12px] mt-1 font-medium">The Week</p>
+          </a>
+          <a class="text-center block" href="#" area-label="detailpage">
+            <img src="assets/images/magazin/2.webp" class="mx-auto rounded-sm" alt="Magic Pot" width="77" height="101"
+              loading="lazy" />
+            <p class="text-[12px] mt-1 font-medium">Magic Pot</p>
+          </a>
+          <a class="text-center block" href="#" area-label="detailpage">
+            <img src="assets/images/magazin/3.webp" class="mx-auto rounded-sm" alt="Tell Me Why" width="77" height="101"
+              loading="lazy" />
+            <p class="text-[12px] mt-1 font-medium">Tell Me Why</p>
+          </a>
+          <a class="text-center block" href="#" area-label="detailpage">
+            <img src="assets/images/magazin/1.webp" class="mx-auto rounded-sm" alt="The Week" width="77" height="101"
+              loading="lazy" />
+            <p class="text-[12px] mt-1 font-medium">The Week</p>
+          </a>
+          <a class="text-center block" href="#" area-label="detailpage">
+            <img src="assets/images/magazin/2.webp" class="mx-auto rounded-sm" alt="Magic Pot" width="77" height="101"
+              loading="lazy" />
+            <p class="text-[12px] mt-1 font-medium">Magic Pot</p>
+          </a>
+          <a class="text-center block" href="#" area-label="detailpage">
+            <img src="assets/images/magazin/3.webp" class="mx-auto rounded-sm" alt="Tell Me Why" width="77" height="101"
+              loading="lazy" />
+            <p class="text-[12px] mt-1 font-medium">Tell Me Why</p>
+          </a>
+        </div>
+        <a href="#" class="block text-right mb-2 text-xs mt-1 font-medium text-blue-500">View
+          All</a>
+      </div>
+
+      <div id="yearbook" class="tab-content hidden pb-[100px]">
+        <h2 class="font-semibold text-gray-700 text-sm mb-2">Year Book</h2>
+        <div class="grid grid-cols-3 gap-4 mb-4">
+          <a class="text-center block" href="#" area-label="detailpage">
+            <img src="assets/images/yearbook/1.webp" class="mx-auto rounded-sm" alt="The Week" width="77" height="101"
+              loading="lazy" />
+            <p class="text-[12px] mt-1 font-medium">The Week</p>
+          </a>
+          <a class="text-center block" href="#" area-label="detailpage">
+            <img src="assets/images/yearbook/2.webp" class="mx-auto rounded-sm" alt="Magic Pot" width="77" height="101"
+              loading="lazy" />
+            <p class="text-[12px] mt-1 font-medium">Magic Pot</p>
+          </a>
+          <a class="text-center block" href="#" area-label="detailpage">
+            <img src="assets/images/yearbook/3.webp" class="mx-auto rounded-sm" alt="Tell Me Why" width="77"
+              height="101" loading="lazy" />
+            <p class="text-[12px] mt-1 font-medium">Tell Me Why</p>
+          </a>
+        </div>
+
+        <h2 class="text-sm font-medium mb-4 text-gray-700">Year Book Mock
+          Test</h2>
+        <div class="grid grid-cols-3 gap-4 mb-2">
+          <a class="text-center block" href="#" area-label="detailpage">
+            <img src="assets/images/magazin/1.webp" class="mx-auto rounded-sm"
+              alt="All India Current Affairs Test Series 2025" width="77" height="101" loading="lazy" />
+            <p class="text-[12px] mt-1 font-medium text-gray-800 line-clamp-2">
+              All India Current Affairs Test Series 2025
+            </p>
+          </a>
+          <a class="text-center block" href="#" area-label="detailpage">
+            <img src="assets/images/magazin/2.webp" class="mx-auto rounded-sm" alt="Magic Pot Test Series" width="77"
+              height="101" loading="lazy" />
+            <p class="text-[12px] mt-1 font-medium text-gray-800">Magic Pot
+              Test</p>
+          </a>
+          <a class="text-center block" href="#" area-label="detailpage">
+            <img src="assets/images/magazin/3.webp" class="mx-auto rounded-sm" alt="Tell Me Why Test" width="77"
+              height="101" loading="lazy" />
+            <p class="text-[12px] mt-1 font-medium text-gray-800">Tell Me Why
+              Test</p>
+          </a>
+        </div>
+      </div>
+
+      <div id="astro" class="tab-content pb-[100px]">
+        <div class="space-y-6">
+          <a class="text-center border-b pb-3 block" href="#" area-label="detailpage">
+            <img src="assets/images/astro/1.webp" class="mx-auto mb-2 max-w-[115px] rounded-md border border-gray-300"
+              alt="In-depth Horoscope" width="77" height="101" loading="lazy" />
+            <p class="text-[13px] font-semibold">In-depth Horoscope</p>
+          </a>
+          <a class="text-center border-b pb-3 block" href="#" area-label="detailpage">
+            <img src="assets/images/astro/2.webp" class="mx-auto mb-2 max-w-[115px] rounded-md border border-gray-300"
+              alt="Gem Recommendation" width="77" height="101" loading="lazy" />
+            <p class="text-[13px] font-semibold">Gem Recommendation</p>
+          </a>
+          <a class="text-center border-b pb-3 block" href="#" area-label="detailpage">
+            <img src="assets/images/astro/3.webp" class="mx-auto mb-2 max-w-[115px] rounded-md border border-gray-300"
+              loading="lazy" alt="Yoga Report" width="77" height="101" />
+            <p class="text-[13px] font-semibold">Yoga Report</p>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- End Mobile Category menu-->
+  <!-- What Are You Looking
+    For Section only for first time user-->
+  <div class="container mx-auto px-4 py-6 md:hidden">
+    <h2 class="text-xl font-light">Welcome</h2>
+    <h3 class="text-lg font-semibold mb-4">What Are You Looking For?</h3>
+
+    <div class="grid grid-cols-2 gap-3">
+      <!-- Item 1 -->
+      <a class="flex items-center justify-between p-3 bg-white shadow-md rounded-lg" href="epaper.html"
+        area-label="epaper">
+        <span class="text-xs font-semibold">Manorama Daily & E
+          Paper</span>
+        <img src="assets/img/menu/mm.jpg" alt="Manorama Daily" class="mx-1 border rounded-md" width="40" height="40" />
+      </a>
+
+      <!-- Item 2 -->
+      <a href="premium-subscription-listing.html" aria-label="Go to Listing"
+        class="flex items-center justify-between p-3 bg-white shadow-md rounded-lg">
+        <span class="text-xs font-semibold">Premium
+          Subscription</span>
+        <img src="assets/img/menu/premium.jpg" alt="Premium Subscription" class="mx-1 border rounded-md" width="40" height="40" />
+      </a>
+
+      <!-- Item 3 -->
+      <a href="magazine-listing.html" aria-label="Go to Listing"
+        class="flex items-center justify-between p-3 bg-white shadow-md rounded-lg ">
+        <span class="text-xs font-semibold">Magazines</span>
+        <img src="assets/img/menu/magazin.jpg" alt="Magazines" class="mx-1 border rounded-md" width="40" height="40" />
+      </a>
+
+      <!-- Item 4 -->
+      <a href="books-listing.html" aria-label="Go to Listing"
+        class="flex items-center justify-between p-3 bg-white shadow-md rounded-lg">
+        <span class="text-xs font-semibold">Books</span>
+        <img src="assets/img/menu/books.jpg" alt="Books" class="mx-1 border rounded-md" width="40" height="40" />
+      </a>
+
+      <!-- Item 5 -->
+      <a href="manorama-yearbook-listing.html"
+        class="flex items-center justify-between p-3 bg-white shadow-md rounded-lg">
+        <span class="text-xs font-semibold">Year Book</span>
+        <img src="assets/img/menu/yb.jpg" alt="Year Book" class="mx-1 border rounded-md" width="40" height="40" />
+      </a>
+
+      <!-- Item 6 -->
+      <a href="astro-listing.html" class="flex items-center justify-between p-3 bg-white shadow-md rounded-lg">
+        <span class="text-xs font-semibold">Astro</span>
+        <img src="assets/img/menu/astro.jpg" alt="Astro" class="mx-1 border rounded-md" width="40" height="40" />
+      </a>
+
+      <!-- Item 7 -->
+      <div class="flex items-center justify-between p-3 bg-white shadow-md rounded-lg">
+        <span class="text-xs font-semibold">Manorama Max</span>
+        <img src="assets/img/menu/max.jpg" alt="Manorama Max" class="mx-1 border rounded-md" width="40" height="40" />
+      </div>
+
+      <!-- Item 8 -->
+      <div class="flex items-center justify-between p-3 bg-white shadow-md rounded-lg">
+        <span class="text-xs font-semibold">Offers</span>
+        <img src="assets/img/menu/offer.jpg" alt="Offers" class="mx-1 border rounded-md" width="40" height="40" />
+      </div>
+    </div>
+  </div>
+
+  <!-- End What Are You Looking
+    For Section only for first time user-->
+  <!-- Horizontal Scrollable Section (Mobile Only) -->
+  <div
+    class="overflow-x-auto whitespace-nowrap px-4 pb-4 space-x-4 flex md:hidden items-start category-horizontal-scroll">
+    <!-- Icon Item -->
+    <div class="flex flex-col items-center min-w-[70px]">
+      <div class="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center">
+        <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0.205078" y="0.000488281" width="14.1054" height="14.1054" rx="1" fill="#0074ED"
+            fill-opacity="0.12" />
+          <rect x="0.205078" y="16.6685" width="14.1054" height="14.1054" rx="1" fill="#0074ED" />
+          <rect x="16.875" y="16.6685" width="14.1054" height="14.1054" rx="5.5" fill="#0074ED" fill-opacity="0.12" />
+          <rect x="16.875" width="14.1054" height="14.1054" rx="1" fill="#0074ED" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- Menu Items -->
+    <div class="flex flex-col items-center min-w-[70px]">
+      <div class="w-14 h-14 rounded-full bg-gray-100 flex items-center justify-center overflow-hidden border ">
+        <img src="assets/img/menu/mm.jpg" alt="Manorama Daily" class="w-full h-full " width="56" height="56" />
+      </div>
+      <span class="text-xs mt-1 text-center scroll-menu-txt-wrap">Manorama
+        Daily & E Paper</span>
+    </div>
+
+    <div class="flex flex-col items-center min-w-[70px]">
+      <div class="w-14 h-14 rounded-full bg-yellow-100 flex items-center justify-center overflow-hidden border">
+        <img src="assets/img/menu/premium.jpg" alt="Premium Subscription" class="w-full h-full " width="56"
+          height="56" />
+      </div>
+      <span class="text-xs mt-1 text-center scroll-menu-txt-wrap">Premium
+        Subscription</span>
+    </div>
+
+    <div class="flex flex-col items-center min-w-[70px]">
+      <div class="w-14 h-14 rounded-full bg-red-100 flex items-center justify-center overflow-hidden border">
+        <img src="assets/img/menu/magazin.jpg" alt="Magazines" class="w-full h-full" width="56" height="56" />
+      </div>
+      <span class="text-xs mt-1 text-center scroll-menu-txt-wrap">Magazines</span>
+    </div>
+
+    <div class="flex flex-col items-center min-w-[70px]">
+      <div class="w-14 h-14 rounded-full bg-red-100 flex items-center justify-center overflow-hidden border">
+        <img src="assets/img/menu/books.jpg" alt="Books" class="w-full h-full" width="56" height="56" />
+      </div>
+      <span class="text-xs mt-1 text-center scroll-menu-txt-wrap">Books</span>
+    </div>
+
+    <div class="flex flex-col items-center min-w-[70px]">
+      <div class="w-14 h-14 rounded-full bg-red-100 flex items-center justify-center overflow-hidden border">
+        <img src="assets/img/menu/yb.jpg" alt="Year Book" class="w-full h-full" width="56" height="56" />
+      </div>
+      <span class="text-xs mt-1 text-center scroll-menu-txt-wrap">Year
+        Book</span>
+    </div>
+
+    <div class="flex flex-col items-center min-w-[70px]">
+      <div class="w-14 h-14 rounded-full bg-red-100 flex items-center justify-center overflow-hidden border">
+        <img src="assets/img/menu/astro.jpg" alt="Astro" class="w-full h-full" width="56" height="56" />
+      </div>
+      <span class="text-xs mt-1 text-center scroll-menu-txt-wrap">Astro</span>
+    </div>
+
+    <div class="flex flex-col items-center min-w-[70px]">
+      <div class="w-14 h-14 rounded-full bg-red-100 flex items-center justify-center overflow-hidden border">
+        <img src="assets/img/menu/max.jpg" alt="Manorama Max" class="w-full h-full" width="56" height="56" />
+      </div>
+      <span class="text-xs mt-1 text-center scroll-menu-txt-wrap">Manorama
+        Max</span>
+    </div>
+
+    <div class="flex flex-col items-center min-w-[70px]">
+      <div class="w-14 h-14 rounded-full bg-red-100 flex items-center justify-center overflow-hidden border">
+        <img src="assets/img/menu/offer.jpg" alt="Offers" class="w-full h-full" width="56" height="56" />
+      </div>
+      <span class="text-xs mt-1 text-center scroll-menu-txt-wrap">Offers</span>
+    </div>
+  </div>
+
+  <!-- End Horizontal Scrollable Section (Mobile Only) -->
+  <!-- Hero Section -->
+  <div class="z-0 banner-height max-w-full lg:max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="relative w-full">
+      <!-- Carousel Wrapper -->
+      <div class="overflow-hidden relative rounded-lg">
+        <div class="flex transition-transform duration-700 ease-in-out main-banner">
+
+          <!-- Slide 1 -->
+          <div class="w-full flex-shrink-0 min-h-[130px] ">
+
+            <picture>
+              <source media="(min-width:650px)" srcset="assets/images/banner.webp">
+              <source media="(min-width:465px)" srcset="assets/images/bannernew.jpg">
+              <img src="assets/images/banner-mobile.webp" fetchpriority="high" alt="banner" width="1800" height="300">
+            </picture>
+
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="w-full flex-shrink-0 min-h-[130px]">
+
+            <picture>
+              <source media="(min-width:650px)" srcset="assets/images/banner.webp">
+              <source media="(min-width:465px)" srcset="assets/images/bannernew.jpg">
+              <img src="assets/images/banner-mobile.webp" fetchpriority="high" alt="banner" width="1800" height="300">
+            </picture>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- End Hero Section -->
+
+  <!--  My Digital Purchases-->
+  <section
+    class="max-w-full lg:max-w-[1550px] mx-auto px-4 my-6 border-b-2 border-b-gray-100 pb-5 sm:px-6 lg:px-8 overflow-hidden layout-5col">
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="text-[16px] md:text-[18px] font-semibold">My Digital
+        Purchases</h2>
+      <!-- <a href="magazine-listing.html" aria-label="Go to Listing"
+          aria-label="Go to Listing"
+          class="text-blue-600 font-semibold flex items-center sm:text-sm md:text-base lg:text-lg">
+          <span class="hidden sm:inline text-sm">View All</span>
+          <span class="ml-2 i-viewall w-5 h-5">
+
+          </span>
+        </a> -->
+    </div>
+
+    <div class="slider-my-digital-purchases slick-slider">
+
+      <!-- Item 1 -->
+      <div class="pb-2">
+        <div class="bg-white p-2 border rounded-lg hover:shadow-md">
+          <div class="relative overflow-hidden image-wrapper rounded-md">
+            <img src="assets/images/books/a2.webp" width="266" height="350" decoding="async" alt="Book cover of A2"
+              class="transition-all duration-300 hover:scale-110 rounded-md" />
+          </div>
+          <a href="javascript:void(0)"
+            class="text-blue-600 text-xs sm:text-sm md:text-sm font-semibold mt-2 block">Continue
+            Reading</a>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="pb-2">
+        <div class="bg-white p-2 border rounded-lg">
+          <div class="relative overflow-hidden image-wrapper rounded-md">
+            <img src="assets/images/books/a4.webp" width="266" height="350" decoding="async" alt="Book cover of A4"
+              class="transition-all duration-300 hover:scale-110 rounded-md" />
+          </div>
+          <a href="javascript:void(0)"
+            class="text-blue-600 text-xs sm:text-sm md:text-sm font-semibold mt-2 block">Continue
+            Reading</a>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="pb-2">
+        <div class="bg-white p-2 border rounded-lg">
+          <div class="relative overflow-hidden image-wrapper rounded-md">
+            <img src="assets/images/books/a1.webp" width="266" height="350" decoding="async" alt="Book cover of A1"
+              class="transition-all duration-300 hover:scale-110 rounded-md" />
+          </div>
+          <a href="javascript:void(0)"
+            class="text-blue-600 text-xs sm:text-sm md:text-sm font-semibold mt-2 block">Continue
+            Reading</a>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="pb-2">
+        <div class="bg-white p-2 border rounded-lg">
+          <div class="relative overflow-hidden image-wrapper rounded-md">
+            <img src="assets/images/books/a5.webp" width="266" height="350" decoding="async" alt="Book cover of A5"
+              class="transition-all duration-300 hover:scale-110 rounded-md" />
+          </div>
+          <a href="javascript:void(0)" area-label="continuereading"
+            class="text-blue-600 text-xs sm:text-sm md:text-sm font-semibold mt-2 block">Continue
+            Reading</a>
+        </div>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="pb-2">
+        <div class="bg-white p-2 border rounded-lg">
+          <div class="relative overflow-hidden image-wrapper rounded-md">
+            <img src="assets/images/books/a3.webp" width="266" height="350" decoding="async" alt="Book cover of A3"
+              class="transition-all duration-300 hover:scale-110 rounded-md" />
+          </div>
+          <a href="javascript:void(0)"
+            class="text-blue-600 text-xs sm:text-sm md:text-sm font-semibold mt-2 block">Continue
+            Reading</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- End  My Digital Purchases-->
+  <!--  Manorama Premium Subscription-->
+  <section
+    class="max-w-full lg:max-w-[1550px] mx-auto px-4 my-6 border-b-2 border-b-gray-100 pb-5 sm:px-6 lg:px-8 overflow-hidden layout-5col">
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="text-[16px] md:text-[18px] font-semibold">Manorama Premium
+        Subscription</h2>
+      <a href="premium-subscription-listing.html" aria-label="Go to Listing"
+        class="text-blue-600 font-semibold flex items-center sm:text-sm md:text-base lg:text-lg">
+        <span class="hidden sm:inline text-sm">View All</span>
+        <span class="ml-2 i-viewall w-5 h-5">
+
+        </span>
+      </a>
+    </div>
+    <div class="slider slick-slider  ">
+      <!-- Repeat this block for each card -->
+      <a class="pb-2" href="premium-subscription-detail.html" area-label="premium">
+        <div class="bg-white p-2 rounded-lg border h-full">
+          <div class="relative overflow-hidden image-wrapper rounded-md">
+            <img src="assets/images/subscription/1.webp" alt="Magazine 1"
+              class="rounded-md transition-all duration-300 hover:scale-110" width="266" height="350"
+              decoding="async" />
+            <span
+              class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm  dark:text-gray-800">Dark</span>
+          </div>
+          <h3 class="text-[13px] md:text-sm font-semibold mt-2 mb-1 line-clamp-2">The
+            Week</h3>
+          <p class="text-[13px] md:text-sm pb-2">From <span class="font-semibold"> ₹50 </span>Per Month</p>
+          <p class="text-xs text-gray-500">Available in Print, Digital</p>
+        </div>
+      </a>
+
+      <!-- Duplicate and update for all cards -->
+      <a class="pb-2" href="premium-subscription-detail.html" area-label="premium">
+        <div class="bg-white p-2 rounded-lg border h-full ">
+          <div class="relative overflow-hidden image-wrapper rounded-md">
+            <img src="assets/images/subscription/2.webp" alt="Magazine 2"
+              class="rounded-md transition-all duration-300 hover:scale-110" width="266" height="350"
+              decoding="async" />
+            <span
+              class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm  dark:text-gray-800">Dark</span>
+          </div>
+          <h3 class="text-[13px] md:text-sm font-semibold mt-2 mb-1 line-clamp-2">The
+            Week</h3>
+          <p class="text-[13px] md:text-sm pb-2">From <span class="font-semibold"> ₹50 </span>Per Month</p>
+          <p class="text-xs text-gray-500">Available in Print, Digital</p>
+        </div>
+      </a>
+
+      <a class="pb-2" href="premium-subscription-detail.html" area-label="premium">
+        <div class="bg-white p-2 rounded-lg border h-full ">
+          <div class="relative overflow-hidden image-wrapper rounded-md">
+            <img src="assets/images/subscription/3.webp" alt="Magazine 3"
+              class="rounded-md transition-all duration-300 hover:scale-110" width="266" height="350"
+              decoding="async" />
+            <span
+              class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm  dark:text-gray-800">Dark</span>
+            <div class="absolute left-0 right-0 bottom-0">
+              <div
+                class="w-full dark-bg text-white text-xs py-1 text-left rounded-md flex justify-start items-center px-1 gift-message">
+                <div class="p-1 w-6 h-6 i-gift mr-1 ml-1">
+
+                </div>
+                <div>Gift Included</div>
+              </div>
+            </div>
+          </div>
+          <h3 class="text-[13px] md:text-sm font-semibold mt-2 mb-1 line-clamp-2">The
+            Week</h3>
+          <p class="text-[13px] md:text-sm pb-2">From <span class="font-semibold"> ₹50 </span>Per Month</p>
+          <p class="text-xs text-gray-500">Available in Print, Digital</p>
+        </div>
+      </a>
+
+      <a class="pb-2" href="premium-subscription-detail.html" area-label="premium">
+        <div class="bg-white p-2 rounded-lg border h-full ">
+          <div class="relative overflow-hidden image-wrapper rounded-md">
+            <img src="assets/images/subscription/4.webp" alt="Magazine 4"
+              class="rounded-md transition-all duration-300 hover:scale-110" width="266" height="350"
+              decoding="async" />
+            <span
+              class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm  dark:text-gray-800">Dark</span>
+            <div class="absolute bottom-0 left-0 right-0 flex flex-col items-end">
+              <div class="right-2 text-white text-xs px-2 py-1 rounded-full offer-circle-badge mb-2 font-semibold mr-2">
+                30%
+                OFF</div>
+              <div
+                class="w-full dark-bg text-white text-xs py-1 text-left rounded-md flex justify-start items-center px-1 gift-message">
+                <div class="p-1 w-6 h-6 i-gift mr-1 ml-1">
+
+                </div>
+                <div>Gift Included</div>
+              </div>
+            </div>
+          </div>
+          <h3 class="text-[13px] md:text-sm font-semibold mt-2 mb-1 line-clamp-2">The
+            Week</h3>
+          <p class="text-[13px] md:text-sm pb-2">From <span class="font-semibold"> ₹50 </span>Per Month</p>
+          <p class="text-xs text-gray-500">Available in Print, Digital</p>
+        </div>
+      </a>
+
+      <a class="pb-2" href="premium-subscription-detail.html" area-label="premium">
+        <div class="bg-white p-2 rounded-lg border h-full">
+          <div class="relative overflow-hidden image-wrapper rounded-md">
+            <img src="assets/images/subscription/1.webp" alt="Magazine 5"
+              class="rounded-md transition-all duration-300 hover:scale-110" width="266" height="350"
+              decoding="async" />
+            <span
+              class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm  dark:text-gray-800">Dark</span>
+            <div class="absolute bottom-0 left-0 right-0 flex flex-col items-end">
+              <div
+                class="right-2 text-white text-xs px-2 py-1 rounded-full offer-circle-badge mb-2 font-semibold mr-2 offer-badge">
+                30%
+                OFF</div>
+              <div
+                class="w-full dark-bg text-white text-xs py-1 text-left rounded-md flex justify-start items-center px-1 gift-message">
+                <div class="p-1 w-6 h-6 i-gift mr-1 ml-1">
+
+                </div>
+                <div>Gift Included</div>
+              </div>
+            </div>
+          </div>
+          <h3 class="text-[13px] md:text-sm font-semibold mt-2 mb-1 line-clamp-2">The
+            Week</h3>
+          <p class="text-[13px] md:text-sm pb-2">From <span class="font-semibold"> ₹50 </span>Per Month</p>
+          <p class="text-xs text-gray-500">Available in Print, Digital</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!--  End Manorama Premium Subscription-->
+  <!--  News paper and e paper 2 col layout-->
+  <section
+    class="max-w-full lg:max-w-[1550px] mx-auto px-4 my-6 border-b-2  border-b-gray-100 pb-5 px-4 sm:px-6 lg:px-8 overflow-hidden layout-2col">
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="text-[16px] md:text-[18px] 
+         font-semibold">News Paper & Epaper</h2>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-2 gap-2 sm-gap-4 ">
+      <!-- Malayala Manorama Daily -->
+      <a class="border rounded-lg p-2 sm:p-2 flex items-center justify-between relative" href="manorama-daily.html">
+        <div class="flex flex-col sm:flex-row sm:items-center sm:space-x-4 w-full ">
+          <!-- Image Wrapper -->
+          <div class="relative overflow-hidden flex-shrink-0 sm:w-[136px] sm:h-[180px] w-full rounded-md">
+            <img src="assets/images/epaper&news/a1.webp" alt="Malayala Manorama Daily"
+              class="sm:w-[136px] sm:h-[180px] w-full h-auto rounded-md transition-all duration-300 hover:scale-110 object-cover" />
+            <div class="absolute bottom-0 left-0 right-0">
+              <div
+                class="w-full dark-bg text-white text-xs py-1 text-left rounded-md flex justify-start items-center px-1 gift-message">
+                <div class="p-1 w-6 h-6 i-gift mr-1 ml-1"></div>
+                <div>Gift Included</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Text Content -->
+          <div class="mt-2 sm:mt-0 sm:ml-4 flex-grow ">
+            <h3 class="text-[13px] md:text-sm font-semibold line-clamp-2 mb-1">Malayala
+              Manorama Daily</h3>
+            <p class="text-sm md:text-sm pb-2">From <span class="font-semibold text-black">₹35</span> Per Issue</p>
+          </div>
+        </div>
+
+      </a>
+
+      <a class="border rounded-lg p-2 sm:p-2 flex items-center justify-between relative" href="epaper.html">
+        <div class="flex flex-col sm:flex-row sm:items-center sm:space-x-4 w-full ">
+          <!-- Image Wrapper -->
+          <div class="relative overflow-hidden flex-shrink-0 sm:w-[136px] sm:h-[180px] w-full rounded-md">
+            <img src="assets/images/epaper&news/5.webp" alt="Malayala Manorama Daily"
+              class="sm:w-[136px] sm:h-[180px] w-full h-auto rounded-md transition-all duration-300 hover:scale-110 object-cover" />
+            <div class="absolute bottom-0 left-0 right-0">
+              <div
+                class="w-full dark-bg text-white text-xs py-1 text-left rounded-md flex justify-start items-center px-1 gift-message">
+                <div class="p-1 w-6 h-6 i-gift mr-1 ml-1"></div>
+                <div>Gift Included</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Text Content -->
+          <div class="mt-2 sm:mt-0 sm:ml-4 flex-grow ">
+            <h3 class="text-[13px] md:text-sm font-semibold line-clamp-2 mb-1">Malayala
+              Manorama E Paper</h3>
+            <p class="text-sm md:text-sm pb-2">From <span class="font-semibold text-black">₹35</span> Per Issue</p>
+          </div>
+        </div>
+
+      </a>
+
+    </div>
+  </section>
+  <!-- End  News paper and e paper 2 col layout-->
+  <!--  Books -->
+  <section
+    class="max-w-full lg:max-w-[1550px] mx-auto px-4 my-6 border-b-2 border-b-gray-100 pb-5 sm:px-6 lg:px-8  overflow-hidden layout-5col">
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="text-[16px] md:text-[18px] font-semibold">Books</h2>
+      <a href="books-listing.html" aria-label="Go to Listing"
+        class="text-blue-600 font-semibold flex items-center sm:text-sm md:text-base lg:text-lg">
+        <span class="hidden sm:inline text-sm">View All</span>
+        <span class="ml-2 i-viewall w-5 h-5">
+
+        </span>
+      </a>
+    </div>
+
+    <div class="slider slick-slider ">
+      <!-- Slide 1 -->
+      <a class="pb-2 h-full" href="book-details.html" area-lebel="books detail">
+        <div class="bg-white p-2 rounded-lg border">
+          <div class="relative overflow-hidden image-wrapper rounded-md">
+            <img src="assets/images/books/a1.webp" alt="Avatharam"
+              class="rounded-md transition-all duration-300 hover:scale-110" width="266" height="350"
+              decoding="async" />
+            <span
+              class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm  dark:text-gray-800">Dark</span>
+
+            <div class="absolute bottom-0 left-0 right-0 flex flex-col items-end">
+              <div class="text-white text-xs px-2 py-1 rounded-full offer-circle-badge mb-2 font-semibold mr-2">30%
+                OFF</div>
+              <div
+                class="w-full dark-bg text-white text-xs py-1 text-left rounded-md flex items-center px-1 gift-message">
+                <div class="p-1 w-6 h-6 i-gift mr-1 ml-1">
+
+                </div>
+                <div>Gift Included</div>
+              </div>
+            </div>
+          </div>
+          <h3 class="text-[13px] md:text-sm font-semibold mt-2 line-clamp-2">Avatharam</h3>
+          <p class="text-xs text-gray-500 mb-1">PV Thampi</p>
+          <p class="text-sm pb-2"><span class="font-semibold">₹490</span></p>
+          <p class="text-xs text-gray-500">Available in Print, Digital</p>
+        </div>
+      </a>
+
+      <!-- Slide 2 -->
+      <a class="pb-2 h-full" href="book-details.html" area-lebel="books detail">
+        <div class="bg-white p-2 rounded-lg border">
+          <div class="relative overflow-hidden image-wrapper rounded-md">
+            <img src="assets/images/books/a2.webp" alt="Chembilammini Kolakkes"
+              class="rounded-md transition-all duration-300 hover:scale-110" width="266" height="350"
+              decoding="async" />
+            <span
+              class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm  dark:text-gray-800">Dark</span>
+          </div>
+          <h3 class="text-[13px] md:text-sm font-semibold mt-2 line-clamp-2">Chembilammini
+            Kolakkes</h3>
+          <p class="text-xs text-gray-500 mb-1">Majeed Sayed</p>
+          <p class="text-sm pb-2"><span class="font-semibold">₹490</span></p>
+          <p class="text-xs text-gray-500">Available in Print, Digital</p>
+        </div>
+      </a>
+
+      <!-- Slide 3 -->
+      <a class="pb-2 h-full" href="book-details.html" area-lebel="books detail">
+        <div class="bg-white p-2 rounded-lg border">
+          <div class="relative overflow-hidden image-wrapper rounded-md">
+            <img src="assets/images/books/a3.webp" alt="Chembilammini Kolakkes"
+              class="rounded-md transition-all duration-300 hover:scale-110" width="266" height="350"
+              decoding="async" />
+            <span
+              class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm  dark:text-gray-800">Dark</span>
+          </div>
+          <h3 class="text-[13px] md:text-sm font-semibold mt-2 line-clamp-2">Chembilammini
+            Kolakkes</h3>
+          <p class="text-xs text-gray-500 mb-1">Majeed Sayed</p>
+          <p class="text-sm pb-2"><span class="font-semibold">₹490</span></p>
+          <p class="text-xs text-gray-500">Available in Print, Digital</p>
+        </div>
+      </a>
+
+      <!-- Slide 4 -->
+      <a class="pb-2 h-full" href="book-details.html" area-lebel="books detail">
+        <div class="bg-white p-2 rounded-lg border">
+          <div class="relative overflow-hidden image-wrapper rounded-md">
+            <img src="assets/images/books/a4.webp" alt="Chembilammini Kolakkes"
+              class="rounded-md transition-all duration-300 hover:scale-110" width="266" height="350"
+              decoding="async" />
+            <span
+              class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm  dark:text-gray-800">Dark</span>
+            <div class="absolute bottom-2 left-0 right-0 flex flex-col items-end">
+              <div class="text-white text-xs px-2 py-1 rounded-full offer-circle-badge mb-2 font-semibold mr-2">30%
+                OFF</div>
+            </div>
+          </div>
+          <h3 class="text-[13px] md:text-sm font-semibold mt-2 line-clamp-2">Chembilammini
+            Kolakkes</h3>
+          <p class="text-xs text-gray-500 mb-1">Majeed Sayed</p>
+          <p class="text-sm pb-2"><span class="font-semibold">₹490</span></p>
+          <p class="text-xs text-gray-500">Available in Print, Digital</p>
+        </div>
+      </a>
+
+      <!-- Slide 5 -->
+      <a class="pb-2 h-full" href="book-details.html" area-lebel="books detail">
+        <div class="bg-white p-2 rounded-lg border">
+          <div class="relative overflow-hidden image-wrapper rounded-md">
+            <img src="assets/images/books/a5.webp" alt="Chembilammini Kolakkes"
+              class="rounded-md transition-all duration-300 hover:scale-110" width="266" height="350"
+              decoding="async" />
+            <span
+              class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm  dark:text-gray-800">Dark</span>
+            <div class="absolute bottom-2 left-0 right-0 flex flex-col items-end">
+              <div class="text-white text-xs px-2 py-1 rounded-full offer-circle-badge mb-2 font-semibold mr-2">30%
+                OFF</div>
+            </div>
+          </div>
+          <h3 class="text-[13px] md:text-sm font-semibold mt-2 line-clamp-2">Chembilammini
+            Kolakkes</h3>
+          <p class="text-xs text-gray-500 mb-1">Majeed Sayed</p>
+          <p class="text-sm pb-2"><span class="font-semibold">₹490</span></p>
+          <p class="text-xs text-gray-500">Available in Print, Digital</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!--  End Books -->
+  <!--  Magazines -->
+  <section
+    class="max-w-full lg:max-w-[1550px] mx-auto my-6 border-b-2 border-b-gray-100 pb-5 px-4 sm:px-6 lg:px-8 overflow-hidden layout-5col">
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="text-[16px] md:text-[18px] font-semibold line-clamp-2">Magazines</h2>
+      <a href="magazine-listing.html" aria-label="Go to Listing"
+        class="text-blue-600 font-semibold flex items-center sm:text-sm md:text-base lg:text-lg">
+        <span class="hidden sm:inline text-sm">View All</span>
+        <span class="ml-2 i-viewall w-5 h-5">
+
+        </span>
+      </a>
+    </div>
+
+    <div class="slider slick-slider ">
+      <!-- Start Card -->
+      <a class="pb-2 h-full" href="magazin-details.html" area-label="magazin detail">
+        <div class="bg-white p-2 rounded-lg border">
+          <div class="relative overflow-hidden image-wrapper rounded-md">
+            <img src="assets/images/magazin/4.webp" alt="Karshakasree Magazine"
+              class="rounded-md transition-all duration-300 hover:scale-110" width="266" height="350"
+              decoding="async" />
+            <span
+              class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm  dark:text-gray-800">Dark</span>
+            <div class="absolute bottom-2 left-0 right-0 flex justify-end">
+              <div
+                class="text-white text-xs px-2 py-1 rounded-full offer-circle-badge mb-2 font-semibold bg-red-600 mr-2">
+                30%
+                OFF</div>
+            </div>
+          </div>
+          <h3 class="text-[13px] md:text-sm font-semibold mt-2 mb-1 line-clamp-2">Karshakasree</h3>
+          <p class="text-[13px] md:text-sm pb-2">From <span class="font-semibold">₹50</span> Per Issue</p>
+          <p class="text-xs text-gray-500">Available in Print, Digital</p>
+        </div>
+      </a>
+      <a class="pb-2 h-full" href="magazin-details.html" area-label="magazin detail">
+        <div class="bg-white p-2 rounded-lg border">
+          <div class="relative overflow-hidden image-wrapper rounded-md">
+            <img src="assets/images/magazin/1.webp" alt="Karshakasree Magazine"
+              class="rounded-md transition-all duration-300 hover:scale-110" width="266" height="350"
+              decoding="async" />
+            <span
+              class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm  dark:text-gray-800">Dark</span>
+          </div>
+          <h3 class="text-[13px] md:text-sm font-semibold mt-2 mb-1 line-clamp-2">Karshakasree</h3>
+          <p class="text-[13px] md:text-sm pb-2">From <span class="font-semibold">₹50</span> Per Issue</p>
+          <p class="text-xs text-gray-500">Available in Print, Digital</p>
+        </div>
+      </a>
+      <a class="pb-2 h-full" href="magazin-details.html" area-label="magazin detail">
+        <div class="bg-white p-2 rounded-lg border">
+          <div class="relative overflow-hidden image-wrapper rounded-md">
+            <img src="assets/images/magazin/1.webp" alt="Karshakasree Magazine"
+              class="rounded-md transition-all duration-300 hover:scale-110" width="266" height="350"
+              decoding="async" />
+            <span
+              class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm  dark:text-gray-800">Dark</span>
+          </div>
+          <h3 class="text-[13px] md:text-sm font-semibold mt-2 mb-1 line-clamp-2">Karshakasree</h3>
+          <p class="text-[13px] md:text-sm pb-2">From <span class="font-semibold">₹50</span> Per Issue</p>
+          <p class="text-xs text-gray-500">Available in Print, Digital</p>
+        </div>
+      </a>
+      <a class="pb-2 h-full" href="magazin-details.html" area-label="magazin detail">
+        <div class="bg-white p-2 rounded-lg border">
+          <div class="relative overflow-hidden image-wrapper rounded-md">
+            <img src="assets/images/magazin/2.webp" alt="Karshakasree Magazine"
+              class="rounded-md transition-all duration-300 hover:scale-110" width="266" height="350"
+              decoding="async" />
+            <span
+              class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm  dark:text-gray-800">Dark</span>
+          </div>
+          <h3 class="text-[13px] md:text-sm font-semibold mt-2 mb-1 line-clamp-2">Karshakasree</h3>
+          <p class="text-[13px] md:text-sm pb-2">From <span class="font-semibold">₹50</span> Per Issue</p>
+          <p class="text-xs text-gray-500">Available in Print, Digital</p>
+        </div>
+      </a>
+      <!-- Add other cards similarly, reusing above card structure -->
+      <!-- Example card with offer -->
+      <a class="pb-2 h-full" href="magazin-details.html" area-label="magazin detail">
+        <div class="bg-white p-2 rounded-lg border">
+          <div class="relative overflow-hidden image-wrapper rounded-md">
+            <img src="assets/images/magazin/4.webp" alt="Karshakasree Magazine"
+              class="rounded-md transition-all duration-300 hover:scale-110" width="266" height="350"
+              decoding="async" />
+            <span
+              class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm  dark:text-gray-800">Dark</span>
+            <div class="absolute bottom-2 left-0 right-0 flex justify-end">
+              <div
+                class="text-white text-xs px-2 py-1 rounded-full offer-circle-badge mb-2 font-semibold bg-red-600 mr-2">
+                30%
+                OFF</div>
+            </div>
+          </div>
+          <h3 class="text-[13px] md:text-sm font-semibold mt-2 mb-1 line-clamp-2">Karshakasree</h3>
+          <p class="text-[13px] md:text-sm pb-2">From <span class="font-semibold">₹50</span> Per Issue</p>
+          <p class="text-xs text-gray-500">Available in Print, Digital</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!--  End Magazines -->
+  <!--Manorama Max Single Product Layout -->
+  <section
+    class="max-w-full lg:max-w-[1550px] mx-auto my-6 border-b-2 border-b-gray-100 pb-5 px-4 sm:px-6 lg:px-8 overflow-hidden layout-1col">
+    <a href="ottsubscription.html" area-label="ott">
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="text-[16px] md:text-[18px] font-semibold">Manorama Max</h2>
+      </div>
+
+      <!-- Movie Slider / Banner -->
+      <div class="relative rounded-lg overflow-hidden h-64 md:h-80 bg-cover bg-center"
+        style="background-image: url('assets/images/max/image.webp');">
+        <!-- Dark Overlay -->
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+          <img src="assets/images/max/logo.webp" alt="Manorama Max" class="w-40 md:w-48" width="160" height="80" />
+        </div>
+      </div>
+
+      <!-- Subscription Box -->
+      <div class="subscribebtn mt-4 flex items-center justify-center gap-4 border rounded-lg p-4 shadow-sm bg-white">
+        <button class=" py-3 text-base font-medium text-white primary-button-bg rounded-lg   " aria-label="subscribe">
+          Subscribe Now
+        </button>
+        <div class="text-gray-800 font-semibold text-lg  ">
+          INR 899/-
+          <span class="text-gray-400 text-sm yearly">Yearly</span>
+        </div>
+      </div>
+    </a>
+  </section>
+
+  <!-- End Manorama Max Single Product Layout -->
+  <!--  Astro  -->
+  <section
+    class="max-w-full lg:max-w-[1550px] mx-auto px-4 my-6 border-b-2 border-b-gray-100 pb-5 sm:px-6 lg:px-8 overflow-hidden layout-5col">
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="text-[16px] md:text-[18px] font-semibold">Astro</h2>
+      <a href="astro-listing.html" area-label="astro listing"
+        class="text-blue-600 font-semibold flex items-center sm:text-sm md:text-base lg:text-lg">
+        <span class="hidden sm:inline text-sm">View All</span>
+        <span class="ml-2 i-viewall w-5 h-5">
+
+        </span>
+      </a>
+    </div>
+
+    <div class="slider slick-slider ">
+      <!-- Astro Card 1 -->
+      <a class="pb-2" href="astro-detail.html" area-label="astro detail">
+        <div class="bg-white p-2 rounded-lg border h-full">
+          <div class="relative overflow-hidden image-wrapper rounded-md">
+            <img src="assets/images/astro/1.webp" alt="In-depth horoscope"
+              class="rounded-md transition-all duration-300 hover:scale-110" width="266" height="350"
+              decoding="async" />
+          </div>
+          <h3 class="text-[13px] md:text-sm font-semibold mt-2 line-clamp-2 mb-1">In-depth
+            horoscope</h3>
+          <p class="text-sm pb-2"><span class="font-semibold">₹490</span></p>
+        </div>
+      </a>
+
+      <!-- Astro Card 2 -->
+      <a class="pb-2" href="astro-detail.html" area-label="astro detail">
+        <div class="bg-white p-2 rounded-lg border h-full">
+          <div class="relative overflow-hidden image-wrapper rounded-md">
+            <img src="assets/images/astro/2.webp" alt="Gem Recommendation"
+              class="rounded-md transition-all duration-300 hover:scale-110" width="266" height="350"
+              decoding="async" />
+          </div>
+          <h3 class="text-[13px] md:text-sm font-semibold mt-2 line-clamp-2 mb-1">Gem
+            Recommendation</h3>
+          <p class="text-sm pb-2"><span class="font-semibold">₹490</span></p>
+        </div>
+      </a>
+
+      <!-- Astro Card 3 -->
+      <a class="pb-2" href="astro-detail.html" area-label="astro detail">
+        <div class="bg-white p-2 rounded-lg border h-full">
+          <div class="relative overflow-hidden image-wrapper rounded-md">
+            <img src="assets/images/astro/3.webp" alt="Yoga Report"
+              class="rounded-md transition-all duration-300 hover:scale-110" width="266" height="350"
+              decoding="async" />
+          </div>
+          <h3 class="text-[13px] md:text-sm font-semibold mt-2 line-clamp-2 mb-1">Yoga
+            Report</h3>
+          <p class="text-sm pb-2"><span class="font-semibold">₹490</span></p>
+        </div>
+      </a>
+
+      <!-- Astro Card 4 -->
+      <a class="pb-2" href="astro-detail.html" area-label="astro detail">
+        <div class="bg-white p-2 rounded-lg border h-full">
+          <div class="relative overflow-hidden image-wrapper rounded-md">
+            <img src="assets/images/astro/3.webp" alt="Numerology Report"
+              class="rounded-md transition-all duration-300 hover:scale-110" width="266" height="350"
+              decoding="async" />
+          </div>
+          <h3 class="text-[13px] md:text-sm font-semibold mt-2 line-clamp-2 mb-1">Numerology
+            Report</h3>
+          <p class="text-sm pb-2"><span class="font-semibold">₹490</span></p>
+        </div>
+      </a>
+
+      <!-- Astro Card 5 -->
+      <a class="pb-2" href="astro-detail.html" area-label="astro detail">
+        <div class="bg-white p-2 rounded-lg border h-full">
+          <div class="relative overflow-hidden image-wrapper rounded-md">
+            <img src="assets/images/astro/4.webp" alt="Career & Business Horoscope"
+              class="rounded-md transition-all duration-300 hover:scale-110" width="266" height="350"
+              decoding="async" />
+            <div class="absolute bottom-2 left-0 right-0 flex flex-col items-end">
+              <div
+                class="right-2 text-white text-xs px-2 py-1 rounded-full offer-circle-badge mb-2 font-semibold mr-2 offer-badge">
+                30%
+                OFF</div>
+            </div>
+          </div>
+          <h3 class="text-[13px] md:text-sm font-semibold mt-2 line-clamp-2 mb-1">Career
+            &
+            Business Horoscope</h3>
+          <p class="text-sm pb-2">
+            <span class="line-through mr-2">₹490</span>
+            <span class="font-semibold">₹490</span>
+          </p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- End  Astro  -->
+  <!--  Year Book  -->
+  <section
+    class="max-w-full lg:max-w-[1550px] mx-auto my-6 border-b-2 border-b-gray-100 pb-5 px-4 sm:px-6 lg:px-8 overflow-hidden layout-5col">
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="text-[16px] md:text-[18px] font-semibold mb-1">Manorama
+        YearBook</h2>
+      <a href="manorama-yearbook-listing.html"
+        class="text-blue-600 font-semibold flex items-center sm:text-sm md:text-base lg:text-lg"
+        area-label="yearbook listing">
+        <span class="hidden sm:inline text-sm">View All</span>
+        <span class="ml-2 i-viewall w-5 h-5">
+
+        </span>
+      </a>
+    </div>
+
+    <div class="slider slick-slider  ">
+      <!-- Book 1 -->
+      <a class="pb-2" href="manorama-yearbook-detail.html" area-label="yearbook detail">
+        <div class="bg-white p-2 rounded-lg border h-full">
+          <div class="relative overflow-hidden image-wrapper rounded-md">
+            <img src="assets/images/yearbook/1.webp" alt="Manorama Year Book Malayalam 2025"
+              class="rounded-md transition-all duration-300 hover:scale-110" width="266" height="350"
+              decoding="async" />
+          </div>
+          <h3 class="text-[13px] md:text-sm font-semibold mt-2 line-clamp-2 mb-1">Manorama
+            Year
+            Book Malayalam 2025</h3>
+          <p class="text-sm pb-2"><span class="font-semibold">₹490</span></p>
+        </div>
+      </a>
+
+      <!-- Book 2 -->
+      <a class="pb-2" href="manorama-yearbook-detail.html" area-label="yearbook detail">
+        <div class="bg-white p-2 rounded-lg border h-full">
+          <div class="relative overflow-hidden image-wrapper rounded-md">
+            <img src="assets/images/yearbook/2.webp" alt="Manorama Year Book Bengali"
+              class="rounded-md transition-all duration-300 hover:scale-110" width="266" height="350"
+              decoding="async" />
+          </div>
+          <h3 class="text-[13px] md:text-sm font-semibold mt-2 line-clamp-2 mb-1">Manorama
+            Year
+            Book Bengali</h3>
+          <p class="text-sm pb-2"><span class="font-semibold">₹490</span></p>
+        </div>
+      </a>
+
+      <!-- Book 3 -->
+      <a class="pb-2" href="manorama-yearbook-detail.html" area-label="yearbook detail">
+        <div class="bg-white p-2 rounded-lg border h-full">
+          <div class="relative overflow-hidden image-wrapper rounded-md">
+            <img src="assets/images/yearbook/3.webp" alt="Manorama Year Book 2025 English"
+              class="rounded-md transition-all duration-300 hover:scale-110" width="266" height="350"
+              decoding="async" />
+          </div>
+          <h3 class="text-[13px] md:text-sm font-semibold mt-2 line-clamp-2 mb-1">Manorama
+            Year
+            Book 2025 English</h3>
+          <p class="text-sm pb-2"><span class="font-semibold">₹490</span></p>
+        </div>
+      </a>
+
+      <!-- Book 4 -->
+      <a class="pb-2" href="manorama-yearbook-detail.html" area-label="yearbook detail">
+        <div class="bg-white p-2 rounded-lg border h-full">
+          <div class="relative overflow-hidden image-wrapper rounded-md">
+            <img src="assets/images/yearbook/4.webp" alt="Manorama Year Book 2025 Hindi"
+              class="rounded-md transition-all duration-300 hover:scale-110" width="266" height="350"
+              decoding="async" />
+          </div>
+          <h3 class="text-[13px] md:text-sm font-semibold mt-2 line-clamp-2 mb-1">Manorama
+            Year
+            Book 2025 Hindi</h3>
+          <p class="text-sm pb-2"><span class="font-semibold">₹490</span></p>
+        </div>
+      </a>
+
+      <!-- Book 5 -->
+      <a class="pb-2" href="manorama-yearbook-detail.html" area-label="yearbook detail">
+        <div class="bg-white p-2 rounded-lg border h-full">
+          <div class="relative overflow-hidden image-wrapper rounded-md">
+            <img src="assets/images/yearbook/1.webp" alt="Manorama Year Book Tamil"
+              class="rounded-md transition-all duration-300 hover:scale-110" width="266" height="350"
+              decoding="async" />
+            <div class="absolute bottom-2 left-0 right-0 flex flex-col items-end">
+              <div
+                class="right-2 text-white text-xs px-2 py-1 rounded-full offer-circle-badge mb-2 font-semibold mr-2 offer-badge">
+                30%
+                OFF</div>
+            </div>
+          </div>
+          <h3 class="text-[13px] md:text-sm font-semibold mt-2 line-clamp-2 mb-1">Manorama
+            Year
+            Book Tamil</h3>
+          <p class="text-sm pb-2"><span class="font-semibold">₹490</span></p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- End Year Book  -->
+  <!--  Promotion 3 col  -->
+  <div
+    class="max-w-full lg:max-w-[1550px] mx-auto px-4 my-6 border-b-2 border-b-gray-100 pb-5 px-4 sm:px-6 lg:px-8 layout-3col ">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Card 1 -->
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="assets/images/ad/1.webp" alt="Manorama Horizon"
+          class="w-full transition-all duration-300 hover:scale-110" width="395" height="348" loading="lazy"
+          decoding="async" />
+        <div class="p-4">
+          <h3 class="text-sm md:text-sm font-semibold mt-2">Visit Manorama
+            Horizon Website</h3>
+          <a href="#" class="text-blue-600 font-medium hover:underline text-sm md:text-sm">Enroll
+            Today</a>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="assets/images/ad/2.webp" alt="Quick Kerala" class="w-full transition-all duration-300 hover:scale-110"
+          width="395" height="348" loading="lazy" decoding="async" />
+        <div class="p-4">
+          <h3 class="text-sm md:text-sm font-semibold mt-2">Event Booking
+            Facility Live</h3>
+          <a href="#" class="text-blue-600 font-medium hover:underline text-sm md:text-sm">Visit
+            Website</a>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="assets/images/ad/3.webp" alt="M4Marry" class="w-full transition-all duration-300 hover:scale-110"
+          width="395" height="348" loading="lazy" decoding="async" />
+        <div class="p-4">
+          <h3 class="text-sm md:text-sm font-semibold mt-2">Find Special
+            Moment at M4Marry.com</h3>
+          <a href="#" class="text-blue-600 font-medium hover:underline text-sm md:text-sm">Register
+            Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  End Promotion 3 col  -->
+
+  <!--  Footer  -->
+  <footer class="bg-gray-50 text-gray-800 subscription-main-footer">
+    <div
+      class="max-w-full lg:max-w-[1550px] mx-auto px-6 py-10 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-8">
+
+      <!-- Brand & Contact -->
+      <div>
+        <!-- <img src="assets/img/mobile-logo.png" alt="Manorama Online" class="h-8 mb-4" /> -->
+        <h2 class="font-semibold text-md">Manorama Online</h2>
+        <p class="text-sm mt-2 break-words whitespace-normal w-full max-w-xs">
+          Manorama Online, Malayala Manorama, P.B No.26, Kottayam<br />
+          686 001, Kerala, India
+        </p>
+        <p class="mt-4 font-medium text-sm">Get Questions? Contact Us 24/7</p>
+        <p class="text-sm break-words whitespace-normal w-full max-w-xs">
+          0481 2587244<br />
+          <a href="mailto:Customersupport@Mm.Co.In" class="hover:text-blue-500">Customersupport@Mm.Co.In</a>
+        </p>
+      </div>
+
+      <!-- Information Links -->
+      <div>
+        <h3 class="font-semibold text-md mb-4">Information</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-blue-500" aria-label="week">About
+              Us</a></li>
+          <li><a href="#" class="hover:text-blue-500" aria-label="week">FAQ</a></li>
+          <li><a href="#" class="hover:text-blue-500" aria-label="week">Privacy Policy</a></li>
+          <li><a href="#" class="hover:text-blue-500" aria-label="week">Conditions Of Use</a></li>
+          <li><a href="#" class="hover:text-blue-500" aria-label="week">Shipping And Returns</a></li>
+          <li><a href="#" class="hover:text-blue-500" aria-label="week">Product Support</a></li>
+        </ul>
+      </div>
+
+      <!-- Shop Links -->
+      <div>
+        <h3 class="font-semibold text-md mb-4">Shop With Us</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-blue-500" aria-label="week">Magazines</a></li>
+          <li><a href="#" class="hover:text-blue-500" aria-label="week">Books</a></li>
+          <li><a href="#" class="hover:text-blue-500" aria-label="week">Books</a></li>
+          <li><a href="#" class="hover:text-blue-500" aria-label="week">Yearbook</a></li>
+          <li><a href="#" class="hover:text-blue-500" aria-label="week">Astro</a></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter / Social -->
+      <div>
+        <h3 class="font-semibold text-md mb-2">Social Networks</h3>
+        <div class="flex space-x-3 py-2 socialmedia">
+          <a href="#" class="facebook" aria-label="facebook"></a>
+          <a href="#" class="instagram" aria-label="instagram"></a>
+          <a href="#" class="youtube" aria-label="youtube"></a>
+          <a href="#" class="twitter" aria-label="twitter"></a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="border-gray-200" />
+
+    <div
+      class="copyright1 flex flex-col md:flex-row justify-between items-center max-w-full lg:max-w-[1550px] mx-auto px-6 py-6 text-sm text-gray-500">
+      <p>Copyright 2023 Manorama Online &nbsp;|&nbsp; All Rights Reserved</p>
+      <div class="flex space-x-2 mt-4 md:mt-0">
+        <!-- Optional footer links can be added here -->
+      </div>
+    </div>
+  </footer>
+
+  <!--  End Footer  -->
+
+  <!-- <button id="backToTopBtn"
+      class="fixed bottom-20 right-5 z-50  shadow-md  rounded-full text-gray-800 hover:bg-blue-300 transition duration-300"
+      aria-label="Back to top">
+
+      <div
+        class="text-center py-4 bg-indigo-50 flex items-center justify-center  w-10 h-10 rounded-full text-sm font-medium">
+     
+        <svg class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+      </div>
+    </button> -->
+  <button id="backToTopBtn"
+    class="fixed bottom-20 right-5 z-50 shadow-md rounded-full   bg-indigo-50 text-gray-800 transition duration-300 group"
+    aria-label="Back to top">
+
+    <div
+      class="text-center py-4 flex items-center justify-center w-10 h-10 rounded-full text-sm font-medium group-hover:bg-blue-500 transition duration-300">
+
+      <svg class="w-4 h-4 transition-transform duration-200 group-hover:text-white" fill="none" stroke="currentColor"
+        viewBox="0 0 24 24">
+        <!-- Arrow Up Icon -->
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+      </svg>
+    </div>
+  </button>
+
+
+  <link href="assets/css/common.css" type="text/css" rel="stylesheet" />
+
+  <link href="assets/css/home.css" type="text/css" rel="stylesheet" />
+
+  <link rel="stylesheet" type="text/css" href="assets/libs/slick-slider/slick.css" media="print"
+    onload="this.media='all'" />
+  <link rel="stylesheet" type="text/css" href="assets/libs/slick-slider/slick-theme.css" media="print"
+    onload="this.media='all'" />
+
+  <script src="assets/libs/Jquery/jquery-3.7.1.min.js"></script>
+  <script src="assets/libs/slick-slider/slick.min.js" defer></script>
+  <script src="assets/js/common.js" defer></script>
+  <script src="assets/js/home.js" defer></script>
+  <script src="assets/js/backtotop.js" defer></script>
+  <script src="assets/js/bottom-nav.js" defer></script>
+
+</body>
+
+</html>
