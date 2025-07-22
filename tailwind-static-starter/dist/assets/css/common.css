@@ -254,6 +254,10 @@ align-items: center;
 .subscribebtn button {
     width: 160px;
 }
+.pagination {
+    margin-top: 45px;
+    margin-bottom: 30px;
+}
 @media(max-width:767px){
 	div#m-searchOverlay {
 		z-index: 99;
@@ -263,3 +267,18 @@ align-items: center;
 }
 }
 
+@media(max-width:991px){
+	.slick-prev,.slick-next{
+		display: none!important;
+	}
+	.round-filter:hover .imgbx {
+		border: 0!important;
+	}
+}
+.related-products-slider button.slick-next {
+    right: 0;
+}
+.related-products-slider .slick-prev {
+    z-index: 9;
+
+}

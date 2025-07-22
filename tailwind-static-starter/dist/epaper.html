@@ -1080,12 +1080,12 @@
     </header>
     <!-- Bottom Navigation - Mobile Only -->
     <div
-        class="fixed bottom-0 left-0 w-full bg-white shadow-md border-t border-gray-200 z-50 p-4 flex md:hidden  justify-between">
+        class="fixed bottom-0 left-0 w-full bg-white shadow-md border-t border-gray-200 z-10 p-4 flex md:hidden  justify-between">
 
         <!-- Price Section -->
         <div class="flex flex-col">
             <div class="text-xl font-semibold text-gray-900">₹105 </div>
-            <div class="text-sm text-gray-500">MRP : ₹350</div>
+            <div class="text-sm text-gray-500"><del>MRP : ₹350</del></div>
         </div>
 
         <!-- Add to Cart Button -->
@@ -1109,9 +1109,9 @@
 
         <div class="hidden md:flex items-center justify-between text-sm text-gray-500 mb-2 breadcrumb-list">
             <div class="text-[12px] ">
-                <a href="index.html" class="text-blue-500" aria-label="home">Home</a>
+                <a href="index.html" class="text-blue-500  hover:text-blue-500" aria-label="home">Home</a>
                 <span class="mx-1">/</span>
-                <span><a href="#" class="text-blue-500" aria-label="books">Malayala Manorama E
+                <span><a href="#" class="text-blue-500 hover:text-blue-500" aria-label="books">Malayala Manorama E
                         Paper</a></span>
 
             </div>
@@ -1141,19 +1141,19 @@
                     <div class="large-thumb-slider">
 
                         <div class="max-w-[200px] md:max-w-[300px] w-full mx-auto">
-                            <div class="thumb-item thumb-wrapper relative overflow-hidden ">
+                            <div class="thumb-item thumb-wrapper relative overflow-hidden cursor-pointer">
                                 <img src="assets/images/epaper&news/epaper.webp" alt="Epaper" width="266" height="350"
                                     class="rounded-md w-full object-contain" />
                             </div>
                         </div>
                         <div class="max-w-[200px] md:max-w-[300px] mx-auto w-full">
-                            <div class="thumb-item thumb-wrapper relative overflow-hidden">
+                            <div class="thumb-item thumb-wrapper relative overflow-hidden cursor-pointer">
                                 <img src="assets/images/epaper&news/epaper.webp" alt="Epaper" width="266" height="350"
                                     class="rounded-md w-full object-contain" />
                             </div>
                         </div>
                         <div class="max-w-[200px] md:max-w-[300px] mx-auto w-full">
-                            <div class="thumb-item thumb-wrapper relative overflow-hidden">
+                            <div class="thumb-item thumb-wrapper relative overflow-hidden cursor-pointer">
                                 <img src="assets/images/epaper&news/epaper.webp" alt="Epaper" width="266" height="350"
                                     class="rounded-md w-full object-contain" />
                             </div>
@@ -1175,6 +1175,14 @@
                                     class="rounded-md w-full max-w-[200px] md:max-w-[300px] mx-auto"
                                     loading="lazy" />
                             </div> -->
+                    </div>
+
+                    <!-- Popup Modal -->
+                    <div id="imagePopup" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50 ">
+                        <button id="closePopup" class="absolute top-4 right-4 text-white text-3xl ">&times;</button>
+                        <button id="prevBtn" class="absolute left-4 text-white text-3xl ltarrow"></button>
+                        <img id="popupImg" src class="max-w-[90%] max-h-[80%] rounded-md transition-all duration-300" />
+                        <button id="nextBtn" class="absolute right-4 text-white text-3xl rtarrow"></button>
                     </div>
 
                     <!-- <p class="text-xs text-gray-500 mt-3 flex items-center">
