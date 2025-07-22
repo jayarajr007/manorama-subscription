@@ -126,12 +126,12 @@ display: flex !important
 }
 
 .layout-5col .slick-slide:last-child {
-    margin-right: 0;
+    margin-right: 2;
 }
 .layout-5col .slick-track {
 
      justify-content: space-between; 
-     margin-left: -2px !important; 
+     margin-left: 0px !important; 
   
 }
 .layout-5col  .slick-slide {
