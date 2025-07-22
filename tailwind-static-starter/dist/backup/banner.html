@@ -202,10 +202,10 @@
                 data.forEach(slide => {
                     const div = document.createElement('div');
                     div.innerHTML = `
-            <div>
+           <a href="${slide['Link']}" target="_blank">
               <img class="web-img" src="${slide['Web']}" alt="Web Slide">
               <img class="mob-img" src="${slide['Mobile']}" alt="Mobile Slide">
-            </div>
+            </a>
           `;
                     slider.appendChild(div);
                 });
