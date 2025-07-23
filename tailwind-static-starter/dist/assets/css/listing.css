@@ -34,19 +34,36 @@
     z-index: 10;
     background: url(../img/icons/sprite.svg) no-repeat -55px -71px;
 }
-.round-filter:hover .imgbx
+ /* .round-filter:hover .imgbx
 {
   border: 2px solid var(--button-bg-color);
  transition: transform 1s ease;
-}
+}  */
 
 .imgbx {
     border: 2px solid transparent;
     border-radius: 100%;
 }
+@media(min-width:991px){
+.imgbx:hover {
+   border: 2px solid var(--button-bg-color);
+ transition: transform 1s ease;
+}
+
+}
+
 .active .imgbx {
     border: 2px solid var(--button-bg-color);
     border-radius: 100%;
+}
+
+@media(max-width:991px){
+	.slick-prev,.slick-next{
+		display: none!important;
+	}
+	/* .round-filter:hover .imgbx {
+		border: 0!important;
+	} */
 }
 
 
@@ -151,3 +168,4 @@ content: "";
 {
   cursor:no-drop;
 } */
+

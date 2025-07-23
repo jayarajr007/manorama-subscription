@@ -267,14 +267,7 @@ align-items: center;
 }
 }
 
-@media(max-width:991px){
-	.slick-prev,.slick-next{
-		display: none!important;
-	}
-	.round-filter:hover .imgbx {
-		border: 0!important;
-	}
-}
+
 .related-products-slider button.slick-next {
     right: 0;
 }
