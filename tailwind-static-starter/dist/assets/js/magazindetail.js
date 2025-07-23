@@ -16,13 +16,13 @@ $('.sub-tab-btn').click(function () {
         
         // Initialize new slider
         $('.slider-singleissue').slick({
-            infinite: false,
-        slidesToShow: 5,
-        slidesToScroll: 2,
-        arrows: true,
+        slidesToShow: 5, // or the exact number that fits without overflow
+  slidesToScroll: 1,
+  infinite: false,
+  arrows: true,
             responsive: [
                 {
-                    breakpoint: 1024,
+                    breakpoint: 1200,
                     settings: { slidesToShow: 4 }
                 },
                 {

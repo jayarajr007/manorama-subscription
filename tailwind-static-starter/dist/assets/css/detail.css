@@ -99,7 +99,7 @@ content: "";
 } */
 
 .slider-singleissue button.slick-next {
-  right: -13px !important;
+right: -3px !important;
     background: #fff !important;
     border-radius: 50%;
     width: 26px;
