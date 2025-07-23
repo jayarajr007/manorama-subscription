@@ -350,3 +350,14 @@ button.active-format
     margin-bottom: 30px;
     border-bottom: 1px solid #ececec;
 }
+
+
+@media (max-width: 991px) {
+ .large-thumb-slider .slick-prev {
+   display: none !important;
+}
+.large-thumb-slider .slick-next {
+   display: none !important;
+}
+}
+
