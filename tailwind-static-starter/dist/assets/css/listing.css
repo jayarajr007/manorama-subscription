@@ -130,7 +130,7 @@ content: "";
     background: #fff !important;
     border-radius: 50%;
     width: 26px;
-    height: 26px;  z-index: 10000;
+    height: 26px;  z-index: 10;
     box-shadow: 1px 2px 8px #ccc;
 }
 .category-slider .slick-next {
