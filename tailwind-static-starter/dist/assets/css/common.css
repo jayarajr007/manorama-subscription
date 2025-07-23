@@ -265,5 +265,8 @@ align-items: center;
 	.subscribebtn .yearly {
     display: block;
 }
+.slider-singleissue .slick-prev,.slider-singleissue .slick-next{
+	display:none!important;
+}
 }
 

@@ -145,3 +145,50 @@ $(window).on('load', function () {
 });
 
 
+// filter popup mobile bg scroll hide
+    document.addEventListener('DOMContentLoaded', function () {
+        const openBtn = document.getElementById('openFilter');
+        const closeBtn = document.getElementById('closeFilter');
+        const panel = document.getElementById('filterPanel');
+
+        openBtn.addEventListener('click', function () {
+            panel.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        });
+
+        closeBtn.addEventListener('click', function () {
+            panel.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        });
+    });
+
+// end filter popup mobile bg scroll hide
+
+// sort popup mobile bg scroll hide
+    document.addEventListener('DOMContentLoaded', function () {
+        const openSortBtn = document.getElementById('openSort');
+        const closeSortBtn = document.getElementById('closeSort');
+        const sortPanel = document.getElementById('sortPanel');
+
+        // Open sort panel
+        openSortBtn.addEventListener('click', function () {
+            sortPanel.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        });
+
+        // Close sort panel
+        closeSortBtn.addEventListener('click', function () {
+            sortPanel.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        });
+
+        // Optional: Close if clicked outside the white panel
+        sortPanel.addEventListener('click', function (e) {
+            if (e.target === sortPanel) {
+                sortPanel.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            }
+        });
+    });
+
+// end sort popup mobile bg scroll hide
