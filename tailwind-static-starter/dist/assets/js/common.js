@@ -171,3 +171,24 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 // end sort popup mobile bg scroll hide
+
+
+
+
+
+
+
+//this is for stopping bg scroll : megameu
+
+document.querySelectorAll('.large-dropdown').forEach(menu => {
+  menu.addEventListener('mouseenter', () => {
+    const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
+    document.body.classList.add('overflow-hidden');
+    document.body.style.paddingRight = `${scrollBarWidth}px`;
+  });
+
+  menu.addEventListener('mouseleave', () => {
+    document.body.classList.remove('overflow-hidden');
+    document.body.style.paddingRight = '';
+  });
+});
