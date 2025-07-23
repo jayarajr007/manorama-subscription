@@ -267,11 +267,3 @@ align-items: center;
 }
 }
 
-
-.related-products-slider button.slick-next {
-    right: 0;
-}
-.related-products-slider .slick-prev {
-    z-index: 9;
-
-}
