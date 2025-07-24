@@ -14,6 +14,7 @@
 	--green:green;
 	--greybg:#696969;
 	--infobg:#FFF3E1;
+	--secondary-bg:#e5efff;
 }
 .text-green{
 	color: var(--green);
@@ -27,6 +28,10 @@
 .primary-button-bg
 {
 	background-color: var(--button-bg-color);
+}
+.secondary-button-bg
+{
+		background-color: var(--secondary-bg);
 }
 .bg-darkblue{
 	background-color: var(--dark-blue);
@@ -56,7 +61,10 @@
 {
 	background-color: var(--red-color);
 }
-
+.primary-border
+{
+	border: 1px solid var(--primary-bule-text);
+}
 
 .bg-creamdark{
 	/* background-color: var(--cream-color); */
@@ -258,6 +266,29 @@ align-items: center;
     margin-top: 45px;
     margin-bottom: 30px;
 }
+
+.btn-close:after
+{
+content: "";
+    position: absolute;
+    top: 2px;
+    left: 1px;
+    width: 25px;
+    height: 25px;
+    z-index: 10;
+    background: url(../img/icons/sprite.svg) no-repeat -59px -337px !important;
+    opacity: 1;
+}
+.btn-close{
+	opacity: 0.5;
+}
+
+.btn-close:hover{
+	opacity: 1;
+}
+
+
+
 @media(max-width:767px){
 	div#m-searchOverlay {
 		z-index: 99;

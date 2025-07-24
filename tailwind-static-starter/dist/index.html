@@ -246,7 +246,8 @@
                     Account</a>
                 </li>
                 <li class="mb-2">
-                  <div class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-500 font-light cursor-pointer"  onclick="openPopup()">Log
+                  <div class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-500 font-light cursor-pointer"
+                    onclick="openPopup()">Log
                     Out</div>
                 </li>
               </ul>
@@ -255,25 +256,33 @@
           <!-- End Icons -->
         </div>
       </div>
-                <!-- logout Popup  -->
-                <div id="popup"
-                    class="popcont fixed m-0 inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 hidden">
-                    <div class="pop_bx bg-white p-6 rounded-lg relative text-center">
-                        <button onclick="closePopup()"
-                            class="absolute top-2 right-2 text-gray-600 hover:text-red-500 text-xl">&times;</button>
-                        <div class="pop_bx_ct">
-                            <h2 class="text-lg font-semibold mb-2">Signout From Manorama Online ?</h2>
-                            <div class="my-4">
-                              <button class="bg-darkblue text-white px-3 py-2 rounded-full text-sm">Cancel</button>
-                              <button class="bg-creamlight text-black px-3 py-2 rounded-full  text-sm">Sign out</button>
-                            </div>
-                            <p class="mb-4 text-sm text-gray-500">You can always sign back in at any time.</p>
+      <!-- logout Popup  -->
+      <div id="popup"
+        class="popcont fixed m-0 inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 hidden ">
+        <div class="pop_bx bg-white p-6 rounded-lg relative text-center max-w-[370px]">
+          <button onclick="closePopup()"
+            class="absolute top-2 right-2 text-gray-600 hover:text-red-500 text-xl btn-close w-[30px] h-[30px]"></button>
+          <div class="pop_bx_ct">
+            <img src="assets/img/icons/logout.svg" class="max-w-[46px] mx-auto mb-[14px]" />
+            <h2 class="text-lg font-semibold mb-2">Are you sure you want to sign out?</h2>
+            <div class="my-4">
 
-                            
-                        </div>
-                    </div>
-                </div>
-                <!--end logout Popup  -->
+
+
+              <button
+                class="text-white text-sm font-semibold py-3 px-3 mobileaddcart rounded-md shadow-md primary-button-bg relative mx-1">Cancel</button>
+              <button
+                class="text-white text-sm font-semibold py-3 px-3 mobileaddcart rounded-md shadow-md primary-text secondary-button-bg relative mx-1">Sign
+                out</button>
+            </div>
+            <p class="mb-4 text-sm text-gray-500">You’ll be signed out from all sessions. You can sign back in anytime.
+            </p>
+
+
+          </div>
+        </div>
+      </div>
+      <!--end logout Popup  -->
       <!--Nav -->
       <nav class="bg-white hidden md:block relative">
         <div class="mx-auto px-0">
@@ -1397,7 +1406,8 @@
         class="flex items-center justify-between p-3 bg-white shadow-md rounded-lg">
         <span class="text-xs font-semibold">Premium
           Subscription</span>
-        <img src="assets/img/menu/premium.webp" alt="Premium Subscription" class="mx-1 border rounded-sm" width="40" height="40" />
+        <img src="assets/img/menu/premium.webp" alt="Premium Subscription" class="mx-1 border rounded-sm" width="40"
+          height="40" />
       </a>
 
       <!-- Item 3 -->
@@ -2459,7 +2469,7 @@
   <script src="assets/js/home.js" defer></script>
   <script src="assets/js/backtotop.js" defer></script>
   <script src="assets/js/bottom-nav.js" defer></script>
-<script src="assets/js/popup.js"></script>
+  <script src="assets/js/popup.js"></script>
 </body>
 
 </html>
