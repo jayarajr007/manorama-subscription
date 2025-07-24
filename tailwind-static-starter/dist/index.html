@@ -246,8 +246,8 @@
                     Account</a>
                 </li>
                 <li class="mb-2">
-                  <a href="#" class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-500 font-light">Log
-                    Out</a>
+                  <div class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-500 font-light cursor-pointer"  onclick="openPopup()">Log
+                    Out</div>
                 </li>
               </ul>
             </div>
@@ -255,7 +255,25 @@
           <!-- End Icons -->
         </div>
       </div>
+                <!-- logout Popup  -->
+                <div id="popup"
+                    class="popcont fixed m-0 inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 hidden">
+                    <div class="pop_bx bg-white p-6 rounded-lg relative text-center">
+                        <button onclick="closePopup()"
+                            class="absolute top-2 right-2 text-gray-600 hover:text-red-500 text-xl">&times;</button>
+                        <div class="pop_bx_ct">
+                            <h2 class="text-lg font-semibold mb-2">Signout From Manorama Online ?</h2>
+                            <div class="my-4">
+                              <button class="bg-darkblue text-white px-3 py-2 rounded-full text-sm">Cancel</button>
+                              <button class="bg-creamlight text-black px-3 py-2 rounded-full  text-sm">Sign out</button>
+                            </div>
+                            <p class="mb-4 text-sm text-gray-500">You can always sign back in at any time.</p>
 
+                            
+                        </div>
+                    </div>
+                </div>
+                <!--end logout Popup  -->
       <!--Nav -->
       <nav class="bg-white hidden md:block relative">
         <div class="mx-auto px-0">
@@ -2441,7 +2459,7 @@
   <script src="assets/js/home.js" defer></script>
   <script src="assets/js/backtotop.js" defer></script>
   <script src="assets/js/bottom-nav.js" defer></script>
-
+<script src="assets/js/popup.js"></script>
 </body>
 
 </html>
