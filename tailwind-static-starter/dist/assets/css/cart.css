@@ -66,8 +66,17 @@ left: -11px !important;
     opacity: 1;
 }
 
-
-
+.empty-cart-icon{
+	width: 70px;
+	height: 70px;
+	display: block;
+	background-repeat: no-repeat;
+	background-size: auto;
+	background: url(../img/icons/sprite.svg) no-repeat -300px -19px !important;
+}
+.empty-cartheight {
+    min-height: 70vh;
+}
 
 @media (max-width: 991px) {
 
