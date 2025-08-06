@@ -1456,7 +1456,7 @@
     <label class="inline-flex items-center mt-1 text-sm text-gray-500 mt-2 flex-wrap">
                                 <input type="checkbox" class="mr-2 border-gray-300"> This Will
                                 Be a
-                                Gift <a href="#" class="text-blue-500 ml-1">Learn
+                                Gift <a href="#" class="text-blue-500 ml-1" onclick="opengiftPopup()">Learn
                                     More</a>
                             </label>
 
@@ -1474,6 +1474,25 @@
                         <a class="font-semibold block mb-4 hover:text-blue-500" href aria-label="faq">FAQ</a>
                     </div>
                 </div>
+
+
+   <!-- gift learn more Popup  -->
+                <div id="giftPopup"
+                    class="popcont fixed m-0 inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 hidden">
+                    <div class="pop_bx bg-white p-6 rounded-lg relative">
+                        <button onclick="closePopup()"
+                            class="absolute top-2 right-2 text-gray-600 hover:text-red-500 text-xl">&times;</button>
+                        <div class="pop_bx_ct">
+                            <h2 class="text-lg font-semibold mb-2">Gifting Information</h2>
+                            <p class="mb-4 text-sm text-gray-500">
+                                 All items in your cart will be treated as gifts. You will be prompted to enter recipient details (name, address, message) during checkout. No pricing details will be included in the delivery.</p>
+
+                            
+                        </div>
+                    </div>
+                </div>
+                <!--end gift learn more Popup -->
+
 
                 <!-- Sales & Shipping Popup  -->
                 <div id="popup"
