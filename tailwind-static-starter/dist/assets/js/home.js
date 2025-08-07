@@ -70,6 +70,32 @@ $(window).on('load', function () {
     });
 
 
+      $('.three-col-slider').slick({
+        slidesToShow: 3, // Show 5 items on large screens
+        slidesToScroll: 1,
+        dots: false,
+        arrows: true, infinite: false,
+        centerMode: false,  // Disable to prevent extra space
+        variableWidth: false, // Ensure uniform width
+
+
+        responsive: [
+            {
+                breakpoint: 1024, // Medium screens
+                settings: { slidesToShow: 3 }
+            },
+            {
+                breakpoint: 768, // Small screens
+                settings: { slidesToShow: 2 }
+            },
+            {
+                breakpoint: 480, // Extra small screens
+                settings: { slidesToShow: 1 }
+            }
+        ]
+    });
+
+
 
 
 });
