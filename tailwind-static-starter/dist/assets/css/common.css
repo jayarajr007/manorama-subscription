@@ -287,7 +287,24 @@ content: "";
 	opacity: 1;
 }
 
-
+.letter-avatar {
+    font-size: 0;
+    text-transform: capitalize;
+    width: 24px;
+    min-width: 24px;
+    max-width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    font-size: 0;
+}
+.letter-avatar::first-letter {
+  font-size: 18px;
+}
+.letter-avatar::after {
+  content: "";
+  font-size: 0; /* This hides the remaining characters visually */
+}
 
 @media(max-width:767px){
 	div#m-searchOverlay {
