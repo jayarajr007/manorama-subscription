@@ -306,6 +306,20 @@ content: "";
   font-size: 0; /* This hides the remaining characters visually */
 }
 
+ /* general alert */
+
+    /* @keyframes slideUp {
+      0% { transform: translate(-50%, 100%); opacity: 0; }
+      100% { transform: translate(-50%, 0); opacity: 1; }
+    }
+    .animate-slide-up {
+      animation: slideUp 0.3s ease-out;
+    } */
+
+
+
+
+
 @media(max-width:767px){
 	div#m-searchOverlay {
 		z-index: 99;
@@ -317,4 +331,7 @@ content: "";
 	display:none!important;
 }
 }
+
+
+
 

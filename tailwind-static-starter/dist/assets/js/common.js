@@ -145,3 +145,17 @@ document.querySelectorAll('.large-dropdown').forEach(menu => {
     document.body.style.paddingRight = '';
   });
 });
+
+
+
+//general alert
+    function showAlert() {
+      const alertBox = document.getElementById('alertBox');
+      alertBox.classList.remove('hidden');
+      
+      // Hide after 3 seconds
+    setTimeout(() => {
+      alertBox.classList.add('hidden');
+     }, 3000);
+    }
+

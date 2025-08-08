@@ -1826,6 +1826,24 @@
         </div>
     </section>
 
+  <!-- Trigger Button -->
+  <button onclick="showAlert()" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+   Alert
+  </button>
+
+  <!-- Alert Box -->
+  <div id="alertBox" 
+       class="w-[90%] sm:w-auto hidden fixed bottom-6 left-1/2 -translate-x-1/2 bg-gray-900 text-white px-6 py-3 rounded-lg shadow-lg flex items-center gap-3 animate-slide-up z-[100]">
+    <span class="bg-green-500 min-w-[20px] min-h-[20px] flex items-center justify-center rounded-full text-white">✓</span>
+     <span class="bg-green-500 min-w-[20px] min-h-[20px] flex items-center justify-center rounded-full text-white"> <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z" />
+  </svg></span>
+    <p id="alertMessage" class="text-sm">
+      Your item has been added to the cart.
+    </p>
+  </div>
+
+
     <!--  Footer  -->
     <footer class="bg-gray-50 text-gray-800 subscription-main-footer">
         <div
