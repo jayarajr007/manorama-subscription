@@ -25,7 +25,7 @@
  
 }
 .main-banner .slick-next {
-  background-color: #00000057 !important;
+  background-color: #fff !important;
   background-image: url(../img/icons/sprite.svg) !important;
   background-repeat: no-repeat !important;
   background-position: -177px -180px!important;
@@ -35,7 +35,7 @@
   right: 0px;
   border-radius: 5px;
   z-index: 8;
-  filter: brightness(0) invert(1);
+  /* filter: brightness(0) invert(1); */
 }
 
 .main-banner .slick-slide {
@@ -46,7 +46,7 @@
 
 
 .main-banner .slick-prev {
-  background-color: #00000057 !important;
+  background-color: #fff !important;
   background-image: url(../img/icons/sprite.svg) !important;
   background-repeat: no-repeat !important;
   background-position: -151px -180px !important;
@@ -55,7 +55,7 @@
   left: 0px;
   border-radius: 5px;
   z-index: 8;
-  filter: brightness(0) invert(1);
+  /* filter: brightness(0) invert(1); */
 }
 button.slick-prev.slick-arrow.slick-disabled{
     opacity: 0.5;
