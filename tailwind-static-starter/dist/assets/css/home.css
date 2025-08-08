@@ -58,10 +58,10 @@
   /* filter: brightness(0) invert(1); */
 }
 button.slick-prev.slick-arrow.slick-disabled{
-    opacity: 0.5;
+    opacity: 0.3;
 }
 button.slick-next.slick-arrow.slick-disabled{
-    opacity: 0.5;
+    opacity: 0.3;
 }
 /* .main-banner .slick-prev:before{
 content: "";
