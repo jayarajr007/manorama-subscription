@@ -27,22 +27,19 @@ $(window).on('load', function () {
     });
 
 
+var $slider = $('.large-thumb-slider');
+var slideCount = $slider.children().length; // Counts original slides
 
-
-      $('.large-thumb-slider').slick({
-        slidesToShow: 1, // Show 5 items on large screens
-        slidesToScroll: 1,
-        dots: true,
-        arrows: true, infinite: true,
-        adaptiveHeight: false,
-        centerMode: false,  // Disable to prevent extra space
-        variableWidth: false, // Ensure uniform width
-       // autoplay: true,              // Enable auto slide
-       // autoplaySpeed: 2000,  
-
-
-    });
-
+$slider.slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: slideCount > 1, // Show dots only if more than 1 slide
+    arrows: true,
+    infinite: true,
+    adaptiveHeight: false,
+    centerMode: false,
+    variableWidth: false
+});
 
 
 
