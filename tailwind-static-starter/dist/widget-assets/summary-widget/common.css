@@ -154,7 +154,7 @@ align-items: center;
 	display: block;
 	background-repeat: no-repeat;
 	background-size: auto;
-	background: url(../img/icons/sprite.svg)
+	background: url(/assets/img/icons/sprite.svg)
 }
 
 .socialmedia a.facebook {
@@ -178,7 +178,7 @@ align-items: center;
 	height: 20px;
 	background-size: contain;
 	background-repeat: no-repeat;
-	background: url(../img/icons/sprite.svg)
+	background: url(/assets/img/icons/sprite.svg)
 }
 
 .i-home {
@@ -198,7 +198,7 @@ align-items: center;
 }
 
 .suggestion-icon {
-	background: url(../img/icons/sprite.svg) no-repeat -113px -22px;
+	background: url(/assets/img/icons/sprite.svg) no-repeat -113px -22px;
 	width: 21px;
 	height: 20px;
 	display: block;
@@ -208,7 +208,7 @@ align-items: center;
 }
 
 .mobile-search {
-	background: url(../img/icons/sprite.svg) no-repeat -113px -20px;
+	background: url(/assets/img/icons/sprite.svg) no-repeat -113px -20px;
 	width: 21px;
 	height: 20px;
 	display: block;
@@ -239,29 +239,10 @@ align-items: center;
     height: 1.4rem;
     z-index: 10;
     display: inline-block;
-    background: url(../img/icons/sprite.svg) no-repeat -23px -70px;
+    background: url(/assets/img/icons/sprite.svg) no-repeat -23px -70px;
     transform: rotate(270deg);
 }
 
-.success-alert-icon:after
-{
-    content: "";
-    width: 1.7rem;
-    height: 1.4rem;
-    z-index: 10;
-    display: inline-block;
-    background: url(../img/icons/sprite.svg) no-repeat -91px -337px;
-
-}
-.warning-alert-icon
-{
-	  content: "";
-    width: 1.7rem;
-    height: 1.4rem;
-    z-index: 10;
-    display: inline-block;
-    background: url(../img/icons/sprite.svg) no-repeat -119px -337px;
-}
 
     #backToTopBtn {
       display: none;
@@ -295,7 +276,7 @@ content: "";
     width: 25px;
     height: 25px;
     z-index: 10;
-    background: url(../img/icons/sprite.svg) no-repeat -59px -337px !important;
+    background: url(/assets/img/icons/sprite.svg) no-repeat -59px -337px !important;
     opacity: 1;
 }
 .btn-close{
@@ -325,20 +306,6 @@ content: "";
   font-size: 0; /* This hides the remaining characters visually */
 }
 
- /* general alert */
-
-    /* @keyframes slideUp {
-      0% { transform: translate(-50%, 100%); opacity: 0; }
-      100% { transform: translate(-50%, 0); opacity: 1; }
-    }
-    .animate-slide-up {
-      animation: slideUp 0.3s ease-out;
-    } */
-
-
-
-
-
 @media(max-width:767px){
 	div#m-searchOverlay {
 		z-index: 99;
@@ -350,17 +317,4 @@ content: "";
 	display:none!important;
 }
 }
-
-
-
-/* Hide horizontal scrollbar */
-.scroll-container {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;     /* Firefox */
-}
-
-.scroll-container::-webkit-scrollbar {
-  display: none;             /* Chrome, Safari, Opera */
-}
-
 

@@ -1,0 +1,354 @@
+var isApp = !!location.href.match(/mobhybrid/);
+/*console.log("isApp", isApp);
+EV.Widgets.asyncMode = isApp ? true: false;*/
+var evo_client = "mmr";
+var evo_env = document.location.hostname === "www.manoramaonline.com" ? "" : ".uat";
+var profileLoadCounter = 0;
+const PROFILE_LOAD_MAX_RETRY = 10;
+let razorpayKey = (typeof rpkey != 'undefined')?rpkey:"rzp_live_uEfws4G9vTOmJb";
+let product_subscribed = {};
+if(typeof profileData != 'undefined' && profileData != 'None'){
+	let profileDataObj = new Function("return " + profileData  + ";")();
+	try{
+		product_subscribed['event']='product_sub';
+		product_subscribed['user_id']= profileDataObj.SubscriberID || "";
+		product_subscribed['gender']=profileDataObj.gender || "";
+		product_subscribed['yob']= new Date(profileDataObj.dob).getFullYear() || "";
+		product_subscribed['country']=profileDataObj.address1_country || "";			
+	}catch(e){console.log("Exception while pushing data")}
+} 
+EV.Em.init({
+    url: "https://mmr.uat.evolok.net/acd/api/3.0",
+    sidCookieDomain: document.location.hostname ,
+    brand: "Manorama"
+});
+var params = JSON.stringify({ articleId: 'myaccount' });
+EV.Em.authorize(params, handleMeteringSuccess, handleMeteringError)
+
+function handleMeteringSuccess(response) {
+    console.log(response);
+    if (response.result == "ALLOW_ACCESS") {
+        console.log("ALLOW_ACCESS");
+    } else if (response.requireEntitlement) {
+        console.log("REQUIRE_LOGIN_WITH_ENTITLEMENT");
+    } else {
+        if (response.result == "REQUIRE_LOGIN") {
+            console.log("REQUIRE_LOGIN");
+        } else {
+            console.log("REQUIRE_ENTITLEMENT");
+        }
+    }
+}
+
+function handleMeteringError(error) {}
+
+//CORE INITIALISATION
+EV.Core.init({
+    serviceName: 'registration',
+    realmName: 'default_realm',
+    icDomain: 'https://mmr.uat.evolok.net/ic/api',
+    secureMode: true,
+    ssoCookieDomain: evo_env === '.uat' ? document.location.hostname : document.location.hostname.replace('www.', ''),
+    brand: 'Manorama'
+});
+//PM INITIALISATION
+EV.PM.init({
+    pmDomain: "https://mmr.uat.evolok.net/pm/api/v2",
+    brand: "Manorama",
+    razorpayKey: razorpayKey,
+    razorpayMerchantDisplayName: 'The Malayala Manorama Company Limited'
+});
+//WM INITIALISATION
+EV.WM.init({
+	wmDomain: "https://mmr.uat.evolok.net/wm/api/v1/ev-widgets",
+	brand: "Manorama",
+	language: "en",
+	useWmTranslations: true,
+	useWmReferenceData: true
+});
+//WIDGET DISPLAY OPTIONS
+EV.Widgets = EV.Widgets || {};
+EV.Widgets.Display = {
+    'tandc': {
+        'type': 'checkbox',
+        'values': [
+            { 'value': 'true', 'caption': 'Accept Terms and Conditions' }
+        ]
+    },
+    gender: {
+        type: "radiobutton",
+        values: [{
+            caption: "Male",
+            value: "male"
+        }, {
+            caption: "Female",
+            value: "female"
+        }, {
+            caption: "Transgender",
+            value: "transgender"
+        }]
+    }
+};
+//EVENTS
+EV.Event.publish(EV.Event.PM_VALIDATE_PROFILE, {
+    serviceName: "subscribe",
+    successCb: function(response) {
+        console.log("The Profile is Valid");
+    },
+    errorCb: function(error) {
+        console.log("Error Validating Profile:", error);
+    }
+});
+EV.Event.on(EV.Event.PM_PAYMENT_SUCCESS, function(res) {
+    console.log("EV.Event.PM_PAYMENT_SUCCESS = ", res);
+    if (document.location.pathname == "/subscribe/") {
+        //window.location = "/my-account/";
+    } else {
+        //location.reload();
+    }
+});
+EV.Event.on(EV.Event.PM_ERROR, function(res) {
+    console.log("EV.Event.PM_ERROR", res);
+	try{
+	//if(res.error.code=='duplicated_purchase'){
+		$('ev-product-summary').find('ev-error-msg').css('display','none');
+	//}
+	}catch(err){}
+});
+
+EV.Event.on(EV.Event.PM_RAZORPAY_PAYMENT_METHOD_SELECTED, function(data) {
+    if (document.querySelector("ev-razorpay")) {
+        //document.querySelector("ev-razorpay").style.display = 'none';
+    }
+})
+	
+EV.Event.on(EV.Event.PM_REDIRECT_ORDER_SUMMARY, function () {
+	console.log('PM_REDIRECT_ORDER_SUMMARY');
+    //redirect("/content/mm/mo/product-summary.html") //page with the ev-product-summary widget
+});
+EV.Event.on(EV.Event.PM_REDIRECT_TO_PAYMENT, function () {
+	console.log('PM_REDIRECT_TO_PAYMENT');
+    //redirect("/content/mm/mo/product-summary.html") //page with the ev-stripe widget
+})
+EV.Event.on(EV.Event.PM_REDIRECT_PRODUCT_PROFILE, function () {
+	console.log('PM_REDIRECT_PRODUCT_PROFILE');
+    //redirect("/product-summary.html") //page with the ev-product-profile widget
+});
+EV.Event.on(EV.Event.PM_PRODUCTS_SELECTED, function () {
+	console.log('PM_PRODUCTS_SELECTED');
+    //redirect("/content/mm/mo/product-summary.html") //page with the ev-product-profile widget
+});
+EV.Event.on(EV.Event.PM_PROMO_ACTION, function (e){
+	$("#promocode .widget-header").hide();
+});
+
+function redirect(path) {	
+    window.location = path;	
+}
+
+function callSSOLoginMyAcc(signUpFlag){
+		$.ajax({
+		type : "GET",
+		url : "/mm/common/sso/authorize.mmlogin.json",
+		crossDomain: true,
+		data : {
+			pageURL : window.location.href,
+			signUpFlag : signUpFlag
+		},
+		dataType : 'text',
+		success : function(response) {
+			if (response) {
+				window.location.href = response+'&utm_source=datawall&utm_medium=widget';
+			}
+		},
+		error : function(xhr, err) {
+			console.log("err" + JSON.stringify(err))
+		}
+	});
+	}
+
+    function isCookiePresent(cookieName) { 
+		const cookies = document.cookie; 
+		return cookies.split('; ').some(cookie => cookie.startsWith(`${cookieName}=`));
+   	}
+
+    function deleteCookie(cookieName) {
+        document.cookie = `${cookieName}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+    }
+
+function goBack(event) {
+	try {
+        if(isApp) {
+			adobeDataLayer.push({event: 'product_subscription_success'});
+			window.location = "/mobhybrid/subscribe-thankyou-hybrid.html";
+		} else {
+        $('section.product-summary-wrp').css('display','none');
+		$('section.thankyou-summary-wrp').css('display','block');
+		adobeDataLayer.push({event: 'product_subscription_success'});
+        if (isCookiePresent('ev_ss')) {
+            deleteCookie('ev_ss');
+        } 
+		if(localStorage.getItem('pgRefURL')!=''){
+			$('.thankyoulink').attr('href',localStorage.getItem('pgRefURL'));
+		}else{
+			$('.thankyoulink').attr('href','/news/only-in-manorama-online.html');
+		}
+		console.log(localStorage.getItem('pgRefURL'));
+		setTimeout(function() {
+			window.location = localStorage.getItem('pgRefURL');
+		}, 10000);
+        }
+	} catch (e) {
+        //console.log('Error setting pgRefURL');
+		//window.history.back();
+    }
+    /*if ("referrer" in document) {
+        window.location = document.referrer;
+    } else {
+        window.history.back();
+    }*/
+}
+EV.Event.on(EV.Event.LOGIN_SUCCESS, function(res) {
+    console.log("Login Success = ", res);
+    if (document.location.pathname == "/subscribe/") {
+        console.log("Return");
+    } else if (document.location.pathname == "/login/") {
+        window.location = "/my-account/";
+    } else {
+        console.log("Reload");
+        //location.reload();
+    }
+});
+EV.Event.on(EV.Event.LOGIN_FAILED, function(res) {
+    console.log("Login Failed = ", res);
+});
+EV.Event.on("registration.success", function(res) {
+    console.log("Registration Success = ", res);
+    if (document.location.pathname == "/subscribe/") {} else if (location.pathname === "/register/") {
+        window.location = "/my-account/";
+    } else {
+        //location.reload();
+    }
+});
+EV.Event.on("registration.failed", function(res) {
+    console.log("Registration Failed = ", res);
+});
+EV.Event.on("social.login.success", function(res) {
+    console.log("Login Success = ", res);
+    if (document.location.pathname == "/login/") {
+        window.location = ("/my-account/");
+    } else {
+        //location.reload();
+    }
+});
+EV.Event.on("social.login.failed", function(res) {
+    console.log("Login Failed = ", res);
+});
+EV.Event.on("social.registration.success", function(res) {
+    console.log("social.registration.success = ", res);
+    if (document.location.pathname == "/register/") {
+        window.location = "/my-account/";
+    } else {
+        //location.reload();
+    }
+});
+EV.Event.on("social.registration.failed", function(res) {
+    console.log("social.registration.failed = ", res);
+});
+EV.Event.on(EV.Event.PM_PAYMENT_SUCCESS, function(res) {
+    console.log("EV.Event.PM_PAYMENT_SUCCESS = ", res);
+	if(product_subscribed){
+		Object.keys(product_subscribed).forEach(function(key){ 
+			if (typeof product_subscribed[key] === 'string' || product_subscribed[key] instanceof String){
+				product_subscribed[key] = product_subscribed[key].replaceAll("'",""); 
+			}
+		});
+		window.adobeDataLayer.push(product_subscribed);
+	}
+    setTimeout(function() {
+        goBack();
+    }, 500);
+});
+EV.Event.on(EV.Event.EDIT_PROFILE_FORM_LOADED, function(res) {
+    setTimeout(function() {
+		try{
+		profileLoadedHandler();
+        document.querySelector('[ng-model="dateValues.day"]').querySelector('[value=""]').label = "DD";
+        document.querySelector('[ng-model="dateValues.month"]').querySelector('[value="undefined:undefined"]').label = "MM";
+        document.querySelector('[ng-model="dateValues.year"]').querySelector('[value=""]').label = "YYYY";		
+		}catch(error){}        
+    }, 500);   
+});
+function profileLoadedHandler() {
+    if (profileLoadCounter < PROFILE_LOAD_MAX_RETRY) {
+        if ($('#serviceAttributes').length) {
+            profileLoadCounter = 0;
+            customizeProfileForm();
+        } else {
+            profileLoadCounter++;
+            setTimeout(profileLoadedHandler, 500);
+        }
+    } else {
+        console.log('Profile widget load timed out');
+    }
+}
+function customizeProfileForm() {
+    const widgetWrapper = $('ev-product-profile');
+    const widgetHeader = widgetWrapper.find('#widget-header');
+    //const emailHint = $('<span class="email-hint field-hint">To update the email associated with your account, <a href="/contact-us.html">contact us</a></span>');
+    //const phoneHint = $('<span class="phone-hint field-hint">To update the number associated with your account, <a href="/contact-us.html">contact us</a></span>');
+    widgetHeader.css({ 'padding-bottom': 0 });
+    if (widgetWrapper.find('.product-profile-legend').length === 0) {
+        widgetHeader.after('<span class="product-profile-legend">indicates mandatory field</span>');
+    }
+    $('#email_address').attr('disabled', 'disabled');
+    $('#email_address').attr('data-test', 'something');
+    $('#phone_number').attr('disabled', 'disabled');
+    /*if (widgetWrapper.find('.email-hint').length === 0) {
+        $('#email_address').after(emailHint);
+    }
+    if (widgetWrapper.find('.phone-hint').length === 0) {
+        $('#phone_number').after(phoneHint);
+    }*/
+}
+$(".promo-trigger").click(function(e){
+	e.preventDefault();
+	$(".product-summary-promo div#promocode").addClass("active");
+	$("#promoInput").focus();
+	$(this).hide();
+});
+EV.Event.on(EV.Event.EDIT_PROFILE_COMPLETE_SUCCESS, function() {
+    window.scrollTo(0, 0);
+});
+EV.Event.on(EV.Event.EDIT_PROFILE_FORM_LOADED, function(res) {
+   console.log('EDIT_PROFILE_FORM_LOADED');
+});
+EV.Event.on(EV.Event.LOGIN_SUCCESS, function(res) {
+   console.log('LOGIN_SUCCESS');
+});
+EV.Event.on(EV.Event.PROFILE_LOADED, function(res) {
+    console.log('PROFILE_LOADED');
+    try{
+		appendChangePlan();
+	}catch(error){
+		console.log('PROFILE_LOADED_ERROR', error);
+	}
+});
+
+function classAddHandler() {
+    if (profileLoadCounter < PROFILE_LOAD_MAX_RETRY) {
+        if ($('#other-details-address1_country option').length) {
+            $('#label_other-details-address1_state').parent().closest('ev-attribute-v2').addClass('other-state');
+            $('#label_other-details-address1_otherstate').parent().closest('ev-attribute-v2').addClass('indian-state');
+            $( ".indian-state" ).hide();
+        } else {
+            profileLoadCounter++;
+            setTimeout(classAddHandler,500);
+        }
+    } else {
+        console.log('Profile widget load timed out');
+    }
+}
+EV.Event.on(EV.Event.PM_CREATE_ORDER_SUCCESS, function(res) {
+   console.log('PM_CREATE_ORDER_SUCCESS');
+});
