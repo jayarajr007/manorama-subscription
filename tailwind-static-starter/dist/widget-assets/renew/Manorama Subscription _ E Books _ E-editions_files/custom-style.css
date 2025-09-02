@@ -1,0 +1,15 @@
+@media (min-width: 768px) and (max-width: 1024px) {
+  nav ul li:nth-child(6),
+  nav ul li:nth-child(7) {
+    display: none !important;
+  }
+}
+@media (min-width: 1025px) {
+  nav ul li ul.more li:nth-child(1),
+  nav ul li ul.more li:nth-child(2) {
+    display: none !important;
+  }
+}
+.mob-init{
+  display: none !important;
+}

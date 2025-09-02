@@ -1,0 +1,37 @@
+function showCategory() {
+    document.getElementById('categoryMenu').classList.remove('hidden');
+    // document.getElementById('mainContent').classList.add('hidden');
+}
+
+// function showMain(page) {
+//     // document.getElementById('categoryMenu').classList.add('hidden');
+//     // document.getElementById('mainContent').classList.remove('hidden');
+
+//     // Optional: Change main content title if needed
+//     // document.getElementById('mainContent').innerHTML = `<h1 class="text-2xl font-bold text-gray-700">${page.charAt(0).toUpperCase() + page.slice(1)} Content</h1>`;
+// }
+
+
+
+window.onload = function () {
+    const firstTabButton = document.querySelector('.tab-btn');
+    if (firstTabButton) {
+        firstTabButton.click();
+    }
+};
+
+$(document).ready(function () {
+  $('.tab-btn').on('click', function () {
+    const tabId = $(this).data('id');
+    console.log('Clicked tab:', tabId);
+
+    $('.tab-content').addClass('hidden');
+    $('#' + tabId).removeClass('hidden');
+
+    $('.tab-btn').removeClass('active-tab');
+    $(this).addClass('active-tab');
+  });
+});
+
+
+document.getElementById('category-close').addEventListener('click', function () { document.getElementById('categoryMenu').classList.add('hidden'); });

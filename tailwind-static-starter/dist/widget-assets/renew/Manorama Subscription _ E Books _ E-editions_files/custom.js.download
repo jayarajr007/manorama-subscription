@@ -1,0 +1,169 @@
+$(document).ready(function () {
+  $("#mobcate").click(function () {
+    showCategory();
+  });
+});
+
+/*function handleFormatChange(selectedEdition) {
+  document.querySelectorAll(".edition-wrapper").forEach((wrapper) => {
+    const edition = wrapper.getAttribute("data-edition");
+    const isActive = edition === selectedEdition;
+    wrapper.style.display = isActive ? "block" : "none";
+
+    if (isActive) {
+      // Get the first checked plan inside the subscription tab
+      const checkedPlan = wrapper.querySelector(
+        '#subscription input[name="plan"]:checked'
+      );
+
+      if (checkedPlan) {
+        const planCard = checkedPlan.closest(".peerplan");
+        const priceEl = planCard.querySelector(
+          ".bg-white .text-gray-400 ~ .text-gray-700, .bg-white .text-gray-700"
+        );
+        if (priceEl) {
+          document.querySelector(".selected-price").textContent =
+            priceEl.textContent;
+        }
+      }
+    }
+  });
+}*/
+
+function handleFormatChanger(selectedEdition) {
+  document.querySelectorAll(".edition-wrapper").forEach((wrapper) => {
+    const edition = wrapper.getAttribute("data-edition");
+    const isActive = edition === selectedEdition;
+    wrapper.style.display = isActive ? "block" : "none";
+
+    if (isActive) {
+      // Step 1: Hide all but the first sub-tab-content
+      const subTabs = wrapper.querySelectorAll(".sub-tab-content");
+      if (subTabs.length > 1) {
+        subTabs.forEach((tab, index) => {
+          tab.classList.toggle("hidden", index !== 0); // Show first, hide others
+        });
+      }
+
+      const subWrapper = wrapper.querySelector("#subscription");
+
+      if (subWrapper) {
+        // 1. Try to find recommended plan first
+        const recommendedLabel = subWrapper.querySelector(
+          ".peerplan-head span.bg-creamdark"
+        );
+
+        if (recommendedLabel) {
+          const planCard = recommendedLabel.closest(".peerplan");
+          const finalPriceEl = planCard?.querySelector(
+            ".bg-white .text-gray-700"
+          );
+
+          if (finalPriceEl) {
+            document.querySelector(".selected-price").textContent =
+              finalPriceEl.textContent.trim();
+            return;
+          }
+        }
+
+        // 2. Fallback: first checked plan
+        const checkedPlan = subWrapper.querySelector(
+          'input[name="plan"]:checked'
+        );
+
+        if (checkedPlan) {
+          const planCard = checkedPlan.closest(".peerplan");
+
+          if (planCard) {
+            const finalPriceEl = planCard.querySelector(
+              ".bg-white .text-gray-700"
+            );
+
+            if (finalPriceEl) {
+              document.querySelector(".selected-price").textContent =
+                finalPriceEl.textContent.trim();
+            }
+          }
+        }
+      }
+    }
+  });
+ document.querySelectorAll(".edition-wrapper").forEach((wrapper) => {
+  const display = window.getComputedStyle(wrapper).display;
+
+  if (display === "block") {
+    const sbTabs = wrapper.querySelectorAll(".sub-tab-btn");
+
+    if (sbTabs.length > 0) {
+      // Remove active classes from all
+      sbTabs.forEach((tab) => {
+        tab.classList.remove("border-blue-500", "text-blue-600", "sub-active-tab");
+      });
+
+      // Add to the first tab
+      const firstTab = sbTabs[0];
+      firstTab.classList.add("border-blue-500", "text-blue-600", "sub-active-tab");
+
+      // Hide all sub-tab-content in this wrapper
+      wrapper.querySelectorAll(".sub-tab-content").forEach((content) => {
+        content.classList.add("hidden");
+      });
+
+      // Show the one linked to first tab
+      const targetId = firstTab.getAttribute("data-tab");
+      const targetContent = wrapper.querySelector(`#${targetId}`);
+      if (targetContent) {
+        targetContent.classList.remove("hidden");
+      }
+    }
+  }
+});
+
+}
+
+document.querySelectorAll('input[name="plan"]').forEach((input) => {
+  input.addEventListener("change", (e) => {
+    const planCard = e.target.closest(".peerplan");
+
+    if (!planCard) return; // Safety check
+
+    const priceEl = planCard.querySelector(
+      ".bg-white .text-gray-400 ~ .text-gray-700, .bg-white .text-gray-700"
+    );
+
+    if (priceEl) {
+      const selectedPriceText = priceEl.textContent.trim();
+      const selectedPriceEl = document.querySelector(".selected-price");
+      if (selectedPriceEl) {
+        selectedPriceEl.textContent = selectedPriceText;
+      }
+    }
+  });
+});
+
+document.querySelectorAll('input[name="select-issue"]').forEach((input) => {
+  input.addEventListener("change", (e) => {
+    const issueCard = e.target.closest(".single-issue-item");
+
+    if (!issueCard) return;
+
+    // Get the price from a data attribute or hardcoded place
+    const price = e.target.getAttribute("data-price");
+    const selectedPriceEl = document.querySelector(".selected-price");
+    if (selectedPriceEl && price) {
+      selectedPriceEl.textContent = `₹${price}`;
+    }
+  });
+});
+
+// Initialize on page load
+/*const checked = document.querySelector('input[name="format"]:checked');
+if (checked) {
+  handleFormatChanger(checked.value);
+}
+
+document.querySelectorAll('input[name="format"]').forEach((radio) => {
+  radio.addEventListener("change", (e) =>
+    handleFormatChanger(e.target.value)
+  );
+});*/

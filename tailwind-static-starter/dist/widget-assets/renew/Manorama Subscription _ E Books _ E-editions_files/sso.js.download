@@ -1,0 +1,329 @@
+const revampHeaderutils = {};
+
+
+const LOGIN_STATUS_COOKIE = 'mmu_ls';
+const USER_LOGGED_IN = 'userLoggedIn';
+const login_userName = 'mmu_pn';
+const signInButton = document.querySelector('.cmp-header__nav-button.sign-in-button');
+
+
+// signin
+revampHeaderutils.signIn = function () {
+    $('.sign-in-button').on("click", function (e) {
+        e.preventDefault();
+       
+        ssoIn(false);
+        
+    });
+}
+
+// cookies
+revampHeaderutils.getCookieByName = function (cookieName) {
+    const cookie = document.cookie;
+    try {
+        let cookieValue = cookie.split(cookieName + '=')[1].split(';')[0].replace(/\+/g, '%20');
+        return decodeURIComponent(cookieValue);
+    } catch (e) {
+        console.log('Error reading cookie');
+    }
+}
+
+// username
+revampHeaderutils.getUserName = function () {
+    let userName = revampHeaderutils.getCookieByName(login_userName);
+    if (userName) {
+        const firstName = userName.trim().split(' ')[0];
+        $('.cmp-login-block__after-head').attr('title', firstName);    
+        $('.cmp-login-block__user-letter').text(decodeURIComponent(userName).trim());
+        $('.cmp-login-block__user-name').text(decodeURIComponent(userName).trim());
+    }
+}
+
+// myaccount check
+revampHeaderutils.myAccount = function () {
+    if (revampHeaderutils.isLoggedIn()) {
+        $(".cmp-login-block__before-login").hide();
+        $(".cmp-login-block__after-login").show();
+ 		$(".profile-menu").removeAttr('style');
+    }
+}
+
+revampHeaderutils.isLoggedIn = function () {
+    const loginStatus = revampHeaderutils.getCookieByName(LOGIN_STATUS_COOKIE);
+    return loginStatus === USER_LOGGED_IN;
+}
+
+revampHeaderutils.redirectToHome = function () {
+    window.location.href = window.location.origin;
+}
+
+$(function () {
+    revampHeaderutils.signIn();
+    revampHeaderutils.myAccount();
+    revampHeaderutils.getUserName();
+    
+});
+const mmlog_path = '/sso'; 
+const login_stat = 'mmu_ls';
+const login_un = 'mmu_pn';
+const last_rf_time = 'mmu_lsrfd';
+const rf_int = 'mmu_rfinv';
+const rf_Int_default = 1500000;
+const cool_down_default = 180000; //3 minutes = 3 * 60 * 1000; 
+let rfTknTimer;
+let sso_auth = {
+    isLoggedIn: function() {
+        let loginStatus = getCookieVal(login_stat);
+            var loggedIn = false;
+            if (loginStatus && loginStatus === 'userLoggedIn') {
+                loggedIn = true;
+            }
+            return loggedIn;
+    }
+}
+
+function getCookieVal(v){
+    var r = document.cookie.match('(^|[^;]+)\\s*' + v + '\\s*=\\s*([^;]+)');
+    r = r ? r.pop(): undefined;
+    return r
+}
+
+function ssoIn(signUpFlag, utmsource) {
+    let currLoc = encodeURIComponent(window.location.href);
+    window.location.href = mmlog_path + "?a=in&pageURL=" + currLoc + "&signUpFlag=" + signUpFlag;
+}
+
+function googleSsoIn(response){
+	if(response.credential){
+		let idToken = response.credential;
+		let currLoc = encodeURIComponent(window.location.href);
+		window.location.href = mmlog_path+"?a=goog&pageURL="+currLoc+"&token="+idToken;
+	}
+}
+
+function ssoOut(cl) {
+    let currLoc;
+    let randNo = Math.floor((Math.random() * 1000000) + 1);
+	try{
+        if(window.sessionStorage["evolok:ev_profile"]!=undefined){
+            delete window.sessionStorage["evolok:ev_profile"];
+        }
+        if(window.localStorage["evolok:ev_session"]!=undefined){
+            delete window.localStorage["evolok:ev_session"];
+        }
+    }catch(err){}
+	if(cl){
+		currLoc = encodeURIComponent(cl);
+	}else{
+		currLoc = encodeURIComponent(window.location.href);
+	}
+	
+	window.location.href = mmlog_path+"?a=out&pageURL="+currLoc+"&random="+randNo;
+	//localStorage.removeItem("savedItems"); // removed saveditems on logout.
+	//localStorage.removeItem("historyItems"); // removed history items on logout.
+}
+
+function rfAccessTkn() {
+	if(rfTknTimer) {
+		clearInterval(rfTknTimer);
+	}
+
+}
+
+function setLoggedInView() {
+    try {
+        if (sso_auth.isLoggedIn()) {
+            let userName = getCookieVal(login_un);
+            if (userName) {
+                $('.profile_name_txt').text(decodeURIComponent(userName).trim());
+            }
+            $('.sign_in_button').removeClass("user-not-signed");
+            $('.sign_in_button').addClass('user-signed-in');
+
+            $('.ml-login-icon-blk').removeClass('user-not-signed');
+            $('.ml-login-icon-blk').addClass('user-signed-in');
+        } else {
+		
+            $('.sign_in_button').addClass("user-not-signed");
+            $('.sign_in_button').removeClass('user-signed-in');
+
+            $('.ml-login-icon-blk').addClass('user-not-signed');
+            $('.ml-login-icon-blk').removeClass('user-signed-in');
+
+            $('.profile_name_txt').text('');
+        }
+    } catch (err) {}
+}
+
+
+function invokeRfTknReq() {
+		let rfInt = getCookieVal(rf_int);
+		let rfIntVal = 0;
+		if(rfInt) {
+			rfIntVal = parseInt(rfInt);
+		}
+		let lastRfTime = getCookieVal(last_rf_time);
+		if(lastRfTime) {
+			let lastRfTimeVal = parseInt(lastRfTime);
+			let cTimeVal = 0;
+			let cDate = new Date();
+			
+			let cTimeInMs = cDate.getTime();
+			if(cTimeInMs) {
+				cTimeVal = parseInt(cTimeInMs);
+			}
+			
+			let timeDiff = cTimeVal - (lastRfTimeVal - 60000);
+			if(timeDiff >= rfIntVal) {
+				rfAccessTkn();
+			} else {
+				rfIntVal = rfIntVal - timeDiff;
+			}
+		}
+
+		if(!rfIntVal) {
+			rfIntVal = rf_Int_default;
+		}
+
+		if(rfTknTimer) {
+			clearInterval(rfTknTimer);
+		}
+		rfTknTimer  = setInterval('rfAccessTkn()', rfIntVal);
+}
+
+function setRfTknInt() {
+	let rfInt = getCookieVal(rf_int);
+	if(!rfInt) {
+		rfInt = rf_Int_default;
+	}
+	rfTknTimer  = setInterval('rfAccessTkn()', rfInt);
+}
+
+
+$(document).ready(function() {
+	$(".sso-signout-button").on("click", function(e){
+	    ssoOut();
+	});
+
+	setLoggedInView();
+
+	/*if(sso_auth.isLoggedIn()) {
+        loadGoogleScript().then(() => googleOneTapLibraryLoad());
+		invokeRfTknReq();
+	} else if (typeof enablePrestitial === 'undefined' || !enablePrestitial)  {
+		loadGoogleScript()
+				.then(() => googleOneTapLibraryLoad())
+				.then((val) => {
+					if(val === 1){
+						invokeGoogleOneTap();
+					}
+				})
+				.catch((error) => {
+					console.error("Error loading Google One Tap:", error);
+				});
+		}*/
+
+});
+
+/*$(document).ready(function() {
+    $('.sign-in-button').on('click', function(e) {
+      alert();
+      e.preventDefault();
+      let mmlog_path = "https://"+window.location.hostname+"/sso"; // Replace with actual path
+      let currLoc = encodeURIComponent(window.location.href);
+      window.location.href = mmlog_path + "?a=in&pageURL=" + currLoc + "&signUpFlag=false";
+    });
+  });*/
+
+
+function loadGoogleScript() {
+	return new Promise((resolve, reject) => {
+		const script = document.createElement('script');
+		script.src = 'https://accounts.google.com/gsi/client'; 
+        script.onload = () => {
+			console.log('Google script loaded.');
+			resolve();
+		};
+		script.onerror = () => reject(new Error('Failed to load Google script'));
+		document.head.appendChild(script);
+	});
+}
+
+function googleOneTapLibraryLoad() {
+	return new Promise((resolve, reject) => {
+		if(typeof googleClientId !== 'undefined'){
+			try {
+				google.accounts.id.initialize({
+					client_id: googleClientId,
+					cancel_on_tap_outside: false,
+					itp_support: true,
+					use_fedcm_for_prompt: true,
+					callback: googleSsoIn,
+				});
+				console.log('Google One Tap initialized.');
+				
+			} catch (error) {
+				reject(error);
+			}
+		resolve(1);
+		}
+		else{
+			resolve(0);
+		}
+		
+		
+	});
+}
+
+// Function to invoke Google One Tap 
+function invokeGoogleOneTap() {
+    const isMobileView = window.matchMedia("(max-width: 768px)").matches; // Check if the view is mobile
+        if (isMobileView) {
+            const targetElement = document.querySelector('.cmp-header__main');
+            if (targetElement) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (!entry.isIntersecting && entry.boundingClientRect.top < 0) {
+							google.accounts.id.prompt(); // excluded setExpirationTime()
+                            observer.disconnect();
+                        }
+                    });
+                }, { rootMargin: '0px', threshold: [1] }); 
+                observer.observe(targetElement);
+            } else {
+                console.error("Element with class 'cmp-header__main' not found.");
+            }
+        } else {
+		        google.accounts.id.prompt();
+        }
+}
+
+// Function to get a cookie by name
+function getCookie(cookieName) {
+    var name = cookieName + "=";
+   	var decodedCookie = decodeURIComponent(document.cookie);  // Decode the cookie string and split it into individual cookies
+   	var cookieArray = decodedCookie.split(';');
+   	for (const cookie of cookieArray) {
+		// Trim leading and trailing spaces from the cookie string
+		var trimmedCookie = cookie.trim();
+		// Check if the cookie name matches the target name
+		if (trimmedCookie.indexOf(name) === 0) {
+			return trimmedCookie.substring(name.length);
+		}
+	}
+    return null; 
+}
+
+// Function to set the expiration time for 'g_state' cookie
+function setExpirationTime() {
+	var now = new Date();
+  	var time = now.getTime();
+  	var expireTime = time + cool_down_default; // 3 minutes in the future
+  	now.setTime(expireTime);
+	var gStateValue = getCookie("g_state");
+	if (gStateValue !== null) {
+        document.cookie = 'g_state='+gStateValue+';path=/;expires='+now.toUTCString(); //Set the updated expiration time to g_state cookie
+    } else {
+        console.log("Cookie 'g_state' not found.");
+    }
+}

@@ -1,0 +1,483 @@
+//EV.Widgets.asyncMode = true;
+var evo_client = "mmr";
+var evo_env = document.location.hostname === "www.manoramaonline.com" ? "" : ".uat";
+var profileLoadCounter = 0;
+var productLoadCounter = 0;
+const PROFILE_LOAD_MAX_RETRY = 10;
+let razorpayKey = (typeof rpkey != 'undefined')?rpkey:"rzp_live_uEfws4G9vTOmJb";
+EV.Em.init({
+    url: "/acd/api/3.0",
+    sidCookieDomain: document.location.hostname ,
+    brand: "Manorama"
+});
+var params = JSON.stringify({ articleId: 'myaccount' });
+EV.Em.authorize(params, handleMeteringSuccess, handleMeteringError)
+
+function handleMeteringSuccess(response) {
+    console.log(response);
+    if (response.result == "ALLOW_ACCESS") {
+        console.log("ALLOW_ACCESS");
+    } else if (response.requireEntitlement) {
+        console.log("REQUIRE_LOGIN_WITH_ENTITLEMENT");
+    } else {
+        if (response.result == "REQUIRE_LOGIN") {
+            console.log("REQUIRE_LOGIN");
+        } else {
+            console.log("REQUIRE_ENTITLEMENT");
+        }
+    }
+}
+
+function handleMeteringError(error) {}
+
+
+
+//ENVIRONMENT VARIABLES
+//CORE INITIALISATION
+EV.Core.init({
+    serviceName: 'registration',
+    realmName: 'default_realm',
+    icDomain: 'https://stag-www.manoramaonline.com/ic/api',
+    secureMode: true,
+    ssoCookieDomain: evo_env === '.uat' ? document.location.hostname : document.location.hostname.replace('www.', ''),
+    brand: 'Manorama'
+});
+//PRODUCT MANAGEMENT INITIALISATION
+EV.PM.init({
+    pmDomain: "https://stag-www.manoramaonline.com/pm/api/v2",     
+    brand: "Manorama",
+    razorpayKey: razorpayKey,
+    razorpayMerchantDisplayName: 'The Malayala Manorama Company Limited'
+});
+EV.WM.init({
+	wmDomain: "https://stag-www.manoramaonline.com/wm/api/v1/ev-widgets",
+	brand: "Manorama",
+	language: "en",
+	useWmTranslations: false
+});
+//TRANSLATION KEYS
+EV.Translate.addTranslationTable("en", {
+    "ev.widgets.attr.horizontal_password.label": "Password",
+    "ev.widgets.attr.new_password.confirm.label": "Confirm Password",
+    "ev.widgets.attr.new_password.confirm.placeholder": "Confirm Password",
+    "ev.widgets.attr.Password.confirm.label": "Confirm Password",
+    "ev.widgets.attr.Password.confirm.placeholder": "Password",
+    "ev.widgets.attr.password.label": "Password",
+    "ev.widgets.changepassword.buttons.cancel": "",
+    "ev.widgets.checkout.submit": "Confirm and Pay",
+    "ev.widgets.editprofile.buttons.cancel": "",
+    "ev.widgets.editprofile.buttons.submit": "Update",
+    "ev.widgets.errors.500": "Error 500. Please try again shortly.",
+    "ev.widgets.errors.attribute_required": "Please populate the mandatory fields.",
+    "ev.widgets.errors.attribute_validation_failed": "Please check the values entered.",
+    "ev.widgets.errors.duplicate_user_profile": "Email already exits! Please use different email for signup.",
+    "ev.widgets.errors.edit_successful": "Profile Updated.",
+    "ev.widgets.errors.evolokexception": "Please enter valid details",
+    "ev.widgets.errors.evwidgetexception": "Please complete all fields below.",
+    "ev.widgets.errors.forgot_password_success": "Password reset email sent.",
+    "ev.widgets.errors.general_attributes": "The following fields are incorrect or empty [{0}]. These fields are mandatory for one or more services linked to your profile.",
+    "ev.widgets.errors.general_attribute": "The following field is incorrect or empty [{0}]. The field is mandatory for one or more services linked to your profile.",
+    "ev.widgets.errors.identifiers_invalid": "The password you have entered is incorrect. Please re-enter your password.",
+    "ev.widgets.errors.identifier_value_empty": "Please enter a valid email address.",
+    "ev.widgets.errors.idmex400": "Password must be 6 characters long, include a number & special character.",
+    "ev.widgets.errors.idmex409": "User account already exists, please log in in above.",
+    "ev.widgets.errors.invalid_form": "Please enter valid profile details.",
+    "ev.widgets.errors.invalid_profile": "Invalid profile, please check your details.",
+    "ev.widgets.errors.invalid_recaptcha_key": "Recaptcha key has been expired. Please reload the page.",
+    "ev.widgets.errors.messaging_template_not_found": "Email Template not Found.",
+    "ev.widgets.errors.minimum_security_level_not_met": "Minimum security level not met.",
+    "ev.widgets.errors.no_products_selected": "You need to select a product",
+    "ev.widgets.errors.reset_user_profile_not_found": "The link is no longer valid. Please try resetting your password.",
+    "ev.widgets.errors.undefined_order_id": "The order has not been created, the order ID is undefined.",
+    "ev.widgets.errors.user_attribute_update_forbidden": "Email Address cannot be updated.",
+    "ev.widgets.errors.user_not_registered": "You are not registered.",
+    "ev.widgets.errors.user_profile_identifiers_not_found": "Email address not found.",
+    "ev.widgets.errors.validators_value_empty": "Please enter a valid password.",
+    "ev.widgets.login.buttons.cancel": "Cancel",
+    "ev.widgets.login.buttons.submit": "Log in",
+    "ev.widgets.plan.frequency.MONTH12": "Year",
+    "ev.widgets.plan.frequency.MONTH1": "Recurring",
+    "ev.widgets.productProfile.alreadyRegistered": "Already a user? Log in here!",
+    "ev.widgets.productProfile.selectProductWarning": "Please Select a Product",
+    "ev.widgets.productSelection.select": "Select",
+    "ev.widgets.productSelection.text.boosted": "RECOMMENDED",
+    "ev.widgets.productSelection.text.normal": "",
+    "ev.widgets.purchases.cancel.confirm": "Confirm cancellation",
+    "ev.widgets.registration.buttons.cancel": "Cancel",
+    "ev.widgets.resetpassword.buttons.cancel": "Cancel",
+    "ev.widgets.stripe.submitPayment": "Confirm and Pay",
+    "ev.widgets.attr.email_address.required": "Please enter a valid Email ID.",
+    "ev.widgets.attr.email_address.invalid": "Please enter a valid Email ID.",
+    "ev.widgets.attr.first_name.required": "Please enter First Name.",
+    "ev.widgets.attr.last_name.required": "Please enter Last Name."
+});
+EV.Translate.setActiveLanguage("en", true);
+//WIDGET DISPLAY OPTIONS
+EV.Widgets = EV.Widgets || {};
+//EVENTS
+EV.Event.publish(EV.Event.PM_VALIDATE_PROFILE, {
+    serviceName: "subscribe",
+    successCb: function(response) {
+        console.log("The Profile is Valid");
+    },
+    errorCb: function(error) {
+        console.log("Error Validating Profile:", error);
+    }
+});
+/*EV.Event.on(EV.Event.PM_PRODUCTS_SELECTED, function(res) {
+    console.log("EV.Event.PM_PRODUCTS_SELECTED");
+});*/
+EV.Event.on(EV.Event.PM_PAYMENT_SUCCESS, function(res) {
+    console.log("EV.Event.PM_PAYMENT_SUCCESS = ", res);
+    if (document.location.pathname == "/subscribe/") {
+        //window.location = "/my-account/";
+    } else {
+        //location.reload();
+    }
+});
+EV.Event.on(EV.Event.PM_ERROR, function(res) {
+    console.log("EV.Event.PM_ERROR", res);
+});
+EV.Event.on(EV.Event.PM_PRODUCTS_LOADED, function(res) {
+    console.log("EV.Event.PM_PRODUCTS_LOADED");
+		let addedDom = "<div class='mm-planbox-controlwrp'>";
+			addedDom +=  "<button class='click-button-cu btn btn-lg'>SUBSCRIBE NOW</button>";
+			addedDom +=	 "<div class='feature-clickmobilewrp'><div class='featureClickbtn'><span>View Features</span><i class='mm-feature-arrow'></i></div></div>";
+			addedDom +="</div>";	
+		if($(".product-features").append(addedDom)){
+			$('.click-button-cu').on('click',function(event){				
+				if($(this).parent().parent().parent().siblings('.product-body').find('li').trigger('click')){
+					if($(this).parent().parent().parent().siblings('.product-footer').find('button').trigger('click')){						
+							/*if(window.sessionStorage["evolok:basket"]!=undefined){
+								profileLoadCounter = 0;
+								console.log('PM_PRODUCTS_SELECTED 2');
+								let redirectURL = "/content/mm/mo/subscribe-summary.html";
+								if($('span').hasClass('summaryUrl')){
+									if($('.summaryUrl').attr('data-summaryurl').length>0){
+										redirectURL = $('.summaryUrl').attr('data-summaryurl');
+										redirect(redirectURL);
+									}
+								}else{
+									redirect(redirectURL);
+								}
+							} else {
+								window.location = window.location.href;
+							}*/
+							productBasketHandler();							
+					}
+				}
+				event.stopImmediatePropagation();
+				//$(this).prop('disabled', true);
+				//event.preventDefault();
+			});
+			
+			
+			$('.click-button-cu').on('dblclick',function(){
+				if($(this).parent().parent().parent().siblings('.product-body').find('li').trigger('click')){
+					if($(this).parent().parent().parent().siblings('.product-footer').find('button').trigger('click')){						
+							/*if(window.sessionStorage["evolok:basket"]!=undefined){
+								profileLoadCounter = 0;
+								console.log('PM_PRODUCTS_SELECTED 2');
+								let redirectURL = "/content/mm/mo/subscribe-summary.html";
+								if($('span').hasClass('summaryUrl')){
+									if($('.summaryUrl').attr('data-summaryurl').length>0){
+										redirectURL = $('.summaryUrl').attr('data-summaryurl');
+										redirect(redirectURL);
+									}
+								}else{
+									redirect(redirectURL);
+								}
+							} else {
+								window.location = window.location.href;
+							}*/
+							productBasketHandler();							
+					}
+				}
+				event.stopImmediatePropagation();
+				//$(this).prop('disabled', true);
+				//event.preventDefault();
+			});
+		}
+		try{
+			productItemHeight();
+			boxHeight();
+			$(window).resize(function(){
+				productItemHeight();
+				boxHeight();
+			});
+			$('.featureClickbtn').on('click',function(){
+				//$('.product-features>ul').css('display','none');
+				$(this).parent().parent().siblings('ul').slideToggle();
+				$(this).toggleClass("opend");
+			});
+			productLoadedHandler();
+			for( plan in benefits_unavailable){
+				let card = $(plan);
+				if(plan){
+					if(benefits_unavailable[plan].length){
+						let target = document.querySelector(plan).querySelectorAll(".product-features ul li");
+						benefits_unavailable[plan].forEach(function(item,index){
+							if(target[item-1]){
+								target[item-1].classList.add("excluded");
+							}
+						});
+					}
+				}
+			}			
+		}catch(err){
+			
+		}
+		
+});
+function productItemHeight(){
+	var itemMaxHeight = 0;
+	$(".product-item-container .product-item").height('auto');
+	$('.product-item-container .product-item').each(function(){
+		if ($(this).height() > itemMaxHeight) { itemMaxHeight = $(this).height(); }
+	});
+	if($(window).width() > 767){
+		$(".product-item-container .product-item").height(itemMaxHeight);
+	}
+}
+
+function productBasketHandler() {
+    if (productLoadCounter < PROFILE_LOAD_MAX_RETRY) {
+        if(JSON.parse(window.sessionStorage.getItem('evolok:basket')).paymentType=='PAYMENT_GATEWAY'){
+            productLoadCounter = 0;
+            console.log('PM_PRODUCTS_SELECTED 2');
+			let redirectURL = "/content/mm/mo/subscribe-summary.html";
+			if($('span').hasClass('summaryUrl')){
+				if($('.summaryUrl').attr('data-summaryurl').length>0){
+					redirectURL = $('.summaryUrl').attr('data-summaryurl');
+					redirect(redirectURL);
+				}
+			}else{
+				redirect(redirectURL);
+			}
+        } else {
+            productLoadCounter++;
+            setTimeout(productBasketHandler, 500);
+        }
+    } else {
+        console.log('productBasketHandler widget load timed out');
+    }
+}
+
+
+EV.Event.on(EV.Event.PM_REDIRECT_ORDER_SUMMARY, function () {
+	console.log('PM_REDIRECT_ORDER_SUMMARY');
+    //redirect("/content/mm/mo/product-summary.html") //page with the ev-product-summary widget
+});
+EV.Event.on(EV.Event.PM_REDIRECT_TO_PAYMENT, function () {
+	console.log('PM_REDIRECT_TO_PAYMENT');
+    //redirect("/content/mm/mo/product-summary.html") //page with the ev-stripe widget
+})
+EV.Event.on(EV.Event.PM_REDIRECT_PRODUCT_PROFILE, function () {
+	console.log('PM_REDIRECT_PRODUCT_PROFILE');
+    //redirect("/product-summary.html") //page with the ev-product-profile widget
+});
+EV.Event.on(EV.Event.PM_PRODUCTS_SELECTED, function () {
+	console.log('PM_PRODUCTS_SELECTED');
+    //redirect("/content/mm/mo/product-summary.html") //page with the ev-product-profile widget
+});
+
+function redirect(path) {	
+    window.location = path;	
+}
+
+function callSSOLoginMyAcc(signUpFlag){
+		$.ajax({
+		type : "GET",
+		url : "/mm/common/sso/authorize.mmlogin.json",
+		crossDomain: true,
+		data : {
+			pageURL : window.location.href,
+			signUpFlag : signUpFlag
+		},
+		dataType : 'text',
+		success : function(response) {
+			if (response) {
+				window.location.href = response+'&utm_source=datawall&utm_medium=widget';
+			}
+		},
+		error : function(xhr, err) {
+			console.log("err" + JSON.stringify(err))
+		}
+	});
+	}
+
+function goBack(event) {
+	try {
+		$('section.product-summary-wrp').css('display','none');
+		$('section.thankyou-summary-wrp').css('display','block');
+		if(localStorage.getItem('pgRefURL')!=''){
+			$('.thankyoulink').attr('href',localStorage.getItem('pgRefURL'));
+		}else{
+			$('.thankyoulink').attr('href','/news/only-in-manorama-online.html');
+		}
+		console.log(localStorage.getItem('pgRefURL'));
+		setTimeout(function() {
+			window.location = localStorage.getItem('pgRefURL');
+		}, 10000);
+	} catch (e) {
+        //console.log('Error setting pgRefURL');
+		//window.history.back();
+    }
+	
+    /*if ("referrer" in document) {
+        window.location = document.referrer;
+    } else {
+        window.history.back();
+    }*/
+}
+EV.Event.on("login.success", function(res) {
+    console.log("Login Success = ", res);
+    if (document.location.pathname == "/subscribe/") {
+        console.log("Return");
+    } else if (document.location.pathname == "/login/") {
+        window.location = "/my-account/";
+    } else {
+        console.log("Reload");
+        //location.reload();
+    }
+});
+EV.Event.on("login.failed", function(res) {
+    console.log("Login Failed = ", res);
+});
+EV.Event.on("registration.success", function(res) {
+    console.log("Registration Success = ", res);
+    if (document.location.pathname == "/subscribe/") {} else if (location.pathname === "/register/") {
+        window.location = "/my-account/";
+    } else {
+        //location.reload();
+    }
+});
+EV.Event.on("registration.failed", function(res) {
+    console.log("Registration Failed = ", res);
+});
+EV.Event.on("social.login.success", function(res) {
+    console.log("Login Success = ", res);
+    if (document.location.pathname == "/login/") {
+        window.location = ("/my-account/");
+    } else {
+        //location.reload();
+    }
+});
+EV.Event.on("social.login.failed", function(res) {
+    console.log("Login Failed = ", res);
+});
+EV.Event.on("social.registration.success", function(res) {
+    console.log("social.registration.success = ", res);
+    if (document.location.pathname == "/register/") {
+        window.location = "/my-account/";
+    } else {
+        //location.reload();
+    }
+});
+EV.Event.on("social.registration.failed", function(res) {
+    console.log("social.registration.failed = ", res);
+});
+EV.Event.on(EV.Event.PM_PAYMENT_SUCCESS, function(res) {
+    console.log("EV.Event.PM_PAYMENT_SUCCESS = ", res);
+    setTimeout(function() {
+        goBack();
+    }, 500);
+});
+EV.Event.on(EV.Event.EDIT_PROFILE_FORM_LOADED, function(res) {
+    setTimeout(function() {
+		try{
+		profileLoadedHandler();		
+        document.querySelector('[ng-model="dateValues.day"]').querySelector('[value=""]').label = "DD";
+        document.querySelector('[ng-model="dateValues.month"]').querySelector('[value="undefined:undefined"]').label = "MM";
+        document.querySelector('[ng-model="dateValues.year"]').querySelector('[value=""]').label = "YYYY";		
+		}catch(error){}        
+    }, 500);   
+});
+
+function profileLoadedHandler() {
+    if (profileLoadCounter < PROFILE_LOAD_MAX_RETRY) {
+        if ($('#serviceAttributes').length) {
+            profileLoadCounter = 0;
+            customizeProfileForm();
+        } else {
+            profileLoadCounter++;
+            setTimeout(profileLoadedHandler, 500);
+        }
+    } else {
+        console.log('Profile widget load timed out');
+    }
+}
+
+function productLoadedHandler() {
+    if (profileLoadCounter < PROFILE_LOAD_MAX_RETRY) {
+        if ($('.product-item-container').hasClass('col-md-4')) {
+            profileLoadCounter = 0;
+            $('.product-item-container').each(function(){
+				if($(this).hasClass('col-md-4')){
+					$(this).removeClass('col-sm-6');
+					$(this).addClass('col-sm-12');
+				}
+			});
+        } else {
+            profileLoadCounter++;
+            setTimeout(productLoadedHandler, 500);
+        }
+		try{
+			$('.product-item .product-description').remove();
+		}catch(error){}
+    } else {
+        console.log('Profile widget load timed out');
+    }
+}
+
+function customizeProfileForm() {
+    const widgetWrapper = $('ev-edit-profile');
+    const widgetHeader = widgetWrapper.find('#widget-header');
+    const emailHint = $('<span class="email-hint field-hint">To update the email associated with your account, <a href="/contact-us.html">contact us</a></span>');
+    const phoneHint = $('<span class="phone-hint field-hint">To update the number associated with your account, <a href="/contact-us.html">contact us</a></span>');
+    widgetHeader.css({ 'padding-bottom': 0 });
+    if (widgetWrapper.find('.edit-profile-legend').length === 0) {
+        widgetHeader.after('<span class="edit-profile-legend">indicates mandatory field</span>');
+    }
+    $('#email_address').attr('disabled', 'disabled');
+    $('#email_address').attr('data-test', 'something');
+    $('#phone_number').attr('disabled', 'disabled');
+
+    if (widgetWrapper.find('.email-hint').length === 0) {
+        $('#email_address').after(emailHint);
+    }
+    if (widgetWrapper.find('.phone-hint').length === 0) {
+        $('#phone_number').after(phoneHint);
+    }
+}
+
+EV.Event.on(EV.Event.EDIT_PROFILE_COMPLETE_SUCCESS, function() {
+    window.scrollTo(0, 0);
+});
+EV.Event.on(EV.Event.EDIT_PROFILE_FORM_LOADED, function(res) {
+   console.log('EDIT_PROFILE_FORM_LOADED');
+});
+EV.Event.on(EV.Event.LOGIN_SUCCESS, function(res) {
+   console.log('LOGIN_SUCCESS');
+});
+EV.Event.on(EV.Event.PROFILE_LOADED, function(res) {
+    console.log('PROFILE_LOADED');
+    try{
+		if($('span').hasClass('subplanUrl')){
+			if($('.subplanUrl').attr('data-subplanurl').length>0){
+				redirectbackURL = $('.subplanUrl').attr('data-subplanUrl');
+			}
+		}
+		if(!$('tr.product-summary-item td:first').hasClass('plansummary-td')){
+			$('tr.product-summary-item td:first').addClass('plansummary-td');	   
+			$('tr.product-summary-item td:first').append('<span class="changePlanlink" style="float: ;"><a href="'+redirectbackURL+'">Change Plan</a></span>');
+			$('tr.product-summary-item td:first span.mobile-table-header').text('Chosen plan:');
+	    }
+	}catch(error){}
+});
+EV.Event.on(EV.Event.PM_CREATE_ORDER_SUCCESS, function(res) {
+   console.log('PM_CREATE_ORDER_SUCCESS');
+});
+EV.Event.on(EV.Event.PM_REDIRECT_TO_PAYMENT, function(res) {
+   console.log('PM_REDIRECT_TO_PAYMENT');
+});
