@@ -195,7 +195,7 @@ font-size: 14px !important;
 }
 
 .renew-product  img.img-responsive.img-rounded.product-0-image {
-    width: 104px;
+    width: 150px;
     margin: 10px 20px;
     margin: auto;
     margin-top: 12px;
@@ -214,8 +214,8 @@ animation: gradientFlow 5s ease infinite;
     margin: auto;
     border-radius: 23px;
     color: #292929 !important;
+    display: none;
 }
-
 
 
 @keyframes gradientFlow {

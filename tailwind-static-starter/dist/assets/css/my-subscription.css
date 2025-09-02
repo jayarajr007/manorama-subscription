@@ -1,0 +1,104 @@
+.my-subscription
+{
+        min-height: calc(100vh - 542px);
+}
+
+.my-subscription .widget-body 
+{
+    padding: 18px 0px;
+}
+
+.my-subscription .purchases-list-container table
+{
+     width: 100%;
+    text-align: left;
+}
+
+.my-subscription .purchases-list-container .table-responsive
+{
+        padding: 0px 8px;
+}
+.my-subscription .widget-header
+{
+          background: #F2F2F2 !important;
+    padding: 7px 9px;
+    border-radius: 4px;
+}
+
+.my-subscription .widget-header span
+{
+       color: #282828;
+    font-weight: 600;
+    font-size: 16px;
+      font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+.my-subscription .purchases-list-container table th
+{
+
+font-weight: 600;
+font-size: 14px;
+padding-bottom: 8px;
+
+}
+
+.my-subscription .purchases-list-container table td
+{
+border-bottom: 1px solid #f1f1f1;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 13px 0px;
+    color: #464646;
+
+}
+.my-subscription .purchases-list-container table tr:first-child {
+
+border-bottom: 1px solid #ccc;
+}
+.my-subscription .purchases-list-container table tr .dropdown-toggle
+{
+  background-color: #ffffff;
+    padding: 6px 10px;
+    border: 1px solid #2563eb;
+    border-radius: 3px;
+    font-size: 13px;
+    color: #2563eb;
+}
+
+
+@media (max-width: 767.98px) {
+    .my-subscription .purchases-list-container table td
+    {
+           display: flex
+;
+        justify-content: space-between;
+        padding: 3px 0px;
+        flex-wrap: wrap;
+                font-size: 13px;
+    }
+
+        table tr.mobile-table-item {
+        padding: 0px 16px;
+        }
+
+            .mobile-table-header {
+   
+        font-weight: 500;
+     
+    }
+
+
+.my-subscription .purchases-list-container table tr .dropdown-toggle
+{
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    display: flex
+;
+}
+
+
+}
