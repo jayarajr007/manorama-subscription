@@ -99,7 +99,7 @@
         }
 
         h2 {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             margin-bottom: 5px;
             color: #333;
         }
@@ -184,7 +184,7 @@
         .coupon-content h3 {
             margin-bottom: 10px;
             color: #ff003d;
-            font-size: 31px;
+              font-size: 1.5rem;
         }
 
         .show {
@@ -284,7 +284,7 @@
                     background="transparent" speed="1" style="width: 100px; height: 100px ; margin: auto; display: block;"
                     loop autoplay></dotlottie-player> -->
                     <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js" type="module"></script>
-<dotlottie-wc src="https://lottie.host/6a53949a-27a8-44a3-8d60-9ad06a8fc39e/LYHPfctCwB.lottie" style="width: auto; height:auto" speed="1" autoplay ></dotlottie-wc>
+<dotlottie-wc src="https://lottie.host/6a53949a-27a8-44a3-8d60-9ad06a8fc39e/LYHPfctCwB.lottie" style="width: auto; height:auto" speed="1" autoplay loop></dotlottie-wc>
 
 <div style="       position: absolute;
     z-index: 10;
@@ -295,7 +295,7 @@
     width: 83%;">
 
     <p> Congratulations, you won <br> <span id="brand-name" style="font-weight: bold;
-    font-size: 21px;"></span> <br> discount!</p>
+    font-size:1.2rem"></span> <br> discount!</p>
 </div>
             
             </div>
@@ -317,8 +317,9 @@
                     </div>
                 </div>
                 <div>
-                    <p style="color: #000; font-weight: bold;">Copy this code and use during checkout at <span
-                            id="brand-checkout"></span>.</p>
+                    <p style="    color: #7b7b7b;
+    font-weight: 400;">Copy this code and use during checkout at <span
+                            id="brand-checkout" style="font-weight: 600;"></span>.</p>
                     <button class="button moe-inapp-click moe-inapp-close" id="shop-now-cta">Redeem Now</button>
                 </div>
             </div>
@@ -462,7 +463,7 @@ if (percent < 5) {
                 document.querySelector(".coupon-content").style.display = "none";
                
             } else {
-                document.querySelector(".coupon-content").style.display = "block";
+                document.querySelector(".coupon-content").style.display = "flex";
               
             }
 
