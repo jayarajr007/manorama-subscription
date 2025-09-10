@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700italic,700"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://specials.manoramaonline.com/Common/mm-fonts/css/mmfonts2.css">
+    <title>Mobile-Friendly Scratch Card</title>
+    <script src="https://app-cdn.moengage.com/inbound-ui/html-template/assets/lib/jquery-1.12.4.min.js"></script>
+    <script src="https://app-cdn.moengage.com/inbound-ui/html-template/assets/lib/scratchpad.min.js"></script>
+
+    <style>
+
+#card {
+ animation: float 3s ease-in-out infinite, pulse 2s ease-in-out infinite;
+  transition: transform 0.3s ease; /* smooth transition on hover */
+}
+
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+      
+
+/* Stop animation on hover */
+#card:hover {
+  animation: none;
+    transform: scale(1.03); /* optional: small highlight effect */
+}
+* {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background-color: #00000069;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .main {
+            position: relative;
+            width: 90%;
+            max-width: 320px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 14px;
+            padding: 20px 20px 30px;
+            border: none;
+            text-align: center;
+            box-shadow: 0px 9px 17px 0px rgba(0, 0, 0, 0.1);
+            -webkit-box-shadow: 0px 9px 17px 0px rgba(0, 0, 0, 0.1);
+            -moz-box-shadow: 0px 9px 17px 0px rgba(0, 0, 0, 0.1);
+            /* background-image: radial-gradient(circle, #8282824d 5%, transparent 6%), radial-gradient(circle, #ffd7008c 5%, transparent 6%); */
+            background-size: 40px 40px;
+            background-position: 0 0, 20px 20px;
+            animation: movePattern 10s linear infinite;
+        }
+
+        @keyframes movePattern {
+            0% {
+                background-position: 0 0, 20px 20px;
+            }
+
+            100% {
+                background-position: 40px 40px, 60px 60px;
+            }
+        }
+
+        .close-btn {
+            position: absolute;
+     top: 9px;
+    right: 10px;
+            width: 22px;
+            height: 22px;
+            cursor: pointer;
+            object-fit: contain;
+            background: #ececec;
+            padding: 6px;
+            border-radius: 10px;
+            border: 1px solid #b2b2b2;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        h4 {
+            font-size: 15px;
+            font-weight: 100;
+            color: #606060;
+            margin-bottom: 15px;
+        }
+
+        .card-container {
+            margin: 0 auto;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .scratchpad {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto;
+            background: #FFFFFF;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 12px;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+    overflow: hidden;
+        }
+
+        .screen-1,
+        .winning-screen,
+        .loosing-screen {
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .screen-1 {
+            display: block;
+        }
+
+        .winning-screen,
+        .loosing-screen {
+            display: none;
+        }
+
+        .sponsor {
+            margin-bottom: 5px;
+            text-align: center;
+        }
+
+        .sponsor a {
+            text-transform: none;
+            outline: none;
+            display: inline-block;
+        }
+
+        .sponsor img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            max-height: 35px;
+            object-fit: contain;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .coupon-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+        }
+
+        .coupon-content h3 {
+            margin-bottom: 10px;
+            color: #ff003d;
+            font-size: 31px;
+        }
+
+        .show {
+            display: block;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .greeting-text {}
+
+        .greeting-text img {
+            width: 75px;
+            height: 75px;
+            object-fit: contain;
+        }
+
+        .greeting-text p {
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .greeting-img p {
+            font-size: 0.9rem;
+            color: #666;
+            margin: 10px 0;
+        }
+
+        code {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            font-weight: bold;
+            position: relative;
+            border: 1px solid #ccc;
+    padding: 4px 9px;
+            border-radius: 6px;
+        }
+
+        code img {
+            width: 18px;
+            margin-left: 8px;
+            cursor: pointer;
+        }
+
+        .button {
+            background: #da0000;
+            color: #FFF;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-top: 10px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .button:hover {
+            background: #4ab5b8;
+        }
+
+        .code-p {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <dialog open class="main">
+        <img id="close-btn" class="close-btn moe-inapp-close"
+            src="https://cdn.moengage.com/inapp/html-template6/assets/img/close.png" width="12" height="12" alt="close">
+
+        <div class="screen-1">
+            <div class="sponsor">
+                <a href="https://www.manoramaonline.com/premium.html" target="_blank">
+                    <img loading="lazy"
+                        src="https://img-mm.manoramaonline.com/content/dam/mm/mo/revamp-logos/2023/premium-logo.svg"
+                        width="280" height="35" alt="Brand name">
+                </a>
+            </div>
+            <h2>Scratch And Win</h2>
+            <h4>Exclusive access to in-depth journalism.</h4>
+            <div class="card-container">
+                <div id="card" class="scratchpad"></div>
+            </div>
+        </div>
+
+        <div class="winning-screen">
+            <div class="greeting-text" style="position: relative;">
+                <!-- <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+                    type="module"></script>
+                <dotlottie-player src="https://lottie.host/350a253c-a27b-42fe-af84-285d1e228560/pYzK7TCrbc.lottie"
+                    background="transparent" speed="1" style="width: 100px; height: 100px ; margin: auto; display: block;"
+                    loop autoplay></dotlottie-player> -->
+                    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js" type="module"></script>
+<dotlottie-wc src="https://lottie.host/6a53949a-27a8-44a3-8d60-9ad06a8fc39e/LYHPfctCwB.lottie" style="width: auto; height:auto" speed="1" autoplay ></dotlottie-wc>
+
+<div style="       position: absolute;
+    z-index: 10;
+    top: 71px;
+
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 83%;">
+
+    <p> Congratulations, you won <br> <span id="brand-name" style="font-weight: bold;
+    font-size: 21px;"></span> <br> discount!</p>
+</div>
+            
+            </div>
+            <div class="greeting-img">
+                <div class="card-container" id="target">
+                    <div class="scratchpad">
+                        <div class="coupon-content">
+                            <h3 id="discount-details">40% OFF</h3>
+                            <code class="coupon" style="display: flex; flex-direction: column;"">
+                                <div style="display: flex;"> 
+                                <p class="code-p">PREMIUM40</p>
+                                <img src="https://cdn.moengage.com/inapp/html-template6/assets/img/copy-code-icon.svg"
+                                    alt="copy-code-icon" onclick="copyCode(this)" class="copy-btn">
+                                    </div>
+                                <div class="copy-status" style="font-size: 12px;
+    color: #0ece0e;"></div>
+                            </code>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <p style="color: #000; font-weight: bold;">Copy this code and use during checkout at <span
+                            id="brand-checkout"></span>.</p>
+                    <button class="button moe-inapp-click moe-inapp-close" id="shop-now-cta">Redeem Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="loosing-screen">
+            <div class="greeting-text">
+                <img src="https://cdn.moengage.com/inapp/html-template6/assets/img/loose-icon.png" alt="loose-icon">
+                <p>Sorry, You didn't win anything</p>
+            </div>
+            <div class="greeting-img">
+                <div class="card-container">
+                    <div class="scratchpad">
+                        <p>Better luck next time</p>
+                    </div>
+                </div>
+                <button class="button moe-inapp-click moe-inapp-close" id="better-luck-next-time-cta"
+                    onclick="window.open('https://www.manoramaonline.com/myaccount/subscribe-plan.html');">Continue
+                    browsing</button>
+            </div>
+        </div>
+    </dialog>
+<audio id="success-sound" src="success.mp3" preload="auto"></audio>
+    <script>
+        // !!! IMPORTANT !!! 
+        // PASTE YOUR GOOGLE APPS SCRIPT WEB APP URL HERE
+        const googleAppScriptUrl = 'https://script.google.com/macros/s/AKfycbz8cykWV9f1GnOzVQimMmrDUtrIO9w_1chCs-FeDWyoL014EmXcVa3zgZsndNDEziG9lA/exec';
+
+        // Function to log data to Google Sheet
+        function logToGoogleSheet(action, couponCode) {
+            if (googleAppScriptUrl === 'PASTE_YOUR_URL_HERE' || !googleAppScriptUrl) {
+                console.error("Google Apps Script URL is not set. Logging is disabled.");
+                return;
+            }
+            const url = `${googleAppScriptUrl}?action=${encodeURIComponent(action)}&couponCode=${encodeURIComponent(couponCode)}`;
+            
+            // Using fetch to send data to the Google Apps Script
+            fetch(url, {
+                method: 'POST',
+                mode: 'no-cors' // Use 'no-cors' to avoid CORS issues with simple GET-like POST requests
+            }).then(response => {
+                console.log('Log successful for action:', action);
+            }).catch(error => {
+                console.error('Error logging to Google Sheet:', error);
+            });
+        }
+
+        // WEIGHTED RANDOM FUNCTION
+        function weightedRandom(items) {
+            var total = 0;
+            for (var i = 0; i < items.length; i++) {
+                total += items[i].wieghtage;
+            }
+            var randomNum = Math.random() * total;
+            var weightSum = 0;
+            for (var i = 0; i < items.length; i++) {
+                weightSum += items[i].wieghtage;
+                if (randomNum <= weightSum) {
+                    return items[i];
+                }
+            }
+            return items[0];
+        }
+
+        // Copy code function
+       function copyCode(el) {
+    // get parent <code> element
+    var parent = el.closest('.coupon');
+    var codeText = parent.querySelector('.code-p').innerText;
+
+    navigator.clipboard.writeText(codeText).then(function () {
+        let status = parent.querySelector('.copy-status');
+        status.textContent = 'Copied';   // show tick
+
+        setTimeout(function () {
+            status.textContent = ''; // clear after 2s
+        }, 2000);
+
+        // --- Google Sheet Logging ---
+        logToGoogleSheet('code_copied', codeText);
+
+        // --- MoEngage Tracking ---
+        window.parent.Moengage.track_event(
+            'MOE_RESPONSE_SUBMITTED',
+            { coupon_code: codeText, brand: result.brand },
+            {}, {}, false, true
+        );
+        window.parent.Moengage.add_user_attribute('coupon_code', codeText);
+    });
+}
+
+
+        // Background images
+        var bg1 = "https://cdn.moengage.com/inapp/html-template6/assets/img/dummy-1.png";
+        var bg2 = "https://cdn.moengage.com/inapp/html-template6/assets/img/dummy-2.png";
+        var bgArray = [bg1, bg2],
+            selectBG = bgArray[Math.floor(Math.random() * bgArray.length)];
+
+        // Scratch card overlay image
+        var scratchCardImagePath = 'https://i.postimg.cc/qq1T7Q50/google-scratch-card.jpg';
+
+        // ScratchPad initialization
+        function callScratchPad() {
+            $('#card').wScratchPad({
+                size: 30,
+                bg: selectBG,
+                realtime: true,
+                fg: scratchCardImagePath,
+                scratchMove: function (e, percent) {
+                    if ((percent > 30) && (result.win !== "no")) {
+                        document.querySelector(".screen-1").classList.add("hide");
+                        document.querySelector(".winning-screen").classList.add("show");
+                            // 🔊 Play success sound
+                        document.getElementById("success-sound").play();
+                      // 📳 Vibrate on mobile
+                    if (navigator.vibrate) {
+                    navigator.vibrate([200, 100, 200]); 
+                    // pattern: vibrate 200ms, pause 100ms, vibrate 200ms
+                                      }
+
+
+
+                    } else if ((percent > 30) && (result.win === "no")) {
+                        document.querySelector(".screen-1").classList.add("hide");
+                        document.querySelector(".loosing-screen").classList.add("show");
+                    }
+                }
+            });
+        }
+
+        // UPDATED DATA: 5 coupon codes with specified breakdown
+        // Total weightage is 100, so each value represents a percentage.
+        var DATA = [
+            {
+                id: 1,
+                brand: "Manorama Online Premium",
+                code: 'PREMIUM50',
+                discount: '50% OFF',
+                wieghtage: 25, // 20% chance
+                win: "yes",
+                url: "https://www.manoramaonline.com/myaccount/subscribe-plan.html" // Replace with actual URL
+            },
+            {
+                id: 2,
+                brand: "Manorama Magazine Bundle",
+                code: 'DBS20',
+                discount: '20% OFF',
+                wieghtage: 25, // 25% chance
+                win: "yes",
+                url: "https://subscribe.manoramaonline.com/etc/designs/malayalam/bundle/in.html" // Replace with actual URL
+            },
+            {
+                id: 3,
+                brand: "Manorama Max",
+                code: 'MAXONAM25',
+                discount: '25% OFF',
+                wieghtage: 15, // 15% chance
+                win: "yes",
+                url: "https://www.manoramamax.com/?coupon=XzMvHb5pWj5KMDnO9kKBIw==" // Replace with actual URL
+            },
+            {
+                id: 4,
+                brand: "Manorama E Paper",
+                code: 'EPR10D',
+                discount: '30% OFF',
+                wieghtage: 20, // 20% chance
+                win: "yes",
+                url: "https://epaper.manoramaonline.com/" // Replace with actual URL
+            },
+            {
+                id: 5,
+                brand: "Manorama Horizon",
+                code: 'HORIZONDIS10',
+                discount: '10% OFF',
+                wieghtage: 15, // 20% chance
+                win: "yes",
+                url: "https://www.manoramahorizon.com/package/upskilling/data-analytics-with-excel-sql-python-power-bi" // Replace with actual URL
+            }
+        ];
+
+        // Initialize the scratch card
+        var result = weightedRandom(DATA);
+
+        if (result.win === "no") {
+            document.querySelector(".card-container .scratchpad").insertAdjacentHTML("beforeend", `<p>Better luck next time!</p>`);
+        } else {
+            // Add brand logo and code to scratch card
+            document.querySelector(".card-container .scratchpad").insertAdjacentHTML("beforeend", `
+                <div style="text-align: center;">
+                    <h3 style="font-size:14px">${result.brand}</h3>
+                    <p style="color:red; font-weight:bold;">${result.discount}</p>
+                    <code style="color:#ff5000" class="glow-text"><p>${result.code}</p><span id='code'></span></code>
+                </div>
+            `);
+
+            // Update winning screen details
+            document.querySelector(".winning-screen code p").textContent = result.code;
+            document.querySelector(".winning-screen #discount-details").textContent = result.discount;
+            document.querySelector("#brand-name").textContent = result.brand;
+            document.querySelector("#brand-checkout").textContent = result.brand;
+
+            // Add click listener for the subscribe button to log and redirect
+            document.getElementById('shop-now-cta').addEventListener('click', function() {
+                // --- Google Sheet Logging ---
+                logToGoogleSheet('link_clicked', result.code);
+                
+                // Redirect user
+                window.open(result.url, '_blank');
+            });
+        }
+
+        // Initialize after DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', function () {
+            callScratchPad();
+            setTimeout(function () {
+                const images = document.querySelectorAll(".card-container .scratchpad > img");
+                if (images.length > 0) {
+                    images[0].remove();
+                }
+            }, 100);
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    </script>
+</body>
+
+</html>
