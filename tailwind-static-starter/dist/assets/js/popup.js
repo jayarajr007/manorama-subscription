@@ -13,3 +13,23 @@
    function closePopup() {
     document.getElementById("giftPopup").classList.add("hidden");
   }
+
+    function openbundleProduct() {
+    document.getElementById("bundle-products").classList.remove("hidden");
+      document.body.style.overflow = "hidden";
+  }
+
+
+     function closePopup() {
+    document.getElementById("bundle-products").classList.add("hidden");
+      document.body.style.overflow = "";
+  }
+
+
+// Close when clicking backdrop (black area)
+document.getElementById("bundle-products").addEventListener("click", function(e) {
+  if (e.target === this) {
+    closePopup();
+  }
+});
+ 
