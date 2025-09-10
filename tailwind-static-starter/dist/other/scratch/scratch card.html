@@ -339,6 +339,26 @@
         </div>
     </dialog>
 <audio id="success-sound" src="success.mp3" preload="auto"></audio>
+
+
+<script>
+
+
+    let audioUnlocked = false;
+let congratsSound = new Audio("success.mp3");
+
+document.addEventListener("touchstart", function unlockAudio() {
+    if (!audioUnlocked) {
+        congratsSound.play().catch(() => { /* ignore autoplay block */ });
+        congratsSound.pause();
+        congratsSound.currentTime = 0;
+        audioUnlocked = true;
+        document.removeEventListener("touchstart", unlockAudio);
+    }
+});
+</script>
+
+
     <script>
         // !!! IMPORTANT !!! 
         // PASTE YOUR GOOGLE APPS SCRIPT WEB APP URL HERE
@@ -425,6 +445,25 @@
                 realtime: true,
                 fg: scratchCardImagePath,
                 scratchMove: function (e, percent) {
+
+if (percent < 5) {
+           
+                 document.querySelector(".first-sec").style.display = "none";
+            } else {
+             
+                       document.querySelector(".first-sec").style.display = "block";
+            }
+
+ // Hide coupon content until scratched 30%
+            if (percent < 30) {
+                document.querySelector(".coupon-content").style.display = "none";
+               
+            } else {
+                document.querySelector(".coupon-content").style.display = "block";
+              
+            }
+
+
                     if ((percent > 30) && (result.win !== "no")) {
                         document.querySelector(".screen-1").classList.add("hide");
                         document.querySelector(".winning-screen").classList.add("show");
@@ -504,7 +543,7 @@
         } else {
             // Add brand logo and code to scratch card
             document.querySelector(".card-container .scratchpad").insertAdjacentHTML("beforeend", `
-                <div style="text-align: center;">
+                <div style="text-align: center;" class="first-sec">
                     <h3 style="font-size:14px">${result.brand}</h3>
                     <p style="color:red; font-weight:bold;">${result.discount}</p>
                     <code style="color:#ff5000" class="glow-text"><p>${result.code}</p><span id='code'></span></code>
