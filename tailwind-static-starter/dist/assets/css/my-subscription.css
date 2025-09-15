@@ -102,3 +102,21 @@ border-bottom: 1px solid #ccc;
 
 
 }
+
+
+.dropdown.purchases-list-dropdown-right {
+    position: relative;
+}
+
+.dropdown.purchases-list-dropdown-right ul.dropdown-menu {
+    position: absolute;
+    top: 28px;
+    z-index: 1000;
+    background: #ffffff;
+    padding: 3px 5px;
+    border-radius: 6px;
+    border: 1px solid #dfdfdf;
+    font-size: 12px;
+    box-shadow: 1px 2px 3px #cccccc3b;
+font-weight: 500;
+}
