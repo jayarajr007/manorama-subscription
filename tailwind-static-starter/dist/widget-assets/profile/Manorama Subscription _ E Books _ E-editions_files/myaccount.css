@@ -1,0 +1,33 @@
+ul.dropdown-menu:empty {
+   display: none !important;
+}
+#faq .mm-acnt-tabs-block .mm-text-block div{
+	text-transform: capitalize;
+	font-family: 'Roboto';
+    font-size: 22px;
+    color: #333333;
+    font-weight: 700;
+    padding: 0px 0px 20px;
+}
+@media only screen and (max-width: 990px) {
+   #faq .mm-acnt-tabs-block .mm-text-block div{ 
+        text-align: center !important;   
+    }
+}
+@media only screen and (max-width: 767.98px) {
+    #faq .mm-acnt-tabs-block .mm-text-block div {        
+        margin: -15px -15px 0;
+        padding: 15px;
+        border-radius: 10px 10px 0 0;
+        text-align: center;
+        font-size: 18px;
+        font-family: 'Roboto';
+        font-weight: 500;
+    }
+}
+label#label_gender+div.ev>div {
+    display: flex;
+}
+#widget-body .ev-error-field  {
+    margin: 5px;
+}
