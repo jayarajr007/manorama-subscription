@@ -43,3 +43,44 @@ window.onload = function () {
 
 
 document.getElementById('category-close').addEventListener('click', function () { document.getElementById('categoryMenu').classList.add('hidden'); });
+
+
+
+
+
+
+
+
+const openBtn = document.getElementById("openAccount");
+const sheet = document.getElementById("accountSheet");
+const content = document.getElementById("accountContent");
+const closeBtn = document.getElementById("closeSheet");
+
+openBtn.addEventListener("click", (e) => {
+  e.preventDefault(); // 🚫 stop <a href="#"> from scrolling
+
+  sheet.classList.remove("hidden");
+  document.body.style.overflow = "hidden"; // 🚫 disable background scroll
+  document.documentElement.style.overflow = "hidden"; // extra lock for mobile
+  setTimeout(() => content.classList.remove("translate-y-full"), 10);
+});
+
+function closeSheet() {
+  content.classList.add("translate-y-full");
+  setTimeout(() => {
+    sheet.classList.add("hidden");
+    document.body.style.overflow = ""; 
+    document.documentElement.style.overflow = ""; // ✅ restore scroll
+  }, 300);
+}
+
+closeBtn.addEventListener("click", closeSheet);
+
+// Close when clicking outside
+sheet.addEventListener("click", (e) => {
+  if (e.target === sheet) {
+    closeSheet();
+  }
+});
+
+

@@ -965,7 +965,7 @@
         <span class="uppercase font-semibold text-black mt-1">Categories</span>
       </a>
 
-      <a href="#" class="flex flex-col items-center text-gray-600 hover:text-blue-600">
+      <a href="#" class="flex flex-col items-center text-gray-600 hover:text-blue-600" id="openAccount">
         <i class="fn-icon i-account"></i>
         <span class="uppercase font-semibold text-black mt-1">Account</span>
       </a>
@@ -2506,5 +2506,70 @@
   <script src="assets/js/bottom-nav.js" defer></script>
   <script src="assets/js/popup.js"></script>
 </body>
+
+<!-- Account Bottom Sheet -->
+<div id="accountSheet" class="fixed inset-0 bg-black bg-opacity-40 hidden z-50">
+  <div class="absolute bottom-0 left-0 right-0 bg-white rounded-t-2xl shadow-lg p-6 transition-transform transform translate-y-full duration-300"
+       id="accountContent">
+    
+    <!-- Drag Handle -->
+    <div class="w-12 h-1.5 bg-gray-300 rounded-full mx-auto mb-4"></div>
+    
+    <!-- Profile Section -->
+   <button id="closeSheet" class="absolute top-2 right-2 text-gray-600 hover:text-red-500 text-xl">×</button>
+    <div class="flex items-center space-x-3 mb-5">
+      
+      <div class=" w-full list-none">
+       <li class="px-4 py-2 bg-gray-100">
+                  <div class="flex">
+                    <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center font-semibold text-md">
+                      <div class="letter-avatar">
+                        Jayaraj
+                      </div>
+                    </div>
+                    <div class="ml-2">
+                      <p class="text-[12px] font-light mb-1">Login as</p>
+                      <h6 class="text-md font-medium">Jayaraj</h6>
+                    </div>
+                  </div>
+                </li>
+      </div>
+    </div>
+<hr class="border-t border-gray-300 w-full my-4" />
+
+    <!-- Subscription Section -->
+    <h2 class="text-lg font-semibold mb-3"></h2>
+    <ul class="space-y-3">
+      <li class="flex justify-between items-center text-md">
+        <a href="#">  
+        <span>My Account</span>
+        </a>
+      
+      </li>
+      <li class="flex justify-between items-center text-md">
+                <a href="#">  
+        <span>My Subscriptions</span>
+                </a>
+   
+      </li>
+      <hr class="border-t border-gray-100 w-full my-4" />  
+
+        <li class="flex justify-between items-center text-md text-gray-500">
+           <a href="#">  
+        <span>Logout</span>
+        </a>
+   
+      </li>
+    </ul>
+
+
+  </div>
+</div>
+
+<!-- Bottom Nav -->
+
+
+
+
 
 </html>
