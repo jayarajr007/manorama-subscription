@@ -839,13 +839,7 @@
                                                             class="ng-scope ng-isolate-scope">
                                                             <div id="capture-ev-widget.editProfile-EV2ca4c11e17d90a">
                                                                <!-- ngIf: showErrorMsgs -->
-                                                               <div ng-if="showErrorMsgs" class="ng-scope">
-                                                                  <ev-error-msg
-                                                                     error-msg-id="capture-ev-widget.editProfile-EV2ca4c11e17d90a"
-                                                                     align="center" show-cancel="true" class="ng-scope">
-                                                                     <!-- ngIf: isShowError && error.message -->
-                                                                  </ev-error-msg>
-                                                               </div>
+                                                              
                                                                <!-- end ngIf: showErrorMsgs -->
                                                                <!-- ngIf: !evForm.$ready -->
                                                                <!-- ngIf: authSchemeName && captureAttrsTemplate && evForm.$ready -->
@@ -3640,53 +3634,7 @@
                                                                   <!-- end ngIf: attribute.name !== 'password' && attribute.name !== 'confirmPassword' -->
                                                                   <!-- end ngRepeat: attribute in captureAttrsTemplate.attributes -->
                                                                   <!-- ngIf: attribute.name !== 'password' && attribute.name !== 'confirmPassword' -->
-                                                                  <div
-                                                                     ng-repeat="attribute in captureAttrsTemplate.attributes"
-                                                                     ng-if="attribute.name !== &#39;password&#39; &amp;&amp; attribute.name !== &#39;confirmPassword&#39;"
-                                                                     ng-hide="(isHiddenAttribute(attribute.name) &amp;&amp; setDefaultHiddenValue(attribute.name)) || (!showProvidedData &amp;&amp; isPopulatedAttribute(attribute.name))"
-                                                                     class="ng-scope">
-                                                                     <div class="ev">
-                                                                        <label id="label_googleSubscriptionLinked"
-                                                                           for="googleSubscriptionLinked"
-                                                                           class="ev col-sm-3 control-label widget-label ng-binding"
-                                                                           ng-show="showLabels"
-                                                                           style="padding-bottom: 0; text-align: left">googleSubscriptionLinked</label>
-                                                                        <!-- ngIf: !isCompositeAttribute(attribute) -->
-                                                                        <div ng-if="!isCompositeAttribute(attribute)"
-                                                                           class="ev col-sm-9">
-                                                                           <div name="googleSubscriptionLinked"
-                                                                              class="form-group tool-tip"
-                                                                              show-errors="">
-                                                                              <div
-                                                                                 ng-show="isShowDescription(attribute)"
-                                                                                 class="attribute-description ng-hide">
-                                                                                 <span class="ng-binding">Google
-                                                                                    subscription integration for premium
-                                                                                    user</span>
-                                                                              </div>
-                                                                              <input id="googleSubscriptionLinked"
-                                                                                 aria-labelledby="label_googleSubscriptionLinked"
-                                                                                 name="googleSubscriptionLinked"
-                                                                                 type="text"
-                                                                                 class="ev form-control widget-input ng-pristine ng-untouched ng-valid ng-empty ng-valid-required ng-valid-minlength ng-valid-maxlength"
-                                                                                 ng-class="attribute.mandatory &amp;&amp; showMandatory ? &#39;ng-dirty&#39; : &#39;&#39;"
-                                                                                 placeholder="googleSubscriptionLinked"
-                                                                                 ng-model="evAttrs.attributes[attribute.name]"
-                                                                                 minlength="1" maxlength="255"
-                                                                                 ng-required="attribute.mandatory"
-                                                                                 ng-disabled="isNonEditable(attribute.name) &amp;&amp; isPopulatedAttribute(attribute.name) || isNonEditable(attribute.name) &amp;&amp; isNotProfileWidget()"
-                                                                                 ng-blur="validationCheck(attribute.name, attribute.name, attribute)"
-                                                                                 ng-change="validationCheck(attribute.name, attribute.name, attribute, true)">
-                                                                              <!-- ngIf: showTooltip -->
-                                                                           </div>
-                                                                        </div>
-                                                                        <!-- end ngIf: !isCompositeAttribute(attribute) -->
-                                                                        <!-- ngIf: isDropdownAttribute(attribute) -->
-                                                                        <!-- ngIf: isRadioButtonAttribute(attribute) -->
-                                                                        <!-- ngIf: isCheckboxAttribute(attribute) -->
-                                                                        <!-- ngIf: isDateAttribute(attribute) -->
-                                                                     </div>
-                                                                  </div>
+                                                               
                                                                   <!-- end ngIf: attribute.name !== 'password' && attribute.name !== 'confirmPassword' -->
                                                                   <!-- end ngRepeat: attribute in captureAttrsTemplate.attributes -->
                                                                </div>
