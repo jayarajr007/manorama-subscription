@@ -132,12 +132,10 @@ background: #fff;
 
 .profile-section .widget-header
 {
-    display: flex;
-    width: 100%;
-       padding: 7px 12px;
-      font-size: 14px;
-      background: #0099c8 !important;
-          border-radius: 3px !important;
+background: #F2F2F2 !important;
+    padding: 7px 9px 7px 9px;
+    border-radius:4px;
+    padding-bottom: 6px !important;
 }
 
 .summary-section .widget-header
@@ -150,6 +148,13 @@ background: #fff;
                 border-radius: 3px !important;
 }
 
+.summary-section .widget-header .text-lt
+{
+    color: #282828;
+    font-weight: 600;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
 
 .payment-section .widget-header
 {
@@ -268,5 +273,32 @@ width: 100%;
 .selectedBillingAddressContainer
 {
 
-    background: red;
+    border: 1px solid #ccc;
+    height: 38px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: inline-flex !important;
+}
+
+
+.selectedBillingAddressContainer select#select_address_options {
+    width: 100%;
+    display: flex;
+    margin: 0 3px !important;
+}
+
+.select-address button.btn.btn-primary.element-responsive.ng-binding {
+    color: #0074ed;
+    margin-bottom: 14px;
+    margin-bottom: -2px !important;
+    font-weight: 500;
+    height: 100%;
+    display: inline-flex;
+    height: 36px;
+    background: #eaf4ff;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 10px;
+    padding: 0px 9px;
+    border-radius: 4px;
 }
