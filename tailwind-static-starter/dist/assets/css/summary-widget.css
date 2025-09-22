@@ -148,7 +148,7 @@ background: #F2F2F2 !important;
                 border-radius: 3px !important;
 }
 
-.summary-section .widget-header .text-lt
+.widget-header .text-lt
 {
     color: #282828;
     font-weight: 600;
@@ -158,12 +158,16 @@ background: #F2F2F2 !important;
 
 .payment-section .widget-header
 {
-   display: flex;
+   /* display: flex;
     width: 100%;
     padding: 7px 12px;
       font-size: 14px;
             background: #0099c8 !important;
-                border-radius: 3px !important;
+                border-radius: 3px !important; */
+                background: #F2F2F2 !important;
+    padding: 7px 9px 7px 9px;
+    border-radius:4px;
+    padding-bottom: 6px !important;
 }
 .payment-section .widget-body
 {
