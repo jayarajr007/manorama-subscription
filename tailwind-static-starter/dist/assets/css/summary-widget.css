@@ -278,8 +278,12 @@ width: 100%;
     border: 1px solid #ccc;
     border-radius: 4px;
     display: inline-flex !important;
+        width: 48%;
 }
-
+.select-address
+{
+    margin-bottom: 12px !important;
+}
 
 .selectedBillingAddressContainer select#select_address_options {
     width: 100%;
