@@ -294,21 +294,66 @@ width: 100%;
 .selectedBillingAddressContainer select#select_address_options {
     width: 100%;
     display: flex;
-    margin: 0 3px !important;
+    margin: 0 0px !important;
 }
 
 .select-address button.btn.btn-primary.element-responsive.ng-binding {
-    color: #0074ed;
+ color: #0074ed;
     margin-bottom: 14px;
     margin-bottom: -2px !important;
     font-weight: 500;
+    font-size: 14px;
     height: 100%;
-    display: inline-flex;
+    display: inline-flex
+;
     height: 36px;
-    background: #eaf4ff;
+    /* background: #eaf4ff; */
     align-items: center;
     justify-content: center;
-    margin: 0px 10px;
+    margin: 0px 5px;
     padding: 0px 9px;
     border-radius: 4px;
+}
+
+
+.selectedDeliveryAddressContainer
+{
+    height: 38px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: inline-flex !important
+;
+    width: 48%;
+}
+
+
+select#select_delivery_address_options
+{
+    width: 100%;
+    display: flex
+;
+    margin: 0 0px !important;
+}
+
+
+select#select_delivery_address_options option
+{
+
+font-size: 12px;
+
+}
+
+
+ng-include[src="firstAddressTemplate"] {
+  /* your styles */
+  display: inline-block;
+  width: 100%;
+
+}
+
+ng-include[src="secondAddressTemplate"] {
+  /* your styles */
+  display: inline-block;
+  width: 100%;
+
 }
