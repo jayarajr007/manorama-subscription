@@ -168,6 +168,8 @@ background: #F2F2F2 !important;
     padding: 7px 9px 7px 9px;
     border-radius:4px;
     padding-bottom: 6px !important;
+    display: flex;
+    width: 100%;
 }
 .payment-section .widget-body
 {
