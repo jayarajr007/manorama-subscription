@@ -1,3 +1,12 @@
+  function openOfflinesubscription() {
+    document.getElementById("Offlinesubscription").classList.remove("hidden");
+  }  
+  
+    function closeOfflinesubscription() {
+    document.getElementById("Offlinesubscription").classList.add("hidden");
+  }
+
+  
   function openPopup() {
     document.getElementById("popup").classList.remove("hidden");
   }
