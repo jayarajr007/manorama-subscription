@@ -563,14 +563,15 @@
 
   <div id="Offlinesubscription"
          class="popcont fixed m-0 inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 hidden px-4">
-        <div class="pop_bx rounded-lg relative bg-white shadow-lg w-full max-w-[420px] max-h-[80vh] flex flex-col">
+        <div class="pop_bx rounded-lg relative bg-white shadow-lg w-full max-w-[420px] max-h-[80vh] flex flex-col overflow-hidden">
             <button onclick="closeOfflinesubscription()"
                 class="absolute top-2 right-2 text-gray-600 hover:text-red-500 text-xl z-10">&times;</button>
             
             <!-- Initial Content View -->
-            <div id="initialView">
+            <div id="initialView"> 
+
                 <!-- Fixed Header -->
-                <div class="p-6 pb-4 border-b bg-white">
+                <div class="p-6 pb-4 border-b bg-white round-md">
                     <h2 class="text-lg font-semibold text-gray-800">
                         Retrieve Offline Subscription
                     </h2>
