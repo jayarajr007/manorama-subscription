@@ -396,3 +396,7 @@ width: 36px;
   }
 }
 
+
+#categoryMenu .tab-content p {
+    overflow-wrap: break-word;
+}
