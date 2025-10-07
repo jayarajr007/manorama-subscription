@@ -46,7 +46,7 @@ $(window).on('load', function () {
             },
             {
                 breakpoint: 768, // Small screens
-                settings: { slidesToShow: 6 }
+                settings: { slidesToShow: 4 }
             },
             {
                 breakpoint: 480, // Extra small screens
