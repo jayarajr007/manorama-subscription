@@ -275,16 +275,22 @@ div#changeAddressContainer div[id^=thumbnail-card-address-].selected {
 .mysubscription-wrapper #changeAddressContainer .row .card-thumbnail:last-child #thumbnail-card-address-new {
   /* styles here */
 
- min-height: auto !important;
+ /* min-height: auto !important; */
     /* background: #ccc; */
     border: none;
 }
 
 .mysubscription-wrapper #changeAddressContainer .row .card-thumbnail:last-child #thumbnail-card-address-new span {
-  /* styles here */
-    color: #0155de;
+ color: #0155de;
     font-weight: 500;
-        padding-bottom: 45px;
+    padding: 10px;
+    margin: auto;
+    display: block;
+    text-align: center;
+    margin-top: 22px;
+    background: #d8edff;
+    /* border: 1px solid #0074ed; */
+    border-radius: 5px;
 }
 
 .mysubscription-wrapper #change-address-footer
