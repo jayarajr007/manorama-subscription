@@ -191,4 +191,18 @@ $(window).on('load', function () {
         });
     });
 
+
+document.addEventListener('DOMContentLoaded', function() {
+    const dropdownGroups = document.querySelectorAll('.dropdown-group');
+    const selectElements = document.querySelectorAll('select');
+    
+    dropdownGroups.forEach(group => {
+        group.addEventListener('mouseenter', function() {
+            selectElements.forEach(select => {
+                select.blur(); // This closes the select dropdown
+            });
+        });
+    });
+});
+
 // end sort popup mobile bg scroll hide
