@@ -31,7 +31,7 @@ $(window).on('load', function () {
 
 $(window).on('load', function () {
     $('.slider-my-digital-purchases').slick({
-        slidesToShow: 10, // Show 5 items on large screens
+        slidesToShow: 8, // Show 5 items on large screens
         slidesToScroll: 1,
         dots: false,
         arrows: true, infinite: false,
@@ -40,17 +40,26 @@ $(window).on('load', function () {
 
 
         responsive: [
+            {  
+                breakpoint:1198,
+                settings: { slidesToShow: 6 }
+            },
             {
                 breakpoint: 1024, // Medium screens
-                settings: { slidesToShow: 8 }
+                settings: { slidesToShow: 5 }
             },
             {
                 breakpoint: 768, // Small screens
                 settings: { slidesToShow: 4 }
             },
+
+            {
+                breakpoint: 588, // Small screens
+                settings: { slidesToShow: 3 }
+            },
             {
                 breakpoint: 480, // Extra small screens
-                settings: { slidesToShow: 3 }
+                settings: { slidesToShow: 2 }
             }
         ]
     });
