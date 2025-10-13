@@ -55,6 +55,36 @@
     font-display: swap;
 }
 
+
+@font-face {
+    font-family: 'Noto Sans';
+    src: url('../font/Nato/NotoSans-SemiBold.woff2') format('woff2'),
+        url('../font/Nato/NotoSans-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans';
+    src: url('../font/Nato/NotoSans-Regular.woff2') format('woff2'),
+        url('../font/Nato/NotoSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans';
+    src: url('../font/Nato/NotoSans-Medium.woff2') format('woff2'),
+        url('../font/Nato/NotoSans-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
@@ -66,7 +96,10 @@ html {
 body {
     font-family: 'Poppins', sans-serif;
 }
+.price {
+  font-family: 'Noto Sans', sans-serif;
 
+}
 
     /* Hide all slides except the first before Slick initializes */
     .slick-slider:not(.slick-initialized)>div:not(:first-child) {
