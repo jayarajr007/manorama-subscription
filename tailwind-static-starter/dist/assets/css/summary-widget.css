@@ -188,6 +188,7 @@ align-items: center;
     .mobile-table-header {
      
         font-weight: 500 !important;
+        display: none !important;
     }
 
 
@@ -198,6 +199,7 @@ table tr.mobile-table-item {
         box-shadow: 0 0 5px 2px #dadada4d;
    
         border-radius: 5px;
+        margin-bottom: 7px !important;
     }
 
 
