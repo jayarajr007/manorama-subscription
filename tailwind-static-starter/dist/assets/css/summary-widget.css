@@ -15,10 +15,26 @@
     display: table !important;
 }
 
-/* Hide columns 4 and onwards */
+/* Hide columns 1, 3, and 4 onwards */
+.bundle-product-summary table.table.table-striped th:nth-child(1),
+.bundle-product-summary table.table.table-striped td:nth-child(1),
+.bundle-product-summary table.table.table-striped th:nth-child(3),
+.bundle-product-summary table.table.table-striped td:nth-child(3),
 .bundle-product-summary table.table.table-striped th:nth-child(n+4),
 .bundle-product-summary table.table.table-striped td:nth-child(n+4) {
     display: none;
+}
+.bundle-product-summary div[ng-if="showTotalDiscount"]
+{
+  display: none !important;  
+}
+.bundle-product-summary div[ng-if="showTotalQuantity"]
+{
+  display: none !important;  
+}
+.bundle-product-summary div[ng-if="showTotalBasePrice"]
+{
+  display: none !important;  
 }
 
 /* Make table full width */
@@ -55,6 +71,8 @@
 .bundle-product-summary table.table.table-striped th:nth-child(3),
 .bundle-product-summary table.table.table-striped td:nth-child(3) {
     width: 60%;
+    padding-left: 0px !important;
+     padding-right: 0px !important;
 }
 .bundle-product-summary table.table.table-striped th.table-header
 {
