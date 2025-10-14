@@ -9,6 +9,72 @@
 {
     display: none;
 }
+
+.bundle-product-summary table.table.table-striped
+{
+    display: table !important;
+}
+
+/* Hide columns 4 and onwards */
+.bundle-product-summary table.table.table-striped th:nth-child(n+4),
+.bundle-product-summary table.table.table-striped td:nth-child(n+4) {
+    display: none;
+}
+
+/* Make table full width */
+.bundle-product-summary table.table.table-striped {
+    width: 100%;
+    table-layout: fixed;
+}
+
+/* Remove padding/margins from table */
+.bundle-product-summary table.table.table-striped {
+    width: 100%;
+    table-layout: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove cell padding if needed */
+.bundle-product-summary table.table.table-striped th,
+.bundle-product-summary table.table.table-striped td {
+    padding: 8px;  /* Adjust this value as needed */
+}
+
+/* First column - 70px */
+.bundle-product-summary table.table.table-striped th:nth-child(1),
+.bundle-product-summary table.table.table-striped td:nth-child(1) {
+    width: 70px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+/* Second and third columns - equal width */
+.bundle-product-summary table.table.table-striped th:nth-child(2),
+.bundle-product-summary table.table.table-striped td:nth-child(2),
+.bundle-product-summary table.table.table-striped th:nth-child(3),
+.bundle-product-summary table.table.table-striped td:nth-child(3) {
+    width: 60%;
+}
+.bundle-product-summary table.table.table-striped th.table-header
+{
+   font-size: 12px;
+    text-align: left;
+    font-weight: 500;
+    margin-bottom: 13px;
+    padding-bottom: 14px;
+}
+.bundle-product-summary table.table.table-striped td
+{
+font-size: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ededed;
+    padding-bottom: 12px;
+    padding-top: 10px;
+    color: #2d2d2d;
+}
+
+
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide:not(.ng-hide-animate) {
     display: none;
 }
@@ -79,6 +145,50 @@ margin-right: 10px;
     width: 95%;
     max-width: 400px;
     margin: 0 auto;
+}
+
+.bundle-product-summary table.table.table-striped th:nth-child(1),
+.bundle-product-summary table.table.table-striped td:nth-child(1) {
+    width: 100%;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.bundle-product-summary table.table.table-striped td span {
+   
+   display: flex;
+height: 20px;
+align-items: center;
+}
+.bundle-product-summary table.table.table-striped th span {
+   
+   display: flex;
+height: 20px;
+align-items: center;
+   
+}
+    .mobile-table-header {
+     
+        font-weight: 500 !important;
+    }
+
+
+
+
+table tr.mobile-table-item {
+    
+        box-shadow: 0 0 5px 2px #dadada4d;
+   
+        border-radius: 5px;
+    }
+
+
+/* Second and third columns - equal width */
+.bundle-product-summary table.table.table-striped th:nth-child(2),
+.bundle-product-summary table.table.table-striped td:nth-child(2),
+.bundle-product-summary table.table.table-striped th:nth-child(3),
+.bundle-product-summary table.table.table-striped td:nth-child(3) {
+    width: 100%;
 }
 
 }
