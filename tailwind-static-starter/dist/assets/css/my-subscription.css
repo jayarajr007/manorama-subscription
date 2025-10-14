@@ -1,3 +1,9 @@
+  body {
+
+  background: #f5f5f5;
+}
+
+  
   .mysubscription-wrapper
   {
   font-family: 'Poppins', sans-serif;
@@ -6,7 +12,10 @@
 
 .my-subscription
 {
-        min-height: calc(100vh - 542px);
+    min-height: calc(100vh - 542px);
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
 }
 
 .my-subscription .widget-body 
@@ -87,12 +96,18 @@ border-bottom: 1px solid #ccc;
     }
 
         table tr.mobile-table-item {
-        padding: 0px 16px;
+padding: 0px 11px;
+box-shadow: none !important;
+    
+        border: 1px solid #ededed;
+        border-radius: 7px;
         }
 
             .mobile-table-header {
    
         font-weight: 500;
+
+        
      
     }
 
@@ -115,6 +130,11 @@ border-bottom: 1px solid #ccc;
 font-size: 12px !important;
         padding: 6px 7px !important;
         line-height: 19px;
+}
+
+.my-subscription
+{
+    padding: 9px !important;
 }
 }
 
