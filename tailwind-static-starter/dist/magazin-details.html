@@ -241,9 +241,9 @@
                             <button class="text-left hover:text-blue-500 flex items-center text-sm"
                                 aria-label="userprofile">
                                 <div class="md:mr-0 mr-0 w-8 h-8 i-user profile"></div>
-                                <span class="droparrow w-5 h-3"></span>
+                                <!-- <span class="droparrow w-5 h-3"></span> -->
                             </button>
-                            <ul class="absolute right-2 w-48 bg-white shadow-lg z-50 hidden group-hover:block">
+                            <!-- <ul class="absolute right-2 w-48 bg-white shadow-lg z-50 hidden group-hover:block">
                                 <li class="px-4 py-2 bg-gray-100">
                                     <div class="flex">
                                         <div
@@ -269,7 +269,22 @@
                                         class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-500 font-light">Log
                                         Out</a>
                                 </li>
-                            </ul>
+                            </ul> -->
+
+                            <!-- Tooltip Box -->
+        <div id="loginTooltip" class="absolute right-0 mt-3 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+          <!-- Arrow Pointer -->
+          <div class="absolute -top-2 right-4 w-3 h-3 bg-white transform rotate-45 border-l border-t border-gray-200"></div>
+          
+          <!-- Tooltip Content -->
+          <div class="relative bg-white border border-gray-200 rounded shadow-lg">
+            <div class="p-2 text-center">
+              <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 px-4 rounded shadow-sm transition-colors">
+                Login
+              </button>
+            </div>
+          </div>
+        </div>
                         </div>
                     </div>
                     <!-- End Icons -->
@@ -2461,6 +2476,8 @@
 
     <script src="assets/js/magazindetail.js" defer></script>
     <script src="assets/js/detail.js" defer></script>
+
+
 </body>
 
 </html>

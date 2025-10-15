@@ -159,3 +159,19 @@ document.querySelectorAll('.large-dropdown').forEach(menu => {
      }, 3000);
     }
 
+
+
+
+window.addEventListener('DOMContentLoaded', function() {
+  const tooltip = document.getElementById('loginTooltip');
+  
+  // Show immediately
+  tooltip.classList.remove('opacity-0', 'invisible');
+  tooltip.classList.add('opacity-100', 'visible');
+  
+  // Hide after 3 seconds
+  setTimeout(function() {
+    tooltip.classList.remove('opacity-100', 'visible');
+    tooltip.classList.add('opacity-0', 'invisible');
+  }, 3000);
+});
