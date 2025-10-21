@@ -69,8 +69,7 @@ $(window).on('load', function () {
 
 
 
-
-    var $slider = $('.large-thumb-slider');
+var $slider = $('.large-thumb-slider');
 var slideCount = $slider.children().length; // Counts original slides
 
 $slider.slick({
