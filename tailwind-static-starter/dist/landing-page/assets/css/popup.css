@@ -1,0 +1,28 @@
+.popcont{
+    margin: 0!important;
+}
+.popcont .pop_bx{
+    width: 50%;
+}
+.popcont .pop_bx_ct{
+    max-height: 520px;
+    overflow-y: auto;
+}
+@media(max-width:574px){
+   .popcont .pop_bx{
+        width: 90%;
+    } 
+    .popcont .pop_bx .pop_bx_ct{
+        max-height: 420px;
+        overflow-y: auto;
+    } 
+}
+@media(min-width:575px) and (max-width:767px){
+   .popcont .pop_bx{
+        width: 80%;
+    } 
+    .popcont .pop_bx .pop_bx_ct{
+        max-height: 420px;
+        overflow-y: auto;
+    } 
+}

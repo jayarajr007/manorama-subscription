@@ -1,0 +1,459 @@
+  body {
+
+  background: #f5f5f5;
+}
+
+  
+  .mysubscription-wrapper
+  {
+  font-family: 'Poppins', sans-serif;
+  }
+
+
+.my-subscription
+{
+    min-height: calc(100vh - 542px);
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.my-subscription .widget-body 
+{
+    padding: 18px 0px;
+}
+
+.my-subscription .purchases-list-container table
+{
+     width: 100%;
+    text-align: left;
+}
+
+.my-subscription .purchases-list-container .table-responsive
+{
+        padding: 0px 8px;
+}
+.my-subscription .widget-header
+{
+          background: #F2F2F2 !important;
+    padding: 7px 9px;
+    border-radius: 4px;
+}
+
+.my-subscription .widget-header span
+{
+       color: #282828;
+    font-weight: 600;
+    font-size: 16px;
+      font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+.my-subscription .purchases-list-container table th
+{
+
+font-weight: 600;
+font-size: 14px;
+padding-bottom: 8px;
+
+}
+
+.my-subscription .purchases-list-container table td
+{
+border-bottom: 1px solid #f1f1f1;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 13px 0px;
+    color: #464646;
+
+}
+.my-subscription .purchases-list-container table tr:first-child {
+
+border-bottom: 1px solid #ccc;
+}
+.my-subscription .purchases-list-container table tr .dropdown-toggle
+{
+  background-color: #e5efff;
+    padding: 6px 10px;
+
+    border-radius: 3px;
+    font-size: 13px;
+    color: #2563eb;
+}
+
+
+@media (max-width: 767.98px) {
+    .my-subscription .purchases-list-container table td
+    {
+           display: flex
+;
+        justify-content: space-between;
+        padding: 3px 0px;
+        flex-wrap: wrap;
+                font-size: 13px;
+    }
+
+        table tr.mobile-table-item {
+padding: 0px 11px;
+box-shadow: none !important;
+    
+        border: 1px solid #ededed;
+        border-radius: 7px;
+        }
+
+            .mobile-table-header {
+   
+        font-weight: 500;
+
+        
+     
+    }
+
+
+.my-subscription .purchases-list-container table tr .dropdown-toggle
+{
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    display: flex
+;
+}
+.dropdown.purchases-list-dropdown-right ul.dropdown-menu {
+    position: absolute !important;
+  
+}
+
+
+.dropdown.purchases-list-dropdown-right ul.dropdown-menu li {
+font-size: 12px !important;
+        padding: 6px 7px !important;
+        line-height: 19px;
+}
+
+.my-subscription
+{
+    padding: 9px !important;
+}
+}
+
+
+.dropdown.purchases-list-dropdown-right {
+    position: relative;
+        display: flex
+;
+    justify-content: flex-end;
+}
+
+.dropdown.purchases-list-dropdown-right ul.dropdown-menu {
+    position: absolute;
+    top: 28px;
+    z-index: 9;
+    background: #ffffff;
+    padding: 3px 5px;
+    border-radius: 6px;
+    border: 1px solid #dfdfdf;
+    font-size: 12px;
+    box-shadow: 1px 2px 3px #cccccc3b;
+font-weight: 500;
+    right: 0px;
+}
+
+
+.dropdown.purchases-list-dropdown-right ul.dropdown-menu li {
+    font-size: 14px;
+    width: 176px;
+    padding: 8px 7px;
+}
+.dropdown.purchases-list-dropdown-right ul.dropdown-menu li :hover {
+color: #3b82f6;
+}
+
+
+
+
+
+/*modal*/
+/* Entire Modal */
+
+.mysubscription-wrapper .ev-open-modal-change-address div#address-info
+{
+    padding: 10px;
+    font-size: 14px;
+}
+
+
+.mysubscription-wrapper .ev-open-modal-change-address div#address-options
+{
+    font-size: 14px;
+    padding: 0px 10px !important;
+    margin-bottom: 6px !important;
+
+}
+
+.mysubscription-wrapper .ev-open-modal-change-address div#address-options #address-edit
+{
+  color: #0074ed;
+
+}
+
+
+
+
+.mysubscription-wrapper .ev-open-modal-change-address div#address-options strong
+{
+font-weight: 600 !important;
+       font-size: 14px !important; 
+       color: #086708;
+            
+}
+
+.mysubscription-wrapper .ev-open-modal-change-address div#address-info strong
+{
+ font-weight: 600 !important;
+}
+.mysubscription-wrapper .ev-open-modal-change-address div#address-info div.ng-scope
+{
+    padding-bottom: 10px !important;
+
+}
+
+
+.mysubscription-wrapper .ev-open-modal-change-address div#address-info div.ng-scope div
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* optional: keeps vertical alignment neat */
+
+}
+
+
+
+.mysubscription-wrapper .ev-open-modal-change-address div#changeAddressContainer .thumbnail {
+    min-height: 148px !important;
+    position: relative;
+    border: 1px solid #cecece;
+    margin: 10px;
+    border-radius: 6px;
+    background: #ffffff;
+}
+
+div#changeAddressContainer div[id^=thumbnail-card-address-].selected {
+    background-color: #ffffff !important;
+    border: 1px solid #0074ed !important;
+}
+
+
+
+.mysubscription-wrapper .ev-open-modal-change-address .thumbnail.select-card-pointer:hover {
+ 
+    box-shadow: 1px 2px 8px #c5c5c56e !important;
+}
+
+.mysubscription-wrapper .ev-open-modal-change-address div#changeAddressContainer div#containerTitle h4 {
+    font-size: 17px !important;
+    font-weight: 500 !important;
+    margin-top: 8px;
+    text-align: left !important;
+    padding: 0px 11px;
+    color: #2b2b2b;
+}
+
+
+.mysubscription-wrapper .widget-header {
+
+    background: #eeeeee !important;
+ 
+}
+
+
+.mysubscription-wrapper #changeAddressContainer
+{
+    height: calc(100vh - 124px);
+    overflow-y: scroll;
+}
+
+
+@media (min-width: 992px) {
+   .mysubscription-wrapper .modal-lg
+ {
+        width: 500px !important;
+    }
+    div#changeAddressContainer div#address-add-fields, div#changeAddressContainer div#address-edit-fields
+    {
+        width: 70% !important;
+    }
+}
+
+   div#changeAddressContainer div#address-add-fields, div#changeAddressContainer div#address-edit-fields
+    {
+        width: 90% !important;
+        margin: auto;
+    display: block;
+    }
+.mysubscription-wrapper #changeAddressContainer .row .card-thumbnail:last-child #thumbnail-card-address-new {
+  /* styles here */
+
+ /* min-height: auto !important; */
+    /* background: #ccc; */
+    border: none;
+}
+
+.mysubscription-wrapper #changeAddressContainer .row .card-thumbnail:last-child #thumbnail-card-address-new span {
+ color: #0155de;
+    font-weight: 500;
+    padding: 10px;
+    margin: auto;
+    display: block;
+    text-align: center;
+    margin-top: 22px;
+    background: #d8edff;
+    /* border: 1px solid #0074ed; */
+    border-radius: 5px;
+}
+
+.mysubscription-wrapper #change-address-footer
+{
+        background: #fff;
+    padding: 12px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+        border-top: 1px solid #ccc;
+    box-shadow: 1px 2px 3px #ccc !important;
+    display: flex
+;
+    justify-content: space-between;
+}
+ .mysubscription-wrapper #purchase-change-address-modal .btn-primary 
+{
+background: #0074ed;
+    padding: 9px 13px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+}
+
+
+.mysubscription-wrapper #purchase-change-address-modal .btn-default
+{
+    padding: 9px 13px;
+    border: 1px solid #0074ed;
+    font-size: 14px;
+    border-radius: 5px;
+    color: #0074ed;
+}
+
+
+#change-address-edit-section h4{
+        font-size: 18px !important;
+margin-top: 11px;
+    font-weight: 500;
+    color: #272727;
+        margin-bottom: 11px;
+}
+
+#change-address-edit-section  .form-group input
+{
+background: #ffffff;
+    border: 1px solid #d9d9d9;
+    padding: 10px 5px;
+    border-radius: 3px;
+    margin-top: 5px;
+    margin-bottom: 13px;
+    font-size: 14px;
+}
+
+#change-address-edit-section  .form-group select
+{
+background: #ffffff;
+    border: 1px solid #d9d9d9;
+     padding: 10px 5px;
+    border-radius: 3px;
+    margin-top: 5px;
+    margin-bottom: 13px;
+    font-size: 14px;
+}
+
+#change-address-edit-section  label
+{
+
+font-size: 14px !important; 
+}
+
+
+div#address-edit-warning-message {
+    font-weight: 500 !important;
+    padding-bottom: 10px;
+    font-size: 14px !important;
+    padding: 0px 17px;
+    margin: 17px 0px;
+    color: red;
+}
+
+.widget-header .text-lt {
+    color: #282828;
+    font-weight: 600;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+
+#changeAddressContainer h4{
+        font-size: 18px !important;
+margin-top: 11px;
+    font-weight: 500;
+    color: #272727;
+        margin-bottom: 11px;
+}
+
+#changeAddressContainer  .form-group input
+{
+background: #ffffff;
+    border: 1px solid #d9d9d9;
+    padding: 10px 5px;
+    border-radius: 3px;
+    margin-top: 5px;
+    margin-bottom: 13px;
+    font-size: 14px;
+}
+
+#changeAddressContainer  .form-group select
+{
+background: #ffffff;
+    border: 1px solid #d9d9d9;
+     padding: 10px 5px;
+    border-radius: 3px;
+    margin-top: 5px;
+    margin-bottom: 13px;
+    font-size: 14px;
+}
+
+#changeAddressContainer  label
+{
+
+font-size: 14px !important; 
+}
+
+.mysubscription-wrapper .ev-open-modal-change-address
+{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+
+.mysubscription-wrapper .modal-content
+{
+
+  margin: 15px !important;  
+}
+
+/**modal end*/
+
+
+
