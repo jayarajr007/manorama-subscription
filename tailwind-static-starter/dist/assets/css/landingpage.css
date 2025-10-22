@@ -143,3 +143,20 @@
     border-radius: 4px;
     font-weight: 600;
   }
+.bg-creamdark{
+	/* background-color: var(--cream-color); */
+background: linear-gradient(270deg, #ff8a00, #e52e71, #ff8a00);
+background-size: 600% 600%;
+animation: gradientFlow 5s ease infinite;
+}
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
