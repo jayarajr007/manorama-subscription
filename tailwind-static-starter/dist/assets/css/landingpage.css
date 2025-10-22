@@ -128,7 +128,9 @@
         left: -3px;
         top: -2px;
   }
-
+.recommeded {
+    top: -11px;
+}
     .peer:checked~.single-issue-item .issue-date
   {
    

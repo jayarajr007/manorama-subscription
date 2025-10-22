@@ -23,9 +23,9 @@
 
    <body class>
 
-      <!-- Navbar -->
-      <!-- Header -->
-      <!-- Navbar -->
+  
+
+      <!--Header-->
    <header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
 <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between px-6 py-4 border-b ">
   <!-- Logo -->
@@ -43,7 +43,10 @@
 
 </header>
 
-<!-- Add padding top to avoid content being hidden behind header -->
+   <!--Header End-->
+
+
+
 
 
 
@@ -70,11 +73,11 @@
       alt="The Week Cover"
       class="absolute top-1/2 right-0 -translate-y-1/2 w-32 sm:w-36 md:w-40 rounded shadow-md opacity-80 hidden sm:block">
   </div>
-</div>
+           </div>
 
 
          <!-- Right: Text Content -->
-         <div>
+         <div class="lg:px-0 md:px-4 ">
             <h2
                class="text-xl md:text-3xl font-bold text-gray-800 leading-snug text-center md:text-left">
                Stay Ahead With The Week – India’s Most Trusted News Magazine
@@ -111,6 +114,11 @@
           
          </div>
       </section>
+      <!-- Hero Section End -->
+
+
+
+      <!-- Plan section-->
 
       <section id="plan">
 
@@ -777,7 +785,7 @@
 
                </div>
 
-
+    <!-- Tabs  End-->
 
 
 <div class="mt-2 flex justify-center items-center">
@@ -788,9 +796,18 @@
 
          </div>
       </section>
-<section class="max-w-7xl mx-auto px-6 py-12" id="why-product">
+     <!-- Plan section End -->
+
+
+
+
+
+
   <!-- Why Subscribe Section -->
-  <h2 class="text-2xl font-bold mb-8">Why Subscribe To THE WEEK ?</h2>
+
+<section class="max-w-7xl mx-auto px-6 py-12" id="why-product">
+
+  <h2 class="text-2xl font-bold mb-8 text-center">Why Subscribe To THE WEEK ?</h2>
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
     <div class="bg-gray-50 rounded-lg shadow-sm p-6 hover:shadow-md transition">
       <h3 class="font-semibold text-gray-800 mb-2">Unmatched Weekly Insights</h3>
@@ -818,6 +835,9 @@
     </div>
   </div>
 </section>
+  <!-- Why Subscribe Section End -->
+
+
 
 <!-- FAQ Section -->
 <section class="max-w-3xl mx-auto px-6 py-12" id="faq">
@@ -903,6 +923,9 @@
     </div>
   </div>
 </section>
+<!-- FAQ Section End -->
+
+
 
 <section class="max-w-5xl mx-auto px-6 py-8 pb-40">
   <!-- Title -->
@@ -920,6 +943,7 @@
     </a>
   </p>
 </section>
+
 <!-- Sticky Bottom Bar -->
 <div class="fixed bottom-0 left-0 w-full bg-white shadow-lg border-t border-gray-200 z-50">
   <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
@@ -946,81 +970,19 @@
     </a>
   </div>
 </div>
+<!-- Sticky Bottom Bar End -->
 
 
 
-<script>
-  // FAQ Toggle Logic
-  document.querySelectorAll(".faq-toggle").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const content = btn.nextElementSibling;
-      const icon = btn.querySelector(".faq-icon");
-
-      // Toggle visibility
-      content.classList.toggle("hidden");
-
-      // Change +/-
-      if (icon.textContent === "+") {
-        icon.textContent = "–";
-      } else {
-        icon.textContent = "+";
-      }
-    });
-  });
-</script>
 
       <link href="assets/css/common.css" type="text/css" rel="stylesheet" />
 
-      <link href="assets/css/detail.css" type="text/css" rel="stylesheet" />
-      <link rel="stylesheet" type="text/css"
-         href="assets/libs/slick-slider/slick.css" media="print"
-         onload="this.media='all'" />
-      <link rel="stylesheet" type="text/css"
-         href="assets/libs/slick-slider/slick-theme.css" media="print"
-         onload="this.media='all'" />
-
       <script src="assets/libs/Jquery/jquery-3.7.1.min.js"></script>
 
-      <script src="assets/libs/slick-slider/slick.min.js" defer></script>
-
-      <script src="assets/js/common.js" defer></script>
-
-
-      <script>
- // Tabs
-    const tabs = document.querySelectorAll(".tab-btn");
-    const contents = document.querySelectorAll(".tab-content");
-
-    tabs.forEach(tab => {
-      tab.addEventListener("click", () => {
-        tabs.forEach(t => t.classList.remove("text-blue-600", "border-b-2", "border-blue-600"));
-        tab.classList.add("text-blue-600", "border-b-2", "border-blue-600");
-
-        contents.forEach(c => c.classList.add("hidden"));
-        document.getElementById(tab.dataset.tab).classList.remove("hidden");
-      });
-    });
-
-    // Quantity
-    let qty = 1;
-    document.querySelectorAll(".qty-btn").forEach(btn => {
-      btn.addEventListener("click", () => {
-        if (btn.textContent === "-" && qty > 1) qty--;
-        if (btn.textContent === "+") qty++;
-        document.getElementById("qty").textContent = qty;
-      });
-    });
+      <script src="assets/js/landing.js" defer></script>
 
 
 
-
-
-
-
-
-
-
-</script>
    </body>
 
 </html>
