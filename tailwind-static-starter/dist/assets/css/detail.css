@@ -453,6 +453,82 @@ left: -11px !important;
 }
 
 
+/*single issue slider correctiom*/
+
+/* Hide all slider items except the first one before Slick initializes */
+.slider-singleissue:not(.slick-initialized) label {
+  display: none;
+}
+
+.slider-singleissue:not(.slick-initialized) label:first-child {
+  display: block;
+  width: 100%;
+  max-width: 200px; /* Adjust based on your design */
+}
+
+/* Optional: Add a loading state */
+.slider-singleissue:not(.slick-initialized) {
+  min-height: 200px; /* Adjust based on your card height */
+  position: relative;
+}
+
+/* Optional: Prevent layout shift by reserving space */
+.slider-singleissue:not(.slick-initialized)::after {
+  content: '';
+  display: block;
+  height: 100%;
+}
+
+/* Smooth transition when Slick initializes */
+.slider-singleissue.slick-initialized label {
+  display: block;
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Alternative: If you want to show a loading indicator */
+.slider-singleissue:not(.slick-initialized)::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  z-index: 10;
+}
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Remove the loader when initialized */
+.slider-singleissue.slick-initialized::before {
+  display: none;
+}
+
+
+.slider-singleissue .slick-track
+{
+  margin-left: 0px !important;
+}
+
+/*single issue slider correction end */
+
+
 
 
 @media (max-width: 991px) {
