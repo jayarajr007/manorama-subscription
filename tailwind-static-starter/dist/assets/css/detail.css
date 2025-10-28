@@ -79,6 +79,14 @@ content: "";
     height: 50px;
     text-transform: uppercase;
 }
+.mobileaddcart .addcart1 
+{
+  display: none;
+}
+.addcart
+{
+  display: none;
+}
 /* .slider-singleissue .slick-next {
     right: 0;
     background: #ececec9e;
