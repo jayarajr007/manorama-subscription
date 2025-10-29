@@ -534,6 +534,13 @@ left: -11px !important;
   margin-left: 0px !important;
 }
 
+
+.gift-box img.mx-auto.object-contain.mb-2 {
+  border-radius: 5px;
+  border: 1px solid #eeeeee;
+}
+
+
 /*single issue slider correction end */
 
 
