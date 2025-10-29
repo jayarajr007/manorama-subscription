@@ -594,6 +594,14 @@ ng-include[src="secondAddressTemplate"] {
             background: #1e40af;
         }
 
+
+.product-summary-footer span.value.ng-binding {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.profile-section span.ng-scope[ng-if*="showMandatory"] {
+  color: red;
+}
         /* Responsive design */
         @media (max-width: 768px) {
             .grid-container {
