@@ -153,4 +153,6 @@ left: -11px !important;
 }
 
 
-
+.category-horizontal-scroll .w-14 {
+    border: 1px solid #dedede !important;
+}
