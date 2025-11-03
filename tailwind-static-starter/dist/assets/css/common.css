@@ -437,6 +437,13 @@ width: 36px;
 
 #categoryMenu .tab-content p {
     overflow-wrap: break-word;
+        display: -webkit-box;
+    -webkit-line-clamp: 2;  /* Number of lines to show */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.2em;      /* Adjust line height */
+    max-height: 2.4em;       /* line-height × 2 lines */
 }
 
 
