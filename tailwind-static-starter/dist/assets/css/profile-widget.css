@@ -265,7 +265,7 @@ body {
 }
 
 /* Error Messages */
-.my-profile ev-error-msg {
+/* .my-profile ev-error-msg {
   display: block;
   background: #fef2f2;
   border: 1px solid #fecaca;
@@ -273,7 +273,7 @@ body {
   padding: 16px;
   margin-bottom: 24px;
   color: #dc2626;
-}
+} */
 
 /* Loading States */
 .my-profile .ng-hide {
