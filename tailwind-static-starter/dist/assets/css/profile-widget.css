@@ -471,3 +471,17 @@ ev-date.ng-valid-dob col-sm-3 {
 .my-profile .ev .alert {
   margin-bottom: 0px;
 }
+
+
+
+.my-profile .edit-profile-legend::before {
+    content: '*';
+    color: red;
+    padding-right: 5px;
+}
+
+
+ .my-profile label#label_first_name:after, .my-profile label#label_last_name:after {
+    content: "*";
+    color: red;
+}
