@@ -496,3 +496,10 @@ ease-in-out infinite;
 }
 
 
+.cartico span {
+    background: #ec1c24 !important;
+}
+
+.layout-1col img {
+    border-radius: 7px;
+}
