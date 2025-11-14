@@ -175,9 +175,13 @@ content: "";
 .hide-overflow img
 {
 width: 60px;
-    height: 60px;
+height: 60px;
+object-fit: cover;
+}
 
-    object-fit: cover;
+#filterPanel .tab-content {
+    max-height: calc(100vh - 300px);
+    overflow: scroll;
 }
 
 
