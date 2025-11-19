@@ -63,7 +63,7 @@
 (function(){
 
   /* ---------------------------- CONFIG --------------------------- */
-  const FORM_URL = "https://script.google.com/macros/s/AKfycbwrpLMnL80N79I7a6AoBTu4t9k0_uWuC2P4zQLKgOLvKZI6kQDU91F8rZcZGpyagi6q/exec";
+  const FORM_URL = "https://script.google.com/macros/s/AKfycbylc3QAvHM9DaLr9KrLo9zMKTSyUiH3TBcB3ptGNTARUf7bPn7Iqxtk5-A3US1UXwEl/exec";
 
   const DOWNLOAD_URL = "https://example.com/discount";  
   /* --------------------------------------------------------------- */
@@ -87,7 +87,7 @@
   const root = document.getElementById("psc-quiz-widget");
   const debugOutput = document.getElementById("debug-output");
   
-  // Debug logging function
+  // Debug log
   function debugLog(message) {
     console.log(message);
     const timestamp = new Date().toLocaleTimeString();
@@ -171,37 +171,21 @@
     debugLog(`Attempting to send: Name="${name}", Phone="${phone}"`);
     debugLog(`Sending to: ${FORM_URL}`);
 
-    const payload = {
-      name: name,
-      phone: phone,
-      score: "",
-      page: location.href
-    };
+    const fd = new FormData();
+    fd.append("name", name);
+    fd.append("phone", phone);
+    fd.append("score", "");
+    fd.append("page", location.href);
 
-    debugLog(`Payload: ${JSON.stringify(payload)}`);
+    debugLog(`Payload: name=${name}, phone=${phone}`);
 
     fetch(FORM_URL, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload)
+      body: fd
     })
-    .then(response => {
-      debugLog(`Response status: ${response.status}`);
-      return response.text();
-    })
-    .then(text => {
-      debugLog(`Response text: ${text}`);
-      try {
-        const json = JSON.parse(text);
-        debugLog(`Response JSON: ${JSON.stringify(json)}`);
-      } catch(e) {
-        debugLog(`Could not parse as JSON: ${e.message}`);
-      }
-    })
-    .catch(error => {
-      debugLog(`ERROR: ${error.message}`);
-      debugLog(`Error details: ${JSON.stringify(error)}`);
-    });
+    .then(r => r.text())
+    .then(t => debugLog("Response: " + t))
+    .catch(e => debugLog("ERROR: " + e.message));
 
     renderQuestion();
   }
@@ -260,36 +244,19 @@
 
     debugLog(`Submitting final score: ${score}`);
 
-    const payload = {
-      name: lead.name,
-      phone: lead.phone,
-      score: score,
-      page: location.href
-    };
-
-    debugLog(`Final payload: ${JSON.stringify(payload)}`);
+    const fd2 = new FormData();
+    fd2.append("name", lead.name);
+    fd2.append("phone", lead.phone);
+    fd2.append("score", score);
+    fd2.append("page", location.href);
 
     fetch(FORM_URL, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload)
+      body: fd2
     })
-    .then(response => {
-      debugLog(`Final response status: ${response.status}`);
-      return response.text();
-    })
-    .then(text => {
-      debugLog(`Final response text: ${text}`);
-      try {
-        const json = JSON.parse(text);
-        debugLog(`Final response JSON: ${JSON.stringify(json)}`);
-      } catch(e) {
-        debugLog(`Could not parse final response as JSON: ${e.message}`);
-      }
-    })
-    .catch(error => {
-      debugLog(`Final submission ERROR: ${error.message}`);
-    });
+    .then(r => r.text())
+    .then(t => debugLog("Final response: " + t))
+    .catch(e => debugLog("Final ERROR: " + e.message));
 
     let message = "";
     let buttonHTML = "";
@@ -341,6 +308,7 @@
   renderLeadForm();
 })();
 </script>
+
 
 </body>
 </html>
