@@ -503,3 +503,10 @@ ease-in-out infinite;
 .layout-1col img {
     border-radius: 7px;
 }
+
+
+#suggestionDropdown
+{
+  max-height: calc(100vh - 200px);
+    overflow: scroll;
+}
