@@ -510,3 +510,9 @@ ease-in-out infinite;
   max-height: calc(100vh - 200px);
     overflow: scroll;
 }
+
+.new-badge
+{
+  background: #0da313;
+  color: #fff;
+}
