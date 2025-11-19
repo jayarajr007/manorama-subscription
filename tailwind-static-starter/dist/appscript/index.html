@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PSC Quiz - Debug Version</title>
+  <link href="https://www.manoramahorizon.com/css/fonts/poppins.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="psc-quiz-widget" style="max-width: 500px; margin: auto;"></div>
+
+<!-- Add debug console -->
+<div id="debug-console" style="max-width: 500px; margin: 20px auto; padding: 10px; background: #f0f0f0; border: 1px solid #ccc; font-family: monospace; font-size: 12px;">
+  <strong>Debug Console:</strong>
+  <div id="debug-output"></div>
+</div>
+
+<style>
+  .psc-card{
+    background:#fff;border:1px solid #e5e5e5;border-radius:12px;
+    padding:16px;margin:16px 0;font-family:Poppins, Arial, sans-serif;
+    box-shadow:0 3px 12px rgba(0,0,0,0.08);
+  }
+  .psc-title{font-size:18px;font-weight:700;margin-bottom:8px;}
+  .psc-desc{font-size:14px;color:#555;margin-bottom:14px;}
+  .psc-btn{
+    background:#0077ff;color:#fff;padding:12px;border-radius:8px;
+    border:none;font-weight:700;cursor:pointer;width:100%;opacity:1;
+  }
+  .psc-btn.disabled{opacity:0.4;cursor:not-allowed;}
+
+  .psc-row{display:flex;flex-direction:column;gap:10px;}
+  .psc-input{
+    width:100%;padding:10px;border:1px solid #ccc;
+    border-radius:8px;font-size:14px;
+  }
+  @media (min-width: 768px){
+    .psc-row{flex-direction:row;}
+    .psc-input{flex:1;}
+  }
+
+  .psc-options{list-style:none;padding:0;margin:14px 0;}
+  .psc-options li{
+    border:1px solid #ddd;padding:10px;border-radius:8px;
+    margin-bottom:8px;cursor:pointer;
+  }
+  .psc-options li.active{background:#eef4ff;border-color:#0077ff;}
+
+  .psc-checkbox{display:inline-block;align-items:center;font-size:13px;margin-bottom:12px;color:#555; margin-top: 4px;}
+  .psc-checkbox input{margin-right:8px;}
+
+  .psc-footer{text-align:center;margin-top:12px;font-size:12px;color:#666;}
+  .psc-footer img{
+    width: 216px;
+    margin-top: 6px;
+    opacity: .9;
+  }
+</style>
+
+<script>
+(function(){
+
+  /* ---------------------------- CONFIG --------------------------- */
+  const FORM_URL = "https://script.google.com/macros/s/AKfycbyCB4zjkAh-YC3YXTGwny24cxbOZviTie5cK9c1UZAY9rMPVEbBkuofVL2Nze6jRJHA0A/exec";  
+  const DOWNLOAD_URL = "https://example.com/discount";  
+  /* --------------------------------------------------------------- */
+
+  const QUESTIONS = [
+    { text:"Who is the current Governor of Kerala?",
+      options:["Arif Mohammed Khan","PS Sreedharan Pillai","K N Balagopal","V S Achuthanandan"],
+      answerIndex:0 },
+    { text:"Article 14 deals with ___ ?",
+      options:["Freedom","Equality before law","Speech rights","Right to privacy"],
+      answerIndex:1 },
+    { text:"PSC prelims have how many stages?",
+      options:["1","2","3","4"],
+      answerIndex:1 }
+  ];
+
+  let lead = {};
+  let score = 0;
+  let current = 0;
+
+  const root = document.getElementById("psc-quiz-widget");
+  const debugOutput = document.getElementById("debug-output");
+  
+  // Debug logging function
+  function debugLog(message) {
+    console.log(message);
+    const timestamp = new Date().toLocaleTimeString();
+    debugOutput.innerHTML += `<div>[${timestamp}] ${message}</div>`;
+  }
+
+  const escapeHtml = s =>
+      s.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+  debugLog("Quiz initialized");
+
+  /* --------------------------- LEAD FORM -------------------------- */
+  function renderLeadForm(){
+    root.innerHTML = `
+      <div class="psc-card">
+        
+        <div class="psc-title" style="font-size: 23px;font-weight: 700;margin-bottom: 8px;text-transform: uppercase;">
+          <span style="color: #d3024a;font-weight: 400;background: #fbfbfb;padding: 0px 6px;"> Get 10% Extra Discount </span> on Kerala PSC Degree Level Prelims!
+        </div>
+
+        <div class="psc-desc">
+          Attempt this quick 3-question quiz and unlock an extra 10% discount.
+        </div>
+
+        <div class="psc-row">
+          <input class="psc-input" id="lead-name" placeholder="Full Name" />
+          <input class="psc-input" id="lead-phone" placeholder="Phone Number" maxlength="10" />
+        </div>
+
+        <label class="psc-checkbox">
+          <input type="checkbox" id="tc" checked>
+          I accept <a href="https://www.manoramahorizon.com/privacy-policy">T&Cs</a> 
+        </label>
+
+        <button class="psc-btn disabled" id="start" disabled>
+          Start Quiz
+        </button>
+
+        <div class="psc-footer">
+          Powered by<br>
+          <img src="https://assets.manoramahorizon.com/uploads/media/2024/09/articles/logo.png">
+        </div>
+
+      </div>
+    `;
+
+    const phoneInput = document.getElementById("lead-phone");
+    const nameInput  = document.getElementById("lead-name");
+    const tcCheck    = document.getElementById("tc");
+    const startBtn   = document.getElementById("start");
+
+    function validateForm(){
+      const name = nameInput.value.trim();
+      const phone = phoneInput.value.trim();
+      const phoneValid = /^[6-9][0-9]{9}$/.test(phone);
+
+      if(name && phoneValid && tcCheck.checked){
+        startBtn.disabled = false;
+        startBtn.classList.remove("disabled");
+      } else {
+        startBtn.disabled = true;
+        startBtn.classList.add("disabled");
+      }
+    }
+
+    nameInput.oninput = validateForm;
+    phoneInput.oninput = validateForm;
+    tcCheck.onchange = validateForm;
+
+    startBtn.onclick = saveLeadThenStartQuiz;
+  }
+
+  /* -------------------- SAVE LEAD TO GOOGLE SHEET -------------------- */
+  function saveLeadThenStartQuiz(){
+
+    const name = document.getElementById('lead-name').value.trim();
+    const phone = document.getElementById('lead-phone').value.trim();
+
+    lead = { name, phone };
+
+    debugLog(`Attempting to send: Name="${name}", Phone="${phone}"`);
+    debugLog(`Sending to: ${FORM_URL}`);
+
+    const payload = {
+      name: name,
+      phone: phone,
+      score: "",
+      page: location.href
+    };
+
+    debugLog(`Payload: ${JSON.stringify(payload)}`);
+
+    fetch(FORM_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    })
+    .then(response => {
+      debugLog(`Response status: ${response.status}`);
+      return response.text();
+    })
+    .then(text => {
+      debugLog(`Response text: ${text}`);
+      try {
+        const json = JSON.parse(text);
+        debugLog(`Response JSON: ${JSON.stringify(json)}`);
+      } catch(e) {
+        debugLog(`Could not parse as JSON: ${e.message}`);
+      }
+    })
+    .catch(error => {
+      debugLog(`ERROR: ${error.message}`);
+      debugLog(`Error details: ${JSON.stringify(error)}`);
+    });
+
+    renderQuestion();
+  }
+
+  /* ----------------------------- QUIZ UI ------------------------------ */
+  function renderQuestion(){
+    const q = QUESTIONS[current];
+
+    root.innerHTML = `
+      <div class="psc-card">
+
+        <div class="psc-title">Question ${current+1} of ${QUESTIONS.length}</div>
+        <div class="psc-desc">${escapeHtml(q.text)}</div>
+
+        <ul class="psc-options">
+          ${q.options.map((o,i)=>`<li data-i="${i}">${escapeHtml(o)}</li>`).join("")}
+        </ul>
+
+        <button class="psc-btn disabled" id="next" disabled>Next</button>
+
+        <div class="psc-footer">
+          Powered by<br>
+          <img src="https://assets.manoramahorizon.com/uploads/media/2024/09/articles/logo.png">
+        </div>
+
+      </div>
+    `;
+
+    const list = root.querySelector(".psc-options");
+    const nextBtn = document.getElementById("next");
+
+    list.querySelectorAll("li").forEach(li=>{
+      li.onclick = ()=> {
+        list.querySelectorAll("li").forEach(x=>x.classList.remove("active"));
+        li.classList.add("active");
+        list.setAttribute("data-selected", li.dataset.i);
+        nextBtn.disabled = false;
+        nextBtn.classList.remove("disabled");
+      };
+    });
+
+    nextBtn.onclick = nextStep;
+  }
+
+  function nextStep(){
+    const sel = document.querySelector(".psc-options").getAttribute("data-selected");
+    if(sel == QUESTIONS[current].answerIndex) score++;
+
+    current++;
+    if(current < QUESTIONS.length) renderQuestion();
+    else submitScoreAndShowResult();
+  }
+
+  /* ----------------------- FINAL RESULT & SUBMIT ------------------------ */
+  function submitScoreAndShowResult(){
+
+    debugLog(`Submitting final score: ${score}`);
+
+    const payload = {
+      name: lead.name,
+      phone: lead.phone,
+      score: score,
+      page: location.href
+    };
+
+    debugLog(`Final payload: ${JSON.stringify(payload)}`);
+
+    fetch(FORM_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    })
+    .then(response => {
+      debugLog(`Final response status: ${response.status}`);
+      return response.text();
+    })
+    .then(text => {
+      debugLog(`Final response text: ${text}`);
+      try {
+        const json = JSON.parse(text);
+        debugLog(`Final response JSON: ${JSON.stringify(json)}`);
+      } catch(e) {
+        debugLog(`Could not parse final response as JSON: ${e.message}`);
+      }
+    })
+    .catch(error => {
+      debugLog(`Final submission ERROR: ${error.message}`);
+    });
+
+    let message = "";
+    let buttonHTML = "";
+
+    if(score === 3){
+      message = `
+      <img src="https://assets.manoramahorizon.com/uploads/media/2025/11/website/gif-tick.gif" style="margin: auto;display: block;width: 85px;"/>
+      <div style="text-align:center;">  
+        <b>Congratulations!</b><br>
+        You have earned an <b>additional 10% discount.</b><br>
+        Our customer team will contact you soon!
+      </div>
+      `;
+
+      buttonHTML = `
+        <button class="psc-btn" onclick="window.open('${DOWNLOAD_URL}','_blank')">
+          View Course Page
+        </button>
+      `;
+    } 
+    else {
+      message = `
+      <div style="text-align:center;">  
+        You answered <b>${score}/3</b> correctly.<br>
+        😔 You did not get all answers right.<br><br>
+        <b>Try again next time!</b>
+      </div>
+      `;
+    }
+
+    root.innerHTML = `
+      <div class="psc-card">
+
+        <div class="psc-title" style="text-align:center;">Quiz Complete!</div>
+
+        <div class="psc-desc">${message}</div>
+
+        ${buttonHTML}
+
+        <div class="psc-footer">
+          Powered by<br>
+          <img src="https://assets.manoramahorizon.com/uploads/media/2024/09/articles/logo.png">
+        </div>
+
+      </div>
+    `;
+  }
+
+  renderLeadForm();
+})();
+</script>
+
+</body>
+</html>
