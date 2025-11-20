@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PSC Quiz - Debug Version</title>
+  <link href="https://www.manoramahorizon.com/css/fonts/poppins.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <div id="psc-quiz-widget" style="max-width: 500px; margin: auto;"></div>
+
+  <!-- Add debug console -->
+  <div id="debug-console"
+    style="display: none;  max-width: 500px; margin: 20px auto; padding: 10px; background: #f0f0f0; border: 1px solid #ccc; font-family: monospace; font-size: 12px;">
+    <strong>Debug Console:</strong>
+    <div id="debug-output"></div>
+  </div>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  </style>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    /* ----------------------- PREMIUM PSC QUIZ WIDGET ------------------------ */
+
+    .psc-card {
+      background: #fff;
+      border: 5px solid #d1e5ff;
+      border-radius: 12px;
+      padding: 16px;
+      margin: 16px 0;
+      font-family: Poppins, Arial, sans-serif;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    /* OFFER Banner */
+    .psc-offer-box {
+      background: linear-gradient(90deg, #ff0059, #ff7a00);
+      padding: 14px 20px;
+      border-radius: 12px;
+      color: white;
+      font-weight: 700;
+      font-size: 17px;
+      text-align: center;
+      margin-bottom: 18px;
+      box-shadow: 0 8px 18px rgba(255, 0, 80, 0.25);
+      letter-spacing: 0.5px;
+    }
+
+    .psc-offer-sub {
+      text-align: center;
+      margin-top: -10px;
+      margin-bottom: 15px;
+      color: #444;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    /* TITLE */
+    .psc-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #1b1b1b;
+    }
+
+    /* INPUT */
+    .psc-input {
+      padding: 14px;
+      border-radius: 12px;
+      background: #fafafa;
+      border: 1px solid #dcdcdc;
+      font-size: 15px;
+      transition: .2s;
+    }
+
+    .psc-input:focus {
+      background: #fff;
+      border-color: #007aff;
+      box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.2);
+    }
+
+    /* BUTTON */
+    .psc-btn {
+      background: #0078ff;
+      padding: 15px;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      border: none;
+      width: 100%;
+      cursor: pointer;
+      box-shadow: 0 8px 16px rgba(0, 120, 255, 0.3);
+      transition: .25s;
+    }
+
+    .psc-btn:hover:not(.disabled) {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0, 120, 255, 0.35);
+    }
+
+    /* Disabled */
+    .psc-btn.disabled {
+      opacity: .5;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+
+    /* Options */
+    .psc-options li {
+      border: 1px solid #ddd;
+      padding: 14px;
+      border-radius: 12px;
+      background: #fbfbfb;
+      margin-bottom: 12px;
+      font-size: 15px;
+      transition: .2s;
+    }
+
+    .psc-options li:hover {
+      border-color: #0078ff;
+    }
+
+    .psc-options li.active {
+      background: #eaf2ff;
+      border-color: #0078ff;
+      box-shadow: 0 4px 12px rgba(0, 122, 255, 0.2);
+    }
+
+    /* Progress label */
+    .psc-progress {
+      display: inline-block;
+      padding: 6px 14px;
+      background: #f2f2f2;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+
+    body {
+      font-family: "Poppins", sans-serif;
+    }
+
+    .psc-card {
+      background: #fff;
+      border: 1px solid #e5e5e5;
+      border-radius: 12px;
+      padding: 16px;
+      margin: 16px 0;
+      font-family: Poppins, Arial, sans-serif;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .psc-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .psc-desc {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 14px;
+    }
+
+    .psc-btn {
+      background: #0077ff;
+      color: #fff;
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      font-weight: 700;
+      cursor: pointer;
+      width: 100%;
+      opacity: 1;
+    }
+
+    .psc-btn.disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
+    .psc-row {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .psc-input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    @media (min-width: 768px) {
+      .psc-row {
+        flex-direction: row;
+      }
+
+      .psc-input {
+        flex: 1;
+      }
+    }
+
+    .psc-options {
+      list-style: none;
+      padding: 0;
+      margin: 14px 0;
+    }
+
+    .psc-options li {
+      border: 1px solid #ddd;
+      padding: 10px;
+      border-radius: 8px;
+      margin-bottom: 8px;
+      cursor: pointer;
+    }
+
+    .psc-options li.active {
+      background: #eef4ff;
+      border-color: #0077ff;
+    }
+
+    .psc-checkbox {
+      display: inline-block;
+      align-items: center;
+      font-size: 13px;
+      margin-bottom: 12px;
+      color: #555;
+      margin-top: 4px;
+    }
+
+    .psc-checkbox input {
+      margin-right: 8px;
+    }
+
+    .psc-footer {
+      text-align: center;
+      margin-top: 12px;
+      font-size: 12px;
+      color: #666;
+    }
+
+    .psc-footer img {
+      width: 216px;
+      margin-top: 6px;
+      opacity: .9;
+    }
+  </style>
+
+
+ <script>
+    (function () {
+
+      /* ---------------------------- CONFIG --------------------------- */
+      const FORM_URL = "https://script.google.com/macros/s/AKfycbySh53SqdQ_mK82kJehhi0JPllYyvqzPKkUjDeJTncdCem6hs_12dwb0VuxNDxcJDiO/exec";  // <<< replace
+      const DOWNLOAD_URL = "https://www.manoramahorizon.com/kerala-psc-degree-level-prelims";
+
+      const QUESTIONS = [
+        { text: "What is the capital of India?", options: ["Mumbai", "New Delhi", "Kolkata", "Chennai"], answerIndex: 1 },
+        { text: "How many days are there in a week?", options: ["5", "6", "7", "8"], answerIndex: 2 },
+        { text: "Which is the smallest state in India?", options: ["Goa", "Kerala", "Gujarat", "Punjab"], answerIndex: 0 }
+      ];
+
+      let lead = {};
+      let score = 0;
+      let current = 0;
+
+      const root = document.getElementById("psc-quiz-widget");
+      const debugOutput = document.getElementById("debug-output");
+
+      function debugLog(msg) {
+        console.log(msg);
+        debugOutput.innerHTML += `<div>[${new Date().toLocaleTimeString()}] ${msg}</div>`;
+      }
+
+      /* --------------------------- LEAD FORM -------------------------- */
+      function renderLeadForm() {
+        root.innerHTML = `
+      <div class="psc-card">
+        
+        <img src="https://assets.manoramahorizon.com/uploads/media/2025/11/website/banner(5).png" 
+             style="width:100%;border-radius: 8px;"/>
+
+        <p>Attempt this quick 3-question quiz and unlock an extra 10% discount.</p>
+
+        <div class="psc-row">
+          <input class="psc-input" id="lead-name" placeholder="Full Name" />
+          <input class="psc-input" id="lead-phone" placeholder="Phone Number" maxlength="10" />
+        </div>
+
+        <label class="psc-checkbox">
+          <input type="checkbox" id="tc" checked>
+          I accept <a href="https://www.manoramahorizon.com/privacy-policy" target="_blank">T&Cs</a> 
+        </label>
+
+        <button class="psc-btn disabled" id="start" disabled>
+          Start Quiz
+        </button>
+
+        <div class="psc-footer">
+          Powered by<br>
+          <img src="https://assets.manoramahorizon.com/uploads/media/2024/09/articles/logo.png">
+        </div>
+
+      </div>`;
+
+        const nameInput = document.getElementById("lead-name");
+        const phoneInput = document.getElementById("lead-phone");
+        const tcCheck = document.getElementById("tc");
+        const startBtn = document.getElementById("start");
+
+        function validate() {
+          const name = nameInput.value.trim();
+          const phone = phoneInput.value.trim();
+          const phoneValid = /^[6-9][0-9]{9}$/.test(phone);
+
+          if (name && phoneValid && tcCheck.checked) {
+            startBtn.classList.remove("disabled");
+            startBtn.disabled = false;
+          } else {
+            startBtn.classList.add("disabled");
+            startBtn.disabled = true;
+          }
+        }
+
+        nameInput.oninput = validate;
+        phoneInput.oninput = validate;
+        tcCheck.onchange = validate;
+
+        startBtn.onclick = () => {
+          lead = {
+            name: nameInput.value.trim(),
+            phone: phoneInput.value.trim(),
+          };
+          renderQuestion();
+        };
+      }
+
+      /* -------------------------- QUIZ QUESTIONS ------------------------- */
+      function renderQuestion() {
+        const q = QUESTIONS[current];
+
+        root.innerHTML = `
+      <div class="psc-card">
+
+        <div class="psc-title">Question ${current + 1} of ${QUESTIONS.length}</div>
+        <div class="psc-desc">${q.text}</div>
+
+        <ul class="psc-options">
+          ${q.options.map((o, i) => `<li data-i="${i}">${o}</li>`).join("")}
+        </ul>
+
+        <button class="psc-btn disabled" id="next" disabled>Next</button>
+
+        <div class="psc-footer">
+          Powered by<br>
+          <img src="https://assets.manoramahorizon.com/uploads/media/2024/09/articles/logo.png">
+        </div>
+
+      </div>`;
+
+        const list = root.querySelector(".psc-options");
+        const nextBtn = document.getElementById("next");
+
+        list.querySelectorAll("li").forEach(li => {
+          li.onclick = () => {
+            list.querySelectorAll("li").forEach(x => x.classList.remove("active"));
+            li.classList.add("active");
+
+            list.setAttribute("data-selected", li.dataset.i);
+
+            nextBtn.disabled = false;
+            nextBtn.classList.remove("disabled");
+          };
+        });
+
+        nextBtn.onclick = () => {
+          const selected = list.getAttribute("data-selected");
+          if (selected == q.answerIndex) score++;
+
+          current++;
+
+          if (current < QUESTIONS.length) renderQuestion();
+          else submitFinal();
+        };
+      }
+
+      /* ----------------------- FINAL SUBMISSION (ONLY ONCE) ---------------------- */
+      function submitFinal() {
+        const fd = new FormData();
+        fd.append("name", lead.name);
+        fd.append("phone", lead.phone);
+        fd.append("score", score);
+        fd.append("page", location.href);
+
+        fetch(FORM_URL, { method: "POST", body: fd })
+          .then(r => r.text())
+          .then(txt => debugLog("Final Submission: " + txt))
+          .catch(err => debugLog("ERROR: " + err.message));
+
+        renderResult();
+      }
+
+      /* ----------------------------- RESULT UI ------------------------------ */
+      function renderResult() {
+        let message = "";
+        let buttonHTML = "";
+
+        if (score === QUESTIONS.length) {
+          message = `
+        <img src="https://assets.manoramahorizon.com/uploads/media/2025/11/website/gif-tick.gif" 
+             style="width:85px;margin:auto;display:block;" />
+        <div style="text-align:center;">
+          <b>Congratulations!</b><br>
+          You scored ${score}/${QUESTIONS.length}.<br>
+          You unlocked an extra 10% discount!
+        </div>`;
+
+          buttonHTML = `
+        <button class="psc-btn" onclick="window.open('${DOWNLOAD_URL}','_blank')">
+          View Course Page
+        </button>`;
+        } else {
+          message = `
+        <div style="text-align:center;">
+          You scored <b>${score}/${QUESTIONS.length}</b>.<br>
+          😔 You missed the full score.<br><br>
+          Try again next time!
+        </div>`;
+        }
+
+        root.innerHTML = `
+      <div class="psc-card">
+
+        <div class="psc-title" style="text-align:center;">Quiz Complete!</div>
+
+        <div class="psc-desc">${message}</div>
+
+        ${buttonHTML}
+
+        <div class="psc-footer">
+          Powered by<br>
+          <img src="https://assets.manoramahorizon.com/uploads/media/2024/09/articles/logo.png">
+        </div>
+
+      </div>`;
+      }
+
+      renderLeadForm();
+    })();
+  </script>
+</body>
+
+</html>
