@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PSC Quiz - New Flow</title>
+  <link href="https://www.manoramahorizon.com/css/fonts/poppins.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://specials.manoramaonline.com/Common/mm-fonts/css/mmfonts2.css">
+</head>
+
+<body>
+
+<div id="psc-quiz-widget" style="max-width: 500px; margin: auto;"></div>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    /* ----------------------- PREMIUM PSC QUIZ WIDGET ------------------------ */
+
+    .psc-card {
+      background: #fff;
+      border: 5px solid #d1e5ff;
+      border-radius: 12px;
+      padding: 16px;
+      margin: 16px 0;
+      font-family: Poppins, Arial, sans-serif;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    /* OFFER Banner */
+    .psc-offer-box {
+      background: linear-gradient(90deg, #ff0059, #ff7a00);
+      padding: 14px 20px;
+      border-radius: 12px;
+      color: white;
+      font-weight: 700;
+      font-size: 17px;
+      text-align: center;
+      margin-bottom: 18px;
+      box-shadow: 0 8px 18px rgba(255, 0, 80, 0.25);
+      letter-spacing: 0.5px;
+    }
+
+    .psc-offer-sub {
+      text-align: center;
+      margin-top: -10px;
+      margin-bottom: 15px;
+      color: #444;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    /* TITLE */
+    .psc-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #1b1b1b;
+      
+    }
+
+    /* INPUT */
+    .psc-input {
+      padding: 14px;
+      border-radius: 12px;
+      background: #fafafa;
+      border: 1px solid #dcdcdc;
+      font-size: 15px;
+      transition: .2s;
+      margin-bottom: 6px;
+    }
+
+    .psc-input:focus {
+      background: #fff;
+      border-color: #007aff;
+      box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.2);
+    }
+
+    /* BUTTON */
+    .psc-btn {
+      background: #0078ff;
+      padding: 15px;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      border: none;
+      width: 100%;
+      cursor: pointer;
+      box-shadow: 0 8px 16px rgba(0, 120, 255, 0.3);
+      transition: .25s;
+    }
+
+    .psc-btn:hover:not(.disabled) {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0, 120, 255, 0.35);
+    }
+
+    /* Disabled */
+    .psc-btn.disabled {
+      opacity: .5;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+
+    /* Options */
+    .psc-options li {
+      border: 1px solid #ddd;
+      padding: 14px;
+      border-radius: 12px;
+      background: #fbfbfb;
+      margin-bottom: 12px;
+      font-size: 15px;
+      transition: .2s;
+    }
+
+    .psc-options li:hover {
+      border-color: #0078ff;
+    }
+
+    .psc-options li.active {
+      background: #eaf2ff;
+      border-color: #0078ff;
+      box-shadow: 0 4px 12px rgba(0, 122, 255, 0.2);
+    }
+
+    /* Progress label */
+    .psc-progress {
+      display: inline-block;
+      padding: 6px 14px;
+      background: #f2f2f2;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+
+    body {
+      font-family: "Poppins", sans-serif;
+    }
+
+    .psc-card {
+      background: #fff;
+  border: 8px solid #ffeef4;
+      border-radius: 12px;
+      padding: 16px;
+      margin: 16px 0;
+      font-family: Poppins, Arial, sans-serif;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .psc-title {
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .psc-desc {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 14px;
+          font-family: EGGIndulekhaUni, "Poppins", sans-serif;
+    }
+
+    .psc-btn {
+      background: #4747a3;
+      color: #fff;
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      font-weight: 700;
+      cursor: pointer;
+      width: 100%;
+      opacity: 1;
+    }
+
+    .psc-btn.disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
+    .psc-row {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .psc-input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    @media (min-width: 768px) {
+      .psc-row {
+        flex-direction: row;
+      }
+
+      .psc-input {
+        flex: 1;
+      }
+    }
+
+    .psc-options {
+      list-style: none;
+      padding: 0;
+      margin: 14px 0;
+    }
+
+    .psc-options li {
+      border: 1px solid #ddd;
+      padding: 10px;
+      border-radius: 8px;
+      margin-bottom: 8px;
+      cursor: pointer;
+          font-family: EGGIndulekhaUni, "Poppins", sans-serif;
+          font-size: 20px;
+    }
+
+    .psc-options li.active {
+      background: #eef4ff;
+      border-color: #0077ff;
+    }
+
+    .psc-checkbox {
+      display: inline-block;
+      align-items: center;
+      font-size: 13px;
+      margin-bottom: 12px;
+      color: #555;
+      margin-top: 4px;
+    }
+
+    .psc-checkbox input {
+      margin-right: 8px;
+    }
+
+    .psc-footer {
+      text-align: center;
+      margin-top: 12px;
+      font-size: 12px;
+      color: #666;
+    }
+
+    .psc-footer img {
+      width: 216px;
+      margin-top: 6px;
+      opacity: .9;
+    }
+  </style>
+
+<script>
+(function () {
+
+  /* ---------------------------- CONFIG --------------------------- */
+  const FORM_URL = "https://script.google.com/macros/s/AKfycbySh53SqdQ_mK82kJehhi0JPllYyvqzPKkUjDeJTncdCem6hs_12dwb0VuxNDxcJDiO/exec";
+  const DOWNLOAD_URL = "https://www.manoramahorizon.com/kerala-psc-degree-level-prelims";
+
+  const QUESTIONS = [
+    { text: "2024-ലെ സാഹിത്യത്തിനുള്ള നോബൽ സമ്മാനം ലഭിച്ചതാരാണ്?", options: ["ഡേവിഡ് ബക്കർ", "ജോൺ ഷേഴ്സ്", "ഹാൻ കാങ്", "ഹരോൾഡ് പിന്റർ"], answerIndex: 2 },
+    { text: "കേരളത്തിൽ ആകെയുള്ള രാജ്യസഭാ സീറ്റുകൾ എത്ര?", options: ["10", "12", "9", "8"], answerIndex: 2 },
+    { text: "ചട്ടമ്പി സ്വാമികൾ ജനിച്ച ജില്ല ഏത്?", options: ["കൊല്ലം", "തിരുവനന്തപുരം", "പത്തനംതിട്ട", "കോട്ടയം"], answerIndex: 1 }
+  ];
+
+  let score = 0;
+  let current = 0;
+  let lead = {};
+  let userAnswers = new Array(QUESTIONS.length).fill(null);
+
+  const root = document.getElementById("psc-quiz-widget");
+
+  /* ----------------------------- SHOW QUIZ FIRST ------------------------------ */
+  function renderQuestion() {
+    const q = QUESTIONS[current];
+
+    root.innerHTML = `
+      <div class="psc-card">
+        <img src="https://assets.manoramahorizon.com/uploads/media/2025/11/website/Frame%2012334(3).png" style="width:100%;border:1px solid #ccc;border-radius:9px;">
+        
+        <div class="psc-title">Question ${current + 1} / ${QUESTIONS.length}</div>
+        <div class="psc-desc">${q.text}</div>
+
+        <ul class="psc-options">
+          ${q.options.map((o, i) => `
+            <li data-i="${i}" class="${userAnswers[current] === i ? 'active' : ''}">${o}</li>
+          `).join("")}
+        </ul>
+
+        <button id="nextBtn" class="psc-btn ${userAnswers[current] === null ? 'disabled' : ''}" 
+                ${userAnswers[current] === null ? 'disabled' : ''}>
+          ${current === QUESTIONS.length - 1 ? "Finish" : "Next"}
+        </button>
+
+        <div class="psc-footer">
+          Powered by<br>
+          <img src="https://assets.manoramahorizon.com/uploads/media/2024/09/articles/logo.png">
+        </div>
+      </div>
+    `;
+
+    const list = root.querySelectorAll(".psc-options li");
+    const nextBtn = document.getElementById("nextBtn");
+
+    list.forEach(li => {
+      li.onclick = () => {
+        list.forEach(x => x.classList.remove("active"));
+        li.classList.add("active");
+
+        userAnswers[current] = Number(li.dataset.i);
+
+        nextBtn.disabled = false;
+        nextBtn.classList.remove("disabled");
+      };
+    });
+
+    nextBtn.onclick = () => {
+      current++;
+
+      if (current < QUESTIONS.length) renderQuestion();
+      else renderLeadForm();
+    };
+  }
+
+
+  /* --------------------------- LEAD FORM AFTER QUIZ -------------------------- */
+/* --------------------------- LEAD FORM AFTER QUIZ -------------------------- */
+function renderLeadForm() {
+root.innerHTML = `
+  <div class="psc-card">
+    <p style="text-align:center;font-weight:600;margin-top:0;">
+      Enter your details to view your quiz result and claim your PSC offer.
+    </p>
+
+    <label style="font-size:13px;font-weight:600;margin-bottom:4px;display:block;">
+      Full Name
+    </label>
+    <input id="leadName" class="psc-input" placeholder="Enter your full name">
+
+    <label style="font-size:13px;font-weight:600;margin-bottom:4px;display:block;margin-top:8px;">
+      Phone Number
+    </label>
+    <input id="leadPhone" class="psc-input" placeholder="Enter phone number" maxlength="10">
+
+    <label class="psc-checkbox" style="margin-top:10px;">
+      <input type="checkbox" id="tc" checked>
+      I accept <a href="https://www.manoramahorizon.com/privacy-policy" target="_blank">T&Cs</a>
+    </label>
+
+    <button id="submitBtn" class="psc-btn disabled" disabled>Submit & View Result</button>
+
+    <div class="psc-footer">
+      Powered by<br>
+      <img src="https://assets.manoramahorizon.com/uploads/media/2024/09/articles/logo.png">
+    </div>
+  </div>
+`;
+
+
+  const nameEl = document.getElementById("leadName");
+  const phoneEl = document.getElementById("leadPhone");
+  const tcEl = document.getElementById("tc");
+  const submitBtn = document.getElementById("submitBtn");
+
+  function validate() {
+    const name = nameEl.value.trim();
+    const phone = phoneEl.value.trim();
+    const validPhone = /^[6-9][0-9]{9}$/.test(phone);
+
+    if (name && validPhone && tcEl.checked) {
+      submitBtn.disabled = false;
+      submitBtn.classList.remove("disabled");
+    } else {
+      submitBtn.disabled = true;
+      submitBtn.classList.add("disabled");
+    }
+  }
+
+  nameEl.oninput = validate;
+  phoneEl.oninput = validate;
+  tcEl.onchange = validate;
+
+  submitBtn.onclick = () => {
+    lead.name = nameEl.value.trim();
+    lead.phone = phoneEl.value.trim();
+    submitFinal();
+  };
+}
+
+  /* -------------------------- SUBMIT + SHOW FINAL ---------------------------- */
+  function submitFinal() {
+    score = 0;
+    QUESTIONS.forEach((q, i) => {
+      if (userAnswers[i] === q.answerIndex) score++;
+    });
+
+    const fd = new FormData();
+    fd.append("name", lead.name);
+    fd.append("phone", lead.phone);
+    fd.append("score", score);
+    fd.append("page", location.href);
+
+    fetch(FORM_URL, { method: "POST", body: fd });
+
+    renderResult();
+  }
+
+
+  /* ------------------------------ RESULT UI ------------------------------- */
+  function renderResult() {
+    const details = QUESTIONS.map((q, i) => {
+      const userAns = userAnswers[i];
+      const correctAns = q.answerIndex;
+      const isCorrect = userAns === correctAns;
+
+      return `
+        <div style="padding:12px;border-radius:8px;border:1px solid #eee;margin-bottom:12px;">
+          <div style="font-weight:600;margin-bottom:6px; font-family:'EGGIndulekhaUni'; ">Q${i+1}. ${q.text}</div>
+
+          <div style="font-family:'EGGIndulekhaUni'; padding:8px;border-radius:6px;background:${isCorrect?'#e6fbec':'#ffecec'};border:1px solid ${isCorrect?'#b5e7c7':'#e8b3b3'};">
+            <strong style="font-size: 12px;">Your answer:</strong> ${q.options[userAns] || "Not answered"}
+            <span style="font-size: 12px; font-weight:700;color:${isCorrect ? '#118c00' : '#d23434'};" style="font-size: 12px;">
+              (${isCorrect ? "Correct" : "Incorrect"})
+            </span>
+          </div>
+
+          ${!isCorrect ? `
+            <div style="font-family:'EGGIndulekhaUni'; padding:8px;margin-top:8px;border-radius:6px;background:#f1f7ff;border:1px solid #d3e4ff;">
+              <strong style="font-size: 12px;">Correct answer:</strong> ${q.options[correctAns]}
+            </div>
+          ` : ""}
+        </div>
+      `;
+    }).join("");
+
+    let topHtml = "";
+
+    if (score === QUESTIONS.length) {
+      topHtml = `
+        <div style="text-align:center;margin-bottom:20px;">
+          <img src="https://assets.manoramahorizon.com/uploads/media/2025/11/website/gif-tick.gif"
+               style="width:85px;margin:auto;display:block;" />
+
+          <div style="font-size:20px;font-weight:700;margin-top:10px;color:#0A8F00;">
+            Congratulations!
+          </div>
+
+          <div style="font-size:16px;margin-top:6px;">
+            You won an extra <b>5% discount</b> on Kerala PSC Degree Level Prelims!
+          </div>
+
+          <div style="font-size:14px;margin-top:8px;color:#444;">
+            Our customer care team will contact you shortly.
+          </div>
+        </div>
+      `;
+    } else {
+   topHtml = `
+  <div style="text-align:center;font-size:18px;font-weight:700;margin-bottom:10px;">
+    Quiz Complete!
+  </div>
+
+  <div style="text-align:center;margin-bottom:6px;font-size:16px;">
+    You scored <b>${score}/${QUESTIONS.length}</b>
+  </div>
+
+  <div style="text-align:center;color:#d23434;font-size:15px;margin-bottom:14px;">
+    Best of luck next time!
+  </div>
+`;
+    }
+
+    root.innerHTML = `
+      <div class="psc-card">
+        ${topHtml}
+        ${details}
+
+        <button class="psc-btn" onclick="window.open('${DOWNLOAD_URL}','_blank')" style="margin-top:12px;">
+          View Kerala PSC Degree Level Prelims Course
+        </button>
+      </div>
+    `;
+  }
+
+  /* --------------------------- START ----------------------------- */
+  renderQuestion();
+
+})();
+</script>
+
+
+</body>
+</html>

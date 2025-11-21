@@ -1,0 +1,110 @@
+<style>
+#main-banner {
+    position: relative;
+    overflow: hidden;
+    background: #090b28;
+}
+
+/* Floating Orbs */
+#main-banner::before,
+#main-banner::after {
+    content: "";
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 180, 250, 0.20), transparent 60%);
+    animation: float1 12s infinite ease-in-out alternate;
+    filter: blur(40px);
+}
+
+#main-banner::after {
+    width: 380px;
+    height: 380px;
+    background: radial-gradient(circle, rgba(120, 200, 255, 0.20), transparent 60%);
+    animation: float2 14s infinite ease-in-out alternate;
+}
+
+/* Orb Animations */
+@keyframes float1 {
+    0%   { top: -10%; left: -10%; }
+    50%  { top: 20%; left: 30%; }
+    100% { top: 10%; left: -5%; }
+}
+
+@keyframes float2 {
+    0%   { bottom: -15%; right: -10%; }
+    50%  { bottom: 20%; right: 25%; }
+    100% { bottom: 0%; right: -5%; }
+}
+
+#main-banner .w-full.lg\:w-1\/4.md\:w-1\/2.sm\:w-1\/2.flex.pr-4.mb-4 {
+   background: #fff;
+    color: #fff;
+    padding: 6px 18px;
+    border-radius: 11px;
+    font-size: 15px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid #2a2a2a;
+    transition: all 0.2s 
+ease;
+    width: auto;
+ 
+    margin: 4px 10px;
+z-index:10;
+}
+
+#main-banner .w-full.lg\:w-1\/4.md\:w-1\/2.sm\:w-1\/2.flex.pr-4.mb-4 .w-full.bg-\[\#FDEBF0\].rounded-\[11px\].align-items-stretch.border.border-\[\#ED396C\].flex.items-center.justify-between.py-5.px-4.cursor-pointer {
+    border: none;
+    background: transparent;
+    color: #fff;
+padding: 6px;
+}
+#main-banner .w-full.lg\:w-1\/4.md\:w-1\/2.sm\:w-1\/2.flex.pr-4.mb-4 .w-full.bg-\[\#FDEBF0\].rounded-\[11px\].align-items-stretch.border.border-\[\#ED396C\].flex.items-center.justify-between.py-5.px-4.cursor-pointer div
+{
+color:#000 !important;
+}
+
+#main-banner .w-full.lg\:w-1\/4.md\:w-1\/2.sm\:w-1\/2.flex.pr-4.mb-4 .w-full.bg-\[\#FDEBF0\].rounded-\[11px\].align-items-stretch.border.border-\[\#ED396C\].flex.items-center.justify-between.py-5.px-4.cursor-pointer div:nth-child(2) {
+    display: none;
+}
+#main-banner .flex.flex-row.items-stretch.flex-wrap.mb-4 {
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+max-width: 758px;
+    margin: auto;
+    /* min-height: 200px; */
+}
+#main-banner .md\:max-w-screen-2xl.md\:mx-auto.custom_md\:max-w-full.custom_md\:px-4.px-4.md\:px-16.pt-4 {
+    text-align: center;
+padding: 59px 10px;
+}
+#main-banner .text-zinc-800.text-\[22px\].sm\:text-\[25px\].font-semibold.leading-\[35px\].mb-3 {
+    font-size: 42px;
+color:#fff;
+}
+#main-banner .h-\[30px\].bg-white.rounded.border.border-pink-300.text-center.mx-1.px-5.cursor-pointer.mb-6 {
+    display: none;
+}
+
+#main-banner 
+.w-full.lg\:w-1\/4.md\:w-1\/2.sm\:w-1\/2.flex.pr-4.mb-4:first-child 
+.w-full.bg-\[\#FDEBF0\].rounded-\[11px\].align-items-stretch.border.border-\[\#ED396C\].flex.items-center.justify-between.py-5.px-4.cursor-pointer::before {
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-image: url("https://assets.manoramahorizon.com/uploads/media/2025/11/website/fire.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+#main-banner .text-gray-600.text-base.mb-6 {
+    color: #e7e7e7;
+}
+
+</style>

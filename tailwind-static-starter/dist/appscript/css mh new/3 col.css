@@ -1,0 +1,19 @@
+<style>
+#three-col .inline-block.w-full.columns-1.md\:columns-2.lg\:columns-3 {
+    display: flex;
+    gap: 10px;
+}
+#three-col .bg-neutral-50.rounded-tl-\[11px\].rounded-tr-\[11px\].py-6.px-4 {
+    padding: 10px;
+}
+#three-col .flex.flex-col.py-8.px-4 {
+    padding: 6px 9px;
+}
+#three-col .flex.flex-col.py-8.px-4 a.text-black.text-base {
+    font-size: 14px;
+    font-weight: 500;
+}
+#three-col .flex.flex-col.flex-row.bg-white.rounded-\[11px\].border.border-gray-200.mb-6 {
+    height: 100%;
+}
+</style>
