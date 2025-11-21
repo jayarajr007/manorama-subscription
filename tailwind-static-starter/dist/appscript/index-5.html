@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PSC Quiz - Compact Article Widget</title>
+  <link href="https://www.manoramahorizon.com/css/fonts/poppins.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://specials.manoramaonline.com/Common/mm-fonts/css/mmfonts2.css">
+</head>
+
+<body>
+
+<div id="psc-quiz-widget" style="max-width:500px;margin:auto;"></div>
+
+<style>
+  * { box-sizing: border-box; }
+  body { font-family:Poppins, sans-serif; }
+
+  /* ---------------- BANNER ---------------- */
+  .psc-start-banner {
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    margin: 16px 0;
+  }
+
+  .psc-start-banner img {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+  }
+
+  .psc-start-btn {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: #ff0059;
+    padding: 10px 18px;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 8px;
+    font-weight: 700;
+  }
+
+  /* ---------------- CARD ---------------- */
+  .psc-card {
+    background: #fff;
+    border: 5px solid #ffeef4;
+    border-radius: 12px;
+    padding: 14px;
+    margin: 16px 0;
+  }
+
+  .psc-title {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+  .psc-desc {
+    font-size: 19px;
+    margin-bottom: 12px;
+    font-family: EGGIndulekhaUni, Poppins, sans-serif;
+  }
+
+  /* ---------------- 2 COLUMN OPTIONS ---------------- */
+  .psc-options {
+    padding: 0;
+    margin: 10px 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .psc-options li {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background: #fafafa;
+    text-align: center;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: EGGIndulekhaUni, Poppins, sans-serif;
+  }
+
+  .psc-options li.active {
+    background: #eaf2ff;
+    border-color: #0078ff;
+  }
+
+  /* ---------------- INPUT ---------------- */
+  .psc-input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    margin-top: 6px;
+  }
+
+  /* ---------------- BUTTON ---------------- */
+  .psc-btn {
+    background: #4747a3;
+    padding: 12px;
+    border-radius: 8px;
+    color: #fff;
+    width: 100%;
+    border: none;
+    font-size: 14px;
+    margin-top: 12px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .psc-btn.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  /* ---------------- FOOTER ---------------- */
+  .psc-footer {
+    text-align: center;
+    margin-top: 12px;
+    font-size:12px;
+  }
+
+  .psc-footer img {
+    width: 200px;
+    opacity: .9;
+  }
+</style>
+
+<script>
+(function() {
+
+  /* ---------------- CONFIG ---------------- */
+  const FORM_URL = "https://script.google.com/macros/s/AKfycbySh53SqdQ_mK82kJehhi0JPllYyvqzPKkUjDeJTncdCem6hs_12dwb0VuxNDxcJDiO/exec";
+  const COURSE_URL = "https://www.manoramahorizon.com/kerala-psc-degree-level-prelims";
+
+  const QUESTIONS = [
+    { text:"2024-ലെ സാഹിത്യത്തിനുള്ള നോബൽ സമ്മാനം ലഭിച്ചതാരാണ്?", options:["ഡേവിഡ് ബക്കർ","ജോൺ ഷേഴ്സ്","ഹാൻ കാങ്","ഹരോൾഡ് പിന്റർ"], answerIndex:2 },
+    { text:"കേരളത്തിൽ ആകെയുള്ള രാജ്യസഭാ സീറ്റുകൾ എത്ര?", options:["10","12","9","8"], answerIndex:2 },
+    { text:"ചട്ടമ്പി സ്വാമികൾ ജനിച്ച ജില്ല ഏത്?", options:["കൊല്ലം","തിരുവനന്തപുരം","പത്തനംതിട്ട","കോട്ടയം"], answerIndex:1 }
+  ];
+
+  let current = 0;
+  let score = 0;
+  let lead = {};
+  let userAnswers = new Array(QUESTIONS.length).fill(null);
+
+  const root = document.getElementById("psc-quiz-widget");
+
+  /* ---------------- BANNER FIRST ---------------- */
+  function renderStartBanner() {
+    root.innerHTML = `
+      <div class="psc-start-banner" id="pscStartBanner">
+        <img src="https://assets.manoramahorizon.com/uploads/media/2025/11/website/banenree(2).png">
+ 
+      </div>
+    `;
+
+    document.getElementById("pscStartBanner").onclick = () => renderQuestion();
+  }
+
+  /* ---------------- QUESTION SCREEN ---------------- */
+  function renderQuestion() {
+    const q = QUESTIONS[current];
+
+    root.innerHTML = `
+      <div class="psc-card">
+
+        <div class="psc-title">Question ${current+1} of ${QUESTIONS.length}</div>
+        <div class="psc-desc">${q.text}</div>
+
+        <ul class="psc-options">
+          ${q.options.map((o,i)=>`
+            <li data-i="${i}" class="${userAnswers[current] === i ? "active":""}">${o}</li>
+          `).join("")}
+        </ul>
+
+        <button id="nextBtn" class="psc-btn ${userAnswers[current]===null?"disabled":""}" 
+          ${userAnswers[current]===null?"disabled":""}>
+          ${current === QUESTIONS.length-1 ? "Finish" : "Next"}
+        </button>
+
+        <div class="psc-footer">
+          Powered by<br>
+          <img src="https://assets.manoramahorizon.com/uploads/media/2024/09/articles/logo.png">
+        </div>
+      </div>
+    `;
+
+    const options = root.querySelectorAll(".psc-options li");
+    const nextBtn = document.getElementById("nextBtn");
+
+    options.forEach(li=>{
+      li.onclick=()=>{
+        options.forEach(x=>x.classList.remove("active"));
+        li.classList.add("active");
+        userAnswers[current]=Number(li.dataset.i);
+        nextBtn.disabled=false;
+        nextBtn.classList.remove("disabled");
+      };
+    });
+
+    nextBtn.onclick=()=>{
+      current++;
+      if(current < QUESTIONS.length) renderQuestion();
+      else renderLeadForm();
+    };
+  }
+
+  /* ---------------- LEAD FORM ---------------- */
+  function renderLeadForm() {
+    root.innerHTML = `
+      <div class="psc-card">
+
+        <p style="text-align:center;font-weight:600;margin:0 0 12px;">
+          Enter your details to view your quiz result.
+        </p>
+
+        <label style="font-size:14px;">Full Name</label>
+        <input id="leadName" class="psc-input" placeholder="Enter your name">
+
+        <label style="margin-top:10px; font-size:14px;">Phone Number</label>
+        <input id="leadPhone" class="psc-input" maxlength="10" placeholder="Enter phone number">
+
+        <label style="font-size:12px;margin-top:10px;">
+          <input type="checkbox" id="tc" checked> I accept T&Cs
+        </label>
+
+        <button id="submitBtn" class="psc-btn disabled" disabled>
+          Submit & View Result
+        </button>
+
+        <div class="psc-footer">
+          Powered by<br>
+          <img src="https://assets.manoramahorizon.com/uploads/media/2024/09/articles/logo.png">
+        </div>
+      </div>
+    `;
+
+    const nameEl = document.getElementById("leadName");
+    const phoneEl = document.getElementById("leadPhone");
+    const tc = document.getElementById("tc");
+    const btn = document.getElementById("submitBtn");
+
+    function validate() {
+      const name = nameEl.value.trim();
+      const phone = phoneEl.value.trim();
+      const valid = /^[6-9][0-9]{9}$/.test(phone);
+
+      if(name && valid && tc.checked) {
+        btn.disabled = false;
+        btn.classList.remove("disabled");
+      } else {
+        btn.disabled = true;
+        btn.classList.add("disabled");
+      }
+    }
+
+    nameEl.oninput = validate;
+    phoneEl.oninput = validate;
+    tc.onchange = validate;
+
+    btn.onclick = ()=>{
+      lead.name = nameEl.value.trim();
+      lead.phone = phoneEl.value.trim();
+      submitFinal();
+    };
+  }
+
+  /* ---------------- SUBMIT + RESULT ---------------- */
+  function submitFinal() {
+    score = userAnswers.filter((ans,i)=>ans===QUESTIONS[i].answerIndex).length;
+
+    const fd = new FormData();
+    fd.append("name", lead.name);
+    fd.append("phone", lead.phone);
+    fd.append("score", score);
+    fd.append("page", location.href);
+
+    fetch(FORM_URL, { method:"POST", body:fd });
+
+    renderResult();
+  }
+
+  /* ---------------- RESULT ---------------- */
+  /* ---------------- RESULT ---------------- */
+function renderResult() {
+
+  let topHtml = "";
+
+  // FULL SCORE → SUCCESS MESSAGE
+  if (score === QUESTIONS.length) {
+    topHtml = `
+      <div style="text-align:center;margin-bottom:20px;">
+        <img src="https://assets.manoramahorizon.com/uploads/media/2025/11/website/gif-tick.gif"
+             style="width:85px;margin:auto;display:block;" />
+
+        <div style="font-size:20px;font-weight:700;margin-top:10px;color:#0A8F00;">
+          Congratulations!
+        </div>
+
+        <div style="font-size:16px;margin-top:6px;">
+          You won an extra <b>5% discount</b> on Kerala PSC Degree Level Prelims!
+        </div>
+
+        <div style="font-size:14px;margin-top:8px;color:#444;">
+          Our customer care team will contact you shortly.
+        </div>
+      </div>
+    `;
+  }
+
+  // NOT FULL SCORE → BEST OF LUCK MESSAGE
+  else {
+    topHtml = `
+      <div style="text-align:center;font-size:18px;font-weight:700;margin-bottom:10px;">
+        Quiz Complete!
+      </div>
+
+      <div style="text-align:center;margin-bottom:6px;font-size:16px;">
+        You scored <b>${score}/${QUESTIONS.length}</b>
+      </div>
+
+      <div style="text-align:center;color:#d23434;font-size:15px;margin-bottom:14px;">
+        Best of luck next time!
+      </div>
+    `;
+  }
+
+
+  // Now add the detailed answers below the message
+  root.innerHTML = `
+    <div class="psc-card">
+      
+      ${topHtml}
+
+      ${QUESTIONS.map((q,i)=>`
+        <div style="padding:10px;border:1px solid #eee;border-radius:8px;margin-bottom:10px;">
+          <div style="font-family:EGGIndulekhaUni;font-weight:600;">Q${i+1}. ${q.text}</div>
+
+          <div style="font-family:EGGIndulekhaUni; margin-top:6px;padding:8px;border-radius:6px;background:${
+            userAnswers[i]===q.answerIndex?'#e6fbec':'#ffecec'
+          };">
+            Your answer: <b style="font-family:EGGIndulekhaUni;">${q.options[userAnswers[i]]||"Not answered"}</b>
+          </div>
+
+          ${userAnswers[i]!==q.answerIndex?`
+            <div style=" font-family:EGGIndulekhaUni; margin-top:6px;padding:8px;border-radius:6px;background:#f1f7ff;">
+              Correct: <b style="font-family:EGGIndulekhaUni;">${q.options[q.answerIndex]}</b>
+            </div>`:""}
+        </div>
+      `).join("")}
+
+      <button class="psc-btn" onclick="window.open('${COURSE_URL}','_blank')">
+        View Kerala PSC Degree Level Prelims Course
+      </button>
+    </div>
+  `;
+}
+
+
+  /* ---------------- INIT ---------------- */
+  renderStartBanner();
+
+})();
+</script>
+
+</body>
+</html>
