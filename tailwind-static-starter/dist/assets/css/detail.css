@@ -567,3 +567,12 @@ display: none !important;
 
 
 
+/* generic — hides any single <li> inside any <ul> */
+.large-thumb-slider ul.slick-dots > li:only-child {
+  display: none !important;
+}
+
+/* safer: target only the slick-dots used in your layout */
+.large-thumb-slider ul.slick-dots > li:only-child {
+  display: none !important;
+}
