@@ -1,4 +1,28 @@
 <style>
+
+#main-banner .flex-wrap.mb-4 > .flex:last-child {
+flex-basis: 100%;
+    display: flex !important;
+    justify-content: center !important;
+    margin-top: 14px !important;
+    background-color: transparent !important;
+    border: none !important;
+}
+
+#main-banner .flex-wrap.mb-4 > .flex:last-child > .flex {
+    max-width: 200px !important;
+    width: 100%;
+    background: #ffffff1a !important;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;                   /* allow it to shrink */
+}
+
+#main-banner .flex-wrap.mb-4 > .flex:last-child > .flex div div {
+color: #fff !important;                  /* allow it to shrink */
+}
+
 #main-banner {
     position: relative;
     overflow: hidden;
@@ -16,6 +40,7 @@
     background: radial-gradient(circle, rgba(255, 180, 250, 0.20), transparent 60%);
     animation: float1 12s infinite ease-in-out alternate;
     filter: blur(40px);
+    z-index: 0;
 }
 
 #main-banner::after {
@@ -23,6 +48,7 @@
     height: 380px;
     background: radial-gradient(circle, rgba(120, 200, 255, 0.20), transparent 60%);
     animation: float2 14s infinite ease-in-out alternate;
+    z-index: 0;
 }
 
 /* Orb Animations */
@@ -65,7 +91,7 @@ padding: 6px;
 }
 #main-banner .w-full.lg\:w-1\/4.md\:w-1\/2.sm\:w-1\/2.flex.pr-4.mb-4 .w-full.bg-\[\#FDEBF0\].rounded-\[11px\].align-items-stretch.border.border-\[\#ED396C\].flex.items-center.justify-between.py-5.px-4.cursor-pointer div
 {
-color:#000 !important;
+color:#000 ;
 }
 
 #main-banner .w-full.lg\:w-1\/4.md\:w-1\/2.sm\:w-1\/2.flex.pr-4.mb-4 .w-full.bg-\[\#FDEBF0\].rounded-\[11px\].align-items-stretch.border.border-\[\#ED396C\].flex.items-center.justify-between.py-5.px-4.cursor-pointer div:nth-child(2) {
@@ -106,5 +132,45 @@ color:#fff;
 #main-banner .text-gray-600.text-base.mb-6 {
     color: #e7e7e7;
 }
+
+
+@media (max-width: 960px) {
+
+#main-banner .w-full.lg\:w-1\/4.md\:w-1\/2.sm\:w-1\/2.flex.pr-4.mb-4 {
+ 
+    padding: 2px 5px !important;
+}
+
+
+
+
+}
+
+@media (max-width: 760px) {
+#main-banner .text-zinc-800.text-\[22px\].sm\:text-\[25px\].font-semibold.leading-\[35px\].mb-3 {
+    font-size: 33px;
+    line-height: 35px;
+}
+
+
+}
+
+#main-banner > div:first-child::after {
+       content: "Join a community of 1,10,000+ learners";
+    display: block;
+    text-align: center;
+    margin: 8px auto 0;
+    color: #aaaaaa;
+    /* background: rgba(255, 255, 255, 0.12); */
+    padding: 4px 22px;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 30px;
+    width: fit-content;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+}
+
+
 
 </style>

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PSC Quiz - New Flow</title>
-  <link href="https://www.manoramahorizon.com/css/fonts/poppins.css" rel="stylesheet">
+
   <link rel="stylesheet" type="text/css" href="https://specials.manoramaonline.com/Common/mm-fonts/css/mmfonts2.css">
 </head>
 
@@ -58,6 +58,7 @@
       font-weight: 700;
       margin-bottom: 12px;
       color: #1b1b1b;
+         font-family: 'poppins';
       
     }
 
@@ -164,7 +165,8 @@
       font-size: 18px;
       color: #555;
       margin-bottom: 14px;
-          font-family: EGGIndulekhaUni, "Poppins", sans-serif;
+          font-family: EGGIndulekhaUni, Poppins, sans-serif;
+        line-height: 21px !important; 
     }
 
     .psc-btn {
@@ -209,19 +211,22 @@
     }
 
     .psc-options {
-      list-style: none;
+      list-style: none !important;
       padding: 0;
       margin: 14px 0;
+          padding: 0px !important;
+    margin-bottom: 0px !important;
     }
 
     .psc-options li {
       border: 1px solid #ddd;
       padding: 10px;
       border-radius: 8px;
-      margin-bottom: 8px;
+      margin-bottom: 8px !important;
       cursor: pointer;
           font-family: EGGIndulekhaUni, "Poppins", sans-serif;
           font-size: 20px;
+         
     }
 
     .psc-options li.active {
@@ -282,7 +287,7 @@
 
     root.innerHTML = `
       <div class="psc-card">
-        <img src="https://assets.manoramahorizon.com/uploads/media/2025/11/website/Frame%2012334(3).png" style="width:100%;border:1px solid #ccc;border-radius:9px;">
+        <img src="https://assets.manoramahorizon.com/uploads/media/2025/11/website/Frame%2012334(3).png" style="width:100%;border:1px solid #ccc;border-radius:9px; margin-bottom:8px;">
         
         <div class="psc-title">Question ${current + 1} / ${QUESTIONS.length}</div>
         <div class="psc-desc">${q.text}</div>
@@ -334,7 +339,8 @@
 function renderLeadForm() {
 root.innerHTML = `
   <div class="psc-card">
-    <p style="text-align:center;font-weight:600;margin-top:0;">
+    <p style="text-align:center;font-weight:600;margin-top:0; font-family:'poppins'; font-size: 17px;
+    line-height: 24px; ">
       Enter your details to view your quiz result and claim your PSC offer.
     </p>
 
@@ -424,15 +430,15 @@ root.innerHTML = `
           <div style="font-weight:600;margin-bottom:6px; font-family:'EGGIndulekhaUni'; ">Q${i+1}. ${q.text}</div>
 
           <div style="font-family:'EGGIndulekhaUni'; padding:8px;border-radius:6px;background:${isCorrect?'#e6fbec':'#ffecec'};border:1px solid ${isCorrect?'#b5e7c7':'#e8b3b3'};">
-            <strong style="font-size: 12px;">Your answer:</strong> ${q.options[userAns] || "Not answered"}
-            <span style="font-size: 12px; font-weight:700;color:${isCorrect ? '#118c00' : '#d23434'};" style="font-size: 12px;">
+            <strong style="font-size: 17px;">Your answer:</strong> ${q.options[userAns] || "Not answered"}
+            <span style="font-size: 17px; font-weight:700;color:${isCorrect ? '#118c00' : '#d23434'};" style="font-size: 12px;">
               (${isCorrect ? "Correct" : "Incorrect"})
             </span>
           </div>
 
           ${!isCorrect ? `
             <div style="font-family:'EGGIndulekhaUni'; padding:8px;margin-top:8px;border-radius:6px;background:#f1f7ff;border:1px solid #d3e4ff;">
-              <strong style="font-size: 12px;">Correct answer:</strong> ${q.options[correctAns]}
+              <strong style="font-size: 17px;">Correct answer:</strong> ${q.options[correctAns]}
             </div>
           ` : ""}
         </div>

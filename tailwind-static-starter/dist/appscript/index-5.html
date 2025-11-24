@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PSC Quiz - Compact Article Widget</title>
-  <link href="https://www.manoramahorizon.com/css/fonts/poppins.css" rel="stylesheet">
+  <!-- <link href="https://www.manoramahorizon.com/css/fonts/poppins.css" rel="stylesheet"> -->
   <link rel="stylesheet" type="text/css" href="https://specials.manoramaonline.com/Common/mm-fonts/css/mmfonts2.css">
 </head>
 
@@ -14,7 +14,77 @@
 
 <style>
   * { box-sizing: border-box; }
-  body { font-family:Poppins, sans-serif; }
+  body { }
+/* QUIZ WIDGET ATTENTION STYLING */
+.psc-start-banner {
+    border-radius: 14px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    margin: 22px 0;
+
+    background: linear-gradient(135deg, #fff6f9 0%, #ffe9ee 40%, #ffe1f0 100%);
+    border: 1px solid rgba(255, 0, 92, 0.08);
+    
+    /* subtle 3D elevation */
+    box-shadow: 
+        0 3px 10px rgba(0,0,0,0.08),
+        0 6px 18px rgba(233, 60, 104, 0.18);
+    transition: all 0.25s ease;
+}
+
+/* Hover effects */
+.psc-start-banner:hover {
+    transform: translateY(-4px);
+    box-shadow: 
+        0 6px 16px rgba(0,0,0,0.12),
+        0 10px 26px rgba(233, 60, 104, 0.22);
+}
+
+/* Shine / glow animation */
+.psc-start-banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -60%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg, 
+        rgba(255,255,255,0) 0%, 
+        rgba(255,255,255,0.6) 50%, 
+        rgba(255,255,255,0) 100%);
+    transform: skewX(-25deg);
+    animation: horizon-glow 3s ease-in-out infinite;
+}
+
+@keyframes horizon-glow {
+    0% { left: -60%; }
+    100% { left: 120%; }
+}
+
+/* Headline text focus */
+.psc-start-banner h3,
+.psc-start-banner .title {
+    font-weight: 700;
+    color: #E93C68 !important;
+    font-size: 18px;
+}
+
+/* CTA button improvement */
+.psc-start-banner .cta-btn {
+    background: #16a34a !important;  /* green */
+    color: #fff !important;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(22,163,74,0.3);
+    transition: 0.2s ease;
+}
+
+.psc-start-banner .cta-btn:hover {
+    background: #0f8a3f !important;
+    box-shadow: 0 6px 14px rgba(22,163,74,0.45);
+}
 
   /* ---------------- BANNER ---------------- */
   .psc-start-banner {
@@ -29,6 +99,7 @@
     width: 100%;
     display: block;
     border-radius: 12px;
+        border: 1px solid #ff92b7;
   }
 
   .psc-start-btn {
@@ -50,28 +121,35 @@
     border-radius: 12px;
     padding: 14px;
     margin: 16px 0;
+    color: #292929;
   }
 
   .psc-title {
     font-size: 14px;
     font-weight: 700;
-    margin-bottom: 6px;
+    margin-bottom: 0px !important;
+    font-family: 'poppins';
+       color: #292929;
   }
 
   .psc-desc {
     font-size: 19px;
     margin-bottom: 12px;
     font-family: EGGIndulekhaUni, Poppins, sans-serif;
+        line-height: 21px !important; 
+        color: #292929;
   }
 
   /* ---------------- 2 COLUMN OPTIONS ---------------- */
   .psc-options {
     padding: 0;
     margin: 10px 0;
-    list-style: none;
+    list-style: none !important;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 8px;
+    padding: 0px !important;
+    margin-bottom: 0px !important;
   }
 
   .psc-options li {
@@ -81,8 +159,10 @@
     background: #fafafa;
     text-align: center;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 18px !important; 
     font-family: EGGIndulekhaUni, Poppins, sans-serif;
+    margin-bottom: 1px !important;
+    color: #000;
   }
 
   .psc-options li.active {
@@ -98,6 +178,7 @@
     border: 1px solid #ccc;
     font-size: 14px;
     margin-top: 6px;
+    margin-bottom: 10px;
   }
 
   /* ---------------- BUTTON ---------------- */
@@ -112,6 +193,7 @@
     margin-top: 12px;
     font-weight: 700;
     cursor: pointer;
+    font-family: 'poppins';
   }
 
   .psc-btn.disabled {
@@ -124,16 +206,29 @@
     text-align: center;
     margin-top: 12px;
     font-size:12px;
+    font-family: 'poppins';
   }
 
   .psc-footer img {
     width: 200px;
     opacity: .9;
+    
   }
 </style>
 
 <script>
 (function() {
+
+  /* ---------------- 24-HOUR LOCK CHECK ---------------- */
+  const LAST_LOCK = localStorage.getItem("psc_quiz_lock");
+
+  if (LAST_LOCK) {
+    const hoursPassed = (Date.now() - Number(LAST_LOCK)) / (1000 * 60 * 60);
+    if (hoursPassed < 24) {
+      document.getElementById("psc-quiz-widget").innerHTML = "";
+      return; 
+    }
+  }
 
   /* ---------------- CONFIG ---------------- */
   const FORM_URL = "https://script.google.com/macros/s/AKfycbySh53SqdQ_mK82kJehhi0JPllYyvqzPKkUjDeJTncdCem6hs_12dwb0VuxNDxcJDiO/exec";
@@ -157,10 +252,8 @@
     root.innerHTML = `
       <div class="psc-start-banner" id="pscStartBanner">
         <img src="https://assets.manoramahorizon.com/uploads/media/2025/11/website/banenree(2).png">
- 
       </div>
     `;
-
     document.getElementById("pscStartBanner").onclick = () => renderQuestion();
   }
 
@@ -217,17 +310,17 @@
     root.innerHTML = `
       <div class="psc-card">
 
-        <p style="text-align:center;font-weight:600;margin:0 0 12px;">
+        <p style="text-align:center;font-weight:600;margin:0 0 12px; font-family:'poppins'; font-size:20px !important;color:#000; ">
           Enter your details to view your quiz result.
         </p>
 
-        <label style="font-size:14px;">Full Name</label>
+        <label style="font-size:14px; font-family:'poppins';color:#000; ">Full Name</label>
         <input id="leadName" class="psc-input" placeholder="Enter your name">
 
-        <label style="margin-top:10px; font-size:14px;">Phone Number</label>
+        <label style="margin-top:10px; font-size:14px; font-family:'poppins'; color:#000; ">Phone Number</label>
         <input id="leadPhone" class="psc-input" maxlength="10" placeholder="Enter phone number">
 
-        <label style="font-size:12px;margin-top:10px;">
+        <label style="font-size:12px;margin-top:10px; font-family:'poppins'; ">
           <input type="checkbox" id="tc" checked> I accept T&Cs
         </label>
 
@@ -285,73 +378,76 @@
     fetch(FORM_URL, { method:"POST", body:fd });
 
     renderResult();
+
+    /* ---- AFTER 4 SECONDS → HIDE QUIZ + LOCK FOR 24 HOURS ---- */
+    setTimeout(() => {
+      localStorage.setItem("psc_quiz_lock", Date.now());
+      root.innerHTML = "";
+    }, 5000);
   }
 
-  /* ---------------- RESULT ---------------- */
   /* ---------------- RESULT ---------------- */
 function renderResult() {
 
   let topHtml = "";
 
-  // FULL SCORE → SUCCESS MESSAGE
   if (score === QUESTIONS.length) {
     topHtml = `
       <div style="text-align:center;margin-bottom:20px;">
         <img src="https://assets.manoramahorizon.com/uploads/media/2025/11/website/gif-tick.gif"
              style="width:85px;margin:auto;display:block;" />
 
-        <div style="font-size:20px;font-weight:700;margin-top:10px;color:#0A8F00;">
+        <div style="font-size:20px;font-weight:700;margin-top:10px;color:#0A8F00; font-size:24px;">
           Congratulations!
         </div>
 
-        <div style="font-size:16px;margin-top:6px;">
+        <div style="font-size:16px;margin-top:6px; font-size:24px;">
           You won an extra <b>5% discount</b> on Kerala PSC Degree Level Prelims!
         </div>
 
-        <div style="font-size:14px;margin-top:8px;color:#444;">
+        <div style="font-size:14px;margin-top:8px;color:#444; font-size:20px;">
           Our customer care team will contact you shortly.
         </div>
       </div>
     `;
   }
 
-  // NOT FULL SCORE → BEST OF LUCK MESSAGE
   else {
     topHtml = `
-      <div style="text-align:center;font-size:18px;font-weight:700;margin-bottom:10px;">
+      <div style="text-align:center;font-size:18px;font-weight:700;margin-bottom:10px; font-family:'poppins'; ">
         Quiz Complete!
       </div>
 
-      <div style="text-align:center;margin-bottom:6px;font-size:16px;">
+      <div style="text-align:center;margin-bottom:6px;font-size:16px; font-family:'poppins';">
         You scored <b>${score}/${QUESTIONS.length}</b>
       </div>
 
-      <div style="text-align:center;color:#d23434;font-size:15px;margin-bottom:14px;">
-        Best of luck next time!
+      <div style="text-align:center;font-size:15px;margin-bottom:14px; font-family:'poppins'; ">
+       <b>Good Effort!</b>
+       You didn’t qualify this time, but great things are on the way for you!
+       Don’t worry, more offers are waiting for you.  
+       <span style="color:blue">Please call 9048991111.</span>
       </div>
     `;
   }
 
-
-  // Now add the detailed answers below the message
   root.innerHTML = `
     <div class="psc-card">
-      
       ${topHtml}
 
       ${QUESTIONS.map((q,i)=>`
         <div style="padding:10px;border:1px solid #eee;border-radius:8px;margin-bottom:10px;">
-          <div style="font-family:EGGIndulekhaUni;font-weight:600;">Q${i+1}. ${q.text}</div>
+          <div style="font-family:EGGIndulekhaUni;font-weight:600; font-size:20px !important; ">Q${i+1}. ${q.text}</div>
 
-          <div style="font-family:EGGIndulekhaUni; margin-top:6px;padding:8px;border-radius:6px;background:${
+          <div style="font-size:20px !important; font-family:EGGIndulekhaUni; margin-top:6px;padding:8px;border-radius:6px;background:${
             userAnswers[i]===q.answerIndex?'#e6fbec':'#ffecec'
-          };">
-            Your answer: <b style="font-family:EGGIndulekhaUni;">${q.options[userAnswers[i]]||"Not answered"}</b>
+          };}">
+            Your answer: <b style="font-size:20px !important; font-family:EGGIndulekhaUni;">${q.options[userAnswers[i]]||"Not answered"}</b>
           </div>
 
           ${userAnswers[i]!==q.answerIndex?`
-            <div style=" font-family:EGGIndulekhaUni; margin-top:6px;padding:8px;border-radius:6px;background:#f1f7ff;">
-              Correct: <b style="font-family:EGGIndulekhaUni;">${q.options[q.answerIndex]}</b>
+            <div style="font-size:20px !important; font-family:EGGIndulekhaUni; margin-top:6px;padding:8px;border-radius:6px;background:#f1f7ff; ">
+              Correct: <b style=" font-size:20px !important; font-family:EGGIndulekhaUni;">${q.options[q.answerIndex]}</b>
             </div>`:""}
         </div>
       `).join("")}
@@ -363,12 +459,12 @@ function renderResult() {
   `;
 }
 
-
   /* ---------------- INIT ---------------- */
   renderStartBanner();
 
 })();
 </script>
+
 
 </body>
 </html>

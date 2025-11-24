@@ -759,3 +759,16 @@ width: 100%;
              top: 0;
          }
      }
+
+
+     @media (max-width: 768px) {
+  .grid-cols-1.md\:grid-cols-\[7fr_3fr\] {
+      grid-template-columns: 1fr !important;
+  }
+}
+
+
+html, body {
+    width: 100% !important;
+    overflow-x: hidden !important;
+}
