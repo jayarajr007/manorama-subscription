@@ -1,0 +1,952 @@
+<style>
+/*---banner style Start -- */ 
+#main-banner .flex-wrap.mb-4 > .flex:last-child {
+flex-basis: 100%;
+    display: flex !important;
+    justify-content: center !important;
+    margin-top: 14px !important;
+    background-color: transparent !important;
+    border: none !important;
+}
+
+#main-banner .flex-wrap.mb-4 > .flex:last-child > .flex {
+    max-width: 200px !important;
+    width: 100%;
+    background: #ffffff1a !important;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;                   /* allow it to shrink */
+}
+
+#main-banner .flex-wrap.mb-4 > .flex:last-child > .flex div div {
+color: #fff !important;                  /* allow it to shrink */
+}
+
+#main-banner {
+    position: relative;
+    overflow: hidden;
+    background: #090b28;
+}
+
+/* Floating Orbs */
+#main-banner::before,
+#main-banner::after {
+    content: "";
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 180, 250, 0.20), transparent 60%);
+    animation: float1 12s infinite ease-in-out alternate;
+    filter: blur(40px);
+    z-index: 0;
+}
+
+#main-banner::after {
+    width: 380px;
+    height: 380px;
+    background: radial-gradient(circle, rgba(120, 200, 255, 0.20), transparent 60%);
+    animation: float2 14s infinite ease-in-out alternate;
+    z-index: 0;
+}
+
+/* Orb Animations */
+@keyframes float1 {
+    0%   { top: -10%; left: -10%; }
+    50%  { top: 20%; left: 30%; }
+    100% { top: 10%; left: -5%; }
+}
+
+@keyframes float2 {
+    0%   { bottom: -15%; right: -10%; }
+    50%  { bottom: 20%; right: 25%; }
+    100% { bottom: 0%; right: -5%; }
+}
+
+#main-banner .w-full.lg\:w-1\/4.md\:w-1\/2.sm\:w-1\/2.flex.pr-4.mb-4 {
+   background: #fff;
+    color: #fff;
+    padding: 6px 18px;
+    border-radius: 11px;
+    font-size: 15px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid #2a2a2a;
+    transition: all 0.2s 
+ease;
+    width: auto;
+ 
+    margin: 4px 4px;
+z-index:10;
+}
+
+#main-banner .w-full.lg\:w-1\/4.md\:w-1\/2.sm\:w-1\/2.flex.pr-4.mb-4 .w-full.bg-\[\#FDEBF0\].rounded-\[11px\].align-items-stretch.border.border-\[\#ED396C\].flex.items-center.justify-between.py-5.px-4.cursor-pointer {
+    border: none;
+    background: transparent;
+    color: #fff;
+padding: 6px;
+}
+#main-banner .w-full.lg\:w-1\/4.md\:w-1\/2.sm\:w-1\/2.flex.pr-4.mb-4 .w-full.bg-\[\#FDEBF0\].rounded-\[11px\].align-items-stretch.border.border-\[\#ED396C\].flex.items-center.justify-between.py-5.px-4.cursor-pointer div
+{
+color:#000 ;
+font-size: 16px;
+}
+
+#main-banner .w-full.lg\:w-1\/4.md\:w-1\/2.sm\:w-1\/2.flex.pr-4.mb-4 .w-full.bg-\[\#FDEBF0\].rounded-\[11px\].align-items-stretch.border.border-\[\#ED396C\].flex.items-center.justify-between.py-5.px-4.cursor-pointer div:nth-child(2) {
+    display: none;
+}
+#main-banner .flex.flex-row.items-stretch.flex-wrap.mb-4 {
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+max-width: 758px;
+    margin: auto;
+    /* min-height: 200px; */
+}
+#main-banner .md\:max-w-screen-2xl.md\:mx-auto.custom_md\:max-w-full.custom_md\:px-4.px-4.md\:px-16.pt-4 {
+    text-align: center;
+padding: 59px 10px;
+}
+#main-banner .text-zinc-800.text-\[22px\].sm\:text-\[25px\].font-semibold.leading-\[35px\].mb-3 {
+    font-size: 42px;
+color:#fff;
+}
+#main-banner .h-\[30px\].bg-white.rounded.border.border-pink-300.text-center.mx-1.px-5.cursor-pointer.mb-6 {
+    display: none;
+}
+
+#main-banner 
+.w-full.lg\:w-1\/4.md\:w-1\/2.sm\:w-1\/2.flex.pr-4.mb-4:first-child 
+.w-full.bg-\[\#FDEBF0\].rounded-\[11px\].align-items-stretch.border.border-\[\#ED396C\].flex.items-center.justify-between.py-5.px-4.cursor-pointer::before {
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-image: url("https://assets.manoramahorizon.com/uploads/media/2025/11/website/fire.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+#main-banner .text-gray-600.text-base.mb-6 {
+    color: #e7e7e7;
+}
+
+
+@media (max-width: 960px) {
+
+#main-banner .w-full.lg\:w-1\/4.md\:w-1\/2.sm\:w-1\/2.flex.pr-4.mb-4 {
+ 
+    padding: 2px 5px !important;
+}
+
+#main-banner .w-full.lg\:w-1\/4.md\:w-1\/2.sm\:w-1\/2.flex.pr-4.mb-4 .w-full.bg-\[\#FDEBF0\].rounded-\[11px\].align-items-stretch.border.border-\[\#ED396C\].flex.items-center.justify-between.py-5.px-4.cursor-pointer div
+{
+
+font-size: 14px !important;
+}
+
+
+}
+
+@media (max-width: 760px) {
+#main-banner .text-zinc-800.text-\[22px\].sm\:text-\[25px\].font-semibold.leading-\[35px\].mb-3 {
+    font-size: 33px;
+    line-height: 35px;
+}
+
+
+}
+
+#main-banner > div:first-child::after {
+       content: "Join a community of 1,10,000+ learners";
+    display: block;
+    text-align: center;
+    margin: 8px auto 0;
+    color: #aaaaaa;
+    /* background: rgba(255, 255, 255, 0.12); */
+    padding: 4px 22px;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 30px;
+    width: fit-content;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+}
+
+/*---banner style end -- */ 
+
+
+
+/* -- Course Card ---- */
+
+#course-card .flex.flex-wrap.-mx-2 {
+    justify-content: center;
+}
+
+#course-card .flex.items-centertext-gray-600.text-base.mb-6.justify-center {
+    text-align: center;
+}
+
+
+@media (max-width: 1120px) {
+
+#course-card .lg\:w-1\/4.md\:w-1\/3.sm\:w-1\/2.w-full.mb-2.sm\:mb-4.px-2 {
+           width: 50% !important;
+}
+
+}
+
+#course-card .lg\:w-1\/4.md\:w-1\/3.sm\:w-1\/2.w-full.mb-2.sm\:mb-4.px-2 {
+    width: 33.33%;
+}
+
+
+#course-card .w-full.sm\:shadow.border.border-rose-500.sm\:border-zinc-100.rounded-\[10px\].h-full {
+    display: flex;
+    background-color: #fff;
+}
+
+#course-card .w-full.sm\:shadow.border.border-rose-500.sm\:border-zinc-100.rounded-\[10px\].h-full img {
+max-width: 104px;
+    min-height: 100%;
+    /* object-fit: cover; */
+    object-fit: cover;
+    object-position: center;
+    /* transform: scale(0.85); */
+    min-width: 115px;
+}
+#course-card .w-full.sm\:shadow.border.border-rose-500.sm\:border-zinc-100.rounded-\[10px\].h-full .px-3.py-4 {
+    width: 100%;
+}
+#course-card .w-full.sm\:shadow.border.border-rose-500.sm\:border-zinc-100.rounded-\[10px\].h-full h4.text-zinc-800.text-sm.sm\:text-base.font-semibold.pb-4.line-clamp-1.h-\[22px\].sm\:h-\[26px\] {
+font-size: 14px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-height: 1.4;
+    max-height: calc(1.4em * 2);
+    height: auto;
+}
+
+#course-card  a.text-indigo-800.text-base.font-semibold {
+    font-size: 14px;
+}
+
+#course-card  a.text-rose-500.text-base.font-semibold {
+    font-size: 14px;
+}
+/* --------------- */
+#course-card .border-t.border-gray-200.hidden.min-h-\[50px\].sm\:flex.mt-auto.items-center.justify-between.py-2 span.mr-1 {
+    font-size: 14px;
+}
+
+#course-card .border-t.border-gray-200.hidden.min-h-\[50px\].sm\:flex.mt-auto.items-center.justify-between.py-2 span.text-gray-600.text-base.font-semibold.line-through.leading-\[35px\] {
+    font-size: 14px;
+}
+
+#course-card .border-t.border-gray-200.hidden.min-h-\[50px\].sm\:flex.mt-auto.items-center.justify-between.py-2 span.text-zinc-800.text-base.font-semibold.leading-\[35px\] {
+    font-size: 14px;
+}
+
+#course-card  .border-t.border-gray-200.hidden.min-h-\[50px\].sm\:flex.mt-auto.items-center.justify-between.py-2 {
+    flex-wrap: wrap;
+}
+
+/*
+#course-card .md\:max-w-screen-2xl.md\:mx-auto.custom_md\:max-w-full.custom_md\:px-4.px-4.md\:px-16.pt-4 .cc_courses {
+    background: #fbf4ff;
+    border-radius: 13px;
+    padding: 14px;
+}
+*/
+
+/* Base card */
+#course-card .md\:max-w-screen-2xl.md\:mx-auto.custom_md\:max-w-full.custom_md\:px-4.px-4.md\:px-16.pt-4 .cc_courses {
+background: #f4f6ff;
+    backdrop-filter: blur(14px);
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    padding: 14px;
+    position: relative;
+    transition: all 0.35s 
+cubic-bezier(0.28, 0.11, 0.32, 1);
+    overflow: hidden;
+}
+
+/* Hover Elevation */
+#course-card .md\:max-w-screen-2xl.md\:mx-auto.custom_md\:max-w-full.custom_md\:px-4.px-4.md\:px-16.pt-4 .cc_courses:hover {
+    transform: translateY(-4px) scale(1.02);
+    border-color: rgba(255, 255, 255, 0.6);
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.07),
+        0 0 0 1px rgba(96, 165, 250, 0.3),     /* soft blue ring */
+        0 0 16px rgba(96, 165, 250, 0.4);      /* AI glow */
+}
+
+/* Ambient Microsoft AI Glow */
+#course-card .md\:max-w-screen-2xl.md\:mx-auto.custom_md\:max-w-full.custom_md\:px-4.px-4.md\:px-16.pt-4 .cc_courses::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 220%;
+    height: 220%;
+    background: radial-gradient(circle at center,
+        rgba(96, 165, 250, 0.12),
+        rgba(96, 165, 250, 0.04),
+        transparent 60%);
+    transform: translate(-50%, -50%) scale(0.6);
+    opacity: 0;
+    transition: opacity 0.35s ease, transform 0.35s ease;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Show ambient glow on hover */
+#course-card .md\:max-w-screen-2xl.md\:mx-auto.custom_md\:max-w-full.custom_md\:px-4.px-4.md\:px-16.pt-4 .cc_courses:hover::after {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/*-----Course card end------------------- */
+
+
+/*-- Tab1 Style  ---*/ 
+
+
+@media (max-width: 1300px) {
+
+#course11 .flex-row.items-center > div[class*="custom_md:w-1/3"] {
+ 
+    width: 33% !important;
+}
+
+}
+
+
+@media (max-width: 639px) {
+
+#course-card .w-full.sm\:shadow.border.border-rose-500.sm\:border-zinc-100.rounded-\[10px\].h-full h4.text-zinc-800.text-sm.sm\:text-base.font-semibold.pb-4.line-clamp-1.h-\[22px\].sm\:h-\[26px\]
+{
+    padding: 0px !important;
+}
+
+#course-card .w-full.sm\:shadow.border.border-rose-500.sm\:border-zinc-100.rounded-\[10px\].h-full .px-3.py-4 {
+
+    display: flex;
+    align-items: center;
+}
+
+}
+
+
+@media (max-width: 960px) {
+
+#course11 .flex-row.items-center > div[class*="custom_md:w-1/3"] {
+ 
+    width: 50% !important;
+}
+
+}
+
+#course11 .w-full.bg-violet-50.rounded-lg.border-b.border-indigo-800.flex.items-center.justify-between.px-4.py-4.md\:py-5.cursor-pointer .text-black.text-sm.font-medium {
+    font-size: 15px;
+    font-weight: 500;
+    display: none;
+}
+
+#course11 .w-full.bg-violet-50.rounded-lg.border-b.border-indigo-800.flex.items-center.justify-between.px-4.py-4.md\:py-5.cursor-pointer .text-zinc-800.text-xl.font-semibold.leading-\[27px\] {
+font-size: 14px !important;
+    font-weight: 600;
+    line-height: 19px;
+    color: #313131;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;   /* number of lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+#course11 .w-full.bg-violet-50.rounded-lg.border-b.border-indigo-800.flex.items-center.justify-between.px-4.py-4.md\:py-5.cursor-pointer div svg
+{
+display:none;
+}
+
+ #course11 div .md\:max-w-screen-2xl.md\:mx-auto.custom_md\:max-w-full.custom_md\:px-4.px-4.md\:px-16.pt-4
+{
+    display: flow-root;
+}  
+
+#course11 .flex.flex-wrap.overflow-x-auto.no-scrollbar.items-start {
+    width: 300px;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    padding: 3px 4px;
+}
+#course11 .flex.flex-wrap.overflow-x-auto.no-scrollbar.items-start div
+{
+width: 100%;
+    height: auto;
+    margin-bottom: 5px;
+    padding: 3px;
+    text-align: left;
+    border-radius: 10px;
+}
+#course11 .flex.flex-row.items-center.flex-wrap.mb-4.-mx-2.md\:-mx-4 {
+    width: calc(100% - 300px);
+    align-items: stretch;
+}
+#course11 .flex.flex-wrap.overflow-x-auto.no-scrollbar.items-start div a {
+    padding: 7px;
+    display: block;
+    margin-bottom: 0px;
+}
+
+
+/* RESET the counter on the parent row */
+#course11 .flex-row.items-center {
+    counter-reset: course-counter;
+}
+
+/* TARGET ONLY card wrapper divs */
+#course11 .flex-row.items-center > div[class*="custom_md:w-1/3"] {
+    counter-increment: course-counter;
+    position: relative;
+}
+
+/* Add the number badge */
+#course11 .flex-row.items-center > div[class*="custom_md:w-1/3"]::before {
+          content: counter(course-counter);
+    position: absolute;
+    top: -6px;
+    right: 5px;
+    font-size: 30px;
+    font-weight: 600;
+    padding: 3px;
+    background: #ffffff;
+    color: transparent;
+    -webkit-text-stroke: 1px #cdcdcd;
+    text-stroke: 2px #333399;
+    z-index: 49;
+    /* border: 1px solid #f9f9f9; */
+    /* box-shadow: 1px 2px 3px #ccc; */
+}
+
+#course11 .w-full.bg-violet-50.rounded-lg.border-b.border-indigo-800.flex.items-center.justify-between.px-4.py-4.md\:py-5.cursor-pointer {
+    background: #fff;
+    box-shadow: none !important;
+    border: 1px solid #cacaca;
+}
+#course11 .flex.flex-row.items-center.flex-wrap.mb-4.-mx-2.md\:-mx-4 > div:first-child::after {
+    content: "Top Selling";
+    position: absolute;
+    top: -11px;
+    left: 16px;
+    background: #f50a4e;
+    color: #fff;
+    padding: 3px 8px;
+    font-size: 11px;
+    font-weight: 600;
+    border-radius: 4px;
+    z-index: 60;
+    letter-spacing: 0.3px;
+}
+a.mb-2.text-nowrap.text-rose-500.text-base.font-semibold.leading-\[27px\].active {
+    background: #fef3f2;
+}
+
+/* ACTIVE TAB */
+#course11 a.mb-2.text-nowrap.text-rose-500.text-base.font-semibold.leading-\[27px\].active {
+  position: relative;
+ 
+  padding-right: 28px;
+}
+
+/* ARROW ICON + ANIMATION */
+#course11 a.mb-2.text-nowrap.text-rose-500.text-base.font-semibold.leading-\[27px\].active::after {
+  content: "";
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+  /* Arrow Color = #ea215a */
+  filter: invert(18%) sepia(96%) saturate(4490%) hue-rotate(330deg) brightness(90%) contrast(110%);
+
+  /* Animation */
+  animation: arrowMove 0.9s ease-in-out infinite;
+
+  /* SVG Icon */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ea215a'%3E%3Cpath fill-rule='evenodd' d='M13.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L11.69 12 4.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z' clip-rule='evenodd'/%3E%3Cpath fill-rule='evenodd' d='M19.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 1 1-1.06-1.06L17.69 12l-6.97-6.97a.75.75 0 0 1 1.06-1.06l7.5 7.5Z' clip-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+/* ANIMATION KEYFRAMES */
+@keyframes arrowMove {
+  0% { transform: translateY(-50%) translateX(0); }
+  50% { transform: translateY(-50%) translateX(3px); }
+  100% { transform: translateY(-50%) translateX(0); }
+}
+
+#course11 .w-full.bg-violet-50.rounded-lg.border-b.border-indigo-800.flex.items-center.justify-between.px-4.py-4.md\:py-5.cursor-pointer:hover {
+    background: #ffffff;
+    border: 1px solid #ea215b;
+}
+
+/*Tab1  Style end*/
+
+
+
+/*3 col styule */
+
+/* Mobile: stack normally */
+#three-col .inline-block.w-full.columns-1.md\:columns-2.lg\:columns-3 {
+    display: block;     /* or revert to original */
+    gap: 0;
+}
+
+/* Tablet & Desktop: use flex */
+@media (min-width: 768px) {
+  #three-col .inline-block.w-full.columns-1.md\:columns-2.lg\:columns-3 {
+      display: flex;
+      gap: 10px;
+  }
+}
+
+#three-col .bg-neutral-50.rounded-tl-\[11px\].rounded-tr-\[11px\].py-6.px-4 {
+    padding: 10px;
+background:#fbf4ff;
+}
+#three-col .flex.flex-col.py-8.px-4 {
+    padding: 6px 9px;
+}
+#three-col .flex.flex-col.py-8.px-4 a.text-black.text-base {
+font-size: 14px;
+    font-weight: 500;
+    position: relative;
+    width: 100%;
+    display: block;
+}
+#three-col .flex.flex-col.flex-row.bg-white.rounded-\[11px\].border.border-gray-200.mb-6 {
+    height: 100%;
+}
+/* Add label only to first 3 cards inside #three-col */
+#three-col .my-1:nth-child(-n + 3)::before {
+    content: "NEW";
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    /* background: #ff0055; */
+    color: #4CAF50;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 7px;
+    border-radius: 4px;
+    z-index: 50;
+    font-weight: bold;
+}
+
+/* Ensure cards can position the badge */
+#three-col .my-1 {
+    position: relative;
+}
+
+/*3 col style  end */ 
+
+
+/*Tab2 Style */
+
+/* ---------------------------
+   RESPONSIVE WIDTH FIXES
+----------------------------*/
+
+@media (max-width: 1300px) {
+  #tab-2 .flex-row.items-center > div[class*="custom_md:w-1/3"] {
+    width: 33% !important;
+  }
+}
+
+@media (max-width: 960px) {
+  #tab-2 .flex-row.items-center > div[class*="custom_md:w-1/3"] {
+    width: 50% !important;
+  }
+}
+
+  #tab-2 .flex.flex-wrap.overflow-x-auto.no-scrollbar.items-start:not(.course-list) {
+    /* display: flex !important;
+    flex-direction: row !important;
+    width: 100% !important;
+    float: none !important;
+    overflow-x: auto !important;
+    white-space: nowrap !important;
+    gap: 1px !important;
+    padding: 6px 2px !important;
+    justify-content: center; */
+       display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;         /* 🚀 STOP WRAPPING */
+    width: 100% !important;
+    float: none !important;
+    overflow-x: auto !important;          /* 🚀 ENABLE HORIZONTAL SCROLL */
+    overflow-y: hidden !important;
+    white-space: nowrap !important;
+    gap: 10px !important;
+    padding: 6px 4px !important;
+    scroll-behavior: smooth;
+    justify-content: left;
+}
+
+/* ---------------------------
+   CARD TEXT STYLE
+----------------------------*/
+
+#tab-2 .w-full.bg-violet-50.rounded-lg.border-b.border-indigo-800.flex.items-center.justify-between.px-4.py-4.md\:py-5.cursor-pointer .text-black.text-sm.font-medium {
+  font-size: 15px;
+  font-weight: 500;
+  display: none;
+}
+
+#tab-2 .w-full.bg-violet-50.rounded-lg.border-b.border-indigo-800.flex.items-center.justify-between.px-4.py-4.md\:py-5.cursor-pointer .text-zinc-800.text-xl.font-semibold.leading-\[27px\] {
+  font-size: 14px !important;
+  font-weight: 600;
+  line-height: 19px;
+  color: #313131;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+#tab-2 .w-full.bg-violet-50.rounded-lg.border-b.border-indigo-800.flex.items-center.justify-between.px-4.py-4.md\:py-5.cursor-pointer div svg {
+  display: none;
+}
+
+/* ---------------------------
+   LAYOUT FIX
+----------------------------*/
+
+#tab-2 div .md\:max-w-screen-2xl.md\:mx-auto.custom_md\:max-w-full.custom_md\:px-4.px-4.md\:px-16.pt-4 {
+  display: flow-root;
+}  
+
+#tab-2 .flex.flex-wrap.overflow-x-auto.no-scrollbar.items-start {
+  width: 300px;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  padding: 3px 4px;
+}
+
+#tab-2 .flex.flex-wrap.overflow-x-auto.no-scrollbar.items-start div {
+    width: 100%;
+    height: auto;
+    margin-bottom: 5px;
+    padding: 3px;
+    text-align: left;
+    border-radius: 7px;
+    margin: 0px;
+    margin-bottom: 30px;
+}
+
+#tab-2 .flex.flex-row.items-center.flex-wrap.mb-4.-mx-2.md\:-mx-4 {
+
+  align-items: stretch;
+justify-content:center;
+}
+
+#tab-2 .flex.flex-wrap.overflow-x-auto.no-scrollbar.items-start div a {
+  padding: 2px 7px;
+  display: block;
+  margin-bottom: 0px;
+}
+
+
+
+
+#tab-2:has(.flex.flex-wrap > div:first-child a.active) {
+    --top10-on: 1;
+}
+
+
+/* #tab-2:has(.flex.flex-wrap > div:first-child a.active) .flex-row.items-center {
+  counter-reset: course-counter;
+}
+
+#tab-2:has(.flex.flex-wrap > div:first-child a.active) 
+.flex-row.items-center > div[class*="custom_md:w-1/3"] {
+  counter-increment: course-counter;
+  position: relative;
+}
+
+#tab-2:has(.flex.flex-wrap > div:first-child a.active) 
+.flex-row.items-center > div[class*="custom_md:w-1/3"]::before {
+       content: counter(course-counter);
+    position: absolute;
+    top: -6px;
+    right: 7px;
+    font-size: 30px;
+    font-weight: 600;
+    color: transparent;
+    -webkit-text-stroke: 1px #e9225b;
+    background: #fff;
+} */
+
+
+#tab-2:has(.flex.flex-wrap > div) .flex-row.items-center {
+  counter-reset: course-counter;
+}
+
+#tab-2:has(.flex.flex-wrap > div) 
+.flex-row.items-center > div[class*="custom_md:w-1/3"] {
+  counter-increment: course-counter;
+  position: relative;
+}
+
+#tab-2:has(.flex.flex-wrap > div) 
+.flex-row.items-center > div[class*="custom_md:w-1/3"]::before {
+       content: counter(course-counter);
+    position: absolute;
+    top: -6px;
+    right: 7px;
+    font-size: 30px;
+    font-weight: 600;
+    color: transparent;
+    -webkit-text-stroke: 1px #e9225b;
+    background: #fff;
+}
+
+/* ---------------------------
+   CARD DEFAULT + HOVER
+----------------------------*/
+
+#tab-2 .w-full.bg-violet-50.rounded-lg.border-b.border-indigo-800.flex.items-center.justify-between.px-4.py-4.md\:py-5.cursor-pointer {
+  background: #fff;
+  box-shadow: none !important;
+  border: 1px solid #cacaca;
+}
+
+#tab-2 .flex.flex-row.items-center.flex-wrap.mb-4.-mx-2.md\:-mx-4 > div:first-child::after {
+  content: "Most Enrolled";
+  position: absolute;
+  top: -11px;
+  left: 16px;
+  background: #f50a4e;
+  color: #fff;
+  padding: 3px 8px;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 4px;
+  z-index: 60;
+  letter-spacing: 0.3px;
+}
+#tab-2 .flex.flex-row.items-center.flex-wrap.mb-4.-mx-2.md\:-mx-4 > div:nth-child(2)::after {
+  content: "Most Enrolled"; 
+  position: absolute;
+  top: -11px;
+  left: 16px;
+  background: #f50a4e;
+  color: #fff;
+  padding: 3px 8px;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 4px;
+  z-index: 60;
+  letter-spacing: 0.3px;
+}
+
+
+#tab-2 .w-full.bg-violet-50.rounded-lg.border-b.border-indigo-800.flex.items-center.justify-between.px-4.py-4.md\:py-5.cursor-pointer:hover {
+  background: #ffffff;
+  border: 1px solid #ea215b;
+}
+
+/* ---------------------------
+   TAB ACTIVE STATE
+----------------------------*/
+
+
+
+
+/* -------------------------------------------------
+   FORCE TAB ROW TO BE HORIZONTAL (WITHOUT HTML CHANGE)
+---------------------------------------------------*/
+
+/* Detect tab container by structure (only affects tabs) */
+#tab-2 .flex.flex-wrap.overflow-x-auto.no-scrollbar.items-start:not(.course-list) {
+    /* display: flex !important;
+    flex-direction: row !important;
+    width: 100% !important;
+    float: none !important;
+    overflow-x: auto !important;
+    white-space: nowrap !important;
+    gap: 1px !important;
+    padding: 6px 2px !important;
+    justify-content: center; */
+       display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;         /* 🚀 STOP WRAPPING */
+    width: 100% !important;
+    float: none !important;
+    overflow-x: auto !important;          /* 🚀 ENABLE HORIZONTAL SCROLL */
+    overflow-y: hidden !important;
+    white-space: nowrap !important;
+    gap: 10px !important;
+    padding: 6px 4px !important;
+    scroll-behavior: smooth;
+    justify-content: center;
+}
+
+/* Make each tab box behave like inline-flex */
+#tab-2 .flex.flex-wrap.overflow-x-auto.no-scrollbar.items-start:not(.course-list) > div {
+    width: auto !important;
+    display: inline-flex !important;
+    margin-bottom: 0 !important;
+}
+
+/* Make <a> inside tabs render inline-block */
+#tab-2 .flex.flex-wrap.overflow-x-auto.no-scrollbar.items-start:not(.course-list) > div a {
+    display: inline-block !important;
+    width: auto !important;
+    white-space: nowrap !important;
+}
+#tab-2 .w-\[29px\].h-\[29px\].mr-3 {
+    display: none;
+}
+#tab-2 .flex.items-center.text-gray-600.text-base.mb-6.md\:justify-center {
+    display: none;
+}
+#tab-2 .text-blue-800.text-md.font-semibold.flex.justify-end.mb-6 {
+    display: none;
+}
+@media (max-width: 767px) {
+  #tab-2 .flex.flex-wrap.overflow-x-auto.no-scrollbar.items-start:not(.course-list) {
+    justify-content: unset;
+}
+}
+
+
+
+  #tab-2 a.mb-2.text-nowrap.text-rose-500.text-base.font-semibold.leading-\[27px\].active
+  {
+    background: #fff !important;
+  }
+
+
+
+/*tab2 style end */ 
+
+/* Slider */
+/* Make slides positioned for overlay */
+#slider-sec .carousel__slide {
+    position: relative;
+}
+
+
+/* ---------- SLIDE 1 CLICKABLE LINK ---------- */
+#slider-sec .carousel__slide:nth-child(1)::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 20;
+    cursor: pointer;
+
+    /* URL using CSS-only redirect trick */
+    background: url("https://manoramahorizon.com"); /* replace this with your link */
+    opacity: 0; /* stay invisible */
+}
+
+
+
+/*-----------------*/
+
+/* RESET: Hide all children inside slider-banner */
+#slider-banner > * {
+
+}
+
+/* SHOW: Keep the CTA section (bg-info section) */
+#slider-banner .bg-info {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+}
+
+/* Make row full width */
+#slider-banner .bg-info .flex-row {
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 0px 0 !important;
+}
+
+/* Make CTA text full width */
+#slider-banner .welcome-text {
+    width: 100% !important;
+    padding: 20px !important;
+display:none;
+}
+
+/* Make the image full width / right-aligned */
+#slider-banner img {
+  width:100%;
+Object-fit:contain;
+max-width: 100%;
+}
+#slider-banner section.carousel.md\:w-1\/2.w-full.homebanner_slider
+{
+width:100%;
+
+}
+#slider-banner .text-left.text-zinc-800.lg\:text-\[20px\].text-\[20px\].font-semibold.mb-3 {
+    display: none;
+}
+#slider-banner .text-left.text-gray-800.text-sm.mb-3.ck-content {
+    display: none;
+}
+
+#slider-banner li.carousel__slide.carousel__slide--visible.carousel__slide--active.fixed.max-w-full.md\:p-4.bg-gradient-to-l.from-red-100.via-fuchsia-100.to-indigo-50.rounded-\[15px\].flex.items-center.slider {
+    position: relative;
+Padding:0px !important;
+background:none;
+}
+
+
+
+#slider-banner  a.pb-2.text-left.text-rose-500.text-\[14px\].md\:text-\[18px\].font-semibold{
+    position: absolute;
+    width: 100%;
+    display: block;
+    background: #ccc;
+    height: 100%;
+    top: 0px;
+
+    background: transparent;
+}
+
+#slider-banner .flex-col.text-left.items-start.inline-flex.slider-text.md\:pr-4 {
+    padding: 0px !important;
+}
+
+/*---------------------------------*/
+
+/* Slider end */ 
+
+#testimonials .flex.flex-col.rounded-\[9px\].border.mt-8.w-full {
+    /* background: red; */
+    box-shadow: 0 1px 20px #00000014, 0 1px 1px #00000014;
+}
+#testimonials > div:first-of-type {
+background-size: contain !important;
+}
+</style>
+

@@ -1,0 +1,46 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#scrollToTopBtn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 9998;
+  opacity: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#copyright > p > a {
+  transition: all;
+  transition-duration: 300ms;
+}
+
+#copyright > p > a:hover {
+  color: #0080cc;
+}
+
+/* Carousel Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 8s linear infinite;
+}
