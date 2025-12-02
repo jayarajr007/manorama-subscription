@@ -276,7 +276,7 @@ align-items: center;
 	width:70%;
 }
 .noresult{
-	min-height: 100vh;
+    min-height: calc(100vh - 360px);
 }
 .subscribebtn button {
     width: 160px;
