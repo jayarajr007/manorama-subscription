@@ -772,3 +772,18 @@ html, body {
     width: 100% !important;
     overflow-x: hidden !important;
 }
+
+
+
+.profile-section .alert.alert-danger {
+    background: #ffe0e0;
+    font-size: 14px;
+    padding: 10px 0px;
+    color: #f04242;
+}
+
+.checkout-section .alert.alert-danger {
+    color: red;
+    padding: 10px;
+    font-size: 14px;
+}
