@@ -576,3 +576,12 @@ display: none !important;
 .large-thumb-slider ul.slick-dots > li:only-child {
   display: none !important;
 }
+
+
+@media (max-width: 767px) {
+footer.subscription-main-footer
+{
+margin-bottom: 60px !important;
+}
+}
+
