@@ -451,7 +451,8 @@ width: 36px;
 .cart-added-slide {
  animation: slideColor 2s 
 ease-in-out infinite;
-       background: linear-gradient(135deg, #333994 0%, #333994 100%) !important;
+       /* background: linear-gradient(135deg, #333994 0%, #333994 100%) !important; */
+       background: #f76d23;
     position: relative;
     overflow: hidden;
     /* box-shadow: 0 4px 20px rgba(16, 185, 129, 0.4); */
