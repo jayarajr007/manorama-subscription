@@ -1,0 +1,570 @@
+@import url('https://fonts.googleapis.com/css2?family=Sanchez:ital@0;1&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.sanchez-regular {
+  font-family: "Sanchez", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.sanchez-regular-italic {
+  font-family: "Sanchez", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #ffffff;
+  color: #222;
+  
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+/* HEADER */
+.header {
+  background: #faf7f2;
+  border-bottom: 1px solid #eee;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header-wrap {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-box {
+  background: #f4c430;
+  padding: 6px 10px;
+  font-weight: 700;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.logo-text {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* Call Info */
+
+
+
+
+
+.call-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phone-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+}
+
+.call-number {
+  font-weight: 600;
+}
+
+.phone
+{
+  display: flex;
+    flex-direction: column;
+}
+
+.call-label {
+  color: #555;
+  font-weight: 400;
+}
+
+.call-icon {
+  display: flex;
+  align-items: center;
+}
+
+.call-number {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+
+/* Hero */
+.hero {
+  text-align: center;
+    padding:111px 60px 60px 0;
+      background: url('https://assets.manoramahorizon.com/uploads/media/2026/01/website/line bg.svg');
+    background-size: contain;
+    /* background-repeat: no-repeat; */
+    background-position: center;
+}
+
+.hero h1 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.subtext {
+  margin-top: 10px;
+  color: #666;
+}
+
+/* Pricing Card */
+.pricing-card {
+background: #faf7f2;
+    border-radius: 14px;
+    padding: 32px 36px;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    max-width: 900px;
+    margin: auto;
+    margin-top: 29px;
+}
+
+/* LEFT */
+
+.pricing-left
+{
+  text-align: left;
+}
+.pricing-left h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.just {
+  font-size: 13px;
+  color: #666;
+}
+
+.price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin: 6px 0;
+}
+
+.old-price {
+  color: #999;
+  text-decoration: line-through;
+  font-size: 40px;
+}
+
+.new-price {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.per-text {
+  font-size: 14px;
+  color: #333;
+}
+
+.save-text {
+  font-size: 13px;
+  color: #333;
+  margin-bottom: 18px;
+}
+
+.save-text span {
+  color: #0a8f3c;
+  font-weight: 500;
+}
+
+/* BUTTON */
+.primary-btn {
+  background: #000;
+  color: #fff;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* RIGHT FEATURES */
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 14px;
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.feature-list img {
+  width: 20px;
+  height: 20px;
+  margin-top: 4px;
+}
+
+
+/* Offers */
+.offers {
+  padding: 60px 0;
+  background: #fff;
+}
+.text-center{
+  text-align: center;
+}
+.offer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.offer-card {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+.offer-card p span
+{
+  font-weight: 500;
+  color: #C31A20;
+}
+/* Testimonials */
+
+
+/* Section */
+.testimonials {
+  padding: 90px 0;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      #f5f5f5 0,
+      #f5f5f5 1px,
+      transparent 1px,
+      transparent 28px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      #f5f5f5 0,
+      #f5f5f5 1px,
+      transparent 1px,
+      transparent 28px
+    );
+}
+
+.section-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+
+/* Card */
+.testimonial-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 28px 24px 32px;
+  margin: 0 12px;
+  text-align: center;
+  min-height: 360px;
+  box-shadow: 0 0 0 1px #eee;
+}
+
+/* Avatar */
+.avatar-wrap {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  background: #ffc400;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Quote */
+.quote-icon {
+  position: absolute;
+  bottom: -6px;
+  left: -8px;
+  font-size: 26px;
+  color: #000;
+}
+
+/* Text */
+.name {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.designation {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 14px;
+}
+
+.review {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* FAQ */
+.faq {
+  padding: 60px 0;
+}
+
+.faq h2
+{
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.faq-item {
+  border-bottom: 1px solid #eee;
+}
+
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 16px 0;
+    font-size: 16px;
+    text-align: left;
+    cursor: pointer;
+    background: #faf7f2;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 12px;
+      font-family: 'Poppins', sans-serif;
+}
+
+.faq-answer {
+  display: none;
+  padding-bottom: 16px;
+  color: #555;
+}
+.faq-answer li
+{
+  list-style-type: none;
+}
+
+/* Footer */
+.footer {
+  padding: 30px 0;
+  border-top: 1px solid #eee;
+  text-align: center;
+}
+
+.footer-links a {
+  margin: 0 10px;
+  color: #555;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+/* ===========================
+   RESPONSIVE STYLES
+=========================== */
+
+@media (max-width: 1024px) {
+  .testimonial-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .offer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* Header */
+  .header-wrap {
+flex-direction: row;
+        height: auto;
+        padding: 12px 16px;
+        gap: 6px;
+  }
+
+  .help {
+    font-size: 13px;
+  }
+
+  /* Hero */
+  .hero {
+        padding: 114px 0px 25px 0;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+    line-height: 1.3;
+  }
+
+  .subtext {
+    font-size: 14px;
+  }
+
+  /* Pricing Card */
+  .pricing-card {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .pricing-left,
+  .pricing-right {
+    text-align: left;
+  }
+
+  .price {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+
+  .new-price {
+    font-size: 28px;
+  }
+  .old-price
+  {
+    font-size: 28px;
+  }
+
+  .primary-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Offers */
+  .offer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Testimonials */
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* FAQ */
+  .faq-question {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .logo-text {
+    font-size: 14px;
+  }
+
+  .pricing-card {
+    border-radius: 12px;
+  }
+
+  .pricing-right li {
+    font-size: 14px;
+  }
+
+  .footer-links a {
+    display: block;
+    margin: 8px 0;
+  }
+
+
+@media (max-width: 768px) {
+  .offer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .offer-card {
+    padding: 14px;
+  }
+
+  .offer-card img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .offer-card p {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+}
+
+
+}
+
+
+.wtsapp
+{
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  .phone-text {
+    display: none; /* hide text */
+  }
+
+  .call-info {
+    gap: 33px;
+  }
+
+  .icon-btn svg {
+    width: 22px;
+    height: 22px;
+  }
+  .wtsapp
+{
+  display: block;
+}
+}
