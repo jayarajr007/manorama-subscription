@@ -562,8 +562,9 @@ flex-direction: row;
   }
 
   .primary-btn {
-    width: 100%;
+    width: 100% !important;
     text-align: center;
+            max-width: 100% !important;
   }
 
   /* Offers */
