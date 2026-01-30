@@ -120,7 +120,7 @@ body {
 /* Hero */
 .hero {
   text-align: center;
-    padding:111px 60px 60px 0;
+    padding:111px 60px 60px 60px;
       background: url('https://assets.manoramahorizon.com/uploads/media/2026/01/website/line bg.svg');
     background-size: contain;
     /* background-repeat: no-repeat; */
@@ -173,6 +173,7 @@ background: #faf7f2;
   align-items: baseline;
   gap: 10px;
   margin: 6px 0;
+  margin-top: 0px;
 }
 
 .old-price {
@@ -195,12 +196,17 @@ background: #faf7f2;
   font-size: 13px;
   color: #333;
   margin-bottom: 18px;
+  font-weight: 600;
 }
 
 .save-text span {
   color: #0a8f3c;
-  font-weight: 500;
+  font-weight: 700;
 }
+
+
+
+
 
 /* BUTTON */
 .primary-btn {
@@ -209,8 +215,49 @@ background: #faf7f2;
   border-radius: 8px;
   padding: 12px 20px;
   font-size: 14px;
-    font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-weight: 600;
+  max-width: 263px;
+  cursor: pointer;
+
+  position: relative;
+  overflow: hidden;
 }
+
+/* Glass light sweep */
+.primary-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 120%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent 35%,
+    rgba(255, 255, 255, 0.35),
+    transparent 65%
+  );
+  animation: glassSweep 4.5s ease-in-out infinite;
+}
+
+/* Animation */
+@keyframes glassSweep {
+  0% {
+    left: -120%;
+  }
+  40% {
+    left: 120%;
+  }
+  100% {
+    left: 120%;
+  }
+}
+
 
 /* RIGHT FEATURES */
 .feature-list {
@@ -385,13 +432,53 @@ background: #faf7f2;
 
 .faq-answer {
   display: none;
-  padding-bottom: 16px;
+  padding: 0 12px 16px;
   color: #555;
+  animation: fadeIn 0.25s ease;
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .faq-answer li
 {
   list-style-type: none;
 }
+
+
+/* FAQ Question with arrow */
+.faq-question {
+  position: relative;
+  padding-right: 40px; /* space for arrow */
+}
+
+/* Arrow icon */
+.faq-question::after {
+  content: '';
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #333;
+  border-bottom: 2px solid #333;
+  transform: translateY(-50%) rotate(45deg);
+  transition: transform 0.25s ease;
+}
+
+/* Active (open) state */
+.faq-question.active::after {
+  transform: translateY(-50%) rotate(-135deg);
+}
+
 
 /* Footer */
 .footer {
@@ -567,4 +654,117 @@ flex-direction: row;
 {
   display: block;
 }
+}
+
+
+
+/* Sticky CTA Wrapper */
+.sticky-cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  border-top: 1px solid #eee;
+  box-shadow: 0 -8px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(100%);
+  transition: transform 0.35s cubic-bezier(.4,0,.2,1);
+  z-index: 999;
+}
+
+/* Show state */
+.sticky-cta.show {
+  transform: translateY(0);
+}
+
+/* Inner */
+.sticky-cta-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+}
+
+/* Text */
+.sticky-text strong {
+  font-size: 16px;
+  display: block;
+}
+
+.sticky-text span {
+  font-size: 13px;
+  color: #666;
+}
+
+/* Button size tweak for strip */
+.sticky-cta .primary-btn {
+  padding: 10px 16px;
+  font-size: 14px;
+  max-width: unset;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .sticky-cta-inner {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  /* .sticky-text span {
+    display: none;
+  } */
+
+  .sticky-cta .primary-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .logo img
+  {
+    width: 115px !important;
+  }
+}
+
+.old-price-sticky
+{
+    text-decoration: line-through;
+    font-size: 16px !important; 
+}
+
+
+
+/* Scroll animation base */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: 
+    opacity 0.6s cubic-bezier(.4,0,.2,1),
+    transform 0.6s cubic-bezier(.4,0,.2,1);
+}
+
+/* When visible */
+.scroll-animate.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.wave-hand {
+  display: inline-block;
+  transform-origin: 70% 70%;
+  animation: wave 2.5s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
 }
