@@ -787,3 +787,29 @@ html, body {
  padding: 10px;
  font-size: 14px;
 }
+
+
+
+ev-attribute-v2:has(#auth-register-email_address) {
+    /* border: 1px solid red !important; */
+    /* background: red !important; */
+    margin-bottom: 30px;
+    display: block;
+    width: 47%;
+}
+
+
+ev-attribute-v2:has(#auth-register-email_address) .ev-error-field
+{
+margin-left:0px !important;
+font-size: 10px;
+}
+
+
+@media screen and (max-width: 992px) {
+ev-attribute-v2:has(#auth-register-email_address) {
+
+    width: 100%;
+}
+
+}
