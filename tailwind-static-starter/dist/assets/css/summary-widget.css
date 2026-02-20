@@ -814,3 +814,11 @@ ev-attribute-v2:has(#auth-register-email_address) {
 }
 
 }
+
+
+
+.product-profile-form .ev-error-field {
+    margin-left: 0px;
+    font-size: 12px;
+    margin-bottom: 22px;
+}
