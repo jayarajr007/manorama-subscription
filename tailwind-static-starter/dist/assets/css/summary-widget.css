@@ -813,6 +813,12 @@ ev-attribute-v2:has(#auth-register-email_address) {
     width: 100%;
 }
 
+.profile-section ev-attribute-v2 .form-group input {
+
+    font-size: 16px;
+}
+
+
 }
 
 
