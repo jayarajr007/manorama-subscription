@@ -181,9 +181,13 @@ align-items: center;
 	background: url(../img/icons/sprite.svg)
 }
 
-.i-home {
+/* .i-home {
 	background-position: left -32px top -227px
-}
+} */
+
+ .i-home {
+background-position: left -143px top -226px;
+} 
 
 .i-category {
 	background-position: left -63px top -227px
@@ -193,9 +197,15 @@ align-items: center;
 	background-position: left -90px top -227px
 }
 
-.i-offer {
+/* .i-offer {
 	background-position: left -117px top -227px
-}
+} */
+
+
+.i-offer {
+	background-position: left -170px top -227px;
+} 
+
 
 .suggestion-icon {
 	background: url(../img/icons/sprite.svg) no-repeat -113px -22px;
