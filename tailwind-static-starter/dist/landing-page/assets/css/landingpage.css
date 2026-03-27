@@ -160,3 +160,13 @@ animation: gradientFlow 5s ease infinite;
     background-position: 0% 50%;
   }
 }
+
+.renew-sec
+{
+    background-color: #FFFCF5;
+}
+
+.renew-sec .peer:checked~.peer-checked\:border-blue-600
+{
+background: #fff;
+}
