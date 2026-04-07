@@ -1465,6 +1465,61 @@
                     <div class="mt-6 ">
                         <h3 class="font-semibold mb-2 ">Order
                             Summary</h3>
+
+<!-- Premium Upsell -->
+<div class="mt-4">
+    
+    <div class="inline-block bg-[#FFE38F] text-xs font-semibold px-2 py-1 rounded ">
+     Recommended add-on
+    </div>
+
+    <div id="premiumCard"
+        class="border rounded p-3 flex items-start justify-between gap-3 cursor-pointer transition bg-white">
+
+        <!-- Left -->
+        <div class="flex items-start gap-2">
+            <input type="checkbox" id="premiumCheckbox"
+                class="mt-1 accent-blue-600">
+
+            <div>
+                <div class="font-semibold text-sm">Unlock Premium Articles</div>
+                <div class="text-xs text-gray-500">
+                  Read exclusive news, opinions & analysis on Manorama Online  No ads • Unlimited access
+                </div>
+            </div>
+        </div>
+
+        <!-- Right (Price) -->
+    <!-- Right (Price) -->
+<div class="flex flex-col items-end text-right whitespace-nowrap">
+
+    <!-- Price row -->
+    <div class="flex items-center gap-2">
+        <span class="font-semibold text-sm">
+            ₹299
+        </span>
+
+        <span class="text-gray-400 line-through text-sm">
+            ₹899
+        </span>
+    </div>
+
+    <!-- Save row -->
+    <div class="text-xs text-green-600 font-medium mt-1">
+        Save ₹600
+    </div>
+
+</div>
+
+    </div>
+
+    <!-- Feedback -->
+    <div id="premiumMsg" class="text-green-600 text-xs mt-1 hidden">
+    Added to your order
+    </div>
+
+</div>
+
                         <div class="flex justify-between text-sm mt-4">
                             <span>Items (3)</span><span class="font-semibold">₹2400.00</span>
                         </div>
@@ -1859,6 +1914,40 @@
     <script src="assets/libs/slick-slider/slick.min.js" defer></script>
     <script src="assets/js/common.js" defer></script>
     <script src="assets/js/cart.js" defer></script>
+
+
+    <script>
+    const checkbox = document.getElementById("premiumCheckbox");
+    const card = document.getElementById("premiumCard");
+    const msg = document.getElementById("premiumMsg");
+
+    const totalEl = document.querySelectorAll(".font-semibold")[2]; // total ₹1800
+    let baseTotal = 1800;
+    let premiumPrice = 299;
+
+    function updateUI() {
+        if (checkbox.checked) {
+            card.classList.add("border-blue-500", "bg-blue-50");
+            msg.classList.remove("hidden");
+            totalEl.innerText = "₹" + (baseTotal + premiumPrice).toFixed(2);
+        } else {
+            card.classList.remove("border-blue-500", "bg-blue-50");
+            msg.classList.add("hidden");
+            totalEl.innerText = "₹" + baseTotal.toFixed(2);
+        }
+    }
+
+    // Click anywhere on card
+    card.addEventListener("click", (e) => {
+        if (e.target.tagName !== "INPUT") {
+            checkbox.checked = !checkbox.checked;
+        }
+        updateUI();
+    });
+
+    // Checkbox click
+    checkbox.addEventListener("change", updateUI);
+</script>
 
 </body>
 
