@@ -31,7 +31,7 @@
   .badge { display: inline-flex; align-items: center; gap: 7px; background: var(--green-light); border: 1.5px solid var(--green-border); border-radius: 100px; padding: 7px 18px; font-size: 11px; font-weight: 700; color: var(--green); margin-bottom: 22px; letter-spacing: 0.07em; text-transform: uppercase; }
   .hero-title { font-size: clamp(1.7rem, 5vw, 2.7rem); font-weight: 800; line-height: 1.15; margin-bottom: 14px; color: var(--navy); }
   .hero-title .highlight { color: var(--yellow2); }
-  .hero-sub { font-size: 0.96rem; color: var(--sub); max-width: 460px; margin: 0 auto 32px; line-height: 1.75; }
+  .hero-sub { font-size: 0.96rem; color: var(--sub); max-width: 460px; margin: 0 auto 32px !important; line-height: 1.75; }
   .steps-row { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
   .step-pill { display: flex; align-items: center; gap: 8px; background: var(--surface); border: 1.5px solid var(--border); border-radius: 100px; padding: 10px 18px; font-size: 13px; font-weight: 500; color: var(--sub); box-shadow: var(--shadow); }
   .step-num { width: 24px; height: 24px; border-radius: 50%; background: var(--navy); color: #fff; font-size: 11px; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
@@ -65,7 +65,7 @@
   .video-wrapper:hover { border-color: var(--blue); box-shadow: 0 12px 40px rgba(29,78,216,0.18); transition: box-shadow 0.3s, border-color 0.3s; }
   .video-caption { text-align: center; font-size: 12px; color: var(--muted); margin-top: 10px; margin-bottom: 4px; }
 
-  .bullets { list-style: none; display: flex; flex-direction: column; gap: 9px; margin-top: 18px; }
+  .bullets { list-style: none; display: flex; flex-direction: column; gap: 9px; margin-top: 18px;     padding: initial !important;}
   .bullets li { display: flex; align-items: flex-start; gap: 10px; color: var(--sub); font-size: 0.86rem; line-height: 1.6; }
   .bullets li .check { width: 20px; height: 20px; border-radius: 50%; background: var(--green-light); color: var(--green); font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; border: 1.5px solid var(--green-border); }
 
@@ -141,8 +141,8 @@
 <div class="page-wrap">
 
   <nav class="nav">
-   <a href="https://www.manoramahorizon.com/" style="list-style-type: none; text-decoration: none;">   <img src="https://assets.manoramahorizon.com/uploads/media/2026/05/website/logo.svg" alt="Horizon"
-         onerror="this.style.display='none'; document.querySelector('.nav-fallback').style.display='block'"> </a>
+    <img src="https://assets.manoramahorizon.com/uploads/media/2026/05/website/logo.svg" alt="Horizon"
+         onerror="this.style.display='none'; document.querySelector('.nav-fallback').style.display='block'">
     <span class="nav-fallback">🌟 Horizon</span>
   </nav>
 
@@ -227,9 +227,18 @@
       <h2 class="card-title">Real People. Real Career Growth.</h2>
     </div>
     <div class="testimonials">
-      <div class="tcard"><p class="tcard-text">Switched from an Excel job to Data Analyst in just 3 months. Couldn't believe how quickly things moved.</p><div class="tcard-author">— Rahul</div></div>
-      <div class="tcard"><p class="tcard-text">Finally got the clarity and confidence to switch careers. This program gave me the exact roadmap I needed.</p><div class="tcard-author">— Sneha</div></div>
-      <div class="tcard"><p class="tcard-text">Best investment I've ever made in my career. The mentors truly care about your growth.</p><div class="tcard-author">— Arjun</div></div>
+      <div class="tcard"><p class="tcard-text">The training was very well-structured and easy to follow. The practical
+exercises helped me understand how to use Power BI effectively in
+real-world scenarios. The trainer was supportive and patiently clarified all
+our doubts. I truly enjoyed the sessions and gained valuable skills</p><div class="tcard-author">— Sijo Jacob</div></div>
+      <div class="tcard"><p class="tcard-text">The classes were excellent and very informative. The trainer explained
+each concept clearly with practical examples, making it easy to
+understand and apply. Overall, it was a great learning experience, and
+I feel much more confident using Power BI now.</p><div class="tcard-author">— Aiswarya Remesh</div></div>
+      <div class="tcard"><p class="tcard-text">I cleared my exam today, and I owe a big part of my success to
+Manorama Horizon. The teaching quality, study materials, and constant
+motivation from the team helped me stay focused and confident. Thank
+you for being a part of my journey.</p><div class="tcard-author">— Elizabeth Paul</div></div>
     </div>
   </div>
 

@@ -770,7 +770,11 @@ font-size: 16px;
     transition: background 0.2s;
     display: none;
   }
-  
+    .btn-enroll-nav-2 button
+    {
+      background: none !important;
+      border: none !important;
+    }
 
   .btn-enroll-nav {
     background: var(--yellow);
@@ -2232,7 +2236,9 @@ font-size: 16px;
     <button class="btn-enroll-nav">Enroll Now</button>
       
   </ul>
-    <button class="btn-enroll-nav-2">  <svg width="18" height="18" viewBox="0 0 24 24" fill="#000">
+  <a href="tel:9048991111" class="btn-enroll-nav-2"> 
+
+    <button >  <svg width="18" height="18" viewBox="0 0 24 24" fill="#000">
     <path d="M22 16.92V20a2 2 0 0 1-2.18 2
     19.79 19.79 0 0 1-8.63-3.07
     19.5 19.5 0 0 1-6-6
@@ -2249,7 +2255,7 @@ font-size: 16px;
     stroke-width="2"
     stroke-linecap="round"
     stroke-linejoin="round"/>
-  </svg></button>
+  </svg></button> </a>
 </nav>
 <!-- Mobile Menu -->
 <div class="mobile-menu">
@@ -2792,34 +2798,43 @@ font-size: 16px;
     <div class="testimonials-grid" id="testimonials-">
       <div class="testimonial-card">
         <div class="stars">★★★★★</div>
-        <p>This course completely transformed my career trajectory. I was struggling in quality control before this. Completely life-changing — I got my dream job with a 35% salary increase in just 2 months after completing the program.</p>
+        <p>The training was very well-structured and easy to follow. The practical
+exercises helped me understand how to use Power BI effectively in
+real-world scenarios. The trainer was supportive and patiently clarified all
+our doubts. I truly enjoyed the sessions and gained valuable skills</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">S</div>
+          <div class="author-info">
+            <strong>Sijo Jacob</strong>
+
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>The classes were excellent and very informative. The trainer explained
+each concept clearly with practical examples, making it easy to
+understand and apply. Overall, it was a great learning experience, and
+I feel much more confident using Power BI now.</p>
         <div class="testimonial-author">
           <div class="author-avatar">A</div>
           <div class="author-info">
-            <strong>Ankit Sharma</strong>
-            <span>Data Analyst @ Flipkart</span>
+            <strong>Aiswarya Remesh</strong>
+        
           </div>
         </div>
       </div>
       <div class="testimonial-card">
         <div class="stars">★★★★★</div>
-        <p>The structured approach to Power BI was incredible. I couldn't struggle with abstract concepts anymore — real hands-on projects and a supportive community made all the difference. Got placed within 6 weeks!</p>
+        <p>I cleared my exam today, and I owe a big part of my success to
+Manorama Horizon. The teaching quality, study materials, and constant
+motivation from the team helped me stay focused and confident. Thank
+you for being a part of my journey.</p>
         <div class="testimonial-author">
-          <div class="author-avatar">P</div>
+          <div class="author-avatar">E</div>
           <div class="author-info">
-            <strong>Priya Patel</strong>
-            <span>Business Analyst @ TCS</span>
-          </div>
-        </div>
-      </div>
-      <div class="testimonial-card">
-        <div class="stars">★★★★★</div>
-        <p>Coming from a non-technical background, the clear and logical structure of this program was the main reason I was able to grasp the concepts quickly and get my first data analyst job at a top tech company.</p>
-        <div class="testimonial-author">
-          <div class="author-avatar">R</div>
-          <div class="author-info">
-            <strong>Rahul Kumar</strong>
-            <span>Data Analyst @ Wipro</span>
+            <strong>Elizabeth Paul</strong>
+        
           </div>
         </div>
       </div>
@@ -2837,13 +2852,26 @@ font-size: 16px;
 
 <div class="divider"></div>
 
-<!-- PRICING SECTION -->
 <section class="pricing-section" id="pricing-">
   <div class="container">
     <h2 class="section-title">Invest in Your Career Today</h2>
     <p class="section-sub">Unlock a lifetime of high-paying opportunities with a one-time investment.</p>
-    <div class="pricing-grid">
 
+    <!-- Toggle -->
+    <div style="display:flex; justify-content:center; margin-bottom:32px;">
+      <div style="display:inline-flex; background:#f0f0f0; border-radius:50px; padding:4px; gap:4px;">
+        <button id="tab-no" onclick="setPlan('no')"
+          style="padding:10px 24px; border-radius:50px; font-size:14px; font-weight:700; cursor:pointer; border:none; background:var(--yellow); color:#fff; transition:all .2s; font-family:'Poppins',sans-serif;">
+          Without Certification
+        </button>
+        <button id="tab-yes" onclick="setPlan('yes')"
+          style="padding:10px 24px; border-radius:50px; font-size:14px; font-weight:700; cursor:pointer; border:none; background:transparent; color:#888; transition:all .2s; font-family:'Poppins',sans-serif;">
+          With Certification
+        </button>
+      </div>
+    </div>
+
+    <div class="pricing-grid">
       <!-- Left: Features -->
       <div class="features-card">
         <h3>What you're getting:</h3>
@@ -2864,20 +2892,34 @@ font-size: 16px;
             <span class="feat-left"><span class="feat-check">✓</span> Personal Mentor Support</span>
             <span class="feat-price">₹10,000</span>
           </li>
+          <!-- Shown only in certification plan -->
+          <li id="cert-feat-row" style="display:none; border:1px solid #c8d4f0; background:#eef2ff;">
+            <span class="feat-left"><span class="feat-check">✓</span>
+              <span style="color:#05156d; font-weight:600;">Microsoft PL-300 Exam Voucher</span>
+            </span>
+            <span class="feat-price">₹8,000</span>
+          </li>
         </ul>
         <div class="total-row">
           <span class="total-label">Total Real Value</span>
-          <span class="total-val">₹60,000</span>
+          <span class="total-val" id="total-val">₹60,000</span>
         </div>
       </div>
 
       <!-- Right: Price Card -->
       <div class="price-card">
-        <span class="off-badge">75% OFF</span>
+        <span class="off-badge" id="off-badge">75% OFF</span>
+        <!-- Cert badge shown only in certification plan -->
+        <div id="cert-pill" style="display:none; margin-bottom:10px;">
+          <span style="display:inline-flex; align-items:center; gap:6px; background:#eef2ff; color:#05156d; font-size:11px; font-weight:700; padding:5px 14px; border-radius:20px;">
+            🎓 Includes PL-300 Exam Voucher
+          </span>
+        </div>
         <span class="price-badge">LIMITED TIME OFFER</span>
+        <p id="plan-label" style="font-size:15px; font-weight:600; color:#111; margin-bottom:10px;">Without Certification</p>
         <div class="price-amount">
           <span class="rupee">₹</span>
-          <span class="num">15,000</span>
+          <span class="num" id="price-num">15,000</span>
           <span class="only">Only</span>
         </div>
         <div class="price-meta">
@@ -2894,13 +2936,13 @@ font-size: 16px;
             <span>100% Satisfaction Guarantee</span>
           </div>
         </div>
-        <button class="btn-enroll-big">ENROLL NOW <span class="enroll-icon">⚡</span></button>
+        <button class="btn-enroll-big">ENROLL NOW <span>⚡</span></button>
         <p class="emi-note">Secure Checkout • Instant Access • EMI Options Available</p>
       </div>
-
     </div>
   </div>
 </section>
+
 
 <!-- FAQ SECTION -->
 <section class="faq-section">
@@ -2958,7 +3000,7 @@ font-size: 16px;
 </div>
       </div>
     </div>
-    <p class="faq-footnote">Still have questions? <a href="#">Chat with our team →</a></p>
+    <p class="faq-footnote">Still have questions? <a href="https://wa.me/9072777759">Chat with our team →</a></p>
   </div>
 </section>
 
@@ -2989,9 +3031,9 @@ font-size: 16px;
     <div class="footer-col">
       <h4>Program</h4>
       <ul>
-        <li><a href="#">Curriculum</a></li>
-        <li><a href="#">Pricing</a></li>
-        <li><a href="#">Testimonials</a></li>
+        <li><a href="#curriculum-">Curriculum</a></li>
+        <li><a href="#pricing-">Pricing</a></li>
+        <li><a href="#testimonials-">Testimonials</a></li>
         <li><a href="#">FAQ</a></li>
       </ul>
     </div>
@@ -3269,7 +3311,7 @@ font-size: 16px;
 <script>
   // ─── LEAD FORM SUBMISSION ───
   const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw-WlE4q3-fBP4GNuHF9hBoWwJemB82qWxt12zB8m6A0Uv3Ntfa7fQuBM2SNlDdnIAx/exec'; // ← paste your URL
-  const THANK_YOU_URL   = 'https://jayarajr007.github.io/manorama-subscription/tailwind-static-starter/dist/mh/thank-you.html'; // ← your redirect URL
+  const THANK_YOU_URL   = 'https://www.manoramahorizon.com'; // ← your redirect URL
 
   document.querySelector('.lead-form').addEventListener('submit', async function(e) {
     e.preventDefault();
@@ -3307,5 +3349,45 @@ font-size: 16px;
     }
   });
 </script>
+
+
+
+<script>
+function setPlan(type) {
+  const tabNo  = document.getElementById('tab-no');
+  const tabYes = document.getElementById('tab-yes');
+  const certRow  = document.getElementById('cert-feat-row');
+  const certPill = document.getElementById('cert-pill');
+  const totalVal = document.getElementById('total-val');
+  const priceNum = document.getElementById('price-num');
+  const offBadge = document.getElementById('off-badge');
+  const planLabel = document.getElementById('plan-label');
+
+  if (type === 'yes') {
+    tabYes.style.background = 'var(--yellow)';
+    tabYes.style.color = '#fff';
+    tabNo.style.background  = 'transparent';
+    tabNo.style.color  = '#888';
+    certRow.style.display  = 'flex';
+    certPill.style.display = 'block';
+    totalVal.textContent   = '₹68,000';
+    priceNum.textContent   = '19,000';
+    offBadge.textContent   = '72% OFF';
+    planLabel.textContent  = 'With Certification';
+  } else {
+    tabNo.style.background  = 'var(--yellow)';
+    tabNo.style.color  = '#fff';
+    tabYes.style.background = 'transparent';
+    tabYes.style.color = '#888';
+    certRow.style.display  = 'none';
+    certPill.style.display = 'none';
+    totalVal.textContent   = '₹60,000';
+    priceNum.textContent   = '15,000';
+    offBadge.textContent   = '75% OFF';
+    planLabel.textContent  = 'Without Certification';
+  }
+}
+</script>
+
 </body>
 </html>
