@@ -91,7 +91,8 @@ padding: 6px;
 }
 #main-banner .w-full.lg\:w-1\/4.md\:w-1\/2.sm\:w-1\/2.flex.pr-4.mb-4 .w-full.bg-\[\#FDEBF0\].rounded-\[11px\].align-items-stretch.border.border-\[\#ED396C\].flex.items-center.justify-between.py-5.px-4.cursor-pointer div
 {
-color:#000 ;
+color:rgb(107, 114, 128);
+
 font-size: 16px;
 }
 
@@ -108,7 +109,7 @@ max-width: 758px;
 }
 #main-banner .md\:max-w-screen-2xl.md\:mx-auto.custom_md\:max-w-full.custom_md\:px-4.px-4.md\:px-16.pt-4 {
     text-align: center;
-padding: 59px 10px;
+padding: 24px 10px;
 }
 #main-banner .text-zinc-800.text-\[22px\].sm\:text-\[25px\].font-semibold.leading-\[35px\].mb-3 {
     font-size: 42px;
@@ -973,8 +974,8 @@ content: counter(course-count);
     right: 1px;
     width: 28px;
     height: 28px;
-    background: #ffd7df;
-    color: #E91E63;
+    background: #ffffff;
+    color: #05156d;
     font-size: 14px;
     font-weight: 600;
     border-radius: 50%;
@@ -982,7 +983,8 @@ content: counter(course-count);
     align-items: center;
     justify-content: center;
     z-index: 10;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); */
+    border: 1px solid #e6e6e6;
 }
 
 /*Section end */
