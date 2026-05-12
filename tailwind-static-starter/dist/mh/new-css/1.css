@@ -166,7 +166,7 @@ font-size: 14px !important;
     display: block;
     text-align: center;
     margin: 8px auto 0;
-    color: #e7e7e7;
+    color: #292929;
     /* background: rgba(255, 255, 255, 0.12); */
     padding: 4px 22px;
     font-size: 16px;
@@ -174,7 +174,7 @@ font-size: 14px !important;
     border-radius: 30px;
     width: fit-content;
     backdrop-filter: blur(4px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+    /* box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18); */
 }
 
 /*---banner style end -- */ 
