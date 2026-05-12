@@ -54,7 +54,7 @@
 
 /* ===== BUTTON CARDS — white bg, colored borders ===== */
 #main-banner .w-full.lg\:w-1\/4.md\:w-1\/2.sm\:w-1\/2.flex.pr-4.mb-4 {
-    background: #fff !important;
+    background: #fff ;
     padding: 6px 18px;
     border-radius: 11px;
     font-size: 15px;
@@ -62,7 +62,7 @@
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    border: 1.5px solid #7c3aed !important;   /* purple default */
+    border: 1.5px solid #7c3aed ;   /* purple default */
     transition: all 0.2s ease;
     width: auto;
     margin: 4px 4px;
@@ -106,6 +106,16 @@ div {
 /* last row stat pills */
 #main-banner .flex-wrap.mb-4 > .flex:last-child > .flex div div {
     color: #374151 !important;
+}
+
+#main-banner .flex-wrap.mb-4 > .flex:last-child > .flex {
+    max-width: 200px !important;
+    width: 100%;
+    background: #ffb400 !important;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 /*---banner style end -- */ 
 
