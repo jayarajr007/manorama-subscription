@@ -109,7 +109,7 @@ max-width: 758px;
 }
 #main-banner .md\:max-w-screen-2xl.md\:mx-auto.custom_md\:max-w-full.custom_md\:px-4.px-4.md\:px-16.pt-4 {
     text-align: center;
-padding: 24px 10px;
+padding: 50px 10px;
 }
 #main-banner .text-zinc-800.text-\[22px\].sm\:text-\[25px\].font-semibold.leading-\[35px\].mb-3 {
     font-size: 42px;
@@ -740,8 +740,8 @@ justify-content:center;
   position: absolute;
   top: -11px;
   left: 16px;
-  background: #f50a4e;
-  color: #fff;
+    background: #ffb502;
+    color: #000000;
   padding: 3px 8px;
   font-size: 11px;
   font-weight: 600;
@@ -1106,6 +1106,12 @@ content: "";
 
 /* MOBILE HORIZONTAL SCROLL FOR FREE COURSE SECTION */
 @media (max-width: 768px) {
+
+#main-banner .md\:max-w-screen-2xl.md\:mx-auto.custom_md\:max-w-full.custom_md\:px-4.px-4.md\:px-16.pt-4 {
+    text-align: center;
+padding: 24px 10px;
+}
+
     
 #free-course .flex.flex-row.items-stretch.flex-wrap.mb-4
 {
@@ -1152,3 +1158,7 @@ content: "";
 }
 
 
+
+#testimonial .w-\[42px\].h-\[42px\].bg-red-300.rounded-full.flex.items-center.justify-center.absolute.left-\[10px\].top-\[-25px\] {
+    background: #fff3d6;
+}
