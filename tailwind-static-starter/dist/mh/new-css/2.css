@@ -1,43 +1,18 @@
-
-/*---banner style Start -- */ 
-#main-banner .flex-wrap.mb-4 > .flex:last-child {
-flex-basis: 100%;
-    display: flex !important;
-    justify-content: center !important;
-    margin-top: 14px !important;
-    background-color: transparent !important;
-    border: none !important;
-}
-
-#main-banner .flex-wrap.mb-4 > .flex:last-child > .flex {
-    max-width: 200px !important;
-    width: 100%;
-    background: #ffffff1a !important;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;                   /* allow it to shrink */
-}
-
-#main-banner .flex-wrap.mb-4 > .flex:last-child > .flex div div {
-color: #fff !important;                  /* allow it to shrink */
-}
-
+/* ===== LIGHT BANNER BG ===== */
 #main-banner {
     position: relative;
     overflow: hidden;
-    background: #090b28;
+    background: linear-gradient(135deg, #f0f4ff 0%, #faf5ff 50%, #f0f9ff 100%);
 }
 
-/* Floating Orbs */
-#main-banner::before,
-#main-banner::after {
+/* Floating Orbs — softened for light bg */
+#main-banner::before {
     content: "";
     position: absolute;
     width: 450px;
     height: 450px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 180, 250, 0.20), transparent 60%);
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.12), transparent 60%);
     animation: float1 12s infinite ease-in-out alternate;
     filter: blur(40px);
     z-index: 0;
@@ -46,27 +21,40 @@ color: #fff !important;                  /* allow it to shrink */
 #main-banner::after {
     width: 380px;
     height: 380px;
-    background: radial-gradient(circle, rgba(120, 200, 255, 0.20), transparent 60%);
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.10), transparent 60%);
     animation: float2 14s infinite ease-in-out alternate;
     z-index: 0;
 }
 
-/* Orb Animations */
-@keyframes float1 {
-    0%   { top: -10%; left: -10%; }
-    50%  { top: 20%; left: 30%; }
-    100% { top: 10%; left: -5%; }
+/* ===== TITLE — dark for light bg ===== */
+#main-banner .text-zinc-800.text-\[22px\].sm\:text-\[25px\].font-semibold.leading-\[35px\].mb-3 {
+    font-size: 42px;
+    color: #1e1b4b;          /* deep indigo instead of white */
+    margin-bottom: 17px;
 }
 
-@keyframes float2 {
-    0%   { bottom: -15%; right: -10%; }
-    50%  { bottom: 20%; right: 25%; }
-    100% { bottom: 0%; right: -5%; }
+/* ===== SUBTITLE TEXT ===== */
+#main-banner .text-gray-600.text-base.mb-6 {
+    color: #4b5563;           /* medium gray instead of #e7e7e7 */
 }
 
+/* ===== "Join community" after text ===== */
+#main-banner > div:first-child::after {
+    content: "Join a community of 1,10,000+ learners";
+    display: block;
+    text-align: center;
+    margin: 8px auto 0;
+    color: #6b7280;
+    padding: 4px 22px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 30px;
+    width: fit-content;
+}
+
+/* ===== BUTTON CARDS — white bg, colored borders ===== */
 #main-banner .w-full.lg\:w-1\/4.md\:w-1\/2.sm\:w-1\/2.flex.pr-4.mb-4 {
-   background: #fff;
-    color: #fff;
+    background: #fff !important;
     padding: 6px 18px;
     border-radius: 11px;
     font-size: 15px;
@@ -74,109 +62,51 @@ color: #fff !important;                  /* allow it to shrink */
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    border: 1px solid #2a2a2a;
-    transition: all 0.2s 
-ease;
+    border: 1.5px solid #7c3aed !important;   /* purple default */
+    transition: all 0.2s ease;
     width: auto;
- 
     margin: 4px 4px;
-z-index:10;
+    z-index: 10;
 }
 
-#main-banner .w-full.lg\:w-1\/4.md\:w-1\/2.sm\:w-1\/2.flex.pr-4.mb-4 .w-full.bg-\[\#FDEBF0\].rounded-\[11px\].align-items-stretch.border.border-\[\#ED396C\].flex.items-center.justify-between.py-5.px-4.cursor-pointer {
-    border: none;
-    background: transparent;
-    color: #fff;
-padding: 6px;
-}
-#main-banner .w-full.lg\:w-1\/4.md\:w-1\/2.sm\:w-1\/2.flex.pr-4.mb-4 .w-full.bg-\[\#FDEBF0\].rounded-\[11px\].align-items-stretch.border.border-\[\#ED396C\].flex.items-center.justify-between.py-5.px-4.cursor-pointer div
-{
-color:#000 ;
-font-size: 16px;
-}
-
-#main-banner .w-full.lg\:w-1\/4.md\:w-1\/2.sm\:w-1\/2.flex.pr-4.mb-4 .w-full.bg-\[\#FDEBF0\].rounded-\[11px\].align-items-stretch.border.border-\[\#ED396C\].flex.items-center.justify-between.py-5.px-4.cursor-pointer div:nth-child(2) {
-    display: none;
-}
-#main-banner .flex.flex-row.items-stretch.flex-wrap.mb-4 {
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 10px;
-max-width: 758px;
-    margin: auto;
-    /* min-height: 200px; */
-}
-#main-banner .md\:max-w-screen-2xl.md\:mx-auto.custom_md\:max-w-full.custom_md\:px-4.px-4.md\:px-16.pt-4 {
-    text-align: center;
-padding: 59px 10px;
-}
-#main-banner .text-zinc-800.text-\[22px\].sm\:text-\[25px\].font-semibold.leading-\[35px\].mb-3 {
-    font-size: 42px;
-color:#fff;
-margin-bottom: 17px;
-}
-#main-banner .h-\[30px\].bg-white.rounded.border.border-pink-300.text-center.mx-1.px-5.cursor-pointer.mb-6 {
-    display: none;
-}
-
-#main-banner 
-.w-full.lg\:w-1\/4.md\:w-1\/2.sm\:w-1\/2.flex.pr-4.mb-4:first-child 
-.w-full.bg-\[\#FDEBF0\].rounded-\[11px\].align-items-stretch.border.border-\[\#ED396C\].flex.items-center.justify-between.py-5.px-4.cursor-pointer::before {
-    content: "";
-    display: inline-block;
-    width: 25px;
-    height: 25px;
-    background-image: url("https://assets.manoramahorizon.com/uploads/media/2025/11/website/fire.gif");
-    background-size: contain;
-    background-repeat: no-repeat;
-
-}
-#main-banner .text-gray-600.text-base.mb-6 {
-    color: #e7e7e7;
-}
-
-
-@media (max-width: 960px) {
-
-#main-banner .w-full.lg\:w-1\/4.md\:w-1\/2.sm\:w-1\/2.flex.pr-4.mb-4 {
- 
-    padding: 2px 5px !important;
-}
-
-#main-banner .w-full.lg\:w-1\/4.md\:w-1\/2.sm\:w-1\/2.flex.pr-4.mb-4 .w-full.bg-\[\#FDEBF0\].rounded-\[11px\].align-items-stretch.border.border-\[\#ED396C\].flex.items-center.justify-between.py-5.px-4.cursor-pointer div
-{
-
-font-size: 14px !important;
-}
-
-
-}
-
-@media (max-width: 760px) {
-#main-banner .text-zinc-800.text-\[22px\].sm\:text-\[25px\].font-semibold.leading-\[35px\].mb-3 {
-    font-size: 33px;
-    line-height: 35px;
-}
-
-
-}
-
-#main-banner > div:first-child::after {
-    content: "Join a community of 1,10,000+ learners";
-    display: block;
-    text-align: center;
-    margin: 8px auto 0;
-    color: #e7e7e7;
-    /* background: rgba(255, 255, 255, 0.12); */
-    padding: 4px 22px;
+/* Inner button text — dark on light bg */
+#main-banner .w-full.lg\:w-1\/4.md\:w-1\/2.sm\:w-1\/2.flex.pr-4.mb-4
+.w-full.bg-\[\#FDEBF0\].rounded-\[11px\].align-items-stretch.border.border-\[\#ED396C\].flex.items-center.justify-between.py-5.px-4.cursor-pointer
+div {
+    color: #1e1b4b !important;
     font-size: 16px;
-    font-weight: 500;
-    border-radius: 30px;
-    width: fit-content;
-    backdrop-filter: blur(4px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
 }
 
+/* Per-button accent colors */
+/* 1st — Learn AI (purple) */
+#main-banner .w-full.lg\:w-1\/4.md\:w-1\/2.sm\:w-1\/2.flex.pr-4.mb-4:nth-child(1) {
+    border-color: #7c3aed !important;
+}
+
+/* 2nd — Competitive Exams (blue) */
+#main-banner .w-full.lg\:w-1\/4.md\:w-1\/2.sm\:w-1\/2.flex.pr-4.mb-4:nth-child(2) {
+    border-color: #2563eb !important;
+}
+
+/* 3rd — Learn Programming (cyan) */
+#main-banner .w-full.lg\:w-1\/4.md\:w-1\/2.sm\:w-1\/2.flex.pr-4.mb-4:nth-child(3) {
+    border-color: #0891b2 !important;
+}
+
+/* 4th — Join Workshops (amber) */
+#main-banner .w-full.lg\:w-1\/4.md\:w-1\/2.sm\:w-1\/2.flex.pr-4.mb-4:nth-child(4) {
+    border-color: #d97706 !important;
+}
+
+/* 5th — Finance & Investing (green) */
+#main-banner .w-full.lg\:w-1\/4.md\:w-1\/2.sm\:w-1\/2.flex.pr-4.mb-4:nth-child(5) {
+    border-color: #16a34a !important;
+}
+
+/* last row stat pills */
+#main-banner .flex-wrap.mb-4 > .flex:last-child > .flex div div {
+    color: #374151 !important;
+}
 /*---banner style end -- */ 
 
 
@@ -986,69 +916,6 @@ content: counter(course-count);
 }
 
 /*Section end */
-
-
-/*Government Job*/
-
-#main-banner .w-full.lg\:w-1\/4.md\:w-1\/2.sm\:w-1\/2.flex.pr-4.mb-4:nth-child(2) .w-full.bg-\[\#FDEBF0\].rounded-\[11px\].align-items-stretch.border.border-\[\#ED396C\].flex.items-center.justify-between.py-5.px-4.cursor-pointer::before
-{
-
-content: "";
-    display: inline-block;
-    width: 21px;
-    height: 21px;
-    background-image: url(https://assets.manoramahorizon.com/uploads/media/2025/12/website/government.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-        margin-right: 4px;
-}
-
-
-/*Learn Programming*/
-
-#main-banner .w-full.lg\:w-1\/4.md\:w-1\/2.sm\:w-1\/2.flex.pr-4.mb-4:nth-child(3) .w-full.bg-\[\#FDEBF0\].rounded-\[11px\].align-items-stretch.border.border-\[\#ED396C\].flex.items-center.justify-between.py-5.px-4.cursor-pointer::before
-{
-
-content: "";
-    display: inline-block;
-    width: 21px;
-    height: 21px;
-    background-image: url(https://assets.manoramahorizon.com/uploads/media/2025/12/website/laptop.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-            margin-right: 4px;
-}
-
-/*Join Workshops*/
-
-#main-banner .w-full.lg\:w-1\/4.md\:w-1\/2.sm\:w-1\/2.flex.pr-4.mb-4:nth-child(4) .w-full.bg-\[\#FDEBF0\].rounded-\[11px\].align-items-stretch.border.border-\[\#ED396C\].flex.items-center.justify-between.py-5.px-4.cursor-pointer::before
-{
-
-content: "";
-    display: inline-block;
-    width: 21px;
-    height: 21px;
-    background-image: url(https://assets.manoramahorizon.com/uploads/media/2025/12/website/round-table.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-            margin-right: 4px;
-}
-
-
-
-#main-banner .w-full.lg\:w-1\/4.md\:w-1\/2.sm\:w-1\/2.flex.pr-4.mb-4:nth-child(5) .w-full.bg-\[\#FDEBF0\].rounded-\[11px\].align-items-stretch.border.border-\[\#ED396C\].flex.items-center.justify-between.py-5.px-4.cursor-pointer::before
-{
-
-content: "";
-    display: inline-block;
-    width: 21px;
-    height: 21px;
-    background-image: url(https://assets.manoramahorizon.com/uploads/media/2026/01/website/investment.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-            margin-right: 4px;
-}
-
 
 
 /*UPSC Section */
