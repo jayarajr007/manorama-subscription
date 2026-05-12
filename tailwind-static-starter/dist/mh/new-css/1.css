@@ -12,7 +12,7 @@ flex-basis: 100%;
 #main-banner .flex-wrap.mb-4 > .flex:last-child > .flex {
     max-width: 200px !important;
     width: 100%;
-    background: #ffffff1a !important;
+    background: #ffb400 !important;
     text-align: center;
     display: flex;
     align-items: center;
@@ -20,13 +20,13 @@ flex-basis: 100%;
 }
 
 #main-banner .flex-wrap.mb-4 > .flex:last-child > .flex div div {
-color: #fff !important;                  /* allow it to shrink */
+color: #000 !important;                  /* allow it to shrink */
 }
 
 #main-banner {
     position: relative;
     overflow: hidden;
-    background: #090b28;
+    background: linear-gradient(135deg, #f0f4ff 0%, #faf5ff 50%, #f0f9ff 100%);
 }
 
 /* Floating Orbs */
@@ -74,7 +74,7 @@ color: #fff !important;                  /* allow it to shrink */
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    border: 1px solid #2a2a2a;
+    /* border: 1px solid #2a2a2a; */
     transition: all 0.2s 
 ease;
     width: auto;
@@ -112,7 +112,7 @@ padding: 59px 10px;
 }
 #main-banner .text-zinc-800.text-\[22px\].sm\:text-\[25px\].font-semibold.leading-\[35px\].mb-3 {
     font-size: 42px;
-color:#fff;
+color:#000;
 margin-bottom: 17px;
 }
 #main-banner .h-\[30px\].bg-white.rounded.border.border-pink-300.text-center.mx-1.px-5.cursor-pointer.mb-6 {
