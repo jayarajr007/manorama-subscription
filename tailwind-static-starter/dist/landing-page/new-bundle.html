@@ -46,6 +46,77 @@
 
    </header>
 
+   <!-- Sticky Bundle Bar -->
+   <div class="sticky-bundle-bar" id="stickyBar">
+      <div class="sticky-bundle-inner">
+
+         <!-- Trust Badge -->
+         <div class="sticky-trust-block">
+            <div class="sticky-shield-icon">🛡️</div>
+            <div class="sticky-trust-text">
+               <div class="title">1 Year Access</div>
+               <div class="sub">Read anytime, anywhere</div>
+            </div>
+         </div>
+
+         <div class="sticky-divider"></div>
+
+         <!-- Features -->
+         <div class="sticky-features">
+            <div class="sticky-feature-item">
+               <div class="sticky-feature-icon">
+                  <img src="assets/images/yb-bundle/epaper.png" />
+
+               </div>
+               <span class="label">E-Paper</span>
+            </div>
+            <div class="sticky-feature-item">
+               <div class="sticky-feature-icon">
+                  <img src="assets/images/yb-bundle/premium.png" />
+               </div>
+               <span class="label">Premium</span>
+            </div>
+            <div class="sticky-feature-item">
+               <div class="sticky-feature-icon">
+
+                  <img src="assets/images/yb-bundle/magazine.png" />
+               </div>
+               <span class="label">9 Magazines</span>
+            </div>
+            <div class="sticky-feature-item">
+               <div class="sticky-feature-icon">
+                  <img src="assets/images/yb-bundle/yb.png" />
+               </div>
+               <span class="label">Yearbook</span>
+            </div>
+         </div>
+
+         <div class="sticky-divider"></div>
+
+         <!-- Price Block -->
+         <div class="sticky-price-block">
+            <div class="sticky-price-row">
+               <span class="sticky-old-price">₹5000</span>
+               <span class="sticky-current-price">₹2000</span>
+               <span class="sticky-discount-tag">60% OFF</span>
+            </div>
+            <span class="sticky-save-tag">You save ₹3000</span>
+         </div>
+
+         <!-- CTA -->
+         <div class="sticky-cta-block">
+            <button class="sticky-btn-primary">
+               Get Bundle Now →
+            </button>
+            <div class="sticky-secure-note">
+               🔒 Secure Payment | No Hidden Charges
+            </div>
+         </div>
+
+      </div>
+   </div>
+
+
    <!-- Hero Section -->
    <section class="hero">
       <div class="container">
@@ -58,7 +129,38 @@
                <p class="hero-desc">E-Paper + Premium Articles + All 9 Malayalam Magazines. Get the ultimate digital
                   news and entertainment bundle.</p>
 
-               <div class="feature-grid">
+
+
+               <div class="pricing-box">
+                  <div class="price-row">
+                     <span class="old-price">₹5000</span>
+                     <span class="current-price">₹2000</span>
+                     <span class="discount-tag">60% OFF</span>
+                  </div>
+                  <p class="price-sub"><span class="save-"> Save ₹3000</span>1 Year Subscription |
+                     Read anytime,
+                     anywhere</p>
+               </div>
+
+               <div class="rating-row">
+                  <span class="stars">★★★★★</span>
+                  <span class="rating-val">4.8/5</span>
+                  <span class="rating-count">Based on 12,000+ reviews</span>
+               </div>
+
+               <div class="cta-row">
+                  <select class="edition-select">
+                     <option>Select Edition</option>
+                     <option>Kottayam</option>
+                     <option>Kochi</option>
+                     <option>Trivandrum</option>
+                     <option>Kozhikode</option>
+                  </select>
+                  <button class="btn-primary">
+                     Get Bundle Now <span>→</span>
+                  </button>
+               </div>
+               <!-- <div class="feature-grid">
                   <div class="feature-item">
                      <span><img src="assets/images/yb-bundle/epaper.png" /></span>
                      <div>
@@ -87,35 +189,7 @@
                         <p class="sub">Yearbook</p>
                      </div>
                   </div>
-               </div>
-
-               <div class="pricing-box">
-                  <div class="price-row">
-                     <span class="old-price">₹5000</span>
-                     <span class="current-price">₹2000</span>
-                     <span class="discount-tag">60% OFF</span>
-                  </div>
-                  <p class="price-sub">1 Year Subscription | No Hidden Charges | Read anytime, anywhere</p>
-               </div>
-
-               <div class="rating-row">
-                  <span class="stars">★★★★★</span>
-                  <span class="rating-val">4.8/5</span>
-                  <span class="rating-count">Based on 12,000+ reviews</span>
-               </div>
-
-               <div class="cta-row">
-                  <select class="edition-select">
-                     <option>Select Edition</option>
-                     <option>Kottayam</option>
-                     <option>Kochi</option>
-                     <option>Trivandrum</option>
-                     <option>Kozhikode</option>
-                  </select>
-                  <button class="btn-primary">
-                     Get Bundle Now <span>→</span>
-                  </button>
-               </div>
+               </div> -->
             </div>
 
             <!-- Right Visual Image -->
@@ -448,6 +522,21 @@
             }
          });
       });
+
+
+      // Sticky bundle bar on scroll
+      const stickyBar = document.getElementById('stickyBar');
+      const heroSection = document.querySelector('.hero');
+
+      window.addEventListener('scroll', () => {
+         const heroBottom = heroSection.getBoundingClientRect().bottom;
+         if (heroBottom < 0) {
+            stickyBar.classList.add('show');
+         } else {
+            stickyBar.classList.remove('show');
+         }
+      });
+
    </script>
 </body>
 
