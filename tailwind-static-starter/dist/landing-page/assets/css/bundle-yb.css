@@ -156,14 +156,16 @@
 {
 background: #b5f6b5;
     padding: 5px;
-    border-radius: 3px;
+    border-radius: 7px;
     margin-right: 10px;
+    font-size: 20px;
+    color: #074608;
 }
     /* Utility Container */
     .container { max-width: 1253px; margin: 0 auto; padding: 0 16px; }
 
     /* Header */
-    header { background-color: #ffffff; border-bottom: 1px solid #e5e7eb; padding: 12px 0; position: sticky; top: 0; z-index: 50; }
+    header { background-color: #ffffff; border-bottom: 1px solid #e5e7eb;  position: sticky; top: 0; z-index: 50; }
     .brand-logo { font-size: 1.25rem; font-weight: 900; color: #dc2626; letter-spacing: 0.05em; }
     .brand-logo span { color: #3b82f6; }
 
