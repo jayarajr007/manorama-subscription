@@ -3,6 +3,76 @@
 
 
 
+/* Magazine Grid Updates */
+.magazine-item {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   gap: 6px;
+   flex: 0 0 calc(50% - 16px);
+   max-width: 140px;
+}
+@media (min-width: 640px) {
+   .magazine-item { flex: 0 0 calc(25% - 16px); }
+}
+@media (min-width: 1024px) {
+   .magazine-item { flex: 0 0 calc(14.28% - 16px); }
+}
+
+.magazine-name {
+   font-size: 0.75rem;
+   font-weight: 700;
+   color: #111827;
+   line-height: 1.2;
+}
+
+.issue-badge {
+   background-color: #1e3a8a;
+   color: #ffffff;
+   font-size: 0.5625rem;
+   font-weight: 700;
+   padding: 3px 8px;
+   border-radius: 4px;
+   white-space: nowrap;
+}
+
+/* Bottom Feature Pill Bar */
+.feature-pill-bar {
+   margin-top: 36px;
+   background-color: #ffffff;
+   border: 1.5px solid #e5e7eb;
+   border-radius: 40px;
+   padding: 12px 24px;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   gap: 12px;
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.pill-item {
+   display: flex;
+   align-items: center;
+   gap: 8px;
+   font-size: 0.8125rem;
+   color: #374151;
+}
+
+.pill-divider {
+   width: 1px;
+   height: 20px;
+   background-color: #e5e7eb;
+}
+
+@media (max-width: 640px) {
+   .pill-divider { display: none; }
+   .feature-pill-bar { border-radius: 12px; justify-content: flex-start; }
+}
+
+
+
   /* Sticky Bundle Bar */
   .sticky-bundle-bar {
      position: fixed;
@@ -102,7 +172,7 @@
   .sticky-feature-item { display: flex; flex-direction: column; align-items: center; gap: 4px; }
   .sticky-feature-icon {
      width: 36px; height: 36px;
-     border: 1.5px solid #d1d5db;
+     
      border-radius: 8px;
      display: flex; align-items: center; justify-content: center;
      font-size: 0.75rem;
@@ -180,6 +250,18 @@
         display: none;
      }
      .sticky-secure-note { display: none; }
+
+
+
+     .hero-title
+     {
+          font-size: 2rem !important;
+     }
+.current-price
+{
+        font-size: 1.5rem !important;
+}
+     
   }
  
   /* Below 700px: shrink the edition select so it stays snug against the button */
