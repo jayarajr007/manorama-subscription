@@ -11,7 +11,6 @@
    <link rel="preload" href="assets/font/poppins/Poppins-ExtraBold.woff2" as="font" type="font/woff2" crossorigin>
    <link rel="preload" href="assets/font/poppins/Poppins-Medium.woff2" as="font" type="font/woff2" crossorigin>
 
-
    <link rel="preload" href="assets/css/output.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
    <link rel="stylesheet" href="assets/css/output.css">
 
@@ -19,97 +18,77 @@
    <link href="assets/css/landingpage.css" rel="stylesheet" />
    <link href="assets/css/bundle-yb.css" rel="stylesheet" />
 
+   <style>
+      
+   </style>
 </head>
 
 <body>
-
-
-
 
    <!--Header-->
    <header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
       <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between px-6 py-4 border-b ">
          <!-- Logo -->
-         <div
-            class="flex items-center space-x-2 order-1 w-full sm:w-auto sm:order-1 justify-center sm:justify-start mb-3 sm:mb-0">
-            <img src="https://subscribe.manoramaonline.com/assets/img/logo.svg" alt="The Week Logo" class="h-10"
-               style="    max-width: 290px;">
+         <div class="flex items-center space-x-2 order-1 w-full sm:w-auto sm:order-1 justify-center sm:justify-start mb-3 sm:mb-0">
+            <img src="https://subscribe.manoramaonline.com/assets/img/logo.svg" alt="The Week Logo" class="h-10" style="max-width: 290px;">
          </div>
 
          <!-- Menu -->
-         <nav
-            class="flex space-x-8 text-gray-700 font-medium order-2 w-full sm:w-auto sm:order-2 justify-center sm:justify-end">
-
+         <nav class="flex space-x-8 text-gray-700 font-medium order-2 w-full sm:w-auto sm:order-2 justify-center sm:justify-end">
             <a href="#faq" class="hover:text-blue-600">FAQ</a>
          </nav>
       </div>
-
    </header>
 
    <!-- Sticky Bundle Bar -->
-   <!DOCTYPE html>
-   <html lang="en">
-
-   <head>
-      <meta charset="UTF-8">
-      <title>Sticky Bundle Bar with Edition Selector</title>
-
-   </head>
-
-   <body>
-
-
-
-      <div class="sticky-bundle-bar" id="stickyBar">
-         <div class="sticky-bundle-inner">
-            <!-- Trust Badge -->
-            <div class="sticky-trust-block">
-               <div class="sticky-shield-icon">🛡️</div>
-               <div class="sticky-trust-text">
-                  <div class="title">1 Year Access</div>
-                  <div class="sub">Read anytime, anywhere</div>
-               </div>
+   <div class="sticky-bundle-bar" id="stickyBar">
+      <div class="sticky-bundle-inner">
+         <!-- Trust Badge -->
+         <div class="sticky-trust-block">
+            <div class="sticky-shield-icon">🛡️</div>
+            <div class="sticky-trust-text">
+               <div class="title">1 Year Access</div>
+               <div class="sub">Read anytime, anywhere</div>
             </div>
-            <div class="sticky-divider"></div>
+         </div>
+         <div class="sticky-divider"></div>
 
-            <!-- Features -->
-            <div class="sticky-features">
-               <div class="sticky-feature-item">
-                  <div class="sticky-feature-icon"><img src="assets/images/yb-bundle/epaper.png" /></div>
-                  <span class="label">E-Paper</span>
-               </div>
-               <div class="sticky-feature-item">
-                  <div class="sticky-feature-icon"><img src="assets/images/yb-bundle/premium.png" /></div>
-                  <span class="label">Premium</span>
-               </div>
-               <div class="sticky-feature-item">
-                  <div class="sticky-feature-icon"><img src="assets/images/yb-bundle/magazine.png" /></div>
-                  <span class="label">9 Magazines</span>
-               </div>
-               <div class="sticky-feature-item">
-                  <div class="sticky-feature-icon"><img src="assets/images/yb-bundle/yb.png" /></div>
-                  <span class="label">Monthly Digital Magazine
-                  </span>
-               </div>
+         <!-- Features -->
+         <div class="sticky-features">
+            <div class="sticky-feature-item">
+               <div class="sticky-feature-icon"><img src="assets/images/yb-bundle/epaper.png" alt="E-Paper Icon" /></div>
+               <span class="label">E-Paper</span>
             </div>
-            <div class="sticky-divider"></div>
-
-            <!-- Price Block -->
-            <div class="sticky-price-block">
-               <div class="sticky-price-row">
-                  <span class="sticky-old-price">₹5000</span>
-                  <span class="sticky-current-price">₹2000</span>
-                  <span class="sticky-discount-tag">60% OFF</span>
-               </div>
-               <span class="sticky-save-tag">You save ₹3000</span>
+            <div class="sticky-feature-item">
+               <div class="sticky-feature-icon"><img src="assets/images/yb-bundle/premium.png" alt="Premium Icon" /></div>
+               <span class="label">Premium</span>
             </div>
+            <div class="sticky-feature-item">
+               <div class="sticky-feature-icon"><img src="assets/images/yb-bundle/magazine.png" alt="Magazines Icon" /></div>
+               <span class="label">10 Magazines</span>
+            </div>
+       
+         </div>
+         <div class="sticky-divider"></div>
 
-            <!-- CTA -->
-            <div class="sticky-cta-block">
-               <div class="sticky-cta-row">
-                  <!-- Edition Selector (now beside the button) -->
-                  <div class="sticky-edition-select-wrap">
-                     <select class="sticky-edition-select" id="editionSelect" aria-label="Select your e-paper edition">
+         <!-- Price Block -->
+         <div class="sticky-price-block">
+            <div class="sticky-price-row">
+               <span class="sticky-old-price">₹5000</span>
+               <span class="sticky-current-price">₹2000</span>
+               <span class="sticky-discount-tag">60% OFF</span>
+            </div>
+            <span class="sticky-save-tag">You save ₹3000</span>
+         </div>
+
+         <!-- CTA -->
+         <div class="sticky-cta-block">
+            <div class="sticky-cta-row">
+               <!-- Sticky Dropdown with Label -->
+               <div class="sticky-edition-select-wrap">
+                  <label for="stickyEditionSelect" class="sticky-edition-label">E-Paper Edition</label>
+                  <div class="sticky-select-inner">
+                     <select class="sticky-edition-select" id="stickyEditionSelect" aria-label="Select your e-paper edition">
                         <option value="" disabled selected>Select edition</option>
                         <option value="kottayam">Kottayam</option>
                         <option value="kochi">Kochi</option>
@@ -119,43 +98,17 @@
                         <option value="malappuram">Malappuram</option>
                      </select>
                   </div>
-                  <button class="sticky-btn-primary" id="ctaBtn">
-                     Get Bundle Now →
-                  </button>
                </div>
-               <div class="sticky-secure-note">
-                  🔒 Secure Payment | No Hidden Charges
-               </div>
+               <button class="sticky-btn-primary" id="ctaBtn">
+                  Get Bundle Now →
+               </button>
+            </div>
+            <div class="sticky-secure-note">
+               🔒 Secure Payment | No Hidden Charges
             </div>
          </div>
       </div>
-
-      <script>
-         // Demo only: show the bar immediately and on scroll (mirrors your existing show-on-scroll logic)
-         const bar = document.getElementById('stickyBar');
-         setTimeout(() => bar.classList.add('show'), 300);
-
-         const editionSelect = document.getElementById('editionSelect');
-         const ctaBtn = document.getElementById('ctaBtn');
-         editionSelect.addEventListener('change', () => {
-            // Wire this up to your bundle logic — e.g. update a hidden form field,
-            // change pricing per edition, or pass it along with the CTA click.
-            console.log('Edition selected:', editionSelect.value);
-         });
-         ctaBtn.addEventListener('click', () => {
-            if (!editionSelect.value) {
-               editionSelect.focus();
-               editionSelect.style.borderColor = '#dc2626';
-               return; // don't proceed to checkout without an edition
-            }
-            // proceed to checkout with editionSelect.value
-         });
-      </script>
-
-   </body>
-
-   </html>
-
+   </div>
 
    <!-- Hero Section -->
    <section class="hero">
@@ -164,12 +117,9 @@
 
             <!-- Left Content -->
             <div>
-               <span class="badge-yellow">Special Limited Time Offer</span>
+               <span class="badge-yellow">BEST VALUE DEAL</span>
                <h1 class="hero-title">The Ultimate Manorama<br />Digital Bundle</h1>
-               <p class="hero-desc">Malayala Manorama E-Paper + Manorama Online Premium + 9 Digital Magazines from the
-                  House of Manorama + Yearbook -Digital News Magazine</p>
-
-
+               <p class="hero-desc">Malayala Manorama E-Paper + Manorama Online Premium + 10 Digital Magazines — <span style="display: inline-block; font-weight: 800;">A Complete Digital Bundle for the Whole Family</span></p>
 
                <div class="pricing-box">
                   <div class="price-row">
@@ -177,9 +127,7 @@
                      <span class="current-price">₹2000</span>
                      <span class="discount-tag">60% OFF</span>
                   </div>
-                  <p class="price-sub"><span class="save-"> Save ₹3000</span>1 Year Subscription |
-                     Read anytime,
-                     anywhere</p>
+                  <p class="price-sub"><span class="save-"> Save ₹3000</span>1 Year Subscription | Read anytime, anywhere</p>
                </div>
 
                <div class="rating-row">
@@ -189,54 +137,27 @@
                </div>
 
                <div class="cta-row">
-                  <select class="edition-select">
-                     <option>Select Edition</option>
-                     <option>Kottayam</option>
-                     <option>Kochi</option>
-                     <option>Trivandrum</option>
-                     <option>Kozhikode</option>
-                  </select>
+                  <!-- Main Hero Dropdown with Label -->
+                  <div class="select-group">
+                     <label for="heroEditionSelect" class="field-label">Select Your E-Paper Edition</label>
+                     <select class="edition-select" id="heroEditionSelect">
+                        <option value="" disabled selected>Select Edition</option>
+                        <option value="kottayam">Kottayam</option>
+                        <option value="kochi">Kochi</option>
+                        <option value="trivandrum">Trivandrum</option>
+                        <option value="kozhikode">Kozhikode</option>
+                     </select>
+                  </div>
                   <button class="btn-primary">
                      Get Bundle Now <span>→</span>
                   </button>
                </div>
-               <!-- <div class="feature-grid">
-                  <div class="feature-item">
-                     <span><img src="assets/images/yb-bundle/epaper.png" /></span>
-                     <div>
-                        <p class="bold">Daily</p>
-                        <p class="sub">E-Paper</p>
-                     </div>
-                  </div>
-                  <div class="feature-item">
-                     <span><img src="assets/images/yb-bundle/premium.png" /></span>
-                     <div>
-                        <p class="bold">Premium</p>
-                        <p class="sub">Articles</p>
-                     </div>
-                  </div>
-                  <div class="feature-item">
-                     <span><img src="assets/images/yb-bundle/magazine.png" /></span>
-                     <div>
-                        <p class="bold">9 Malayalam</p>
-                        <p class="sub">Magazines</p>
-                     </div>
-                  </div>
-                  <div class="feature-item">
-                     <span><img src="assets/images/yb-bundle/yb.png" /></span>
-                     <div>
-                        <p class="bold">Current Affairs</p>
-                        <p class="sub">Yearbook</p>
-                     </div>
-                  </div>
-               </div> -->
             </div>
 
             <!-- Right Visual Image -->
             <div>
                <div class="hero-img-wrap">
                   <img src="assets/images/yb-bundle/banner.png" alt="Digital Bundle Devices" class="hero-img">
-
                </div>
             </div>
 
@@ -250,200 +171,121 @@
          <h2 class="section-title">Everything you get</h2>
          <div class="cards-grid">
             <div class="info-card">
-               <div class="icon"><img src="assets/images/yb-bundle/epaper.png" /></div>
-               <h3>Daily E-Paper</h3>
-               <p>Access the complete e-paper with all regional pages of your selected edition, every single day.</p>
+               <div class="icon"><img src="assets/images/yb-bundle/epaper.png" alt="Daily E-Paper" /></div>
+               <h3>Malayala Manorama E-paper
+</h3>
+               <p>Malayala Manorama epaper is the digital version of the Malayala Manorama newspaper, giving you access to all the local editions of your selected edition. </p>
             </div>
             <div class="info-card">
-               <div class="icon"><img src="assets/images/yb-bundle/premium.png" /></div>
-               <h3>Premium Articles</h3>
-               <p>Unlimited access to premium ad-free, insightful news, opinion pieces, and exclusive newsletters.</p>
+               <div class="icon"><img src="assets/images/yb-bundle/premium.png" alt="Premium Articles" /></div>
+               <h3>Manorama Online Premium
+</h3>
+               <p>Manorama Online Premium is a digital subscription that gives you unlimited access to Premium and non-Premium articles with a 100% ad-free reading experience across the website, Android and iOS apps.</p>
             </div>
             <div class="info-card">
-               <div class="icon"><img src="assets/images/yb-bundle/magazine.png" /></div>
-               <h3>9 Malayalam Magazines</h3>
-               <p>Enjoy 9 popular Malayalam magazines covering lifestyle, health, kids, and general interest.</p>
+               <div class="icon"><img src="assets/images/yb-bundle/magazine.png" alt="Malayalam Magazines" /></div>
+               <h3>10 Digital Magazines
+</h3>
+               <p>The bundle includes Arogyam Digital, Veedu Digital, Karshakasree Digital, Sampadyam Digital, Fasttrack Digital, Bhashaposhini Digital, Balarama Digital, Vanitha Digital, Manorama Weekly, and Yearbook Monthly Digital News Magazine.
+</p>
             </div>
-            <div class="info-card">
-               <div class="icon"><img src="assets/images/yb-bundle/yb.png" /></div>
-               <h3>Yearbook Monthly Digital News Magazine
-               </h3>
-               <p>Stay updated with the latest current affairs and important developments with content from Manorama
-                  Yearbook.</p>
-            </div>
+           
          </div>
       </div>
    </section>
-
-   <!-- Section: 9 Magazines -->
-   <section class="section-padding">
-      <div class="container">
-         <h2 class="section-title">9 Malayalam Magazines Included</h2>
-         <div class="magazines-grid">
-
-
-            <img
-               src="https://img-subs.manoramaonline.com/SubProductConfAdmin/product_group_images/Arogyam/ArogyamFeb23_1761622875683.jpg"
-               alt="Veedu" class="magazine-thumb">
-            <img
-               src="https://img-subs.manoramaonline.com/SubProductConfAdmin/product_group_images/Veedu/Veedu%20October-crop_1761642738934.jpg"
-               alt="Veedu" class="magazine-thumb">
-            <img
-               src="https://img-subs.manoramaonline.com/SubProductConfAdmin/product_group_images/Karshakasree/Karshakafeb26new_1771327793691.jpg"
-               alt="Kishavam" class="magazine-thumb">
-            <img
-               src="https://img-subs.manoramaonline.com/SubProductConfAdmin/product_group_images/Sampadyam/Sambadhyamfeb26new_1771409842972.jpg"
-               alt="Sampadya" class="magazine-thumb">
-            <img
-               src="https://img-subs.manoramaonline.com/SubProductConfAdmin/product_group_images/Fasttrack/Fasttrackfeb26new_1771323239097.jpg"
-               alt="FastTrack" class="magazine-thumb">
-            <img
-               src="https://img-subs.manoramaonline.com/SubProductConfAdmin/product_group_images/Bhashaposhini/Bhashafeb26new_1771410873824.jpg"
-               alt="Balarama" class="magazine-thumb">
-
-
-            <img
-               src="https://img-subs.manoramaonline.com/SubProductConfAdmin/product_group_images/Balarama/Bal28feb2026_1771498381336.jpg"
-               alt="Balarama" class="magazine-thumb">
-            <img
-               src="https://img-subs.manoramaonline.com/SubProductConfAdmin/product_group_images/Vanitha/Vanitha24Oct25-crop_1761642469968.jpg"
-               alt="Balarama" class="magazine-thumb">
-            <img
-               src="https://img-subs.manoramaonline.com/SubProductConfAdmin/product_group_images/Manorama_Weekly/Weekly10jan_1768381833818.jpg"
-               alt="Balarama" class="magazine-thumb">
-         </div>
-      </div>
-   </section>
-
 
    <!-- Section: Digital Magazines Included -->
    <section class="section-padding">
       <div class="container">
-         <h2 class="section-title" style="margin-bottom: 4px;">DIGITAL MAGAZINE INCLUDED IN THE SUBSCRIPTION</h2>
-         <p class="section-subtitle" style="font-size: 1.25rem; font-weight: 800; color: #dc2626; margin-bottom: 32px;">
+         <h2 class="section-title">Digital Magazine Included in the Subscription</h2>
+         <p class="section-subtitle" style="font-size: 1.25rem; font-weight: 800; color: #121212; margin-bottom: 32px;">
             One Bundle for the Whole Family</p>
 
          <div class="magazines-grid">
-            <!-- Row 1 -->
             <div class="magazine-item">
-               <img
-                  src="https://img-subs.manoramaonline.com/SubProductConfAdmin/product_group_images/Arogyam/ArogyamFeb23_1761622875683.jpg"
-                  alt="Arogyam Magazine" class="magazine-thumb">
+               <img src="https://img-subs.manoramaonline.com/SubProductConfAdmin/product_group_images/Arogyam/ArogyamFeb23_1761622875683.jpg" alt="Arogyam Magazine" class="magazine-thumb">
                <span class="magazine-name">Arogyam</span>
-               <span class="issue-badge">4 ISSUES / MONTH</span>
+               <span class="issue-badge">1 ISSUES / MONTH</span>
             </div>
             <div class="magazine-item">
-               <img
-                  src="https://img-subs.manoramaonline.com/SubProductConfAdmin/product_group_images/Veedu/Veedu%20October-crop_1761642738934.jpg"
-                  alt="Veedu Magazine" class="magazine-thumb">
+               <img src="https://img-subs.manoramaonline.com/SubProductConfAdmin/product_group_images/Veedu/Veedu%20October-crop_1761642738934.jpg" alt="Veedu Magazine" class="magazine-thumb">
                <span class="magazine-name">Veedu</span>
-               <span class="issue-badge">4 ISSUES / MONTH</span>
+               <span class="issue-badge">1 ISSUES / MONTH</span>
             </div>
             <div class="magazine-item">
-               <img
-                  src="https://img-subs.manoramaonline.com/SubProductConfAdmin/product_group_images/Karshakasree/Karshakafeb26new_1771327793691.jpg"
-                  alt="Karshakasree Magazine" class="magazine-thumb">
+               <img src="https://img-subs.manoramaonline.com/SubProductConfAdmin/product_group_images/Karshakasree/Karshakafeb26new_1771327793691.jpg" alt="Karshakasree Magazine" class="magazine-thumb">
                <span class="magazine-name">Karshakasree</span>
-               <span class="issue-badge">4 ISSUES / MONTH</span>
+               <span class="issue-badge">1 ISSUES / MONTH</span>
             </div>
             <div class="magazine-item">
-               <img
-                  src="https://img-subs.manoramaonline.com/SubProductConfAdmin/product_group_images/Sampadyam/Sambadhyamfeb26new_1771409842972.jpg"
-                  alt="Sampadyam Magazine" class="magazine-thumb">
+               <img src="https://img-subs.manoramaonline.com/SubProductConfAdmin/product_group_images/Sampadyam/Sambadhyamfeb26new_1771409842972.jpg" alt="Sampadyam Magazine" class="magazine-thumb">
                <span class="magazine-name">Sampadyam</span>
-               <span class="issue-badge">4 ISSUES / MONTH</span>
+               <span class="issue-badge">1 ISSUES / MONTH</span>
             </div>
             <div class="magazine-item">
-               <img
-                  src="https://img-subs.manoramaonline.com/SubProductConfAdmin/product_group_images/Fasttrack/Fasttrackfeb26new_1771323239097.jpg"
-                  alt="Fasttrack Magazine" class="magazine-thumb">
+               <img src="https://img-subs.manoramaonline.com/SubProductConfAdmin/product_group_images/Fasttrack/Fasttrackfeb26new_1771323239097.jpg" alt="Fasttrack Magazine" class="magazine-thumb">
                <span class="magazine-name">Fasttrack</span>
-               <span class="issue-badge">4 ISSUES / MONTH</span>
+               <span class="issue-badge">1 ISSUES / MONTH</span>
             </div>
             <div class="magazine-item">
-               <img
-                  src="https://img-subs.manoramaonline.com/SubProductConfAdmin/product_group_images/Bhashaposhini/Bhashafeb26new_1771410873824.jpg"
-                  alt="Bhashaposhini Magazine" class="magazine-thumb">
+               <img src="https://img-subs.manoramaonline.com/SubProductConfAdmin/product_group_images/Bhashaposhini/Bhashafeb26new_1771410873824.jpg" alt="Bhashaposhini Magazine" class="magazine-thumb">
                <span class="magazine-name">Bhashaposhini</span>
-               <span class="issue-badge">4 ISSUES / MONTH</span>
+               <span class="issue-badge">1 ISSUES / MONTH</span>
             </div>
             <div class="magazine-item">
-               <img
-                  src="https://img-subs.manoramaonline.com/SubProductConfAdmin/product_group_images/Balarama/Bal28feb2026_1771498381336.jpg"
-                  alt="Balarama Magazine" class="magazine-thumb">
+               <img src="https://img-subs.manoramaonline.com/SubProductConfAdmin/product_group_images/Balarama/Bal28feb2026_1771498381336.jpg" alt="Balarama Magazine" class="magazine-thumb">
                <span class="magazine-name">Balarama</span>
                <span class="issue-badge">4 ISSUES / MONTH</span>
             </div>
-
-            <!-- Row 2 -->
             <div class="magazine-item">
-               <img
-                  src="https://img-subs.manoramaonline.com/SubProductConfAdmin/product_group_images/Vanitha/Vanitha24Oct25-crop_1761642469968.jpg"
-                  alt="Vanitha Magazine" class="magazine-thumb">
+               <img src="https://img-subs.manoramaonline.com/SubProductConfAdmin/product_group_images/Vanitha/Vanitha24Oct25-crop_1761642469968.jpg" alt="Vanitha Magazine" class="magazine-thumb">
                <span class="magazine-name">Vanitha</span>
-               <span class="issue-badge">4 ISSUES / MONTH</span>
+               <span class="issue-badge">2 ISSUES / MONTH</span>
             </div>
             <div class="magazine-item">
-               <img
-                  src="https://img-subs.manoramaonline.com/SubProductConfAdmin/product_group_images/Manorama_Weekly/Weekly10jan_1768381833818.jpg"
-                  alt="Manorama Weekly" class="magazine-thumb">
-               <span class="magazine-name">Current Affairs<br><small>(Manorama Yearbook)</small></span>
-               <span class="issue-badge">4 ISSUES / MONTH</span>
-            </div>
-            <div class="magazine-item">
-               <img
-                  src="https://img-subs.manoramaonline.com/SubProductConfAdmin/product_group_images/Manorama_Weekly/Weekly10jan_1768381833818.jpg"
-                  alt="Current Affairs Special" class="magazine-thumb">
-               <span class="magazine-name">Current Affairs<br><small>(Manorama Yearbook)</small></span>
-               <span class="issue-badge">4 ISSUES / YEAR</span>
-            </div>
-            <div class="magazine-item">
-               <img
-                  src="https://img-subs.manoramaonline.com/SubProductConfAdmin/product_group_images/Manorama_Weekly/Weekly10jan_1768381833818.jpg"
-                  alt="Manorama Weekly Magazine" class="magazine-thumb">
+               <img src="https://img-subs.manoramaonline.com/SubProductConfAdmin/product_group_images/Manorama_Weekly/Weekly10jan_1768381833818.jpg" alt="Manorama Weekly Magazine" class="magazine-thumb">
                <span class="magazine-name">Manorama Weekly</span>
                <span class="issue-badge">1 ISSUE / WEEK</span>
+            </div>
+            <div class="magazine-item">
+               <img src="https://img-subs.manoramaonline.com/SubProductConfAdmin/product_group_images/Yearbook_Monthly_Digital_News_Magazine/magazine%20main%20cover_1785734035979.png" alt="Manorama Weekly" class="magazine-thumb">
+               <span class="magazine-name">Current Affairs<br><small>(Manorama Yearbook)</small></span>
+               <span class="issue-badge">1 ISSUES / MONTH</span>
             </div>
          </div>
 
          <!-- Feature Pill Banner -->
          <div class="feature-pill-bar">
             <div class="pill-item">
-               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2">
-                  <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-                  <line x1="12" y1="18" x2="12.01" y2="18"></line>
-               </svg>
-               <span><strong>All Digital.</strong> No Print.</span>
+               <span><strong>All Digital.</strong><br> No Print.</span>
             </div>
             <div class="pill-divider"></div>
             <div class="pill-item">
-               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2">
-                  <rect x="4" y="4" width="16" height="16" rx="2"></rect>
-                  <rect x="9" y="9" width="6" height="6"></rect>
+               <svg width="40" height="29" viewBox="0 0 19 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3.54048 0C1.58626 0 0 1.59583 0 3.55093V25.4491C0 27.4091 1.59113 29 3.54048 29H15.4595C17.4137 29 19 27.4042 19 25.4491L18.9984 3.55093C18.9984 1.59094 17.4072 0 15.4579 0H3.53886H3.54048ZM17.3507 3.55093V25.4491C17.3507 26.493 16.5035 27.3427 15.4627 27.3427H3.54366C2.50283 27.3427 1.65562 26.493 1.65562 25.4491L1.65723 3.55093C1.65723 2.50702 2.50444 1.65732 3.54527 1.65732H15.4643C16.5051 1.65732 17.3524 2.50702 17.3524 3.55093H17.3507Z" fill="#2563EB" />
+                  <path d="M11.1038 4H6.89615C6.40255 4 6 4.22461 6 4.5C6 4.77539 6.40257 5 6.89615 5H11.1038C11.5974 5 12 4.77539 12 4.5C12 4.22461 11.5974 4 11.1038 4Z" fill="#2563EB" />
                </svg>
                <span><strong>Read Anywhere</strong></span>
             </div>
             <div class="pill-divider"></div>
             <div class="pill-item">
-               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2">
-                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                  <line x1="8" y1="21" x2="16" y2="21"></line>
-                  <line x1="12" y1="17" x2="12" y2="21"></line>
+               <svg width="40" height="29" viewBox="0 0 41 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.13336 0C3.72363 0 2.56251 1.15949 2.56251 2.5688V19.6178H0.854171C0.382028 19.6178 0 19.9993 0 20.4708V23.0296C0 24.4323 1.15779 25.5884 2.56251 25.5884H28.1876V23.8825H2.56251C2.07371 23.8825 1.70834 23.5177 1.70834 23.0296V21.3237H28.1876V19.6178H4.27086V2.5688C4.27086 2.07572 4.64122 1.70588 5.13336 1.70588H33.3026C33.7964 1.70588 34.1651 2.07571 34.1651 2.5688V6.82353H35.8735V2.5688C35.8735 1.16111 34.7123 0 33.3026 0H5.13336ZM31.177 7.67647C30.0092 7.67647 29.0416 8.64268 29.0416 9.80882V26.8676C29.0416 28.0338 30.0092 29 31.177 29H38.8646C40.0324 29 41 28.0338 41 26.8676V9.80882C41 8.64268 40.0324 7.67647 38.8646 7.67647H31.177ZM31.177 9.38235H38.8646C39.1165 9.38235 39.2917 9.55727 39.2917 9.80882V26.8676C39.2917 27.1192 39.1165 27.2941 38.8646 27.2941H31.177C30.9251 27.2941 30.7499 27.1175 30.7499 26.8676V9.80882C30.7499 9.55727 30.9251 9.38235 31.177 9.38235ZM35.0208 23.8824C34.5487 23.8824 34.1666 24.2638 34.1666 24.7353C34.1666 24.9619 34.2567 25.1784 34.4169 25.3384C34.577 25.4983 34.7939 25.5883 35.0208 25.5883C35.2477 25.5883 35.4646 25.4983 35.6248 25.3384C35.7849 25.1784 35.875 24.9619 35.875 24.7353C35.875 24.5087 35.7849 24.2921 35.6248 24.1322C35.4646 23.9723 35.2477 23.8824 35.0208 23.8824Z" fill="#2563EB" />
                </svg>
                <span><strong>All Devices</strong></span>
             </div>
             <div class="pill-divider"></div>
             <div class="pill-item">
-               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2">
-                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+               <svg width="40" height="30" viewBox="0 0 25 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.96733 4.37615C9.0645 4.47536 9.19653 4.53277 9.33536 4.53616C9.46026 4.5361 9.58043 4.48841 9.67139 4.40282C9.76357 4.30991 9.8153 4.18433 9.8153 4.05345C9.8153 3.92257 9.76357 3.797 9.67139 3.70409L8.12459 2.0346C8.03279 1.95028 7.91261 1.90361 7.78796 1.90387C7.66331 1.90414 7.54333 1.95132 7.45189 2.03603C7.36045 2.12075 7.30426 2.23678 7.29449 2.36105C7.28473 2.48532 7.32211 2.60871 7.39919 2.70666L8.96733 4.37615Z" fill="#2563EB" />
+                  <path d="M13.2024 3.28268C13.3304 3.2828 13.4534 3.23348 13.5458 3.14502C13.6383 3.05656 13.693 2.9358 13.6985 2.80797L13.7838 0.535768C13.7889 0.469316 13.7805 0.402523 13.7592 0.339379C13.7379 0.276234 13.704 0.218032 13.6597 0.168248C13.6154 0.118464 13.5616 0.0781191 13.5013 0.049622C13.4411 0.0211248 13.3757 0.00506001 13.3091 0.00238667C13.2423 -0.0042591 13.1749 0.00301091 13.1111 0.0237366C13.0473 0.0444624 12.9885 0.0781934 12.9383 0.122802C12.8882 0.16741 12.8479 0.221925 12.8199 0.282906C12.7919 0.343887 12.7769 0.410008 12.7757 0.477096L12.685 2.7493C12.6797 2.81935 12.6893 2.88973 12.7131 2.9558C12.737 3.02187 12.7747 3.08211 12.8236 3.13254C12.8725 3.18296 12.9316 3.22242 12.9969 3.24831C13.0622 3.27419 13.1322 3.28591 13.2024 3.28268Z" fill="#2563EB" />
+                  <path d="M16.9258 5.28823C17.0493 5.28574 17.168 5.24049 17.2618 5.16021L18.9313 3.61341C18.9789 3.56893 19.0173 3.51551 19.0443 3.45619C19.0713 3.39687 19.0864 3.33281 19.0886 3.26768C19.0908 3.20255 19.0802 3.13762 19.0573 3.07659C19.0345 3.01557 18.9998 2.95964 18.9553 2.91201C18.9108 2.86438 18.8574 2.82598 18.7981 2.79899C18.7388 2.77201 18.6747 2.75697 18.6096 2.75475C18.5445 2.75252 18.4795 2.76314 18.4185 2.786C18.3575 2.80887 18.3016 2.84353 18.2539 2.88801L16.5898 4.42948C16.5378 4.47414 16.4955 4.52899 16.4655 4.59064C16.4355 4.65229 16.4185 4.71943 16.4155 4.78792C16.4125 4.8564 16.4236 4.92477 16.4481 4.98881C16.4725 5.05284 16.5099 5.11118 16.5578 5.16021C16.6599 5.24777 16.7914 5.2935 16.9258 5.28823Z" fill="#2563EB" />
                </svg>
                <span><strong>Easy Access</strong></span>
             </div>
          </div>
       </div>
    </section>
-
 
    <!-- Section: Comparison & Value Table -->
    <section class="section-padding" style="background-color: #ffffff;">
@@ -478,14 +320,10 @@
                         <td class="center check">✓</td>
                      </tr>
                      <tr>
-                        <td> Yearbook Monthly Digital News Magazine</td>
+                        <td>Yearbook Monthly Digital News Magazine</td>
                         <td class="center" style="color: #6b7280;">₹1802</td>
                         <td class="center check">✓</td>
                      </tr>
-
-
-
-
                      <tr style="background-color: #f9fafb; font-weight: 700;">
                         <td>Total Value</td>
                         <td class="center" style="text-decoration: line-through; color: #9ca3af;">₹5000</td>
@@ -553,7 +391,7 @@
                <p>Stay informed with premium news and market analysis.</p>
             </div>
             <div class="persona-card">
-               <img src="assets/images/yb-bundle//abroda.png" alt="Malayalis Abroad" class="persona-avatar">
+               <img src="assets/images/yb-bundle/abroda.png" alt="Malayalis Abroad" class="persona-avatar">
                <h3>Malayalis Abroad</h3>
                <p>Stay connected with Malayalam news and culture.</p>
             </div>
@@ -574,38 +412,32 @@
          <div class="reviews-grid">
             <div class="review-card">
                <div class="review-header">
-
                   <div>
                      <div class="reviewer-name">Arjun Nair</div>
                      <div class="review-stars">★★★★★</div>
                   </div>
                </div>
-               <p class="review-text">"This bundle offer is absolute value! Malayalam news and magazines. Great value
-                  for the price and the app interface is super smooth."</p>
+               <p class="review-text">"This bundle offer is absolute value! Malayalam news and magazines. Great value for the price and the app interface is super smooth."</p>
             </div>
 
             <div class="review-card">
                <div class="review-header">
-
                   <div>
                      <div class="reviewer-name">Reshmi S.</div>
                      <div class="review-stars">★★★★★</div>
                   </div>
                </div>
-               <p class="review-text">"I get all my favorite magazines and the e-paper every day. Totally worth it for
-                  the convenience alone. No more waiting for delivery."</p>
+               <p class="review-text">"I get all my favorite magazines and the e-paper every day. Totally worth it for the convenience alone. No more waiting for delivery."</p>
             </div>
 
             <div class="review-card">
                <div class="review-header">
-
                   <div>
                      <div class="reviewer-name">Suresh Babu</div>
                      <div class="review-stars">★★★★★</div>
                   </div>
                </div>
-               <p class="review-text">"Being an NRI, accessing paper and Premium articles is excellent and depth of
-                  reporting is what I look for. Highly recommended."</p>
+               <p class="review-text">"Being an NRI, accessing paper and Premium articles is excellent and depth of reporting is what I look for. Highly recommended."</p>
             </div>
          </div>
 
@@ -631,7 +463,7 @@
    </section>
 
    <!-- Section: FAQ -->
-   <section class="section-padding" style="background-color: #ffffff;">
+   <section class="section-padding" id="faq" style="background-color: #ffffff;">
       <div class="container">
          <h2 class="section-title">Frequently Asked Questions</h2>
          <div class="faq-container">
@@ -652,8 +484,7 @@
                   <span class="faq-icon">⌄</span>
                </button>
                <div class="faq-content">
-                  You can access your subscription across up to 3 devices simultaneously, including web, Android, and
-                  iOS devices.
+                  You can access your subscription across up to 3 devices simultaneously, including web, Android, and iOS devices.
                </div>
             </div>
 
@@ -673,8 +504,7 @@
                   <span class="faq-icon">⌄</span>
                </button>
                <div class="faq-content">
-                  Simply log into your Manorama Online account, and all premium content and e-papers will automatically
-                  unlock for instant reading.
+                  Simply log into your Manorama Online account, and all premium content and e-papers will automatically unlock for instant reading.
                </div>
             </div>
 
@@ -686,20 +516,17 @@
       </div>
    </section>
 
-   <!-- Vanilla JavaScript -->
    <script>
+      // FAQ Accordion Logic
       document.querySelectorAll('.faq-button').forEach(button => {
          button.addEventListener('click', () => {
             const content = button.nextElementSibling;
             const icon = button.querySelector('.faq-icon');
-
             const isOpen = content.classList.contains('open');
 
-            // Close all existing open FAQs
             document.querySelectorAll('.faq-content').forEach(c => c.classList.remove('open'));
             document.querySelectorAll('.faq-icon').forEach(i => i.textContent = '⌄');
 
-            // Toggle clicked
             if (!isOpen) {
                content.classList.add('open');
                icon.textContent = '⌃';
@@ -707,8 +534,7 @@
          });
       });
 
-
-      // Sticky bundle bar on scroll
+      // Sticky bundle bar visibility on scroll
       const stickyBar = document.getElementById('stickyBar');
       const heroSection = document.querySelector('.hero');
 
@@ -721,6 +547,18 @@
          }
       });
 
+      // Edition selector handlers
+      const stickyEditionSelect = document.getElementById('stickyEditionSelect');
+      const ctaBtn = document.getElementById('ctaBtn');
+
+      ctaBtn.addEventListener('click', () => {
+         if (!stickyEditionSelect.value) {
+            stickyEditionSelect.focus();
+            stickyEditionSelect.style.borderColor = '#dc2626';
+            return;
+         }
+         console.log('Proceeding with edition:', stickyEditionSelect.value);
+      });
    </script>
 </body>
 
