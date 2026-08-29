@@ -1,5 +1,61 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
+
+.cta-button {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+
+  /* Your existing styles */
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 20px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Flash / shine */
+.cta-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -80%;
+  width: 45%;
+  height: 100%;
+
+  background: linear-gradient(
+    110deg,
+    transparent,
+    rgba(255, 255, 255, 0.55),
+    transparent
+  );
+
+  transform: skewX(-20deg);
+  animation: ctaFlash 3s ease-in-out infinite;
+}
+
+/* Make sure text stays above animation */
+.cta-button > * {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes ctaFlash {
+  0% {
+    left: -80%;
+  }
+
+  25% {
+    left: 130%;
+  }
+
+  100% {
+    left: 130%;
+  }
+}
       /* Reset & Base Styles */
       * { box-sizing: border-box; margin: 0; padding: 0; }
       body { font-family: 'Inter', sans-serif; color: #1f2937; background-color: #f9fafb; line-height: 1.5; }
@@ -31,8 +87,8 @@
       .container { max-width: 1253px; margin: 0 auto; padding: 0 16px; }
 
       /* Hero Section */
-      .hero { padding: 144px 0px 40px 0px; }
-      .hero-grid { display: grid; grid-template-columns: 1fr; gap: 32px; align-items: center; }
+      .hero { padding: 101px 0px 40px 0px; }
+      .hero-grid { display: grid; grid-template-columns: 1fr; gap: 0px; align-items: center; }
       @media (min-width: 768px) { .hero-grid { grid-template-columns: 7fr 5fr; } }
 
       .badge-yellow { display: inline-block; background-color: #fef3c7; color: #92400e; font-size: 0.75rem; font-weight: 600; padding: 4px 12px; border-radius: 9999px; text-transform: uppercase; margin-bottom: 12px; }
@@ -41,11 +97,11 @@
 
       /* Pricing Display */
       .pricing-box { margin-bottom: 12px; }
-      .price-row { display: flex; align-items: baseline; gap: 12px; }
+      .price-row { display: flex; align-items: baseline; gap: 12px; margin-bottom: 16px; }
       .old-price { text-decoration: line-through; color: #9ca3af; font-size: 1.125rem; }
       .current-price { font-size: 2.5rem; font-weight: 900; color: #111827; }
       .discount-tag { background-color: #fbbf24; color: #000000; font-size: 0.75rem; font-weight: 700; padding: 2px 8px; border-radius: 4px; }
-      .price-sub { font-size: 0.75rem; color: #6b7280; margin-top: 4px; }
+      .price-sub { font-size: 0.75rem; color: #6b7280; margin-top: 4px;  line-height: 26px;}
 
       /* Rating Star */
       .rating-row { display: flex; align-items: center; gap: 8px; font-size: 0.75rem; margin-bottom: 20px; }
@@ -185,6 +241,11 @@
          .pill-item { flex: 1 1 100%; justify-content: flex-start; padding: 10px 0; border-bottom: 1px solid #e2e8f0; }
          .pill-item:last-child { border-bottom: none; }
          .pill-item svg { width: 20px; height: 20px; }
+.d-none
+{
+   display: none !important;
+}
+
       }
 
       /* Sticky Bundle Bar */
