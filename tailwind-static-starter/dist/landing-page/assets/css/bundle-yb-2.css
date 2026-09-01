@@ -440,7 +440,7 @@
       }
 
       /* Value Table Styles */
-      .value-grid { display: grid; grid-template-columns: 1fr; gap: 24px; align-items: center; }
+      .value-grid { display: grid; grid-template-columns: 1fr; gap: 24px; align-items: flex-start; }
       @media (min-width: 768px) { .value-grid { grid-template-columns: 7fr 5fr; } }
       .table-container { background: #ffffff; border-radius: 12px; border: 1px solid #e5e7eb; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.03); }
       table { width: 100%; border-collapse: collapse; text-align: left; font-size: 0.75rem; }
