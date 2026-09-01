@@ -363,7 +363,7 @@
     border: 1px solid #e6e6e6;
     overflow: hidden
       }
-      .sticky-feature-item span.label { font-size: 0.6875rem; color: #374151; font-weight: 500; white-space: nowrap; }
+      .sticky-feature-item span.label { font-size: 8px; color: #374151; font-weight: 500; white-space: nowrap; }
       
       .sticky-price-block { display: flex; flex-direction: column; gap: 4px; flex-shrink: 0; }
       .sticky-price-row { display: flex; align-items: baseline; gap: 8px; }
