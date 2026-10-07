@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Manorama Subscription Website. Subscribe Books and Magazines. Manorama Year Book Malayalam and English. Magic Pot. The Week. Watch Time India. Sampadyam. Bhashaposhini. Karshakasree. Smart Life. The Man. Balarama Digest. Tell Me Why. Kalikkudukka. Balarama. Vanitha. National Geographic Kids. Manorama Weekly. Vanitha Pachakam. Thozhilveedhi. Balarama Amar Chithra Kadha."
+    />
+    <title>Manorama Subscription | Premium + E-PAPER + Emagazines</title>
+    <link
+      rel="preload"
+      href="assets/font/poppins/Poppins-SemiBold.woff"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/font/poppins/Poppins-ExtraBold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/font/poppins/Poppins-Medium.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <link
+      rel="preload"
+      href="assets/css/output.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link rel="stylesheet" href="assets/css/output.css" />
+
+    <link href="assets/css/common-crit.css" rel="stylesheet" />
+    <link href="assets/css/landingpage.css" rel="stylesheet" />
+	<!-- Google Tag Manager -->
+	<script>window.addEventListener('load', function() {(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-MR6J5DD');});</script>
+	<!-- End Google Tag Manager --> 
+  </head>
+
+  <body class>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MR6J5DD"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+    <!--Header-->
+    <header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+      <div
+        class="max-w-7xl mx-auto flex flex-wrap items-center justify-between px-6 py-4 border-b"
+      >
+        <!-- Logo -->
+        <div
+          class="flex items-center space-x-2 order-1 w-full sm:w-auto sm:order-1 justify-center sm:justify-start mb-3 sm:mb-0"
+        >
+          <img src="assets/img/logo.svg" alt="Manorama Online" class="h-10" />
+        </div>
+
+        <!-- Menu -->
+        <nav
+          class="flex space-x-8 text-gray-700 font-medium order-2 w-full sm:w-auto sm:order-2 justify-center sm:justify-end"
+        >
+          <a href="#plan" class="hover:text-blue-600">Plans</a>
+          <a href="#faq" class="hover:text-blue-600">FAQ</a>
+        </nav>
+      </div>
+    </header>
+
+    <!--Header End-->
+
+    <!-- Hero Section -->
+    <section
+      class="max-w-7xl mx-auto px-6 py-12 flex flex-col items-center text-center dote-bg pt-24 pb-0"
+    >
+      <div>
+        <!-- Web banner -->
+        <img
+          src="assets/images/epaper-desktop.jpg"
+          class="hidden md:block w-full"
+          alt="Web Banner"
+        />
+
+        <!-- Mobile banner -->
+        <img
+          src="assets/images/epaper-mob.jpg"
+          class="block md:hidden w-full"
+          alt="Mobile Banner"
+        />
+      </div>
+      <!-- Heading -->
+      <h2
+        class="text-2xl md:text-4xl font-bold text-gray-800 leading-snug mb-3 mt-5 max-w-4xl"
+      >
+        Premium + E-PAPER + All Malayalam Emagazines
+      </h2>
+
+      <!-- Renew Subscription -->
+      <!-- <div class="mt-4">
+    <a href="#"
+       class="text-blue-600 font-medium hover:underline">Renew Subscription?</a>
+    <p class="mt-1 text-gray-500 text-sm">500,000+ Subscribers Across India</p>
+  </div> -->
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- Plan section-->
+
+    <section id="plan">
+      <h2 class="text-center text-xl font-semibold mb-6">
+        Choose Your Subscription Plan
+      </h2>
+
+      <!-- Tabs -->
+      <div
+        class="flex justify-center space-x-2 border-b mb-3"
+        id="editionTabs"
+      ></div>
+
+      <!-- Dynamic Tab Content -->
+      <section id="plan" class="max-w-4xl mx-auto px-6 py-10 text-center">
+
+  <h2 class="text-xl font-semibold mb-6">
+    Choose Your Edition
+  </h2>
+
+  <!-- Edition Dropdown -->
+  <div class="mb-6">
+    <select id="editionSelect" class="border px-4 py-3 rounded w-64"></select>
+  </div>
+
+  <!-- Plans Will Load Here -->
+  <div id="planContainer" class="flex justify-center gap-6 mb-6"></div>
+
+  <!-- Price Display -->
+  <div class="text-xl font-semibold mb-6" id="selectedPrice"></div>
+
+  <!-- Add To Cart -->
+  <button id="promoAddToCart"
+    class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded font-semibold">
+    ADD TO CART
+  </button>
+
+</section>
+    <!-- Plan section End -->
+
+    <!-- FAQ Section -->
+    <section class="max-w-3xl mx-auto px-6 py-12" id="faq">
+      <h2 class="text-2xl font-bold mb-8 text-center">FAQ</h2>
+      <div class="space-y-4">
+        <!-- FAQ Item -->
+        <div class="border rounded-lg">
+          <button
+            class="w-full flex justify-between items-center p-4 text-left font-medium text-gray-800 faq-toggle"
+          >
+            <span>What is Manorama Online Premium subscription?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-content hidden px-4 pb-4 text-gray-600 text-sm">         
+Manorama Online Premium subscription is a digital only subscription that gives subscribers
+unlimited access to all premium and non-premium articles, a distraction free ad-free
+experience, and access to exclusive newsletters and events. Subscribers can access their
+premium digital subscription on website, Android and IOS apps.
+          </div>
+        </div>
+
+        <div class="border rounded-lg">
+          <button
+            class="w-full flex justify-between items-center p-4 text-left font-medium text-gray-800 faq-toggle"
+          >
+            <span>What do I get with a Manorama Online Premium subscription?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-content hidden px-4 pb-4 text-gray-600 text-sm">
+            <ul>
+				<li>
+				<b>Premium articles:</b> Unlimited access to all premium articles exclusively for
+				you! Read expert opinions, data-driven stories, insightful analyses and more.
+				</li>
+				<li>
+				<b>Ad-free experience:</b> As a premium subscriber, you will see no ads as you
+				browse the website or the app. This means fewer distractions to your reading
+				experience and quicker loading pages. So, grab stories with limited interruptions!
+				</li>
+				<li>
+				<b>Malayala Manorama e-Paper:</b> Get daily access to a replica of the printed paper
+				on your computer, tablet, or smartphone. e-Paper access is, however, only available
+				with a 1-year Manorama Online Premium + epaper subscription plan.
+				</li>
+				<li>
+				<b>Exclusive newsletters:</b> Premium subscribers will receive exclusive newsletters
+				curated with key notes and summaries, ensuring that you stay well-informed and
+				updated about key events and stories.
+				</li>
+				<li>
+				<b>Access to exclusive events:</b> Premium subscribers will get complimentary access
+				to a selection of virtual &amp; offline events. Manorama Online will be organizing
+				exclusive events such as insightful webinars, live-stream, interactive talks with
+				editors, and offline events based on the need of the hour for our premium
+				subscribers.
+				</li>
+				<li>
+				<b>Exclusive offers from Popular Brands:</b> Access to exclusive coupon codes from
+				popular brands to save big on favorite products and experiences
+				</li>
+				</ul>
+          </div>
+        </div>
+
+        <div class="border rounded-lg">
+          <button
+            class="w-full flex justify-between items-center p-4 text-left font-medium text-gray-800 faq-toggle"
+          >
+            <span>Why should I subscribe to Manorama Online Premium?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-content hidden px-4 pb-4 text-gray-600 text-sm">
+            <ul>
+				<li>
+				<b>Exclusive News:</b> Unlimited access to all exclusive content you need to know.
+				</li>
+				<li>
+				<b>In-depth Reporting:</b> Provides an in-depth analysis of topics and issues. With
+				in-depth analysis of topics &amp; issues, we make readers aware of all aspects of a
+				published story by
+				</li>
+				<li>
+				giving them all possible credible information, including background and details.
+				</li>
+				<li>
+				<b>Simple Content:</b> Manorama Online aims to satisfy the needs of its customers by
+				providing exclusive content presented in a simple, lucid and informative format.
+				</li>
+				<li>
+				<b>Facts and Figures:</b> We provide articles and stories with related facts and
+				proven figures available from trusted sources.
+				</li>
+				</ul>
+          </div>
+        </div>
+        
+        <div class="border rounded-lg">
+          <button
+            class="w-full flex justify-between items-center p-4 text-left font-medium text-gray-800 faq-toggle"
+          >
+            <span>Will Manorama Online Premium subscription be ad-free?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-content hidden px-4 pb-4 text-gray-600 text-sm">
+            As a premium member you will see no ads as you browse the website or the App. This means
+fewer distractions to your reading experience and article pages will also load faster.
+          </div>
+        </div>
+
+        <div class="border rounded-lg">
+          <button
+            class="w-full flex justify-between items-center p-4 text-left font-medium text-gray-800 faq-toggle"
+          >
+            <span>Do I need to create an account to buy a subscription?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-content hidden px-4 pb-4 text-gray-600 text-sm">Yes, you can easily create an account with us to enjoy the subscription. You can either
+register using your Google/Facebook account or sign up using your email ID.
+          </div>
+        </div>
+		
+		<div class="border rounded-lg">
+          <button
+            class="w-full flex justify-between items-center p-4 text-left font-medium text-gray-800 faq-toggle"
+          >
+            <span>Is e-Paper a part of my digital subscription?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-content hidden px-4 pb-4 text-gray-600 text-sm">We offer two subscription plans for our readers, one with e-paper and the other without,
+each with different pricing. If you're interested in an e-paper subscription, please choose
+the plan with e-paper included. However, it's important to note that only Indian Editions
+can be chosen with the digital subscription that includes e-Paper; international editions
+are not included in this offer.
+          </div>
+        </div>
+		<div class="border rounded-lg">
+          <button
+            class="w-full flex justify-between items-center p-4 text-left font-medium text-gray-800 faq-toggle"
+          >
+            <span>Can International edition be opted for the premium package with e-paper?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-content hidden px-4 pb-4 text-gray-600 text-sm">No, only one Indian edition of your choice can be selected for the premium e-paper package
+          </div>
+        </div>
+		<div class="border rounded-lg">
+          <button
+            class="w-full flex justify-between items-center p-4 text-left font-medium text-gray-800 faq-toggle"
+          >
+            <span>Being a 1-year premium + epaper subscriber, how can I get my e-Paper access?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-content hidden px-4 pb-4 text-gray-600 text-sm">As a 1-year premium + epaper subscriber, you can obtain your e-Paper access through the
+following steps:
+			<ul>
+			<li>
+			You will receive a coupon code via email upon subscribing to the 1-year Manorama
+			Online Premium subscription.
+			</li>
+			<li>
+			sit the e-Paper subscription page at
+			<u><a href="https://epaper.manoramaonline.com/MMPortalUI/" target="_blank">https://epaper.manoramaonline.com/MMPortalUI/</a></u>
+			</li>
+			<li>Sign in to your account.</li>
+			<li>Elect your desired Indian edition and choose a 1-year subscription period.</li>
+			<li>Proceed to subscribe, which will take you to the Cart page.</li>
+			<li>Apply the coupon code provided in the Cart page.</li>
+			<li>
+			The amount will be adjusted to reflect free access. Please note that the free
+			e-Paper subscription is applicable only to Indian editions. International editions
+			are not included in the package.
+			</li>
+			</ul>
+          </div>
+        </div>
+		
+
+      </div>
+    </section>
+    <!-- FAQ Section End -->
+
+    <section class="max-w-5xl mx-auto px-6 py-8 pb-40">
+      <!-- Title -->
+      <h3 class="text-lg md:text-xl font-semibold text-gray-800 mb-2">
+        How To Contact Us For Corporate Orders And Personalized Quotes?
+      </h3>
+
+      <!-- Description -->
+      <p class="text-gray-600 leading-relaxed text-sm md:text-base">
+        For tailored subscription packages and exclusive corporate volume order
+        inquiries, we encourage you to get in touch with our dedicated team at
+        <a
+          href="mailto:subscription@mm.co.in"
+          class="text-blue-600 hover:underline font-medium"
+        >
+          subscription@mm.co.in
+        </a>
+      </p>
+    </section>
+
+    <link href="assets/css/common.css" type="text/css" rel="stylesheet" />
+
+    <script src="assets/libs/Jquery/jquery-3.7.1.min.js"></script>
+
+    <script src="assets/js/landing.js" defer></script>
+	<script defer>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const editionSelect = document.getElementById("editionSelect");
+  const planContainer = document.getElementById("planContainer");
+  const priceBox = document.getElementById("selectedPrice");
+  const addBtn = document.getElementById("promoAddToCart");
+  
+
+  const refUrl = "https://www.theweek.in/";
+  const logo = "https://img.theweek.in/content/dam/week/logo/The-Week-Logo-Big.png";
+
+  // Edition + Plan Data
+  const editionPlans = [
+  {
+    name: "Kottayam",
+    plans: [
+      {
+        productId: "6a2689a592192a4a5ea0132e",
+        planId: "6a2258728f2bc6794ba04f49",
+        label: "1 Year",
+        price: "2000" 
+      },
+    ]
+  },
+  {
+    name: "Palakkad",
+    plans: [
+      {
+        productId: "6a2699d38f2bc6794bc9a3b3",
+        planId: "6a229afc8f2bc6794bbca60f",
+        label: "1 Year",
+        price: "2000" 
+      },
+    ]
+  },
+  {
+    name: "Kochi",
+    plans: [
+      {
+        productId: "6a2695e892192a4a5ea38081",
+        planId: "6a228cb592192a4a5e8a5b04",
+        label: "1 Year",
+        price: "2000" 
+      }
+    ]
+  },
+  {
+    name: "Kollam",
+    plans: [
+      {
+        productId: "6a26a0cb8f2bc6794bcb8fe0",
+        planId: "6a22a7138f2bc6794bc1086a",
+        label: "1 Year",
+        price: "2000" 
+      },
+    ]
+  },
+  {
+    name: "Kasargod",
+    plans: [
+      {
+        productId: "6a269f4292192a4a5ea619c7",
+        planId: "6a22a4018f2bc6794bbfda45",
+        label: "1 Year",
+        price: "2000" 
+      },
+    ]
+  },
+  {
+    name: "Kozhikode",
+    plans: [
+      {
+        productId: "6a26a26c92192a4a5ea70745",
+        planId: "6a22ab608f2bc6794bc2bef3",
+        label: "1 Year",
+        price: "2000" 
+      },
+    ]
+  },
+  {
+    name: "Kannur",
+    plans: [
+      {
+        productId: "6a26a30892192a4a5ea722ae",
+        planId: "6a22ae2d92192a4a5e967465",
+        label: "1 Year",
+        price: "2000" 
+      },
+    ]
+  },
+  {
+    name: "Idukki",
+    plans: [
+      {
+        productId: "6a269ddb8f2bc6794bcac93f",
+        planId: "6a229ead8f2bc6794bbdf2c6",
+        label: "1 Year",
+        price: "2000" 
+      },
+    ]
+  },
+  {
+    name: "Mumbai",
+    plans: [
+      {
+        productId: "6a26910d92192a4a5ea228aa",
+        planId: "6a2273f08f2bc6794bad4a00",
+        label: "1 Year",
+        price: "2000" 
+      },
+    ]
+  },
+  {
+    name: "Delhi",
+    plans: [
+      {
+        productId: "6a268cff92192a4a5ea0fe34",
+        planId: "6a2271568f2bc6794bac1386",
+        label: "1 Year",
+        price: "2000" 
+      },
+    ]
+  },
+  {
+    name: "Chennai",
+    plans: [
+      {
+        productId: "6a2694ee8f2bc6794bc85c05",
+        planId: "6a228b448f2bc6794bb74c11",
+        label: "1 Year",
+        price: "2000" 
+      },
+    ]
+  },
+  {
+    name: "Bangalore",
+    plans: [
+      {
+        productId: "6a26924692192a4a5ea285ee",
+        planId: "6a22792e92192a4a5e8245a2",
+        label: "1 Year",
+        price: "2000" 
+      },
+    ]
+  },
+  {
+    name: "Malappuram",
+    plans: [
+      {
+        productId: "6a2696c192192a4a5ea3c852",
+        planId: "6a2291878f2bc6794bb9789c",
+        label: "1 Year",
+        price: "2000" 
+      },
+    ]
+  },
+  {
+    name: "Thrissur",
+    plans: [
+      {
+        productId: "6a2698b692192a4a5ea457f5",
+        planId: "6a2294348f2bc6794bba4e64",
+        label: "1 Year",
+        price: "2000" 
+      },
+    ]
+  },
+  {
+    name: "Wayanad",
+    plans: [
+      {
+        productId: "6a269ff88f2bc6794bcb56a1",
+        planId: "6a22a5958f2bc6794bc078fc",
+        label: "1 Year",
+        price: "2000" 
+      },
+    ]
+  },
+  {
+    name: "Alappuzha",
+    plans: [
+      {
+        productId: "6a269e9f8f2bc6794bcafcc3",
+        planId: "6a22a28b92192a4a5e91f9bc",
+        label: "1 Year",
+        price: "2000" 
+      },
+    ]
+  },
+  {
+    name: "Pathanamthitta",
+    plans: [
+      {
+        productId: "6a26979a92192a4a5ea4016e",
+        planId: "6a22929e92192a4a5e8c5f32",
+        label: "1 Year",
+        price: "2000" 
+      },
+    ]
+  },
+  {
+    name: "Thiruvananthapuram",
+    plans: [
+      {
+        productId: "6a269b348f2bc6794bca0275",
+        planId: "6a229daa92192a4a5e903057",
+        label: "1 Year",
+        price: "2000" 
+      },
+    ]
+  }
+];
+  
+  function populateEditions() {
+
+    editionSelect.innerHTML = "";
+
+    editionPlans.forEach((edition, index) => {
+
+      editionSelect.innerHTML += `
+        <option value="${index}">
+          ${edition.name}
+        </option>
+      `;
+    });
+  }
+
+  // ðŸ”¹ Render Plans Based On Edition
+  function renderPlans(editionIndex) {
+
+    const edition = editionPlans[editionIndex];
+
+    if (!edition) return;
+
+    planContainer.innerHTML = "";
+
+    edition.plans.forEach((plan, index) => {
+
+      const checked = index === 0 ? "checked" : "";
+	  const strikeprice = plan.price === "2000" 
+  ? "<p class='text-sm md:text-base font-semibold price line-through text-gray-400'>₹5000</p>" 
+  : "<p class='text-sm md:text-base font-semibold price line-through text-gray-400'>₹2400</p>";
+	  
+      planContainer.innerHTML += `
+        <label class="cursor-pointer">
+          <input
+            type="radio"
+            name="promoPlan"
+            value="${plan.productId}|${plan.planId}|${plan.price}"
+            class="hidden peer"
+            ${checked}
+          >
+
+          <div class="border-2 px-6 py-4 rounded-md peer-checked:border-blue-600">
+            <p class="font-semibold">${plan.label}</p>
+			${strikeprice}			
+            <p class="text-lg">₹${plan.price}</p>
+          </div>
+        </label>
+      `;
+    });
+
+    // Default selected price
+    priceBox.textContent = `₹${edition.plans[0].price}`;
+
+    attachPlanChangeListener();
+  }
+
+  // ðŸ”¹ Update Price When Plan Changes
+  function attachPlanChangeListener() {
+
+    document.querySelectorAll("input[name='promoPlan']")
+      .forEach(radio => {
+
+        radio.addEventListener("change", function () {
+
+          const [, , price] = this.value.split("|");
+
+          priceBox.textContent = `₹${price}`;
+        });
+
+      });
+  }
+
+  // ðŸ”¹ Edition Change
+  editionSelect.addEventListener("change", function () {
+
+    renderPlans(this.value);
+
+  });
+
+  // ðŸ”¹ Add To Cart
+  // ðŸ”¹ Add To Cart (API Based Like React)
+  addBtn.addEventListener("click", function () {
+
+    const selectedPlan = document.querySelector(
+      "input[name='promoPlan']:checked"
+    );
+
+    if (!selectedPlan) {
+      alert("Please select a plan.");
+      return;
+    }
+
+    // ?? Extract values
+    const [productId, planId] = selectedPlan.value.split("|");
+
+    const selectedEditionText =
+      editionSelect.options[editionSelect.selectedIndex].text;
+
+    const customDataJson = JSON.stringify([
+      {
+        name: selectedEditionText,
+        value: selectedEditionText
+      }
+    ]);
+
+    // ?? Params
+    const params = new URLSearchParams({
+      productId: productId,
+      planId: null,
+      bundlePlanId: planId,
+      productGroupCode: null,
+      productGroupSlug: null,
+      complementaryProductsJson: null,
+      customDataJson: customDataJson
+    });
+
+    addBtn.disabled = true;
+    addBtn.innerText = "Adding...";
+
+    fetch(
+      `https://subscribe.manoramaonline.com/api/buildBasket?${params.toString()}`,
+      {
+        method: "GET",
+        headers: {
+          "Cache-Control": "no-cache"
+        }
+      }
+    )
+      .then((res) => {
+
+        if (!res.ok) {
+          throw new Error("API failed");
+        }
+
+        return res.json();
+
+      })
+      .then((parsed) => {
+
+        const returned = Array.isArray(parsed)
+          ? parsed
+          : [parsed];
+
+        const basket = returned[0];
+
+        sessionStorage.setItem(
+          "evolok:basket",
+          JSON.stringify(basket)
+        );
+
+        if (typeof updateCartCountUI === "function") {
+          updateCartCountUI();
+        }
+		document.cookie = "offerFlowInitiated=true; path=/; SameSite=Lax";
+        window.location.href = "/summary";
+
+      })
+      .catch((err) => {
+
+        console.error(err);
+
+        alert(
+          "Unable to Add Bundle to Cart. Please try again later."
+        );
+
+        addBtn.disabled = false;
+        addBtn.innerText = "ADD TO CART";
+
+      });
+
+  });
+
+  // ?? Initial Load
+  populateEditions();
+  renderPlans(0);
+
+});
+</script>
+
+  </body>
+</html>

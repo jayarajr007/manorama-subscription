@@ -1,0 +1,122 @@
+{
+    "productGroupId": "690cb8a9a119ea4293bd1d8b",
+    "productGroupCode": "Thozhilveedhi",
+    "productGroupName": "Thozhilveedhi",
+    "productGroupDescription": "1 issue per week",
+    "productGroupImageUrl": [
+        "https://img-subs.manoramaonline.com/SubProductConfAdmin/product_group_images/Thozhilveedhi/Tveedhi06Sep_1761641945887.jpg",
+        "https://img-subs.manoramaonline.com/SubProductConfAdmin/product_group_images/Thozhilveedhi/Tveedhi09Aug_1761641946034.jpg",
+        "https://img-subs.manoramaonline.com/SubProductConfAdmin/product_group_images/Thozhilveedhi/Tveedhi11Oct_1761641946297.jpg",
+        "https://img-subs.manoramaonline.com/SubProductConfAdmin/product_group_images/Thozhilveedhi/Tveedhi13Sep_1761641946365.jpg",
+        "https://img-subs.manoramaonline.com/SubProductConfAdmin/product_group_images/Thozhilveedhi/Tveedhi16Aug_1761641946485.jpg",
+        "https://img-subs.manoramaonline.com/SubProductConfAdmin/product_group_images/Thozhilveedhi/Tveedhi20Sep_1761641946104.jpg",
+        "https://img-subs.manoramaonline.com/SubProductConfAdmin/product_group_images/Thozhilveedhi/Tveedhi23Aug_1761641946533.jpg",
+        "https://img-subs.manoramaonline.com/SubProductConfAdmin/product_group_images/Thozhilveedhi/Tveedhi25Oct_1761641945956.jpg",
+        "https://img-subs.manoramaonline.com/SubP"
+    ],
+    "latestIssueData": null,
+    "enablePreOrder": false,
+    "preOrderDate": null,
+    "productGroupReadSampleUrl": null,
+    "productGroupHighestOfferText": null,
+    "productGroupHighestOfferEditionText": null,
+    "availableEditions": [
+        {
+            "editionName": "Print",
+            "subscription": [
+                {
+                    "productId": "690cb8b2a119ea4293bd1d9c",
+                    "productCode": "Thozhilveedhi_Print",
+                    "productDisplayName": "Thozhilveedhi (Print)",
+                    "productImageUrl": "https://img-subs.manoramaonline.com/SubProductConfAdmin/product_group_images/Thozhilveedhi/Tveedhi06Sep_1761641945887.jpg",
+                    "packageType": "PHYSICAL",
+                    "availablePaymentPlan": [
+                        {
+                            "planId": "690cb8b2a119ea4293bd1d9a",
+                            "planCode": "Thozhilveedhi_Print_1Year_Promo_TV1YRPN",
+                            "planName": "1 Year",
+                            "availableGifts": null,
+                            "maxGiftSelectionCount": 0,
+                            "giftInformationText": null,
+                            "currency": {
+                                "currencyDescription": "Indian Rupee",
+                                "currencySymbol": "₹"
+                            },
+                            "originalPrice": 550,
+                            "finalPrice": 550.00,
+                            "contractLength": "One year",
+                            "discountDisplayName": null,
+                            "autoRenew": false,
+                            "segments": [],
+                            "bundlePlanItems": null
+                        },
+                        {
+                            "planId": "690cb8baa119ea4293bd1daa",
+                            "planCode": "Thozhilveedhi_Print_3Months_Promo_TV3MNPN",
+                            "planName": "3 Months",
+                            "availableGifts": null,
+                            "maxGiftSelectionCount": 0,
+                            "giftInformationText": null,
+                            "currency": {
+                                "currencyDescription": "Indian Rupee",
+                                "currencySymbol": "₹"
+                            },
+                            "originalPrice": 150,
+                            "finalPrice": 150.00,
+                            "contractLength": "Three months",
+                            "discountDisplayName": null,
+                            "autoRenew": false,
+                            "segments": [],
+                            "bundlePlanItems": null
+                        },
+                        {
+                            "planId": "690cb8c2a119ea4293bd1db6",
+                            "planCode": "Thozhilveedhi_Print_6Months_Promo_TV6MNPN",
+                            "planName": "6 Months",
+                            "availableGifts": null,
+                            "maxGiftSelectionCount": 0,
+                            "giftInformationText": null,
+                            "currency": {
+                                "currencyDescription": "Indian Rupee",
+                                "currencySymbol": "₹"
+                            },
+                            "originalPrice": 280,
+                            "finalPrice": 280.00,
+                            "contractLength": "Six months",
+                            "discountDisplayName": null,
+                            "autoRenew": false,
+                            "segments": [],
+                            "bundlePlanItems": null
+                        }
+                    ],
+                    "segments": [],
+                    "productStockQuantity": null,
+                    "maxAllowedPurchaseQuantity": null,
+                    "maxAllowedComplementary": null,
+                    "complementaryProducts": [],
+                    "giftProductType": null,
+                    "recommendedPlan": null,
+                    "startDate": "2022-12-31T18:30:00"
+                }
+            ],
+            "hasRenewal": false,
+            "renewal": null,
+            "hasSingleIssue": false,
+            "singleIssue": null
+        }
+    ],
+    "numberOfIssuesText": "1 issue per week",
+    "recentSubscriptionCountText": null,
+    "benefits": [],
+    "aboutProduct": "Weekly employment guide that gives a job seeker comprehensive information of the latest openings in public and the private sector. Experts through their columns,training modules guide the aspirants on all-important factors in the job hunt to help him land in their dream coveted jobs. Available in Digital and Print format. Single issue rate is including postage.",
+    "productDetails": [],
+    "authors": {
+        "authorName": null,
+        "authorImageUrl": null,
+        "aboutAuthor": null
+    },
+    "categoryCode": "magazine",
+    "recommendedEdition": "Print",
+    "seoMetadataTitle": "Thozhilveedhi | Buy Malayalam Magazines Online | Magazines | E-editions | Manorama Subscription",
+    "seoMetadataDescription": "Explore Thozhilveedhi, a Malayalam magazine available in print and E-edition. Subscribe or buy online from Manorama to enjoy job alerts, career tips, and employment news for aspirants across Kerala."
+}
